@@ -1,4 +1,4 @@
-﻿Bartek to debil
+﻿Bartek to debil!!!!
 
 
 using System.Collections;
@@ -17,18 +17,14 @@ public class NewBahviourScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObcjet.CompareTag("Skrzynia")&& Input.GetKeyDown ( "E") && Otwarta==false)
-        {
-         //   other.sortingOrder=0;
-            Otwarta=true;
-        }
+       void OnCollisionEnter(Collision collision)
     }
      void OnCollisionEnter(Collision collision)
     {
         //Check for a match with the specified name on any GameObject that collides with your GameObject
-        if (collision.gameObject.name == "Dzban" && Input.GetKeyDown("mouse[0]" && Rozbite=false)
+        if (collision.gameObject.name == "Dzban" && Input.GetKeyDown("mouse[0]") && Rozbite=false)
         {
-            Debug.Log("działa");
+            
             Rozbite = true;
         }
 

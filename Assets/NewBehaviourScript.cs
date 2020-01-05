@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿Bartek to debil
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +9,7 @@ public class NewBahviourScript : MonoBehaviour
 {
    
     bool Otwarta=false;
-
+    Rozbite
    
     void Start()
     {
@@ -25,7 +28,7 @@ public class NewBahviourScript : MonoBehaviour
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.name == "Dzban" && Input.GetKeyDown("mouse[0]" && Rozbite=false)
         {
-            Debug.Log("");
+            Debug.Log("działa");
             Rozbite = true;
         }
 

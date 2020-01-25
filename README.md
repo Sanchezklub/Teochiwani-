@@ -1,2 +1,0 @@
-# Teochiwani
-Próba

@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 988561504}
   - component: {fileID: 988561503}
   - component: {fileID: 988561506}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: drabina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53643caa0b9e17d4d819647a6d168382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rb2D: {fileID: 1578075497}
 --- !u!212 &988561504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -998,7 +999,7 @@ PrefabInstance:
     - target: {fileID: 8729121674357141162, guid: 7e6c623bd8451b74f871f2273f92b62d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.26
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 8729121674357141162, guid: 7e6c623bd8451b74f871f2273f92b62d,
         type: 3}

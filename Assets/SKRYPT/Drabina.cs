@@ -6,23 +6,23 @@ public class Drabina : MonoBehaviour
 {
     private float speed = 10;
     private float speed2 = 1;
+    [SerializeField]private Rigidbody2D Rb2D;
+
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Player" && Input.GetKey(KeyCode.W))
+        float PlayerInput = Input.GetAxisRaw("Vertical");
+        switch (PlayerInput)
         {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
-
-        }
-        else if (other.tag == "Player" && Input.GetKey(KeyCode.S))
-        {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
-
-        }
-        else if (other.tag == "Player")
-        {
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-
+            case -1:
+                Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed);
+                break;
+            case 1:
+                Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed);
+                break;
+            case 0:
+                Rb2D.velocity = new Vector2(Rb2D.velocity.x, 0);
+                break;
         }
 
 

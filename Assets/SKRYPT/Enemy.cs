@@ -24,6 +24,14 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
+        if (gameObject.name == "dzban")    
+       {
+           var coinRewarder = this.GetComponent<LootzDzbana>();
+           if (coinRewarder != null) 
+           {
+               coinRewarder.Spawn();
+           }
+       }
            GetComponent<Collider2D>().enabled = false;
            GetComponent<SpriteRenderer>().color =Color.red;
            this.enabled = false;

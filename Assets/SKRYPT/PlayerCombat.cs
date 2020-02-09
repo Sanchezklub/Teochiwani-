@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if( Time.time>=nextAttackTime)
+        if(Time.time>=nextAttackTime)
         {
 
        if(Input.GetKeyDown(KeyCode.Mouse0)) 
@@ -29,7 +29,7 @@ public class PlayerCombat : MonoBehaviour
     void Atak()
     {
          Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(AttackPoint.position,attackRange,enemyLayers); 
-        foreach( Collider2D enemy in hitEnemies)
+        foreach(Collider2D enemy in hitEnemies)
          {
             enemy.GetComponent<Enemy>().TakeDamage(attackdamage);
          }

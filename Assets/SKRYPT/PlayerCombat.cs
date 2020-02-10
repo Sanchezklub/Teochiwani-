@@ -32,7 +32,8 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
          {
             enemy.GetComponent<Enemy>().TakeDamage(attackdamage);
-         }
+            enemy.GetComponent<skala>().TakeDamage(attackdamage);
+        }
     }
 
     void OnDrawGizmosSelected()

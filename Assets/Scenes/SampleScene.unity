@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2b2dcda4e49154c88d3bd72fbc37cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 50
 --- !u!50 &752389532
 Rigidbody2D:
   serializedVersion: 4
@@ -3356,6 +3356,7 @@ GameObject:
   - component: {fileID: 1703313359}
   - component: {fileID: 1703313358}
   - component: {fileID: 1703313357}
+  - component: {fileID: 1703313362}
   - component: {fileID: 1703313361}
   m_Layer: 14
   m_Name: skala
@@ -3396,7 +3397,7 @@ PolygonCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -3856,13 +3857,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703313356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.94, y: -3.12, z: 0}
+  m_LocalPosition: {x: 14.07, y: -2.29, z: 0}
   m_LocalScale: {x: 0.4461826, y: 0.43556154, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1703313361
+--- !u!95 &1703313361
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703313356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8041abfd9b08214e872aa028ddf9ee5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1703313362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3871,10 +3891,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1703313356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2b2dcda4e49154c88d3bd72fbc37cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 855b592042c01904d9c03ffcbe472611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  Health: 50
+  currentHealth: 0
 --- !u!1001 &1767932104
 PrefabInstance:
   m_ObjectHideFlags: 0

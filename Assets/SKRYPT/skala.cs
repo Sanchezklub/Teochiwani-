@@ -7,7 +7,7 @@ public class skala : MonoBehaviour
     [SerializeField]
     private int Health = 50;
     [SerializeField]
-    int currentHealth;
+    public int currentHealth;
     private Animator anim;
 
     // Start is called before the first frame update

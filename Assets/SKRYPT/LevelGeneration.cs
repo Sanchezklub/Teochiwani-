@@ -107,7 +107,6 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
         }
-        Room[4,3] = 2;
         Instantiate(rooms[2], transform.position, Quaternion.identity); // buduje 
         Vector2 newPos111 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
         transform.position = newPos111; // przesuwam  
@@ -270,11 +269,7 @@ public class LevelGeneration : MonoBehaviour
                     Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
                     transform.position = newPos4; 
                     break;
-                }
-                 
-
-
-
+                }               
             }
 
         }
@@ -306,8 +301,7 @@ public class LevelGeneration : MonoBehaviour
                         Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
                         Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
                         transform.position = newPos4; 
-                }                
-                
+                }                                
             }
             else 
             {
@@ -320,8 +314,7 @@ public class LevelGeneration : MonoBehaviour
                         Room[i,2] = rand;
                         Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
                         Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                        transform.position = newPos4; 
-                        
+                        transform.position = newPos4;                         
                 }
                 else
                 {
@@ -332,15 +325,9 @@ public class LevelGeneration : MonoBehaviour
                         Room[i,2] = rand;
                         Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
                         Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                        transform.position = newPos4; 
-           
+                        transform.position = newPos4;           
                 }
-                    
-                    
-                
-
             }
-
         }
 
         if(Room[3,2]<=7)

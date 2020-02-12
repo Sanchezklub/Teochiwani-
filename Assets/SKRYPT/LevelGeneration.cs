@@ -26,10 +26,6 @@ public class LevelGeneration : MonoBehaviour
         Level1();
         St();
     }
-    private void Update()
-    {
-        
-    }
 
      private void St()
      {
@@ -164,100 +160,30 @@ public class LevelGeneration : MonoBehaviour
         }
         if(Room[1,1]==0||Room[1,1]==1 )
         {
-            switch(Room[0,2])
+            if(Room[0,2]<8)
             {
-                case 4:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 0;
-                    if(rand==1)rand = 2;
-                    if(rand==2)rand = 11;
-                    if(rand==3)rand = 12;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; // przesuwam   
-                    break;
-                }
-                case 5:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 0;
-                    if(rand==1)rand = 2;
-                    if(rand==2)rand = 11;
-                    if(rand==3)rand = 12;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; // przesuwam 
-                    break;
-                }
-                case 6:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 0;
-                    if(rand==1)rand = 2;
-                    if(rand==2)rand = 11;
-                    if(rand==3)rand = 12;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; // przesuwam 
-                    break;
-                }
-                case 7:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 0;
-                    if(rand==1)rand = 2;
-                    if(rand==2)rand = 11;
-                    if(rand==3)rand = 12;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; // przesuwam 
-                    break;
-                }
-                case 8:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 4;
-                    if(rand==1)rand = 5;
-                    if(rand==2)rand = 8;
-                    if(rand==3)rand = 9;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; 
-                    break;
-                }
-                case 9:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 4;
-                    if(rand==1)rand = 5;
-                    if(rand==2)rand = 8;
-                    if(rand==3)rand = 9;
-                   Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; 
-                    break;
-                }
-                case 10:
-                {
-                    int rand = Random.Range(0,4);
-                    if(rand==0)rand = 4;
-                    if(rand==1)rand = 5;
-                    if(rand==2)rand = 8;
-                    if(rand==3)rand = 9;
-                    Room[1,2] = rand;
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
-                    Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-                    transform.position = newPos4; 
-                    break;
-                }
-
+                int rand = Random.Range(0,4);
+                if(rand==0)rand = 0;
+                if(rand==1)rand = 2;
+                if(rand==2)rand = 11;
+                if(rand==3)rand = 12;
+                Room[1,2] = rand;
+                Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
+                Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
+                transform.position = newPos4; // przesuwam   
+                
+            }
+            else
+            {
+                int rand = Random.Range(0,4);
+                if(rand==0)rand = 4;
+                if(rand==1)rand = 5;
+                if(rand==2)rand = 8;
+                if(rand==3)rand = 9;
+                Room[1,2] = rand;
+                Instantiate(rooms[rand], transform.position, Quaternion.identity); // buduje 
+                Vector2 newPos4 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
+                transform.position = newPos4; 
             }
         }
         else
@@ -530,10 +456,8 @@ public class LevelGeneration : MonoBehaviour
                 transform.position = newPos6;
 
                 int rand = Random.Range(0,2); // losuje 
-                if ( rand == 0)
-                    rand = 1;
-                if (rand==1 )
-                    rand = 13;
+                if ( rand == 0)rand = 1;
+                if (rand==1 )rand = 13;
                 Instantiate(rooms[rand], transform.position, Quaternion.identity); // jezeli na górze przejscia nie ma wybieram chunk z mozliwoscia pojscia tylko w prawo
                 Room[1,0]=rand;
             }
@@ -673,118 +597,46 @@ public class LevelGeneration : MonoBehaviour
                             if(rand==1)rand=6;
                             Instantiate(rooms[rand], transform.position, Quaternion.identity);
                             Room[i,0]=rand;
-                            }
+                        }
                         
                         break;
                     }
-
-
-
-
-
                 }
             }
             Vector2 newPos24 = new Vector2(transform.position.x + moveAmountx,transform.position.y);
             transform.position = newPos24;
-            
-            switch(Room[3,0])
+            if (Room[3,0]<8)
             {
-                case 1:
-                {   
-                    Instantiate(rooms[1], transform.position, Quaternion.identity);
-                    Room[4,0]=1;
-
-                    break;
-                }
-                case 3:
-                {
-                    Instantiate(rooms[1], transform.position, Quaternion.identity);
-                    Room[4,0]=1;
-                    break;
-                }
-                case 6:
-                {
-                    Instantiate(rooms[1], transform.position, Quaternion.identity);
-                    Room[4,0]=1;
-                    break;
-                }
-                case 7:
-                {
-                    Instantiate(rooms[1], transform.position, Quaternion.identity);
-                    Room[4,0]=1;
-                    break;
-                }
-                case 10:
-                {
-                    Instantiate(rooms[6], transform.position, Quaternion.identity);
-                    Room[4,0]=6;
-                    break;
-                }
-                case 13:
-                {
-                    Instantiate(rooms[6], transform.position, Quaternion.identity);
-                    Room[4,0]=6;
-                    break;
-                }
-                case 14:
-                {
-                    Instantiate(rooms[6], transform.position, Quaternion.identity);
-                    Room[4,0]=6;
-                    break;
-                }
-
-
+                Instantiate(rooms[1], transform.position, Quaternion.identity);
+                Room[4,0]=1;
             }
+            else
+            {
+                 Instantiate(rooms[6], transform.position, Quaternion.identity);
+                Room[4,0]=6;
+            }
+        
             Vector2 newPos25 = new Vector2(transform.position.x + moveAmountx,transform.position.y);
             transform.position = newPos25;
 
-
-
-
-
-            switch (Room[5,1])
+            if(Room[5,1]>12)
             {
-                    case 11:
-                    {
-                    Instantiate(rooms[13], transform.position, Quaternion.identity);
-                    Room[5,0]=13;    
-                        break;
-                    }
-                    case 12:
-                    {
-                    Instantiate(rooms[13], transform.position, Quaternion.identity);
-                    Room[5,0]=13;    
-                        break;
-                    }
-                    case 13:
-                    {
-                    Instantiate(rooms[14], transform.position, Quaternion.identity);
-                    Room[5,0]=14;    
-                        break;
-                    }
-                    case 14:
-                    {
-                    Instantiate(rooms[14], transform.position, Quaternion.identity);
-                    Room[5,0]=14;
-                        break;
-                    }
-                    
+                Instantiate(rooms[14], transform.position, Quaternion.identity);
+                    Room[5,0]=14;  
+            }
+            else
+            {
+                Instantiate(rooms[13], transform.position, Quaternion.identity);
+                    Room[5,0]=13; 
             }
  
     }
     private void Create() // buduje poziom 
-    {
-      
-
+    {     
+            St();
             Level3();
             Level4();
             Level2();
-            
-        
-        
-
-
+            Level1();
     }
-
-
 }

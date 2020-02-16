@@ -67,7 +67,7 @@ public class LevelGeneration : MonoBehaviour
             Vector2 newPos = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
             transform.position = newPos; // przesuwam    
         }
-        for(int i=1;i <4; i++)
+        for(int i=1;i <5; i++)
         {
             if (Room[i-1,3]<8)
             {
@@ -107,9 +107,7 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
         }
-        Instantiate(rooms[2], transform.position, Quaternion.identity); // buduje 
-        Vector2 newPos111 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
-        transform.position = newPos111; // przesuwam  
+        
         if (Room[5,2]==11 ||Room[5,2]==13||Room[5,2]==10||Room[5,2]==8)
         {
             Room[5,3] = 12;

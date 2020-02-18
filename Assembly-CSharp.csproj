@@ -57,10 +57,12 @@
   <ItemGroup>
      <Compile Include="Assets\SKRYPT\BloodCounterScript.cs" />
      <Compile Include="Assets\SKRYPT\BloodScript.cs" />
+     <Compile Include="Assets\SKRYPT\Bullet.cs" />
      <Compile Include="Assets\SKRYPT\CharacterController2D.cs" />
      <Compile Include="Assets\SKRYPT\Chest.cs" />
      <Compile Include="Assets\SKRYPT\CocoaCounterScript.cs" />
      <Compile Include="Assets\SKRYPT\CocoaScript.cs" />
+     <Compile Include="Assets\SKRYPT\Destrucktable.cs" />
      <Compile Include="Assets\SKRYPT\Drabina.cs" />
      <Compile Include="Assets\SKRYPT\Enemy.cs" />
      <Compile Include="Assets\SKRYPT\EnemyAgro.cs" />
@@ -160,6 +162,45 @@
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Runtime">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Triangle.Runtime">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="PsdPlugin">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Psdimporter.Editor">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEngineBridge.001">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Runtime">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Editor">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Editor">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>C:/Users/Maciek/Documents/GitHub/Nowy folder/inawihcoeT/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

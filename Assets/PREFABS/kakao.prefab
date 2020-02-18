@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9160837495220343480}
   - component: {fileID: 9160837495220343482}
   - component: {fileID: 2197360124333381490}
+  - component: {fileID: 7977165624351062272}
   m_Layer: 0
   m_Name: kakao
   m_TagString: Untagged
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997b6fe63ae501045999c328729bfe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mysprite1: {fileID: 21300000, guid: 6fc8bfe9eaf8b944dbe99b7f81f1283f, type: 3}
 --- !u!58 &2197360124333381490
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -111,3 +113,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.34704566}
   serializedVersion: 2
   m_Radius: 1.0761408
+--- !u!50 &7977165624351062272
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160837495220343430}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0.05
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

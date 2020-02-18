@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &493604858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493604859}
+  m_Layer: 9
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493604859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493604858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.66, y: 1.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2715662901094845613}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2715662900309364320
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,6 +78,7 @@ GameObject:
   - component: {fileID: 2715662901094845615}
   - component: {fileID: 2715662901094845614}
   - component: {fileID: 2715662901094845617}
+  - component: {fileID: 1468336920}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -69,6 +100,7 @@ Transform:
   - {fileID: 2715662901490027085}
   - {fileID: 2715662901196829393}
   - {fileID: 2715662900309364323}
+  - {fileID: 493604859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,7 +235,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 20736
+    m_Bits: 28928
   m_GroundCheck: {fileID: 2715662901196829393}
   m_CeilingCheck: {fileID: 2715662901490027085}
   m_CrouchDisableCollider: {fileID: 2715662901094845609}
@@ -292,6 +324,23 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   MaxHealth: 100
   currentHealth: 0
+  StartingPosition: {x: 0, y: 0}
+--- !u!114 &1468336920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2715662901094845607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb361a8b30fa37643b1617f435b2c795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 493604859}
+  bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
+    type: 3}
+  attackrate: 2
 --- !u!1 &2715662901196829390
 GameObject:
   m_ObjectHideFlags: 0

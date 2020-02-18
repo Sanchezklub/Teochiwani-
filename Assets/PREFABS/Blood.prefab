@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5717978130810721405}
   - component: {fileID: 5717978130810721403}
   - component: {fileID: 338602239213250996}
+  - component: {fileID: 6018541302898262365}
   m_Layer: 0
   m_Name: Blood
   m_TagString: Untagged
@@ -126,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6bee8538438ffe44b8994531e6f674b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mysprite1: {fileID: 21300000, guid: 622067bc75079004f8b3fe77d56065ff, type: 3}
 --- !u!58 &338602239213250996
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +144,24 @@ CircleCollider2D:
   m_Offset: {x: -0.13024396, y: -0.6516566}
   serializedVersion: 2
   m_Radius: 1.1267766
+--- !u!50 &6018541302898262365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717978130810721407}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0.05
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

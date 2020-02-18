@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int MaxHealth = 100;
     int currentHealth;
+    [SerializeField]
+    UnityEngine.Object destrutableRef;
     void Start()
     {
         currentHealth =  MaxHealth;
@@ -17,8 +19,6 @@ public class Enemy : MonoBehaviour
         if (currentHealth<=0)
         {
             Die();
-
-
         }
    }
 
@@ -31,16 +31,19 @@ public class Enemy : MonoBehaviour
            {
                coinRewarder.Spawn();
            }
+           ExplodeThisGameObject();
        }
-           GetComponent<Collider2D>().enabled = false;
-           GetComponent<SpriteRenderer>().color =Color.red;
-           this.enabled = false;
+        Destroy(gameObject);
+
+    }
+    private void ExplodeThisGameObject()
+    {
+        GameObject destrutable = (GameObject)Instantiate(destrutableRef);
+        destrutable.transform.position = transform.position;
+        Destroy(gameObject);
 
     }
    
-
-
-
 
 
 }

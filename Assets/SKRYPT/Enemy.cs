@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     UnityEngine.Object destrutableRef;  
     [SerializeField]
     public GameObject Particle;
+    public GameObject FloatingTextPrefab;
     void Start()
     {
         currentHealth =  MaxHealth;
@@ -20,6 +21,9 @@ public class Enemy : MonoBehaviour
    public void TakeDamage(int damage)
    {
        currentHealth -=damage;
+      
+        ShowFloatingText(damage);
+       
        if(gameObject.name == "skala")
        {
           Instantiate(this.Particle, this.transform.position, Quaternion.identity);
@@ -60,7 +64,12 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
 
     }
-   
+    void ShowFloatingText(int damage )
+    {
+        var go = Instantiate(FloatingTextPrefab,transform.position,Quaternion.identity,transform);
+        go.GetComponent<TextMesh>().text = damage.ToString();
+    }
+   // object pulling
 
 
 }

@@ -34,12 +34,12 @@ public class EnemyAgro : MonoBehaviour
         if(transform.position.x<player.position.x)
         {
             rb2d.velocity = new Vector2(moveSpeed,0);
-            transform.localScale = new Vector2(3,3);
+            transform.localScale = new Vector2(2,2);
         }
         else
         {
             rb2d.velocity = new Vector2(-moveSpeed,0);
-            transform.localScale = new Vector2(-3,3);
+            transform.localScale = new Vector2(-2,2);
         }
 
     }

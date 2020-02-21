@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public GameObject Particle;
     public GameObject FloatingTextPrefab;
+    public Animator animator;
     void Start()
     {
         currentHealth =  MaxHealth;
@@ -41,7 +42,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-   }
+    }
 
     void Die ()
     {
@@ -54,7 +55,8 @@ public class Enemy : MonoBehaviour
            }
            ExplodeThisGameObject();
        }
-        Destroy(gameObject);
+        
+        Destroy(gameObject,6f);
 
     }
     private void ExplodeThisGameObject()

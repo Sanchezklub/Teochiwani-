@@ -18,6 +18,7 @@ public class EnemyAgro : MonoBehaviour
     float attackdamage=20;
     public float attackrate = 2f;
     float nextAttackTime=0f;
+    public LayerMask enemyLayers;
     
     void Start()
     {
@@ -34,7 +35,7 @@ public class EnemyAgro : MonoBehaviour
         }
         else 
         {
-              new WaitForSecondsRealtime(5);
+              
             AttackPlayer();
             StopChasingPlayer();
             
@@ -42,18 +43,14 @@ public class EnemyAgro : MonoBehaviour
     }
     void AttackPlayer()
     {
-        GameObject Player = GameObject.FindGameObjectWithTag("Player");
-        Player.Health().TakeDamage(attackdamage);
-        if(transform.position.x<player.position.x)
+        Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(transform.position,200,enemyLayers); 
+        foreach(Collider2D enemy in hitEnemies)
         {
-            rb2d.velocity = new Vector2(attackjump,0);
-            transform.localScale = new Vector2(1,1);
+            enemy.GetComponent<Health>().TakeDamage(attackdamage);
+            
         }
-        else
-        {
-            rb2d.velocity = new Vector2(-attackjump,0);
-            transform.localScale = new Vector2(-1,1);
-        }
+        
+       
         
     }
     private void ChasePlayer()

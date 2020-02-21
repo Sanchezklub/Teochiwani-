@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drabina : MonoBehaviour
 {
-    private float speed = 10;
+    private float speed = 500;
     private float speed2 = 1;
     [SerializeField]private Rigidbody2D Rb2D;
 
@@ -15,10 +15,10 @@ public class Drabina : MonoBehaviour
         switch (PlayerInput)
         {
             case -1:
-                Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed);
+                Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed*Time.deltaTime );
                 break;
             case 1:
-                Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed);
+                Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed*Time.deltaTime );
                 break;
             case 0:
                 Rb2D.velocity = new Vector2(Rb2D.velocity.x, 0);

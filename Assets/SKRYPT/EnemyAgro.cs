@@ -6,7 +6,7 @@ public class EnemyAgro : MonoBehaviour
 {
     public Animator animator;
     [SerializeField]
-    Transform player;
+    Transform PlayerPos;
     [SerializeField]
     float agroRange;
     [SerializeField]
@@ -19,15 +19,20 @@ public class EnemyAgro : MonoBehaviour
     public float attackrate = 2f;
     float nextAttackTime=0f;
     public LayerMask enemyLayers;
+    Health PlayerHealth;
     
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        GameObject Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerHealth = Player.GetComponent<Health>();
+        PlayerPos = Player.GetComponent<Transform>();
+
     }
 
     void Update()
     {
-        float distToPlayer = Vector2.Distance(transform.position,player.position);
+        float distToPlayer = Vector2.Distance(transform.position,PlayerPos.position);
         
         if(distToPlayer <agroRange)
         {
@@ -43,19 +48,24 @@ public class EnemyAgro : MonoBehaviour
     }
     void AttackPlayer()
     {
-        Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(transform.position,200,enemyLayers); 
-        foreach(Collider2D enemy in hitEnemies)
+        PlayerHealth.TakeDamage(attackdamage);
+        if (transform.position.x < PlayerPos.position.x)
         {
-            enemy.GetComponent<Health>().TakeDamage(attackdamage);
-            
+            rb2d.velocity = new Vector2(attackjump, 0);
+            transform.localScale = new Vector2(1, 1);
         }
-        
-       
-        
+        else
+        {
+            rb2d.velocity = new Vector2(-attackjump, 0);
+            transform.localScale = new Vector2(-1, 1);
+        }
+
+
+
     }
     private void ChasePlayer()
     {
-        if(transform.position.x<player.position.x)
+        if(transform.position.x<PlayerPos.position.x)
         {
             rb2d.velocity = new Vector2(moveSpeed,0);
             transform.localScale = new Vector2(1,1);

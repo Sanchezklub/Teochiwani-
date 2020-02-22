@@ -41,58 +41,53 @@ public class EnemyAgro : MonoBehaviour
             ChasePlayer();
         }
         else if (distToPlayer <=attackRange )
-        {
-            if(Time.time>=nextAttackTime)
-            {
-            AttackPlayer();
+        {       
             StopChasingPlayer();
-            nextAttackTime = Time.time +1f / attackrate;
-            } 
-            
-            
         }
         else
         {
             StopChasingPlayer();
         }
-    }
-    void AttackPlayer()
-    {
-        animator.SetBool("Attack",true);
-        PlayerHealth.TakeDamage(attackdamage);
-        if (transform.position.x < PlayerPos.position.x)
-        {
-            rb2d.velocity = new Vector2(attackjump, 0);
-            transform.localScale = new Vector2(1, 1);
-        }
-        else
-        {
-            rb2d.velocity = new Vector2(-attackjump, 0);
-            transform.localScale = new Vector2(-1, 1);
-        }
-
-
-
     }
     private void ChasePlayer()
     {
         if(transform.position.x<PlayerPos.position.x)
         {
             rb2d.velocity = new Vector2(moveSpeed,0);
-            transform.localScale = new Vector2(1,1);
+            transform.Rotate(0f,180f,0f);
         }
         else
         {
             rb2d.velocity = new Vector2(-moveSpeed,0);
-            transform.localScale = new Vector2(-1,1);
+            transform.Rotate(0f,180f,0f);
         }
 
     }
-
     private void StopChasingPlayer()
     {
         rb2d.velocity = Vector2.zero;
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(Time.time>=nextAttackTime)
+        {   
+            if (col.gameObject.name.Equals("Player"))
+            {
+            animator.SetBool ("Attack", true);
+            PlayerHealth.TakeDamage(attackdamage);
+            StopChasingPlayer();
+            nextAttackTime = Time.time +1f / attackrate;
+        }
+      }   
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.name.Equals("Player"))
+        {
+            animator.SetBool ("Attack", false);
+        }
+    }
 
 }

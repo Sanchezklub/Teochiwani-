@@ -4,32 +4,57 @@ using UnityEngine;
 
 public class Drabina : MonoBehaviour
 {
-    private float speed = 500;
+    [SerializeField] private float speed = 500;
     private float speed2 = 1;
-    [SerializeField]private Rigidbody2D Rb2D;
+    private bool LadderMode;
+    [SerializeField] private Rigidbody2D Rb2D;
 
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        float PlayerInput = Input.GetAxisRaw("Vertical");
-        switch (PlayerInput)
+        if (other.tag == "Player")
         {
-            case -1:
-                Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed*Time.deltaTime );
-                break;
-            case 1:
-                Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed*Time.deltaTime );
-                break;
-            case 0:
-                Rb2D.velocity = new Vector2(Rb2D.velocity.x, 0);
-                break;
+            LadderMode = true;
+            Rb2D.gravityScale = 0;
         }
-
-
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            LadderMode = false;
+            Rb2D.gravityScale = 2;
+        }
     }
 
-
-
-
-
+    private void Update()
+    {
+        float PlayerInput = Input.GetAxisRaw("Vertical");
+        if(LadderMode == true)
+        {
+            switch (PlayerInput)
+            {
+                case -1:
+                    Rb2D.isKinematic = false;
+                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed * Time.deltaTime);
+                    break;
+                case 1:
+                    Rb2D.isKinematic = false;
+                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed * Time.deltaTime);
+                    break;
+                case 0:
+                    Rb2D.velocity = new Vector2(Rb2D.velocity.x,0);
+                    break;
+            }
+        }
+        
+    }
 }
+
+
+
+
+
+
+
+

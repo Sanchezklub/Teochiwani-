@@ -55,9 +55,13 @@ public class Enemy : MonoBehaviour
            }
            ExplodeThisGameObject();
        }
-        
-        Destroy(gameObject,6f);
-
+        if(animator)
+        {Destroy(gameObject,3f);}
+        else
+        {
+        Destroy(gameObject);
+        }
+    
     }
     private void ExplodeThisGameObject()
     {

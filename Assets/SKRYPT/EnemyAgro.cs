@@ -10,6 +10,8 @@ public class EnemyAgro : MonoBehaviour
     [SerializeField]
     float agroRange;
     [SerializeField]
+    float attackRange;
+    [SerializeField]
     float moveSpeed;
     Rigidbody2D rb2d;
     [SerializeField]
@@ -34,20 +36,29 @@ public class EnemyAgro : MonoBehaviour
     {
         float distToPlayer = Vector2.Distance(transform.position,PlayerPos.position);
         
-        if(distToPlayer <agroRange)
+        if(distToPlayer <agroRange && attackRange> agroRange)
         {
             ChasePlayer();
         }
-        else 
+        else if (distToPlayer <=attackRange )
         {
-              
+            if(Time.time>=nextAttackTime)
+            {
             AttackPlayer();
             StopChasingPlayer();
+            nextAttackTime = Time.time +1f / attackrate;
+            } 
             
+            
+        }
+        else
+        {
+            StopChasingPlayer();
         }
     }
     void AttackPlayer()
     {
+        animator.SetBool("Attack",true);
         PlayerHealth.TakeDamage(attackdamage);
         if (transform.position.x < PlayerPos.position.x)
         {

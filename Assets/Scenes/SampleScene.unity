@@ -284,12 +284,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c7b3f9d7a78252479a63fc737503125, type: 3}
---- !u!1 &60618166 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2715662901094845607, guid: 12233db26776395448d4fe2793e1c96b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2715662902000912833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &72651633
 GameObject:
   m_ObjectHideFlags: 0
@@ -8225,13 +8219,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  player: {fileID: 1578075500}
+  PlayerPos: {fileID: 0}
   agroRange: 10
+  attackRange: 0
   moveSpeed: 2
   attackjump: 0
   attackdamage: 0
   attackrate: 2
-  Player: {fileID: 0}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &785467006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11109,13 +11106,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1496409817}
-  player: {fileID: 1578075500}
+  PlayerPos: {fileID: 0}
   agroRange: 1000
+  attackRange: 20
   moveSpeed: 1
   attackjump: 1
   attackdamage: 10
-  attackrate: 2
-  Player: {fileID: 60618166}
+  attackrate: 0.001
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1496409815
 MonoBehaviour:
   m_ObjectHideFlags: 0

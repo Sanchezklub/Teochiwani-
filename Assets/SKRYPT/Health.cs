@@ -21,7 +21,8 @@ public class Health : MonoBehaviour
         if (currentHealth<=0)
         {
             Debug.Log("Dead");
-            Vector2 newPos = new Vector2(StartingPosition.x,StartingPosition.y ); 
+            Vector2 newPos = new Vector2(StartingPosition.x,StartingPosition.y );
+            currentHealth = MaxHealth;
             transform.position = newPos;
         }
    }

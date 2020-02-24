@@ -15,10 +15,10 @@ public class EnemyAgro : MonoBehaviour
     float moveSpeed;
     Rigidbody2D rb2d;
     [SerializeField]
-    float attackjump;
+    float attackdelay;// time between start of the animation and the moment player recieves damage
     [SerializeField]
     float attackdamage = 20;
-    public float attackrate = 2f;
+    public float attackrate = 3f; // how many seconds can pass between enemies attacks
     float nextAttackTime = 0f;
     public LayerMask enemyLayers;
     private bool FacingRight;
@@ -41,10 +41,6 @@ public class EnemyAgro : MonoBehaviour
         if (distToPlayer < agroRange)
         {
             ChasePlayer();
-        }
-        else if (distToPlayer <= attackRange)
-        {
-            StopChasingPlayer();
         }
         else
         {
@@ -81,17 +77,20 @@ public class EnemyAgro : MonoBehaviour
         rb2d.velocity = Vector2.zero;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    IEnumerator OnTriggerStay2D(Collider2D col)
     {
-        if (nextAttackTime < 0)
+        if (col.gameObject.name.Equals("Player"))
         {
-            if (col.gameObject.name.Equals("Player"))
+            if (nextAttackTime < 0)
             {
                 animator.SetBool("Attack", true);
-
+                nextAttackTime = attackrate;
+                yield return new WaitForSeconds(attackdelay);
                 PlayerHealth.TakeDamage(attackdamage);
                 StopChasingPlayer();
-                nextAttackTime = attackrate;
+                yield return new WaitForSeconds(0.1f);
+                animator.SetBool("Attack", false);
+
             }
         }
     }

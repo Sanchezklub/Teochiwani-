@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int MaxHealth = 100;
-    int currentHealth;
+    public float MaxHealth = 100;
+    float currentHealth;
     public Sprite mysprite1;
     public Sprite mysprite2;
     [SerializeField]
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         currentHealth =  MaxHealth;
     }
 
-   public void TakeDamage(int damage)
+   public void TakeDamage(float damage)
    {
        currentHealth -=damage;
       
@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
 
     }
-    void ShowFloatingText(int damage )
+    void ShowFloatingText(float damage )
     {
         var go = Instantiate(FloatingTextPrefab,transform.position,Quaternion.identity,transform);
         go.GetComponent<TextMesh>().text = damage.ToString();

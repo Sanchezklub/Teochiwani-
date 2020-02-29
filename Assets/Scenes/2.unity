@@ -121,6 +121,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111612086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111612088}
+  - component: {fileID: 111612087}
+  m_Layer: 0
+  m_Name: LR  Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &111612087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111612086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects: []
+--- !u!4 &111612088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111612086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 103.90103, y: 35.623985, z: -671.7594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +218,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.7891636
+  orthographic size: 62.292915
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,8 +242,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.87, y: 15.46, z: -10}
-  m_LocalScale: {x: 0.8, y: 0.7875, z: 1}
+  m_LocalPosition: {x: 75.4, y: 15.46, z: -10}
+  m_LocalScale: {x: 3.8500001, y: 0.7875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -247,26 +291,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c977e92041c46dc4b932ac3f8c67b651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmountx: 0.6
-  moveAmounty: 0.6
+  moveAmountx: 40
+  moveAmounty: 30
   startTimeBtwSpawn: 0.25
   rooms:
-  - {fileID: 2579740415234463885, guid: 9811cd7c42016024bbda69e9b354256a, type: 3}
-  - {fileID: 6067287444753177794, guid: 75c44dfa5932a5649bdda96e1660b418, type: 3}
-  - {fileID: 5390205309010530644, guid: 010cb189082f7ae4a9c86d718adb39cd, type: 3}
-  - {fileID: 9128613753007134877, guid: 500ded3e94df13046b8654c1d05e282e, type: 3}
-  - {fileID: 1928026963620820221, guid: 26fdafe48efcfc441a2feedc6e35d687, type: 3}
-  - {fileID: 1750727606062217666, guid: 8d15085e74fb42146b6dd303bb327c1d, type: 3}
-  - {fileID: 6252588083665726638, guid: 82f0712ce130dce4bbd47fe6a2bf3e5c, type: 3}
-  - {fileID: 6288820470182897886, guid: d77adfd936239f64ab05ec3666044579, type: 3}
-  - {fileID: 8186079746927730726, guid: ab3e06c3be48743409a00a17181976c4, type: 3}
-  - {fileID: 7102065787816003744, guid: 5b9af3db2e57dea4d9768980def5fc0d, type: 3}
-  - {fileID: 8935372020845454861, guid: a0af44b2095521646b22c4d68bf9d915, type: 3}
-  - {fileID: 2237976104680000197, guid: 5e0c077ec365dd94f8e7bcc9e45b3aae, type: 3}
-  - {fileID: 5856041245591021574, guid: a27c74c30225dd940927f2227f630eef, type: 3}
-  - {fileID: 6309943412710360565, guid: a2fa902a54505644cbc91470e45e0ed8, type: 3}
-  - {fileID: 7588777598917479073, guid: 147d88ecbaef43645a8466cc37999dae, type: 3}
-  - {fileID: 5361231707021294531, guid: cb0085d305e56134e884288e631faecb, type: 3}
+  - {fileID: 8381947886530180438, guid: 2d7402824f9804a46a65b3ee4a841a05, type: 3}
+  - {fileID: 7734500714089939727, guid: 70843b797502e3c44a0a2ff27a19a77f, type: 3}
+  - {fileID: 6031961240576416249, guid: d99a8452794d8df4b83d7b9bf30cf5f8, type: 3}
+  - {fileID: 169604133821275333, guid: 275e4613a6785d744be06235ce164733, type: 3}
+  - {fileID: 2317693027372192194, guid: d6f33ebc617c8944094e1301c3362216, type: 3}
+  - {fileID: 4825179779070765680, guid: 8e1cb0b3a90c55840a0b14efb6d94cf3, type: 3}
+  - {fileID: 4207178568936952948, guid: dad6b3b36a7125640a7bd4ecf81e40de, type: 3}
+  - {fileID: 8939200798234478474, guid: 7182cab7438d7b5409564c867b6413e9, type: 3}
+  - {fileID: 400104419487118460, guid: f10fdc50ef59a6e4ca87c2d161b43c42, type: 3}
+  - {fileID: 4948710841011249126, guid: 85287638e9c8e9743a369b9ea6b06475, type: 3}
+  - {fileID: 2916833751028581317, guid: f5043681ef79fe04aa021584144ddd07, type: 3}
+  - {fileID: 7783038627617528297, guid: e84de2a2c1aaf6545b3a5ccf92f865b1, type: 3}
+  - {fileID: 1972562103771543159, guid: 8e1d1faf9ab4342408300a6c5b1617ff, type: 3}
+  - {fileID: 1728385394476032576, guid: 9fe47242e8523b443a34412497420ccc, type: 3}
+  - {fileID: 2456159659627754389, guid: 49ec9b78b02e55c469c4876c26aee5ec, type: 3}
+  - {fileID: 856667659468407030, guid: c8a14b926ac709945bd7c224c5b23f4d, type: 3}
   endingPosition: {x: 20, y: 15}
   StartingPosition: {x: 10, y: 15}
   whatIsRoom:

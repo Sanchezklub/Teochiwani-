@@ -2,40 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class skala : MonoBehaviour
+public class Skala : BaseEnemy
 {
-    public int MaxHealth = 100;
-    int currentHealth;
+    public GameObject Particle;
     public Sprite mysprite1;
     public Sprite mysprite2;
-    // Start is called before the first frame update
-    private void Start()
-    {
-        currentHealth = MaxHealth;
-    }
 
-   
-    public void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
-       currentHealth -=damage;
-        if (currentHealth==40 )
+        base.TakeDamage(damage);
+        Instantiate(this.Particle, this.transform.position, Quaternion.identity);
+        if (CurrentHealth >= 40 && CurrentHealth <= 100)
         {
             this.GetComponent<SpriteRenderer>().sprite = mysprite1;
         }
-        else if (currentHealth ==25 )
+        else if (CurrentHealth > 0 && CurrentHealth < 39)
         {
             this.GetComponent<SpriteRenderer>().sprite = mysprite2;
         }
-        else if (currentHealth<=0)
-        {
-            Die();
-        }
-    }
-
-    void Die ()
-    {
-        
-        Destroy(gameObject);
 
     }
 }

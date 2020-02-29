@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float MaxHealth = 100;
-    float currentHealth;
+    public float currentHealth;
     public Sprite mysprite1;
     public Sprite mysprite2;
     [SerializeField]

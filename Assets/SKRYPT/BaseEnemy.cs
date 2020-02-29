@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseEnemy : MonoBehaviour
 {
     [SerializeField] float MaxHealth;
-    [SerializeField] float CurrentHealth;
+    [SerializeField] protected float CurrentHealth;
     public GameObject FloatingTextPrefab;
     public Animator animator;
 

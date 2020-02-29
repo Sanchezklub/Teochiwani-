@@ -6286,6 +6286,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1691637364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3289084681085469618, guid: df2f9ba45b3df7344b3698204c409bd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3289084680988248672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1697085435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9062790952568796758, guid: 5c7b3f9d7a78252479a63fc737503125,
@@ -7522,6 +7528,48 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1011585032}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067582193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3289084680409560492, guid: df2f9ba45b3df7344b3698204c409bd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3289084680988248672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2067582194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067582193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9e012177e7e734189fd7471568f754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 0
+  CurrentHealth: 0
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  animator: {fileID: 0}
+  Particle: {fileID: 1691637364}
+  mysprite1: {fileID: 21300000, guid: 5284f5217b162ff46931aead0def2f8a, type: 3}
+  mysprite2: {fileID: 21300000, guid: a320da053ff32d04f82262ebc3421f87, type: 3}
+--- !u!114 &2067582195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067582193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2887376c711049e42a10275c04b6f695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 0
+  CurrentHealth: 0
+  FloatingTextPrefab: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1001 &2078547373
 PrefabInstance:
   m_ObjectHideFlags: 0

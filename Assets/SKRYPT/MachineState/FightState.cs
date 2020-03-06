@@ -21,7 +21,7 @@ public class FightState : BaseState<BaseEnemy>
         this.enemyAnimator = controller.enemyAnimator;
         enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, false);
         player = GameObject.Find("Player");
-        controller.OnDamageTaken += Attack;
+        controller.Attacking += Attack;
 
     }
     public override void UpdateState()
@@ -39,20 +39,25 @@ public class FightState : BaseState<BaseEnemy>
     public void Attack()
     {
 
-        Collider[] hitColliders = Physics.OverlapSphere(brain.transform.position, 15f);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(brain.transform.position, 15f);
         int i = 0;
         while (i < hitColliders.Length)
         {
+            if (hitColliders[i].tag == "Player")
+            {
+                Debug.Log("attacked player");
+            }
             Health player = hitColliders[i].GetComponent<Health>();
             player?.TakeDamage(brain.damage);
             i++;
         }
+
     }
 
 
     public override void DeinitState(BaseEnemy controller)
     {
-        brain.OnDamageTaken -= Attack;
+        brain.Attacking -= Attack;
         base. DeinitState(controller);
     }
 }

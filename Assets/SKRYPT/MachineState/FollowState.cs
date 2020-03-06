@@ -8,6 +8,7 @@ public class FollowState : BaseState<BaseEnemy>
     private Animator enemyAnimator;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
+    
 
     public override void InitState(BaseEnemy controller)
     {
@@ -19,13 +20,13 @@ public class FollowState : BaseState<BaseEnemy>
         this.enemyAnimator = controller.enemyAnimator;
         enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, true);
         player = GameObject.Find("Player");
-        controller.OnDamageTaken += DamageTaken;
+        controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
     }
 
     public void DamageTaken()
     {
-        brain.OnDamageTaken -= DamageTaken;
+        brain.Attacking -= DamageTaken;
         brain.StartFight();
     }
 
@@ -41,18 +42,20 @@ public class FollowState : BaseState<BaseEnemy>
         }
 
 
-        RaycastHit hit;
+        //RaycastHit2D hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(brain.raycastTransform.position, Vector2.down, out hit, 10f))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround))
         {
             
-            Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
+            //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
+
             Debug.Log("Did Hit");
-            enemyRigidBody2D.velocity = new Vector2(brain.speed, 0);
+            enemyRigidBody2D.velocity = new Vector2(1,0) * brain.speed;
             
         } else
         {
             brain.transform.Rotate(new Vector2(0f, 180f));
+            brain.speed = -brain.speed;
             Debug.Log("Did not");
         }
 

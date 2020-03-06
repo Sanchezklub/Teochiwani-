@@ -7,9 +7,10 @@ public class BaseEnemy : BaseBrain<BaseEnemy>
 {
     public Animator enemyAnimator;
     public Transform raycastTransform;
+    [SerializeField] public LayerMask WhatIsGround;
 
-    
-    public UnityAction OnDamageTaken;
+
+    public UnityAction Attacking;
 
     public float health;
     public float damage;
@@ -29,9 +30,9 @@ public class BaseEnemy : BaseBrain<BaseEnemy>
         }
     }
 
-    public void TakeDamage()
+    public void DealDamage()
     {
-        OnDamageTaken?.Invoke();
+        Attacking?.Invoke();
     }
 
 

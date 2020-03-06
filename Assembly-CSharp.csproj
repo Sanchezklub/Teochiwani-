@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SKRYPT\Architekture\EnemyInfo.cs" />
     <Compile Include="Assets\SKRYPT\BloodCounterScript.cs" />
     <Compile Include="Assets\SKRYPT\BloodScript.cs" />
     <Compile Include="Assets\SKRYPT\Bullet.cs" />
@@ -80,8 +81,16 @@
     <Compile Include="Assets\SKRYPT\Health.cs" />
     <Compile Include="Assets\SKRYPT\LevelGeneration.cs" />
     <Compile Include="Assets\SKRYPT\LootzDzbana.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\BaseBrain.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\BaseEnemy.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\BaseState.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\FightState.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\FollowState.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\Keys.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\OurPlayer.cs" />
     <Compile Include="Assets\SKRYPT\MainMenu.cs" />
     <Compile Include="Assets\SKRYPT\PauseController.cs" />
+    <Compile Include="Assets\SKRYPT\PlayerCombat.cs" />
     <Compile Include="Assets\SKRYPT\PlayerMovement.cs" />
     <Compile Include="Assets\SKRYPT\Projectile.cs" />
     <Compile Include="Assets\SKRYPT\Room.cs" />

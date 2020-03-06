@@ -41,7 +41,7 @@ public class CharacterController2D : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 	}
 
-	private void FixedUpdate()
+	private void Update()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -53,9 +53,13 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				m_Grounded = true;
 				if (!wasGrounded && m_Rigidbody2D.velocity.y <= 0)
+				{
+
 					OnLandEvent.Invoke();
+
+				}
+				m_Grounded = true;
 			}
 		}
 	}

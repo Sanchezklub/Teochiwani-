@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowState : BaseState<BaseEnemy>
+public class FollowState : BaseState<SnakeBrain>
 {
-    private BaseEnemy brain;
+    private SnakeBrain brain;
     private Animator enemyAnimator;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
-    
+    float PositionDifference;
 
-    public override void InitState(BaseEnemy controller)
+    public override void InitState(SnakeBrain controller)
     {
         base.InitState(controller);
-       // var renderer = controller.gameObject.GetComponent<MeshRenderer>();
-      //  renderer.material.color = Color.green;
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
@@ -33,37 +31,41 @@ public class FollowState : BaseState<BaseEnemy>
     public override void UpdateState()
     {
         base.UpdateState();
-
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
-        
-        if(distance < 5f)
+        if (distance < 5)
         {
             brain.StartFight();
         }
-
-
-        //RaycastHit2D hit;
-        // Does the ray intersect any objects excluding the player layer
         if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround))
         {
-            
-            //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
+            Debug.Log("Did hit");
+            MoveTowardsPlayer();
 
-            Debug.Log("Did Hit");
-            enemyRigidBody2D.velocity = new Vector2(1,0) * brain.speed;
-            
-        } else
-        {
-            brain.transform.Rotate(new Vector2(0f, 180f));
-            brain.speed = -brain.speed;
-            Debug.Log("Did not");
         }
 
-        //brain.transform.position = Vector3.Lerp(brain.transform.position, brain.enemyToFollow.position, Time.deltaTime * 2f);
+        else{
+            Debug.Log("Did not");
+            // tutaj dać zmianę na animację idlowania gdyby była
+
+        }
     }
 
-    public override void DeinitState(BaseEnemy controller)
+    public override void DeinitState(SnakeBrain controller)
     {
-        base. DeinitState(controller);
+        base.DeinitState(controller);
+    }
+
+    void MoveTowardsPlayer()
+    {
+        PositionDifference = brain.transform.position.x - player.transform.position.x;
+        if(PositionDifference <= 0)
+        {
+            enemyRigidBody2D.velocity = Vector2.left * brain.speed;             
+        }
+        else if (PositionDifference >= 0)
+        {
+            enemyRigidBody2D.velocity = Vector2.right * brain.speed;
+        }
+       
     }
 }

@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightState : BaseState<BaseEnemy>
+public class FightState : BaseState<SnakeBrain>
 {
-    private BaseEnemy brain;
+    private SnakeBrain brain;
     private Animator enemyAnimator;
     
     private GameObject player;
-    private float attackTime;
-    private float attackDelay = 3f;
 
-    public override void InitState(BaseEnemy controller)
+    public override void InitState(SnakeBrain controller)
     {
         base.InitState(controller);
-      //  var renderer = controller.gameObject.GetComponent<MeshRenderer>();
-     //   renderer.material.color = Color.red;
         this.brain=controller;
 
         this.enemyAnimator = controller.enemyAnimator;
@@ -32,7 +28,7 @@ public class FightState : BaseState<BaseEnemy>
 
         if (distance > 5f)
         {
-            brain.StartPatrol();
+            brain.StartFollow();
         }
     }
 
@@ -55,7 +51,7 @@ public class FightState : BaseState<BaseEnemy>
     }
 
 
-    public override void DeinitState(BaseEnemy controller)
+    public override void DeinitState(SnakeBrain controller)
     {
         brain.Attacking -= Attack;
         base. DeinitState(controller);

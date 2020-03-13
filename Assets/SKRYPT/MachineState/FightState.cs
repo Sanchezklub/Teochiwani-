@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightState : BaseState<SnakeBrain>
+public class FightState : BaseState<EnemyBrain>
 {
-    private SnakeBrain brain;
+    private EnemyBrain brain;
     private Animator enemyAnimator;
     
     private GameObject player;
 
-    public override void InitState(SnakeBrain controller)
+    public override void InitState(EnemyBrain controller)
     {
         base.InitState(controller);
         this.brain=controller;
@@ -51,7 +51,7 @@ public class FightState : BaseState<SnakeBrain>
     }
 
 
-    public override void DeinitState(SnakeBrain controller)
+    public override void DeinitState(EnemyBrain controller)
     {
         brain.Attacking -= Attack;
         base. DeinitState(controller);

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SKRYPT\Architekture\EnemyInfo.cs" />
+    <Compile Include="Assets\SKRYPT\BaseBreakable.cs" />
     <Compile Include="Assets\SKRYPT\BloodCounterScript.cs" />
     <Compile Include="Assets\SKRYPT\BloodScript.cs" />
     <Compile Include="Assets\SKRYPT\Bullet.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\SKRYPT\DetroyTrue.cs" />
     <Compile Include="Assets\SKRYPT\Drabina.cs" />
     <Compile Include="Assets\SKRYPT\Dragon.cs" />
+    <Compile Include="Assets\SKRYPT\Dzban.cs" />
     <Compile Include="Assets\SKRYPT\Enemy.cs" />
     <Compile Include="Assets\SKRYPT\EnemyAgro.cs" />
     <Compile Include="Assets\SKRYPT\FullscreenToggle.cs" />
@@ -83,12 +85,12 @@
     <Compile Include="Assets\SKRYPT\LootzDzbana.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\BaseBrain.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\BaseState.cs" />
+    <Compile Include="Assets\SKRYPT\MachineState\EnemyBrain.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\FightState.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\FollowState.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\Keys.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\OurPlayer.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\PatrolState.cs" />
-    <Compile Include="Assets\SKRYPT\MachineState\SnakeBrain.cs" />
     <Compile Include="Assets\SKRYPT\MainMenu.cs" />
     <Compile Include="Assets\SKRYPT\PauseController.cs" />
     <Compile Include="Assets\SKRYPT\PlayerCombat.cs" />
@@ -96,11 +98,11 @@
     <Compile Include="Assets\SKRYPT\Projectile.cs" />
     <Compile Include="Assets\SKRYPT\Room.cs" />
     <Compile Include="Assets\SKRYPT\SKRIPT.cs" />
+    <Compile Include="Assets\SKRYPT\Skala.cs" />
     <Compile Include="Assets\SKRYPT\SpawnObject.cs" />
     <Compile Include="Assets\SKRYPT\Spike.cs" />
     <Compile Include="Assets\SKRYPT\VolumeSliders.cs" />
     <Compile Include="Assets\SKRYPT\Weapon.cs" />
-    <Compile Include="Assets\SKRYPT\skala.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

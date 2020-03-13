@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowState : BaseState<SnakeBrain>
+public class FollowState : BaseState<EnemyBrain>
 {
-    private SnakeBrain brain;
+    private EnemyBrain brain;
     private Animator enemyAnimator;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
     float PositionDifference;
 
-    public override void InitState(SnakeBrain controller)
+    public override void InitState(EnemyBrain controller)
     {
         base.InitState(controller);
         this.brain = controller;
@@ -50,7 +50,7 @@ public class FollowState : BaseState<SnakeBrain>
         }
     }
 
-    public override void DeinitState(SnakeBrain controller)
+    public override void DeinitState(EnemyBrain controller)
     {
         base.DeinitState(controller);
     }

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolState : BaseState<SnakeBrain>
+public class PatrolState : BaseState<EnemyBrain>
 {
-    private SnakeBrain brain;
+    private EnemyBrain brain;
     private Animator enemyAnimator;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
     
 
-    public override void InitState(SnakeBrain controller)
+    public override void InitState(EnemyBrain controller)
     {
         base.InitState(controller);
        // var renderer = controller.gameObject.GetComponent<MeshRenderer>();
@@ -67,7 +67,7 @@ public class PatrolState : BaseState<SnakeBrain>
         //brain.transform.position = Vector3.Lerp(brain.transform.position, brain.enemyToFollow.position, Time.deltaTime * 2f);
     }
 
-    public override void DeinitState(SnakeBrain controller)
+    public override void DeinitState(EnemyBrain controller)
     {
         base. DeinitState(controller);
     }

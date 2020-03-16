@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour 
 {
-
     public Transform firePoint;
 	public GameObject bulletPrefab;
     public float attackrate = 2f;

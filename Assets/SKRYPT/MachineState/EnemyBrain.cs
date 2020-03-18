@@ -30,11 +30,6 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     {
         UpdateChildState();
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartFight();
-        }
-
         Debug.Log(currentState);
     }
 

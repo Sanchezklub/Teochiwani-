@@ -24,6 +24,7 @@ public class FollowState : BaseState<EnemyBrain>
 
     public void DamageTaken()
     {
+        
         brain.Attacking -= DamageTaken;
         brain.StartFight();
     }

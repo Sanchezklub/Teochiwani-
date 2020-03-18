@@ -32,9 +32,13 @@ public class FollowState : BaseState<EnemyBrain>
     {
         base.UpdateState();
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
-        if (distance < 5)
+        if (distance < brain.StartFightDist)
         {
             brain.StartFight();
+        }
+        else if (distance > brain.StopFollowDist)
+        {
+            brain.StartPatrol();
         }
         if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround))
         {
@@ -58,11 +62,11 @@ public class FollowState : BaseState<EnemyBrain>
     void MoveTowardsPlayer()
     {
         PositionDifference = brain.transform.position.x - player.transform.position.x;
-        if(PositionDifference <= 0)
+        if(PositionDifference >= 0)
         {
             enemyRigidBody2D.velocity = Vector2.left * brain.speed;             
         }
-        else if (PositionDifference >= 0)
+        else if (PositionDifference <= 0)
         {
             enemyRigidBody2D.velocity = Vector2.right * brain.speed;
         }

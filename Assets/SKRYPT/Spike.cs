@@ -7,6 +7,6 @@ public class Spike : MonoBehaviour
     float damage=100;
     void OnTriggerEnter2D( Collider2D col)
     {
-       col.GetComponent<Health>().TakeDamage(damage);
+       col.GetComponent<Health>()?.TakeDamage(damage);
     }
 }

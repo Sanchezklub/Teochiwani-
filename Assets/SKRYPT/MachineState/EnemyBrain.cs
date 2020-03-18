@@ -16,6 +16,10 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public float CurrentHealth;
     public float damage;
     public float speed;
+    public float StartFollowDist;
+    public float StopFollowDist;
+    public float StartFightDist;
+    public float AttackRange;
     public GameObject FloatingTextPrefab;
 
     private void Start()

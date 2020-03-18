@@ -26,7 +26,7 @@ public class FightState : BaseState<EnemyBrain>
 
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
 
-        if (distance > 5f)
+        if (distance > brain.StartFightDist)
         {
             brain.StartFollow();
         }
@@ -35,16 +35,17 @@ public class FightState : BaseState<EnemyBrain>
     public void Attack()
     {
 
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(brain.transform.position, 15f);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(brain.transform.position, brain.AttackRange);
         int i = 0;
         while (i < hitColliders.Length)
         {
             if (hitColliders[i].tag == "Player")
             {
-                Debug.Log("attacked player");
+                Health player = hitColliders[i].GetComponent<Health>();
+                player?.TakeDamage(brain.damage);
+                break;
             }
-            Health player = hitColliders[i].GetComponent<Health>();
-            player?.TakeDamage(brain.damage);
+            
             i++;
         }
 

@@ -36,14 +36,9 @@ public class PatrolState : BaseState<EnemyBrain>
 
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
         
-        if (distance < 20f)
+        if (distance < brain.StartFollowDist)
         {
             brain.StartFollow();
-        }
-        
-        if(distance < 5f)
-        {
-            brain.StartFight();
         }
 
 

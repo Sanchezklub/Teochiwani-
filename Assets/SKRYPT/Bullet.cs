@@ -16,11 +16,8 @@ public class Bullet : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
-		Enemy enemy = hitInfo.GetComponent<Enemy>();
-		if (enemy != null)
-		{
-			enemy.TakeDamage(damage);
-		}
+		hitInfo.GetComponent<Health>()?.TakeDamage(damage);
+
 	// tak jak wyzej 	Instantiate(impactEffect, transform.position, transform.rotation);
 		Destroy(gameObject);
 	}

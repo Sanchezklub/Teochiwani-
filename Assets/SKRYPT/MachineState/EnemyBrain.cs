@@ -68,32 +68,4 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     {
         ChangeState(new FollowState());
     }
-
-    public virtual void ShowFloatingText(float damage)
-    {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMesh>().text = damage.ToString();
-    }
-
-    public virtual void TakeDamage(float damage)
-    {
-        CurrentHealth -= damage;
-        ShowFloatingText(damage);
-        if (CurrentHealth <= 0)
-        {
-            Die();
-        }
-
-
-    }
-
-    public virtual void Die()
-    {
-        if (enemyAnimator)
-        { Destroy(gameObject, 3f); }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 }

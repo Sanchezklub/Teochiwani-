@@ -5,30 +5,38 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public Slider healthBar;
     public float MaxHealth=100;
     public float currentHealth;
-    public Vector2 StartingPosition;
+    public bool FloatingText;
+    public GameObject FloatingTextPrefab;
    
-    void Start()
+    protected virtual void Start()
     {
         currentHealth=MaxHealth;
-        healthBar.value = MaxHealth;
+
     }
-     public void TakeDamage(float damage)
-   {
+     public virtual void TakeDamage(float damage)
+     {
        currentHealth -=damage;
-        if (currentHealth<=0)
-        {
-            Debug.Log("Dead");
-            Vector2 newPos = new Vector2(StartingPosition.x,StartingPosition.y );
-            currentHealth = MaxHealth;
-            transform.position = newPos;
-        }
-   }
-    // Update is called once per frame
-    void Update()
-    {
-        healthBar.value = currentHealth;
+       if (FloatingText == true)
+       {
+            ShowFloatingText(damage);
+       }
+       if (currentHealth<=0)
+       {
+            Die();
+            
+       }
+     }
+
+    protected virtual void Die() {
+    
     }
+
+    public virtual void ShowFloatingText(float damage)
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMesh>().text = damage.ToString();
+    }
+
 }

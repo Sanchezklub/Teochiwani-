@@ -17,9 +17,11 @@ public class FollowState : BaseState<EnemyBrain>
 
         this.enemyAnimator = controller.enemyAnimator;
         enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, true);
+        enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+
     }
 
     public void DamageTaken()
@@ -50,7 +52,11 @@ public class FollowState : BaseState<EnemyBrain>
 
         else{
             Debug.Log("Did not");
-            // tutaj dać zmianę na animację idlowania gdyby była
+            enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
+            enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, false);
+            enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
+
+
 
         }
     }

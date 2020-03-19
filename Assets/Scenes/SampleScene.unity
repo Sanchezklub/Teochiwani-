@@ -5062,6 +5062,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5015807158719816542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125175239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125175233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 0
+  FloatingTextPrefab: {fileID: 0}
+  enemyAnimator: {fileID: 0}
 --- !u!4 &1127225088
 Transform:
   m_ObjectHideFlags: 0
@@ -9808,6 +9825,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1468336920, guid: 12233db26776395448d4fe2793e1c96b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2715662900309364323, guid: 12233db26776395448d4fe2793e1c96b,
         type: 3}
       propertyPath: m_LocalPosition.x

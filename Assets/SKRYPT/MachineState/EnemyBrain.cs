@@ -7,10 +7,12 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
 {
     public Animator enemyAnimator;
     public Transform raycastTransform;
+    public Transform AttackPoint;
     [SerializeField] public LayerMask WhatIsGround;
 
 
     public UnityAction Attacking;
+    public UnityAction LeaveFightState;
 
     public float MaxHealth;
     public float CurrentHealth;
@@ -20,7 +22,8 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public float StopFollowDist;
     public float StartFightDist;
     public float AttackRange;
-    public GameObject FloatingTextPrefab;
+
+    public bool FacingRight;
 
     private void Start()
     {
@@ -36,6 +39,11 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public void DealDamage()
     {
         Attacking?.Invoke();
+    }
+
+    public void AttemptToLeaveFightState()
+    {
+        LeaveFightState?.Invoke();
     }
 
 

@@ -44,19 +44,21 @@ public class PatrolState : BaseState<EnemyBrain>
 
         //RaycastHit2D hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
             
             //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
 
             Debug.Log("Did Hit");
             enemyRigidBody2D.velocity = new Vector2(1,0) * brain.speed;
+            brain.FacingRight = true;
             
         } else
         {
             brain.transform.Rotate(new Vector2(0f, 180f));
             brain.speed = -brain.speed;
             Debug.Log("Did not");
+            brain.FacingRight = !brain.FacingRight;
         }
 
         //brain.transform.position = Vector3.Lerp(brain.transform.position, brain.enemyToFollow.position, Time.deltaTime * 2f);

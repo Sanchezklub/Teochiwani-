@@ -43,7 +43,7 @@ public class FollowState : BaseState<EnemyBrain>
         {
             brain.StartPatrol();
         }
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
             Debug.Log("Did hit");
             MoveTowardsPlayer();
@@ -71,12 +71,27 @@ public class FollowState : BaseState<EnemyBrain>
         PositionDifference = brain.transform.position.x - player.transform.position.x;
         if(PositionDifference >= 0)
         {
-            enemyRigidBody2D.velocity = Vector2.left * brain.speed;             
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            enemyRigidBody2D.velocity = Vector2.left * brain.speed;
+            brain.FacingRight = false;
         }
         else if (PositionDifference <= 0)
         {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
             enemyRigidBody2D.velocity = Vector2.right * brain.speed;
+            brain.FacingRight = true;
         }
        
+    }
+
+    void Flip()
+    {
+        brain.transform.Rotate(new Vector2(0f, 180f));
     }
 }

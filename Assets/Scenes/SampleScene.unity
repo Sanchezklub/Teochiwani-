@@ -3095,6 +3095,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5442415635740474839, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7224545
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415635740474839, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7125
+      objectReference: {fileID: 0}
     - target: {fileID: 5442415636159087707, guid: d8e9a384d7d362347be198032da13727,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3115,6 +3125,52 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -549.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -254.79999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 512.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340406, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442415637032340407, guid: d8e9a384d7d362347be198032da13727,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0d91e625353fff540b561f9ac5d64352,
+        type: 3}
     - target: {fileID: 5442415637156892889, guid: d8e9a384d7d362347be198032da13727,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -5611,7 +5667,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36e9436df12f2ec48b83e0eddaf80c9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cb4ecf113b1c4448976fad440a5e250, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5639,7 +5695,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.8, y: 10.8}
+    oldSize: {x: 20, y: 15}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10145,7 +10201,7 @@ PrefabInstance:
     - target: {fileID: 2715662901094845611, guid: 12233db26776395448d4fe2793e1c96b,
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
-      value: 256
+      value: 20736
       objectReference: {fileID: 0}
     - target: {fileID: 2715662901094845613, guid: 12233db26776395448d4fe2793e1c96b,
         type: 3}

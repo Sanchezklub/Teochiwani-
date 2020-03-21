@@ -12,4 +12,5 @@ public class SpawnObject : MonoBehaviour
         int rand = Random.Range(0, objects.Length);
         Instantiate(objects[rand], transform.position, Quaternion.identity );
     }
+    
 }

@@ -22,6 +22,10 @@ public class PatrolState : BaseState<EnemyBrain>
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+        if (brain.FacingRight == false)
+        {
+            brain.transform.Rotate(new Vector2(0f, 180f));
+        }
     }
 
     public void DamageTaken()
@@ -46,19 +50,25 @@ public class PatrolState : BaseState<EnemyBrain>
         // Does the ray intersect any objects excluding the player layer
         if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
-            
+
             //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
 
-            Debug.Log("Did Hit");
-            enemyRigidBody2D.velocity = new Vector2(1,0) * brain.speed;
-            brain.FacingRight = true;
+            //Debug.Log("Did Hit");
+            if(brain.FacingRight == true)
+            {
+                enemyRigidBody2D.velocity = new Vector2(1, 0) * brain.speed;
+            }
+            else
+            {
+                enemyRigidBody2D.velocity = new Vector2(-1, 0) * brain.speed;
+            }
+
+            
+            
             
         } else
         {
-            brain.transform.Rotate(new Vector2(0f, 180f));
-            brain.speed = -brain.speed;
-            Debug.Log("Did not");
-            brain.FacingRight = !brain.FacingRight;
+            Flip();
         }
 
         //brain.transform.position = Vector3.Lerp(brain.transform.position, brain.enemyToFollow.position, Time.deltaTime * 2f);
@@ -67,5 +77,11 @@ public class PatrolState : BaseState<EnemyBrain>
     public override void DeinitState(EnemyBrain controller)
     {
         base. DeinitState(controller);
+    }
+
+    void Flip()
+    {
+        brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
 }

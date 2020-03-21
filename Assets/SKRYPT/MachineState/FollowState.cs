@@ -22,6 +22,7 @@ public class FollowState : BaseState<EnemyBrain>
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
 
+
     }
 
     public void DamageTaken()
@@ -43,15 +44,18 @@ public class FollowState : BaseState<EnemyBrain>
         {
             brain.StartPatrol();
         }
+
+
         if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
-            Debug.Log("Did hit");
+            //Debug.Log("Did hit");
             MoveTowardsPlayer();
 
         }
 
         else{
-            Debug.Log("Did not");
+            enemyRigidBody2D.velocity = new Vector2(0,0);
+            //Debug.Log("Did not");
             enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
             enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, false);
             enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);

@@ -8,6 +8,7 @@ public class Chest : MonoBehaviour
     private bool IsOpen = false;
     private bool PlayerInRange;
     public GameObject[] objects;
+    public GameObject Particle;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +38,7 @@ public class Chest : MonoBehaviour
         Debug.Log("Loot");
         IsOpen = true;
         this.GetComponent<SpriteRenderer>().sprite = mysprite1;
+        Instantiate(this.Particle, transform.position, Quaternion.identity);
         Spawn();
         
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3289084680409560495}
   - component: {fileID: 3289084680409560494}
   - component: {fileID: 3289084680409560493}
-  - component: {fileID: 3289084680409560497}
+  - component: {fileID: 7786722804532241583}
   m_Layer: 14
   m_Name: skala
   m_TagString: Untagged
@@ -519,7 +519,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3289084680409560497
+--- !u!114 &7786722804532241583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,17 +528,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3289084680409560492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2b2dcda4e49154c88d3bd72fbc37cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 99343e29fd4ea5f499aa84c1cf0f760e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  mysprite1: {fileID: 21300000, guid: 5284f5217b162ff46931aead0def2f8a, type: 3}
-  mysprite2: {fileID: 21300000, guid: a320da053ff32d04f82262ebc3421f87, type: 3}
-  destrutableRef: {fileID: 0}
-  Particle: {fileID: 3289084681085469618}
+  currentHealth: 0
+  FloatingText: 0
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  animator: {fileID: 0}
+  Particle: {fileID: 3289084681085469618}
+  mysprite1: {fileID: 21300000, guid: 5284f5217b162ff46931aead0def2f8a, type: 3}
+  mysprite2: {fileID: 21300000, guid: a320da053ff32d04f82262ebc3421f87, type: 3}
 --- !u!1 &3289084681085469618
 GameObject:
   m_ObjectHideFlags: 0

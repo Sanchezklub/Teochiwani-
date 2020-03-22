@@ -56,11 +56,11 @@ public class PatrolState : BaseState<EnemyBrain>
             //Debug.Log("Did Hit");
             if(brain.FacingRight == true)
             {
-                enemyRigidBody2D.velocity = new Vector2(1, 0) * brain.speed;
+                enemyRigidBody2D.velocity = new Vector2(1 * brain.speed, enemyRigidBody2D.velocity.y);
             }
             else
             {
-                enemyRigidBody2D.velocity = new Vector2(-1, 0) * brain.speed;
+                enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
             }
 
             

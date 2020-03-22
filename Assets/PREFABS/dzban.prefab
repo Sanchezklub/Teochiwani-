@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6769391296925741223}
   - component: {fileID: 6769391296925741222}
   - component: {fileID: 6769391296925741221}
-  - component: {fileID: 6769391296925741218}
-  - component: {fileID: 6769391296925741217}
   - component: {fileID: 6769391296925741216}
+  - component: {fileID: 6026977811888031425}
   m_Layer: 14
   m_Name: dzban
   m_TagString: Untagged
@@ -106,42 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6769391296925741218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769391296925741220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2b2dcda4e49154c88d3bd72fbc37cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 10
-  mysprite1: {fileID: 0}
-  mysprite2: {fileID: 0}
-  destrutableRef: {fileID: 7731904333909960315, guid: 8e41057cac762714c80c5f76b8b5a0ff,
-    type: 3}
-  Particle: {fileID: 0}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
-  animator: {fileID: 0}
---- !u!114 &6769391296925741217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6769391296925741220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab8b23bff671d6488316af892b05bc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minimumCount: 1
-  maximumCount: 3
-  prefab: {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
 --- !u!60 &6769391296925741216
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -474,3 +437,25 @@ PolygonCollider2D:
       - {x: 0.17, y: -8.099999}
       - {x: 0.44, y: -8.09}
       - {x: 0.45, y: -8.08}
+--- !u!114 &6026977811888031425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769391296925741220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f393e88585968c44bc6f516efee180c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 30
+  currentHealth: 0
+  FloatingText: 0
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  minimumCount: 1
+  maximumCount: 3
+  prefab: {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
+  destrutableRef: {fileID: 7731904333909960315, guid: 8e41057cac762714c80c5f76b8b5a0ff,
+    type: 3}

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bow : BaseWeapon
 {
+    public bool FacingRight = true;
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Collider2D coll;
+    
 
     public override void Attack(PlayerCombat controller)
     {
@@ -16,6 +18,18 @@ public class Bow : BaseWeapon
 
     public override void DropWeapon()
     {
+        GameObject Player = GameObject.Find("Player");
+        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
+        FacingRight = zwrot.m_FacingRight;
+        if (FacingRight == true)
+        {
+           Debug.Log("right");
+        }
+        else
+        {
+            Debug.Log("left");
+            transform.Rotate(0f,180f,0f);
+        }
         transform.parent = null;
         coll.enabled = true;
     }
@@ -23,5 +37,17 @@ public class Bow : BaseWeapon
     public override void PickupWepaon()
     {
         coll.enabled = false;
+
+        GameObject Player = GameObject.Find("Player");
+        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
+        FacingRight = zwrot.m_FacingRight;
+        if (FacingRight == true)
+        {
+            //chuj
+        }
+        else
+        {
+            transform.Rotate(0f,180f,0f);
+        }
     }
 }

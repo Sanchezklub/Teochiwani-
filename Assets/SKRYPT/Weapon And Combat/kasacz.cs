@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bow : BaseWeapon
+public class kasacz : BaseWeapon
 {
     public bool FacingRight = true;
-    public GameObject bulletPrefab;
-    public Transform firePoint;
+    public Transform AttackPoint;
+    public LayerMask enemyLayers;
     public Collider2D coll;
     public GameObject FloatingTextPrefab;
     public string FlavourText = "JDorka";
 
+    public float attackRange;
+    public float attackdamage;
+
     public override void Attack(PlayerCombat controller)
     {
-        Debug.Log("Bow :: Attack() - Player attacked with bow");
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Debug.Log("kasacz :: Attack() - Player attacked with kasacz");
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Health>()?.TakeDamage(attackdamage);
+
+        }
     }
 
-    public override void DropWeapon()
+      public override void DropWeapon()
     {
         GameObject Player = GameObject.Find("Player");
         CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
@@ -36,9 +45,9 @@ public class Bow : BaseWeapon
     }
 
     public override void PickupWepaon()
-    {
+    {   
         ShowFloatingText(FlavourText);
-
+        
         coll.enabled = false;
 
         GameObject Player = GameObject.Find("Player");
@@ -53,7 +62,7 @@ public class Bow : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
     }
-    public virtual void ShowFloatingText(string flavourtext)
+     public virtual void ShowFloatingText(string flavourtext)
     {
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.GetComponent<TextMesh>().text = flavourtext;

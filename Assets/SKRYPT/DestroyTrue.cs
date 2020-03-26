@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyTrue : MonoBehaviour
+public class DetroyTrue : MonoBehaviour
 {
     public float Destroytime =3f;
     public Vector3 Offset = new Vector3(0,2,0);

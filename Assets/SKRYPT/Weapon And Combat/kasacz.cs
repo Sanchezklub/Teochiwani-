@@ -8,7 +8,6 @@ public class kasacz : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-    public GameObject FloatingTextPrefab;
     public string FlavourText = "JDorka";
 
     public float attackRange;
@@ -62,11 +61,5 @@ public class kasacz : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
     }
-     public virtual void ShowFloatingText(string flavourtext)
-    {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMesh>().text = flavourtext;
-
-
-    }
+    
 }

@@ -8,7 +8,6 @@ public class Bow : BaseWeapon
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Collider2D coll;
-    public GameObject FloatingTextPrefab;
     public string FlavourText = "JDorka";
 
     public override void Attack(PlayerCombat controller)
@@ -53,11 +52,5 @@ public class Bow : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
     }
-    public virtual void ShowFloatingText(string flavourtext)
-    {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMesh>().text = flavourtext;
-
-
-    }
+    
 }

@@ -11,7 +11,7 @@ public class Axe : BaseWeapon
 
     public float attackRange;
     public float attackdamage;
-
+    public string FlavourText = "Perfekcyjne do skalpów";
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("Axe :: Attack() - Player attacked with axe");
@@ -45,7 +45,7 @@ public class Axe : BaseWeapon
     public override void PickupWepaon()
     {
         coll.enabled = false;
-
+        ShowFloatingText(FlavourText);
         GameObject Player = GameObject.Find("Player");
         CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
         FacingRight = zwrot.m_FacingRight;

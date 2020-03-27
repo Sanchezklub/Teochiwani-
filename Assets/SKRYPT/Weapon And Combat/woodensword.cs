@@ -8,7 +8,7 @@ public class woodensword : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-
+    public string FlavourText = "zachodnia technologia, wshodnie wykonanie";
     public float attackRange;
     public float attackdamage;
 
@@ -45,7 +45,7 @@ public class woodensword : BaseWeapon
     public override void PickupWepaon()
     {
         coll.enabled = false;
-
+        ShowFloatingText(FlavourText);
         GameObject Player = GameObject.Find("Player");
         CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
         FacingRight = zwrot.m_FacingRight;

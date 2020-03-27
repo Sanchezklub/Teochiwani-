@@ -12,6 +12,11 @@ public class BaseState<T>
     {
 
     }
+
+    public virtual void StateOnCollisonEnter2D(Collision2D collision)
+    {
+
+    }
     public virtual void DeinitState(T controller)
     {
 

@@ -4709,8 +4709,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4765,6 +4765,7 @@ GameObject:
   - component: {fileID: 3139128734734780365}
   - component: {fileID: 3006959398274305229}
   - component: {fileID: 898058351055232483}
+  - component: {fileID: 1743854801}
   m_Layer: 17
   m_Name: divine gate
   m_TagString: Untagged
@@ -4781,7 +4782,7 @@ Transform:
   m_GameObject: {fileID: 2912271762660948484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 81.86, y: 40.71, z: -0.14}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4981987708858276206}
   m_Father: {fileID: 0}
@@ -4805,7 +4806,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4847,7 +4848,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4863,3 +4864,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7, y: 14}
   m_EdgeRadius: 0
+--- !u!114 &1743854801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2912271762660948484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154950342e9656d44a29f11823ed05d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalik: {fileID: 0}
+  Player: {fileID: 0}

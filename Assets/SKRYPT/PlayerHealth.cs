@@ -6,29 +6,40 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Health
 {
+    
     public Slider healthBar;
     public Vector2 StartingPosition;
 
     protected override void Start()
     {
-        base.Start();
-        healthBar.value = MaxHealth;
+        GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
     }
 
     void Update()
     {
-        healthBar.value = currentHealth;
+        healthBar.value = GameController.instance.DataStorage.PlayerInfo.currenthealth;
     }
 
     public override void TakeDamage(float damage)
     {
-        base.TakeDamage(damage);
+        GameController.instance.DataStorage.PlayerInfo.currenthealth -= damage;
+        if (FloatingText == true)
+        {
+            ShowFloatingText(damage);
+        }
+        if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
+        {
+            Die();
+
+        }
+
     }
 
     protected override void Die()
     {
         Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);
-        currentHealth = MaxHealth;
+        GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         transform.position = newPos;
     }
 

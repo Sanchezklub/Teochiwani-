@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+		horizontalMove = Input.GetAxisRaw("Horizontal") * GameController.instance.DataStorage.PlayerInfo.speed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 

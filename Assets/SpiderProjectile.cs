@@ -8,6 +8,8 @@ public class SpiderProjectile : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 7f;
     Rigidbody2D rb;
+    private float targ_x;
+    private float targ_y;
     
     GameObject target;
     Vector2 moveDirection;
@@ -15,13 +17,14 @@ public class SpiderProjectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D> ();
         target = GameObject.Find("Player");
-        Debug.Log("1"); 
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
-        Debug.Log("2");
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        Debug.Log("3");
-        //transform.LookAt(target.transform);
-        Debug.Log("4");
+        Vector3 objectPos = transform.position;
+        targ_x = target.transform.position.x - objectPos.x;
+        targ_y = target.transform.position.y - objectPos.y;
+
+        float angle = Mathf.Atan2(targ_y, targ_x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle+90));
         Destroy(gameObject, 3f); 
 
 

@@ -23,7 +23,7 @@ public class SpiderShootState : BaseState<SpiderBrain>
     {
         if (Time.time > brain.nextFire)
         {
-            GameObject xyzadjasd = GameObject.Instantiate(brain.SpiderProjectile, brain.FirePoint.position, Quaternion.identity) as GameObject;
+            GameObject projectile = GameObject.Instantiate(brain.SpiderProjectile, brain.FirePoint.position, Quaternion.identity) as GameObject;
             ///Instantiate(SpiderProjectile, brain.transform.position, Quaternion.identity);
             brain.nextFire = Time.time + brain.fireRate;
         }

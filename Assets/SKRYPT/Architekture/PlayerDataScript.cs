@@ -11,7 +11,9 @@ public class PlayerDataScript
     public int blood;
     public float damage;
     public float speed;
-    public float[] position;
+    public float position_x;
+    public float position_y;
+    public string currentweapon;
 
 
     public PlayerDataScript (PlayerInformation PlayerInfo)
@@ -22,8 +24,9 @@ public class PlayerDataScript
             blood = PlayerInfo.blood;
             damage = PlayerInfo.damage;
             speed = PlayerInfo.speed;
-            //position[0] = PlayerInfo.playerPosition.x;
-            //position[1] = PlayerInfo.playerPosition.y;
+            currentweapon = PlayerInfo.currentWeapon;
+            position_x = PlayerInfo.playerPosition.x;
+            position_y = PlayerInfo.playerPosition.y;
     }
 
 }

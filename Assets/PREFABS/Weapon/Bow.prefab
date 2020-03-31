@@ -95,10 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bafca093830aa4bae49a3262cd3b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponName: Bow
+  FloatingTextPrefab: {fileID: 0}
+  FacingRight: 1
   bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
     type: 3}
   firePoint: {fileID: 7077918293648707628}
   coll: {fileID: 7077918293648707631}
+  FlavourText: "to \u0142uk.... naprawde czego sie spodziewa\u0142e\u015B"
 --- !u!61 &7077918293648707631
 BoxCollider2D:
   m_ObjectHideFlags: 0

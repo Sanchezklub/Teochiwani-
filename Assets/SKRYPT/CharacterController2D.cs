@@ -5,7 +5,7 @@ public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .2f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -39,6 +39,7 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnCrouchEvent == null)
 			OnCrouchEvent = new BoolEvent();
+		m_Grounded = false;
 	}
 
 	private void Update()
@@ -56,12 +57,14 @@ public class CharacterController2D : MonoBehaviour
 				if (!wasGrounded && m_Rigidbody2D.velocity.y <= 0)
 				{
 
+					Debug.Log("Attemted to invoke even OnLanding()");
 					OnLandEvent.Invoke();
-
+					
 				}
 				m_Grounded = true;
 			}
 		}
+		Debug.Log(m_Grounded);
 	}
 
 
@@ -111,6 +114,7 @@ public class CharacterController2D : MonoBehaviour
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
@@ -132,6 +136,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+			Debug.Log("Jumped");
 			m_Rigidbody2D.AddForce(new Vector2(0f, GameController.instance.DataStorage.PlayerInfo.jumpforce));
 		}
 	}

@@ -19,20 +19,29 @@ public class PlayerMovement : MonoBehaviour {
 		horizontalMove = Input.GetAxisRaw("Horizontal") * GameController.instance.DataStorage.PlayerInfo.speed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+		if (horizontalMove == 0)
+		{
+			animator.SetBool("Idle", true);
+		}
+		else
+		{
+			animator.SetBool("Idle", false);
+		}
 
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
+			Debug.Log("Player pressed jump");
 			animator.SetBool("IsJumping", true);
 		}
-        if (Input.GetButtonDown("Crouch"))
+      /*  if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
 		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
 		}
-		
+		*/
 
 	}
 

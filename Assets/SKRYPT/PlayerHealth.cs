@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Health
 {
-    
+    private Animator PlayerAnimator;
     public Slider healthBar;
     public Vector2 StartingPosition;
 
@@ -14,6 +14,7 @@ public class PlayerHealth : Health
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        PlayerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,6 +42,7 @@ public class PlayerHealth : Health
         Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         transform.position = newPos;
+        PlayerAnimator.SetTrigger("Die");
     }
 
 }

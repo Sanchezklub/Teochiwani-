@@ -7809,12 +7809,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c7b3f9d7a78252479a63fc737503125, type: 3}
---- !u!4 &1223289572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2715662901196829393, guid: 12233db26776395448d4fe2793e1c96b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2715662902000912833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229999258
 GameObject:
   m_ObjectHideFlags: 0
@@ -11868,7 +11862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807816954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -8, z: 0}
+  m_LocalPosition: {x: -2, y: -8.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 3.333333}
   m_Children: []
   m_Father: {fileID: 2433788121494391431}
@@ -15335,8 +15329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackrate: 2
   item: {fileID: 0}
-  holdPosition: {fileID: 794680317}
+  holdPosition: {fileID: 447961942}
   currentWeapon: {fileID: 8677365}
+  animator: {fileID: 9131456217922454629}
 --- !u!114 &9131456217922454631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15371,7 +15366,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 20736
-  m_GroundCheck: {fileID: 1223289572}
+  m_GroundCheck: {fileID: 1807816955}
   m_CeilingCheck: {fileID: 414053946}
   m_CrouchDisableCollider: {fileID: 9131456217922454633}
   m_FacingRight: 1
@@ -15391,7 +15386,18 @@ MonoBehaviour:
         m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &9131456217922454633
 CircleCollider2D:
   m_ObjectHideFlags: 0

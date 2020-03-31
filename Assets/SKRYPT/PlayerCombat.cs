@@ -14,6 +14,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform holdPosition;
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
+    public Animator animator;
     
     void Update()
     {
@@ -21,7 +22,7 @@ public class PlayerCombat : MonoBehaviour
         {
            if(Input.GetKeyDown(KeyCode.Mouse0)) 
            {
-               Atak();
+               StartAttack();
                nextAttackTime = Time.time +1f / attackrate;
            }
         }
@@ -39,9 +40,15 @@ public class PlayerCombat : MonoBehaviour
         
     }
     
-    void Atak()
+    void StartAttack()
+    {
+        animator.SetBool("IsAttacking", true);
+    }
+
+    public void DoAttack()
     {
         currentWeapon.Attack(this);
+        animator.SetBool("IsAttacking", false);
     }
 
     public void ChangeWeapon(BaseWeapon newWeapon)
@@ -73,4 +80,5 @@ public class PlayerCombat : MonoBehaviour
         item = null;
         collidedWeapon = null;
     }
+    
 }

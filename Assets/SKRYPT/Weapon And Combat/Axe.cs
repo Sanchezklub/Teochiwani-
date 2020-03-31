@@ -39,6 +39,7 @@ public class Axe : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
         transform.parent = null;
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         coll.enabled = true;
     }
 

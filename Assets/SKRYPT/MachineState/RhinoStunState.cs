@@ -36,6 +36,7 @@ public class RhinoStunState : BaseState<RhinoBrain>
     }
     public override void UpdateState()
     {
+        float distance = Vector3.Distance(player.transform.position, brain.transform.position);
         base.UpdateState();
         CurrentTimeStunned += Time.deltaTime;
         if (CurrentTimeStunned > brain.StunTime)
@@ -45,12 +46,13 @@ public class RhinoStunState : BaseState<RhinoBrain>
     }
     void StopBeingStunned()
     {
+        float distance = Vector3.Distance(player.transform.position, brain.transform.position);
         Debug.Log("Done waiting");
-        if (Vector3.Distance(player.transform.position, brain.transform.position) < brain.StompDist)
+        if (distance > brain.StompDist)
         {
-            brain.StartStomp();
+            brain.StartCharge();
         }
-        else
+        else if (distance < brain.StompDist)
         {
             brain.StartCharge();
         }

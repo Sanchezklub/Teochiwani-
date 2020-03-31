@@ -19,6 +19,7 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     public float StunTime;
     public float StompRange;
     public float StompDist;
+    public float AggroDist;
     public float VerStompKnockback;
     public float HorStompKnockback;
 
@@ -26,7 +27,7 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
 
     private void Start()
     {
-        StartCharge();
+        StartStun();
     }
     private void Update()
     {
@@ -59,6 +60,11 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     {
         base.UpdateChildState();
         currentState?.UpdateState();
+    }
+
+    public void StartIdle()
+    {
+        ChangeState(new RhinoIdleState());
     }
 
     public void StartCharge()

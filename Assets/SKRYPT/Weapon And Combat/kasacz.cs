@@ -27,6 +27,7 @@ public class kasacz : BaseWeapon
 
       public override void DropWeapon()
     {
+                
         GameObject Player = GameObject.Find("Player");
         CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
         FacingRight = zwrot.m_FacingRight;
@@ -40,6 +41,7 @@ public class kasacz : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
         transform.parent = null;
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         coll.enabled = true;
     }
 

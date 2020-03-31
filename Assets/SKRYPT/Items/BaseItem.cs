@@ -4,22 +4,22 @@ using UnityEngine;
 
 public abstract class BaseItem : MonoBehaviour
 {   
-    string flavourtext;
-    string Name;
+    private string flavourtext;
+    private string itemName;
     public GameObject FloatingTextPrefab;
     public abstract void PickupItem();
     public virtual void ShowFloatingText( string flavourtext)
     {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity);
         go.GetComponent<TextMesh>().text = flavourtext;
 
 
     }
-    public virtual void OnTriggerEnter2D(Collider2D coll)
+    public virtual void OnTriggerEnter2D(Collider2D coll2)
     {
-        if(coll.tag=="Player")
+        if(coll2.tag=="Player")
         {
-            ShowFloatingText(Name);
+            ShowFloatingText(itemName);
             Destroy(this, 5);
         }
     }

@@ -10,11 +10,11 @@ public class PlayerCombat : MonoBehaviour
     //public int attackdamage = 40;
     public float attackrate = 2f;
     float nextAttackTime = 0f;
-
+    public BaseItem item;
     public Transform holdPosition;
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
-
+    
     void Update()
     {
         if(Time.time>=nextAttackTime)
@@ -24,15 +24,19 @@ public class PlayerCombat : MonoBehaviour
                Atak();
                nextAttackTime = Time.time +1f / attackrate;
            }
-
+        }
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (collidedWeapon!= null)
                 {
                     ChangeWeapon(collidedWeapon);
                 }
+                if(item != null)
+                {
+                item?.PickupItem();
+                }
             }
-        }
+        
     }
     
     void Atak()
@@ -60,11 +64,13 @@ public class PlayerCombat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        item = collision.GetComponent<BaseItem>();
         collidedWeapon = collision.GetComponent<BaseWeapon>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        item = null;
         collidedWeapon = null;
     }
 }

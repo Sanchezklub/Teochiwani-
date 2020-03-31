@@ -95,6 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d63aefc15e9f1c48bd957a45a592367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  FacingRight: 1
   AttackPoint: {fileID: 3942691053331066285}
   enemyLayers:
     serializedVersion: 2
@@ -102,6 +105,7 @@ MonoBehaviour:
   coll: {fileID: 3942691053331066286}
   attackRange: 3
   attackdamage: 10
+  FlavourText: "Perfekcyjne do skalp\xF3w"
 --- !u!61 &3942691053331066286
 BoxCollider2D:
   m_ObjectHideFlags: 0

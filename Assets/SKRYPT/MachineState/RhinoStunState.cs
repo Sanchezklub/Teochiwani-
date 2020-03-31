@@ -27,11 +27,11 @@ public class RhinoStunState : BaseState<RhinoBrain>
         if (brain.FacingRight)
         {
             if (Physics2D.Raycast(brain.raycastTransform.position, Vector2.right, 0.1f, brain.WhatIsGround)){
-                brain.transform.Translate(new Vector3(-0.15f, 0, 0));
+                brain.transform.Translate(new Vector3(0.15f, 0, 0));
             }
         }
         else if (Physics2D.Raycast(brain.raycastTransform.position, Vector2.left, 0.1f, brain.WhatIsGround)){
-            brain.transform.Translate(new Vector3(0.15f, 0, 0));
+            brain.transform.Translate(new Vector3(-0.15f, 0, 0));
             }
     }
     public override void UpdateState()

@@ -3,19 +3,19 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveSystem
 {
-    public static void SavePlayer (Player Player)   
+    public static void SavePlayer (PlayerInformation Player)   
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream  = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(Player);
+        PlayerDataScript data = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
 
         formatter.Serialize(stream,data);
         stream.Close();
 
     }
-    public static PlayerData LoadPlayer()
+    public static PlayerDataScript LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.fun";
         if ( File.Exists(path))
@@ -24,7 +24,7 @@ public static class SaveSystem
 
           FileStream stream  = new FileStream(path, FileMode.Open);
 
-          PlayerData data = formatter.Deserialize(stream) as PlayerData;
+          PlayerDataScript data = formatter.Deserialize(stream) as PlayerDataScript;
           stream.Close();
           return data;
         }

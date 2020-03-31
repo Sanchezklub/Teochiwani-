@@ -13,9 +13,12 @@ public class RhinoChargeState : BaseState<RhinoBrain>
     {
         base.InitState(controller);
         this.brain = controller;
+        brain.enemyAnimator.SetBool("Idle", false);
+        brain.enemyAnimator.SetBool("Charge", true);
 
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+       
 
         StartCharge();
     }
@@ -46,6 +49,7 @@ public class RhinoChargeState : BaseState<RhinoBrain>
     void Flip()
     {
         brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
 
     public override void UpdateState()
@@ -68,18 +72,20 @@ public class RhinoChargeState : BaseState<RhinoBrain>
 
     void DetectWall()
     {
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        Debug.Log("Detecting Wall");
+        if (Physics2D.Raycast(brain.raycastTransform.position, new Vector2(enemyRigidBody2D.velocity.x*4,0), 0.1f, brain.WhatIsGround))
         {
+            /*Vector2 Pos = brain.transform.position;
             if (brain.FacingRight)
             {
-                brain.transform.Translate(Vector3.right * 4);
+               brain.transform.position = Vector3.Lerp (Pos, new Vector2( brain.transform.position.x - 4, brain.transform.position.y), 10);
             }
             else
             {
-                brain.transform.Translate(Vector3.left * 4);
+                brain.transform.position = Vector3.Lerp(Pos, new Vector2(brain.transform.position.x + 4, brain.transform.position.y), 10);
             }
+            */
             brain.StartStun();
-
         }
     }
 
@@ -87,6 +93,8 @@ public class RhinoChargeState : BaseState<RhinoBrain>
     {
         base.DeinitState(controller);
         brain.ChargeHitbox.SetActive(false);
+        brain.enemyAnimator.SetBool("Idle", true);
+        brain.enemyAnimator.SetBool("Charge", false);
     }
 
 

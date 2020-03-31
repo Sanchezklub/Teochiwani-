@@ -43,6 +43,7 @@ public class PlayerHealth : Health
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         transform.position = newPos;
         PlayerAnimator.SetTrigger("Die");
+        Destroy(gameObject, 2);
     }
 
 }

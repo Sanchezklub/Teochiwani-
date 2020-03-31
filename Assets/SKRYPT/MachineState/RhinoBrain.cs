@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RhinoBrain : BaseBrain<RhinoBrain>
 {
@@ -10,7 +11,7 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     public GameObject ChargeHitbox;
     public GameObject RhinoCollider;
     [SerializeField] public LayerMask WhatIsGround;
-
+    public UnityAction Stomp;
 
     public float ChargeDamage;
     public float StompDamage;
@@ -32,6 +33,11 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
         UpdateChildState();
 
         Debug.Log(currentState);
+    }
+
+    public void DoAttack()
+    {
+        Stomp?.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

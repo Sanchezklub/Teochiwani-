@@ -57,14 +57,14 @@ public class CharacterController2D : MonoBehaviour
 				if (!wasGrounded && m_Rigidbody2D.velocity.y <= 0)
 				{
 
-					Debug.Log("Attemted to invoke even OnLanding()");
+
 					OnLandEvent.Invoke();
 					
 				}
 				m_Grounded = true;
 			}
 		}
-		Debug.Log(m_Grounded);
+
 	}
 
 
@@ -136,7 +136,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
-			Debug.Log("Jumped");
+
 			m_Rigidbody2D.AddForce(new Vector2(0f, GameController.instance.DataStorage.PlayerInfo.jumpforce));
 		}
 	}

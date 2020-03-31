@@ -14,10 +14,25 @@ public class RhinoStunState : BaseState<RhinoBrain>
         base.InitState(controller);
         this.brain = controller;
         player = GameObject.Find("Player");
+        brain.enemyAnimator.SetBool("Idle", true);
+        brain.enemyAnimator.SetBool("Charge", false);
+        brain.enemyAnimator.SetBool("Attack", false);
         enemyrigidbody = brain.GetComponent<Rigidbody2D>();
         enemyrigidbody.velocity =new Vector2 (0, 0);
         brain.RhinoCollider.SetActive(true);
-
+        MoveBack();
+    }
+    public void MoveBack()
+    {
+        if (brain.FacingRight)
+        {
+            if (Physics2D.Raycast(brain.raycastTransform.position, Vector2.right, 0.1f, brain.WhatIsGround)){
+                brain.transform.Translate(new Vector3(-0.15f, 0, 0));
+            }
+        }
+        else if (Physics2D.Raycast(brain.raycastTransform.position, Vector2.left, 0.1f, brain.WhatIsGround)){
+            brain.transform.Translate(new Vector3(0.15f, 0, 0));
+            }
     }
     public override void UpdateState()
     {

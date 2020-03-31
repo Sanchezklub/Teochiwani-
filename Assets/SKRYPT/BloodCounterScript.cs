@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BloodCounterScript : MonoBehaviour
 {
-   Text text;
+    Text text;
     public static int bloodAmount;
 
     // Start is called before the first frame update
@@ -18,6 +18,6 @@ public class BloodCounterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = bloodAmount.ToString();   
+        text.text = GameController.instance.DataStorage.PlayerInfo.blood.ToString();   
     }
 }

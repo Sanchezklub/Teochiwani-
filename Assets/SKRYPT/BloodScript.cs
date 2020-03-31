@@ -10,7 +10,7 @@ public class BloodScript : MonoBehaviour
     {
         if(col.name == "Player" && Rozlane!=true)
         {
-        BloodCounterScript.bloodAmount += 1;
+        GameController.instance.DataStorage.PlayerInfo.blood += 1;
         Destroy (gameObject);
         }
         else if (col.gameObject.layer ==8)

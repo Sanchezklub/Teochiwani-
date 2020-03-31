@@ -11,7 +11,7 @@ public class CocoaScript : MonoBehaviour
         
         if(col.name == "Player"&& Rozlane!=true)
         {
-        CocoaCounterScript.cocoaAmount += 1;
+        GameController.instance.DataStorage.PlayerInfo.cocoa += 1;
         Destroy (gameObject);
         }
         else if (col.gameObject.layer ==8)

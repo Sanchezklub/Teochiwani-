@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class SaveController : MonoBehaviour
 {
+    public static SaveController instance;
+
     public PlayerDataScript LoadedData;
     private GameObject PlayersOldWeapon;
     private GameObject LoadedWeapon;
     private GameObject player;
     private BaseWeapon LoadedWeaponScript;
+    //public GameObject FloatingTextPrefab;
     public void SavePlayerInfo()
     {
         SaveSystem.SavePlayer(GameController.instance.DataStorage.PlayerInfo);
+        Debug.Log("Game Saved");
     }
 
     public void LoadPlayerInfo()
@@ -55,5 +59,12 @@ public class SaveController : MonoBehaviour
         }
     }
     //LoadedWeapon.transform.Translate(new Vector3(LoadedData.position[0], LoadedData.position[1], 0));
+
+    /*public void ShowFloatingText(string text)
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMesh>().text = text;
+    }
+    */
 
 }

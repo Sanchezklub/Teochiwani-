@@ -18,7 +18,11 @@ public class RhinoChargeState : BaseState<RhinoBrain>
 
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-       
+        if (!brain.ChargeHitbox.activeSelf)
+        {
+            brain.ChargeHitbox.SetActive(true);
+        }
+
 
         StartCharge();
     }

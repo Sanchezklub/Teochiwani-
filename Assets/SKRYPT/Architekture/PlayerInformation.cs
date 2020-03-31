@@ -17,4 +17,5 @@ public class PlayerInformation : ScriptableObject
     public int weapon;
     public int cocoa;
     public int blood;
+    public string currentWeapon;
 }

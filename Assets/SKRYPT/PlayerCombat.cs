@@ -56,6 +56,7 @@ public class PlayerCombat : MonoBehaviour
         //Do something about wpn;
         Debug.Log(newWeapon.name);
         currentWeapon?.DropWeapon();
+        GameController.instance.DataStorage.PlayerInfo.currentWeapon = newWeapon.name;
         currentWeapon = newWeapon;
         currentWeapon?.PickupWepaon();
         currentWeapon.transform.parent = holdPosition;

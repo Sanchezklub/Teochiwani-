@@ -36,11 +36,11 @@ public class Drabina : MonoBehaviour
             {
                 case -1:
                     Rb2D.isKinematic = false;
-                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed * Time.deltaTime);
+                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, -speed);
                     break;
                 case 1:
                     Rb2D.isKinematic = false;
-                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed * Time.deltaTime);
+                    Rb2D.velocity = new Vector2(Rb2D.velocity.x, speed);
                     break;
                 case 0:
                     Rb2D.velocity = new Vector2(Rb2D.velocity.x,0);

@@ -16,7 +16,7 @@ public class FollowState : BaseState<EnemyBrain>
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
-        enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, true);
+        enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, true);
         enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
@@ -57,7 +57,7 @@ public class FollowState : BaseState<EnemyBrain>
             enemyRigidBody2D.velocity = new Vector2(0,0);
             //Debug.Log("Did not");
             enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
-            enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, false);
+            enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, false);
             enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
 
 

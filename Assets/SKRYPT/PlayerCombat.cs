@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
     public Animator animator;
+    public string AnimType;
     
     void Update()
     {
@@ -42,7 +43,11 @@ public class PlayerCombat : MonoBehaviour
     
     void StartAttack()
     {
-        animator.SetBool("IsAttacking", true);
+        if (currentWeapon != null)
+        {
+            animator.SetBool("IsAttacking", true);
+            animator.SetBool(currentWeapon?.AnimationType, true);
+        }
     }
 
     public void DoAttack()

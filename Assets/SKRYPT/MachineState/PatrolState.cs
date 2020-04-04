@@ -18,7 +18,7 @@ public class PatrolState : BaseState<EnemyBrain>
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
-        enemyAnimator.SetBool(Keys.PATROL_ANIM_KEY, true);
+        enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, true);
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();

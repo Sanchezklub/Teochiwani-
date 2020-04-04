@@ -54,6 +54,7 @@ public class PlayerCombat : MonoBehaviour
     {
         currentWeapon?.Attack(this);
         animator.SetBool("IsAttacking", false);
+        animator.SetBool(currentWeapon?.AnimationType, false);
     }
 
     public void ChangeWeapon(BaseWeapon newWeapon)

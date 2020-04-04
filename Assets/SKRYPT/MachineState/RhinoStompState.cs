@@ -19,6 +19,7 @@ public class RhinoStompState : BaseState<RhinoBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = new Vector2(0, 0);
         FacePlayer();
+        Debug.Log("Inited Stomp State");
 
         brain.Stomp += Attack;
 

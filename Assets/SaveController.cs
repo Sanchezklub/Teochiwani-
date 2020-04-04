@@ -32,9 +32,9 @@ public class SaveController : MonoBehaviour
             //GameObject.FindGameObjectWithTag("Player").transform.Translate(new Vector3(LoadedData.position[0], LoadedData.position[1]));
             player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = new Vector3(LoadedData.position_x, LoadedData.position_y);
-            PlayersOldWeapon = GameObject.Find(player.GetComponent<PlayerCombat>().currentWeapon.name);
-            LoadedWeapon = GameObject.Find(LoadedData.currentweapon);
-            Debug.Log(LoadedWeapon.name);
+            PlayersOldWeapon = GameObject.Find(player.GetComponent<PlayerCombat>()?.currentWeapon?.name);
+            LoadedWeapon = GameObject.Find(LoadedData?.currentweapon);
+            Debug.Log(LoadedWeapon?.name);
             if (LoadedWeapon != PlayersOldWeapon)
             {
                 Destroy(PlayersOldWeapon);

@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void DoAttack()
     {
-        currentWeapon.Attack(this);
+        currentWeapon?.Attack(this);
         animator.SetBool("IsAttacking", false);
     }
 

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class EnemyHealth : Health
+public class SpiderHealth : Health
 {
     public Animator enemyAnimator;
     public UnityAction Dying;
     public UnityAction TakingDamage;
+    public SpiderBrain brain;
 
     protected override void Start()
     {
@@ -20,6 +20,10 @@ public class EnemyHealth : Health
         base.TakeDamage(damage);
         enemyAnimator.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
         TakingDamage?.Invoke();
+        if (System.String.Equals(brain.currentState.GetType() , "SpiderShootState"))
+        {
+            brain.StartStun();
+        }
 
     }
 
@@ -39,5 +43,4 @@ public class EnemyHealth : Health
     {
         Destroy(gameObject);
     }
-
 }

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SpiderBrain : BaseBrain<SpiderBrain>
 {
+    public Collider2D SpiderCollider;
     public Animator enemyAnimator;
     public Transform raycastTransform;
     public Transform AttackPoint;
     public Transform FirePoint;
     [SerializeField] public LayerMask WhatIsGround;
-
-
+    public float StunTime;
+    public bool RightSide;
+    public Rigidbody2D SpiderRigidbody; 
     public float MaxHealth;
     public float CurrentHealth;
     public float damage;
@@ -32,7 +34,7 @@ public class SpiderBrain : BaseBrain<SpiderBrain>
     private void Start()
     {
         //StartPatrol();
-        StartShoot();
+        StartWalk();
     }
     private void Update()
     {
@@ -65,5 +67,16 @@ public class SpiderBrain : BaseBrain<SpiderBrain>
         //enemyToFollow = objectToFollow;
         ChangeState(new SpiderJumpState());
     }
-
+    public void StartWalk()
+    {
+        ChangeState(new SpiderWalkState());
+    }
+    public void StartClimb()
+    {
+        ChangeState(new SpiderClimbState());
+    }
+    public void StartStun()
+    {
+        ChangeState(new SpiderStunState());
+    }
 }

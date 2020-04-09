@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseBrain <T> : MonoBehaviour
 {
-    protected BaseState<T> currentState;
+    public BaseState<T> currentState;
     public virtual void ChangeState(BaseState<T> newState)
     {
 

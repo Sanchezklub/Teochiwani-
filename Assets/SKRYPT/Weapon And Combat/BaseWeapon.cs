@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseWeapon : MonoBehaviour
 {
     public GameObject FloatingTextPrefab;
+    public GameObject Handle;
     public string AnimationType;
     public abstract void Attack(PlayerCombat controller);
     public abstract void PickupWepaon();

@@ -14,16 +14,22 @@ public class SpiderHealth : Health
         base.Start();
 
     }
+    private void Update()
+    {
+        
+    }
 
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        enemyAnimator.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
+        //enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
+        Debug.Log("SpiderTookDamage");
         TakingDamage?.Invoke();
-        if (System.String.Equals(brain.currentState.GetType() , "SpiderShootState"))
+        /*if (brain.currentState.ToString() == "SpiderShootState")
         {
+            Debug.Log("StunnedSpider");
             brain.StartStun();
-        }
+        }*/
 
     }
 
@@ -36,7 +42,7 @@ public class SpiderHealth : Health
     {
         Dying += GetDestroyed;
         base.Die();
-        enemyAnimator.SetTrigger(Keys.DIE_ANIM_KEY);
+        enemyAnimator?.SetTrigger(Keys.DIE_ANIM_KEY);
     }
 
     public void GetDestroyed()

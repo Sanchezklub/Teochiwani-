@@ -22,6 +22,8 @@ public class SpiderBrain : BaseBrain<SpiderBrain>
     public float StartFightDist;
     public float AttackRange;
 
+    public SpiderHealth SpiderHealth;
+
     [SerializeField]
     public GameObject SpiderProjectile;
 

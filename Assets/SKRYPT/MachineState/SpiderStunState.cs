@@ -20,7 +20,6 @@ public class SpiderStunState : BaseState<SpiderBrain>
     
     public override void UpdateState()
     {
-        float distance = Vector3.Distance(player.transform.position, brain.transform.position);
         base.UpdateState();
         CurrentTimeStunned += Time.deltaTime;
         if (CurrentTimeStunned > brain.StunTime)
@@ -30,8 +29,6 @@ public class SpiderStunState : BaseState<SpiderBrain>
     }
     void StopBeingStunned()
     {
-        float distance = Vector3.Distance(player.transform.position, brain.transform.position);
-        Debug.Log(distance);
         brain.StartWalk();
     }
     public override void DeinitState(SpiderBrain controller)

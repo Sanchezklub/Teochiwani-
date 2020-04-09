@@ -14,7 +14,7 @@ public class SpiderShootState : BaseState<SpiderBrain>
         brain.SpiderRigidbody.gravityScale = 0;
         brain.fireRate = 1f;
         brain.nextFire = Time.time;
-        
+        brain.SpiderHealth.TakingDamage += GetStuned;
     }
     public override void UpdateState()
     {
@@ -35,9 +35,11 @@ public class SpiderShootState : BaseState<SpiderBrain>
     {
         base.DeinitState(controller);
         brain.SpiderRigidbody.gravityScale = 1;
+        brain.SpiderHealth.TakingDamage -= GetStuned;
     }
     public void GetStuned()
     {
+        Debug.Log("Spider got stunned");
         brain.StartStun();
     }
 }

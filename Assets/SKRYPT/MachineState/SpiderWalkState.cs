@@ -55,6 +55,7 @@ public class SpiderWalkState : BaseState<SpiderBrain>
         }
         else
         {
+            brain.RightSide = !brain.RightSide;
             brain.StartClimb();
         }
 

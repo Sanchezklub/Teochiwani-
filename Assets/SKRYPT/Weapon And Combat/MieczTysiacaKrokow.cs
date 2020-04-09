@@ -39,7 +39,7 @@ public class MieczTysiacaKrokow : BaseWeapon
             Debug.Log("left");
             transform.Rotate(0f,180f,0f);
         }
-        transform.parent = null;
+        Handle.transform.parent = null;
         
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         coll.enabled = true;

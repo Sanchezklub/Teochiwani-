@@ -13,6 +13,8 @@ public class kasacz : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
+    public int CocaoPrice= 4;
+    public int BloodPrice = 4;
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("kasacz :: Attack() - Player attacked with kasacz");

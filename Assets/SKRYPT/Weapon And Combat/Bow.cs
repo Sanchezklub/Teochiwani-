@@ -10,6 +10,9 @@ public class Bow : BaseWeapon
     public Collider2D coll;
     public string FlavourText = "to łuk.... naprawde czego sie spodziewałeś";
 
+    public int CocaoPrice=6;
+    public int BloodPrice=6;
+
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("Bow :: Attack() - Player attacked with bow");

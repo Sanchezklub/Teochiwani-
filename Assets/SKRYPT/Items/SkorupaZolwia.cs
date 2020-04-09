@@ -8,6 +8,9 @@ public class SkorupaZolwia : BaseItem
     public string Itemname="Skorupa żółwia";
     public string FlavourText="Skała chciałaby być twarda jak to";
     public int SpeedBuff=10;
+
+    public int CocaoPrice= 4;
+    public int BloodPrice = 4;
         public override void PickupItem()
     {
         coll.enabled=false;

@@ -9,6 +9,9 @@ public class PodejrzanyGrzyb : BaseItem
     public string FlavourText="Jednorożce nie chcą przestać...";
     public int MaxHealthBuff=10;
     public int CurrentHealthBuff=10;
+
+    public int CocaoPrice= 4;
+    public int BloodPrice = 4;
     public override void PickupItem()
     {
         coll.enabled=false;

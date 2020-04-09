@@ -12,6 +12,9 @@ public class woodensword : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
+    public int CocaoPrice= 5;
+    public int BloodPrice = 5;
+
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("WoodenSword :: Attack() - Player attacked with WoodenSword");

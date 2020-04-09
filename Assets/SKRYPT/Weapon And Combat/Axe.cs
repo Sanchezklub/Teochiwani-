@@ -9,6 +9,9 @@ public class Axe : BaseWeapon
     public LayerMask enemyLayers;
     public Collider2D coll;
 
+    public int CocaoPrice=5;
+    public int BloodPrice=5;
+
     public float attackRange;
     public float attackdamage;
     public string FlavourText = "Perfekcyjne do skalpów";

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class BaseItem : MonoBehaviour
 {   
+
     private string flavourtext;
     private string itemName;
     public GameObject FloatingTextPrefab;

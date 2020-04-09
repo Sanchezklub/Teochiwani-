@@ -11,10 +11,9 @@ bool kakao1;
 bool kakao2;
 int playerKakao;
 int playerBlood;
-public void Start()
+    public void Start()
 {
-playerBlood = GameController.instance.DataStorage.PlayerInfo.blood;
-playerKakao = GameController.instance.DataStorage.PlayerInfo.cocoa;
-
+    playerBlood = GameController.instance.DataStorage.PlayerInfo.blood;
+    playerKakao = GameController.instance.DataStorage.PlayerInfo.cocoa;
 }
 }

@@ -12,6 +12,8 @@ public class maczuga : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
+    public int CocaoPrice= 7;
+    public int BloodPrice = 7;
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("maczuga :: Attack() - Player attacked with maczuga");

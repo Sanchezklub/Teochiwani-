@@ -12,6 +12,10 @@ public class POA : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
+
+    public int CocaoPrice= 4;
+    public int BloodPrice = 4;
+    
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("POA :: Attack() - Player attacked with POA");

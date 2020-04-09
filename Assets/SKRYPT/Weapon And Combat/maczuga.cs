@@ -39,7 +39,7 @@ public class maczuga : BaseWeapon
             Debug.Log("left");
             transform.Rotate(0f,180f,0f);
         }
-        Handle.transform.parent = null;
+        transform.parent = null;
         
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         coll.enabled = true;

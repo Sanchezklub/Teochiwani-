@@ -65,9 +65,7 @@ public class PlayerCombat : MonoBehaviour
         GameController.instance.DataStorage.PlayerInfo.currentWeapon = newWeapon.name;
         currentWeapon = newWeapon;
         currentWeapon?.PickupWepaon();
-        currentWeapon.Handle.transform.parent = holdPosition;
-        currentWeapon.Handle.transform.localPosition = Vector3.zero;
-        currentWeapon.Handle.transform.localEulerAngles = new Vector3(0,0,0);
+        currentWeapon.transform.parent = holdPosition;
 
     }
 

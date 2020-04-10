@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3942691053331066287}
   - component: {fileID: 3942691053331066284}
   - component: {fileID: 3942691053331066286}
+  - component: {fileID: 7834401429153228278}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  Handle: {fileID: 0}
   AnimationType: IsAttackingVHeavy
   FacingRight: 1
   AttackPoint: {fileID: 3942691053331066285}
@@ -133,3 +135,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0160751, y: 5.1433992}
   m_EdgeRadius: 0
+--- !u!114 &7834401429153228278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942691053331066282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CocaoValue: 6
+  BloodValue: 6

@@ -13,8 +13,7 @@ public class kasacz : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
-    public int CocaoPrice= 4;
-    public int BloodPrice = 4;
+
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("kasacz :: Attack() - Player attacked with kasacz");
@@ -53,17 +52,7 @@ public class kasacz : BaseWeapon
         
         coll.enabled = false;
 
-        GameObject Player = GameObject.Find("Player");
-        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
-        FacingRight = zwrot.m_FacingRight;
-        if (FacingRight == true)
-        {
-            //chuj
-        }
-        else
-        {
-            transform.Rotate(0f,180f,0f);
-        }
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
     }
     
 }

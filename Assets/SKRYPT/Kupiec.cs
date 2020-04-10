@@ -4,42 +4,43 @@ using UnityEngine;
 
 public class Kupiec : MonoBehaviour
 {
-    
-    private bool PlayerInRange;
+    // brakuje textu 
+    public bool PlayerInRange;
     public GameObject stragan;
+    public Sprite[] broniewyglad;
     public BaseWeapon[] bronie;
+    public GameObject[] bronieDoSpawnu;
     int playerKakao;
     int playerBlood;
     int itemValueKakao;
     int itemValueBlood;  
     bool CenaWKakao;
+    bool Sprzedane=false;
     int rand;
     public void Start()
     {
      
-    playerBlood = GameController.instance.DataStorage.PlayerInfo.blood;
-    playerKakao = GameController.instance.DataStorage.PlayerInfo.cocoa;
-    Instantiate(stragan, new Vector3(transform.position.x+10,transform.position.y,transform.position.z), Quaternion.identity );
-    Instantiate(stragan, new Vector3(transform.position.x-10,transform.position.y,transform.position.z), Quaternion.identity );
+    
+    Instantiate(stragan, new Vector3(transform.position.x+15,transform.position.y,transform.position.z), Quaternion.identity );
+    Instantiate(stragan, new Vector3(transform.position.x-15,transform.position.y,transform.position.z), Quaternion.identity );
 
 
-    rand = Random.Range(0, bronie.Length);
-    int rand2 = Random.Range(0, 2);
+    rand = Random.Range(0, bronie.Length); // losuje broń
+    int rand2 = Random.Range(0, 2);  // losuje czy cena bedzie w kakao czy w krwi 
 
         if ( rand2 == 1)
         {
             CenaWKakao=true;   
-            itemValueKakao=bronie[rand].CocaoPrice; 
+            itemValueKakao=bronie[rand].GetComponent<ItemValue>().CocaoValue;
         }
         else 
         {
             CenaWKakao=false;
-            itemValueBlood=bronie[rand].BloodPrice; 
+            itemValueBlood=bronie[rand].GetComponent<ItemValue>().BloodValue;
         }
 
-    Instantiate(bronie[rand], transform.position, Quaternion.identity );
-    Collider2D Coll = bronie[rand].GetComponent<Collider2D>();
-    Coll.enabled = true;
+    Instantiate(broniewyglad[rand], transform.position, Quaternion.identity);
+    
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -59,17 +60,21 @@ public class Kupiec : MonoBehaviour
     private void Update()
     {
         Collider2D Coll = bronie[rand].GetComponent<Collider2D>();
-        if(Input.GetKeyDown("e")  && PlayerInRange == true)
+        if(Input.GetKeyDown("e")  && PlayerInRange == true && Sprzedane == false)
         {
+        playerBlood = GameController.instance.DataStorage.PlayerInfo.blood; // Pobranie ilosci kasy ktora ma gracz
+        playerKakao = GameController.instance.DataStorage.PlayerInfo.cocoa;
             if ( CenaWKakao==true && playerKakao>=itemValueKakao)
             {
                 GameController.instance.DataStorage.PlayerInfo.cocoa-= itemValueKakao;
-                Coll.enabled = false;
+               Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
+                Sprzedane=true;
             }
             else if (CenaWKakao==false&& playerBlood>=itemValueBlood)
             {
                 GameController.instance.DataStorage.PlayerInfo.blood -= itemValueBlood;
-                Coll.enabled = false;
+               Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
+               Sprzedane=true;
             }
         }
     }

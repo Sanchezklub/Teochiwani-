@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7981568692236047304}
   - component: {fileID: 7981568692236047307}
   - component: {fileID: 7981568692236047306}
+  - component: {fileID: 5864601081750635038}
   m_Layer: 0
   m_Name: kasacz
   m_TagString: Untagged
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  Handle: {fileID: 0}
   AnimationType: IsAttackingVLight
   FacingRight: 1
   AttackPoint: {fileID: 7981568692236047305}
@@ -133,3 +135,17 @@ MonoBehaviour:
   FlavourText: "tak toksyczny jak u\u017Cytkownik"
   attackRange: 2
   attackdamage: 15
+--- !u!114 &5864601081750635038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981568692236047309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CocaoValue: 4
+  BloodValue: 4

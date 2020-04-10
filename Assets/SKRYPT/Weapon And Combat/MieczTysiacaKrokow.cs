@@ -12,8 +12,7 @@ public class MieczTysiacaKrokow : BaseWeapon
     public float attackRange;
     public float attackdamage;
 
-    public int CocaoPrice= 5;
-    public int BloodPrice = 5;
+   
 
     public override void Attack(PlayerCombat controller)
     {
@@ -52,16 +51,6 @@ public class MieczTysiacaKrokow : BaseWeapon
     {
         coll.enabled = false;
         ShowFloatingText(FlavourText);
-        GameObject Player = GameObject.Find("Player");
-        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
-        FacingRight = zwrot.m_FacingRight;
-        if (FacingRight == true)
-        {
-            //chuj
-        }
-        else
-        {
-            transform.Rotate(0f,180f,0f);
-        }
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
     }
 }

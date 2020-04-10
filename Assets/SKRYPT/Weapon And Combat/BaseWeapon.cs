@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class BaseWeapon : MonoBehaviour
 {
-    public int CocaoPrice;
-    public int BloodPrice;
+
     public GameObject FloatingTextPrefab;
     public GameObject Handle;
     public string AnimationType;

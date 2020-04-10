@@ -10,8 +10,7 @@ public class Bow : BaseWeapon
     public Collider2D coll;
     public string FlavourText = "to łuk.... naprawde czego sie spodziewałeś";
 
-    public int CocaoPrice=6;
-    public int BloodPrice=6;
+   
 
     public override void Attack(PlayerCombat controller)
     {
@@ -46,16 +45,8 @@ public class Bow : BaseWeapon
         coll.enabled = false;
 
         GameObject Player = GameObject.Find("Player");
-        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
-        FacingRight = zwrot.m_FacingRight;
-        if (FacingRight == true)
-        {
-            //chuj
-        }
-        else
-        {
-            transform.Rotate(0f,180f,0f);
-        }
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
+        
     }
     
 }

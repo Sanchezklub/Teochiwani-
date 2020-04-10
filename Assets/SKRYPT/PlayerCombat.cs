@@ -46,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
         if (currentWeapon != null)
         {
             animator.SetBool("IsAttacking", true);
-            animator.SetBool(currentWeapon?.AnimationType, true);
+            animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
         }
     }
 
@@ -54,7 +54,7 @@ public class PlayerCombat : MonoBehaviour
     {
         currentWeapon?.Attack(this);
         animator.SetBool("IsAttacking", false);
-        animator.SetBool(currentWeapon?.AnimationType, false);
+        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
     }
 
     public void ChangeWeapon(BaseWeapon newWeapon)

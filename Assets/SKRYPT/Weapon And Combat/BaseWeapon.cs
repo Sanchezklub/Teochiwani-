@@ -7,7 +7,15 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public GameObject FloatingTextPrefab;
     public GameObject Handle;
-    public string AnimationType;
+    public enum AnimationType
+    {
+        IsAttackingVLight,
+        IsAttackingLight,
+        IsAttackingHeavy,
+        IsAttackingVHeavy,
+        IsAttackingRanged
+    }
+    public AnimationType AttackAnimationType;
     public abstract void Attack(PlayerCombat controller);
     public abstract void PickupWepaon();
     public abstract void DropWeapon();

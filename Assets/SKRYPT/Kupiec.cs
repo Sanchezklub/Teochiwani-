@@ -21,12 +21,12 @@ public class Kupiec : MonoBehaviour
     {
      
     
-    Instantiate(stragan, new Vector3(transform.position.x+15,transform.position.y,transform.position.z), Quaternion.identity );
-    Instantiate(stragan, new Vector3(transform.position.x-15,transform.position.y,transform.position.z), Quaternion.identity );
+        Instantiate(stragan, new Vector3(transform.position.x+15,transform.position.y,transform.position.z), Quaternion.identity );
+        Instantiate(stragan, new Vector3(transform.position.x-15,transform.position.y,transform.position.z), Quaternion.identity );
 
 
-    rand = Random.Range(0, bronie.Length); // losuje broń
-    int rand2 = Random.Range(0, 2);  // losuje czy cena bedzie w kakao czy w krwi 
+        rand = Random.Range(0, bronie.Length); // losuje broń
+        int rand2 = Random.Range(0, 2);  // losuje czy cena bedzie w kakao czy w krwi 
 
         if ( rand2 == 1)
         {
@@ -38,8 +38,8 @@ public class Kupiec : MonoBehaviour
             CenaWKakao=false;
             itemValueBlood=bronie[rand].GetComponent<ItemValue>().BloodValue;
         }
-
-    Instantiate(broniewyglad[rand], transform.position, Quaternion.identity);
+        Instantiate(broniewyglad[0], transform.position, Quaternion.identity);
+        Debug.Log("Instantiated sprite");
     
     }
     private void OnTriggerEnter2D(Collider2D collision)

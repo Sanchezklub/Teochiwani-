@@ -47,7 +47,6 @@ public class RhinoStunState : BaseState<RhinoBrain>
     void StopBeingStunned()
     {
         float distance = Vector3.Distance(player.transform.position, brain.transform.position);
-        Debug.Log(distance);
         if (distance > brain.StompDist)
         {
             brain.StartCharge();

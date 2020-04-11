@@ -12,6 +12,7 @@ public class SpiderWalkState : BaseState<SpiderBrain>
     {
         this.brain = controller;
         brain.SpiderCollider.isTrigger = false;
+        brain.enemyAnimator.SetBool("iswalking", true);
         if (brain.RightSide == true) 
         {
             Target = GameObject.Find("SpiderPktL").GetComponent<Transform>().position.x;
@@ -60,7 +61,11 @@ public class SpiderWalkState : BaseState<SpiderBrain>
         }
 
     }
-
+    public override void DeinitState(SpiderBrain controller)
+    {
+        brain.enemyAnimator.SetBool("iswalking", false);
+        base.DeinitState(controller);
+    }
 
     void Flip()
     {

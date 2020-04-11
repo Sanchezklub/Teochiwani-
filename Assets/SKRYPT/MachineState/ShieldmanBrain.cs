@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
 {
+    public float AttackRange;
+    public Transform AttackPoint;
     public Transform raycastTransform;
     [SerializeField] public LayerMask WhatIsGround;
     public bool FacingRight;

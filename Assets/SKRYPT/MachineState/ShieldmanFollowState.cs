@@ -16,8 +16,7 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
-        enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, true);
-        enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
+        brain.enemyAnimator.SetBool("iswalking", true);
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
@@ -69,6 +68,7 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
     public override void DeinitState(ShieldmanBrain controller)
     {
         base.DeinitState(controller);
+        brain.enemyAnimator.SetBool("iswalking", false);
     }
 
     void MoveTowardsPlayer()

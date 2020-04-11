@@ -2374,6 +2374,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c380fa99b714bb46a702e882c231d16, type: 3}
+--- !u!1 &202793894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2427204268897233818, guid: ea8a9170ce967784c803110253d40a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025157476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &202793898
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202793894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.18, y: 0.06}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.65, y: 7.25}
+    newSize: {x: 5.65, y: 7.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.42, y: 6.2}
+  m_EdgeRadius: 0
 --- !u!1001 &203839158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8980,33 +9012,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.45, y: 11.38}
-  m_EdgeRadius: 0
---- !u!61 &961374931
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961374928}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.62, y: 6.7}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.2, y: 10.89}
+  m_Size: {x: 3.47, y: 11.38}
   m_EdgeRadius: 0
 --- !u!50 &961374932
 Rigidbody2D:
@@ -9047,6 +9053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f087edae8eefd2a4cbd5690612d3e06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackRange: 0
+  AttackPoint: {fileID: 0}
   raycastTransform: {fileID: 567417446}
   WhatIsGround:
     serializedVersion: 2

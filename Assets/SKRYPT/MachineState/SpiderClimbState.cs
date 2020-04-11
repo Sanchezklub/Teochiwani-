@@ -12,7 +12,8 @@ public class SpiderClimbState : BaseState<SpiderBrain>
     public override void InitState(SpiderBrain controller)
     {
        this.brain = controller;
-       brain.SpiderCollider.isTrigger = true;
+        brain.enemyAnimator.SetBool("isjumping", true);
+        brain.SpiderCollider.isTrigger = true;
        Target = GameObject.Find("SpiderPktUp").GetComponent<Transform>().position.y;
       
     }
@@ -42,7 +43,11 @@ public class SpiderClimbState : BaseState<SpiderBrain>
         }
     }
 
-
+    public override void DeinitState(SpiderBrain controller)
+    {
+        base.DeinitState(controller);
+        brain.enemyAnimator.SetBool("isjumping", false);
+    }
 
 
 

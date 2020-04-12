@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9210449352677923430}
   - component: {fileID: 9210449352677923427}
   - component: {fileID: 1414755658302317953}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: maczuga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   Handle: {fileID: 0}
-  AnimationType: IsAttackingVHeavy
+  AttackAnimationType: 0
   FacingRight: 1
   AttackPoint: {fileID: 9210449352677923428}
   enemyLayers:

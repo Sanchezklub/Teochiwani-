@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1138326908866554476}
   - component: {fileID: 1138326908866554475}
   - component: {fileID: 5619357995275312995}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wooden  sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   Handle: {fileID: 0}
-  AnimationType: IsAttackingVHeavy
+  AttackAnimationType: 0
   FacingRight: 1
   AttackPoint: {fileID: 1138326908866554478}
   enemyLayers:

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2930290079226222231}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Handle Axe
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -42,6 +42,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942691053331066282, guid: e45d16d61e3ceed41a06701f55e70976,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3942691053331066284, guid: e45d16d61e3ceed41a06701f55e70976,
         type: 3}

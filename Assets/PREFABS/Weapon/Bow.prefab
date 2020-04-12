@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7077918293648707629}
   - component: {fileID: 7077918293648707631}
   - component: {fileID: 3413779991520414964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   Handle: {fileID: 0}
-  AnimationType: IsAttackingRanged
+  AttackAnimationType: 0
   FacingRight: 1
   bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
     type: 3}

@@ -18,18 +18,18 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
         this.enemyAnimator = controller.enemyAnimator;
         brain.enemyAnimator.SetBool("iswalking", true);
         player = GameObject.Find("Player");
-        controller.Attacking += DamageTaken;
+        //controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
 
 
     }
 
-    public void DamageTaken()
-    {
+   // public void DamageTaken()
+   // {
 
-        brain.Attacking -= DamageTaken;
-        brain.StartAttack();
-    }
+        //brain.Attacking -= DamageTaken;
+        //brain.StartAttack();
+  //  }
 
     public override void UpdateState()
     {
@@ -56,9 +56,9 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
         {
             enemyRigidBody2D.velocity = new Vector2(0, 0);
             //Debug.Log("Did not");
-            enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
-            enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, false);
-            enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
+            //enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
+            //enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, false);
+           //enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
 
 
 

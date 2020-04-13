@@ -20,8 +20,8 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = new Vector2(0, 0);
 
-        controller.Attacking += Attack;
-        //brain.LeaveFightState += AttemptLeavingFightState;
+        brain.Attacking += Attack;
+        brain.LeaveFightState += AttemptLeavingFightState;
 
     }
     public override void UpdateState()
@@ -52,7 +52,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     public override void DeinitState(ShieldmanBrain controller)
     {
         brain.Attacking -= Attack;
-       // brain.LeaveFightState -= AttemptLeavingFightState;
+        brain.LeaveFightState -= AttemptLeavingFightState;
         brain.enemyAnimator.SetBool("isfighting", false);
         Shield.enabled = true;
         base.DeinitState(controller);
@@ -61,8 +61,10 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     public void AttemptLeavingFightState()
     {
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+        Debug.Log("Attempted to leave FightState. Distance was:" + distance);
         if (distance > brain.StartFightDist)
         {
+            Debug.Log("left fightstate");
             brain.StartFollow();
         }
     }

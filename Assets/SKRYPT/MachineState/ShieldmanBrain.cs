@@ -18,6 +18,7 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     public Animator enemyAnimator;
 
     public UnityAction Attacking;
+    public UnityAction LeaveFightState;
 
     private void Start()
     {
@@ -58,5 +59,13 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     public void StartFollow()
     {
         ChangeState(new ShieldmanFollowState());
+    }
+    public void ActionAttack()
+    {
+        Attacking?.Invoke();
+    }
+    public void ActionLeaveFightState()
+    {
+        LeaveFightState?.Invoke();
     }
 }

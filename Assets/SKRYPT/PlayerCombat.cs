@@ -4,44 +4,60 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {    
-   // public Transform AttackPoint;
-   // public LayerMask enemyLayers;
-    //public float attackRange = 0.5f;
-    //public int attackdamage = 40;
+
     public float attackrate = 2f;
     float nextAttackTime = 0f;
+    public string AnimType;
+    public float MaxComboDelay=2;
+    public int noOfClicks = 0;
+    float lastClickedTime=0;
+  
     public BaseItem item;
-    public Transform holdPosition;
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
+  
+    public Transform holdPosition;
     public Animator animator;
-    public string AnimType;
     
     void Update()
     {
-        if(Time.time>=nextAttackTime)
+        if (Time.time - lastClickedTime > MaxComboDelay)
         {
+            noOfClicks = 0;
+        }
+      
            if(Input.GetKeyDown(KeyCode.Mouse0)) 
            {
-               StartAttack();
+               lastClickedTime = Time.time;
+               noOfClicks++;
+               if(noOfClicks == 1)
+               {
+                    if (currentWeapon != null)
+                    {
+                        animator.SetBool("IsAttacking", true);
+                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                    }
+               }                
                nextAttackTime = Time.time +1f / attackrate;
+               noOfClicks = Mathf.Clamp(noOfClicks,0,3);
            }
-        }
-            if (Input.GetKeyDown(KeyCode.E))
+        
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (collidedWeapon!= null)
             {
-                if (collidedWeapon!= null)
-                {
-                    ChangeWeapon(collidedWeapon);
-                }
-                if(item != null)
-                {
-                item?.PickupItem();
-                }
+                ChangeWeapon(collidedWeapon);
             }
+            if(item != null)
+            {
+            item?.PickupItem();
+            }
+        }  
         
     }
     
-    void StartAttack()
+   /* void StartAttack()
     {
         if (currentWeapon != null)
         {
@@ -49,12 +65,12 @@ public class PlayerCombat : MonoBehaviour
             animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
         }
     }
-
+    */
     public void DoAttack()
     {
         currentWeapon?.Attack(this);
-        animator.SetBool("IsAttacking", false);
-        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
+       // animator.SetBool("IsAttacking", false);
+      //  animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
     }
 
     public void ChangeWeapon(BaseWeapon newWeapon)
@@ -89,5 +105,42 @@ public class PlayerCombat : MonoBehaviour
         item = null;
         collidedWeapon = null;
     }
+    public void return1()
+    {
+        if (noOfClicks >= 2)
+        {
+            animator.SetBool("AttackCombo",true);
+        }
+        else
+        {
+            animator.SetBool("IsAttacking", false);
+            animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
+            noOfClicks=0;
+        }
+    }
+    public void return2()
+    {
+        if (noOfClicks >= 3)
+        {
+            animator.SetBool("AttackCombo2",true);
+        }
+        else
+        {
+            animator.SetBool("AttackCombo",false);
+            animator.SetBool("IsAttacking", false);
+            animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
+            noOfClicks=0;
+        }
+    }
+    public void return3()
+    {
+        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
+        animator.SetBool("IsAttacking",false);
+        animator.SetBool("AttackCombo",false);
+        animator.SetBool("AttackCombo2",false); // Combo zrobiłem z tego poradnika https://www.youtube.com/watch?v=53Z7N-x09_k
+        noOfClicks=0;
+        
+    }
+
     
 }

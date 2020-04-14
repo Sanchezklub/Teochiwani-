@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
 {
+    public Collider2D Shield;
     public float AttackRange;
     public Transform AttackPoint;
     public Transform raycastTransform;

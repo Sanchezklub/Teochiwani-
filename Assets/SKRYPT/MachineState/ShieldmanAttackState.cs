@@ -13,8 +13,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     {
         base.InitState(controller);
         this.brain = controller;
-        Shield = brain.GetComponentInChildren<Collider2D>();
-        Shield.enabled = false;
+        brain.Shield.enabled = false;
         brain.enemyAnimator.SetBool("isfighting", true);
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
@@ -54,7 +53,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
         brain.Attacking -= Attack;
         brain.LeaveFightState -= AttemptLeavingFightState;
         brain.enemyAnimator.SetBool("isfighting", false);
-        Shield.enabled = true;
+        brain.Shield.enabled = true;
         base.DeinitState(controller);
     }
 

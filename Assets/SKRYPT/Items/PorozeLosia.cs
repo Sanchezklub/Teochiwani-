@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CzaszkaWrogiegoPlemienia : BaseItem
+public class PorozeLosia : BaseItem
 {
     public Collider2D coll;
     public string Itemname;
     public string FlavourText;
-    public int Damagebuff = 30;
+    public int Damagebuff = 10;
+    public int Speedbuff = 30;
 
     public int CocaoPrice= 4;
     public int BloodPrice = 4;
@@ -17,6 +18,7 @@ public class CzaszkaWrogiegoPlemienia : BaseItem
         Debug.Log("XD");
         Destroy(gameObject);
         GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
+        GameController.instance.DataStorage.PlayerInfo.speed += Speedbuff;
     }
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {

@@ -12,6 +12,11 @@ public class Bullet : MonoBehaviour {
 	void Start () 
     {
 		rb2d.velocity = transform.right * speed;
+		//rb2d.MoveRotation(-90 - Mathf.Atan2(rb2d.velocity.x, rb2d.velocity.y) * 180);
+	}
+	private void Update()
+	{
+		rb2d.MoveRotation(Mathf.Atan2(rb2d.velocity.y, rb2d.velocity.x)*180);
 	}
 
 	void OnTriggerEnter2D (Collider2D hitInfo)

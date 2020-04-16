@@ -21,15 +21,23 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
         player = GameObject.Find("Player");
         controller.Attacking += rzut;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-        if (brain.FacingRight == false)
+        /*if (brain.FacingRight == false)
         {
             brain.transform.Rotate(new Vector2(0f, 180f));
-        }
+        }*/
     }
     public void rzut()
     {
         MoveTowardsPlayer();
-        GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.identity) as GameObject;
+        if (brain.FacingRight == true)
+        {
+            GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.Euler(new Vector3 (0,0,13.762f))) as GameObject;
+
+        }
+        else
+        {
+            GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.Euler(new Vector3(0, 0, 166.238f))) as GameObject;
+        }
         enemyAnimator.SetTrigger("Reload");
         if(Vector3.Distance(brain.transform.position,player.transform.position)>brain.StopFollowDist)
         {

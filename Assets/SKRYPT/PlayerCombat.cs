@@ -26,21 +26,21 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks = 0;
         }
       
-           if(Input.GetKeyDown(KeyCode.Mouse0)) 
-           {
-               lastClickedTime = Time.time;
-               noOfClicks++;
-               if(noOfClicks == 1)
-               {
-                    if (currentWeapon != null)
-                    {
-                        animator.SetBool("IsAttacking", true);
-                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
-                    }
-               }                
-               nextAttackTime = Time.time +1f / attackrate;
-               noOfClicks = Mathf.Clamp(noOfClicks,0,3);
-           }
+        if(Input.GetKeyDown(KeyCode.Mouse0)) 
+        {
+            lastClickedTime = Time.time;
+            noOfClicks++;
+            if(noOfClicks == 1)
+            {
+                 if (currentWeapon != null)
+                 {
+                    animator.SetBool("IsAttacking", true);
+                    animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                 }
+            }                
+            nextAttackTime = Time.time +1f / attackrate;
+            noOfClicks = Mathf.Clamp(noOfClicks,0,3);
+        }
         
 
         if (Input.GetKeyDown(KeyCode.E))

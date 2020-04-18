@@ -16,7 +16,8 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public float StopFollowDist;
     public float StartFightDist;
     public Animator enemyAnimator;
-
+    public float ChannellTime;
+    public GameObject ChargeHitbox;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
     

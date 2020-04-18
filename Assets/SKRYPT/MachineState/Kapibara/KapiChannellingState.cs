@@ -8,33 +8,55 @@ public class KapiChannellingState : BaseState<KapiBrain>
     private Animator enemyAnimator;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
-    private float CurrentTime;
     private float ChannellingTime;
     public override void InitState(KapiBrain controller)
     {
         base.InitState(controller);
-       // var renderer = controller.gameObject.GetComponent<MeshRenderer>();
-      //  renderer.material.color = Color.green;
         this.brain = controller;
-
+       
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-        //Rigidbody2D.constraints = Rigidbody2DConstraints.FreezeRotationX;
-
+        enemyRigidBody2D.velocity = Vector2.zero;
+        FaceTowardsPlayer();
 
         if (brain.FacingRight == false)
         {
             brain.transform.Rotate(new Vector2(0f, 180f));
         }
     }
+
+        void FaceTowardsPlayer()
+    {
+        float PositionDifference = brain.transform.position.x - player.transform.position.x;
+        if(PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = true;
+        }
+    }
     public override void UpdateState()
     {
-           
+        TimeCheck();
     }
+
     private void TimeCheck()
     {
-        //if CurrentTime >= ChannellingTime
-        //zrob fikola
+        ChannellingTime += Time.deltaTime;
+        if (ChannellingTime > brain.ChannellTime)
+        {
+            brain.StartCharge();
+        }
     }
 
 
@@ -45,7 +67,6 @@ public class KapiChannellingState : BaseState<KapiBrain>
     public override void DeinitState(KapiBrain controller)
     {
         base.DeinitState(controller);
-        //Rigidbody2D.constraints = Rigidbody2DConstraints.None; hwdp
     }
 }
 

@@ -7,7 +7,6 @@ public class SceneLoadLoader : MonoBehaviour
     public GameObject OnLoadUI;
     void OnEnable()
     {
-        Debug.Log("OnEnable called");
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

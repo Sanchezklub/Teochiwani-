@@ -58,7 +58,6 @@ public class KhnurAtak1 : BaseState<KhnurBrain>
     public void AttemptLeavingFightState()
     {
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
-        Debug.Log("Attempted to leave FightState. Distance was:" + distance);
         int rand = Random.Range(1, 3);
         if (rand==1)
         {

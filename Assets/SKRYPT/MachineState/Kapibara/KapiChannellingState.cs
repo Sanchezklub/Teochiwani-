@@ -18,11 +18,6 @@ public class KapiChannellingState : BaseState<KapiBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = Vector2.zero;
         FaceTowardsPlayer();
-
-        if (brain.FacingRight == false)
-        {
-            brain.transform.Rotate(new Vector2(0f, 180f));
-        }
     }
 
         void FaceTowardsPlayer()

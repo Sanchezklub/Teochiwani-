@@ -41,7 +41,6 @@ public class Stragan : MonoBehaviour
             Price.GetComponent<TextMeshPro>().text = itemValueBlood.ToString();
         }
         itemframe.GetComponent<SpriteRenderer>().sprite = broniewyglad[rand];
-        Debug.Log("Instantiated sprite");
     
     }
     private void OnTriggerEnter2D(Collider2D collision)

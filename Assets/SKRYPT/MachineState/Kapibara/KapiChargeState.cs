@@ -24,7 +24,7 @@ public class KapiChargeState : BaseState<KapiBrain>
         }
 
 
-        StartCharge();
+        //StartCharge();
     }
 
     public void StartCharge()
@@ -59,6 +59,7 @@ public class KapiChargeState : BaseState<KapiBrain>
     public override void UpdateState()
     {
         KeepCharging();
+        DistanceCheck();
     }
 
     void KeepCharging()
@@ -70,6 +71,13 @@ public class KapiChargeState : BaseState<KapiBrain>
         else
         {
             enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
+        }
+    }
+    void DistanceCheck()
+    {
+        if( Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition )> brain.StopChargeDist)
+        {
+            brain.StartChannelling();
         }
     }
 

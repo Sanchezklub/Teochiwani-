@@ -22,10 +22,6 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-        if (brain.FacingRight == false)
-        {
-            brain.transform.Rotate(new Vector2(0f, 180f));
-        }
     }
 
     public void DamageTaken()

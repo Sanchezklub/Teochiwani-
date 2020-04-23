@@ -12,6 +12,7 @@ public class CocoaScript : MonoBehaviour
         if(col.name == "Player"&& Rozlane!=true)
         {
         GameController.instance.DataStorage.PlayerInfo.cocoa += 1;
+        FindObjectOfType<AudioManager>().Play("Kakao");
         Destroy (gameObject);
         }
         else if (col.gameObject.layer ==8)

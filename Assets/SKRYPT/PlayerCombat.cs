@@ -75,6 +75,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void ChangeWeapon(BaseWeapon newWeapon)
     {
+        FindObjectOfType<AudioManager>().Play("PickUpWeapon");
         //Do something about wpn;
         Debug.Log(newWeapon.name);
         currentWeapon?.DropWeapon();

@@ -17,6 +17,7 @@ public class BloodScript : MonoBehaviour
         {
         this.GetComponent<SpriteRenderer>().sprite = mysprite1;
         this.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        FindObjectOfType<AudioManager>().Play("BloodPlum");
         Rozlane = true;
         }
         

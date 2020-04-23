@@ -3928,7 +3928,7 @@ GameObject:
   - component: {fileID: 450996990}
   - component: {fileID: 450996989}
   m_Layer: 0
-  m_Name: DJ Audio Manager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3951,6 +3951,7 @@ MonoBehaviour:
   - name: Theme
     clip: {fileID: 8300000, guid: d67e3e7b56a5f6940a38ed563bec7b55, type: 3}
     volume: 0.15
+    volume: 0
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
@@ -3963,7 +3964,7 @@ MonoBehaviour:
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: Kakao
@@ -3972,7 +3973,7 @@ MonoBehaviour:
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: MMClick
@@ -3981,7 +3982,7 @@ MonoBehaviour:
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: PickUpWeapon
@@ -3990,16 +3991,25 @@ MonoBehaviour:
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: Theme
-    clip: {fileID: 8300000, guid: d67e3e7b56a5f6940a38ed563bec7b55, type: 3}
+  - name: BloodPlum
+    clip: {fileID: 8300000, guid: 9d6dc232de60ae144bea429103469776, type: 3}
     volume: 0.15
     volumeVariance: 0.34
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 4d227c3f3f48cab409cb92110164afe7, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
 --- !u!4 &450996990

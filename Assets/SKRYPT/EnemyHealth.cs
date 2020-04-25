@@ -18,7 +18,7 @@ public class EnemyHealth : Health
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        enemyAnimator.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
+        enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
         TakingDamage?.Invoke();
 
     }
@@ -32,7 +32,14 @@ public class EnemyHealth : Health
     {
         Dying += GetDestroyed;
         base.Die();
-        enemyAnimator.SetTrigger(Keys.DIE_ANIM_KEY);
+        if (enemyAnimator == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            enemyAnimator.SetTrigger(Keys.DIE_ANIM_KEY);
+        }
     }
 
     public void GetDestroyed()

@@ -13,8 +13,6 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public float damage;
     public float speed;
     public float StartFollowDist;
-    public float StopFollowDist;
-    public float StartFightDist;
     public float StopChargeDist;
     public Animator enemyAnimator;
     public float ChannellTime;

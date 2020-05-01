@@ -70,4 +70,9 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     {
         LeaveFightState?.Invoke();
     }
+    public UnityAction Boar;
+    public void ActionBoar()
+    {
+        Boar?.Invoke();
+    }
 }

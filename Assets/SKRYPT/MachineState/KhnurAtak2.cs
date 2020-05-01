@@ -10,30 +10,19 @@ public class KhnurAtak2 : BaseState<KhnurBrain>
     public override void InitState(KhnurBrain controller)
     {
         this.brain = controller;
+        brain.Boar += CreateBoar;
         brain.enemyAnimator.SetBool("Atak2", true);
         brain.LeaveFightState += AttemptLeavingFightState;
     }
     public override void UpdateState()
     {
         base.UpdateState();
-        CheckIfTimeToFire();
     }
 
-    void CheckIfTimeToFire()
+    void CreateBoar()
     {
-        int rand = Random.Range(1, 4);
-        int i = 0;
-        while (i < rand) 
-        {
-            if (Time.time > brain.nextFire)
-            {
-                GameObject Dzik = GameObject.Instantiate(brain.Dzik, brain.FirePoint.position, Quaternion.identity) as GameObject;
-                brain.nextFire = Time.time + brain.fireRate;
-                i++;
-            }
-              
-        }
-
+        // while (i < rand) 
+        GameObject Dzik = GameObject.Instantiate(brain.Dzik, brain.FirePoint.position, Quaternion.identity) as GameObject;
         //if (Time.time > brain.nextFire)
         //{
         //Instantiate(Dzik, brain.transform.position, Quaternion.identity);
@@ -57,6 +46,7 @@ public class KhnurAtak2 : BaseState<KhnurBrain>
     public override void DeinitState(KhnurBrain controller)
     {
         base.DeinitState(controller);
+        brain.Boar -= CreateBoar;
         brain.enemyAnimator.SetBool("Atak2", false);
         brain.LeaveFightState -= AttemptLeavingFightState;
     }

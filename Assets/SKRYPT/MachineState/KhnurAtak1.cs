@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KhnurAtak1 : BaseState<KhnurBrain>
 {
-    private Collider2D Shield;
     private KhnurBrain brain;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;

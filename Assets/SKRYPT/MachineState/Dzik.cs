@@ -33,7 +33,7 @@ public class Dzik : MonoBehaviour
             {
                 Flip();
             }
-            FacingRight = false;
+            FacingRight = true;
         }
         else if (PositionDifference <= 0)
         {
@@ -41,7 +41,7 @@ public class Dzik : MonoBehaviour
             {
                 Flip();
             }
-            FacingRight = true;
+            FacingRight = false;
         }
     }
 
@@ -59,7 +59,7 @@ public class Dzik : MonoBehaviour
 
     void KeepCharging()
     {
-        if (FacingRight == true)
+        if (FacingRight == false)
         {
             enemyRigidBody2D.velocity = new Vector2(1 * speed, enemyRigidBody2D.velocity.y);
         }

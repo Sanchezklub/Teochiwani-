@@ -18,6 +18,10 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     public float StopFollowDist;
     public float StartFightDist;
     public Animator enemyAnimator;
+    public Transform FirePoint;
+    public float fireRate;
+    public float nextFire;
+    public GameObject Dzik;
 
     public UnityAction Attacking;
     public UnityAction LeaveFightState;

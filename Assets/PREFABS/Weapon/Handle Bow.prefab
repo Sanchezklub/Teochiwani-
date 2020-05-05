@@ -54,13 +54,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4918482482046752278}
-  m_LocalRotation: {x: -0, y: -0, z: 0.13292195, w: 0.9911265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.25, y: 0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 176861280523263544}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6939351403248193044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +143,16 @@ PrefabInstance:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1077516540313733360}
+    - target: {fileID: 7077918293648707629, guid: 36e9dd2d864360c47bd63f22526e5517,
+        type: 3}
+      propertyPath: Name
+      value: "\u0141uk"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077918293648707630, guid: 36e9dd2d864360c47bd63f22526e5517,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7077918293648707635, guid: 36e9dd2d864360c47bd63f22526e5517,
         type: 3}
       propertyPath: m_Name

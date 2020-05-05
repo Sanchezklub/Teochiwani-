@@ -8,7 +8,6 @@ public class MieczTysiacaKrokow : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-    public string FlavourText = "... And i would walk 500 more";
     public float attackRange;
     public float attackdamage;
 

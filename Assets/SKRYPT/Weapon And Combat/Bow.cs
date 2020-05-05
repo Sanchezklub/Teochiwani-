@@ -8,8 +8,6 @@ public class Bow : BaseWeapon
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Collider2D coll;
-    public string FlavourText = "to łuk.... naprawde czego sie spodziewałeś";
-
    
 
     public override void Attack(PlayerCombat controller)

@@ -8,7 +8,6 @@ public class POA : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-    public string FlavourText = "kij ma zawsze dwa końce";
     public float attackRange;
     public float attackdamage;
 

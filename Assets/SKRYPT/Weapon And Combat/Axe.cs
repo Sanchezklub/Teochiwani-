@@ -13,7 +13,6 @@ public class Axe : BaseWeapon
 
     public float attackRange;
     public float attackdamage;
-    public string FlavourText = "Perfekcyjne do skalpów";
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("Axe :: Attack() - Player attacked with axe");

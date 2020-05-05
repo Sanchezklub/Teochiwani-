@@ -8,7 +8,6 @@ public class woodensword : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-    public string FlavourText = "zachodnia technologia, wshodnie wykonanie";
     public float attackRange;
     public float attackdamage;
 

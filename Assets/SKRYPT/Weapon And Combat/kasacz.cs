@@ -8,7 +8,6 @@ public class kasacz : BaseWeapon
     public Transform AttackPoint;
     public LayerMask enemyLayers;
     public Collider2D coll;
-    public string FlavourText = "tak toksyczny jak użytkownik";
 
     public float attackRange;
     public float attackdamage;

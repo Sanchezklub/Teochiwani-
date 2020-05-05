@@ -17,6 +17,7 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     public float StartFollowDist;
     public float StopFollowDist;
     public float StartFightDist;
+    public int SummonCount = 0;
     public Animator enemyAnimator;
     public Transform FirePoint;
     public float fireRate;

@@ -32,13 +32,15 @@ public class KhnurAtak2 : BaseState<KhnurBrain>
     public void AttemptLeavingFightState()
     {
         int rand = Random.Range(1, 3);
-        if (rand == 1)
+        if (rand == 1 || brain.SummonCount >= 3)
         {
+            brain.SummonCount = 0;
             Debug.Log("left fightstate");
             brain.StartAtak1();
         }
         else
         {
+            brain.SummonCount++;
             Debug.Log("left fightstate");
             brain.StartAtak2();
         }

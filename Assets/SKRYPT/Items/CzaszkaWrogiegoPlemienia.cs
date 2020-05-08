@@ -9,20 +9,23 @@ public class CzaszkaWrogiegoPlemienia : BaseItem
     public string FlavourText;
     public int Damagebuff = 30;
 
-    public int CocaoPrice= 4;
+    public int CocaoPrice = 4;
     public int BloodPrice = 4;
     public override void PickupItem()
     {
-        coll.enabled=false;
+        coll.enabled = false;
         Debug.Log("XD");
         Destroy(gameObject);
+
+        //MeteorMod
         GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
+
     }
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.tag=="Player")
+        if (coll.tag == "Player")
         {
-        ShowFloatingText(Itemname);
+            ShowFloatingText(Itemname);
         }
     }
 }

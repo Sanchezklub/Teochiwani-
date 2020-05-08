@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class ModifierController : MonoBehaviour
 {
-    public BaseModifier currentModifier;
-   void Start()
-   {
-        currentModifier?.Init();     
-   }
+    public List<BaseModifier> modifiers;
 
-    // Update is called once per frame
-    void Update()
+    public void OnItemPickup(BaseItem item)
     {
-        currentModifier?.Update();
+        if (item.modifier != null)
+        {
+            item.modifier.Init(RemoveModifier);
+            modifiers.Add(item.modifier);
+        }
     }
 
-    void Deinit()
+    public void RemoveModifier(BaseModifier mod)
     {
-        currentModifier?.Deinit();
+        modifiers.Remove(mod);
+    }
+
+    void Start()
+    {
+        foreach (var mod in modifiers)
+        {
+            mod.Init(RemoveModifier);
+        }
+
+        EventController.instance.playerEvents.OnItemPickup += OnItemPickup;
+    }
+
+    void Update()
+    {
+        foreach (var mod in modifiers)
+        {
+            mod.Update();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var mod in modifiers)
+        {
+            mod.Deinit();
+        }
     }
 }

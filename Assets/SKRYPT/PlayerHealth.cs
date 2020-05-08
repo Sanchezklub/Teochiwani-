@@ -25,15 +25,18 @@ public class PlayerHealth : Health
     public override void TakeDamage(float damage)
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth -= damage;
-        EventController.instance.playerEvents.CallOnPlayerRecieveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth);
+
+        //MeteorMod
+        EventController.instance.playerEvents.CallOnPlayerReceiveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth);
         if (FloatingText == true)
         {
             ShowFloatingText(damage);
         }
         if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
         {
+            //MeteorMod
+            EventController.instance.playerEvents.CallOnPlayerDie();
             Die();
-
         }
 
     }

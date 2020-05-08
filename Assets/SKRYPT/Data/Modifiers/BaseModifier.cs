@@ -5,16 +5,18 @@ using UnityEngine.Events;
 
 public abstract class BaseModifier : ScriptableObject
 {
-
     public UnityAction<BaseModifier> OnModifierCompleted;
+
     public virtual void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
-        OnModifierCompleted += OnModifierCompleted;
+        OnModifierCompleted += OnCompletedCallback;
     }
+
     public virtual void Update()
     {
 
     }
+
     public virtual void Deinit()
     {
         OnModifierCompleted = null;

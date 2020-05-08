@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
 public class EventController : MonoBehaviour
 {
     public static EventController instance;
 
-    //private PlayerEvents player { get; } = new PlayerEvents();
     public PlayerEvents playerEvents;
+
     private void Awake()
     {
         instance = this;
@@ -18,7 +19,6 @@ public class EventController : MonoBehaviour
     {
         public UnityAction OnPlayerJumpedBasic;
         public UnityAction<CharacterController2D> OnPlayerJumped;
-
         public void CallOnPlayerJumped(CharacterController2D character)
         {
             OnPlayerJumpedBasic?.Invoke();
@@ -32,6 +32,7 @@ public class EventController : MonoBehaviour
             OnPlayerUseWeaponBasic?.Invoke();
             OnPlayerUseWeapon?.Invoke(weapon);
         }
+
         public UnityAction OnPlayerDealDamageBasic;
         public UnityAction<float> OnPlayerDealDamage;
         public void CallOnPlayerDealDamage(float damage)
@@ -40,14 +41,27 @@ public class EventController : MonoBehaviour
             OnPlayerDealDamage?.Invoke(damage);
         }
 
-        public UnityAction OnPlayerRecieveDamageBasic;
-        public UnityAction<float, float> OnPlayerRecieveDamage;
-
-        public void CallOnPlayerRecieveDamage(float damage, float healthleft)
+        public UnityAction OnPlayerReceiveDamageBasic;
+        public UnityAction<float, float> OnPlayerReceiveDamage;
+        public void CallOnPlayerReceiveDamage(float damage, float healthLeft)
         {
-            OnPlayerRecieveDamageBasic?.Invoke();
-            OnPlayerRecieveDamage?.Invoke(damage, healthleft);
+            OnPlayerReceiveDamageBasic?.Invoke();
+            OnPlayerReceiveDamage?.Invoke(damage, healthLeft);
         }
 
+        public UnityAction OnPlayerDie;
+        public void CallOnPlayerDie()
+        {
+            OnPlayerDie?.Invoke();
+        }
+
+        public UnityAction<BaseItem> OnItemPickup;
+        public void CallOnItemPickup(BaseItem item)
+        {
+            OnItemPickup?.Invoke(item);
+        }
     }
+
+
 }
+

@@ -7950,6 +7950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837526916}
   - component: {fileID: 837526917}
+  - component: {fileID: 837526918}
   m_Layer: 0
   m_Name: ======GRACZ I KAMERY=======
   m_TagString: Untagged
@@ -7983,6 +7984,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0df0a5af705730448ad867c54aa1d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &837526918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837526915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f4a1a2e8ff44849a6221eaf695ad36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentModifier: {fileID: 0}
 --- !u!1001 &851169803
 PrefabInstance:
   m_ObjectHideFlags: 0

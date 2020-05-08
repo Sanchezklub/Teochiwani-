@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "FasterMovement", menuName = "Modifiers/FasterMovement")]
-public class ModFasterMovement : BaseModifier
+public class ModFasterMovment : BaseModifier
 {
     [SerializeField]
     private float speedPerDamage;
     public float SpeedPerDamage => speedPerDamage;
 
     private float initialSpeed;
+
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
@@ -20,16 +21,20 @@ public class ModFasterMovement : BaseModifier
 
     public void AssignEvents()
     {
-        EventController.instance.playerEvents.OnPlayerRecieveDamage += OnPlayerRecieveDamage;
+        EventController.instance.playerEvents.OnPlayerReceiveDamage += OnPlayerReceiveDamage;
+        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
     }
 
-    public void OnPlayerRecieveDamage(float damage, float healthLeft)
+    public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
-        var currentSpeed = GameController.instance.DataStorage.PlayerInfo.speed;
-        var maxhealth = GameController.instance.DataStorage.PlayerInfo.speed;
-        var value = (1f - Mathf.InverseLerp(0, maxhealth, healthLeft)) * speedPerDamage;
+        var maxhealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * speedPerDamage;
         GameController.instance.DataStorage.PlayerInfo.speed = initialSpeed + value;
-        Debug.LogFormat("<color=orange> FasterMovement() :: {0}", value);
+    }
+
+    public void PlayerDied()
+    {
+        Deinit();
     }
 
     public override void Update()
@@ -39,7 +44,10 @@ public class ModFasterMovement : BaseModifier
 
     public override void Deinit()
     {
-        base.Deinit();
         GameController.instance.DataStorage.PlayerInfo.speed = initialSpeed;
+        EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
+        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+
+        base.Deinit();
     }
 }

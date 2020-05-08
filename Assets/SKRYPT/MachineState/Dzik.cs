@@ -13,6 +13,7 @@ public class Dzik : MonoBehaviour
     void Start()
     {
         StartCharge();
+        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class Dzik : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<PlayerHealth>()?.TakeDamage(damage);
     }

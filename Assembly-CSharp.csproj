@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SKRYPT\Architekture\DataStorage.cs" />
+    <Compile Include="Assets\SKRYPT\Architekture\Events\EventController.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\GameController.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\Player.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\PlayerData.cs" />
@@ -80,6 +81,8 @@
     <Compile Include="Assets\SKRYPT\CocoaCounterScript.cs" />
     <Compile Include="Assets\SKRYPT\CocoaScript.cs" />
     <Compile Include="Assets\SKRYPT\Dash.cs" />
+    <Compile Include="Assets\SKRYPT\Data\Modifiers\BaseModifier.cs" />
+    <Compile Include="Assets\SKRYPT\Data\Modifiers\ModFasterMovement.cs" />
     <Compile Include="Assets\SKRYPT\DestroyTrue.cs" />
     <Compile Include="Assets\SKRYPT\Destrucktable.cs" />
     <Compile Include="Assets\SKRYPT\DetroyTrue.cs" />
@@ -143,6 +146,7 @@
     <Compile Include="Assets\SKRYPT\MachineState\SpiderStunState.cs" />
     <Compile Include="Assets\SKRYPT\MachineState\SpiderWalkState.cs" />
     <Compile Include="Assets\SKRYPT\MainMenu.cs" />
+    <Compile Include="Assets\SKRYPT\ModifierController\ModifierController.cs" />
     <Compile Include="Assets\SKRYPT\Music\AudioManager.cs" />
     <Compile Include="Assets\SKRYPT\Music\Sound.cs" />
     <Compile Include="Assets\SKRYPT\Parralax.cs" />

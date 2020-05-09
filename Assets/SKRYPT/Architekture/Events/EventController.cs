@@ -60,6 +60,21 @@ public class EventController : MonoBehaviour
         {
             OnItemPickup?.Invoke(item);
         }
+        public UnityAction OnCocoaPickupBasic;
+        public UnityAction<int> OnCocoaPickup;
+        public void CallOnCocoaPickup(int amount)
+        {
+            OnCocoaPickupBasic?.Invoke();
+            OnCocoaPickup?.Invoke(amount);
+        }
+        
+        public UnityAction OnBloodPickupBasic;
+        public UnityAction<int> OnBloodPickup;
+        public void CallOnBloodPickup(int amount)
+        {
+            OnBloodPickupBasic?.Invoke();
+            OnBloodPickup?.Invoke(amount);
+        }
     }
 
 

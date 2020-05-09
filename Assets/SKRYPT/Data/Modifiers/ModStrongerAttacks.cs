@@ -44,7 +44,7 @@ public class ModStrongerAttacks : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.speed = initialDmg;
+        GameController.instance.DataStorage.PlayerInfo.damage = initialDmg;
         EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
         EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
 

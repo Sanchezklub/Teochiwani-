@@ -43,10 +43,12 @@ public class EventController : MonoBehaviour
 
         public UnityAction OnPlayerReceiveDamageBasic;
         public UnityAction<float, float> OnPlayerReceiveDamage;
-        public void CallOnPlayerReceiveDamage(float damage, float healthLeft)
+        public UnityAction<float, float, GameObject> OnPlayerReceiveDamageWithAttacker;
+        public void CallOnPlayerReceiveDamage(float damage, float healthLeft, GameObject attacker = null)
         {
             OnPlayerReceiveDamageBasic?.Invoke();
             OnPlayerReceiveDamage?.Invoke(damage, healthLeft);
+            OnPlayerReceiveDamageWithAttacker?.Invoke(damage, healthLeft, attacker);
         }
 
         public UnityAction OnPlayerDie;

@@ -8,7 +8,7 @@ public class SkalaHealth : Health
     public Sprite mysprite1;
     public Sprite mysprite2;
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, GameObject attacker = null)
     {
         base.TakeDamage(damage);
         Instantiate(this.Particle, this.transform.position, Quaternion.identity);

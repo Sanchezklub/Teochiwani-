@@ -27,7 +27,7 @@ public abstract class BaseItem : MonoBehaviour
         if (coll2.tag == "Player")
         {
             ShowFloatingText(itemName);
-            Destroy(this, 5);
+            //Destroy(this, 5);
         }
     }
     public virtual void BuffJumpHeight(int JumpHeigt)

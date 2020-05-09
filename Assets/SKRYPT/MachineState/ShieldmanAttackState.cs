@@ -38,7 +38,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
             if (hitColliders[i].tag == "Player")
             {
                 Health player = hitColliders[i].GetComponent<Health>();
-                player?.TakeDamage(brain.damage);
+                player?.TakeDamage(brain.damage, brain.gameObject);
                 break;
             }
 

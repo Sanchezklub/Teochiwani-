@@ -22,12 +22,12 @@ public class PlayerHealth : Health
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.currenthealth;
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, GameObject attacker = null)
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth -= damage;
 
         //MeteorMod
-        EventController.instance.playerEvents.CallOnPlayerReceiveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth);
+        EventController.instance.playerEvents.CallOnPlayerReceiveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth, attacker);
         if (FloatingText == true)
         {
             ShowFloatingText(damage);

@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
         currentHealth=MaxHealth;
 
     }
-     public virtual void TakeDamage(float damage)
+     public virtual void TakeDamage(float damage, GameObject attacker = null)
      {
        currentHealth -=damage;
        if (FloatingText == true)

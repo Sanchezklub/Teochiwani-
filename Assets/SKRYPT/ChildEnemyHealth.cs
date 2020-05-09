@@ -12,7 +12,7 @@ public class ChildEnemyHealth : Health
         parent = this.transform.parent.gameObject;
     }
 
-    public override void TakeDamage(float damage)
+    public override void TakeDamage(float damage, GameObject attacker = null)
     {
         base.TakeDamage(damage);
 

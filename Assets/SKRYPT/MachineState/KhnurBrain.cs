@@ -36,7 +36,7 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState);
+//        Debug.Log(currentState);
     }
 
     public override void ChangeState(BaseState<KhnurBrain> newState)

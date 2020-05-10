@@ -35,7 +35,7 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState);
+//        Debug.Log(currentState);
     }
 
     public void DealDamage()

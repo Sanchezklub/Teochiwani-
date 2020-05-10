@@ -60,10 +60,10 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     public void AttemptLeavingFightState()
     {
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
-        Debug.Log("Attempted to leave FightState. Distance was:" + distance);
+        //Debug.Log("Attempted to leave FightState. Distance was:" + distance);
         if (distance > brain.StartFightDist)
         {
-            Debug.Log("left fightstate");
+            //Debug.Log("left fightstate");
             brain.StartFollow();
         }
     }

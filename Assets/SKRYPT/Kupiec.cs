@@ -49,7 +49,6 @@ public class Kupiec : MonoBehaviour
             Price.GetComponent<TextMeshPro>().text = itemValueBlood.ToString();
         }
         itemframe.GetComponent<SpriteRenderer>().sprite = broniewyglad[rand];
-        Debug.Log("Instantiated sprite");
     
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,8 +78,11 @@ public class Kupiec : MonoBehaviour
         playerKakao = GameController.instance.DataStorage.PlayerInfo.cocoa;
             if ( CenaWKakao==true && playerKakao>=itemValueKakao)
             {
-                GameController.instance.DataStorage.PlayerInfo.cocoa-= itemValueKakao;
-               Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
+                GameController.instance.DataStorage.PlayerInfo.cocoa -= itemValueKakao;
+                Debug.Log("Attempted to CallOnCocoaLost from Kupiec 1");
+                EventController.instance.playerEvents.CallOnCocoaLost(itemValueKakao);
+                Debug.Log("Attempted to CallOnCocoaLost from Kupiec 2");
+                Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
                 Sprzedane=true;
                 anim.SetTrigger("KupiecDobry");
                 itemframe.GetComponent<SpriteRenderer>().sprite =null;
@@ -88,7 +90,12 @@ public class Kupiec : MonoBehaviour
             else if (CenaWKakao==false&& playerBlood>=itemValueBlood)
             {
                 GameController.instance.DataStorage.PlayerInfo.blood -= itemValueBlood;
-               Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
+                Debug.Log("Attempted to CallOnBloodLost from Kupiec 1");
+
+                EventController.instance.playerEvents.CallOnBloodLost(itemValueBlood);
+                Debug.Log("Attempted to CallOnBloodLost from Kupiec 2");
+
+                Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
                Sprzedane=true;
                anim.SetTrigger("KupiecDobry");
                itemframe.GetComponent<SpriteRenderer>().sprite =null;

@@ -42,7 +42,7 @@ public class SpiderBrain : BaseBrain<SpiderBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState);
+//        Debug.Log(currentState);
     }
 
     public override void ChangeState(BaseState<SpiderBrain> newState)

@@ -77,6 +77,27 @@ public class EventController : MonoBehaviour
             OnBloodPickupBasic?.Invoke();
             OnBloodPickup?.Invoke(amount);
         }
+
+        public UnityAction OnBloodLostBasic;
+        public UnityAction<int> OnBloodLost;
+
+        public void CallOnBloodLost(int amount)
+        {
+            OnBloodLostBasic?.Invoke();
+            OnBloodLost?.Invoke(amount);
+            Debug.Log("OnBloodLostCalled");
+        }
+
+        public UnityAction OnCocoaLostBasic;
+        public UnityAction<int> OnCocoaLost;
+
+        public void CallOnCocoaLost(int amount)
+        {
+            OnCocoaLostBasic?.Invoke();
+            OnCocoaLost?.Invoke(amount);
+            Debug.Log("OnCocoaLostCalled");
+        }
+
     }
 
 

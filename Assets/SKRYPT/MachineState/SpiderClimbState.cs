@@ -34,7 +34,7 @@ public class SpiderClimbState : BaseState<SpiderBrain>
         if (PositionDifference <= 0)
         {
             brain.SpiderRigidbody.velocity = new Vector2(0,brain.speed*1);
-            Debug.Log("wspina");
+            //Debug.Log("wspina");
             brain.FacingRight = false;
         }
         else if(PositionDifference <1)

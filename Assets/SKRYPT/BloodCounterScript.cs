@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BloodCounterScript : MonoBehaviour
 {
-    Text text;
+    TextMeshProUGUI text;
     public static int bloodAmount;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text> ();
+        text = GetComponent<TextMeshProUGUI> ();
        
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = GameController.instance.DataStorage.PlayerInfo.blood.ToString();   
+        text.SetText(GameController.instance.DataStorage.PlayerInfo.blood.ToString());   
     }
 }

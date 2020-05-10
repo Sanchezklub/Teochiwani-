@@ -33,7 +33,7 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState);
+//        Debug.Log(currentState);
     }
 
     public void DoAttack()
@@ -44,7 +44,6 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         currentState?.StateOnCollisonEnter2D(collision);
-        Debug.Log("OnCollisionEnter2D :: RhinoBrain");
     }
 
 

@@ -21,11 +21,15 @@ public class ModMoneyToDmg : BaseModifier
     public void AssignEvents()
     {
         EventController.instance.playerEvents.OnBloodPickupBasic += PickedUpMoney;
+        EventController.instance.playerEvents.OnBloodLostBasic += PickedUpMoney;
         EventController.instance.playerEvents.OnCocoaPickupBasic += PickedUpMoney;
+        EventController.instance.playerEvents.OnCocoaLostBasic += PickedUpMoney;
+
         EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
     }
     public void PickedUpMoney()
     {
+        Debug.Log("PickedUpMoney :: ModMoneyToDmg");
         var blood = GameController.instance.DataStorage.PlayerInfo.blood;
         var cocoa = GameController.instance.DataStorage.PlayerInfo.cocoa;
         GameController.instance.DataStorage.PlayerInfo.damage = initialDmg + ((blood + cocoa) / MoneyPerDamage);
@@ -45,7 +49,9 @@ public class ModMoneyToDmg : BaseModifier
     public override void Deinit()
     {
         EventController.instance.playerEvents.OnBloodPickupBasic -= PickedUpMoney;
+        EventController.instance.playerEvents.OnBloodLostBasic -= PickedUpMoney;
         EventController.instance.playerEvents.OnCocoaPickupBasic -= PickedUpMoney;
+        EventController.instance.playerEvents.OnCocoaLostBasic -= PickedUpMoney;
         EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
 
         base.Deinit();

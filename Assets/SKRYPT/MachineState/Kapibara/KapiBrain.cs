@@ -28,7 +28,7 @@ public class KapiBrain : BaseBrain<KapiBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
     }
 
     public override void ChangeState(BaseState<KapiBrain> newState)

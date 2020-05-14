@@ -10,6 +10,8 @@ public class Keys : MonoBehaviour
     public const string IDLE_ANIM_KEY = "Idle";
     public const string TAKEDAMAGE_ANIM_KEY = "TakeDamage";
 
+    public const string SAVE_PATH_KEY = "/progress.lel";
+
 
 /*
     public const string PLAYER_VLIGHTATTACK_ANIM_KEY = "IsAttackingVLight";

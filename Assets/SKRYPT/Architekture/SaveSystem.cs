@@ -1,21 +1,40 @@
 ﻿using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
-public static class SaveSystem
+
+public class SaveSystem : MonoBehaviour
 {
-    public static void SavePlayer (PlayerInformation Player)   
+    public static SaveSystem Instance;
+
+    public EnemyTracker enemyTracker;
+    //enviro tracker
+
+    public SaveContainer saveContainer;
+
+    private void Awake()
+    {
+        Instance = this;
+        LoadGame();
+    }
+
+    private void Start()
+    {
+        saveContainer.levelData.Start();
+    }
+
+    public void SaveGame ()   
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream  = new FileStream(path, FileMode.Create);
 
-        PlayerDataScript data = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
+        string mess = JsonUtility.ToJson(saveContainer);
 
-        formatter.Serialize(stream,data);
+        formatter.Serialize(stream, mess);
         stream.Close();
 
     }
-    public static PlayerDataScript LoadPlayer()
+    public void LoadGame()
     {
         string path = Application.persistentDataPath + "/player.fun";
         if ( File.Exists(path))
@@ -24,13 +43,36 @@ public static class SaveSystem
 
           FileStream stream  = new FileStream(path, FileMode.Open);
 
-          PlayerDataScript data = formatter.Deserialize(stream) as PlayerDataScript;
+          string message = formatter.Deserialize(stream) as string;
+
+          //Debug.Log(message);
+            //PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
+            saveContainer = JsonUtility.FromJson<SaveContainer>(message);
+            Debug.Log(saveContainer);
+
           stream.Close();
-          return data;
+            //return null;
+          //return data;
         }
         else
         {
-            return null;
+            Debug.Log("NoData");
+            //return null;
         }
+    }
+
+
+    [ContextMenu("Test")]
+    public void Test()
+    {
+        saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
+    }
+
+    private void OnApplicationQuit()
+    {
+        saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
+        saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
+
+        SaveGame();
     }
 }

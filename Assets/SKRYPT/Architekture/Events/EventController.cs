@@ -8,11 +8,15 @@ public class EventController : MonoBehaviour
     public static EventController instance;
 
     public PlayerEvents playerEvents;
+    public EnemyEvents enemyEvents;
+    public LevelEvents levelEvents;
 
     private void Awake()
     {
         instance = this;
         playerEvents = new PlayerEvents();
+        enemyEvents = new EnemyEvents();
+        levelEvents = new LevelEvents();
     }
 
     public class PlayerEvents
@@ -100,6 +104,35 @@ public class EventController : MonoBehaviour
 
     }
 
+    public class EnemyEvents
+    {
+        public UnityAction OnEnemyAppearBasic;
+        public UnityAction<EnemyHealth> OnEnemyAppear;
+        public void CallOnEnemyAppear(EnemyHealth enemy)
+        {
+            Debug.Log("Appear");
+            OnEnemyAppearBasic?.Invoke();
+            OnEnemyAppear?.Invoke(enemy);
+        }
 
+        public UnityAction OnEnemyDiedBasic;
+        public UnityAction<EnemyHealth> OnEnemyDied;
+        public void CallOnEnemyDied(EnemyHealth enemy)
+        {
+            OnEnemyDiedBasic?.Invoke();
+            OnEnemyDied?.Invoke(enemy);
+        }
+    }
+
+    public class LevelEvents
+    {
+        public UnityAction OnLevelGeneratedBasic;
+        public UnityAction<int[,]> OnLevelGenerated;
+        public void CallOnLevelGenerated(int[,] layout)
+        {
+            OnLevelGeneratedBasic?.Invoke();
+            OnLevelGenerated?.Invoke(layout);            
+        }
+    }
 }
 

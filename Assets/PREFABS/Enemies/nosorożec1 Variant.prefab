@@ -296,10 +296,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  currentHealth: 0
+  currentHealth: 1
   FloatingText: 1
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  id: 1
   enemyAnimator: {fileID: 562726352}
 --- !u!1001 &4580002901514514379
 PrefabInstance:
@@ -376,7 +377,7 @@ PrefabInstance:
     - target: {fileID: -1071332448543100821, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
       propertyPath: m_Name
-      value: "nosoro\u017Cec1"
+      value: "nosoro\u017Cec1 Variant"
       objectReference: {fileID: 0}
     - target: {fileID: -1071332448543100821, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}

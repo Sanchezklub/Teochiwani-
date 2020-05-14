@@ -14,13 +14,13 @@ public class SaveController : MonoBehaviour
     //public GameObject FloatingTextPrefab;
     public void SavePlayerInfo()
     {
-        SaveSystem.SavePlayer(GameController.instance.DataStorage.PlayerInfo);
+        //SaveSystem.SavePlayer(GameController.instance.DataStorage.PlayerInfo);
         Debug.Log("Game Saved");
     }
 
     public void LoadPlayerInfo()
     {
-        LoadedData = SaveSystem.LoadPlayer();
+        //LoadedData = SaveSystem.LoadPlayer();
         if (LoadedData != null)
         {
             GameController.instance.DataStorage.PlayerInfo.maxhealth = LoadedData.maxhealth;

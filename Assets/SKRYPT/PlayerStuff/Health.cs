@@ -9,7 +9,8 @@ public class Health : MonoBehaviour
     public float currentHealth;
     public bool FloatingText;
     public GameObject FloatingTextPrefab;
-   
+    public int id;
+
     protected virtual void Start()
     {
         currentHealth=MaxHealth;

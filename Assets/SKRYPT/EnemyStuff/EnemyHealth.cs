@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class EnemyHealth : Health
-{
+{ 
     public Animator enemyAnimator;
     public UnityAction Dying;
     public UnityAction TakingDamage;
@@ -13,13 +13,14 @@ public class EnemyHealth : Health
     {
         base.Start();
 
+        EventController.instance.enemyEvents.CallOnEnemyAppear(this);
     }
 
     public override void TakeDamage(float damage, GameObject attacker = null)
     {
         base.TakeDamage(damage);
-        enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
         TakingDamage?.Invoke();
+        enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
 
     }
 
@@ -30,6 +31,7 @@ public class EnemyHealth : Health
 
     protected override void Die()
     {
+        EventController.instance.enemyEvents.CallOnEnemyDied(this);
         Dying += GetDestroyed;
         base.Die();
         if (enemyAnimator == null)

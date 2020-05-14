@@ -14,6 +14,8 @@ public class LevelGeneration : MonoBehaviour
 	public Vector2 endingPosition;
     public Vector2 StartingPosition;
 
+    public LevelData levelData;
+
     public LayerMask whatIsRoom;
     private void Start()
     {
@@ -34,7 +36,9 @@ public class LevelGeneration : MonoBehaviour
         Vector2 newPos1 = new Vector2(transform.position.x-moveAmountx, transform.position.y);
         transform.position = newPos1;
         Instantiate(rooms[15], transform.position, Quaternion.identity); // buduje 
-           
+
+        //EventController.instance.levelEvents.CallOnLevelGenerated(Room);
+        levelData.SaveLayout(Room);
      }
     
   private void Level1() // budowa poziomu 1 ( od góry )

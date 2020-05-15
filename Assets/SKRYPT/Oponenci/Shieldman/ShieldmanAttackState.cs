@@ -8,6 +8,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     private ShieldmanBrain brain;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
+    float PositionDifference;
 
     public override void InitState(ShieldmanBrain controller)
     {
@@ -32,6 +33,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     public void Attack()
     {
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(brain.AttackPoint.position, brain.AttackRange);
+        MoveTowardsPlayer();
         int i = 0;
         while (i < hitColliders.Length)
         {
@@ -66,5 +68,33 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
             //Debug.Log("left fightstate");
             brain.StartFollow();
         }
+    }
+    void MoveTowardsPlayer()
+    {
+        PositionDifference = brain.transform.position.x - player.transform.position.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            enemyRigidBody2D.velocity = new Vector2(1 * brain.speed, enemyRigidBody2D.velocity.y);
+            brain.FacingRight = true;
+        }
+
+    }
+
+    void Flip()
+    {
+        brain.transform.Rotate(new Vector2(0f, 180f));
     }
 }

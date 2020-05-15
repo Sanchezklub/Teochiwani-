@@ -9,6 +9,10 @@ public class SaveSystem : MonoBehaviour
     public EnemyTracker enemyTracker;
     public ItemTracker itemTracker;
     public WeaponTracker weaponTracker;
+    public IDdictionary Dictionary;
+
+
+    public bool SpawnEnemies = false;
    
 
     public SaveContainer saveContainer;
@@ -47,10 +51,14 @@ public class SaveSystem : MonoBehaviour
 
           string message = formatter.Deserialize(stream) as string;
 
-          //Debug.Log(message);
-            //PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
+          Debug.Log(message);
+            PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
             saveContainer = JsonUtility.FromJson<SaveContainer>(message);
             Debug.Log(saveContainer);
+            if(SpawnEnemies == true)
+            {
+                LoadEnemies(saveContainer);
+            }
 
           stream.Close();
             //return null;
@@ -63,6 +71,18 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    public void LoadEnemies(SaveContainer LoadedSaveContainer)
+    {
+        foreach(EnemyData loadedEnemy in LoadedSaveContainer.levelData.enemiesData)
+        {
+            GameObject EnemyPrefab = Dictionary.GetEnemyObjects(loadedEnemy.id);
+            if (EnemyPrefab != null)
+            {
+                Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
+            }
+        }
+    }
+
 
     [ContextMenu("Test")]
     public void Test()
@@ -71,6 +91,8 @@ public class SaveSystem : MonoBehaviour
         saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
         saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
+
+        SaveGame();
     }
 
     private void OnApplicationQuit()

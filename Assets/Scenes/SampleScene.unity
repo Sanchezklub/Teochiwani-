@@ -6449,7 +6449,7 @@ PrefabInstance:
     - target: {fileID: 5442415637768569471, guid: d8e9a384d7d362347be198032da13727,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 95.75
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 5442415637768569471, guid: d8e9a384d7d362347be198032da13727,
         type: 3}
@@ -14603,6 +14603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CzaszkaWrogiegoPlemienia
       objectReference: {fileID: 0}
+    - target: {fileID: 4524356282363634569, guid: d59a554ed17b05c438cee77ebd6d08da,
+        type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59a554ed17b05c438cee77ebd6d08da, type: 3}
 --- !u!1001 &1526313805
@@ -20148,6 +20153,8 @@ GameObject:
   - component: {fileID: 2137187034}
   - component: {fileID: 2137187036}
   - component: {fileID: 2137187037}
+  - component: {fileID: 2137187039}
+  - component: {fileID: 2137187038}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -20169,6 +20176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enviromentTracker: {fileID: 2137187037}
   enemyTracker: {fileID: 2137187036}
+  itemTracker: {fileID: 2137187039}
+  weaponTracker: {fileID: 2137187038}
   saveContainer:
     playerData:
       maxhealth: 0
@@ -20185,6 +20194,8 @@ MonoBehaviour:
       roomRelation: []
       enemiesData: []
       enviromentData: []
+      weaponData: []
+      itemData: []
 --- !u!4 &2137187035
 Transform:
   m_ObjectHideFlags: 0
@@ -20226,6 +20237,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enviros: []
+--- !u!114 &2137187038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137187033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5051a1764a0effc419b18afa05597f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons: []
+--- !u!114 &2137187039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137187033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbdb324dad20e848b7391217681ebec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1001 &2137719019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22022,6 +22059,11 @@ PrefabInstance:
       propertyPath: UIFlavourText
       value: 
       objectReference: {fileID: 79234564}
+    - target: {fileID: 176861280523263545, guid: 72003debd7bf3304c8a447d1fae7cd82,
+        type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2687345321257893394, guid: 72003debd7bf3304c8a447d1fae7cd82,
         type: 3}
       propertyPath: m_Name

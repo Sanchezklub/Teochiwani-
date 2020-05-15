@@ -11,6 +11,8 @@ public class EventController : MonoBehaviour
     public EnemyEvents enemyEvents;
     public LevelEvents levelEvents;
     public EnviromentEvents enviromentEvents;
+    public ItemEvents itemEvents;
+    public WeaponEvents weaponEvents;
     private void Awake()
     {
         instance = this;
@@ -18,6 +20,8 @@ public class EventController : MonoBehaviour
         enemyEvents = new EnemyEvents();
         levelEvents = new LevelEvents();
         enviromentEvents = new EnviromentEvents();
+        weaponEvents = new WeaponEvents();
+        itemEvents = new ItemEvents();
     }
 
     public class PlayerEvents
@@ -153,6 +157,45 @@ public class EventController : MonoBehaviour
         {
             OnLevelGeneratedBasic?.Invoke();
             OnLevelGenerated?.Invoke(layout);            
+        }
+    }
+    public class ItemEvents
+    {
+        public UnityAction OnItemAppearBasic;
+        public UnityAction<BaseItem> OnItemAppear;
+        public void CallOnItemAppear(BaseItem item)
+        {
+            Debug.Log("Appear");
+            OnItemAppearBasic?.Invoke();
+            OnItemAppear?.Invoke(item);
+        }
+
+        public UnityAction OnItemDiedBasic;
+        public UnityAction<BaseItem> OnItemDied;
+        public void CallOnItemDied(BaseItem item)
+        {
+            OnItemDiedBasic?.Invoke();
+            OnItemDied?.Invoke(item);
+        }
+    }
+
+    public class WeaponEvents
+    {
+        public UnityAction OnWeaponAppearBasic;
+        public UnityAction<BaseWeapon> OnWeaponAppear;
+        public void CallOnWeaponAppear(BaseWeapon weapon)
+        {
+            Debug.Log("Appear");
+            OnWeaponAppearBasic?.Invoke();
+            OnWeaponAppear?.Invoke(weapon);
+        }
+
+        public UnityAction OnWeaponDiedBasic;
+        public UnityAction<BaseWeapon> OnWeaponDied;
+        public void CallOnWeaponDied(BaseWeapon weapon)
+        {
+            OnWeaponDiedBasic?.Invoke();
+            OnWeaponDied?.Invoke(weapon);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.Events;
 public abstract class BaseWeapon : MonoBehaviour
 {
 
@@ -12,10 +12,13 @@ public abstract class BaseWeapon : MonoBehaviour
     [SerializeField] public TextMeshProUGUI UIWeaponName;
     [SerializeField] public TextMeshProUGUI UIFlavourText;
     public string Name;
+    public int id;
     public string FlavourText;
     private void Start()
     {
+       
         //UIFlavourText = Find("FlavourText");
+        EventController.instance.weaponEvents.CallOnWeaponAppear(this);
     }
     public enum AnimationType
     {

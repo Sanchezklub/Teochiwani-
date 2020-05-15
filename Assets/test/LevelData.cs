@@ -10,8 +10,11 @@ public class LevelData
     public List<RoomData> roomRelation;
     public List<EnemyData> enemiesData;
     public List<EnviroData> enviromentData;
-    //public List<ItemData> itemsData;
+    public List<WeaponData> weaponData;
+    public List<ItemData> itemData;
 
+
+    
     public void Start()
     {
         EventController.instance.levelEvents.OnLevelGenerated += SaveLayout;
@@ -40,6 +43,26 @@ public class LevelData
             enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
         }
     }
+    public void SaveWeapon(List<BaseWeapon> currentWeapon)
+    {
+        weaponData = new List<WeaponData>();
+
+        foreach(BaseWeapon weapon in currentWeapon)
+        {
+            weaponData.Add(new WeaponData(weapon.id, weapon.transform.position));
+        }
+    }
+    public void SaveItem(List<BaseItem> currentItem)
+    {
+        itemData = new List<ItemData>();
+
+        foreach(BaseItem item in currentItem)
+        {
+            itemData.Add(new ItemData(item.id, item.transform.position));
+        }
+    }
+
+
     public void SaveLayout(int[,] layout)
     {
         roomRelations = layout;
@@ -51,11 +74,6 @@ public class LevelData
                 roomRelation.Add(new RoomData(i, j, layout[i, j]));
             }
         }
-    }
-
-    public void SaveItems(/*Lista czegoś*/)
-    {
-
     }
 
    
@@ -105,7 +123,24 @@ public class EnemyData
 [System.Serializable]
 public class ItemData
 {
+    public ItemData(int id, Vector3 position)
+    {
+        this.id=id;
+        this.position = position;
+    }
     public int id;
     public Vector3 position;
 }
+[System.Serializable]
+public class WeaponData
+{
+    public WeaponData(int id, Vector3 position)
+    {
+        this.id=id;
+        this.position = position;
+    }
+    public int id;
+    public Vector3 position;
+}
+
 

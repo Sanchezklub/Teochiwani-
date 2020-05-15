@@ -7,7 +7,14 @@ public abstract class BaseItem : MonoBehaviour
     public BaseModifier modifier;
     private string flavourtext;
     private string itemName;
+    public int id;
     public GameObject FloatingTextPrefab;
+
+     private void Start()
+    {
+        //UIFlavourText = Find("FlavourText");
+        EventController.instance.itemEvents.CallOnItemAppear(this);
+    }
 
     public virtual void PickupItem()
     {

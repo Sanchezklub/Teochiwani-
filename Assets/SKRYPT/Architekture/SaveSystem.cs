@@ -7,7 +7,9 @@ public class SaveSystem : MonoBehaviour
     public static SaveSystem Instance;
     public EnviromentTracker enviromentTracker;
     public EnemyTracker enemyTracker;
-    //enviro tracker
+    public ItemTracker itemTracker;
+    public WeaponTracker weaponTracker;
+   
 
     public SaveContainer saveContainer;
 
@@ -65,14 +67,18 @@ public class SaveSystem : MonoBehaviour
     [ContextMenu("Test")]
     public void Test()
     {
+        saveContainer.levelData.SaveItem(itemTracker.items);
+        saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
         saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
     }
 
     private void OnApplicationQuit()
     {
-        saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
+        saveContainer.levelData.SaveItem(itemTracker.items);
+        saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
+        saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
 
         SaveGame();

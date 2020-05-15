@@ -9,10 +9,10 @@ public class SaveSystem : MonoBehaviour
     public EnemyTracker enemyTracker;
     public ItemTracker itemTracker;
     public WeaponTracker weaponTracker;
-    public IDdictionary Dictionary;
+    public ID_dictionary Dictionary;
 
 
-    public bool SpawnEnemies = false;
+    public bool SpawnStuff = false;
    
 
     public SaveContainer saveContainer;
@@ -55,9 +55,12 @@ public class SaveSystem : MonoBehaviour
             PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
             saveContainer = JsonUtility.FromJson<SaveContainer>(message);
             Debug.Log(saveContainer);
-            if(SpawnEnemies == true)
+            if(SpawnStuff == true)
             {
                 LoadEnemies(saveContainer);
+                LoadWeapons(saveContainer);
+                LoadItems(saveContainer);
+                LoadEnvironment(saveContainer);
             }
 
           stream.Close();
@@ -79,6 +82,40 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
+            }
+        }
+    }
+
+    public void LoadItems(SaveContainer LoadedSaveContainer)
+    {
+        foreach (ItemData loadedItem in LoadedSaveContainer.levelData.itemData)
+        {
+            GameObject ItemPrefab = Dictionary.GetEnemyObjects(loadedItem.id);
+            if (ItemPrefab != null)
+            {
+                Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
+            }
+        }
+    }
+    public void LoadWeapons(SaveContainer LoadedSaveContainer)
+    {
+        foreach (WeaponData loadedWeapon in LoadedSaveContainer.levelData.weaponData)
+        {
+            GameObject WeaponPrefab = Dictionary.GetEnemyObjects(loadedWeapon.id);
+            if (WeaponPrefab != null)
+            {
+                Instantiate(WeaponPrefab, loadedWeapon.position, Quaternion.identity);
+            }
+        }
+    }
+    public void LoadEnvironment(SaveContainer LoadedSaveContainer)
+    {
+        foreach (EnviroData loadedEnvironment in LoadedSaveContainer.levelData.enviromentData)
+        {
+            GameObject EnviroPrefab = Dictionary.GetEnemyObjects(loadedEnvironment.id);
+            if (EnviroPrefab != null)
+            {
+                Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
             }
         }
     }

@@ -6,7 +6,7 @@ public class WeaponTracker : MonoBehaviour
 {
     public List<BaseWeapon> weapons  = new List<BaseWeapon>();
 
-    public void Start()
+    public void Awake()
     {
         EventController.instance.weaponEvents.OnWeaponAppear += OnNewWeapon;
         EventController.instance.weaponEvents.OnWeaponDied += OnWeaponDie;

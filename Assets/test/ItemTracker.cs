@@ -6,7 +6,7 @@ public class ItemTracker : MonoBehaviour
 {
     public List<BaseItem> items  = new List<BaseItem>();
 
-    public void Start()
+    public void Awake()
     {
         EventController.instance.itemEvents.OnItemAppear += OnNewItem;
         EventController.instance.itemEvents.OnItemDied += OnItemDie;

@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 7240981174681768756}
   - component: {fileID: 7240981174681768757}
   - component: {fileID: 7240981174681768758}
+  - component: {fileID: 7723127070551555570}
   m_Layer: 14
   m_Name: kapibara
   m_TagString: Untagged
@@ -273,12 +274,29 @@ MonoBehaviour:
   damage: 20
   speed: 5
   StartFollowDist: 10
-  StopFollowDist: 20
-  StartFightDist: 0
   StopChargeDist: 14
   enemyAnimator: {fileID: 0}
   ChannellTime: 3
   ChargeHitbox: {fileID: 7240981174392190607}
+--- !u!114 &7723127070551555570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194552160283561000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  id: 0
+  enemyAnimator: {fileID: 0}
 --- !u!1 &2537849801641161484
 GameObject:
   m_ObjectHideFlags: 0

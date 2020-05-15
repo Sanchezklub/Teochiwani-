@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 1093555829}
   - component: {fileID: 1093555833}
   - component: {fileID: 1093555834}
+  - component: {fileID: 3877026692510287120}
   m_Layer: 14
   m_Name: smok
   m_TagString: Untagged
@@ -854,6 +855,25 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   animator: {fileID: 1093555829}
+--- !u!114 &3877026692510287120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4523371379545899054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  id: 0
+  enemyAnimator: {fileID: 0}
 --- !u!1 &4907412666441049111
 GameObject:
   m_ObjectHideFlags: 0

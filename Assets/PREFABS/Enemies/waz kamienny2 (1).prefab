@@ -181,8 +181,9 @@ GameObject:
   - component: {fileID: 5015807159643555207}
   - component: {fileID: 5015807159643555208}
   - component: {fileID: 5015807159643555209}
+  - component: {fileID: 7474740502526372347}
   m_Layer: 14
-  m_Name: waz kamienny2
+  m_Name: waz kamienny2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,6 +322,25 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   animator: {fileID: 5015807159643555207}
+--- !u!114 &7474740502526372347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341455905871245806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  id: 0
+  enemyAnimator: {fileID: 0}
 --- !u!1 &1470370598956720451
 GameObject:
   m_ObjectHideFlags: 0

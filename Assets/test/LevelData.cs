@@ -9,8 +9,8 @@ public class LevelData
 
     public List<RoomData> roomRelation;
     public List<EnemyData> enemiesData;
+    public List<EnviroData> enviromentData;
     //public List<ItemData> itemsData;
-    //public List<EnviroData> enviromentData;
 
     public void Start()
     {
@@ -31,7 +31,15 @@ public class LevelData
             enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
         }
     }
+    public void SaveEnviroment(List<EnviroId> currentEnviro)
+    {
+        enviromentData = new List<EnviroData>();
 
+        foreach(EnviroId enviro in currentEnviro)
+        {
+            enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
+        }
+    }
     public void SaveLayout(int[,] layout)
     {
         roomRelations = layout;
@@ -50,10 +58,7 @@ public class LevelData
 
     }
 
-    public void SaveEnviro(/*Lista czegoś*/)
-    {
-
-    }
+   
     //Odpiąc się od eventu
 }
 
@@ -75,6 +80,11 @@ public class RoomData
 [System.Serializable]
 public class EnviroData
 {
+    public EnviroData(int id, Vector3 position)
+    {
+        this.id = id;
+        this.position = position;
+    }
     public int id;
     public Vector3 position;
 }

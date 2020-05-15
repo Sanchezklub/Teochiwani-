@@ -10,13 +10,14 @@ public class EventController : MonoBehaviour
     public PlayerEvents playerEvents;
     public EnemyEvents enemyEvents;
     public LevelEvents levelEvents;
-
+    public EnviromentEvents enviromentEvents;
     private void Awake()
     {
         instance = this;
         playerEvents = new PlayerEvents();
         enemyEvents = new EnemyEvents();
         levelEvents = new LevelEvents();
+        enviromentEvents = new EnviromentEvents();
     }
 
     public class PlayerEvents
@@ -121,6 +122,26 @@ public class EventController : MonoBehaviour
         {
             OnEnemyDiedBasic?.Invoke();
             OnEnemyDied?.Invoke(enemy);
+        }
+    }
+
+    public class EnviromentEvents
+    {
+        public UnityAction OnEnviroAppearBasic;
+        public UnityAction<EnviroId> OnEnviroAppear;
+        public void CallOnEnviroAppear(EnviroId enviro)
+        {
+            Debug.Log("Appear");
+            OnEnviroAppearBasic?.Invoke();
+            OnEnviroAppear?.Invoke(enviro);
+        }
+
+        public UnityAction OnEnviroDiedBasic;
+        public UnityAction<EnviroId> OnEnviroDied;
+        public void CallOnEnemyDied(EnviroId enviro)
+        {
+            OnEnviroDiedBasic?.Invoke();
+            OnEnviroDied?.Invoke(enviro);
         }
     }
 

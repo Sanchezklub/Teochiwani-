@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6769391296925741221}
   - component: {fileID: 6769391296925741216}
   - component: {fileID: 6026977811888031425}
+  - component: {fileID: 35231980432196101}
   m_Layer: 14
   m_Name: dzban
   m_TagString: Untagged
@@ -454,8 +455,22 @@ MonoBehaviour:
   FloatingText: 0
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  id: 0
   minimumCount: 1
   maximumCount: 3
   prefab: {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
   destrutableRef: {fileID: 7731904333909960315, guid: 8e41057cac762714c80c5f76b8b5a0ff,
     type: 3}
+--- !u!114 &35231980432196101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769391296925741220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1

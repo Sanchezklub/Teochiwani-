@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveSystem : MonoBehaviour
 {
     public static SaveSystem Instance;
-
+    public EnviromentTracker enviromentTracker;
     public EnemyTracker enemyTracker;
     //enviro tracker
 
@@ -66,10 +66,12 @@ public class SaveSystem : MonoBehaviour
     public void Test()
     {
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
+        saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
     }
 
     private void OnApplicationQuit()
     {
+        saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
 

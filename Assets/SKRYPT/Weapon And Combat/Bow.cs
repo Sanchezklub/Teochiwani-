@@ -18,6 +18,7 @@ public class Bow : BaseWeapon
 
     public override void DropWeapon()
     {
+<<<<<<< Updated upstream
         GameObject Player = GameObject.Find("Player");
         CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
         FacingRight = zwrot.m_FacingRight;
@@ -31,6 +32,12 @@ public class Bow : BaseWeapon
             transform.Rotate(0f,180f,0f);
         }
         transform.parent = null;
+=======
+       
+        Handle.transform.parent = null;
+        
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
+>>>>>>> Stashed changes
         coll.enabled = true;
     }
 

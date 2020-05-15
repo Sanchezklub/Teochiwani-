@@ -58,6 +58,7 @@ public class Kupiec : MonoBehaviour
             PlayerInRange = true;
         }
         anim.SetTrigger("GraczWszedl");
+        FindObjectOfType<AudioManager>().Play("KupiecPierwszePoznanie");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -67,7 +68,14 @@ public class Kupiec : MonoBehaviour
             PlayerInRange = false;
         }
         if (Sprzedane == false)
+        {
         anim.SetTrigger("KupiecZły");
+        FindObjectOfType<AudioManager>().Play("KupiecWkurw");
+        }
+    }
+    private void idlesound()
+    {
+        FindObjectOfType<AudioManager>().Play("KupiecIdle");
     }
     private void Update()
     {
@@ -85,6 +93,7 @@ public class Kupiec : MonoBehaviour
                 Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
                 Sprzedane=true;
                 anim.SetTrigger("KupiecDobry");
+                FindObjectOfType<AudioManager>().Play("Kupiec_Dobry");
                 itemframe.GetComponent<SpriteRenderer>().sprite =null;
             }
             else if (CenaWKakao==false&& playerBlood>=itemValueBlood)
@@ -98,6 +107,7 @@ public class Kupiec : MonoBehaviour
                 Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
                Sprzedane=true;
                anim.SetTrigger("KupiecDobry");
+               FindObjectOfType<AudioManager>().Play("Kupiec_Dobry");
                itemframe.GetComponent<SpriteRenderer>().sprite =null;
             }
         }

@@ -4640,6 +4640,51 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: KupiecDobry
+    clip: {fileID: 8300000, guid: 65fe12ec4669bb34d85ab12ed718fd34, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecPierwszePoznanie
+    clip: {fileID: 8300000, guid: f8589b96bb12d1a4c92c5443f13563b7, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecIdle
+    clip: {fileID: 8300000, guid: 681555928375d5447938287791cded68, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 0b4e735188f17624ea16b32c4a1dab20, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecWkurw
+    clip: {fileID: 8300000, guid: b7460c077b862554fa3c6c73370bde19, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &450996990
 Transform:
   m_ObjectHideFlags: 0
@@ -19824,6 +19869,7 @@ MonoBehaviour:
   itemTracker: {fileID: 2137187039}
   weaponTracker: {fileID: 2137187038}
   Dictionary: {fileID: 2137187040}
+  SpawnEnemies: 0
   saveContainer:
     playerData:
       maxhealth: 0
@@ -20471,12 +20517,12 @@ PrefabInstance:
     - target: {fileID: 6980878726331576140, guid: 347a3c2ea11c98a4ebeea1e4d5d362d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.910004
+      value: 7.64
       objectReference: {fileID: 0}
     - target: {fileID: 6980878726331576140, guid: 347a3c2ea11c98a4ebeea1e4d5d362d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.969997
+      value: -58.01
       objectReference: {fileID: 0}
     - target: {fileID: 6980878726331576140, guid: 347a3c2ea11c98a4ebeea1e4d5d362d7,
         type: 3}

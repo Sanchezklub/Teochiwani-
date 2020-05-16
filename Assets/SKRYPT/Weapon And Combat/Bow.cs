@@ -18,18 +18,7 @@ public class Bow : BaseWeapon
 
     public override void DropWeapon()
     {
-        GameObject Player = GameObject.Find("Player");
-        CharacterController2D zwrot = Player.GetComponent<CharacterController2D>();
-        FacingRight = zwrot.m_FacingRight;
-        if (FacingRight == true)
-        {
-           Debug.Log("right");
-        }
-        else
-        {
-            Debug.Log("left");
-            transform.Rotate(0f,180f,0f);
-        }
+    
         Handle.transform.parent = null;
         
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);

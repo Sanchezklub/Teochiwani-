@@ -4066,7 +4066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346095258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1399996, y: 8.05, z: -10}
+  m_LocalPosition: {x: -2.1399999, y: 8.05, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1007697110}
@@ -8668,6 +8668,7 @@ Transform:
   - {fileID: 55057868}
   - {fileID: 346095260}
   - {fileID: 5442415637019644672}
+  - {fileID: 1656318508}
   - {fileID: 289908849}
   - {fileID: 1625935581}
   - {fileID: 1818390922}
@@ -8693,7 +8694,6 @@ Transform:
   - {fileID: 824606672}
   - {fileID: 2097756588}
   - {fileID: 162717404}
-  - {fileID: 1656318508}
   - {fileID: 1727358823}
   - {fileID: 8408784973418703005}
   m_Father: {fileID: 0}
@@ -9814,7 +9814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942962502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.05, z: 0}
+  m_LocalPosition: {x: 5.2234, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1810403896305602172}
@@ -20460,7 +20460,7 @@ PrefabInstance:
     - target: {fileID: 337848707387859083, guid: a049691fc0c05e94781885e682f5ef1e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1399996
+      value: -2.1399999
       objectReference: {fileID: 0}
     - target: {fileID: 337848707387859083, guid: a049691fc0c05e94781885e682f5ef1e,
         type: 3}
@@ -20495,7 +20495,7 @@ PrefabInstance:
     - target: {fileID: 337848707387859083, guid: a049691fc0c05e94781885e682f5ef1e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 89
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 337848707387859083, guid: a049691fc0c05e94781885e682f5ef1e,
         type: 3}
@@ -25828,7 +25828,7 @@ MonoBehaviour:
   movementSpeed: 10
   jumpForce: 16
   groundCheckRadius: 0.82
-  wallCheckDistance: 0.58
+  wallCheckDistance: 5
   wallSlideSpeed: 1
   movementForceInAir: 50
   airDragMultiplier: 0.95
@@ -25838,10 +25838,10 @@ MonoBehaviour:
   jumpTimerSet: 0.02
   turnTimerSet: 0
   wallJumpTimerSet: 0.5
-  ledgeClimbXOffset1: 0.3
-  ledgeClimbYOffset1: 0
-  ledgeClimbXOffset2: 0.5
-  ledgeClimbYOffset2: 2
+  ledgeClimbXOffset1: 5
+  ledgeClimbYOffset1: 5.5
+  ledgeClimbXOffset2: 10
+  ledgeClimbYOffset2: 10
   dashTime: 0
   dashSpeed: 0
   distanceBetweenImages: 0

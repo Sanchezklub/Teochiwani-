@@ -95,7 +95,7 @@ public class CharacterController2D : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckLedgeClimb();
-       // CheckDash();
+       //CheckDash();
     }
 
     private void FixedUpdate()
@@ -103,7 +103,7 @@ public class CharacterController2D : MonoBehaviour
         ApplyMovement();
         CheckSurroundings();
     }
-
+    
     private void CheckIfWallSliding()
     {
         if (isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0 && !canClimbLedge)
@@ -115,6 +115,7 @@ public class CharacterController2D : MonoBehaviour
             isWallSliding = false;
         }
     }
+    
 
     private void CheckLedgeClimb()
     {
@@ -124,13 +125,13 @@ public class CharacterController2D : MonoBehaviour
 
             if (isFacingRight)
             {
-                ledgePos1 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance) - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset1);
-                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance) + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset2);
+                ledgePos1 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance/10)*10 + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2);
             }
             else
             {
-                ledgePos1 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckDistance) + ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset1);
-                ledgePos2 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckDistance) - ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset2);
+                ledgePos1 = new Vector2(Mathf.Ceil((ledgePosBot.x - wallCheckDistance)/10)*10 + ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(Mathf.Ceil((ledgePosBot.x - wallCheckDistance)/10)*10 - ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2);
             }
 
             canMove = false;

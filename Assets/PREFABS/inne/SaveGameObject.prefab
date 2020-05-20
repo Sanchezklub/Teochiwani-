@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2145990694402019702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145990694402019701}
+  m_Layer: 0
+  m_Name: SaveContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145990694402019701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990694402019702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2145990695007110961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2145990695007110963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145990695007110961}
+  - component: {fileID: 2145990695007110960}
+  - component: {fileID: 2145990695007110966}
+  - component: {fileID: 2145990695007110967}
+  - component: {fileID: 2145990695007110965}
+  - component: {fileID: 2145990695007110964}
+  - component: {fileID: 2145990695007110922}
+  m_Layer: 0
+  m_Name: SaveGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145990695007110961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2145990694402019701}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145990695007110960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4e410d6d933934c9c60c3b4a2d6d9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enviromentTracker: {fileID: 2145990695007110967}
+  enemyTracker: {fileID: 2145990695007110966}
+  itemTracker: {fileID: 2145990695007110965}
+  weaponTracker: {fileID: 2145990695007110964}
+  Dictionary: {fileID: 2145990695007110922}
+  SpawnStuff: 1
+  saveContainer:
+    playerData:
+      maxhealth: 0
+      currenthealth: 0
+      cocoa: 0
+      blood: 0
+      damage: 0
+      speed: 0
+      position_x: 0
+      position_y: 0
+      currentweapon: 
+      testVector: {x: 0, y: 0, z: 0}
+    levelData:
+      levelGen: {fileID: 0}
+      roomRelation: []
+      enemiesData: []
+      enviromentData: []
+      weaponData: []
+      itemData: []
+--- !u!114 &2145990695007110966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb284411d409039459763c550b8b33de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+--- !u!114 &2145990695007110967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9317dd809b77e28498b1b4b6fc26d261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enviros: []
+--- !u!114 &2145990695007110965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbdb324dad20e848b7391217681ebec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &2145990695007110964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5051a1764a0effc419b18afa05597f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons: []
+--- !u!114 &2145990695007110922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145990695007110963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ed43fa4e14db945a76331e1a31461c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyObjects:
+  - {fileID: 22365272292675412, guid: 8f0f7548dbf248b4ba026464c634adab, type: 3}
+  - {fileID: 7921745097120466784, guid: 347a3c2ea11c98a4ebeea1e4d5d362d7, type: 3}
+  - {fileID: 6163903112760620598, guid: 9497555e5888d6342a0f3b43899eb75e, type: 3}
+  - {fileID: 2194552160283561000, guid: 8f6e1a2f07b98b4458ec1f72de974a4a, type: 3}
+  - {fileID: 5669658711341850528, guid: faf6d2e2b2996834ca26d1ee895f43de, type: 3}
+  - {fileID: 1982456374240259570, guid: 92a55a7932dcf7146bc709a276463f84, type: 3}
+  - {fileID: 1341455905871245806, guid: 20e245ead3a1d25498f9673b111e1513, type: 3}
+  WeaponObjects:
+  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  ItemObjects:
+  - {fileID: 87701840723305978, guid: 123328b3630f5d343b2fdc2fbc46e1d1, type: 3}
+  - {fileID: 87701840723305978, guid: 123328b3630f5d343b2fdc2fbc46e1d1, type: 3}
+  - {fileID: 87701840723305978, guid: 123328b3630f5d343b2fdc2fbc46e1d1, type: 3}
+  EnviroObjects:
+  - {fileID: 6769391296925741220, guid: 12fb7cc922a7a5745a9ba64bfce80a4f, type: 3}
+  - {fileID: 6769391296925741220, guid: 12fb7cc922a7a5745a9ba64bfce80a4f, type: 3}
+  - {fileID: 6769391296925741220, guid: 12fb7cc922a7a5745a9ba64bfce80a4f, type: 3}

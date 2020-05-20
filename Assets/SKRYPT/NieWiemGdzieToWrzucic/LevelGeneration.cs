@@ -19,14 +19,14 @@ public class LevelGeneration : MonoBehaviour
     public LayerMask whatIsRoom;
     private void Start()
     {
-        Vector2 newPos14 = new Vector2(StartingPosition.x,StartingPosition.y);
+        /*Vector2 newPos14 = new Vector2(StartingPosition.x,StartingPosition.y);
         transform.position = newPos14;
         int randEndPos = Random.Range(0,4 ); // losuje miejsce przejścia do bossa
         Level3();
         Level4();
         Level2();
         Level1();
-        St();
+        St();*/
     }
 
      private void St()
@@ -35,10 +35,9 @@ public class LevelGeneration : MonoBehaviour
         transform.position = newPos2;
         Vector2 newPos1 = new Vector2(transform.position.x-moveAmountx, transform.position.y);
         transform.position = newPos1;
-        Instantiate(rooms[15], transform.position, Quaternion.identity); // buduje 
-
+        Instantiate(rooms[15], transform.position, Quaternion.identity); // buduje
         //EventController.instance.levelEvents.CallOnLevelGenerated(Room);
-        levelData.SaveLayout(Room);
+        //levelData.SaveLayout(Room);
      }
     
   private void Level1() // budowa poziomu 1 ( od góry )
@@ -620,12 +619,17 @@ public class LevelGeneration : MonoBehaviour
             }
  
     }
+    [ContextMenu("GenerateLevel")]
     private void Create() // buduje poziom 
-    {     
-            St();
-            Level3();
-            Level4();
-            Level2();
-            Level1();
+    {
+        Vector2 newPos14 = new Vector2(StartingPosition.x, StartingPosition.y);
+        transform.position = newPos14;
+        int randEndPos = Random.Range(0, 4); // losuje miejsce przejścia do bossa
+        St();
+        Level3();
+        Level4();
+        Level2();
+        Level1();
+        EventController.instance.levelEvents.CallOnLevelGenerated(Room);
     }
 }

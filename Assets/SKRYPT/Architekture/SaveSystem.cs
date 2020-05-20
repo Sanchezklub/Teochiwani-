@@ -11,9 +11,11 @@ public class SaveSystem : MonoBehaviour
     public WeaponTracker weaponTracker;
     public ID_dictionary Dictionary;
 
+    //public LevelGeneration levelGen;
+
 
     public bool SpawnStuff = false;
-   
+
 
     public SaveContainer saveContainer;
 
@@ -28,11 +30,11 @@ public class SaveSystem : MonoBehaviour
         saveContainer.levelData.Start();
     }
 
-    public void SaveGame ()   
+    public void SaveGame()
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
-        FileStream stream  = new FileStream(path, FileMode.Create);
+        FileStream stream = new FileStream(path, FileMode.Create);
 
         string mess = JsonUtility.ToJson(saveContainer);
 
@@ -43,29 +45,30 @@ public class SaveSystem : MonoBehaviour
     public void LoadGame()
     {
         string path = Application.persistentDataPath + "/player.fun";
-        if ( File.Exists(path))
+        if (File.Exists(path))
         {
-          BinaryFormatter formatter = new BinaryFormatter(); 
+            BinaryFormatter formatter = new BinaryFormatter();
 
-          FileStream stream  = new FileStream(path, FileMode.Open);
+            FileStream stream = new FileStream(path, FileMode.Open);
 
-          string message = formatter.Deserialize(stream) as string;
+            string message = formatter.Deserialize(stream) as string;
 
-          Debug.Log(message);
+            Debug.Log(message);
             PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
             saveContainer = JsonUtility.FromJson<SaveContainer>(message);
             Debug.Log(saveContainer);
-            if(SpawnStuff == true)
+            if (SpawnStuff == true)
             {
                 LoadEnemies(saveContainer);
                 LoadWeapons(saveContainer);
                 LoadItems(saveContainer);
                 LoadEnvironment(saveContainer);
+                LoadRooms(saveContainer);
             }
 
-          stream.Close();
+            stream.Close();
             //return null;
-          //return data;
+            //return data;
         }
         else
         {
@@ -76,7 +79,7 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadEnemies(SaveContainer LoadedSaveContainer)
     {
-        foreach(EnemyData loadedEnemy in LoadedSaveContainer.levelData.enemiesData)
+        foreach (EnemyData loadedEnemy in LoadedSaveContainer.levelData.enemiesData)
         {
             GameObject EnemyPrefab = Dictionary.GetEnemyObjects(loadedEnemy.id);
             if (EnemyPrefab != null)
@@ -90,7 +93,7 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (ItemData loadedItem in LoadedSaveContainer.levelData.itemData)
         {
-            GameObject ItemPrefab = Dictionary.GetEnemyObjects(loadedItem.id);
+            GameObject ItemPrefab = Dictionary.GetItemObjects(loadedItem.id);
             if (ItemPrefab != null)
             {
                 Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
@@ -101,7 +104,7 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (WeaponData loadedWeapon in LoadedSaveContainer.levelData.weaponData)
         {
-            GameObject WeaponPrefab = Dictionary.GetEnemyObjects(loadedWeapon.id);
+            GameObject WeaponPrefab = Dictionary.GetWeaponObjects(loadedWeapon.id);
             if (WeaponPrefab != null)
             {
                 Instantiate(WeaponPrefab, loadedWeapon.position, Quaternion.identity);
@@ -112,11 +115,21 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (EnviroData loadedEnvironment in LoadedSaveContainer.levelData.enviromentData)
         {
-            GameObject EnviroPrefab = Dictionary.GetEnemyObjects(loadedEnvironment.id);
+            GameObject EnviroPrefab = Dictionary.GetEnviroObjects(loadedEnvironment.id);
             if (EnviroPrefab != null)
             {
                 Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
             }
+        }
+    }
+
+    public void LoadRooms(SaveContainer LoadedSaveContainer)
+    {
+        foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomRelation)
+        {
+            Debug.Log("loaded a room");
+            GameObject RoomPrefab = LoadedSaveContainer.levelData.levelGen.rooms[RoomRelation.roomIndex];
+            Instantiate(RoomPrefab, new Vector2(LoadedSaveContainer.levelData.levelGen.StartingPosition.x + RoomRelation.x * LoadedSaveContainer.levelData.levelGen.moveAmountx, LoadedSaveContainer.levelData.levelGen.StartingPosition.y + RoomRelation.y * LoadedSaveContainer.levelData.levelGen.moveAmounty), Quaternion.identity);
         }
     }
 

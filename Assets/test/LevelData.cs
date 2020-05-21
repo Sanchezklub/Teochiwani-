@@ -19,7 +19,7 @@ public class LevelData
     public void Start()
     {
         EventController.instance.levelEvents.OnLevelGenerated += SaveLayout;
-        int[,] layout = new int[6, 4];
+        int[,] layout = new int[7, 4];
         //layout[0, 0] = 15;
         //layout[1, 1] = 20;
 
@@ -71,7 +71,7 @@ public class LevelData
 
         roomRelations = layout;
         roomRelation = new List<RoomData>();
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             for (int j = 0; j < 4; j++)
             {

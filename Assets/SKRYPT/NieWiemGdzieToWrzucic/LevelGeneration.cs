@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
     public int[,] Room = new int[6, 4];
+    public int[,] FixedRoom = new int [7,4];
     public float moveAmountx;
     public float moveAmounty;
 	private float timeBtwSpawn;
@@ -406,6 +407,7 @@ public class LevelGeneration : MonoBehaviour
             transform.position = newPos; // przesuwam      
         }
         Instantiate(rooms[0], transform.position, Quaternion.identity);
+        Room[4,1]=0;
         Vector2 newPos31 = new Vector2(transform.position.x + moveAmountx,transform.position.y ); 
         transform.position = newPos31;
         int rand1 = Random.Range(11,15); // losuje 6 chunk który ma obowiazkowo przejście w prawo i opcjonalne w góre i w dół
@@ -619,17 +621,31 @@ public class LevelGeneration : MonoBehaviour
             }
  
     }
+    public void Fix()
+    {
+        for ( int i=1; i<8;i++)
+            {
+                for ( int j=0;j<4;j++)
+            {
+                FixedRoom[i,j]=Room[i-1,j];
+                Debug.Log(FixedRoom[i,j]);
+            }
+            }
+
+    }
     [ContextMenu("GenerateLevel")]
     private void Create() // buduje poziom 
     {
         Vector2 newPos14 = new Vector2(StartingPosition.x, StartingPosition.y);
         transform.position = newPos14;
         int randEndPos = Random.Range(0, 4); // losuje miejsce przejścia do bossa
-        St();
+
         Level3();
         Level4();
         Level2();
-        Level1();
-        EventController.instance.levelEvents.CallOnLevelGenerated(Room);
+        Level1();        
+        St();
+        Fix();
+        EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);
     }
 }

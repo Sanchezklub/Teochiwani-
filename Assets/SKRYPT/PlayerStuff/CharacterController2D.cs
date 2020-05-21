@@ -92,7 +92,7 @@ public class CharacterController2D : MonoBehaviour
         CheckMovementDirection();
         UpdateAnimations();
         CheckIfCanJump();
-        CheckIfWallSliding();
+        //CheckIfWallSliding();
         CheckJump();
         CheckLedgeClimb();
        //CheckDash();
@@ -104,6 +104,7 @@ public class CharacterController2D : MonoBehaviour
         CheckSurroundings();
     }
     
+    /*
     private void CheckIfWallSliding()
     {
         if (isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0 && !canClimbLedge)
@@ -115,23 +116,31 @@ public class CharacterController2D : MonoBehaviour
             isWallSliding = false;
         }
     }
+    */
     
 
     private void CheckLedgeClimb()
     {
         if(ledgeDetected && !canClimbLedge)
         {
+
             canClimbLedge = true;
 
             if (isFacingRight)
             {
                 ledgePos1 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
-                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance/10)*10 + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2);
+                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 - ledgeClimbXOffset1);
+                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
+                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance/10)*10 + ledgeClimbXOffset2 -44, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2); //Ta 30 balansuje nieznany b³¹d, gdzie przesuwa gracza o 30 w prawo
+                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
+
             }
             else
             {
                 ledgePos1 = new Vector2(Mathf.Ceil((ledgePosBot.x - wallCheckDistance)/10)*10 + ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
+                Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset1);
                 ledgePos2 = new Vector2(Mathf.Ceil((ledgePosBot.x - wallCheckDistance)/10)*10 - ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2);
+                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
             }
 
             canMove = false;
@@ -149,7 +158,9 @@ public class CharacterController2D : MonoBehaviour
     public void FinishLedgeClimb()
     {
         canClimbLedge = false;
+        Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
         transform.position = ledgePos2;
+        Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
         canMove = true;
         canFlip = true;
         ledgeDetected = false;
@@ -220,6 +231,7 @@ public class CharacterController2D : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetFloat("Speed", rb.velocity.x);
         anim.SetBool("isWallSliding", isWallSliding);
     }
 
@@ -229,7 +241,7 @@ public class CharacterController2D : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if(isGrounded || (amountOfJumpsLeft > 0 && !isTouchingWall))
+            if(isGrounded || (amountOfJumpsLeft > 0))
             {
                 NormalJump();
             }
@@ -255,7 +267,7 @@ public class CharacterController2D : MonoBehaviour
         {
             turnTimer -= Time.deltaTime;
 
-            if(turnTimer <= 0)
+            if(turnTimer <= 0 && !canClimbLedge)
             {
                 canMove = true;
                 canFlip = true;
@@ -276,16 +288,16 @@ public class CharacterController2D : MonoBehaviour
 
     }
 
-   /* private void AttemptToDash()
-    {
-        isDashing = true;
-        dashTimeLeft = dashTime;
-        lastDash = Time.time;
+    /* private void AttemptToDash()
+     {
+         isDashing = true;
+         dashTimeLeft = dashTime;
+         lastDash = Time.time;
 
-        PlayerAfterImagePool.Instance.GetFromPool();
-        lastImageXpos = transform.position.x;
-    }
-	*/
+         PlayerAfterImagePool.Instance.GetFromPool();
+         lastImageXpos = transform.position.x;
+     }
+     */
     public int GetFacingDirection()
     {
         return facingDirection;
@@ -324,11 +336,11 @@ public class CharacterController2D : MonoBehaviour
         if(jumpTimer > 0)
         {
             //WallJump
-            if(!isGrounded && isTouchingWall && movementInputDirection != 0 && movementInputDirection != facingDirection)
+            /*if(!isGrounded && isTouchingWall && movementInputDirection != 0 && movementInputDirection != facingDirection)
             {
                 WallJump();
-            }
-            else if (isGrounded)
+            }*/
+            /*else */if (isGrounded)
             {
                 NormalJump();
             }
@@ -338,7 +350,7 @@ public class CharacterController2D : MonoBehaviour
         {
             jumpTimer -= Time.deltaTime;
         }
-
+        /*
         if(wallJumpTimer > 0)
         {
             if(hasWallJumped && movementInputDirection == -lastWallJumpDirection)
@@ -354,6 +366,7 @@ public class CharacterController2D : MonoBehaviour
                 wallJumpTimer -= Time.deltaTime;
             }
         }
+        */
     }
 
     private void NormalJump()
@@ -368,6 +381,7 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    /*
     private void WallJump()
     {
         if (canWallJump)
@@ -389,7 +403,7 @@ public class CharacterController2D : MonoBehaviour
             lastWallJumpDirection = -facingDirection;
 
         }
-    }
+    }*/
 
     private void ApplyMovement()
     {
@@ -403,14 +417,14 @@ public class CharacterController2D : MonoBehaviour
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
         
-
+        /*
         if (isWallSliding)
         {
             if(rb.velocity.y < -wallSlideSpeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
             }
-        }
+        }*/
     }
 
     public void DisableFlip()
@@ -425,7 +439,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Flip()
     {
-        if (!isWallSliding && canFlip)
+        if (canFlip == true)
         {
             facingDirection *= -1;
             isFacingRight = !isFacingRight;

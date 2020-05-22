@@ -32,7 +32,10 @@ public class LevelData
 
         foreach (EnemyHealth enemy in currentEnemies)
         {
-            enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
+            if(enemy != null)
+            {
+                enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
+            }
         }
     }
     public void SaveEnviroment(List<EnviroId> currentEnviro)

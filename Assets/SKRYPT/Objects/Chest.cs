@@ -39,13 +39,16 @@ public class Chest : MonoBehaviour
         Debug.Log("Loot");
         IsOpen = true;
         this.GetComponent<SpriteRenderer>().sprite = mysprite1;
-        Instantiate(this.Particle, transform.position, Quaternion.identity);
+        if (Particle != null)
+        {
+            Instantiate(this.Particle, transform.position, Quaternion.identity);
+        }
         Spawn();
         
     }
     private void Spawn()
     {
         int rand = Random.Range(0, objects.Length);
-        Instantiate(objects[rand], transform.position, Quaternion.identity );
+        Instantiate(objects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
     }
 }

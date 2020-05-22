@@ -71,6 +71,7 @@ public class CharacterController2D : MonoBehaviour
     public Transform ledgeCheck;
 	public Transform flipAxis;
     public LayerMask whatIsGround;
+    public LayerMask whatIsWall;
 
     // Start is called before the first frame update
     
@@ -171,8 +172,8 @@ public class CharacterController2D : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
-        isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
+        isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsWall);
 
         if(isTouchingWall && !isTouchingLedge && !ledgeDetected)
         {

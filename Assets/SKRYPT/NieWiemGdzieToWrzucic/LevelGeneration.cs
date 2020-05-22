@@ -29,6 +29,7 @@ public class LevelGeneration : MonoBehaviour
         Level2();
         Level1();
         St();*/
+        Create();
     }
 
      private void St()

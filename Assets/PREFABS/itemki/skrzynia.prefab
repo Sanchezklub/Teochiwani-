@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 713196304029871822}
   - component: {fileID: 713196304029871819}
   - component: {fileID: -400950978762436992}
+  - component: {fileID: 6955700207803146601}
   m_Layer: 12
   m_Name: skrzynia
   m_TagString: Untagged
@@ -145,7 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mysprite1: {fileID: 21300000, guid: b2580f57db713c345bc033d7f7ed43b7, type: 3}
-  objects: []
+  objects:
+  - {fileID: 8832911148018524805, guid: 0ceb8612f7b40d94da74227403930735, type: 3}
+  - {fileID: 2687345321257893394, guid: 72003debd7bf3304c8a447d1fae7cd82, type: 3}
+  - {fileID: 6445527946330245421, guid: 7fcd9a3feec506f49a552b2ef44766ca, type: 3}
+  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  - {fileID: 8567751892998769453, guid: d9e41bfbcafb0914cae99e263c647619, type: 3}
+  - {fileID: 6861661989205530176, guid: b000839a0a4d6444386b219f906d513e, type: 3}
+  - {fileID: 196019128043222980, guid: 61ebc7f317f8e14438b603a7c13d6f05, type: 3}
+  - {fileID: 2403402470432670172, guid: 317e65f9ac53d1e4286ba3a4ca0f5ff7, type: 3}
   Particle: {fileID: 0}
 --- !u!114 &-400950978762436992
 MonoBehaviour:
@@ -160,3 +169,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+--- !u!61 &6955700207803146601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713196304029871821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000019073486, y: 4.4388037}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20, y: 20}
+    newSize: {x: 20, y: 20}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 31.595272, y: 21.6306}
+  m_EdgeRadius: 0

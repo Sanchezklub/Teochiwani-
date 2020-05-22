@@ -104,6 +104,7 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (WeaponData loadedWeapon in LoadedSaveContainer.levelData.weaponData)
         {
+            Debug.Log("Weapons id was "+loadedWeapon.id);
             GameObject WeaponPrefab = Dictionary.GetWeaponObjects(loadedWeapon.id);
             if (WeaponPrefab != null)
             {

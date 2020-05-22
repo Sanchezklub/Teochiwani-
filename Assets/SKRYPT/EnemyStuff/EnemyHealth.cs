@@ -21,6 +21,7 @@ public class EnemyHealth : Health
         base.TakeDamage(damage);
         TakingDamage?.Invoke();
         enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
+        EventController.instance.enemyEvents.CallOnEnemyGetDamage(this);
 
     }
 

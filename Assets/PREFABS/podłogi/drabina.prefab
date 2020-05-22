@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7700265886463924075}
   - component: {fileID: 7700265886463924052}
   - component: {fileID: 7700265886463924073}
+  - component: {fileID: 8894448511897138791}
   m_Layer: 11
   m_Name: drabina
   m_TagString: Untagged
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350550b662eca0f49935a80db0a1972d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 500
   Rb2D: {fileID: 0}
 --- !u!61 &7700265886463924073
 BoxCollider2D:
@@ -122,3 +124,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.86, y: 20.21}
   m_EdgeRadius: 0
+--- !u!114 &8894448511897138791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700265886463924053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1

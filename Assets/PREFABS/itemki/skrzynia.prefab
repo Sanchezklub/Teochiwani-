@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 713196304029871823}
   - component: {fileID: 713196304029871822}
   - component: {fileID: 713196304029871819}
+  - component: {fileID: -400950978762436992}
   m_Layer: 12
   m_Name: skrzynia
   m_TagString: Untagged
@@ -144,3 +145,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mysprite1: {fileID: 21300000, guid: b2580f57db713c345bc033d7f7ed43b7, type: 3}
+  objects: []
+  Particle: {fileID: 0}
+--- !u!114 &-400950978762436992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713196304029871821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2

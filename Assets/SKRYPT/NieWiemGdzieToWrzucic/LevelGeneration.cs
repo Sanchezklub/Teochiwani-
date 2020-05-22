@@ -11,6 +11,7 @@ public class LevelGeneration : MonoBehaviour
 	private float timeBtwSpawn;
     public float startTimeBtwSpawn=0.25f;
 
+
     public GameObject[] rooms;
 	public Vector2 endingPosition;
     public Vector2 StartingPosition;
@@ -627,10 +628,12 @@ public class LevelGeneration : MonoBehaviour
             {
                 for ( int j=0;j<4;j++)
             {
+                
                 FixedRoom[i,j]=Room[i-1,j];
                 Debug.Log(FixedRoom[i,j]);
             }
             }
+         FixedRoom[0,1]=15;
 
     }
     [ContextMenu("GenerateLevel")]

@@ -127,9 +127,12 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomRelation)
         {
-            Debug.Log("loaded a room");
-            GameObject RoomPrefab = LoadedSaveContainer.levelData.levelGen.rooms[RoomRelation.roomIndex];
-            Instantiate(RoomPrefab, new Vector2(LoadedSaveContainer.levelData.levelGen.StartingPosition.x + RoomRelation.x * LoadedSaveContainer.levelData.levelGen.moveAmountx, LoadedSaveContainer.levelData.levelGen.StartingPosition.y + RoomRelation.y * LoadedSaveContainer.levelData.levelGen.moveAmounty), Quaternion.identity);
+            //Debug.Log("loaded a room");
+            if (RoomRelation.roomIndex < LoadedSaveContainer.levelData.levelGen.rooms.Length)
+            {
+                GameObject RoomPrefab = LoadedSaveContainer.levelData.levelGen.rooms[RoomRelation.roomIndex];
+                Instantiate(RoomPrefab, new Vector2(LoadedSaveContainer.levelData.levelGen.StartingPosition.x + (RoomRelation.x-1) * LoadedSaveContainer.levelData.levelGen.moveAmountx, LoadedSaveContainer.levelData.levelGen.StartingPosition.y + (RoomRelation.y-1) * LoadedSaveContainer.levelData.levelGen.moveAmounty), Quaternion.identity);
+            }
         }
     }
 

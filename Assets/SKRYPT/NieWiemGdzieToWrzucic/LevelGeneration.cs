@@ -624,7 +624,7 @@ public class LevelGeneration : MonoBehaviour
     }
     public void Fix()
     {
-        for ( int i=1; i<8;i++)
+        for ( int i=1; i<7;i++)
             {
                 for ( int j=0;j<4;j++)
             {
@@ -633,7 +633,10 @@ public class LevelGeneration : MonoBehaviour
                 Debug.Log(FixedRoom[i,j]);
             }
             }
-         FixedRoom[0,1]=15;
+        FixedRoom[0,1]=15;
+        FixedRoom[0, 0] = 9999;
+        FixedRoom[0, 2] = 9999;
+        FixedRoom[0, 3] = 9999;
 
     }
     [ContextMenu("GenerateLevel")]

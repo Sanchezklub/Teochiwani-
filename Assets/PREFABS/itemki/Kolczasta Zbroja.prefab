@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6626016515411089174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.29, y: -7.15, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e748a466bbe34848aa1b4937bc92b9f, type: 3}
-  m_Color: {r: 0.01441794, g: 0.10894598, b: 0.11320752, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 040bb6b7370e87f4485b164745fcff47, type: 3}
+  m_Color: {r: 0.94117653, g: 0.94117653, b: 0.94117653, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 16, y: 12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -122,10 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modifier: {fileID: 11400000, guid: fd0a0d00bd8233c40b941d10b760d56a, type: 2}
+  id: 9
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   coll: {fileID: 6626016515411089161}
-  Itemname: 
-  FlavourText: 
+  Itemname: Kolczasta Zbroja
+  FlavourText: ich zaboli to bardziej
   CocaoPrice: 4
   BloodPrice: 4

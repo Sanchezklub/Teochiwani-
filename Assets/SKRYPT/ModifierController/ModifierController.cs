@@ -38,7 +38,7 @@ public class ModifierController : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    private void OnDestroy()
     {
         foreach (var mod in modifiers)
         {

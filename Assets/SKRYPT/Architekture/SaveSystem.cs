@@ -44,6 +44,7 @@ public class SaveSystem : MonoBehaviour
     }
     public void LoadGame()
     {
+        GameController.instance.DataStorage.PlayerInfo.ItemIDs.Clear();
         string path = Application.persistentDataPath + "/player.fun";
         if (File.Exists(path))
         {
@@ -159,6 +160,8 @@ public class SaveSystem : MonoBehaviour
         {
             Debug.Log("weap was null");
         }
+        Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
+        Debug.Log("LoadedPosition was" +pos);
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }
 
@@ -183,5 +186,6 @@ public class SaveSystem : MonoBehaviour
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
 
         SaveGame();
+        Debug.Log("Shutdown");
     }
 }

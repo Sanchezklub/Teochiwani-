@@ -19,8 +19,8 @@ public class LevelGeneration : MonoBehaviour
     public LevelData levelData;
 
     public LayerMask whatIsRoom;
-    private void Start()
-    {
+    //private void Start()
+   //{
         /*Vector2 newPos14 = new Vector2(StartingPosition.x,StartingPosition.y);
         transform.position = newPos14;
         int randEndPos = Random.Range(0,4 ); // losuje miejsce przejścia do bossa
@@ -29,8 +29,8 @@ public class LevelGeneration : MonoBehaviour
         Level2();
         Level1();
         St();*/
-        Create();
-    }
+        
+    //}
 
      private void St()
      {
@@ -641,7 +641,7 @@ public class LevelGeneration : MonoBehaviour
 
     }
     [ContextMenu("GenerateLevel")]
-    private void Create() // buduje poziom 
+    public void Create() // buduje poziom 
     {
         Vector2 newPos14 = new Vector2(StartingPosition.x, StartingPosition.y);
         transform.position = newPos14;

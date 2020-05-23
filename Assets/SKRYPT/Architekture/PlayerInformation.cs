@@ -18,5 +18,7 @@ public class PlayerInformation : ScriptableObject
     public int weapon;
     public int cocoa;
     public int blood;
-    public string currentWeapon;
+    //public string currentWeapon;
+    public List<int> ItemIDs;
+    public int currentweaponID;
 }

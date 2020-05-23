@@ -11,9 +11,12 @@ public class PlayerDataScript
     public int blood;
     public float damage;
     public float speed;
-    public float position_x;
-    public float position_y;
-    public string currentweapon;
+    public Vector3 PlayerPosition;
+    //public float position_x;
+    //public float position_y;
+    //public string currentweapon;
+    public int currentweaponID;
+    public List<int> ItemIDs;
 
     public Vector3 testVector;
 
@@ -26,10 +29,12 @@ public class PlayerDataScript
         blood = PlayerInfo.blood;
         damage = PlayerInfo.damage;
         speed = PlayerInfo.speed;
-        currentweapon = PlayerInfo.currentWeapon;
-        position_x = PlayerInfo.playerPosition.x;
-        position_y = PlayerInfo.playerPosition.y;
-        testVector = new Vector3(12f, 23, 2);
+        currentweaponID = PlayerInfo.currentweaponID;
+        ItemIDs = PlayerInfo.ItemIDs;
+        PlayerPosition = PlayerInfo.playerPosition;
+        //position_x = PlayerInfo.playerPosition.x;
+        //position_y = PlayerInfo.playerPosition.y;
+        //testVector = new Vector3(12f, 23, 2);
     }
 
 }

@@ -20,6 +20,7 @@ public abstract class BaseItem : MonoBehaviour
     {
         //MeteorMod
         EventController.instance.playerEvents.OnItemPickup(this);
+        GameController.instance.DataStorage.PlayerInfo.ItemIDs.Add(id);
     }
 
     public virtual void ShowFloatingText(string flavourtext)

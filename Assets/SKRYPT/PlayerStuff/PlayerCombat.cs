@@ -75,11 +75,13 @@ public class PlayerCombat : MonoBehaviour
 
     public void ChangeWeapon(BaseWeapon newWeapon)
     {
+
+        EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
         FindObjectOfType<AudioManager>().Play("PickUpWeapon");
         //Do something about wpn;
         Debug.Log(newWeapon.name);
         currentWeapon?.DropWeapon();
-        GameController.instance.DataStorage.PlayerInfo.currentWeapon = newWeapon.name;
+        GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
         currentWeapon = newWeapon;
         currentWeapon?.PickupWepaon();
         currentWeapon.Handle.transform.parent = holdPosition;

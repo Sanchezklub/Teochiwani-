@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SaveController : MonoBehaviour
 {
+    /*
+    
     public static SaveController instance;
 
     public PlayerDataScript LoadedData;
@@ -66,5 +68,4 @@ public class SaveController : MonoBehaviour
         go.GetComponent<TextMesh>().text = text;
     }
     */
-
 }

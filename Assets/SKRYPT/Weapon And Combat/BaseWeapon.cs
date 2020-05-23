@@ -10,15 +10,18 @@ public abstract class BaseWeapon : MonoBehaviour
     public GameObject FloatingTextPrefab;
     public GameObject Handle;
     [SerializeField] public TextMeshProUGUI UIWeaponName;
-    [SerializeField] public TextMeshProUGUI UIFlavourText;
+    [SerializeField] public TextMeshProUGUI UIFlavorText;
     public string Name;
     public int id;
-    public string FlavourText;
-    private void Start()
+    public string FlavorText;
+    public void Start()
     {
        
         //UIFlavourText = Find("FlavourText");
         EventController.instance.weaponEvents.CallOnWeaponAppear(this);
+        UIFlavorText = GameObject.FindGameObjectWithTag("FlavorText")?.GetComponentInChildren<TextMeshProUGUI>(true);
+        UIWeaponName = GameObject.FindGameObjectWithTag("WeaponName")?.GetComponentInChildren<TextMeshProUGUI>(true);
+
     }
     public enum AnimationType
     {
@@ -36,11 +39,11 @@ public abstract class BaseWeapon : MonoBehaviour
     {
         //var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         //go.GetComponent<TextMesh>().text = flavourtext;
-        UIFlavourText.SetText(FlavourText);
-        UIFlavourText.enabled = true;
-        UIFlavourText?.GetComponent<Animator>()?.SetTrigger("Enabled");
-        UIWeaponName.SetText(Name);
+        UIFlavorText.enabled = true;
+        UIFlavorText.SetText(FlavorText);
+        UIFlavorText?.GetComponent<Animator>()?.SetTrigger("Enabled");
         UIWeaponName.enabled = true;
+        UIWeaponName.SetText(Name);
         UIWeaponName?.GetComponent<Animator>()?.SetTrigger("Enabled");
 
     }

@@ -38,7 +38,7 @@ public class MieczTysiacaKrokow : BaseWeapon
     public override void PickupWepaon()
     {
         coll.enabled = false;
-        ShowFloatingText(FlavourText);
+        ShowFloatingText(FlavorText);
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
     }
 }

@@ -107,6 +107,7 @@ public class EventController : MonoBehaviour
             Debug.Log("OnCocoaLostCalled");
         }
 
+
     }
 
     public class EnemyEvents
@@ -205,6 +206,17 @@ public class EventController : MonoBehaviour
             OnWeaponDiedBasic?.Invoke();
             OnWeaponDied?.Invoke(weapon);
         }
+
+        public UnityAction OnWeaponPickupBasic;
+        public UnityAction<BaseWeapon, BaseWeapon> OnWeaponPickup;
+
+        public void CallOnWeaponPickup(BaseWeapon OldWeapon, BaseWeapon NewWeapon)
+        {
+            OnWeaponPickupBasic?.Invoke();
+            OnWeaponPickup?.Invoke(OldWeapon, NewWeapon);
+        }
+
+
     }
 }
 

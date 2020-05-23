@@ -10,6 +10,7 @@ public class WeaponTracker : MonoBehaviour
     {
         EventController.instance.weaponEvents.OnWeaponAppear += OnNewWeapon;
         EventController.instance.weaponEvents.OnWeaponDied += OnWeaponDie;
+        EventController.instance.weaponEvents.OnWeaponPickup += OnWeaponPickup;
     }
 
     public void OnNewWeapon(BaseWeapon newWeapon)
@@ -23,9 +24,16 @@ public class WeaponTracker : MonoBehaviour
         weapons.Remove(weapon);
     }
 
+    public void OnWeaponPickup(BaseWeapon oldWeapon, BaseWeapon newWeapon)
+    {
+        weapons.Add(oldWeapon);
+        weapons.Remove(newWeapon);
+    }
+
     private void OnApplicationQuit()
     {
         EventController.instance.weaponEvents.OnWeaponAppear -= OnNewWeapon;
         EventController.instance.weaponEvents.OnWeaponDied -= OnWeaponDie;
+        EventController.instance.weaponEvents.OnWeaponPickup -= OnWeaponPickup;
     }
 }

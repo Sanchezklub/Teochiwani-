@@ -36,7 +36,7 @@ public class kasacz : BaseWeapon
 
     public override void PickupWepaon()
     {   
-        ShowFloatingText(FlavourText);
+        ShowFloatingText(FlavorText);
         
         coll.enabled = false;
 

@@ -27,7 +27,7 @@ public class Bow : BaseWeapon
 
     public override void PickupWepaon()
     {
-        ShowFloatingText(FlavourText);
+        ShowFloatingText(FlavorText);
 
         coll.enabled = false;
 

@@ -53,7 +53,10 @@ public class LevelData
 
         foreach (BaseWeapon weapon in currentWeapon)
         {
-            weaponData.Add(new WeaponData(weapon.id, weapon.transform.position));
+            if (weapon != null)
+            {
+                weaponData.Add(new WeaponData(weapon.id, weapon.transform.position));
+            }
         }
     }
     public void SaveItem(List<BaseItem> currentItem)

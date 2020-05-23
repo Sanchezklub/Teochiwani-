@@ -22,7 +22,7 @@ public class SaveSystem : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        LoadGame();
+        //LoadGame();
     }
 
     private void Start()
@@ -64,6 +64,7 @@ public class SaveSystem : MonoBehaviour
                 LoadItems(saveContainer);
                 LoadEnvironment(saveContainer);
                 LoadRooms(saveContainer);
+                LoadPlayer(saveContainer);
             }
 
             stream.Close();
@@ -135,6 +136,30 @@ public class SaveSystem : MonoBehaviour
                 Instantiate(RoomPrefab, new Vector2(LoadedSaveContainer.levelData.levelGen.StartingPosition.x + (RoomRelation.x-1) * LoadedSaveContainer.levelData.levelGen.moveAmountx, LoadedSaveContainer.levelData.levelGen.StartingPosition.y + (RoomRelation.y-1) * LoadedSaveContainer.levelData.levelGen.moveAmounty), Quaternion.identity);
             }
         }
+    }
+
+    public void LoadPlayer(SaveContainer LoadedSaveContainer)
+    {
+        foreach (int ItemID in LoadedSaveContainer.playerData.ItemIDs)
+        {
+            GameObject ItemPrefab = Dictionary.GetItemObjects(ItemID);
+            GameObject item = Instantiate(ItemPrefab, new Vector3(0, 0, 100), Quaternion.identity);
+            item.GetComponent<BaseItem>()?.PickupItem();
+        }
+        GameObject CurrentWeapon = Dictionary.GetWeaponObjects(LoadedSaveContainer.playerData.currentweaponID);
+        GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
+        BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (weap != null)
+        {
+            weap.Start();
+            player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+        }
+        else
+        {
+            Debug.Log("weap was null");
+        }
+        player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }
 
 

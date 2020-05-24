@@ -18,12 +18,13 @@ public class RayCaster : MonoBehaviour
 
     private void CastRay()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 position = Camera.main.WorldToScreenPoint(GameController.instance.DataStorage.PlayerInfo.playerPosition);
+        Ray ray = Camera.main.ScreenPointToRay(position);
 
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
 
-        if(hit.collider != null)
-        {
+         if(hit.collider != null)
+       {
             GameObject splat = Instantiate(splatPrefab, hit.point, Quaternion.identity) as GameObject;
             splat.transform.SetParent(splatHolder, true);
             Splat splatScript = splat.GetComponent<Splat>();
@@ -32,9 +33,9 @@ public class RayCaster : MonoBehaviour
             splatParticles.Play();
 
             if (hit.collider.gameObject.tag == "BG")
-                splatScript.Inicialize(Splat.SplatLocation.Background);
-            else
-                splatScript.Inicialize(Splat.SplatLocation.Foreground);
+               splatScript.Inicialize(Splat.SplatLocation.Background);
+           else
+               splatScript.Inicialize(Splat.SplatLocation.Foreground);
 
         }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4524356282363634567}
   - component: {fileID: 4524356282363634566}
   - component: {fileID: 4524356282363634569}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: CzaszkaWrogiegoPlemienia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfeb5bb02112aa4187618a41d9d41a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 0}
+  modifiers:
+  - {fileID: 11400000, guid: 500c281146c8358479e9a2604e8addf7, type: 2}
   id: 3
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

@@ -13,12 +13,13 @@ public class CzaszkaWrogiegoPlemienia : BaseItem
     public int BloodPrice = 4;
     public override void PickupItem()
     {
+        base.PickupItem();
         coll.enabled = false;
         Debug.Log("XD");
         Destroy(gameObject);
 
         //MeteorMod
-        GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
+        //GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
 
     }
     public virtual void OnTriggerEnter2D(Collider2D coll)

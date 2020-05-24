@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "StrongerAttacks", menuName = "Modifiers/StrongerAttacks")]
-public class ModStrongerAttacks : BaseModifier
+[CreateAssetMenu(fileName = "FasterMovementLowHealthBuff", menuName = "Modifiers/FasterMovementLowHealthBuff")]
+public class ModFasterMovmentLowHealthBuff : BaseModifier
 {
     [SerializeField]
-    private float maxDamagePercentage;
-    public float MaxDamagePercentage => maxDamagePercentage;
+    private float maxSpeedboostPercentage;
+    public float MaxSpeedboostPercentage => maxSpeedboostPercentage;
 
-    private float initialDmg;
+    private float initialSpeed;
 
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        initialDmg = GameController.instance.DataStorage.PlayerInfo.damage;
+        initialSpeed = GameController.instance.DataStorage.PlayerInfo.speed;
         AssignEvents();
     }
 
@@ -28,8 +28,8 @@ public class ModStrongerAttacks : BaseModifier
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
         var maxhealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
-        var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxDamagePercentage/100);
-        GameController.instance.DataStorage.PlayerInfo.damage = initialDmg + initialDmg*value;
+        var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxSpeedboostPercentage/100);
+        GameController.instance.DataStorage.PlayerInfo.speed = initialSpeed + value*initialSpeed;
     }
 
     public void PlayerDied()
@@ -44,7 +44,7 @@ public class ModStrongerAttacks : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.damage = initialDmg;
+        GameController.instance.DataStorage.PlayerInfo.speed = initialSpeed;
         EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
         EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
 

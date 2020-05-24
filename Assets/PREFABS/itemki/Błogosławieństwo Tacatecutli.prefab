@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3853596306262942304}
   - component: {fileID: 3853596306262942306}
   - component: {fileID: 3768718149436553227}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: "B\u0142ogos\u0142awie\u0144stwo Tacatecutli"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4ea8c359c8fad48a816a90802666e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 11400000, guid: f0f5cecb91d6c1243ab63e46ee2cf78d, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: f0f5cecb91d6c1243ab63e46ee2cf78d, type: 2}
   id: 18
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

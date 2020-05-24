@@ -13,10 +13,11 @@ public class SkorupaZolwia : BaseItem
     public int BloodPrice = 4;
         public override void PickupItem()
     {
+        base.PickupItem();
         coll.enabled=false;
         Debug.Log("XD");
         Destroy(gameObject);
-        GameController.instance.DataStorage.PlayerInfo.speed += SpeedBuff;
+        //GameController.instance.DataStorage.PlayerInfo.speed += SpeedBuff;
     }
 
     public virtual void OnTriggerEnter2D(Collider2D coll)

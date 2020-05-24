@@ -13,11 +13,12 @@ public class SoczystaLarwa : BaseItem
     public int BloodPrice = 2;
     public override void PickupItem()
     {
+        base.PickupItem();
         coll.enabled=false;
         Debug.Log("XD");
         Destroy(gameObject);
-        GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
-        GameController.instance.DataStorage.PlayerInfo.currenthealth += MaxHealthBuff;
+        //GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
+        //GameController.instance.DataStorage.PlayerInfo.currenthealth += MaxHealthBuff;
     }
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {

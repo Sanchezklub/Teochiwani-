@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7996752789889150788}
   - component: {fileID: 7996752789889150811}
   - component: {fileID: 7996752789889150810}
-  - component: {fileID: 7996752789889150809}
-  m_Layer: 0
+  - component: {fileID: -6019928172995493099}
+  m_Layer: 19
   m_Name: PodejrzaneGrzybki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 10.8}
   m_EdgeRadius: 0
---- !u!114 &7996752789889150809
+--- !u!114 &-6019928172995493099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,16 +118,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7996752789889150808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 493c736eaa5353344a58a1bba9e798ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 47a43d54e22436344943b1c73c589d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 0}
+  modifiers:
+  - {fileID: 11400000, guid: ce587be5847602c4685ba712e9a381d8, type: 2}
   id: 2
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   coll: {fileID: 7996752789889150810}
-  Itemname: "Skorupa \u017C\xF3\u0142wia"
-  FlavourText: "Ska\u0142a chcia\u0142aby by\u0107 twarda jak to"
-  SpeedBuff: 10
+  Itemname: Podejrzany Grzyb
+  FlavourText: "Jednoro\u017Cce nie chc\u0105 przesta\u0107..."
   CocaoPrice: 4
   BloodPrice: 4

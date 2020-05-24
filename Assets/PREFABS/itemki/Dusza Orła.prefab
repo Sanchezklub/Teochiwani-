@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7266590792878686743}
   - component: {fileID: 7266590792878686741}
   - component: {fileID: 2552695455213942425}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: "Dusza Or\u0142a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7266590792878686730}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515722bbe0ef25b4daa255c71ccccb7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 11400000, guid: 2002a13bbdd6abb468f37b813fa0b3d4, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: 2002a13bbdd6abb468f37b813fa0b3d4, type: 2}
   id: 12
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

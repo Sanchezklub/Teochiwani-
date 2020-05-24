@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3671709783755162956}
   - component: {fileID: 4686377886424221634}
   - component: {fileID: 2713745755824320383}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: blogoslawiona krew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -121,7 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843f68ff1f41f044a9633fd24cf39514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 0}
+  modifiers:
+  - {fileID: 11400000, guid: 640226e915c2ad64980acc7155677781, type: 2}
+  - {fileID: 11400000, guid: 5a0c66511c647cd419f64292b769daf0, type: 2}
+  - {fileID: 11400000, guid: 2ced2d04f57942042aec15028d18fb3b, type: 2}
+  - {fileID: 11400000, guid: 815123765ce3de640aeb65afd7ee5372, type: 2}
   id: 7
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 87701840723305959}
   - component: {fileID: 87701840723305956}
   - component: {fileID: 87701840723305957}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: DuszaWidloroga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb82a93d687c68e46a566f0b20362957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 11400000, guid: 4bf36b0f609af3540b2e7d7e80c33802, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: cf30778ad2cd5414cb472e54150f059e, type: 2}
   id: 13
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

@@ -13,16 +13,19 @@ public class BlogoslawionaKrew : BaseItem
     public int BloodPrice = 4;
     public override void PickupItem()
     {
+        base.PickupItem();
         coll.enabled=false;
         Debug.Log("XD");
         Destroy(gameObject);
-        GameController.instance.DataStorage.PlayerInfo.damage += AllStatsBuff;
+        /*GameController.instance.DataStorage.PlayerInfo.damage += AllStatsBuff;
         GameController.instance.DataStorage.PlayerInfo.maxhealth += AllStatsBuff;
         GameController.instance.DataStorage.PlayerInfo.currenthealth += AllStatsBuff;
         GameController.instance.DataStorage.PlayerInfo.speed += AllStatsBuff;
         GameController.instance.DataStorage.PlayerInfo.crouchspeed += AllStatsBuff;
         GameController.instance.DataStorage.PlayerInfo.jumpforce += AllStatsBuff;
+        */
     }
+
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")

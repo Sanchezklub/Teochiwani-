@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8127840608139111127}
   - component: {fileID: 8127840608139111125}
   - component: {fileID: 3998915916799243476}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: "Dusza Drzewo\u0142aza"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8127840608139111114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d76612016054945a49fdcdd2d30b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modifier: {fileID: 11400000, guid: 1b6915f7badf67e4bb0b35cabd8e2767, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: 1b6915f7badf67e4bb0b35cabd8e2767, type: 2}
   id: 14
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class BaseItem : MonoBehaviour
 {
-    public BaseModifier modifier;
+    public BaseModifier[] modifiers;
     private string flavourtext;
     private string itemName;
     public int id;

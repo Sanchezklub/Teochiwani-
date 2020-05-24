@@ -8,10 +8,13 @@ public class ModifierController : MonoBehaviour
 
     public void OnItemPickup(BaseItem item)
     {
-        if (item.modifier != null)
+        if (item.modifiers != null)
         {
-            item.modifier.Init(RemoveModifier);
-            modifiers.Add(item.modifier);
+            foreach (BaseModifier mod in item.modifiers)
+            {
+                mod.Init(RemoveModifier);
+                modifiers.Add(mod);
+            }
         }
     }
 

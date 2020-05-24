@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "HigherJumps", menuName = "Modifiers/HigherJumps")]
-public class ModHigherJumps : BaseModifier
+[CreateAssetMenu(fileName = "HigherJumpsLowHealthBuff", menuName = "Modifiers/HigherJumpsLowHealthBuff")]
+public class ModHigherJumpsLowHealthBuff : BaseModifier
 {
     [SerializeField]
     private float maxJumpforcePercentage;

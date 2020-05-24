@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
 
-[CreateAssetMenu(fileName = "BiggerCamera", menuName = "Modifiers/BiggerCamera")]
-public class ModBiggerCamera : BaseModifier
+[CreateAssetMenu(fileName = "BiggerCameraLowHealthBuff", menuName = "Modifiers/BiggerCameraLowHealthBuff")]
+public class ModBiggerCameraLowHealthBuff : BaseModifier
 {
     [SerializeField]
     private float maxCameraPercentage;

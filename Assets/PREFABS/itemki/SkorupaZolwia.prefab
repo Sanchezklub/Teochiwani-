@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5976188103267766915}
   - component: {fileID: 5976188103267766912}
   - component: {fileID: 5976188103267766913}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: SkorupaZolwia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,8 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493c736eaa5353344a58a1bba9e798ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modifiers:
+  - {fileID: 11400000, guid: 2ced2d04f57942042aec15028d18fb3b, type: 2}
+  id: 0
   FloatingTextPrefab: {fileID: 0}
   coll: {fileID: 5976188103267766912}
   Itemname: "Skorupa \u017C\xF3\u0142wia"
   FlavourText: "Ska\u0142a chcia\u0142aby by\u0107 twarda jak to"
   SpeedBuff: 10
+  CocaoPrice: 4
+  BloodPrice: 4

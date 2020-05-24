@@ -12,7 +12,7 @@ public class Splat : MonoBehaviour
 
     public Color backgroundTint;
     public float miniSizeMod = 0.8f;
-    public float maxSizeMod = 1.5f;
+    public float maxSizeMod = 10f;
 
 
     public Sprite[] sprites;
@@ -65,18 +65,6 @@ public class Splat : MonoBehaviour
                 spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
                 spriteRenderer.sortingOrder = 3;
                 break;
-
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -910,6 +910,7 @@ GameObject:
   - component: {fileID: 6028717557696199336}
   - component: {fileID: 5296657908063312091}
   - component: {fileID: 5488042532829149538}
+  - component: {fileID: -3150594613488957511}
   m_Layer: 18
   m_Name: Kupiec
   m_TagString: Untagged
@@ -1000,6 +1001,19 @@ MonoBehaviour:
   - {fileID: 8832911148018524805, guid: 0ceb8612f7b40d94da74227403930735, type: 3}
   weaponholder: {fileID: 0}
   itemframe: {fileID: 0}
+--- !u!114 &-3150594613488957511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944055134552051648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5
 --- !u!1 &8016263612389213575
 GameObject:
   m_ObjectHideFlags: 0

@@ -151,7 +151,7 @@ public class EventController : MonoBehaviour
 
         public UnityAction OnEnviroDiedBasic;
         public UnityAction<EnviroId> OnEnviroDied;
-        public void CallOnEnemyDied(EnviroId enviro)
+        public void CallOnEnviroDied(EnviroId enviro)
         {
             OnEnviroDiedBasic?.Invoke();
             OnEnviroDied?.Invoke(enviro);

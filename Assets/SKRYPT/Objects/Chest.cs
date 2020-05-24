@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     public Sprite mysprite1;
-    private bool IsOpen = false;
+    [SerializeField] private bool IsOpen = false;
     private bool PlayerInRange;
     public GameObject[] objects;
     public GameObject Particle;
@@ -44,6 +44,10 @@ public class Chest : MonoBehaviour
             Instantiate(this.Particle, transform.position, Quaternion.identity);
         }
         Spawn();
+        EnviroId Enviroid = GetComponent<EnviroId>();
+        EventController.instance.enviromentEvents.CallOnEnviroDied(Enviroid);
+        Enviroid.id = 3;
+        EventController.instance.enviromentEvents.CallOnEnviroAppear(Enviroid);
         
     }
     private void Spawn()

@@ -9735,6 +9735,11 @@ PrefabInstance:
       propertyPath: StartingPosition.y
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 7823872836317523763, guid: a82e5b7067d9bfb4280ef8b8653a6345,
+        type: 3}
+      propertyPath: StartingPosition.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7823872836317523765, guid: a82e5b7067d9bfb4280ef8b8653a6345,
         type: 3}
       propertyPath: m_Name
@@ -16848,7 +16853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -136.75, y: -82.2}
+  m_AnchoredPosition: {x: -137, y: -82.2}
   m_SizeDelta: {x: 598.5, y: 112.3}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1613547201
@@ -27473,15 +27478,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhealth: 100
-  currenthealth: 0
+  currenthealth: 80
   damage: 10
-  speed: 40
+  speed: 12
   crouchspeed: 0.3
-  jumpforce: 800
-  playerPosition: {x: 0, y: 0, z: 0}
+  jumpforce: 18
+  playerPosition: {x: 20, y: -4, z: 0}
   weapon: 0
-  cocoa: 0
-  blood: 0
+  cocoa: 89
+  blood: 85
 --- !u!4 &8408784973418703005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8408784973383155218, guid: d55e500623e0ef94f9bada66d9c4ac52,
@@ -28013,8 +28018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountOfJumps: 1813
-  movementSpeed: 10
-  jumpForce: 16
   groundCheckRadius: 0.82
   wallCheckDistance: 2
   wallSlideSpeed: 10

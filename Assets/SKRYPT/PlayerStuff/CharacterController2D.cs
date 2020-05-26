@@ -41,8 +41,8 @@ public class CharacterController2D : MonoBehaviour
 
     public int amountOfJumps = 1;
 
-    public float movementSpeed = 10.0f;
-    public float jumpForce = 16.0f;
+    //public float movementSpeed = 10.0f;
+    //public float jumpForce = 16.0f;
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
@@ -375,7 +375,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (canNormalJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, GameController.instance.DataStorage.PlayerInfo.jumpforce);
             amountOfJumpsLeft--;
             jumpTimer = 0;
             isAttemptingToJump = false;
@@ -416,7 +416,7 @@ public class CharacterController2D : MonoBehaviour
         }
         else if(canMove)
         {
-            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            rb.velocity = new Vector2(GameController.instance.DataStorage.PlayerInfo.speed * movementInputDirection, rb.velocity.y);
         }
         
         /*

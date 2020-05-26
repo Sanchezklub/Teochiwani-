@@ -41,8 +41,8 @@ public class CharacterController2D : MonoBehaviour
 
     public int amountOfJumps = 1;
 
-    public float movementSpeed = 10.0f;
-    public float jumpForce = 16.0f;
+    //public float movementSpeed = 10.0f;
+    //public float jumpForce = 16.0f;
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
@@ -131,9 +131,10 @@ public class CharacterController2D : MonoBehaviour
             {
                 ledgePos1 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
                 Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 - ledgeClimbXOffset1);
-                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
-                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance/10)*10 + ledgeClimbXOffset2 -44, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2); //Ta 30 balansuje nieznany b³¹d, gdzie przesuwa gracza o 30 w prawo
-                Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
+                Debug.Log("During check 1, ledgePos2 was:"+Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
+                ledgePos2 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2); //Ta 30 balansuje nieznany b³¹d, gdzie przesuwa gracza o 30 w prawo
+                Debug.Log("During check 2, ledgePos2 was:"+Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
+                //Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
 
             }
             else
@@ -159,13 +160,13 @@ public class CharacterController2D : MonoBehaviour
     public void FinishLedgeClimb()
     {
         canClimbLedge = false;
+        anim.SetBool("canClimbLedge", canClimbLedge);
         Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
         transform.position = ledgePos2;
         Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
         canMove = true;
         canFlip = true;
         ledgeDetected = false;
-        anim.SetBool("canClimbLedge", canClimbLedge);
     }
 
     private void CheckSurroundings()
@@ -374,7 +375,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (canNormalJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, GameController.instance.DataStorage.PlayerInfo.jumpforce);
             amountOfJumpsLeft--;
             jumpTimer = 0;
             isAttemptingToJump = false;
@@ -415,7 +416,7 @@ public class CharacterController2D : MonoBehaviour
         }
         else if(canMove)
         {
-            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            rb.velocity = new Vector2(GameController.instance.DataStorage.PlayerInfo.speed * movementInputDirection, rb.velocity.y);
         }
         
         /*

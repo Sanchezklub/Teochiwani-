@@ -132,7 +132,7 @@ public class CharacterController2D : MonoBehaviour
                 ledgePos1 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset1);
                 Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 - ledgeClimbXOffset1);
                 Debug.Log("During check 1, ledgePos2 was:"+Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
-                ledgePos2 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2); //Ta 30 balansuje nieznany b³¹d, gdzie przesuwa gracza o 30 w prawo
+                ledgePos2 = new Vector2(Mathf.Floor((ledgePosBot.x + wallCheckDistance)/10)*10 + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y/10)*10 + ledgeClimbYOffset2); //Ta 30 balansuje nieznany bï¿½ï¿½d, gdzie przesuwa gracza o 30 w prawo
                 Debug.Log("During check 2, ledgePos2 was:"+Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
                 //Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
 
@@ -448,7 +448,16 @@ public class CharacterController2D : MonoBehaviour
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }
     }
-
+    public void StopMove()
+    {
+        canMove=false;
+        canFlip=false;
+    }
+    public void StartMove()
+    {
+        canMove=true;
+        canFlip=true;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);

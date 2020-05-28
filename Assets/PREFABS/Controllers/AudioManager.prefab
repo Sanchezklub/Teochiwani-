@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6581861293167235086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6581861293167235084}
+  - component: {fileID: 6581861293167235087}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6581861293167235084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581861293167235086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6581861293167235087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581861293167235086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f6f3b03e2c4a74197186729f18f6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: d67e3e7b56a5f6940a38ed563bec7b55, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Klucze
+    clip: {fileID: 8300000, guid: 50359fe05bd3f3742af724efeebada96, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Kakao
+    clip: {fileID: 8300000, guid: 1a17fdab309dd174480cc622451a6937, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MMClick
+    clip: {fileID: 8300000, guid: b799a39ea4b09204ab49dd5d17e7f961, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PickUpWeapon
+    clip: {fileID: 8300000, guid: 5854a31c93f4f3c4f91c1459e1f961db, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BloodPlum
+    clip: {fileID: 8300000, guid: 9d6dc232de60ae144bea429103469776, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 4d227c3f3f48cab409cb92110164afe7, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecDobry
+    clip: {fileID: 8300000, guid: 65fe12ec4669bb34d85ab12ed718fd34, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecPierwszePoznanie
+    clip: {fileID: 8300000, guid: f8589b96bb12d1a4c92c5443f13563b7, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecIdle
+    clip: {fileID: 8300000, guid: 681555928375d5447938287791cded68, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 0b4e735188f17624ea16b32c4a1dab20, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: KupiecWkurw
+    clip: {fileID: 8300000, guid: b7460c077b862554fa3c6c73370bde19, type: 3}
+    volume: 0.15
+    volumeVariance: 0.34
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

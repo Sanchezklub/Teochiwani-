@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2731853196197623839
 MonoBehaviour:
@@ -77,7 +77,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5380602160252273306
 MonoBehaviour:
@@ -125,7 +125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8900655017293180739
 MonoBehaviour:
@@ -134,54 +134,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3775311682340986704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
-  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
-  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
---- !u!1 &9111232238352971889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9111232238352971888}
-  - component: {fileID: 9111232238352971895}
-  m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (3)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9111232238352971888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232238352971889}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15, z: -6.486059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9111232238352971895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232238352971889}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -219,10 +171,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9111232239502186256}
-  - {fileID: 9111232240243198168}
-  - {fileID: 9111232238352971888}
-  - {fileID: 9111232238526342281}
   - {fileID: 6558066003552451406}
   - {fileID: 9111232239336026469}
   - {fileID: 9111232238560346352}
@@ -234,54 +182,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9111232238526342282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9111232238526342281}
-  - component: {fileID: 9111232238526342280}
-  m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (4)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9111232238526342281
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232238526342282}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 15, z: -6.486059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9111232238526342280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232238526342282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
-  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
-  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
 --- !u!1 &9111232238560346353
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9111232238560346359
 MonoBehaviour:
@@ -359,7 +259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9111232239336026468
 MonoBehaviour:
@@ -368,102 +268,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9111232239336026470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
-  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
-  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
---- !u!1 &9111232239502186257
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9111232239502186256}
-  - component: {fileID: 9111232239502186263}
-  m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (1)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9111232239502186256
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232239502186257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 15, z: -6.486059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9111232239502186263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232239502186257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
-  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
-  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
---- !u!1 &9111232240243198169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9111232240243198168}
-  - component: {fileID: 9111232240243198175}
-  m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (2)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9111232240243198168
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232240243198169}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 15, z: -6.486059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9111232240243198175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111232240243198169}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -503,7 +307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9111232238477135185}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9111232240298890293
 MonoBehaviour:
@@ -567,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 120839617768888605, guid: d830ae30a6646db468d3f40a8c103f41,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 120839617768888605, guid: d830ae30a6646db468d3f40a8c103f41,
         type: 3}
@@ -642,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 6836838736236249830, guid: 8f629230331d0564589ca80936cc1af4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6836838736236249830, guid: 8f629230331d0564589ca80936cc1af4,
         type: 3}

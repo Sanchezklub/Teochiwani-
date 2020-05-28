@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1402786331501236664
+--- !u!1 &6923442842028754
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,1764 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1119984168992440165}
-  - component: {fileID: 6671609852205752747}
+  - component: {fileID: 252813111201873288}
+  - component: {fileID: 2568564280780291942}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (15)"
+  m_Name: "Pod\u0142oga Ziemia (14)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1119984168992440165
+--- !u!4 &252813111201873288
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402786331501236664}
+  m_GameObject: {fileID: 6923442842028754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -5, z: -6.486059}
+  m_LocalPosition: {x: -50, y: 75, z: -6.486059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6671609852205752747
+--- !u!114 &2568564280780291942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402786331501236664}
+  m_GameObject: {fileID: 6923442842028754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &41477854393533162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7184110887740172659}
+  - component: {fileID: 617807388333870113}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (82)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7184110887740172659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41477854393533162}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 81
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617807388333870113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41477854393533162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &132717788861216728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415921831267957104}
+  - component: {fileID: 1366042262350889410}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (20)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415921831267957104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132717788861216728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1366042262350889410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132717788861216728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &182554659016856028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6872064005499405613}
+  - component: {fileID: 7478009488467251991}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (45)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6872064005499405613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182554659016856028}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7478009488467251991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182554659016856028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &234149456235717458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7661154746062008362}
+  - component: {fileID: 6160197298065526339}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (27)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7661154746062008362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234149456235717458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6160197298065526339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234149456235717458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &235084440786646668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7291562743251005071}
+  - component: {fileID: 6497407576160918363}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (41)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7291562743251005071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235084440786646668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6497407576160918363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235084440786646668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &237071315944895095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7848415180561899889}
+  - component: {fileID: 8488353361693619052}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (67)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7848415180561899889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237071315944895095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 66
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8488353361693619052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237071315944895095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &246985689492235885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747335964753745824}
+  - component: {fileID: 3615793263791522230}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (65)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747335964753745824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246985689492235885}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 64
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3615793263791522230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246985689492235885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &270200169751113604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5400404686995262253}
+  - component: {fileID: 4610060722551574137}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (18)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5400404686995262253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270200169751113604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4610060722551574137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270200169751113604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &289475898293899009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4091270462738646981}
+  - component: {fileID: 1499865013253993108}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (31)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4091270462738646981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289475898293899009}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1499865013253993108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289475898293899009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &349539376161409326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4416861495705929484}
+  - component: {fileID: 3725946345017164436}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (17)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4416861495705929484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349539376161409326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3725946345017164436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349539376161409326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &482254988935911526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8494937852328410423}
+  - component: {fileID: 8769168479864378237}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (25)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8494937852328410423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482254988935911526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8769168479864378237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482254988935911526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &576237271248384559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3702376254448681529}
+  - component: {fileID: 2406566706142220642}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (62)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3702376254448681529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576237271248384559}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 61
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2406566706142220642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576237271248384559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &620926165729602797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416592095698901508}
+  - component: {fileID: 3417281623943964428}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (30)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416592095698901508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620926165729602797}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3417281623943964428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620926165729602797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &905033741935389971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7061961434621321548}
+  - component: {fileID: 4503264658544384049}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (36)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7061961434621321548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905033741935389971}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4503264658544384049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905033741935389971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &927979129926760843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2852709490008357908}
+  - component: {fileID: 4467362937668512313}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (34)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2852709490008357908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927979129926760843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4467362937668512313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927979129926760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &944446958943252184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3366115195662455106}
+  - component: {fileID: 5296730424607365060}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (12)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3366115195662455106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944446958943252184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5296730424607365060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944446958943252184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1125025446561330107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927337753907041490}
+  - component: {fileID: 5233532300317479586}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (48)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927337753907041490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125025446561330107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5233532300317479586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125025446561330107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1218881926026584340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6013470117358412956}
+  - component: {fileID: 5084024976785744323}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (44)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6013470117358412956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218881926026584340}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5084024976785744323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218881926026584340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1343475293792225246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746166671307299567}
+  - component: {fileID: 8056125708005597365}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (54)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &746166671307299567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343475293792225246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8056125708005597365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343475293792225246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1506182415482751992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764163495674326552}
+  - component: {fileID: 1832375957217453351}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (9)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764163495674326552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506182415482751992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832375957217453351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506182415482751992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1517380015815804157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796264623191960341}
+  - component: {fileID: 6878337947985553748}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (60)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796264623191960341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517380015815804157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 59
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6878337947985553748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517380015815804157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1770454092968243837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2937094888225221559}
+  - component: {fileID: 6563290277498563966}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (7)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2937094888225221559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770454092968243837}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6563290277498563966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770454092968243837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1860486051639182726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799598883965147469}
+  - component: {fileID: 5115250449063301506}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (26)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &799598883965147469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860486051639182726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5115250449063301506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860486051639182726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1864401891655397160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7026250798666902103}
+  - component: {fileID: 657062475153498675}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (92)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7026250798666902103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864401891655397160}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 91
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657062475153498675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864401891655397160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1918548748956460881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3570574856984944750}
+  - component: {fileID: 3518093882731484571}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (29)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3570574856984944750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918548748956460881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3518093882731484571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918548748956460881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &1920452902333814930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2198045074826551940}
+  - component: {fileID: 2401088935028113434}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (83)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2198045074826551940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920452902333814930}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 82
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2401088935028113434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920452902333814930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2047258133707237335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6343539049871899699}
+  - component: {fileID: 5783242733809609184}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (84)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6343539049871899699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047258133707237335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 83
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5783242733809609184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047258133707237335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2308730152444184727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5956315193256612649}
+  - component: {fileID: 3649153806286679870}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (93)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5956315193256612649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308730152444184727}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 92
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3649153806286679870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2308730152444184727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2317248078725096125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6977217982168601589}
+  - component: {fileID: 6290058718671490826}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (61)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6977217982168601589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317248078725096125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6290058718671490826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317248078725096125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2546944797629913775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7274893079182391614}
+  - component: {fileID: 4910070873101332152}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (3)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7274893079182391614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546944797629913775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4910070873101332152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546944797629913775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2607984426754305553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6907234300201133940}
+  - component: {fileID: 6097844487476779428}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (91)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6907234300201133940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2607984426754305553}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 90
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6097844487476779428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2607984426754305553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2820736605431344385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3963482033917059859}
+  - component: {fileID: 2074857024986590405}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (51)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3963482033917059859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820736605431344385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2074857024986590405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820736605431344385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &2981748821243247084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2346997786432399190}
+  - component: {fileID: 7442810049871184530}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (66)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2346997786432399190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2981748821243247084}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 65
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7442810049871184530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2981748821243247084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &3204626544406053768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8409678634481800865}
+  - component: {fileID: 509368438506041484}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (22)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8409678634481800865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3204626544406053768}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &509368438506041484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3204626544406053768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &3427234953968735361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983880670441583574}
+  - component: {fileID: 1708263402362411304}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (59)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983880670441583574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427234953968735361}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 58
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708263402362411304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427234953968735361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &3592447739269009412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5096996558960504543}
+  - component: {fileID: 6955648817868069211}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (57)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5096996558960504543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592447739269009412}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6955648817868069211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592447739269009412}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -59,7 +1787,7 @@ GameObject:
   - component: {fileID: 633014439836443960}
   - component: {fileID: 7906234539423288434}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (14)"
+  m_Name: "Pod\u0142oga Ziemia (100)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -77,7 +1805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 13
+  m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7906234539423288434
 MonoBehaviour:
@@ -107,7 +1835,7 @@ GameObject:
   - component: {fileID: 3346085740970788911}
   - component: {fileID: 8707987235139594977}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (6)"
+  m_Name: "Pod\u0142oga Ziemia (87)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -125,7 +1853,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 5
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8707987235139594977
 MonoBehaviour:
@@ -144,7 +1872,7 @@ MonoBehaviour:
   - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
   - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
   - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
---- !u!1 &3920018901802332354
+--- !u!1 &3842934791832777884
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,36 +1880,900 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8940143391677199782}
-  - component: {fileID: 214577693795645175}
+  - component: {fileID: 1324600043608281146}
+  - component: {fileID: 3403847244143210023}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (5)"
+  m_Name: "Pod\u0142oga Ziemia (15)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8940143391677199782
+--- !u!4 &1324600043608281146
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3920018901802332354}
+  m_GameObject: {fileID: 3842934791832777884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 15, z: -6.486059}
+  m_LocalPosition: {x: -40, y: 75, z: -6.486059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 4
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &214577693795645175
+--- !u!114 &3403847244143210023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3920018901802332354}
+  m_GameObject: {fileID: 3842934791832777884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &3887569182199375695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8802602320352256080}
+  - component: {fileID: 4404931984479710009}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (50)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8802602320352256080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887569182199375695}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4404931984479710009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887569182199375695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &4561760180979390379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4844155683949551053}
+  - component: {fileID: 1189466190879373702}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (85)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4844155683949551053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561760180979390379}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189466190879373702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561760180979390379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &4816107121917255337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8227398400009570854}
+  - component: {fileID: 7055547415717524092}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (68)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8227398400009570854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816107121917255337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 67
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7055547415717524092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816107121917255337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &4846179413026324797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 119938278621793402}
+  - component: {fileID: 6305113613191235464}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (47)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &119938278621793402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846179413026324797}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6305113613191235464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846179413026324797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &4851395929877195626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6325980968979942737}
+  - component: {fileID: 6923511430687057893}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (13)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6325980968979942737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851395929877195626}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6923511430687057893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851395929877195626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &4934061610650176244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4406856983337101343}
+  - component: {fileID: 7332306517084259851}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (86)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4406856983337101343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934061610650176244}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 85
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7332306517084259851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934061610650176244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5155724774227952317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110549922554385292}
+  - component: {fileID: 5744966101503547227}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (32)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2110549922554385292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155724774227952317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5744966101503547227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155724774227952317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5438384742399126595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5700072676272920752}
+  - component: {fileID: 1469006563720936404}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (40)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5700072676272920752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438384742399126595}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469006563720936404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438384742399126595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5485051180559622758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262794881141846541}
+  - component: {fileID: 4649830916437596721}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (2)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262794881141846541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485051180559622758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4649830916437596721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485051180559622758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5513234366242911813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3534359095539780228}
+  - component: {fileID: 4972995835657398246}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (39)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3534359095539780228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513234366242911813}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4972995835657398246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513234366242911813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5581014981467649319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3976187177256548146}
+  - component: {fileID: 1479907369673198162}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (70)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3976187177256548146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581014981467649319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 69
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1479907369673198162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581014981467649319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5656330555071499177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5690048951101963684}
+  - component: {fileID: 97614251843742948}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (6)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5690048951101963684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656330555071499177}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97614251843742948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656330555071499177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5825074781715883580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7300926248885497516}
+  - component: {fileID: 3062613141493310982}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (81)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7300926248885497516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825074781715883580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 80
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3062613141493310982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825074781715883580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5840914581492424331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7133448795741630469}
+  - component: {fileID: 4358951842936831897}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (94)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7133448795741630469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840914581492424331}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 93
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4358951842936831897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840914581492424331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &5904345110810054456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2190049999414246124}
+  - component: {fileID: 3303657694869300647}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (53)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2190049999414246124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904345110810054456}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3303657694869300647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5904345110810054456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6009580084526298024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309841112152607634}
+  - component: {fileID: 6557604194475920510}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (38)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1309841112152607634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009580084526298024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6557604194475920510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009580084526298024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6127413844203580808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998832515621321357}
+  - component: {fileID: 1242688985365538894}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (35)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &998832515621321357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127413844203580808}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242688985365538894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127413844203580808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6129079268282898763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6388168600034089774}
+  - component: {fileID: 5265769400993182198}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (33)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6388168600034089774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129079268282898763}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5265769400993182198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129079268282898763}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -203,7 +2795,7 @@ GameObject:
   - component: {fileID: 6440906362344168312}
   - component: {fileID: 6440906362344168319}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (9)"
+  m_Name: "Pod\u0142oga Ziemia (90)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -221,7 +2813,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 8
+  m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906362344168319
 MonoBehaviour:
@@ -251,7 +2843,7 @@ GameObject:
   - component: {fileID: 6440906362354087576}
   - component: {fileID: 6440906362354087583}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (3)"
+  m_Name: "Pod\u0142oga Ziemia (79)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -269,7 +2861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 2
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906362354087583
 MonoBehaviour:
@@ -299,7 +2891,7 @@ GameObject:
   - component: {fileID: 6440906362423381528}
   - component: {fileID: 6440906362423381535}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (11)"
+  m_Name: "Pod\u0142oga Ziemia (97)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -317,7 +2909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 10
+  m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906362423381535
 MonoBehaviour:
@@ -347,7 +2939,7 @@ GameObject:
   - component: {fileID: 6440906362456484449}
   - component: {fileID: 6440906362456484448}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (4)"
+  m_Name: "Pod\u0142oga Ziemia (80)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -365,7 +2957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 3
+  m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906362456484448
 MonoBehaviour:
@@ -411,21 +3003,106 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8690397229749725763}
+  - {fileID: 1262794881141846541}
+  - {fileID: 7274893079182391614}
+  - {fileID: 7350232553766205505}
+  - {fileID: 5281406815011952727}
+  - {fileID: 5690048951101963684}
+  - {fileID: 2937094888225221559}
+  - {fileID: 7769081717078628992}
+  - {fileID: 1764163495674326552}
+  - {fileID: 703960792407206828}
+  - {fileID: 5325274923737804000}
+  - {fileID: 3366115195662455106}
+  - {fileID: 6325980968979942737}
+  - {fileID: 252813111201873288}
+  - {fileID: 1324600043608281146}
+  - {fileID: 1189671019943497071}
+  - {fileID: 4416861495705929484}
+  - {fileID: 5400404686995262253}
+  - {fileID: 9014383589158938438}
+  - {fileID: 415921831267957104}
+  - {fileID: 3605216054557273900}
+  - {fileID: 8409678634481800865}
+  - {fileID: 112988281272384822}
+  - {fileID: 6220598788377436801}
+  - {fileID: 8494937852328410423}
+  - {fileID: 799598883965147469}
+  - {fileID: 7661154746062008362}
+  - {fileID: 7895766349370079261}
+  - {fileID: 3570574856984944750}
+  - {fileID: 416592095698901508}
+  - {fileID: 4091270462738646981}
+  - {fileID: 2110549922554385292}
+  - {fileID: 6388168600034089774}
+  - {fileID: 2852709490008357908}
+  - {fileID: 998832515621321357}
+  - {fileID: 7061961434621321548}
+  - {fileID: 6488993608423543722}
+  - {fileID: 1309841112152607634}
+  - {fileID: 3534359095539780228}
+  - {fileID: 5700072676272920752}
+  - {fileID: 7291562743251005071}
+  - {fileID: 7414588360145787067}
+  - {fileID: 3998595209155952814}
+  - {fileID: 6013470117358412956}
+  - {fileID: 6872064005499405613}
+  - {fileID: 8264793521315384129}
+  - {fileID: 119938278621793402}
+  - {fileID: 927337753907041490}
+  - {fileID: 9135780673993351743}
+  - {fileID: 8802602320352256080}
+  - {fileID: 3963482033917059859}
+  - {fileID: 2245590460375136080}
+  - {fileID: 2190049999414246124}
+  - {fileID: 746166671307299567}
+  - {fileID: 1388499301557741331}
+  - {fileID: 7121327224897263899}
+  - {fileID: 5096996558960504543}
+  - {fileID: 7244913466200041762}
+  - {fileID: 983880670441583574}
+  - {fileID: 796264623191960341}
+  - {fileID: 6977217982168601589}
+  - {fileID: 3702376254448681529}
+  - {fileID: 1476757567708101086}
+  - {fileID: 5072020809913478217}
+  - {fileID: 1747335964753745824}
+  - {fileID: 2346997786432399190}
+  - {fileID: 7848415180561899889}
+  - {fileID: 8227398400009570854}
+  - {fileID: 4298864678103061819}
+  - {fileID: 3976187177256548146}
+  - {fileID: 6208713384861219286}
+  - {fileID: 585306633855707072}
+  - {fileID: 8003514325672011584}
+  - {fileID: 108144265476596050}
+  - {fileID: 477053699938377753}
+  - {fileID: 4460232135142958429}
   - {fileID: 6440906363352373752}
   - {fileID: 6440906364230223408}
   - {fileID: 6440906362354087576}
   - {fileID: 6440906362456484449}
-  - {fileID: 8940143391677199782}
+  - {fileID: 7300926248885497516}
+  - {fileID: 7184110887740172659}
+  - {fileID: 2198045074826551940}
+  - {fileID: 6343539049871899699}
+  - {fileID: 4844155683949551053}
+  - {fileID: 4406856983337101343}
   - {fileID: 3346085740970788911}
   - {fileID: 2758130044551155185}
   - {fileID: 6440906362965972116}
   - {fileID: 6440906362344168312}
-  - {fileID: 6440906363249065869}
+  - {fileID: 6907234300201133940}
+  - {fileID: 7026250798666902103}
+  - {fileID: 5956315193256612649}
+  - {fileID: 7133448795741630469}
+  - {fileID: 3031989290645890071}
+  - {fileID: 809007225836588536}
   - {fileID: 6440906362423381528}
   - {fileID: 6440906364166118110}
   - {fileID: 8381167448336334448}
   - {fileID: 633014439836443960}
-  - {fileID: 1119984168992440165}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -440,7 +3117,7 @@ GameObject:
   - component: {fileID: 6440906362965972116}
   - component: {fileID: 6440906362965972139}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (8)"
+  m_Name: "Pod\u0142oga Ziemia (89)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -458,7 +3135,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 7
+  m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906362965972139
 MonoBehaviour:
@@ -467,54 +3144,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6440906362965972117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
-  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
-  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
---- !u!1 &6440906363249065870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6440906363249065869}
-  - component: {fileID: 6440906363249065868}
-  m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (10)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6440906363249065869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6440906363249065870}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 5, z: -6.486059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6440906363249065868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6440906363249065870}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -536,7 +3165,7 @@ GameObject:
   - component: {fileID: 6440906363352373752}
   - component: {fileID: 6440906363352373759}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (1)"
+  m_Name: "Pod\u0142oga Ziemia (77)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -554,7 +3183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 0
+  m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906363352373759
 MonoBehaviour:
@@ -584,7 +3213,7 @@ GameObject:
   - component: {fileID: 6440906364166118110}
   - component: {fileID: 6440906364166118109}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (12)"
+  m_Name: "Pod\u0142oga Ziemia (98)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -602,7 +3231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 11
+  m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906364166118109
 MonoBehaviour:
@@ -632,7 +3261,7 @@ GameObject:
   - component: {fileID: 6440906364230223408}
   - component: {fileID: 6440906364230223415}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (2)"
+  m_Name: "Pod\u0142oga Ziemia (78)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -650,7 +3279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 1
+  m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6440906364230223415
 MonoBehaviour:
@@ -659,6 +3288,1014 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6440906364230223409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6488821780654480016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108144265476596050}
+  - component: {fileID: 5576527845538227041}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (74)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108144265476596050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488821780654480016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 73
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5576527845538227041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488821780654480016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6701663867599655384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4298864678103061819}
+  - component: {fileID: 3324811745555581287}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (69)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4298864678103061819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701663867599655384}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 68
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3324811745555581287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701663867599655384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6701796880891614975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3031989290645890071}
+  - component: {fileID: 5074072137628005861}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (95)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3031989290645890071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701796880891614975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 94
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5074072137628005861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701796880891614975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6857817476755573068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8264793521315384129}
+  - component: {fileID: 4232070842717854000}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (46)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8264793521315384129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857817476755573068}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4232070842717854000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857817476755573068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &6900931165746374039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112988281272384822}
+  - component: {fileID: 3924204155960658215}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (23)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112988281272384822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900931165746374039}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3924204155960658215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900931165746374039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7046764454812278011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189671019943497071}
+  - component: {fileID: 8623129070263664825}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (16)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189671019943497071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046764454812278011}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8623129070263664825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046764454812278011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7050458598104604345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6208713384861219286}
+  - component: {fileID: 843241694632015427}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (71)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6208713384861219286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050458598104604345}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 70
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843241694632015427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050458598104604345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7209701991088078928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703960792407206828}
+  - component: {fileID: 8300132539321747812}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (10)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &703960792407206828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209701991088078928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8300132539321747812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209701991088078928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7318195593793706849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7414588360145787067}
+  - component: {fileID: 5480310538203684757}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (42)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7414588360145787067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318195593793706849}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5480310538203684757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7318195593793706849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7351917198205229344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7769081717078628992}
+  - component: {fileID: 1522956345005177255}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (8)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7769081717078628992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351917198205229344}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522956345005177255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351917198205229344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7365984875034634562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388499301557741331}
+  - component: {fileID: 4021002701402774501}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (55)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1388499301557741331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365984875034634562}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4021002701402774501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365984875034634562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7481612937876181173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2245590460375136080}
+  - component: {fileID: 181003983499604212}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (52)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2245590460375136080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481612937876181173}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181003983499604212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481612937876181173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7519979879287065249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809007225836588536}
+  - component: {fileID: 1607416973048977874}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (96)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809007225836588536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519979879287065249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: -5, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 95
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607416973048977874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519979879287065249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7540181135579789304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5281406815011952727}
+  - component: {fileID: 7757288443632217158}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (5)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5281406815011952727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540181135579789304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7757288443632217158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7540181135579789304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7607911477964882850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8690397229749725763}
+  - component: {fileID: 5784028395023080791}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8690397229749725763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607911477964882850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5784028395023080791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607911477964882850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7702403935609935676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9135780673993351743}
+  - component: {fileID: 5949772127841147747}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (49)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9135780673993351743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702403935609935676}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5949772127841147747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702403935609935676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7792764102152712868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7244913466200041762}
+  - component: {fileID: 5333261548670450089}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (58)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7244913466200041762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792764102152712868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 57
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5333261548670450089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792764102152712868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &7916156778393773500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4460232135142958429}
+  - component: {fileID: 7901546689817177364}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (76)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4460232135142958429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916156778393773500}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 75
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7901546689817177364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916156778393773500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8078358308571916631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6220598788377436801}
+  - component: {fileID: 6897860703539830514}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (24)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6220598788377436801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078358308571916631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6897860703539830514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078358308571916631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8135902898299999862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9014383589158938438}
+  - component: {fileID: 69072866444598953}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (19)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9014383589158938438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135902898299999862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69072866444598953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135902898299999862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8137556014669837494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585306633855707072}
+  - component: {fileID: 5191322607186632027}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (72)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585306633855707072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137556014669837494}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 71
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5191322607186632027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137556014669837494}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -680,7 +4317,7 @@ GameObject:
   - component: {fileID: 2758130044551155185}
   - component: {fileID: 7764248386607919507}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (7)"
+  m_Name: "Pod\u0142oga Ziemia (88)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -698,7 +4335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 6
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7764248386607919507
 MonoBehaviour:
@@ -707,6 +4344,150 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8315121505578998243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8482023329790478123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3605216054557273900}
+  - component: {fileID: 4180404427124693593}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (21)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3605216054557273900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482023329790478123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4180404427124693593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8482023329790478123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8502704139896059973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476757567708101086}
+  - component: {fileID: 723285773779963072}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (63)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1476757567708101086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502704139896059973}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 62
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &723285773779963072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502704139896059973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8587011688259091833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6488993608423543722}
+  - component: {fileID: 3266521857754038324}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (37)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6488993608423543722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587011688259091833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20, y: 55, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3266521857754038324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587011688259091833}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -728,7 +4509,7 @@ GameObject:
   - component: {fileID: 8381167448336334448}
   - component: {fileID: 5637705576754623994}
   m_Layer: 0
-  m_Name: "Pod\u0142oga Ziemia (13)"
+  m_Name: "Pod\u0142oga Ziemia (99)"
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -746,7 +4527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6440906362463634361}
-  m_RootOrder: 12
+  m_RootOrder: 98
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5637705576754623994
 MonoBehaviour:
@@ -755,6 +4536,390 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8589787260037093511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8600726047995303490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477053699938377753}
+  - component: {fileID: 3114572765231266766}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (75)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477053699938377753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8600726047995303490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 74
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3114572765231266766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8600726047995303490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8771455033972508516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8003514325672011584}
+  - component: {fileID: 6503553912562334360}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (73)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8003514325672011584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771455033972508516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 15, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 72
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6503553912562334360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771455033972508516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8865590929483939022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7350232553766205505}
+  - component: {fileID: 4878585300948665615}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (4)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7350232553766205505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865590929483939022}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 85, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4878585300948665615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865590929483939022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &8882366581109148825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7121327224897263899}
+  - component: {fileID: 3368930191595954797}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (56)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7121327224897263899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882366581109148825}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 35, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3368930191595954797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882366581109148825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &9022688413139087773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7895766349370079261}
+  - component: {fileID: 461559939289235417}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (28)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7895766349370079261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022688413139087773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: 65, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &461559939289235417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022688413139087773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &9053464999894095887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5072020809913478217}
+  - component: {fileID: 1423318308405614818}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (64)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5072020809913478217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053464999894095887}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -50, y: 25, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 63
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423318308405614818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053464999894095887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &9091056931538461629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3998595209155952814}
+  - component: {fileID: 8298319868345034279}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (43)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3998595209155952814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091056931538461629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 45, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8298319868345034279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091056931538461629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5977020285804804059, guid: 289c1c32727d0d240877503478d12649, type: 3}
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
+  - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
+  - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!1 &9209292329612185641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5325274923737804000}
+  - component: {fileID: 3469648833352017870}
+  m_Layer: 0
+  m_Name: "Pod\u0142oga Ziemia (11)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5325274923737804000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209292329612185641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80, y: 75, z: -6.486059}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6440906362463634361}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3469648833352017870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209292329612185641}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}

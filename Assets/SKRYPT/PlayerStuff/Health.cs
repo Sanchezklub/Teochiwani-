@@ -10,15 +10,16 @@ public class Health : MonoBehaviour
     public bool FloatingText;
     public GameObject FloatingTextPrefab;
     public int id;
-
+    public SplashController splashController;
     protected virtual void Start()
     {
         currentHealth=MaxHealth;
-
+        splashController=GetComponent<SplashController>();
     }
      public virtual void TakeDamage(float damage, GameObject attacker = null)
      {
        currentHealth -=damage;
+       splashController.MakeSplat();
        if (FloatingText == true)
        {
             ShowFloatingText(damage);

@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 7240981174681768757}
   - component: {fileID: 7240981174681768758}
   - component: {fileID: 7723127070551555570}
+  - component: {fileID: 313797050}
   m_Layer: 14
   m_Name: kapibara
   m_TagString: Untagged
@@ -296,7 +297,29 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 3
+  splashController: {fileID: 313797050}
   enemyAnimator: {fileID: 0}
+--- !u!114 &313797050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194552160283561000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9a211a645c4e14db23dd4693d5aafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splats:
+  - {fileID: 8879362370019826865, guid: bc3228d40b1f5f748b4c54054d94f079, type: 3}
+  - {fileID: 8445104910896414660, guid: 10b6a25e6b631554cb2bf002f33f534a, type: 3}
+  - {fileID: 4422407967575818056, guid: c7e1c3d1bf616d2449439381696a5387, type: 3}
+  colors:
+  - {r: 1, g: 0.008716989, b: 0, a: 0}
+  - {r: 0.6603774, g: 0.012673625, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  ps: {fileID: 3800583068774307269, guid: 23b4a682e04b43147a28344e33dab97d, type: 3}
 --- !u!1 &2537849801641161484
 GameObject:
   m_ObjectHideFlags: 0

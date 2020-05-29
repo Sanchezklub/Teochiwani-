@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
+[RequireComponent(typeof(AudioSource))]
 public class Kupiec : MonoBehaviour
 {
     public Animator anim;
@@ -23,8 +25,10 @@ public class Kupiec : MonoBehaviour
     bool Sprzedane=false;
     int rand;
     public GameObject itemframe;
+    public AudioSource audioData;
     public void Start()
     {
+        audioData = GetComponent<AudioSource>();
         
     
         Instantiate(stragan, new Vector3(transform.position.x+10,transform.position.y+5,transform.position.z), Quaternion.identity );
@@ -56,9 +60,10 @@ public class Kupiec : MonoBehaviour
         if(collision.tag == "Player")
         {
             PlayerInRange = true;
+            anim.SetTrigger("GraczWszedl");
+            FindObjectOfType<AudioManager>().Play("KupiecPierwszePoznanie");
         }
-        anim.SetTrigger("GraczWszedl");
-        FindObjectOfType<AudioManager>().Play("KupiecPierwszePoznanie");
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -66,16 +71,17 @@ public class Kupiec : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerInRange = false;
-        }
+        
         if (Sprzedane == false)
         {
         anim.SetTrigger("KupiecZły");
         FindObjectOfType<AudioManager>().Play("KupiecWkurw");
         }
+        }
     }
     private void idlesound()
     {
-        FindObjectOfType<AudioManager>().Play("KupiecIdle");
+         audioData.Play(0);
     }
     private void Update()
     {

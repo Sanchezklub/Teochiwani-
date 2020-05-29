@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
 
     public virtual void ShowFloatingText(float damage)
     {
-        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity, transform);
         go.GetComponent<TextMesh>().text = damage.ToString();
     }
 

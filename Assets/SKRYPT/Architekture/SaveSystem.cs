@@ -130,7 +130,8 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomRelation)
         {
-            //Debug.Log("loaded a room");
+            Debug.Log(LoadedSaveContainer.levelData.levelGen.rooms.Length);
+
             if (RoomRelation.roomIndex < LoadedSaveContainer.levelData.levelGen.rooms.Length)
             {
                 GameObject RoomPrefab = LoadedSaveContainer.levelData.levelGen.rooms[RoomRelation.roomIndex];

@@ -22,6 +22,8 @@ public class KapiPatrolState : BaseState<KapiBrain>
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+        brain.enemyAnimator.SetBool("isCharging", true);
+        brain.enemyAnimator.SetBool("isIdle", false);
 
     }
 

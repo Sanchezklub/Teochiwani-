@@ -18,9 +18,9 @@ public class EnemyHealth : Health
 
     public override void TakeDamage(float damage, GameObject attacker = null)
     {
+        enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
         base.TakeDamage(damage);
         TakingDamage?.Invoke();
-        enemyAnimator?.SetTrigger(Keys.TAKEDAMAGE_ANIM_KEY);
         EventController.instance.enemyEvents.CallOnEnemyGetDamage(this);
 
     }

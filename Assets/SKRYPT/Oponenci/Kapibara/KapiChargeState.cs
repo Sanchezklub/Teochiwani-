@@ -23,12 +23,15 @@ public class KapiChargeState : BaseState<KapiBrain>
             brain.ChargeHitbox.SetActive(true);
         }
 
+        brain.enemyAnimator.SetBool("isCharging", true);
+        brain.enemyAnimator.SetBool("isIdle", false);
 
         //StartCharge();
     }
 
     public void StartCharge()
     {
+
         PositionDifference = brain.transform.position.x - player.transform.position.x;
         if (PositionDifference >= 0)
         {

@@ -18,6 +18,8 @@ public class KapiChannellingState : BaseState<KapiBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = Vector2.zero;
         FaceTowardsPlayer();
+        brain.enemyAnimator.SetBool("isIdle", true);
+        brain.enemyAnimator.SetBool("isCharging", false);
     }
 
         void FaceTowardsPlayer()
@@ -29,7 +31,6 @@ public class KapiChannellingState : BaseState<KapiBrain>
             {
                 Flip();
             }
-            brain.FacingRight = false;
         }
         else if (PositionDifference <= 0)
         {
@@ -37,7 +38,6 @@ public class KapiChannellingState : BaseState<KapiBrain>
             {
                 Flip();
             }
-            brain.FacingRight = true;
         }
     }
     public override void UpdateState()
@@ -58,6 +58,7 @@ public class KapiChannellingState : BaseState<KapiBrain>
     void Flip()
     {
         brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
     public override void DeinitState(KapiBrain controller)
     {

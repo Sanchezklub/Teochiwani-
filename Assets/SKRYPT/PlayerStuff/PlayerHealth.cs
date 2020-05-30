@@ -38,6 +38,10 @@ public class PlayerHealth : Health
             EventController.instance.playerEvents.CallOnPlayerDie();
             Die();
         }
+        else
+        {
+            PlayerAnimator.SetTrigger("isDamaged");
+        }
 
     }
 

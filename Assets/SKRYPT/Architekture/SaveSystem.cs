@@ -148,19 +148,23 @@ public class SaveSystem : MonoBehaviour
             GameObject item = Instantiate(ItemPrefab, new Vector3(0, 0, 100), Quaternion.identity);
             item.GetComponent<BaseItem>()?.PickupItem();
         }
-        GameObject CurrentWeapon = Dictionary.GetWeaponObjects(LoadedSaveContainer.playerData.currentweaponID);
-        GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
-        BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (weap != null)
+        if (LoadedSaveContainer.playerData.currentweaponID < Dictionary.WeaponObjects.Length)
         {
-            weap.Start();
-            player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+            GameObject CurrentWeapon = Dictionary.GetWeaponObjects(LoadedSaveContainer.playerData.currentweaponID);
+            GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
+            BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
+            if (weap != null)
+            {
+                weap.Start();
+                player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+            }
+            else
+            {
+                Debug.Log("weap was null");
+            }
         }
-        else
-        {
-            Debug.Log("weap was null");
-        }
+
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
         Debug.Log("LoadedPosition was" +pos);
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;

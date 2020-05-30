@@ -32,6 +32,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
         GameController.instance.DataStorage.PlayerInfo.weapon = weapon;
         GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;
         GameController.instance.DataStorage.PlayerInfo.blood = blood;
+        GameController.instance.DataStorage.PlayerInfo.currentweaponID = 9999;
         //GameController.instance.DataStorage.PlayerInfo.currentWeapon = null;
     }
 }

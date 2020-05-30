@@ -24,6 +24,7 @@ public class TimerController : MonoBehaviour
     {
         timeCounter.text = "Time: 00:00.00";
         timerGoing = false;
+        BeginTimer();
     }
 
     public void BeginTimer()

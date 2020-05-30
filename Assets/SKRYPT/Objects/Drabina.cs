@@ -14,6 +14,7 @@ public class Drabina : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Rb2D = other.attachedRigidbody;
             LadderMode = true;
             Rb2D.gravityScale = 0;
         }

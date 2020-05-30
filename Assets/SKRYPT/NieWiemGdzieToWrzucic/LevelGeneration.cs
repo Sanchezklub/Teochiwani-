@@ -27,6 +27,12 @@ public class LevelGeneration : MonoBehaviour
         St();*/
         
     //}
+    private void Boss()
+    {
+    Vector2 newPos2 = new Vector2(StartingPosition.x+10*moveAmountx,StartingPosition.y );
+    transform.position = newPos2;
+    Instantiate(rooms[16], transform.position, Quaternion.identity); // buduje     
+    }
     private void KupieciPortal()
     {
         
@@ -671,7 +677,9 @@ public class LevelGeneration : MonoBehaviour
         Level1();        
         St();
         Fix();
+        Boss();
         KupieciPortal();
+        
         EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);
     }
 }

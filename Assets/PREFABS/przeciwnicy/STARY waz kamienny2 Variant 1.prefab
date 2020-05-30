@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Bits: 256
   MaxHealth: 80
   CurrentHealth: 0
-  damage: 15
+  damage: 30
   speed: 1.5
   StartFollowDist: 20
   StopFollowDist: 1000
@@ -75,6 +75,7 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 0
+  splashController: {fileID: 0}
   enemyAnimator: {fileID: 716448882656596585}
 --- !u!1001 &5506473524922062830
 PrefabInstance:
@@ -146,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 1341455905871245806, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}
       propertyPath: m_Name
-      value: waz kamienny2 Variant
+      value: STARY waz kamienny2 Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 1341455905871245806, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}

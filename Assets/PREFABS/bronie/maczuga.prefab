@@ -126,10 +126,10 @@ MonoBehaviour:
     type: 3}
   Handle: {fileID: 0}
   UIWeaponName: {fileID: 0}
-  UIFlavourText: {fileID: 0}
+  UIFlavorText: {fileID: 0}
   Name: Maczuga Max
   id: 8
-  FlavourText: JDorka
+  FlavorText: 
   AttackAnimationType: 0
   FacingRight: 1
   AttackPoint: {fileID: 9210449352677923428}
@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Bits: 16384
   coll: {fileID: 9210449352677923430}
   attackRange: 1
-  attackdamage: 21
+  attackdamage: 15
 --- !u!114 &1414755658302317953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CocaoValue: 5
-  BloodValue: 5
+  CocaoValue: 15
+  BloodValue: 15

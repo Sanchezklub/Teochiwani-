@@ -126,10 +126,10 @@ MonoBehaviour:
     type: 3}
   Handle: {fileID: 0}
   UIWeaponName: {fileID: 0}
-  UIFlavourText: {fileID: 0}
+  UIFlavorText: {fileID: 0}
   Name: Patyk Ostatecznej Anichilacji
   id: 5
-  FlavourText: "kij ma zawsze dwa ko\u0144ce"
+  FlavorText: 
   AttackAnimationType: 0
   FacingRight: 1
   AttackPoint: {fileID: 2814965965387860013}
@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Bits: 16384
   coll: {fileID: 2814965965387860015}
   attackRange: 5
-  attackdamage: 12
+  attackdamage: 100
 --- !u!114 &1365930811098950405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CocaoValue: 5
-  BloodValue: 5
+  CocaoValue: 75
+  BloodValue: 75

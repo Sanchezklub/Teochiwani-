@@ -19,6 +19,8 @@ public class SaveSystem : MonoBehaviour
 
     public SaveContainer saveContainer;
 
+    public GameObject MainMenu;
+
     private void Awake()
     {
         Instance = this;
@@ -172,17 +174,7 @@ public class SaveSystem : MonoBehaviour
 
 
     [ContextMenu("Test")]
-    public void Test()
-    {
-        saveContainer.levelData.SaveItem(itemTracker.items);
-        saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
-        saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
-        saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
-
-        SaveGame();
-    }
-
-    private void OnApplicationQuit()
+    public void FullySaveGame()
     {
         saveContainer.levelData.SaveItem(itemTracker.items);
         saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
@@ -190,7 +182,17 @@ public class SaveSystem : MonoBehaviour
         saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
 
+
         SaveGame();
-        Debug.Log("Shutdown");
+    }
+
+    private void OnApplicationQuit()
+    {
+        if (!MainMenu.activeSelf)
+        {
+            FullySaveGame();
+            Debug.Log("Shutdown");
+        }
+
     }
 }

@@ -8,17 +8,13 @@ public class LevelGeneration : MonoBehaviour
     public int[,] FixedRoom = new int [7,4];
     public float moveAmountx;
     public float moveAmounty;
-	private float timeBtwSpawn;
     public float startTimeBtwSpawn=0.25f;
-
-
     public GameObject[] rooms;
-	public Vector2 endingPosition;
+    public GameObject Portal1;
+    public GameObject Kupiec1;
     public Vector2 StartingPosition;
 
     public LevelData levelData;
-
-    public LayerMask whatIsRoom;
     //private void Start()
    //{
         /*Vector2 newPos14 = new Vector2(StartingPosition.x,StartingPosition.y);
@@ -31,10 +27,32 @@ public class LevelGeneration : MonoBehaviour
         St();*/
         
     //}
-
+    private void KupieciPortal()
+    {
+        
+        int randx = Random.Range(0,6);
+        int randy = Random.Range(0,3);
+        Vector2 newPos2 = new Vector2(StartingPosition.x+randx*moveAmountx,StartingPosition.y+randy*moveAmounty-2 );
+        transform.position = newPos2;
+        Instantiate(Kupiec1, transform.position, Quaternion.identity);
+        int randx1 = Random.Range(0,6);
+        int randy1 = Random.Range(0,3);
+        if(randx==randx1&& randy==randy1)
+        {
+                if ( randx1>4)
+                randx1-=1;
+                else
+                {
+                randx1+=1; 
+                }
+        }
+        Vector2 newPos3 = new Vector2(StartingPosition.x+randx1*moveAmountx,StartingPosition.y+5+randy1*moveAmounty);
+        transform.position = newPos3;
+        Instantiate(Portal1, transform.position, Quaternion.identity);
+    }
      private void St()
      {
-         Vector2 newPos2 = new Vector2(StartingPosition.x,StartingPosition.y );
+        Vector2 newPos2 = new Vector2(StartingPosition.x,StartingPosition.y );
         transform.position = newPos2;
         Vector2 newPos1 = new Vector2(transform.position.x-moveAmountx, transform.position.y);
         transform.position = newPos1;
@@ -653,6 +671,7 @@ public class LevelGeneration : MonoBehaviour
         Level1();        
         St();
         Fix();
+        KupieciPortal();
         EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);
     }
 }

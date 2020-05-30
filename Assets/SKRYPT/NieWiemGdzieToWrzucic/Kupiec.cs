@@ -31,8 +31,8 @@ public class Kupiec : MonoBehaviour
         audioData = GetComponent<AudioSource>();
         
     
-        Instantiate(stragan, new Vector3(transform.position.x+10,transform.position.y+5,transform.position.z), Quaternion.identity );
-        Instantiate(stragan, new Vector3(transform.position.x-10,transform.position.y+5,transform.position.z), Quaternion.identity );
+       // Instantiate(stragan, new Vector3(transform.position.x+7,transform.position.y+2,transform.position.z), Quaternion.identity );
+        Instantiate(stragan, new Vector3(transform.position.x-7,transform.position.y+4,transform.position.z), Quaternion.identity );
 
 
         rand = Random.Range(0, bronie.Length); // losuje broń

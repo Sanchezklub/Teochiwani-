@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelDeleter : MonoBehaviour
 {
     [ContextMenu("Delete")]
-    void Delete()
+    public void Delete()
     {
         GameObject[] level;
         level = GameObject.FindGameObjectsWithTag("Level_generation");

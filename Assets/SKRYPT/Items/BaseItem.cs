@@ -52,12 +52,18 @@ public abstract class BaseItem : MonoBehaviour
     {
         //var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         //go.GetComponent<TextMesh>().text = flavourtext;
-        UIFlavorText.enabled = true;
-        UIFlavorText.SetText(flavourtext);
-        UIFlavorText?.GetComponent<Animator>()?.SetTrigger("Enabled");
-        UIWeaponName.enabled = true;
-        UIWeaponName.SetText(itemName);
-        UIWeaponName?.GetComponent<Animator>()?.SetTrigger("Enabled");
+        if (UIFlavorText != null)
+        {
+            UIFlavorText.enabled = true;
+            UIFlavorText.SetText(flavourtext);
+            UIFlavorText.GetComponent<Animator>()?.SetTrigger("Enabled");
+        }
+        if (UIWeaponName != null)
+        {
+            UIWeaponName.enabled = true;
+            UIWeaponName.SetText(itemName);
+            UIWeaponName.GetComponent<Animator>()?.SetTrigger("Enabled");
+        }
 
     }
 

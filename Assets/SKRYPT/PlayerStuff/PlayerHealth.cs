@@ -10,6 +10,7 @@ public class PlayerHealth : Health
     public Slider healthBar;
     public GameObject MainMenu;
     public Vector2 StartingPosition;
+    [SerializeField] private LevelDeleter deleter;
 
     protected override void Start()
     {
@@ -50,6 +51,7 @@ public class PlayerHealth : Health
     {
         PlayerAnimator.SetTrigger("Die");
         File.Delete( Application.persistentDataPath+"/player.fun");
+        deleter.Delete();
         MainMenu.SetActive(true);
 
         /*Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);

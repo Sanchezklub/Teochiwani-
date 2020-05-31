@@ -68,6 +68,11 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
             //Debug.Log("left fightstate");
             brain.StartFollow();
         }
+        else
+        {
+            brain.StartAttack();
+
+        }
     }
     void MoveTowardsPlayer()
     {

@@ -24,7 +24,10 @@ public class Drabina : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        playerController.ladderMode = true;
+        if (collision.tag == "Player")
+        {
+            playerController.ladderMode = true;
+        }
     }
 
 

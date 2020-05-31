@@ -19,16 +19,16 @@ public class Health : MonoBehaviour
      public virtual void TakeDamage(float damage, GameObject attacker = null)
      {
        currentHealth -=damage;
-       splashController.MakeSplat();
-       if (FloatingText == true)
-       {
+       splashController?.MakeSplat();
+        if (FloatingText == true)
+        {
             ShowFloatingText(damage);
-       }
-       if (currentHealth<=0)
-       {
-            Die();
-            
-       }
+        }
+        if (currentHealth<=0)
+        {
+            Die();     
+        }
+
      }
 
     protected virtual void Die() {

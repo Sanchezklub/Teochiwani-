@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.81682014, y: -0.42616892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.338314, y: 5.403741}
   m_EdgeRadius: 0
 --- !u!114 &1863933505291386043
 MonoBehaviour:
@@ -123,6 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modifiers:
   - {fileID: 11400000, guid: fd0a0d00bd8233c40b941d10b760d56a, type: 2}
+  UIWeaponName: {fileID: 0}
+  UIFlavorText: {fileID: 0}
+  flavourtext: ich zaboli to bardziej
+  itemName: Kolczasta Zbroja
   id: 9
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

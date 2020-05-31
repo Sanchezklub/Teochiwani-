@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4767714757478575935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.15, y: -7.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.8313818, y: -0.4847741}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.264618, y: 8.002308}
   m_EdgeRadius: 0
 --- !u!114 &4836240461922899519
 MonoBehaviour:
@@ -123,6 +123,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modifiers:
   - {fileID: 11400000, guid: 39bd115b19defd042bc243678b70c819, type: 2}
+  UIWeaponName: {fileID: 0}
+  UIFlavorText: {fileID: 0}
+  flavourtext: "Radomska go\u015Bcinno\u015B\u0107"
+  itemName: "Chciwo\u015B\u0107"
   id: 17
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

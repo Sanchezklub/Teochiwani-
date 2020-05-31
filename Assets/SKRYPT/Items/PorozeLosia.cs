@@ -21,6 +21,8 @@ public class PorozeLosia : BaseItem
         //GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
         //GameController.instance.DataStorage.PlayerInfo.speed += Speedbuff;
     }
+
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -28,4 +30,5 @@ public class PorozeLosia : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+    */
 }

@@ -25,7 +25,7 @@ public class BlogoslawionaKrew : BaseItem
         GameController.instance.DataStorage.PlayerInfo.jumpforce += AllStatsBuff;
         */
     }
-
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -33,4 +33,6 @@ public class BlogoslawionaKrew : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+
+    */
 }

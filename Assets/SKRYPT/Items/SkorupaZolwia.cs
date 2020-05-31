@@ -20,6 +20,8 @@ public class SkorupaZolwia : BaseItem
         //GameController.instance.DataStorage.PlayerInfo.speed += SpeedBuff;
     }
 
+
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -27,4 +29,5 @@ public class SkorupaZolwia : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+    */
 }

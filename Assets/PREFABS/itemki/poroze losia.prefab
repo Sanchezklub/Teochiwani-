@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 243886904580649012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.122406, y: 11.133363, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,6 +124,10 @@ MonoBehaviour:
   modifiers:
   - {fileID: 11400000, guid: 5a0c66511c647cd419f64292b769daf0, type: 2}
   - {fileID: 11400000, guid: ce587be5847602c4685ba712e9a381d8, type: 2}
+  UIWeaponName: {fileID: 0}
+  UIFlavorText: {fileID: 0}
+  flavourtext: "Albert to le\u0144 i nie wymy\u015Bli\u0142 flavor textu"
+  itemName: "Poro\u017Ce \u0141osia"
   id: 6
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}

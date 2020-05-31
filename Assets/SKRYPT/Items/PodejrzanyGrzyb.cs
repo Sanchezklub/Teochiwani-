@@ -21,7 +21,7 @@ public class PodejrzanyGrzyb : BaseItem
         //GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
         //GameController.instance.DataStorage.PlayerInfo.currenthealth += CurrentHealthBuff;
     }
-
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -29,4 +29,5 @@ public class PodejrzanyGrzyb : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+    */
 }

@@ -18,8 +18,9 @@ public class DuszaDrzewolaza : BaseItem
 
 
     }
+    /*
     public override void OnTriggerEnter2D(Collider2D coll2)
     {
         base.OnTriggerEnter2D(coll2);
-    }
+    }*/
 }

@@ -22,11 +22,12 @@ public class CzaszkaWrogiegoPlemienia : BaseItem
         //GameController.instance.DataStorage.PlayerInfo.damage += Damagebuff;
 
     }
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.tag == "Player")
         {
             ShowFloatingText(Itemname);
         }
-    }
+    }*/
 }

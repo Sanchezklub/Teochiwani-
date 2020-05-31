@@ -20,6 +20,8 @@ public class SoczystaLarwa : BaseItem
         //GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
         //GameController.instance.DataStorage.PlayerInfo.currenthealth += MaxHealthBuff;
     }
+
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -27,4 +29,5 @@ public class SoczystaLarwa : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+    */
 }

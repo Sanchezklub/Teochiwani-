@@ -19,6 +19,8 @@ public class Kukurydza : BaseItem
         Destroy(gameObject);
         //GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
     }
+
+    /*
     public virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.tag=="Player")
@@ -26,4 +28,6 @@ public class Kukurydza : BaseItem
         ShowFloatingText(Itemname);
         }
     }
+
+    */
 }

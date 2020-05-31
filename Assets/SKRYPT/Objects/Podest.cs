@@ -4,25 +4,41 @@ using UnityEngine;
 
 public class Podest : MonoBehaviour
 {
-   public BoxCollider2D collider;
-   public LayerMask PlayerMask;
-   public float Range=10f;
+  private PlatformEffector2D effector;
+   public float waitTime;
 
+    void Start()
+    {
+    effector = GetComponent<PlatformEffector2D>();
+    }
     void Update()
     {
-       
-        if (Input.GetKeyDown(KeyCode.S) )
+        if ( Input.GetKeyUp(KeyCode.S))
         {
-            Debug.Log("JD");
-            collider.isTrigger = true;
-            StartCoroutine(waiter());
-   
+            waitTime = 0.1f;
         }
+    
+        if ( Input.GetKey(KeyCode.S))
+            if (waitTime <= 0)
+            {
+                effector.rotationalOffset=180f;
+                waitTime = 0.1f;
+            }
+            else
+            {
+                waitTime-=Time.deltaTime;
+            }
+        if ( Input.GetKey(KeyCode.Space))
+        {
+                effector.rotationalOffset = 0;
+        }
+    
+    
+    
+    
     }
-    IEnumerator waiter()
-    {
-        //Wait for 2 seconds
-        yield return new WaitForSeconds(1);
-        collider.isTrigger = false;
-    }
+
+
+
+
 }

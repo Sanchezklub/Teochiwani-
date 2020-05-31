@@ -31,7 +31,7 @@ public class SplashController : MonoBehaviour
     {
         var newSplat = Instantiate(splats[Random.Range(0, splats.Length)],transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         Instantiate(ps,transform.position, Quaternion.identity);
-      // var newSprite = newSplat.GetComponent<SpriteRenderer>();
+         var newSprite = newSplat.GetComponent<SpriteRenderer>();
       // newSplat.GetComponent<SpriteRenderer>().color = colors[Random.Range(0, colors.Length)];
 
      //   splatOrder++;

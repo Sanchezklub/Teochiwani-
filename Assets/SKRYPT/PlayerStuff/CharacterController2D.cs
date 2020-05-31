@@ -241,7 +241,7 @@ public class CharacterController2D : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
-        anim.SetFloat("Speed", rb.velocity.x);
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetBool("isWallSliding", isWallSliding);
     }
 

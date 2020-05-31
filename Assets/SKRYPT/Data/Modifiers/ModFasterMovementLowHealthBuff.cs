@@ -7,15 +7,15 @@ using UnityEngine.Events;
 public class ModFasterMovmentLowHealthBuff : BaseModifier
 {
     [SerializeField]
-    private float maxSpeedboostPercentage;
-    public float MaxSpeedboostPercentage => maxSpeedboostPercentage;
+    private float maxSpeedPercentage;
+    public float MaxSpeedPercentage => maxSpeedPercentage;
 
     private float initialSpeed;
 
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        initialSpeed = GameController.instance.DataStorage.PlayerInfo.speed;
+        initialSpeed = GameController.instance.DataStorage.PlayerInfo.jumpforce;
         AssignEvents();
     }
 
@@ -28,8 +28,8 @@ public class ModFasterMovmentLowHealthBuff : BaseModifier
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
         var maxhealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
-        var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxSpeedboostPercentage/100);
-        GameController.instance.DataStorage.PlayerInfo.speed = initialSpeed + value*initialSpeed;
+        var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxSpeedPercentage / 100);
+        GameController.instance.DataStorage.PlayerInfo.jumpforce = initialSpeed + initialSpeed * value;
     }
 
     public void PlayerDied()

@@ -12,7 +12,8 @@ public class SpawnObject : MonoBehaviour
         int rand = Random.Range(0, objects.Length);
         if (objects.Length != 0)
         {
-            Instantiate(objects[rand], transform.position, Quaternion.identity );
+            GameObject obj = Instantiate(objects[rand], transform.position, Quaternion.identity);
+            obj.transform.parent = this.gameObject.transform;
         }
     }
     

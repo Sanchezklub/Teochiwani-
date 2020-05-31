@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &852727347227879304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 852727347227879305}
-  m_Layer: 14
-  m_Name: Raycast
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &852727347227879305
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852727347227879304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.98, y: 8.29, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1930166659638390734}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &852727346985054328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +47,36 @@ MonoBehaviour:
   id: 0
   splashController: {fileID: 0}
   enemyAnimator: {fileID: 6112244524958427280}
+--- !u!1 &852727347227879304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852727347227879305}
+  m_Layer: 14
+  m_Name: Raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852727347227879305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852727347227879304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.98, y: 8.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1930166659638390734}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1245443258555002135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 1341455905871245806, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}
       propertyPath: m_Name
-      value: STARY waz kamienny2 Variant
+      value: NajnowszyWazKamienny
       objectReference: {fileID: 0}
     - target: {fileID: 1341455905871245806, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}
@@ -192,12 +192,22 @@ PrefabInstance:
     - target: {fileID: 5015807159643555205, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}
       propertyPath: m_Size.x
-      value: 30
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5015807159643555205, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015807159643555205, guid: 20a80788647ec3d46a3a8f3768527b4c,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015807159643555205, guid: 20a80788647ec3d46a3a8f3768527b4c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5015807159643555206, guid: 20a80788647ec3d46a3a8f3768527b4c,
         type: 3}

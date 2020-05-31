@@ -80,7 +80,6 @@ public class FollowState : BaseState<EnemyBrain>
                 Flip();
             }
             enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
-            brain.FacingRight = false;
         }
         else if (PositionDifference <= 0)
         {
@@ -89,7 +88,6 @@ public class FollowState : BaseState<EnemyBrain>
                 Flip();
             }
             enemyRigidBody2D.velocity = new Vector2(1 * brain.speed, enemyRigidBody2D.velocity.y);
-            brain.FacingRight = true;
         }
        
     }
@@ -97,5 +95,6 @@ public class FollowState : BaseState<EnemyBrain>
     void Flip()
     {
         brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
 }

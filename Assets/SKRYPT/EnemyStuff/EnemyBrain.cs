@@ -33,7 +33,7 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     {
         UpdateChildState();
 
-//        Debug.Log(currentState);
+        Debug.Log("Snake's current state is"+currentState);
     }
 
     public void DealDamage()

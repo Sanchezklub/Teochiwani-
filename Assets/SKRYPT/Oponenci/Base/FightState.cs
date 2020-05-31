@@ -16,8 +16,8 @@ public class FightState : BaseState<EnemyBrain>
         base.InitState(controller);
         this.brain=controller;
         this.enemyAnimator = controller.enemyAnimator;
-        enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, false);
-        enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, true);
+        enemyAnimator.SetBool("Patrol", false);
+        enemyAnimator.SetBool("Attack", true);
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = new Vector2(0,0);

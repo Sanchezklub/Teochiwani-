@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5234194546434469222}
   - component: {fileID: 4565323581492404550}
   - component: {fileID: 2569283461082074366}
+  - component: {fileID: 8187788598915384599}
   m_Layer: 13
   m_Name: KOL1
   m_TagString: Untagged
@@ -92,7 +93,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1}
@@ -108,3 +109,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 18}
   m_EdgeRadius: 0
+--- !u!114 &8187788598915384599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200909869159818571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e9d5ccecadb1f459db7f0302dad116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

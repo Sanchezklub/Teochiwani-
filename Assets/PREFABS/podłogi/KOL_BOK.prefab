@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1292912351297142686}
   - component: {fileID: 4800449994353470352}
   - component: {fileID: 1791294899139629746}
+  - component: {fileID: -2077324734815998281}
   m_Layer: 13
   m_Name: KOL_BOK
   m_TagString: Untagged
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1, y: -1}
@@ -162,3 +163,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0163441, y: 8.618517}
   m_EdgeRadius: 0
+--- !u!114 &-2077324734815998281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570215744118028796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e9d5ccecadb1f459db7f0302dad116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

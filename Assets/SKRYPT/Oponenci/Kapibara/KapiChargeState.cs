@@ -40,7 +40,6 @@ public class KapiChargeState : BaseState<KapiBrain>
                 Flip();
             }
             enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
-            brain.FacingRight = false;
         }
         else if (PositionDifference <= 0)
         {
@@ -49,7 +48,6 @@ public class KapiChargeState : BaseState<KapiBrain>
                 Flip();
             }
             enemyRigidBody2D.velocity = new Vector2(1 * brain.speed, enemyRigidBody2D.velocity.y);
-            brain.FacingRight = true;
         }
     }
 

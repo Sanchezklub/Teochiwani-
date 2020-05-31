@@ -166,6 +166,10 @@ public class SaveSystem : MonoBehaviour
                 Debug.Log("weap was null");
             }
         }
+        else
+        {
+            player.GetComponent<PlayerCombat>()?.ChangeWeapon(null);
+        }
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
         Debug.Log("LoadedPosition was" +pos);

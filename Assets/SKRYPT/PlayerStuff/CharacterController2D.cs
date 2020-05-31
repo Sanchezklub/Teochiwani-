@@ -100,7 +100,8 @@ public class CharacterController2D : MonoBehaviour
         //CheckIfWallSliding();
         CheckJump();
         CheckLedgeClimb();
-       //CheckDash();
+        //CheckDash();
+        CheckIfCanMove();
     }
 
     private void FixedUpdate()
@@ -128,6 +129,10 @@ public class CharacterController2D : MonoBehaviour
     {
         if(ledgeDetected && !canClimbLedge)
         {
+            if (anim.GetBool("IsAttacking"))
+            {
+                StopMove();
+            }
 
             canClimbLedge = true;
 
@@ -149,8 +154,7 @@ public class CharacterController2D : MonoBehaviour
                 Debug.Log(Mathf.Floor((ledgePosBot.x + wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
             }
 
-            canMove = false;
-            canFlip = false;
+            StopMove();
 
             anim.SetBool("canClimbLedge", canClimbLedge);
         }
@@ -168,8 +172,7 @@ public class CharacterController2D : MonoBehaviour
         Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
         transform.position = ledgePos2;
         Debug.Log(Mathf.Floor((ledgePosBot.x - wallCheckDistance) / 10) * 10 + ledgeClimbXOffset2);
-        canMove = true;
-        canFlip = true;
+        StartMove();
         ledgeDetected = false;
     }
 
@@ -263,8 +266,7 @@ public class CharacterController2D : MonoBehaviour
         {
             if(!isGrounded && movementInputDirection != facingDirection)
             {
-                canMove = false;
-                canFlip = false;
+                StopMove();
 
                 turnTimer = turnTimerSet;
             }
@@ -276,8 +278,7 @@ public class CharacterController2D : MonoBehaviour
 
             if(turnTimer <= 0 && !canClimbLedge)
             {
-                canMove = true;
-                canFlip = true;
+                StartMove();
             }
         }
 
@@ -308,6 +309,18 @@ public class CharacterController2D : MonoBehaviour
     public int GetFacingDirection()
     {
         return facingDirection;
+    }
+
+    void CheckIfCanMove()
+    {
+        if (!canClimbLedge && ( !anim.GetBool("IsAttacking") ))
+        {
+            StartMove();
+        }
+        else
+        {
+            StopMove();
+        }
     }
 
     /*private void CheckDash()
@@ -457,6 +470,7 @@ public class CharacterController2D : MonoBehaviour
     {
         canMove=false;
         canFlip=false;
+        rb.velocity = new Vector2(0, rb.velocity.y);
     }
     public void StartMove()
     {

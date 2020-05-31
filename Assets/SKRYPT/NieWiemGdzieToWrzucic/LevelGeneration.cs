@@ -31,7 +31,7 @@ public class LevelGeneration : MonoBehaviour
     {
     Vector2 newPos2 = new Vector2(StartingPosition.x+10*moveAmountx,StartingPosition.y );
     transform.position = newPos2;
-    Instantiate(rooms[16], transform.position, Quaternion.identity); // buduje     
+        Instantiate(rooms[16], transform.position, Quaternion.identity); // buduje     
     }
     private void KupieciPortal()
     {

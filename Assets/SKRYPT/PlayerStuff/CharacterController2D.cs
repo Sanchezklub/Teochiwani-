@@ -31,6 +31,7 @@ public class CharacterController2D : MonoBehaviour
     private bool canClimbLedge = false;
     private bool ledgeDetected;
     private bool isDashing;
+    private bool isWallHigher;
 
     private Vector2 ledgePosBot;
     private Vector2 ledgePos1;
@@ -69,6 +70,7 @@ public class CharacterController2D : MonoBehaviour
     public Transform groundCheck;
     public Transform wallCheck;
     public Transform ledgeCheck;
+    public Transform higherWallCheck;
 	public Transform flipAxis;
     public LayerMask whatIsGround;
     public LayerMask whatIsWall;
@@ -175,8 +177,9 @@ public class CharacterController2D : MonoBehaviour
 
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
         isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsWall);
+        isWallHigher = Physics2D.Raycast(higherWallCheck.position, transform.right, wallCheckDistance, whatIsWall);
 
-        if(isTouchingWall && !isTouchingLedge && !ledgeDetected)
+        if(isTouchingWall && !isTouchingLedge && !ledgeDetected && !isWallHigher)
         {
             ledgeDetected = true;
             ledgePosBot = wallCheck.position;

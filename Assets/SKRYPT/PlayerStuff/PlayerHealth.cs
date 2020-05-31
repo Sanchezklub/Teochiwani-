@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class PlayerHealth : Health
 {
     private Animator PlayerAnimator;
     public Slider healthBar;
+    public GameObject MainMenu;
     public Vector2 StartingPosition;
 
     protected override void Start()
@@ -47,11 +48,14 @@ public class PlayerHealth : Health
 
     protected override void Die()
     {
-        Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);
+        PlayerAnimator.SetTrigger("Die");
+        File.Delete( Application.persistentDataPath+"/player.fun");
+        MainMenu.SetActive(true);
+
+        /*Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         transform.position = newPos;
-        PlayerAnimator.SetTrigger("Die");
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 2);*/
     }
 
 }

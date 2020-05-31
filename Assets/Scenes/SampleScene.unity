@@ -12651,6 +12651,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fb7cc922a7a5745a9ba64bfce80a4f, type: 3}
+--- !u!1 &1735844313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6769391296925741220, guid: 12fb7cc922a7a5745a9ba64bfce80a4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1735844312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1735844314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735844313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9a211a645c4e14db23dd4693d5aafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splats: []
+  colors: []
+  ps: {fileID: 0}
 --- !u!1001 &1739803309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17758,6 +17779,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 5442415637439374569}
+    - target: {fileID: 4544277756249418050, guid: 903297f280de62a47aec8c17223b8423,
+        type: 3}
+      propertyPath: MainMenu
+      value: 
+      objectReference: {fileID: 1752687364}
     - target: {fileID: 4544277756249418062, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: flipAxis

@@ -68,7 +68,10 @@ public class LevelData
 
         foreach (BaseItem item in currentItem)
         {
-            itemData.Add(new ItemData(item.id, item.transform.position));
+            if (item != null)
+            {
+                itemData.Add(new ItemData(item.id, item.transform.position));
+            }
         }
     }
 

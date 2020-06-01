@@ -173,7 +173,7 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            player.GetComponent<PlayerCombat>()?.ChangeWeapon(null);
+            player.GetComponent<PlayerCombat>()?.currentWeapon.DropWeapon();
         }
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;

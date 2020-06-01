@@ -75,8 +75,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void ChangeWeapon(BaseWeapon newWeapon)
     {
-        if(currentWeapon != null)
-        {
+       
             EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
             FindObjectOfType<AudioManager>().Play("PickUpWeapon");
             //Do something about wpn;
@@ -88,12 +87,7 @@ public class PlayerCombat : MonoBehaviour
             currentWeapon.Handle.transform.parent = holdPosition;
             currentWeapon.Handle.transform.localPosition = Vector3.zero;
             currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);
-        }
-        else
-        {
-            currentWeapon?.DropWeapon();
-        }
-
+     
     }
 
     void OnDrawGizmosSelected()

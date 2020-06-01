@@ -75,18 +75,24 @@ public class PlayerCombat : MonoBehaviour
 
     public void ChangeWeapon(BaseWeapon newWeapon)
     {
-
-        EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
-        FindObjectOfType<AudioManager>().Play("PickUpWeapon");
-        //Do something about wpn;
-        Debug.Log(newWeapon.name);
-        currentWeapon?.DropWeapon();
-        GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
-        currentWeapon = newWeapon;
-        currentWeapon?.PickupWepaon();
-        currentWeapon.Handle.transform.parent = holdPosition;
-        currentWeapon.Handle.transform.localPosition = Vector3.zero;
-        currentWeapon.Handle.transform.localEulerAngles = new Vector3(0,0,0);
+        if(currentWeapon != null)
+        {
+            EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
+            FindObjectOfType<AudioManager>().Play("PickUpWeapon");
+            //Do something about wpn;
+            Debug.Log(newWeapon.name);
+            currentWeapon?.DropWeapon();
+            GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
+            currentWeapon = newWeapon;
+            currentWeapon?.PickupWepaon();
+            currentWeapon.Handle.transform.parent = holdPosition;
+            currentWeapon.Handle.transform.localPosition = Vector3.zero;
+            currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            currentWeapon?.DropWeapon();
+        }
 
     }
 

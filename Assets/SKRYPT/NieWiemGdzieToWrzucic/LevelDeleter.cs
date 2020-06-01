@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelDeleter : MonoBehaviour
 {
+    public GameObject LoadedObjectHolder;
+
     [ContextMenu("Delete")]
     public void Delete()
     {
@@ -12,6 +14,11 @@ public class LevelDeleter : MonoBehaviour
         foreach (GameObject lv in level)
         {
             Destroy(lv);
+        }
+
+        foreach (Transform obj in LoadedObjectHolder.transform)
+        {
+            Destroy(obj.gameObject);
         }
     }
 }

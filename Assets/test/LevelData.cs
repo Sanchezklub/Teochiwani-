@@ -44,7 +44,10 @@ public class LevelData
 
         foreach (EnviroId enviro in currentEnviro)
         {
-            enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
+            if(enviro != null)
+            {
+                enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
+            }
         }
     }
     public void SaveWeapon(List<BaseWeapon> currentWeapon)

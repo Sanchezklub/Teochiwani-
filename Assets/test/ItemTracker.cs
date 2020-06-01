@@ -26,7 +26,10 @@ public class ItemTracker : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        EventController.instance.itemEvents.OnItemAppear -= OnNewItem;
-        EventController.instance.itemEvents.OnItemDied -= OnItemDie;
+        if (EventController.instance != null)
+        {
+            EventController.instance.itemEvents.OnItemAppear -= OnNewItem;
+            EventController.instance.itemEvents.OnItemDied -= OnItemDie;
+        }
     }
 }

@@ -53,6 +53,7 @@ public class Chest : MonoBehaviour
     private void Spawn()
     {
         int rand = Random.Range(0, objects.Length);
-        Instantiate(objects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
+        GameObject loot = Instantiate(objects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
+        loot.transform.parent = this.transform.parent;
     }
 }

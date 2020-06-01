@@ -19,6 +19,7 @@ public class SaveSystem : MonoBehaviour
 
     public SaveContainer saveContainer;
 
+    public GameObject LoadedObjectHolder;
     public GameObject MainMenu;
 
     private void Awake()
@@ -88,7 +89,8 @@ public class SaveSystem : MonoBehaviour
             GameObject EnemyPrefab = Dictionary.GetEnemyObjects(loadedEnemy.id);
             if (EnemyPrefab != null)
             {
-                Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
+                GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
+                enemy.transform.parent = LoadedObjectHolder.transform;
             }
         }
     }
@@ -100,7 +102,8 @@ public class SaveSystem : MonoBehaviour
             GameObject ItemPrefab = Dictionary.GetItemObjects(loadedItem.id);
             if (ItemPrefab != null)
             {
-                Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
+                GameObject item = Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
+                item.transform.parent = LoadedObjectHolder.transform;
             }
         }
     }
@@ -112,7 +115,8 @@ public class SaveSystem : MonoBehaviour
             GameObject WeaponPrefab = Dictionary.GetWeaponObjects(loadedWeapon.id);
             if (WeaponPrefab != null)
             {
-                Instantiate(WeaponPrefab, loadedWeapon.position, Quaternion.identity);
+                GameObject weapon = Instantiate(WeaponPrefab, loadedWeapon.position, Quaternion.identity);
+                weapon.transform.parent = LoadedObjectHolder.transform;
             }
         }
     }
@@ -123,7 +127,8 @@ public class SaveSystem : MonoBehaviour
             GameObject EnviroPrefab = Dictionary.GetEnviroObjects(loadedEnvironment.id);
             if (EnviroPrefab != null)
             {
-                Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
+                GameObject enviro = Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
+                enviro.transform.parent = LoadedObjectHolder.transform;
             }
         }
     }

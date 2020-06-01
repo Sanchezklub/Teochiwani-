@@ -32,7 +32,8 @@ public class Kupiec : MonoBehaviour
         
     
        // Instantiate(stragan, new Vector3(transform.position.x+7,transform.position.y+2,transform.position.z), Quaternion.identity );
-        Instantiate(stragan, new Vector3(transform.position.x-7,transform.position.y+4,transform.position.z), Quaternion.identity );
+        GameObject ObjectStragan = Instantiate(stragan, new Vector3(transform.position.x-7,transform.position.y+4,transform.position.z), Quaternion.identity );
+        ObjectStragan.transform.parent = this.transform;
 
 
         rand = Random.Range(0, bronie.Length); // losuje broń

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "FasterMovementLowHealthBuff", menuName = "Modifiers/FasterMovementLowHealthBuff")]
-public class ModFasterMovmentLowHealthBuff : BaseModifier
+public class ModFasterMovementLowHealthBuff : BaseModifier
 {
     [SerializeField]
     private float maxSpeedPercentage;

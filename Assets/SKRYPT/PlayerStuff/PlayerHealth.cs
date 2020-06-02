@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
@@ -52,7 +53,8 @@ public class PlayerHealth : Health
         PlayerAnimator.SetTrigger("Die");
         File.Delete( Application.persistentDataPath+"/player.fun");
         deleter.Delete();
-        MainMenu.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //MainMenu.SetActive(true);
 
         /*Vector2 newPos = new Vector2(StartingPosition.x, StartingPosition.y);
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;

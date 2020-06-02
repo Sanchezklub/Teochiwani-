@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoadLoader : MonoBehaviour
 {
-    public GameObject OnLoadUI;
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -12,7 +11,5 @@ public class SceneLoadLoader : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 0;
-        OnLoadUI.SetActive(true);
-            
     }
 }

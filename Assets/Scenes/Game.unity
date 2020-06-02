@@ -433,6 +433,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8408784973418703002, guid: d55e500623e0ef94f9bada66d9c4ac52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55e500623e0ef94f9bada66d9c4ac52, type: 3}
 --- !u!4 &216255085 stripped
@@ -4525,7 +4530,7 @@ PrefabInstance:
     - target: {fileID: 737809796924280684, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 737809796924280684, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
@@ -4536,11 +4541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 522734165}
+      objectReference: {fileID: 344571110}
     - target: {fileID: 737809796924280684, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetActive
+      value: ReloadScene
       objectReference: {fileID: 0}
     - target: {fileID: 737809796924280684, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}

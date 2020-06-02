@@ -27,11 +27,14 @@ public class maczuga : BaseWeapon
       public override void DropWeapon()
     {
                 
-       
-        Handle.transform.parent = null;
-        
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-        coll.enabled = true;
+       if (this != null)
+        {
+            Handle.transform.parent = null;
+
+            gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
+            coll.enabled = true;
+        }
+
     }
 
     public override void PickupWepaon()

@@ -173,7 +173,8 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            player.GetComponent<PlayerCombat>()?.currentWeapon.DropWeapon();
+            player.GetComponent<PlayerCombat>()?.currentWeapon?.DropWeapon();
+            Debug.Log("Dropped weapon");
         }
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;

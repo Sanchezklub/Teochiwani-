@@ -39,11 +39,16 @@ public class PauseController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Unpause();
-        SceneManager.LoadScene(0);
     }
     public void Quit()
     {
         Debug.Log("Quit");
         Application.Quit();
     }
+    
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }

@@ -42,6 +42,9 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    [SerializeField] private GameObject[] skeletonStuff;
+    [SerializeField] private GameObject LadderSprite;
+
     public int amountOfJumps = 1;
 
     //public float movementSpeed = 10.0f;
@@ -189,6 +192,22 @@ public class CharacterController2D : MonoBehaviour
             ledgeDetected = true;
             ledgePosBot = wallCheck.position;
         }
+        if (ladderMode)
+        {
+            LadderSprite.SetActive(true);
+            foreach (GameObject obj in skeletonStuff)
+            {
+                obj.SetActive(false);
+            }
+            
+        }
+        else
+        {
+            foreach (GameObject obj in skeletonStuff)
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 
     private void CheckIfCanJump()
@@ -243,6 +262,7 @@ public class CharacterController2D : MonoBehaviour
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetBool("isWallSliding", isWallSliding);
+        anim.SetBool("ladderMode", ladderMode);
     }
 
     private void CheckInput()

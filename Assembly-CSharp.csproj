@@ -255,9 +255,6 @@
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
@@ -306,9 +303,6 @@
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
@@ -353,9 +347,6 @@
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>C:/Users/User/Documents/GitHub/Teochiwani/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
@@ -930,6 +921,20 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>E:/Programy/2019.3.0f6/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
+      <Project>{32A1258F-105E-51FF-BC2C-B81F59A3E275}</Project>
+      <Name>Unity.2D.Animation.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
+      <Project>{7C80A266-6FB1-0FDD-B20F-8A9F221C4920}</Project>
+      <Name>Unity.2D.Animation.Triangle.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{9DCC1468-0499-46DC-A366-88F8233A3A88}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

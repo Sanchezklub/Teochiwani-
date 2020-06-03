@@ -7,9 +7,12 @@ public class Bullet : MonoBehaviour {
 	public float speed = 20f;
 	public int damage = 20;
 	public Rigidbody2D rb2d;
+	public float RotationSpeed;
 
 	private float targ_x;
 	private float targ_y;
+
+
 
 	GameObject target;
 	Vector2 moveDirection;
@@ -34,7 +37,7 @@ public class Bullet : MonoBehaviour {
 	}
 	private void Update()
 	{
-		rb2d.MoveRotation(Mathf.Atan2(rb2d.velocity.y, rb2d.velocity.x)*180);
+		rb2d.MoveRotation(Mathf.Atan2(rb2d.velocity.y, rb2d.velocity.x)*(180/Mathf.PI));
 	}
 
 	void OnTriggerEnter2D (Collider2D hitInfo)

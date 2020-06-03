@@ -28,7 +28,7 @@ public class Podest : MonoBehaviour
             {
                 waitTime-=Time.deltaTime;
             }
-        if ( Input.GetKey(KeyCode.Space))
+        if ( Input.GetKey(KeyCode.Space) ||Input.GetKey(KeyCode.W) )
         {
                 effector.rotationalOffset = 0;
         }

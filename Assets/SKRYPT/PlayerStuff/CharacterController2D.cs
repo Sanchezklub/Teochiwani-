@@ -207,6 +207,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 obj.SetActive(true);
             }
+             LadderSprite.SetActive(false);
         }
     }
 

@@ -1187,10 +1187,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3569338648943732965, guid: 92e7b4053eaf09c4baac91b151f5524b,
         type: 3}
+    - target: {fileID: 7823872836317523763, guid: a82e5b7067d9bfb4280ef8b8653a6345,
+        type: 3}
+      propertyPath: MagnitudeL
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7823872836317523765, guid: a82e5b7067d9bfb4280ef8b8653a6345,
         type: 3}
       propertyPath: m_Name
       value: Spawn Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 7823872836317523765, guid: a82e5b7067d9bfb4280ef8b8653a6345,
+        type: 3}
+      propertyPath: m_TagString
+      value: LVLGEN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82e5b7067d9bfb4280ef8b8653a6345, type: 3}

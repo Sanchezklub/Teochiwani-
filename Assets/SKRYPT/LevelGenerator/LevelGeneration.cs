@@ -6,6 +6,7 @@ public class LevelGeneration : MonoBehaviour
 {
     public int[,] Room = new int[6, 4];
     public int[,] FixedRoom = new int [7,4];
+    public int MagnitudeL;
     public float moveAmountx;
     public float moveAmounty;
     public float startTimeBtwSpawn=0.25f;
@@ -13,7 +14,6 @@ public class LevelGeneration : MonoBehaviour
     public GameObject Portal1;
     public GameObject Kupiec1;
     public Vector2 StartingPosition;
-
     public LevelData levelData;
     //private void Start()
    //{
@@ -69,6 +69,7 @@ public class LevelGeneration : MonoBehaviour
     
   private void Level1() // budowa poziomu 1 ( od góry )
     {
+        MagnitudeL= 1;
         Vector2 newPos2 = new Vector2(StartingPosition.x,StartingPosition.y );
         transform.position = newPos2;
         Vector2 newPos1 = new Vector2(transform.position.x, transform.position.y + moveAmounty + moveAmounty);
@@ -158,6 +159,7 @@ public class LevelGeneration : MonoBehaviour
 
     private void Level2() // budowa poziomu 2 
     {
+        MagnitudeL= 2;
         Vector2 newPos2 = new Vector2(StartingPosition.x,transform.position.y );
         transform.position = newPos2;
         Vector2 newPos1 = new Vector2(transform.position.x, transform.position.y + moveAmounty + moveAmounty);
@@ -424,6 +426,7 @@ public class LevelGeneration : MonoBehaviour
 
     private void Level3() // budowa poziomu 3
     {
+        MagnitudeL= 3;
         for(int i=0; i <4; i++) // ide w prawo 5 chunków, losując za każdym razem nowy z przejściami w lewo i prawo
         {
             int rand = Random.Range(0,4); // losuje 
@@ -444,6 +447,7 @@ public class LevelGeneration : MonoBehaviour
     
     private void Level4() // budowa poziomu 4 
     {
+        MagnitudeL= 4;
         Vector2 newPos1 = new Vector2(StartingPosition.x,StartingPosition.y); // przesuwam sie na pozycje na startowa
         transform.position = newPos1;
         if(Room[0,1]==0 || Room[0,1]==2) 

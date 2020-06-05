@@ -191,7 +191,6 @@ GameObject:
   - component: {fileID: 4544277756249418048}
   - component: {fileID: 4544277756249418049}
   - component: {fileID: 4544277756249418062}
-  - component: {fileID: 5789701550784011287}
   - component: {fileID: 561209616676875708}
   - component: {fileID: 561209616676875709}
   m_Layer: 9
@@ -399,6 +398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ladderMode: 0
+  skeletonStuff: []
+  LadderSprite: {fileID: 0}
   amountOfJumps: 1
   groundCheckRadius: 0.82
   wallCheckDistance: 1.5
@@ -432,23 +433,6 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &5789701550784011287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561209616676875711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e363c0924d1234f9d5d5d54aec7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerRigidbody: {fileID: 4544277756249418061}
-  DashSpeed: 70
-  DashTime: 0
-  StartDashTime: 0.22
-  direction: 0
 --- !u!114 &561209616676875708
 MonoBehaviour:
   m_ObjectHideFlags: 0

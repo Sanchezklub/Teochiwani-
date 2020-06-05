@@ -27,7 +27,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
         GameController.instance.DataStorage.PlayerInfo.speed = speed;
         GameController.instance.DataStorage.PlayerInfo.crouchspeed = crouchspeed;
         GameController.instance.DataStorage.PlayerInfo.jumpforce = jumpforce;
-        Player.transform.position = new Vector2 (SaveSystem.Instance.saveContainer.levelData.levelGen.StartingPosition.x - SaveSystem.Instance.saveContainer.levelData.levelGen.moveAmountx, SaveSystem.Instance.saveContainer.levelData.levelGen.StartingPosition.y);
+        Player.transform.position = new Vector2 (SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);
         //Player.transform.position = Vector3.zero;
         GameController.instance.DataStorage.PlayerInfo.weapon = weapon;
         GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;

@@ -11,6 +11,8 @@ public class SaveSystem : MonoBehaviour
     public WeaponTracker weaponTracker;
     public ID_dictionary Dictionary;
 
+    public LevelGeneration levelGen;
+
     //public LevelGeneration levelGen;
 
 
@@ -137,12 +139,12 @@ public class SaveSystem : MonoBehaviour
     {
         foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomRelation)
         {
-            Debug.Log(LoadedSaveContainer.levelData.levelGen.rooms.Length);
+            Debug.Log(levelGen.rooms.Length);
 
-            if (RoomRelation.roomIndex < LoadedSaveContainer.levelData.levelGen.rooms.Length)
+            if (RoomRelation.roomIndex < levelGen.rooms.Length)
             {
-                GameObject RoomPrefab = LoadedSaveContainer.levelData.levelGen.rooms[RoomRelation.roomIndex];
-                Instantiate(RoomPrefab, new Vector2(LoadedSaveContainer.levelData.levelGen.StartingPosition.x + (RoomRelation.x-1) * LoadedSaveContainer.levelData.levelGen.moveAmountx, LoadedSaveContainer.levelData.levelGen.StartingPosition.y + (RoomRelation.y-1) * LoadedSaveContainer.levelData.levelGen.moveAmounty), Quaternion.identity);
+                GameObject RoomPrefab = levelGen.rooms[RoomRelation.roomIndex];
+                Instantiate(RoomPrefab, new Vector2(levelGen.StartingPosition.x + (RoomRelation.x-1) * levelGen.moveAmountx, levelGen.StartingPosition.y + (RoomRelation.y-1) * levelGen.moveAmounty), Quaternion.identity);
             }
         }
     }

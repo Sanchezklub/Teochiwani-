@@ -6,7 +6,6 @@ using UnityEngine;
 public class LevelData
 {
     public int[,] roomRelations;
-    public LevelGeneration levelGen;
 
     public List<RoomData> roomRelation;
     public List<EnemyData> enemiesData;

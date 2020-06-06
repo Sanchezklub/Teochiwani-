@@ -15,6 +15,7 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
 
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
+    public UnityAction FacePlayerAction;
 
     public float MaxHealth;
     public float CurrentHealth;
@@ -24,6 +25,7 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     public float StopFollowDist;
     public float StartFightDist;
     public float AttackRange;
+    public float MeleeDamageRange;
 
     public bool FacingRight;
 
@@ -47,7 +49,10 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     {
         LeaveFightState?.Invoke();
     }
-
+    public void CallOnFacePlayer()
+    {
+        FacePlayerAction?.Invoke();
+    }
 
     public override void ChangeState(BaseState<SpearmanBrain> newState)
     {    

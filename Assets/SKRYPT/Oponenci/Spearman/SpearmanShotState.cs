@@ -20,6 +20,8 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
         enemyAnimator?.SetBool("IsAttacking",true);
         player = GameObject.Find("Player");
         controller.Attacking += rzut;
+        controller.Attacking += ShortRangeDamage;
+        controller.FacePlayerAction += FacePlayer;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         /*if (brain.FacingRight == false)
         {
@@ -28,7 +30,6 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
     }
     public void rzut()
     {
-        MoveTowardsPlayer();
         if (brain.FacingRight == true)
         {
             GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.Euler(new Vector3 (0,0,13.762f))) as GameObject;
@@ -44,7 +45,24 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
             brain.StartPatrol();
         }
     }
-    void MoveTowardsPlayer()
+
+    public void ShortRangeDamage()
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(brain.FirePoint.position, brain.MeleeDamageRange);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            if (hitColliders[i].tag == "Player")
+            {
+                Health player = hitColliders[i].GetComponent<Health>();
+                player?.TakeDamage(brain.damage, brain.gameObject);
+                break;
+            }
+
+            i++;
+        }
+    }
+    public void FacePlayer()
     {
         float PositionDifference = brain.transform.position.x - player.transform.position.x;
         if(PositionDifference >= 0)
@@ -71,6 +89,8 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
     public override void DeinitState(SpearmanBrain controller)
     {
         brain.Attacking-=rzut;
+        controller.Attacking -= ShortRangeDamage;
+        controller.FacePlayerAction -= FacePlayer;
         base.DeinitState(controller);
         enemyAnimator.SetBool("IsAttacking",false);
     }

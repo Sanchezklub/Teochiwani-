@@ -82,7 +82,7 @@ public class LevelData
 
         roomRelations = layout;
         roomRelation = new List<RoomData>();
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 12; i++)
         {
             for (int j = 0; j < 4; j++)
             {

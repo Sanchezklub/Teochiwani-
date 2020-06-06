@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
     public int[,] Room = new int[6, 4];
-    public int[,] FixedRoom = new int [7,4];
+    public int[,] FixedRoom = new int [12,4];
     public int MagnitudeL;
     public float moveAmountx;
     public float moveAmounty;
@@ -31,7 +31,8 @@ public class LevelGeneration : MonoBehaviour
     {
     Vector2 newPos2 = new Vector2(StartingPosition.x+10*moveAmountx,StartingPosition.y );
     transform.position = newPos2;
-        Instantiate(rooms[16], transform.position, Quaternion.identity); // buduje     
+        Instantiate(rooms[16], transform.position, Quaternion.identity); // buduje
+        FixedRoom[11, 1] = 16;
     }
     private void KupieciPortal()
     {
@@ -668,6 +669,17 @@ public class LevelGeneration : MonoBehaviour
         FixedRoom[0, 3] = 9999;
 
     }
+
+    void InitialFix()
+    {
+        for (int i = 0; i < 12; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                FixedRoom[i, j] = 9999;
+            }
+        }
+    }
     [ContextMenu("GenerateLevel")]
     public void Create() // buduje poziom 
     {
@@ -680,6 +692,7 @@ public class LevelGeneration : MonoBehaviour
         Level2();
         Level1();        
         St();
+        InitialFix();
         Fix();
         Boss();
         KupieciPortal();

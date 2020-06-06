@@ -2007,6 +2007,20 @@ MonoBehaviour:
   - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
   - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
   - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
+--- !u!114 &3869446193407501251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828351607714023247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 7700265886463924053, guid: ad37623f870f41b45b08bbc393e03694, type: 3}
 --- !u!1 &8873194528207216933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,8 +3217,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: climb complex2 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 426903568399149151, guid: f96a664dffe27b64a8ab99c1469510d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f96a664dffe27b64a8ab99c1469510d2, type: 3}
+--- !u!1 &8828351607714023247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 426903568399149144, guid: f96a664dffe27b64a8ab99c1469510d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 9180642316179484439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5209915681153783465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3973695765651700158, guid: f96a664dffe27b64a8ab99c1469510d2,

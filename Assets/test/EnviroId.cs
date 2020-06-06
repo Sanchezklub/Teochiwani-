@@ -10,7 +10,7 @@ public class EnviroId : MonoBehaviour
     void Start()
     {
         
-
+        Debug.Log("Enviro Start");
         EventController.instance.enviromentEvents.CallOnEnviroAppear(this);
     }
 }

@@ -116,7 +116,7 @@ public class EventController : MonoBehaviour
         public UnityAction<EnemyHealth> OnEnemyAppear;
         public void CallOnEnemyAppear(EnemyHealth enemy)
         {
-            Debug.Log("Appear");
+            Debug.Log("EnemyAppear");
             OnEnemyAppearBasic?.Invoke();
             OnEnemyAppear?.Invoke(enemy);
         }
@@ -144,7 +144,7 @@ public class EventController : MonoBehaviour
         public UnityAction<EnviroId> OnEnviroAppear;
         public void CallOnEnviroAppear(EnviroId enviro)
         {
-            Debug.Log("Appear");
+            Debug.Log("EnviroAppear");
             OnEnviroAppearBasic?.Invoke();
             OnEnviroAppear?.Invoke(enviro);
         }
@@ -174,7 +174,7 @@ public class EventController : MonoBehaviour
         public UnityAction<BaseItem> OnItemAppear;
         public void CallOnItemAppear(BaseItem item)
         {
-            Debug.Log("Appear");
+            Debug.Log("ItemAppear");
             OnItemAppearBasic?.Invoke();
             OnItemAppear?.Invoke(item);
         }
@@ -194,7 +194,7 @@ public class EventController : MonoBehaviour
         public UnityAction<BaseWeapon> OnWeaponAppear;
         public void CallOnWeaponAppear(BaseWeapon weapon)
         {
-            Debug.Log("Appear");
+            Debug.Log("WeaponAppear");
             OnWeaponAppearBasic?.Invoke();
             OnWeaponAppear?.Invoke(weapon);
         }

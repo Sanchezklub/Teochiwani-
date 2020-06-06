@@ -7,7 +7,7 @@ public class EnviromentTracker : MonoBehaviour
 {
     public List<EnviroId> enviros = new List<EnviroId>();
 
-    public void Awake()
+    public void Start()
     {
         EventController.instance.enviromentEvents.OnEnviroAppear += OnNewEnviro;
         EventController.instance.enviromentEvents.OnEnviroDied += OnEnviroDie;

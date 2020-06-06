@@ -7,7 +7,7 @@ public class EnemyTracker : MonoBehaviour
 {
     public List<EnemyHealth> enemies = new List<EnemyHealth>();
 
-    public void Awake()
+    public void Start()
     {
         EventController.instance.enemyEvents.OnEnemyAppear += OnNewEnemy;
         EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDie;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bow : BaseWeapon
 {
-    public bool FacingRight = true;
+
     public GameObject bulletPrefab;
     public Transform firePoint;
     public Collider2D coll;

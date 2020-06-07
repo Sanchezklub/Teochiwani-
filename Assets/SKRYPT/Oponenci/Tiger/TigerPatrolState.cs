@@ -23,6 +23,8 @@ public class TigerPatrolState : BaseState<TigerBrain>
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+        brain.enemyAnimator.SetBool("IsPatrolling", true);
+        brain.enemyAnimator.SetBool("IsAttacking", false);
       
 
     }
@@ -77,6 +79,8 @@ public class TigerPatrolState : BaseState<TigerBrain>
     public override void DeinitState(TigerBrain controller)
     {
         base.DeinitState(controller);
+        brain.enemyAnimator.SetBool("IsCharging", true);
+        brain.enemyAnimator.SetBool("IsPatrolling", false);
     }
 
     void Flip()

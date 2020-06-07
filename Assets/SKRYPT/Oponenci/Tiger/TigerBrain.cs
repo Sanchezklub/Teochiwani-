@@ -9,15 +9,17 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public Transform AttackPoint;
     public Transform raycastTransform;
     [SerializeField] public LayerMask WhatIsGround;
+    public LayerMask Player;
     public bool FacingRight;
-    public float damage;
+    public float AttackDamage;
     public float speed;
     public float StartFollowDist;
-    public float StopChargeDist;
+    public float StopAttackDist;
     public Animator enemyAnimator;
     public float ChannellTime;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
+    
 
     private void Start()
     {
@@ -54,7 +56,7 @@ public class TigerBrain : BaseBrain<TigerBrain>
         ChangeState(new TigerChannellingState());
     }
 
-    public void StartCharge()
+    public void StartAttack()
     {
         //enemyToFollow = objectToFollow;
         ChangeState(new TigerAtackState());

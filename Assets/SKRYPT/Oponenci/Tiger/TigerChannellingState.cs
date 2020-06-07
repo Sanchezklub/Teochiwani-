@@ -17,6 +17,8 @@ public class TigerChannellingState : BaseState<TigerBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = Vector2.zero;
         FaceTowardsPlayer();
+        brain.enemyAnimator.SetBool("IsCharging", true);
+        brain.enemyAnimator.SetBool("IsPatrolling", false);
        
     }
 
@@ -48,7 +50,7 @@ public class TigerChannellingState : BaseState<TigerBrain>
         ChannellingTime += Time.deltaTime;
         if (ChannellingTime > brain.ChannellTime)
         {
-            brain.StartCharge();
+            brain.StartAttack();
         }
     }
 
@@ -61,5 +63,7 @@ public class TigerChannellingState : BaseState<TigerBrain>
     public override void DeinitState(TigerBrain controller)
     {
         base.DeinitState(controller);
+        brain.enemyAnimator.SetBool("IsCharging", false);
+        brain.enemyAnimator.SetBool("IsAttacking", true);
     }
 }

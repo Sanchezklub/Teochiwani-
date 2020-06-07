@@ -17,6 +17,16 @@ public class SplashController : MonoBehaviour
         instance = this;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            MakeSplat();
+        }
+    }
+
+
     public void MakeSplat()
     {
         var newSplat = Instantiate(splats[Random.Range(0, splats.Length)],transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));

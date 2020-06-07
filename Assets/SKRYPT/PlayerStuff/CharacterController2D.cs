@@ -199,6 +199,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 obj.SetActive(false);
             }
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             
         }
         else
@@ -207,7 +208,8 @@ public class CharacterController2D : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-             LadderSprite.SetActive(false);
+            LadderSprite.SetActive(false);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 

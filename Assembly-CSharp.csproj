@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraStartFollowPlayer.cs" />
-    <Compile Include="Assets\Kolce.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\DataStorage.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\Events\EventController.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\GameController.cs" />
@@ -147,6 +146,7 @@
     <Compile Include="Assets\SKRYPT\Objects\Dzban\Dzban.cs" />
     <Compile Include="Assets\SKRYPT\Objects\Dzban\DzbanHealth.cs" />
     <Compile Include="Assets\SKRYPT\Objects\Keys.cs" />
+    <Compile Include="Assets\SKRYPT\Objects\Kolce.cs" />
     <Compile Include="Assets\SKRYPT\Objects\Podest.cs" />
     <Compile Include="Assets\SKRYPT\Objects\Portal.cs" />
     <Compile Include="Assets\SKRYPT\Objects\Spike.cs" />
@@ -219,11 +219,13 @@
     <Compile Include="Assets\SKRYPT\Weapon And Combat\ItemValue.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\MieczTysiacaKrokow.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\POA.cs" />
+    <Compile Include="Assets\SKRYPT\Weapon And Combat\PrecisiceBow.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\ToporWichury.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\Weapon.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\kasacz.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\maczuga.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\woodensword.cs" />
+    <Compile Include="Assets\Strzala.cs" />
     <Compile Include="Assets\test\EnemyTracker.cs" />
     <Compile Include="Assets\test\EnviroId.cs" />
     <Compile Include="Assets\test\EnviromentTracker.cs" />

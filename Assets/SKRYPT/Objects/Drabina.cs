@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Drabina : MonoBehaviour
 {
+    /*
+
     [SerializeField] private float speed = 500;
     private float speed2 = 1;
     private bool LadderMode = false;
     private bool Player_ladderMode;
+    private bool WasOnPreviousLadder = false;
     [SerializeField] private Rigidbody2D Rb2D;
     private CharacterController2D playerController;
+    private int TriggerEnterCount = 0;
 
     private void Start()
     {
@@ -23,6 +27,7 @@ public class Drabina : MonoBehaviour
             //playerController.ladderMode = true;
             Rb2D = other.attachedRigidbody;
             LadderMode = true;
+            TriggerEnterCount += 1;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -43,6 +48,7 @@ public class Drabina : MonoBehaviour
             playerController.ladderMode = false;
             LadderMode = false;
             Rb2D.gravityScale = 2;
+            TriggerEnterCount -= 1;
         }
     }
 
@@ -86,6 +92,8 @@ public class Drabina : MonoBehaviour
         }
         
     }
+
+    */
 }
 
 

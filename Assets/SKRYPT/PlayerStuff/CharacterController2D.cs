@@ -32,8 +32,10 @@ public class CharacterController2D : MonoBehaviour
     private bool ledgeDetected;
     private bool isDashing;
     private bool isWallHigher;
+    private int ladderEnterCount = 0;
 
     public bool ladderMode;
+    public bool ladderInRange;
 
     private Vector2 ledgePosBot;
     private Vector2 ledgePos1;
@@ -68,9 +70,11 @@ public class CharacterController2D : MonoBehaviour
     public float dashSpeed;
     public float distanceBetweenImages;
     public float dashCoolDown;
+    public float LadderSpeed;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
+    private Vector2 CollidedLadderPosition;
 
     public Transform groundCheck;
     public Transform wallCheck;
@@ -81,7 +85,6 @@ public class CharacterController2D : MonoBehaviour
     public LayerMask whatIsWall;
 
     // Start is called before the first frame update
-    
 	
 	
 	void Start()
@@ -199,8 +202,8 @@ public class CharacterController2D : MonoBehaviour
             {
                 obj.SetActive(false);
             }
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+
         }
         else
         {
@@ -309,6 +312,15 @@ public class CharacterController2D : MonoBehaviour
         {
             checkJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && ladderEnterCount > 0)
+        {
+            ladderMode = !ladderMode;
+            if (ladderMode)
+            {
+                transform.position = new Vector2(CollidedLadderPosition.x, transform.position.y);
+            }
         }
 
       /*  if (Input.GetButtonDown("Dash"))
@@ -459,6 +471,24 @@ public class CharacterController2D : MonoBehaviour
         {
             rb.velocity = new Vector2(GameController.instance.DataStorage.PlayerInfo.speed * movementInputDirection, rb.velocity.y);
         }
+        if (ladderMode)
+        {
+            float PlayerInput = Input.GetAxisRaw("Vertical");
+            switch (PlayerInput)
+            {
+                case -1:
+                    rb.isKinematic = false;
+                    rb.velocity = new Vector2(rb.velocity.x, -LadderSpeed);
+                    break;
+                case 1:
+                    rb.isKinematic = false;
+                    rb.velocity = new Vector2(rb.velocity.x, LadderSpeed);
+                    break;
+                case 0:
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                    break;
+            }
+        }
         
         /*
         if (isWallSliding)
@@ -505,5 +535,30 @@ public class CharacterController2D : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            //ladderInRange = true;
+            ladderEnterCount += 1;
+            CollidedLadderPosition = collision.gameObject.transform.position;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            //ladderInRange = false;
+            ladderEnterCount -= 1;
+            if (ladderEnterCount == 0)
+            {
+                ladderMode = false;
+            }
+
+
+        }
     }
 }

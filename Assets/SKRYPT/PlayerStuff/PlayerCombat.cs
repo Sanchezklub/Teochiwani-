@@ -108,6 +108,12 @@ public class PlayerCombat : MonoBehaviour
         item = null;
         collidedWeapon = null;
     }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        item = collision.GetComponent<BaseItem>();
+        collidedWeapon = collision.GetComponent<BaseWeapon>();
+        
+    }
     public void return1()
     {
         if (noOfClicks >= 2)

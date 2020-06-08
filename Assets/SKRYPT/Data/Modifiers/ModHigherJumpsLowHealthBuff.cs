@@ -17,6 +17,7 @@ public class ModHigherJumpsLowHealthBuff : BaseModifier
         base.Init(OnCompletedCallback);
         initialJumpforce = GameController.instance.DataStorage.PlayerInfo.jumpforce;
         AssignEvents();
+        OnPlayerReceiveDamage(0, GameController.instance.DataStorage.PlayerInfo.currenthealth);
     }
 
     public void AssignEvents()

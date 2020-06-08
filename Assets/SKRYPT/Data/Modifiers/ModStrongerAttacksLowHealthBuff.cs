@@ -17,6 +17,7 @@ public class ModStrongerAttacksLowHealthBuff : BaseModifier
         base.Init(OnCompletedCallback);
         initialDmg = GameController.instance.DataStorage.PlayerInfo.damage;
         AssignEvents();
+        OnPlayerReceiveDamage(0, GameController.instance.DataStorage.PlayerInfo.currenthealth);
     }
 
     public void AssignEvents()

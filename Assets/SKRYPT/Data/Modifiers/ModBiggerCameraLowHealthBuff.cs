@@ -19,6 +19,7 @@ public class ModBiggerCameraLowHealthBuff : BaseModifier
         camera = Camera.main.GetComponent<CinemachineBrain>()?.ActiveVirtualCamera as CinemachineVirtualCamera;
         initialSize = camera.m_Lens.OrthographicSize;
         AssignEvents();
+        OnPlayerReceiveDamage(0, GameController.instance.DataStorage.PlayerInfo.currenthealth);
     }
 
     public void AssignEvents()

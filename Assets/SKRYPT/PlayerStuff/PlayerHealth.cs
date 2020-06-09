@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -17,14 +16,8 @@ public class PlayerHealth : Health
     protected override void Start()
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
-        PlayerAnimator = GetComponent<Animator>();
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
-        EventController.instance.playerEvents.OnMaxHealthValueChangeBasic += UpdateHealthbar;
-    }
-
-    public void UpdateHealthbar()
-    {
-        healthBar.maxValue = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        PlayerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -60,7 +53,6 @@ public class PlayerHealth : Health
         PlayerAnimator.SetTrigger("Die");
         File.Delete( Application.persistentDataPath+"/player.fun");
         deleter.Delete();
-        EventController.instance.playerEvents.OnMaxHealthValueChangeBasic -= UpdateHealthbar;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //MainMenu.SetActive(true);
 

@@ -14,6 +14,7 @@ public class ModFlatMaxHealthBuff : BaseModifier
         base.Init(OnCompletedCallback);
         GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
         EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        EventController.instance.playerEvents.CallOnMaxHealthValueChange(GameController.instance.DataStorage.PlayerInfo.maxhealth);
     }
 
     void PlayerDied()

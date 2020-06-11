@@ -27,8 +27,8 @@ public class WeaponTracker : MonoBehaviour
 
     public void OnWeaponPickup(BaseWeapon oldWeapon, BaseWeapon newWeapon)
     {
-        weapons.Add(oldWeapon);
         weapons.Remove(newWeapon);
+        weapons.Add(oldWeapon);
     }
 
     private void OnApplicationQuit()

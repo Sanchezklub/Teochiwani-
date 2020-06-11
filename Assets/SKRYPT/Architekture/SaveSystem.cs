@@ -165,7 +165,7 @@ public class SaveSystem : MonoBehaviour
             BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
             if (weap != null)
             {
-                weap.Start();
+                weap.GetUITexts();
                 player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
             }
             else

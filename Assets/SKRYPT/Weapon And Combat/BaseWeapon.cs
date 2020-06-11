@@ -14,15 +14,21 @@ public abstract class BaseWeapon : MonoBehaviour
     public string Name;
     public int id;
     public string FlavorText;
-    public void Start()
+    public void Awake()
     {
        
         //UIFlavourText = Find("FlavourText");
         EventController.instance.weaponEvents.CallOnWeaponAppear(this);
-        UIFlavorText = GameObject.FindGameObjectWithTag("FlavorText")?.GetComponentInChildren<TextMeshProUGUI>(true);
-        UIWeaponName = GameObject.FindGameObjectWithTag("WeaponName")?.GetComponentInChildren<TextMeshProUGUI>(true);
+        GetUITexts();
 
     }
+
+    public void GetUITexts()
+    {
+        UIFlavorText = GameObject.FindGameObjectWithTag("FlavorText")?.GetComponentInChildren<TextMeshProUGUI>(true);
+        UIWeaponName = GameObject.FindGameObjectWithTag("WeaponName")?.GetComponentInChildren<TextMeshProUGUI>(true);
+    }
+
     public enum AnimationType
     {
         IsAttackingVLight,

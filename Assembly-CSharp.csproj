@@ -90,6 +90,11 @@
     <Compile Include="Assets\SKRYPT\DestroyStuff\Destrucktable.cs" />
     <Compile Include="Assets\SKRYPT\DestroyStuff\DetroyTrue.cs" />
     <Compile Include="Assets\SKRYPT\EnemyStuff\ChildEnemyHealth.cs" />
+    <Compile Include="Assets\SKRYPT\EnemyStuff\Command\BossApproachPlayerCommand.cs" />
+    <Compile Include="Assets\SKRYPT\EnemyStuff\Command\Command.cs" />
+    <Compile Include="Assets\SKRYPT\EnemyStuff\Command\CommandInvoker.cs" />
+    <Compile Include="Assets\SKRYPT\EnemyStuff\Command\LogCommand.cs" />
+    <Compile Include="Assets\SKRYPT\EnemyStuff\Command\WaitCommand.cs" />
     <Compile Include="Assets\SKRYPT\EnemyStuff\Enemy.cs" />
     <Compile Include="Assets\SKRYPT\EnemyStuff\Enemy1.cs" />
     <Compile Include="Assets\SKRYPT\EnemyStuff\EnemyAgro.cs" />
@@ -157,6 +162,9 @@
     <Compile Include="Assets\SKRYPT\Oponenci\Base\FightState.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Base\FollowState.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Base\PatrolState.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Commander\CommanderBrain.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Commander\CommanderFightState.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Commander\CommanderPatrolState.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Dragon.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Dzik\Dzik.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Kapibara\Hitbox.cs" />
@@ -177,6 +185,11 @@
     <Compile Include="Assets\SKRYPT\Oponenci\Shieldman\ShieldmanBrain.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Shieldman\ShieldmanFollowState.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Shieldman\ShieldmanPatrolState.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Skolopendra\SkolopendraCommandInvoker.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Skolopendra\SkolopendraDigDownCommand.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Skolopendra\SkolopendraDigUpCommand.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Skolopendra\SkolopendraMoveCommand.cs" />
+    <Compile Include="Assets\SKRYPT\Oponenci\Skolopendra\SkolopendraWaitCommand.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Spearman\SpearmanBrain.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Spearman\SpearmanPatrolState.cs" />
     <Compile Include="Assets\SKRYPT\Oponenci\Spearman\SpearmanShotState.cs" />

@@ -34,18 +34,19 @@ public class SkolopendraMoveCommand : Command
         base.StartExecution(OnFinishCallback);
         StartTime = Time.time;
         WaitTime = Random.Range(MinDigWaitTime, MaxDigWaitTime);
+        DetermineIfFacingRight();
     }
 
     public override void UpdateExecution()
     {
         base.UpdateExecution();
 
-        if (Physics2D.Raycast(Raycast.position, Vector2.down, 2f, WhatIsGround) && !Physics2D.Raycast(Raycast.position, Vector2.right, 2f, WhatIsGround))
+        if (Physics2D.Raycast(Raycast.position, Vector2.down, 3.5f, WhatIsGround) && !Physics2D.Raycast(Raycast.position, Vector2.right, 3.5f, WhatIsGround))
         {
+            Debug.Log("Skolopendra raycast hit");
+            Debug.DrawRay(Raycast.position, Vector2.right * 3.5f, Color.yellow);
+            Debug.DrawRay(Raycast.position, Vector2.down * 3.5f, Color.yellow);
 
-            //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
-
-            //Debug.Log("Did Hit");
             if (FacingRight == true)
             {
                 rb.velocity = new Vector2(1 * speed, rb.velocity.y);
@@ -61,6 +62,7 @@ public class SkolopendraMoveCommand : Command
         }
         else
         {
+            Debug.Log("Skolopendra raycast didn't hit");
             Flip();
         }
 
@@ -74,5 +76,17 @@ public class SkolopendraMoveCommand : Command
     {
         rb.transform.Rotate(new Vector2(0f, 180f));
         FacingRight = !FacingRight;
+    }
+
+    void DetermineIfFacingRight()
+    {
+        if (rb.transform.localRotation == Quaternion.Euler(0, 0, 0))
+        {
+            FacingRight = true;
+        }
+        else
+        {
+            FacingRight = false;
+        }
     }
 }

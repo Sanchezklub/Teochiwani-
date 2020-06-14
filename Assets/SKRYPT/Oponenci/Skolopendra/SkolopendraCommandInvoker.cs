@@ -25,6 +25,7 @@ public class SkolopendraCommandInvoker : CommandInvoker
 
     public Transform Raycast;
 
+    public float UndergroundWaitTime;
 
     public EnemyHealth Health;
 
@@ -61,7 +62,7 @@ public class SkolopendraCommandInvoker : CommandInvoker
 
         AddCommand(new SkolopendraMoveCommand(Speed, Raycast, MinDigWaitTime,MaxDigWaitTime, WhatIsGround, rb));
         AddCommand(new SkolopendraDigDownCommand());
-        AddCommand(new SkolopendraWaitCommand());
+        AddCommand(new SkolopendraWaitCommand(UndergroundWaitTime));
         AddCommand(new SkolopendraDigUpCommand());
 
         StartExecution();

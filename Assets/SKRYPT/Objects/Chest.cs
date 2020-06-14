@@ -9,7 +9,7 @@ public class Chest : MonoBehaviour
     private bool PlayerInRange;
     public GameObject[] objects;
     public GameObject Particle;
-
+    public BoxCollider2D bc;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,6 +44,8 @@ public class Chest : MonoBehaviour
             Instantiate(this.Particle, transform.position, Quaternion.identity);
         }
         Spawn();
+        this.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        bc.isTrigger=true;
         EnviroId Enviroid = GetComponent<EnviroId>();
         EventController.instance.enviromentEvents.CallOnEnviroDied(Enviroid);
         Enviroid.id = 3;

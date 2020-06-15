@@ -6,6 +6,8 @@ public class SkolopendraCommandInvoker : CommandInvoker
 {
     // Start is called before the first frame update
 
+    public float damage;
+
     public float baseSpeed;
     public float maxSpeedPercentage;
 
@@ -19,11 +21,20 @@ public class SkolopendraCommandInvoker : CommandInvoker
     public float MinDigWaitTime;
     public float MaxDigWaitTime;
 
+    public Vector2 TempPosition;
+
     public LayerMask WhatIsGround;
 
     public Rigidbody2D rb;
 
     public Transform Raycast;
+
+    public Transform SkolopendraPointL;
+    public Transform SkolopendraPointR;
+
+    public float MinX;
+    public float MaxX;
+    public float Y;
 
     public float UndergroundWaitTime;
 
@@ -31,7 +42,7 @@ public class SkolopendraCommandInvoker : CommandInvoker
 
     void CalculateBuffs()
     {
-        float BaseValue = (1f - Mathf.InverseLerp(0f, Health.MaxHealth, Health.currentHealth));
+        float BaseValue = Mathf.InverseLerp(0f, Health.MaxHealth, Health.currentHealth);
 
         float SpeedValue = BaseValue * (maxSpeedPercentage / 100);
         Speed = baseSpeed + (baseSpeed * SpeedValue);
@@ -61,9 +72,9 @@ public class SkolopendraCommandInvoker : CommandInvoker
         CalculateBuffs();
 
         AddCommand(new SkolopendraMoveCommand(Speed, Raycast, MinDigWaitTime,MaxDigWaitTime, WhatIsGround, rb));
-        AddCommand(new SkolopendraDigDownCommand());
+        AddCommand(new SkolopendraDigDownCommand(TempPosition, rb));
         AddCommand(new SkolopendraWaitCommand(UndergroundWaitTime));
-        AddCommand(new SkolopendraDigUpCommand());
+        AddCommand(new SkolopendraDigUpCommand(MinX, MaxX, Y, rb));
 
         StartExecution();
     }

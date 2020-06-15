@@ -38,7 +38,7 @@ public class SkolopendraCommandInvoker : CommandInvoker
 
     public float UndergroundWaitTime;
 
-    public EnemyHealth Health;
+    public SkolopendraHealth Health;
 
     void CalculateBuffs()
     {
@@ -58,7 +58,7 @@ public class SkolopendraCommandInvoker : CommandInvoker
     protected override void Start()
     {
         base.Start();
-        Health = GetComponent<EnemyHealth>();
+        Health = GetComponent<SkolopendraHealth>();
         MakeSkolopendraInstruction();
     }
 

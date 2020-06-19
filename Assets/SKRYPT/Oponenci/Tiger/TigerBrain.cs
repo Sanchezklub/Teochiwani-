@@ -9,7 +9,7 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public Transform AttackPoint;
     public Transform raycastTransform;
     [SerializeField] public LayerMask WhatIsGround;
-    public LayerMask Player;
+    public LayerMask PlayerLayer;
     public bool FacingRight;
     public float AttackDamage;
     public float speed;
@@ -19,7 +19,7 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public float ChannellTime;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
-    
+    public float jump;
 
     private void Start()
     {

@@ -178,7 +178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360361236040037438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.23, y: 2.52, z: 0}
+  m_LocalPosition: {x: 6.59, y: 4.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3393865980648705052}
@@ -506,13 +506,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5723ef98d77349c40ab9f23cc48b2f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 10
+  AttackRange: 50
   AttackPoint: {fileID: 4663913937218615991}
   raycastTransform: {fileID: 4065059585719221684}
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2304
-  Player:
+  PlayerLayer:
     serializedVersion: 2
     m_Bits: 512
   FacingRight: 1
@@ -522,6 +522,7 @@ MonoBehaviour:
   StopAttackDist: 30
   enemyAnimator: {fileID: 7420580741950166706}
   ChannellTime: 1.817
+  jump: 16
 --- !u!61 &7579393732222685618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1423,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8244191914550951106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08, y: 5.36, z: 0}
+  m_LocalPosition: {x: 4.27, y: 4.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3393865980648705052}

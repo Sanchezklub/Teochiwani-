@@ -8,21 +8,27 @@ public class Dzik : MonoBehaviour
     public float damage;
     public float speed;
     public bool FacingRight;
+    public Transform raycastTransform;
+    [SerializeField] public LayerMask WhatIsGround;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCharge();
-        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Wallcheck();
         KeepCharging();
     }
 
-
+    void Wallcheck()
+    {
+        if (Physics2D.Raycast(new Vector2(raycastTransform.position.x, raycastTransform.position.y), Vector2.right, 2f, WhatIsGround))
+        Destroy(gameObject);
+    }
 
 
     public void StartCharge()

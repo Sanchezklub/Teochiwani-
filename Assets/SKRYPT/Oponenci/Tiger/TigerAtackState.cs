@@ -12,10 +12,11 @@ public class TigerAtackState : BaseState<TigerBrain>
     public float AttackRange;
     public Transform AttackPoint;
     public float AttackDamage;
-    public LayerMask Player;
+    public LayerMask PlayerLayer;
     public float AnimationDuration = 0.8f;
     public float Speed;
     public bool twojstary;
+    public int JD;
 
  public override void InitState(TigerBrain controller)
     {
@@ -43,23 +44,22 @@ public override void UpdateState()
             if (brain.FacingRight)
                 {
                     twojstary = true;
-                    enemyRigidBody2D.velocity = new Vector2(Speed,20);
+                    enemyRigidBody2D.velocity = new Vector2(Speed,JD);
                 }
             else
                 {
                     twojstary = true;
-                    enemyRigidBody2D.velocity = new Vector2(-1*Speed,20);
+                    enemyRigidBody2D.velocity = new Vector2(-1*Speed,JD);
                 }
         }
     }
 
 public void dmg()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRange, Player);
-        foreach (Collider2D enemy in hitEnemies)         
-        {
-        enemy.GetComponent<Health>()?.TakeDamage(AttackDamage);
-        }
+        Collider2D hitEnemies = Physics2D.OverlapCircle(AttackPoint.position, AttackRange, PlayerLayer);
+
+        hitEnemies.GetComponent<Health>()?.TakeDamage(AttackDamage);
+        Debug.Log("!jd");
     }
 
 void FaceTowardsPlayer()

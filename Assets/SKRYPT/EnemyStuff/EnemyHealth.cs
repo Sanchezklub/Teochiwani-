@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class EnemyHealth : Health
-{ 
+{
     public Animator enemyAnimator;
     public UnityAction Dying;
     public UnityAction TakingDamage;
-
+    public bool IsHuman;
     protected override void Start()
     {
         base.Start();
@@ -46,6 +46,17 @@ public class EnemyHealth : Health
         {
             enemyAnimator.SetTrigger(Keys.DIE_ANIM_KEY);
         }
+
+        if (IsHuman)// Dodawanie i odejmowanie karmy w zależności czy przeciwnik jest human czy nie. Karma min 0, max 50, start 25, zmiana o 1.
+
+            GameController.instance.DataStorage.PlayerInfo.karma -= 1;
+
+        else
+
+            GameController.instance.DataStorage.PlayerInfo.karma += 1;
+
+
+
     }
 
     public void GetDestroyed()

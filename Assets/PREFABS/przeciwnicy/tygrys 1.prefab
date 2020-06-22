@@ -516,7 +516,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   FacingRight: 1
-  AttackDamage: 20
+  AttackDamage: 5
   speed: 5
   StartFollowDist: 20
   StopAttackDist: 30
@@ -609,6 +609,7 @@ MonoBehaviour:
   id: 7
   splashController: {fileID: 6274277937354517013}
   enemyAnimator: {fileID: 7420580741950166706}
+  IsHuman: 0
 --- !u!114 &6274277937354517013
 MonoBehaviour:
   m_ObjectHideFlags: 0

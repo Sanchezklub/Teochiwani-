@@ -56,9 +56,9 @@ public override void UpdateState()
 
 public void dmg()
     {
-        Collider2D hitEnemies = Physics2D.OverlapCircle(AttackPoint.position, AttackRange, PlayerLayer);
+        Collider2D hitEnemies = Physics2D.OverlapCircle(brain.AttackPoint.position, brain.AttackRange, brain.PlayerLayer);
 
-        hitEnemies.GetComponent<Health>()?.TakeDamage(AttackDamage);
+        hitEnemies?.GetComponent<Health>()?.TakeDamage(brain.AttackDamage);
         Debug.Log("!jd");
     }
 

@@ -19,7 +19,7 @@ public class TigerChannellingState : BaseState<TigerBrain>
         FaceTowardsPlayer();
         brain.enemyAnimator.SetBool("IsCharging", true);
         brain.enemyAnimator.SetBool("IsPatrolling", false);
-       
+        ChannellingTime = 0;
     }
 
     void FaceTowardsPlayer()

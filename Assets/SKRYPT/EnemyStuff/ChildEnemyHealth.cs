@@ -5,22 +5,16 @@ using UnityEngine;
 public class ChildEnemyHealth : Health
 {
     private GameObject Hitbox;
-    private GameObject parent;
+    private EnemyHealth parentHealth;
     protected override void Start()
     {
         base.Start();
-        parent = this.transform.parent.gameObject;
+        parentHealth = this.transform.parent.GetComponent<EnemyHealth>();
     }
 
     public override void TakeDamage(float damage, GameObject attacker = null)
     {
-        base.TakeDamage(damage);
+        parentHealth.TakeDamage(damage);
 
     }
-
-    protected override void Die()
-    {
-        Destroy(parent);
-    }
-
 }

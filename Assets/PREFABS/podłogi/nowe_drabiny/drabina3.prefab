@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &22824438382521275
+--- !u!1 &1473871775482850847
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1687724664721352673}
-  - component: {fileID: 8614799015552640630}
-  - component: {fileID: 5402068172735314032}
+  - component: {fileID: 9208092967170332485}
+  - component: {fileID: 1322709040961686547}
+  - component: {fileID: 1469899492840193719}
   m_Layer: 0
   m_Name: Drabina3
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1687724664721352673
+--- !u!4 &9208092967170332485
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22824438382521275}
+  m_GameObject: {fileID: 1473871775482850847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -40.2, z: 0}
   m_LocalScale: {x: 1, y: 1.1, z: 0}
   m_Children: []
-  m_Father: {fileID: 6567097109261025904}
+  m_Father: {fileID: 4840518018669355145}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8614799015552640630
+--- !u!114 &1322709040961686547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22824438382521275}
+  m_GameObject: {fileID: 1473871775482850847}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -46,13 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!114 &5402068172735314032
+--- !u!114 &1469899492840193719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22824438382521275}
+  m_GameObject: {fileID: 1473871775482850847}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!1 &2310805000748148549
+--- !u!1 &8048369969230236803
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,59 +68,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2646922465014655594}
-  - component: {fileID: 1623727381754105576}
-  - component: {fileID: 1425844772757280301}
+  - component: {fileID: 4840518018669355145}
   m_Layer: 0
-  m_Name: Drabina4
+  m_Name: drabina3
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2646922465014655594
+--- !u!4 &4840518018669355145
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2310805000748148549}
+  m_GameObject: {fileID: 8048369969230236803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -60.2, z: 0}
-  m_LocalScale: {x: 1, y: 1.1, z: 0}
-  m_Children: []
-  m_Father: {fileID: 6567097109261025904}
-  m_RootOrder: 3
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1161278444816353593}
+  - {fileID: 1906558723998689295}
+  - {fileID: 9208092967170332485}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1623727381754105576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2310805000748148549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!114 &1425844772757280301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2310805000748148549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!1 &3154750635133183529
+--- !u!1 &9047002208331467065
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,9 +101,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3520642312168703493}
-  - component: {fileID: 770741386316446244}
-  - component: {fileID: 9154941099604735270}
+  - component: {fileID: 1161278444816353593}
+  - component: {fileID: 3160452385523653628}
+  - component: {fileID: 3193906509157065202}
   m_Layer: 0
   m_Name: Drabina1
   m_TagString: Untagged
@@ -138,27 +111,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3520642312168703493
+--- !u!4 &1161278444816353593
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3154750635133183529}
+  m_GameObject: {fileID: 9047002208331467065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.1, z: 0}
   m_Children: []
-  m_Father: {fileID: 6567097109261025904}
+  m_Father: {fileID: 4840518018669355145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770741386316446244
+--- !u!114 &3160452385523653628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3154750635133183529}
+  m_GameObject: {fileID: 9047002208331467065}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -166,13 +139,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!114 &9154941099604735270
+--- !u!114 &3193906509157065202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3154750635133183529}
+  m_GameObject: {fileID: 9047002208331467065}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
@@ -180,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!1 &5688192772529324688
+--- !u!1 &9215966887635176441
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,9 +161,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7820942684576997405}
-  - component: {fileID: 8103448475886890344}
-  - component: {fileID: 6110765614956423295}
+  - component: {fileID: 1906558723998689295}
+  - component: {fileID: 8428866383355574136}
+  - component: {fileID: 564323163238961156}
   m_Layer: 0
   m_Name: Drabina2
   m_TagString: Untagged
@@ -198,27 +171,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7820942684576997405
+--- !u!4 &1906558723998689295
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688192772529324688}
+  m_GameObject: {fileID: 9215966887635176441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -20.2, z: 0}
   m_LocalScale: {x: 1, y: 1.1, z: 0}
   m_Children: []
-  m_Father: {fileID: 6567097109261025904}
+  m_Father: {fileID: 4840518018669355145}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8103448475886890344
+--- !u!114 &8428866383355574136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688192772529324688}
+  m_GameObject: {fileID: 9215966887635176441}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
@@ -226,13 +199,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!114 &6110765614956423295
+--- !u!114 &564323163238961156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688192772529324688}
+  m_GameObject: {fileID: 9215966887635176441}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
@@ -240,37 +213,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c, type: 3}
---- !u!1 &8561013609924338817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6567097109261025904}
-  m_Layer: 0
-  m_Name: drabina4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6567097109261025904
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8561013609924338817}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3520642312168703493}
-  - {fileID: 7820942684576997405}
-  - {fileID: 1687724664721352673}
-  - {fileID: 2646922465014655594}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6603396359846728680}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8724862674676285456}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3677451956187491220}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514671791773392421}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3335095224426772556}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1616094926218654311}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7559939220712865189}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8179849062165203328}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 3012465158399855618}
   - component: {fileID: 7430453235004978942}
   - component: {fileID: 5737882224275693364}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: noga przod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6818797550683412498}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7667968177499115885}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 7414761434899873339}
   - component: {fileID: 7414761434899873340}
   - component: {fileID: 7414761434899873329}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "kap\u0142an"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7414761434899873342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 7.5826416, y: 13.603245}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.22
 --- !u!95 &7414761434899873341
 Animator:
   serializedVersion: 3
@@ -571,18 +571,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7690606e68751f144bb0f4cc957b9eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 0
+  AttackRange: 4
   AttackPoint: {fileID: 7414761433327932572}
   raycastTransform: {fileID: 7414761434152786645}
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  FacingRight: 0
-  damage: 0
-  speed: 0
-  StartFollowDist: 0
-  StopFollowDist: 0
-  StartFightDist: 0
+    m_Bits: 256
+  FacingRight: 1
+  damage: 10
+  speed: 10
+  StartFollowDist: 20
+  StopFollowDist: 20
+  StartFightDist: 10
   enemyAnimator: {fileID: 7414761434899873341}
 --- !u!1 &5444219258524648232
 GameObject:
@@ -593,7 +593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4905259856375316646}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9192762723035066201}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6596754170358628597}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 2214197452312745844}
   - component: {fileID: 3533651810436601310}
   - component: {fileID: 8808891035110612740}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6335827659411529486}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6781047902007009148}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7414761433327932572}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414761433327932571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.07, y: 7.78, z: 0}
+  m_LocalPosition: {x: 3.07, y: 7.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6824178057378367451}
@@ -881,7 +881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7414761434152786645}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: raycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7414761434152786644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35, y: 3.07, z: 0}
+  m_LocalPosition: {x: 3.1, y: 3.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6824178057378367451}
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 4121077641631512724}
   - component: {fileID: 3613426568522534065}
   - component: {fileID: 6519164154676663642}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: noga przod kopia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 6587137630321640764}
   - component: {fileID: 632339020179009124}
   - component: {fileID: 2391487852502674995}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: glowa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 5894903218007103304}
   - component: {fileID: 2677846248994738370}
   - component: {fileID: 407560329970761036}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: reka przod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 7867209717291823294}
   - component: {fileID: 6192339996384355142}
   - component: {fileID: 7872930601595404600}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: reka przod kopia 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

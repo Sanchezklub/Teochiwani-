@@ -16,7 +16,7 @@ public class KaplanFollowState : BaseState<KaplanBrain>
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
-       // brain.enemyAnimator.SetBool("iswalking", true);
+       brain.enemyAnimator.SetBool("iswalking", true);
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
 
@@ -52,7 +52,7 @@ public class KaplanFollowState : BaseState<KaplanBrain>
     public override void DeinitState(KaplanBrain controller)
     {
         base.DeinitState(controller);
-        //brain.enemyAnimator.SetBool("iswalking", false);
+        brain.enemyAnimator.SetBool("iswalking", false);
     }
 
     void MoveTowardsPlayer()

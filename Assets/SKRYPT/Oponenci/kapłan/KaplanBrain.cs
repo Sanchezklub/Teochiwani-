@@ -29,7 +29,6 @@ public class KaplanBrain : BaseBrain<KaplanBrain>
     {
         UpdateChildState();
 
-        Debug.Log(currentState + "Shieldman State is");
     }
 
     public override void ChangeState(BaseState<KaplanBrain> newState)
@@ -53,7 +52,7 @@ public class KaplanBrain : BaseBrain<KaplanBrain>
 
     public void StartAttack()
     {
-        //enemyToFollow = objectToFollow;
+        
         ChangeState(new KaplanAttackState());
     }
     public void StartFollow()

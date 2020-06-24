@@ -15,7 +15,7 @@ public class KaplanAttackState : BaseState<KaplanBrain>
     {
         base.InitState(controller);
         this.brain = controller;
-       // brain.enemyAnimator.SetBool("isfighting", true);
+        brain.enemyAnimator.SetBool("isfighting", true);
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = new Vector2(0, 0);
@@ -41,6 +41,7 @@ public class KaplanAttackState : BaseState<KaplanBrain>
             {
                 Health player = hitColliders[i].GetComponent<Health>();
                 player?.TakeDamage(brain.damage, brain.gameObject);
+                brain.damage += 2;
                 break;
             }
 
@@ -54,7 +55,7 @@ public class KaplanAttackState : BaseState<KaplanBrain>
     {
         brain.Attacking -= Attack;
         brain.LeaveFightState -= AttemptLeavingFightState;
-       // brain.enemyAnimator.SetBool("isfighting", false);
+        brain.enemyAnimator.SetBool("isfighting", false);
         base.DeinitState(controller);
     }
 

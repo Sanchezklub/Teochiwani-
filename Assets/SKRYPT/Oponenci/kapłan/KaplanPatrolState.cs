@@ -17,7 +17,7 @@ public class KaplanPatrolState : BaseState<KaplanBrain>
         this.brain = controller;
 
 
-       // brain.enemyAnimator.SetBool("iswalking", true);
+        brain.enemyAnimator.SetBool("iswalking", true);
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
@@ -45,7 +45,7 @@ public class KaplanPatrolState : BaseState<KaplanBrain>
         }
 
 
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 5f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
             if (brain.FacingRight == true)
             {
@@ -66,7 +66,7 @@ public class KaplanPatrolState : BaseState<KaplanBrain>
     public override void DeinitState(KaplanBrain controller)
     {
         base.DeinitState(controller);
-        //brain.enemyAnimator.SetBool("iswalking", false);
+        brain.enemyAnimator.SetBool("iswalking", false);
     }
 
     void Flip()

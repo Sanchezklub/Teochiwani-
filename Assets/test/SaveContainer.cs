@@ -7,4 +7,5 @@ public class SaveContainer
 {
     public PlayerDataScript playerData;
     public LevelData levelData;
+    public ItemsData itemsData;
 }

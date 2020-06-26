@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public abstract class ItemConditioner
+{
+    public bool itemUnlocked;
+    public BaseCondition condition;
+}
+
 public abstract class BaseItem : MonoBehaviour
 {
     public BaseModifier[] modifiers;
@@ -12,6 +19,10 @@ public abstract class BaseItem : MonoBehaviour
     [SerializeField] private string itemName;
     public int id;
     public GameObject FloatingTextPrefab;
+
+    [SerializeField]
+    private ItemConditioner conditioner;
+    public ItemConditioner Conditioner => conditioner;
 
      private void Start()
     {

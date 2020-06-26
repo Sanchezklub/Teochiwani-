@@ -13,6 +13,7 @@ public class EventController : MonoBehaviour
     public EnviromentEvents enviromentEvents;
     public ItemEvents itemEvents;
     public WeaponEvents weaponEvents;
+
     private void Awake()
     {
         instance = this;

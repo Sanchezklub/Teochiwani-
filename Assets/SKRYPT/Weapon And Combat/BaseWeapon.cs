@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+
 public abstract class BaseWeapon : MonoBehaviour
 {
 

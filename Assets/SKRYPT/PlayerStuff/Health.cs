@@ -34,6 +34,23 @@ public class Health : MonoBehaviour
     protected virtual void Die() {
     
     }
+    public virtual void PoisonEffect(float damage, int TimeCount, float TimeBetweenHits)
+    {
+      
+        StartCoroutine(PoisonDamage(damage,  TimeCount, TimeBetweenHits)) ;
+    }
+
+    //add this to update area
+
+    IEnumerator PoisonDamage(float damage,  int TimeCount, float TimeBetweenHits)
+    {
+        for ( int i=0; i < TimeCount; i++)
+        {
+            yield return new WaitForSeconds(TimeBetweenHits) ;
+            TakeDamage(damage);
+        }
+    }
+ 
 
     public virtual void ShowFloatingText(float damage)
     {

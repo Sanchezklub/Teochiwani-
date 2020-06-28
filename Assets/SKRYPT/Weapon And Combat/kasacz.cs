@@ -11,6 +11,10 @@ public class kasacz : BaseWeapon
 
     public float attackRange;
     public float attackdamage;
+    public float PoisonDamage;
+    public int PoisonCount;
+    public float PoisonTimeBetween;
+
 
 
     public override void Attack(PlayerCombat controller)
@@ -21,6 +25,7 @@ public class kasacz : BaseWeapon
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Health>()?.TakeDamage(attackdamage+GameController.instance.DataStorage.PlayerInfo.damage);
+            enemy.GetComponent<Health>()?.PoisonEffect(PoisonDamage,PoisonCount,PoisonTimeBetween);
 
         }
     }

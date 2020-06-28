@@ -122,16 +122,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AggroRange: 10
   MovementSpeed: 6
+  ProjectileMinX: -15
+  ProjectileMaxX: 15
+  ProjectileY: 14
+  ProjectileAmount: 90
   TulioAnimator: {fileID: 0}
   MiguelAnimator: {fileID: 0}
-  TulioRb: {fileID: 3558207219388176162, guid: b47a5e0190d64804d86248965a31f8d6, type: 3}
-  MiguelRb: {fileID: 925137782235532438, guid: b47a5e0190d64804d86248965a31f8d6, type: 3}
+  TulioRb: {fileID: 0}
+  MiguelRb: {fileID: 0}
   rb: {fileID: 1463683964}
   FacingRight: 0
   RaycastTransform: {fileID: 1370324487428359033}
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  Projectile: {fileID: 5898300972025147230, guid: d393838bc5038ba4aadccd0fb97b096f,
+    type: 3}
 --- !u!50 &1463683964
 Rigidbody2D:
   serializedVersion: 4

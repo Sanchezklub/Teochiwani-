@@ -8,6 +8,12 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public float AggroRange;
     public float MovementSpeed;
 
+    public float ProjectileMinX;
+    public float ProjectileMaxX;
+    public float ProjectileY;
+
+    public int ProjectileAmount;
+
     public Animator TulioAnimator;
     public Animator MiguelAnimator;
 
@@ -21,9 +27,11 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public Transform RaycastTransform;
 
     public LayerMask WhatIsGround;
+
+    public GameObject Projectile;
     private void Start()
     {
-        StartIdle();
+        StartPrayer();
     }
     private void Update()
     {

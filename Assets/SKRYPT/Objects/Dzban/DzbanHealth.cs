@@ -9,7 +9,8 @@ public class DzbanHealth : Health
     [SerializeField]
     private int maximumCount = 3;
     [SerializeField]
-    private GameObject prefab = null;
+    private GameObject[] Prefabs;
+    private GameObject ChosenPrefab;
     [SerializeField] UnityEngine.Object destrutableRef;
 
     public int MinimumCount
@@ -22,20 +23,17 @@ public class DzbanHealth : Health
         get { return this.maximumCount; }
         set { this.maximumCount = value; }
     }
-    public GameObject Prefab
-    {
-        get { return this.prefab; }
-        set { this.prefab = value; }
-    }
 
     public void Spawn()
     {
         // Randomly pick the count of prefabs to spawn.
         int count = Random.Range(this.MinimumCount, this.MaximumCount);
         // Spawn them!
+        int rand = Random.Range(0, Prefabs.Length);
+        ChosenPrefab = Prefabs[rand];
         for (int i = 0; i < count; ++i)
         {
-            Instantiate(this.prefab, this.transform.position, Quaternion.identity);
+            Instantiate(this.ChosenPrefab, this.transform.position, Quaternion.identity);
         }
     }
 

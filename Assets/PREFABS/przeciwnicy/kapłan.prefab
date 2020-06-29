@@ -536,9 +536,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9a211a645c4e14db23dd4693d5aafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splats: []
-  colors: []
-  ps: {fileID: 0}
+  splats:
+  - {fileID: 8879362370019826865, guid: bc3228d40b1f5f748b4c54054d94f079, type: 3}
+  - {fileID: 8445104910896414660, guid: 10b6a25e6b631554cb2bf002f33f534a, type: 3}
+  - {fileID: 4422407967575818056, guid: c7e1c3d1bf616d2449439381696a5387, type: 3}
+  colors:
+  - {r: 1, g: 0.008716989, b: 0, a: 0}
+  - {r: 0.6603774, g: 0.012673625, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  ps: {fileID: 3800583068774307269, guid: 23b4a682e04b43147a28344e33dab97d, type: 3}
 --- !u!114 &7414761434899873340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,12 +559,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   currentHealth: 0
-  FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   id: 0
-  splashController: {fileID: 0}
-  enemyAnimator: {fileID: 0}
-  IsHuman: 0
+  splashController: {fileID: 7414761434899873339}
+  enemyAnimator: {fileID: 7414761434899873341}
+  IsHuman: 1
 --- !u!114 &7414761434899873329
 MonoBehaviour:
   m_ObjectHideFlags: 0

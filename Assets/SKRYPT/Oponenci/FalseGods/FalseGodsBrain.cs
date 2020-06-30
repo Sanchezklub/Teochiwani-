@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
 {
 
     public float AggroRange;
     public float MovementSpeed;
+    public float ProjectileDmg;
+    public float BallDmg;
+
 
     public float ProjectileMinX;
     public float ProjectileMaxX;
@@ -25,13 +28,18 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public bool FacingRight;
 
     public Transform RaycastTransform;
+    public Transform HandTransform;
+    public Transform BallPoint;
+
+    public UnityAction Attacking;
 
     public LayerMask WhatIsGround;
 
     public GameObject Projectile;
+    public GameObject ball;
     private void Start()
     {
-        StartPrayer();
+        StartBall();
     }
     private void Update()
     {
@@ -72,5 +80,11 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public void StartBall()
     {
         ChangeState(new FalseGodsBallState());
+    }
+
+    public void ActionAttack()
+    {
+        Debug.Log("FalseGodsBrain :: ActionAttack called");
+        Attacking?.Invoke();
     }
 }

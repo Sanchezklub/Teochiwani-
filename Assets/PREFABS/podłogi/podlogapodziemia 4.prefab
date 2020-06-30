@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8669124917382471975}
   - component: {fileID: 8422936226236163811}
   - component: {fileID: 940102251965463131}
-  - component: {fileID: 4250925967507431271}
   - component: {fileID: 8163349167538165313}
   m_Layer: 8
   m_Name: podlogapodziemia 4
@@ -108,29 +107,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 0.0001}
+  m_Size: {x: 20, y: 16}
   m_EdgeRadius: 0
---- !u!50 &4250925967507431271
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6613594320416099870}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!331 &8163349167538165313
 SpriteMask:
   m_ObjectHideFlags: 0

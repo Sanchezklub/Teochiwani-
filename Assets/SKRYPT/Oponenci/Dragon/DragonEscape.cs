@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class DragonEscape : BaseState<DragonBrain>
 {
+    private DragonBrain brain;
     public float EscapingTime;
     public float PositionDifference;
     private GameObject player;
-    private DragonBrain brain;
     private Rigidbody2D enemyRigidBody2D;
 
 public override void InitState(DragonBrain controller)
     {   
-        brain.enemyAnimator.SetBool("Patrol", true);
-        brain.enemyAnimator.SetBool("Attack", false);
         base.InitState(controller);
         this.brain = controller;
+        brain.enemyAnimator.SetBool("Patrol", true);
+        brain.enemyAnimator.SetBool("Attack", false);
         player = GameObject.Find("Player");
-        //enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
+        enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         EscapingTime = 0;
     }
 
     public override void UpdateState()
     {
         TimeCheck();
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 6f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
             run();
         }
@@ -59,7 +59,7 @@ public override void InitState(DragonBrain controller)
         if (EscapingTime > brain.EscapeTime)
         {
             PositionDifference = brain.transform.position.x - player.transform.position.x;
-        if (PositionDifference >= 0)
+        if (Mathf.Abs(PositionDifference) >= brain.AggroDist)
             {
                 brain.StartPatrol();
             }

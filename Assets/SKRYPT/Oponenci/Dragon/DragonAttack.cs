@@ -33,6 +33,7 @@ public class DragonAttack : BaseState<DragonBrain>
     {
         fl = GameObject.Instantiate(brain.Flame,brain.Firepoint.position,Quaternion.identity);
         fl.transform.parent = brain.Firepoint;
+        fl.GetComponent<flame>().dmg = brain.dmg;
     }
 
     public void AttemptLeavingFightState()

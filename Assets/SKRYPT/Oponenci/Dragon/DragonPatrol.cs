@@ -48,7 +48,7 @@ public class DragonPatrol : BaseState<DragonBrain>
 
         //RaycastHit2D hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 6f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
 
             //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);

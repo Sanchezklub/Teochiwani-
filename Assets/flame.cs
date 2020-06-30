@@ -12,8 +12,7 @@ public class flame : MonoBehaviour
               
     void Start()
     {
-        Smok = GameObject.FindGameObjectWithTag("Smok");
-        dmg = Smok.GetComponent<DragonBrain>().dmg;
+        Destroy(gameObject, 1.6f);
     }
 
     void Update()

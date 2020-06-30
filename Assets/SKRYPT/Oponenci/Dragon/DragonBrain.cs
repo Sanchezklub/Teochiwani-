@@ -27,6 +27,8 @@ public class DragonBrain : BaseBrain<DragonBrain>
     {
         UpdateChildState();
 
+        Debug.Log("Dragons current state is:" + currentState);
+
 //        Debug.Log(currentState);
     }
     public override void ChangeState(BaseState<DragonBrain> newState)

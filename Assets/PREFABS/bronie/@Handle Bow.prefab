@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 176861280523263546}
   - component: {fileID: 176861280523263545}
   - component: {fileID: 176861280523263547}
-  - component: {fileID: 5705402693621547744}
   m_Layer: 10
   m_Name: Bow
   m_TagString: Untagged
@@ -98,19 +97,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bafca093830aa4bae49a3262cd3b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 2687345321257893394}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: "\u0141uk"
+  flavourtext: "to \u0142uk.... naprawde czego sie spodziewa\u0142e\u015B"
+  itemName: "\u0141uk"
   id: 2
-  FlavorText: "To \u0141uk..... Naprawd\u0119, czego si\u0119 spodziewa\u0142e\u015B"
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 176861280523263547}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  AttackPoint: {fileID: 0}
+  attackRange: 0
+  attackdamage: 0
   AttackAnimationType: 4
   bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
     type: 3}
   firePoint: {fileID: 1077516540313733360}
-  coll: {fileID: 176861280523263547}
 --- !u!61 &176861280523263547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,20 +145,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5818481, y: 13.883097}
   m_EdgeRadius: 0
---- !u!114 &5705402693621547744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176861280523263527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 20
-  BloodValue: 20
 --- !u!1 &2687345321257893394
 GameObject:
   m_ObjectHideFlags: 0

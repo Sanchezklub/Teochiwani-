@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 7077918293648707630}
   - component: {fileID: 7077918293648707629}
   - component: {fileID: 7077918293648707631}
-  - component: {fileID: 3413779991520414964}
   m_Layer: 10
   m_Name: Bow
   m_TagString: Untagged
@@ -127,20 +126,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bafca093830aa4bae49a3262cd3b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 0}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: "\u0141uk"
+  flavourtext: 
+  itemName: 
   id: 2
-  FlavorText: "To \u0141uk..... Naprawd\u0119, czego si\u0119 spodziewa\u0142e\u015B"
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 7077918293648707631}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   AttackAnimationType: 0
-  FacingRight: 1
   bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
     type: 3}
   firePoint: {fileID: 2374134572145073302}
-  coll: {fileID: 7077918293648707631}
 --- !u!61 &7077918293648707631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,17 +168,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5818481, y: 13.883097}
   m_EdgeRadius: 0
---- !u!114 &3413779991520414964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7077918293648707635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 20
-  BloodValue: 20

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PrecisiceBow : BaseWeapon
 {
-    Vector2 direction;
-    public Collider2D coll;
+    Vector2 direction; 
     public Transform firePoint;
     
     public GameObject bulletPrefab;
@@ -15,7 +14,6 @@ public class PrecisiceBow : BaseWeapon
     public int numberOfPoints;
     public float LaunchForce;
     public float spaceBetweenPoints;
-    public bool FacingRight = true;
 
 
     public void Start()
@@ -60,24 +58,6 @@ public class PrecisiceBow : BaseWeapon
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
     }
 
-    public override void DropWeapon()
-    {
     
-        Handle.transform.parent = null;
-        
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-        coll.enabled = true;
-    }
-
-    public override void PickupWepaon()
-    {
-        //ShowFloatingText(FlavorText);
-
-        coll.enabled = false;
-
-        GameObject Player = GameObject.Find("Player");
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-        
-    }
 
 }

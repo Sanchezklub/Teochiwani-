@@ -12,14 +12,17 @@ public abstract class ItemConditioner
 
 public abstract class BaseItem : MonoBehaviour
 {
+    public GameObject Handle;
     public BaseModifier[] modifiers;
     [SerializeField] public TextMeshProUGUI UIWeaponName;
     [SerializeField] public TextMeshProUGUI UIFlavorText;
     [SerializeField] private string flavourtext;
     [SerializeField] private string itemName;
-    public int id;
+    [SerializeField] public int id;
+    [SerializeField] public int CocaoPrice;
+    [SerializeField] public int BloodPrice;
+    [SerializeField] private Collider2D coll;
     public GameObject FloatingTextPrefab;
-
     [SerializeField]
     private ItemConditioner conditioner;
     public ItemConditioner Conditioner => conditioner;
@@ -38,6 +41,8 @@ public abstract class BaseItem : MonoBehaviour
         EventController.instance.playerEvents.OnItemPickup(this);
         GameController.instance.DataStorage.PlayerInfo.ItemIDs.Add(id);
         ShowFloatingText();
+        coll.enabled = false;
+        Destroy(gameObject);
     }
 
     /*
@@ -59,6 +64,20 @@ public abstract class BaseItem : MonoBehaviour
             //Destroy(this, 5);
         }
     }*/
+    public virtual void DropWeapon()
+    {
+
+        Handle.transform.parent = null;
+        coll.enabled = true;
+        Handle.transform.localEulerAngles = new Vector3(0,0,0);
+    }
+
+    public virtual void PickupWepaon()
+    {
+        coll.enabled = false;
+        ShowFloatingText();
+        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
+    }
     public virtual void ShowFloatingText()
     {
         //var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
@@ -77,18 +96,4 @@ public abstract class BaseItem : MonoBehaviour
         }
 
     }
-
-    public virtual void BuffJumpHeight(int JumpHeigt)
-    {
-
-    }
-    public virtual void BuffAttackDamage(int Damage)
-    {
-
-    }
-    public virtual void BuffHealth(int Health)
-    {
-
-    }
-
 }

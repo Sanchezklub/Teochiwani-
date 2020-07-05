@@ -9,8 +9,6 @@ public class Stragan : MonoBehaviour
     public bool PlayerInRange;
     public GameObject Price;
     public GameObject TypeOfPrice;
-    public Sprite[] broniewyglad;
-    public BaseWeapon[] bronie;
     public GameObject[] bronieDoSpawnu;
     int playerKakao;
     int playerBlood;
@@ -23,24 +21,24 @@ public class Stragan : MonoBehaviour
     public void Start()
     {
 
-        rand = Random.Range(0, bronie.Length); // losuje broń
+        rand = Random.Range(0, bronieDoSpawnu.Length); // losuje broń
         int rand2 = Random.Range(0, 2);  // losuje czy cena bedzie w kakao czy w krwi 
 
         if ( rand2 == 1)
         {
             CenaWKakao=true;   
-            itemValueKakao=bronie[rand].GetComponent<ItemValue>().CocaoValue;
+            itemValueKakao=bronieDoSpawnu[rand].GetComponentInChildren<BaseItem>().CocaoPrice;
             TypeOfPrice.GetComponent<SpriteRenderer>().sprite = kakao;
             Price.GetComponent<TextMeshPro>().text = itemValueKakao.ToString();
         }
         else 
         {
             CenaWKakao=false;
-            itemValueBlood=bronie[rand].GetComponent<ItemValue>().BloodValue;
+            itemValueBlood=bronieDoSpawnu[rand].GetComponentInChildren<BaseItem>().BloodPrice;
             TypeOfPrice.GetComponent<SpriteRenderer>().sprite = krew;
             Price.GetComponent<TextMeshPro>().text = itemValueBlood.ToString();
         }
-        itemframe.GetComponent<SpriteRenderer>().sprite = broniewyglad[rand];
+        itemframe.GetComponent<SpriteRenderer>().sprite = bronieDoSpawnu[rand].GetComponentInChildren<SpriteRenderer>().sprite;
     
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,7 +58,7 @@ public class Stragan : MonoBehaviour
     }
     private void Update()
     {
-        Collider2D Coll = bronie[rand].GetComponent<Collider2D>();
+        Collider2D Coll = bronieDoSpawnu[rand].GetComponent<Collider2D>();
         if(Input.GetKeyDown("e")  && PlayerInRange == true && Sprzedane == false)
         {
         playerBlood = GameController.instance.DataStorage.PlayerInfo.blood; // Pobranie ilosci kasy ktora ma gracz

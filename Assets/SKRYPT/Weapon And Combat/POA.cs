@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class POA : BaseWeapon
 {
-    public bool FacingRight = true;
-    public Transform AttackPoint;
-    public LayerMask enemyLayers;
-    public Collider2D coll;
-    public float attackRange;
-    public float attackdamage;
+
     public float Playercurrenthealth;   
     
     public override void Attack(PlayerCombat controller)
@@ -23,23 +18,14 @@ public class POA : BaseWeapon
 
         }
     }
-
-      public override void DropWeapon()
+    public override void DropWeapon()
     {
-               
-     GameController.instance.DataStorage.PlayerInfo.currenthealth+=Playercurrenthealth-1;     
-        Handle.transform.parent = null;
-        
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-        coll.enabled = true;
+        GameController.instance.DataStorage.PlayerInfo.currenthealth+=Playercurrenthealth-1;  
     }
-
     public override void PickupWepaon()
     {
         Playercurrenthealth=GameController.instance.DataStorage.PlayerInfo.currenthealth;
         GameController.instance.DataStorage.PlayerInfo.currenthealth=1;
-        coll.enabled = false;
-        ShowFloatingText(FlavorText);
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
     }
+     
 }

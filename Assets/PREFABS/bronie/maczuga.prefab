@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9210449352677923429}
   - component: {fileID: 9210449352677923430}
   - component: {fileID: 9210449352677923427}
-  - component: {fileID: 1414755658302317953}
   m_Layer: 10
   m_Name: maczuga
   m_TagString: Untagged
@@ -122,34 +121,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ec1831440628d41bb64049d7594b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 0}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: Maczuga Max
+  flavourtext: 
+  itemName: 
   id: 8
-  FlavorText: 
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 9210449352677923430}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   AttackAnimationType: 0
   FacingRight: 1
   AttackPoint: {fileID: 9210449352677923428}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  coll: {fileID: 9210449352677923430}
   attackRange: 3
   attackdamage: 15
---- !u!114 &1414755658302317953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210449352677923431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 15
-  BloodValue: 15

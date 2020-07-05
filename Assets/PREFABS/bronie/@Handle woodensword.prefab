@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 8645262925722250066}
   - component: {fileID: 8645262925722250067}
   - component: {fileID: 8645262925722250068}
-  - component: {fileID: 3877030606620057180}
   m_Layer: 10
   m_Name: wooden  sword
   m_TagString: Untagged
@@ -184,34 +183,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1e99d488d15a64d94a4f634c7834d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 6861661989205530176}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: Drewniany miecz
+  flavourtext: zachodnia technologia, wshodnie wykonanie
+  itemName: "D\u0142ugi miecz"
   id: 1
-  FlavorText: Zachodnia technologia, wschodnie wykonanie
-  AttackAnimationType: 3
-  FacingRight: 1
-  AttackPoint: {fileID: 7384794028505217648}
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 8645262925722250067}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  coll: {fileID: 8645262925722250067}
+  AttackPoint: {fileID: 7384794028505217648}
   attackRange: 4
   attackdamage: 12
---- !u!114 &3877030606620057180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645262925722250069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 12
-  BloodValue: 12
+  AttackAnimationType: 3

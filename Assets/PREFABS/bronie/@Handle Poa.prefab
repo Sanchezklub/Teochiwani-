@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 5905908314160643244}
   - component: {fileID: 5905908314160643245}
   - component: {fileID: 5905908314160643246}
-  - component: {fileID: 7210832715245969287}
   m_Layer: 10
   m_Name: patyk ostatecznej anihilacji
   m_TagString: Untagged
@@ -152,38 +151,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3784eb5a2f9328418182306d39596dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 8567751892998769453}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: Patyk Ostatecznej Anihilacji
+  flavourtext: "kij ma zawsze dwa ko\u0144ce"
+  itemName: Patyk Ostatecznej Anichilacji
   id: 5
-  FlavorText: "Ka\u017Cdy kij ma dwa ko\u0144ce"
-  AttackAnimationType: 3
-  FacingRight: 1
-  AttackPoint: {fileID: 5805308129370826793}
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 5905908314160643245}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  coll: {fileID: 5905908314160643245}
+  AttackPoint: {fileID: 5805308129370826793}
   attackRange: 6
   attackdamage: 100
+  AttackAnimationType: 3
   Playercurrenthealth: 100
---- !u!114 &7210832715245969287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5905908314160643282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 75
-  BloodValue: 75
 --- !u!1 &8567751892998769453
 GameObject:
   m_ObjectHideFlags: 0

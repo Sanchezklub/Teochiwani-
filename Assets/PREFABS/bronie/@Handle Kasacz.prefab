@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1328737833353998072}
   - component: {fileID: 1328737833353998075}
   - component: {fileID: 1328737833353998074}
-  - component: {fileID: 3303291334737690414}
   m_Layer: 10
   m_Name: kasacz
   m_TagString: Untagged
@@ -122,40 +121,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117a8089fcbda4b4eb3989e69f1bb986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 6445527946330245421}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: "K\u0105sacz"
+  flavourtext: "tak toksyczny jak u\u017Cytkownik"
+  itemName: "K\u0105sacz"
   id: 3
-  FlavorText: "Tak toksyczny jak u\u017Cytkownik"
-  AttackAnimationType: 0
-  FacingRight: 1
-  AttackPoint: {fileID: 666133799899542671}
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 1328737833353998075}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  coll: {fileID: 1328737833353998075}
+  AttackPoint: {fileID: 666133799899542671}
   attackRange: 2
   attackdamage: 18
+  AttackAnimationType: 0
   PoisonDamage: 10
   PoisonCount: 2
   PoisonTimeBetween: 3
---- !u!114 &3303291334737690414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328737833353998077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 25
-  BloodValue: 25
 --- !u!1 &1657796909980093540
 GameObject:
   m_ObjectHideFlags: 0

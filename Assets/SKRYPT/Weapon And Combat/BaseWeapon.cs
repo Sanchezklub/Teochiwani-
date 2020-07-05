@@ -5,16 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 
-public abstract class BaseWeapon : MonoBehaviour
+public abstract class BaseWeapon : BaseItem
 {
-
-    public GameObject FloatingTextPrefab;
-    public GameObject Handle;
-    [SerializeField] public TextMeshProUGUI UIWeaponName;
-    [SerializeField] public TextMeshProUGUI UIFlavorText;
-    public string Name;
-    public int id;
-    public string FlavorText;
+    
+    [SerializeField] public LayerMask enemyLayers;
+    [SerializeField] public Transform AttackPoint;
+    [SerializeField] public float attackRange;
+    [SerializeField] public float attackdamage;
     public void Awake()
     {
        
@@ -40,18 +37,6 @@ public abstract class BaseWeapon : MonoBehaviour
     }
     public AnimationType AttackAnimationType;
     public abstract void Attack(PlayerCombat controller);
-    public abstract void PickupWepaon();
-    public abstract void DropWeapon();
-    public virtual void ShowFloatingText(string flavourtext)
-    {
-        //var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        //go.GetComponent<TextMesh>().text = flavourtext;
-        UIFlavorText.enabled = true;
-        UIFlavorText.SetText(FlavorText);
-        UIFlavorText?.GetComponent<Animator>()?.SetTrigger("Enabled");
-        UIWeaponName.enabled = true;
-        UIWeaponName.SetText(Name);
-        UIWeaponName?.GetComponent<Animator>()?.SetTrigger("Enabled");
-
-    }
+    
+    
 }

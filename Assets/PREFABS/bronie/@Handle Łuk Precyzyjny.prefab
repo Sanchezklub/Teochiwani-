@@ -183,16 +183,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dcacb336e78f8843ace3b28e411b590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 4995936593996878693}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: "Precyzyjny \u0141uk"
+  flavourtext: Precyzja to perfekcja
+  itemName: "Precyzyjny \u0141uk"
   id: 12
-  FlavorText: ALbert LAmbert
-  AttackAnimationType: 4
+  CocaoPrice: 0
+  BloodPrice: 0
   coll: {fileID: 1773361189687870653}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  AttackPoint: {fileID: 0}
+  attackRange: 0
+  attackdamage: 0
+  AttackAnimationType: 4
   firePoint: {fileID: 2372175211669336602}
   bulletPrefab: {fileID: 1609112892024203060, guid: 7f424ad02a69e7746b4bae40f0edf932,
     type: 3}
@@ -200,4 +209,3 @@ MonoBehaviour:
   numberOfPoints: 40
   LaunchForce: 13
   spaceBetweenPoints: 0.025
-  FacingRight: 1

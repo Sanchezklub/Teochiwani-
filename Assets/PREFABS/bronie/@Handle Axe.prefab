@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2124278196634768342}
   - component: {fileID: 2124278196634768341}
   - component: {fileID: 2124278196634768343}
-  - component: {fileID: 5148970944237198223}
   m_Layer: 10
   m_Name: Axe
   m_TagString: Untagged
@@ -96,23 +95,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d63aefc15e9f1c48bd957a45a592367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   Handle: {fileID: 8832911148018524805}
+  modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  Name: "Top\xF3r"
+  flavourtext: "Perfekcyjne do skalp\xF3w"
+  itemName: Tomahawk
   id: 0
-  FlavorText: "Idealny do skalp\xF3w"
-  AttackAnimationType: 3
-  FacingRight: 1
-  AttackPoint: {fileID: 2553138551681565953}
+  CocaoPrice: 0
+  BloodPrice: 0
+  coll: {fileID: 2124278196634768343}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  coll: {fileID: 2124278196634768343}
+  AttackPoint: {fileID: 2553138551681565953}
   attackRange: 6
   attackdamage: 8
+  AttackAnimationType: 3
 --- !u!61 &2124278196634768343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,20 +140,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6111832, y: 5.961682}
   m_EdgeRadius: 0
---- !u!114 &5148970944237198223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124278196634768339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1977c9d73eac8e40897ca67a0a98cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CocaoValue: 8
-  BloodValue: 8
 --- !u!1 &7898594909256501041
 GameObject:
   m_ObjectHideFlags: 0

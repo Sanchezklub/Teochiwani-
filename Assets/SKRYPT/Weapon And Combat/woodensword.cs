@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class woodensword : BaseWeapon
 {
-    public bool FacingRight = true;
-    public Transform AttackPoint;
-    public LayerMask enemyLayers;
-    public Collider2D coll;
-    public float attackRange;
-    public float attackdamage;
-
-   
-
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("WoodenSword :: Attack() - Player attacked with WoodenSword");
@@ -25,20 +16,5 @@ public class woodensword : BaseWeapon
         }
     }
 
-      public override void DropWeapon()
-    {
-
-       
-        Handle.transform.parent = null;
-        
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-        coll.enabled = true;
-    }
-
-    public override void PickupWepaon()
-    {
-        coll.enabled = false;
-        ShowFloatingText(FlavorText);
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
-    }
+     
 }

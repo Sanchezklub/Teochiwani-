@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KaplanAttackState : BaseState<KaplanBrain>
+public class WazAttackState : BaseState<WazBrain>
 {
 
-    private KaplanBrain brain;
+    private WazBrain brain;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
     float PositionDifference;
 
-    public override void InitState(KaplanBrain controller)
+    public override void InitState(WazBrain controller)
     {
         base.InitState(controller);
         this.brain = controller;
@@ -50,7 +50,7 @@ public class KaplanAttackState : BaseState<KaplanBrain>
     }
 
 
-    public override void DeinitState(KaplanBrain controller)
+    public override void DeinitState(WazBrain controller)
     {
         brain.Attacking -= Attack;
         brain.LeaveFightState -= AttemptLeavingFightState;

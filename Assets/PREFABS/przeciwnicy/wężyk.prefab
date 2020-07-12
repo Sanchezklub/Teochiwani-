@@ -368,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2369938365458645871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.58, y: 10.07, z: 0}
+  m_LocalPosition: {x: 19.5, y: 11.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6902197352708866774}
@@ -861,7 +861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5104171258800222689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -196, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 7369324012138952861}
@@ -964,7 +964,7 @@ MonoBehaviour:
   id: 0
   splashController: {fileID: 6511572285711384005}
   enemyAnimator: {fileID: 1501026345799602336}
-  IsHuman: 0
+  IsHuman: 1
 --- !u!114 &6511572285711384005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc6382561947f2459467dc36b847172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 5
+  AttackRange: 4
   AttackPoint: {fileID: 4870488907287212608}
   raycastTransform: {fileID: 8070031520430614784}
   WhatIsGround:
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   speed: 10
   StartFollowDist: 20
   StopFollowDist: 20
-  StartFightDist: 10
+  StartFightDist: 5
   enemyAnimator: {fileID: 1501026345799602336}
 --- !u!1 &6339641380940265210
 GameObject:

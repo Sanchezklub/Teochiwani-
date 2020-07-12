@@ -40,7 +40,6 @@ public class WazAttackState : BaseState<WazBrain>
             {
                 Health player = hitColliders[i].GetComponent<Health>();
                 player?.TakeDamage(brain.damage, brain.gameObject);
-                brain.damage += 2;
                 break;
             }
 
@@ -52,9 +51,9 @@ public class WazAttackState : BaseState<WazBrain>
 
     public override void DeinitState(WazBrain controller)
     {
+        brain.enemyAnimator.SetBool("isfighting", false);
         brain.Attacking -= Attack;
         brain.LeaveFightState -= AttemptLeavingFightState;
-        brain.enemyAnimator.SetBool("isfighting", false);
         base.DeinitState(controller);
     }
 

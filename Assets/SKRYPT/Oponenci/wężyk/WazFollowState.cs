@@ -16,7 +16,7 @@ public class WazFollowState : BaseState<WazBrain>
         this.brain = controller;
 
         this.enemyAnimator = controller.enemyAnimator;
-        //brain.enemyAnimator.SetBool("iswalking", true);
+        brain.enemyAnimator.SetBool("iswalking", true);
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
 
@@ -51,8 +51,9 @@ public class WazFollowState : BaseState<WazBrain>
 
     public override void DeinitState(WazBrain controller)
     {
+        brain.enemyAnimator.SetBool("iswalking", false);
         base.DeinitState(controller);
-       // brain.enemyAnimator.SetBool("iswalking", false);
+       
     }
 
     void MoveTowardsPlayer()

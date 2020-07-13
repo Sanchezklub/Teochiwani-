@@ -28,7 +28,7 @@ public class WazFollowState : BaseState<WazBrain>
     {
         base.UpdateState();
         float distance = Vector3.Distance(brain.transform.position, player.transform.position);
-        if (distance < brain.StartFightDist)
+        if (distance <= brain.StartFightDist)
         {
             brain.StartAttack();
         }
@@ -38,7 +38,7 @@ public class WazFollowState : BaseState<WazBrain>
         }
 
 
-        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        if (Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.down, 5f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.raycastTransform.position.x, brain.raycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {
             MoveTowardsPlayer();
         }

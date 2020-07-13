@@ -16,6 +16,11 @@ public class Ball : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         BounceCounter += 1;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>()?.TakeDamage(Damage);
+        }
+
         if (BounceCounter == 3)
         {
             ReturnPosition = transform.position;

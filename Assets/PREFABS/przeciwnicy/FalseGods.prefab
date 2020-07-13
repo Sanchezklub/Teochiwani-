@@ -86,24 +86,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.652832, y: 9.295967}
   m_EdgeRadius: 0.2
---- !u!114 &8960770450947353502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5057865705687717713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aca54e5ce05a84643bd60aa13484bedb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 100
-  currentHealth: 0
-  FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
-  id: 0
-  splashController: {fileID: 0}
 --- !u!95 &472562049
 Animator:
   serializedVersion: 3
@@ -123,6 +105,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8960770450947353502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057865705687717713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca54e5ce05a84643bd60aa13484bedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 0
+  FloatingTextPrefab: {fileID: 0}
+  id: 0
+  splashController: {fileID: 0}
 --- !u!1 &6620807324931082466
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,24 +261,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 9.82}
   m_EdgeRadius: 0.3
---- !u!114 &7305700023090036269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9096547825404809750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aca54e5ce05a84643bd60aa13484bedb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 100
-  currentHealth: 0
-  FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
-  id: 0
-  splashController: {fileID: 0}
 --- !u!95 &465686824
 Animator:
   serializedVersion: 3
@@ -298,6 +280,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7305700023090036269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096547825404809750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca54e5ce05a84643bd60aa13484bedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 0
+  FloatingTextPrefab: {fileID: 0}
+  id: 0
+  splashController: {fileID: 0}
+--- !u!114 &7287247957301097054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096547825404809750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c637f0622875c144791b251af8ce86d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2444039764129419276
 PrefabInstance:
   m_ObjectHideFlags: 0

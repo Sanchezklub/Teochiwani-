@@ -6,12 +6,13 @@ public class FalseGodsBallState : BaseState<FalseGodsBrain>
 
     private FalseGodsBrain brain;
     private GameObject ThrownBall;
-    private Ball ThrownBallScript;
+    //private Ball ThrownBallScript;
     public override void InitState(FalseGodsBrain controller)
     {
         base.DeinitState(controller);
         this.brain = controller;
-        ThrowBall();
+        brain.Attacking += ThrowBall;
+        brain.TulioAnimator.SetBool("IsThrowing", true);
     }
 
     void ThrowBall()
@@ -34,5 +35,12 @@ public class FalseGodsBallState : BaseState<FalseGodsBrain>
     void OnBallDestroyed()
     {
         brain.StartRun();
+    }
+
+    public override void DeinitState(FalseGodsBrain controller)
+    {
+        brain.Attacking -= ThrowBall;
+        brain.TulioAnimator.SetBool("IsThrowing", false);
+        base.DeinitState(controller);
     }
 }

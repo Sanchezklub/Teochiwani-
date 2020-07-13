@@ -11,7 +11,9 @@ public class FalseGodsPrayerState : BaseState<FalseGodsBrain>
     {
         base.InitState(controller);
         this.brain = controller;
-        Projectile();
+        brain.Attacking += Projectile;
+        brain.EndAttack += brain.StartRun;
+        brain.TulioAnimator.SetBool("IsPraying", true);
     }
 
     void Projectile()
@@ -26,6 +28,9 @@ public class FalseGodsPrayerState : BaseState<FalseGodsBrain>
 
     public override void DeinitState(FalseGodsBrain controller)
     {
+        brain.Attacking -= Projectile;
+        brain.EndAttack -= brain.StartRun;
+        brain.TulioAnimator.SetBool("IsPraying", false);
         base.DeinitState(controller);
     }
 }

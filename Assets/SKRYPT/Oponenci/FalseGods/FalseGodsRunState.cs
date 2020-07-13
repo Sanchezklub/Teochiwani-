@@ -6,16 +6,20 @@ public class FalseGodsRunState : BaseState<FalseGodsBrain>
 {
     private FalseGodsBrain brain;
 
+    private float StartTime;
     public override void InitState(FalseGodsBrain controller)
     {
         base.InitState(controller);
         this.brain = controller;
+        brain.TulioAnimator.SetBool("RunAround", true);
+        StartTime = Time.time;
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
         RunAround();
+        CheckTime();
     }
 
 
@@ -47,14 +51,37 @@ public class FalseGodsRunState : BaseState<FalseGodsBrain>
         }
     }
 
+    void CheckTime()
+    {
+        Debug.Log("FalseGods checked time");
+        if (Time.time > StartTime + brain.RunTime)
+        {
+            StartAttack();
+        }
+    }
+
     void Flip()
     {
         brain.FacingRight = !brain.FacingRight;
         brain.transform.Rotate(new Vector2(0, 180f));
     }
 
+    void StartAttack()
+    {
+        int rand = Random.Range(0, 2);
+        if (rand == 0)
+        {
+            brain.StartBall();
+        }
+        else
+        {
+            brain.StartPrayer();
+        }
+    }
+
     public override void DeinitState(FalseGodsBrain controller)
     {
+        brain.TulioAnimator.SetBool("RunAround", false);
         base.DeinitState(controller);
     }
 }

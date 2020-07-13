@@ -9,6 +9,7 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public float MovementSpeed;
     public float ProjectileDmg;
     public float BallDmg;
+    public float RunTime;
 
 
     public float ProjectileMinX;
@@ -32,14 +33,16 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     public Transform BallPoint;
 
     public UnityAction Attacking;
+    public UnityAction EndAttack;
 
     public LayerMask WhatIsGround;
 
     public GameObject Projectile;
     public GameObject ball;
+
     private void Start()
     {
-        StartBall();
+        StartIdle();
     }
     private void Update()
     {
@@ -86,5 +89,10 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     {
         Debug.Log("FalseGodsBrain :: ActionAttack called");
         Attacking?.Invoke();
+    }
+
+    public void ActionEndAttack()
+    {
+        EndAttack?.Invoke();
     }
 }

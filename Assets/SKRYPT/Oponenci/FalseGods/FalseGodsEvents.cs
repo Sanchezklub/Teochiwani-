@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class FalseGodsEvents : MonoBehaviour
 {
-    void ActionAttack()
+    private FalseGodsBrain brain;
+    private void Start()
     {
-        //GetComponentInParent<>
+        brain = GetComponentInParent<FalseGodsBrain>();
+    }
+
+
+    public void ActionAttack()
+    {
+        brain.ActionAttack();
+    }
+
+    public void ActionEndAttack()
+    {
+        brain.ActionEndAttack();
     }
 }

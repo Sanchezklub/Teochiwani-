@@ -10,6 +10,7 @@ public class FalseGodsIdleState : BaseState<FalseGodsBrain>
     {
         base.InitState(controller);
         this.brain = controller;
+        brain.TulioAnimator.SetBool("IsIdle", true);
     }
     public override void UpdateState()
     {
@@ -18,5 +19,11 @@ public class FalseGodsIdleState : BaseState<FalseGodsBrain>
         {
             brain.StartRun();
         }
+    }
+
+    public override void DeinitState(FalseGodsBrain controller)
+    {
+        brain.TulioAnimator.SetBool("IsIdle", false);
+        base.DeinitState(controller);
     }
 }

@@ -8,6 +8,7 @@ public class WazAttackState : BaseState<WazBrain>
     private WazBrain brain;
     Rigidbody2D enemyRigidBody2D;
     private GameObject player;
+    private float TempSpeed;
     float PositionDifference;
 
     public override void InitState(WazBrain controller)
@@ -18,6 +19,8 @@ public class WazAttackState : BaseState<WazBrain>
         player = GameObject.Find("Player");
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = new Vector2(0, 0);
+        TempSpeed = brain.speed;
+        brain.speed = 0;
 
         brain.Attacking += Attack;
         brain.LeaveFightState += AttemptLeavingFightState;
@@ -52,6 +55,7 @@ public class WazAttackState : BaseState<WazBrain>
     public override void DeinitState(WazBrain controller)
     {
         brain.enemyAnimator.SetBool("isfighting", false);
+        brain.speed = TempSpeed;
         brain.Attacking -= Attack;
         brain.LeaveFightState -= AttemptLeavingFightState;
         base.DeinitState(controller);

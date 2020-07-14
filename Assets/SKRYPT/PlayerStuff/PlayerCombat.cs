@@ -15,7 +15,8 @@ public class PlayerCombat : MonoBehaviour
     public BaseItem item;
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
-  
+    public LayerMask ItemMask;
+        public LayerMask ItemMasks;
     public Transform holdPosition;
     public Animator animator;
     
@@ -45,14 +46,22 @@ public class PlayerCombat : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (collidedWeapon!= null)
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(this.transform.position, 2 , ItemMask);
+            foreach (Collider2D Item in hitColliders)
             {
-                ChangeWeapon(collidedWeapon);
+                Item.GetComponent<BaseItem>()?.PickupItem();
             }
-            if(item != null)
+            Collider2D[] hitColliderss = Physics2D.OverlapCircleAll(this.transform.position, 2 , ItemMasks);
+            foreach (Collider2D Weapon in hitColliderss)
             {
-            item?.PickupItem();
-            }
+                 ChangeWeapon(Weapon.GetComponent<BaseWeapon>());
+            } 
+
+        //    if (collidedWeapon!= null)
+         //   {
+           //     ChangeWeapon(collidedWeapon);
+          //  }
+           
         }  
         
     }
@@ -96,7 +105,7 @@ public class PlayerCombat : MonoBehaviour
         //return;
         //Gizmos.DrawWireSphere(AttackPoint.position,attackRange);
     }
-
+/*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         item = collision.GetComponent<BaseItem>();
@@ -114,6 +123,7 @@ public class PlayerCombat : MonoBehaviour
         collidedWeapon = collision.GetComponent<BaseWeapon>();
         
     }
+    */
     public void return1()
     {
         if (noOfClicks >= 2)

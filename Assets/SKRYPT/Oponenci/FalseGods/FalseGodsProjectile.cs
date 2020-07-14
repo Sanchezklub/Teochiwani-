@@ -18,8 +18,10 @@ public class FalseGodsProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<Health>()?.TakeDamage(damage);
-
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Health>()?.TakeDamage(damage);
+        }
     }
 
 }

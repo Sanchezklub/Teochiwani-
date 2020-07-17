@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public bool FloatingText;
     public GameObject FloatingTextPrefab;
     public int id;
+   // public Color ColorWith0hp;
+  //  public Color ColorWith100hp;
     public SplashController splashController;
     protected virtual void Start()
     {
@@ -56,6 +58,8 @@ public class Health : MonoBehaviour
     {
         var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity, transform);
         go.GetComponent<TextMesh>().text = damage.ToString();
+        go.GetComponent<TextMesh>().color=new Color((140 - currentHealth/MaxHealth  * 140 + 81 )/255, (currentHealth/MaxHealth  * 153 + 31)/255 , 13/255, 1);
+
     }
 
 }

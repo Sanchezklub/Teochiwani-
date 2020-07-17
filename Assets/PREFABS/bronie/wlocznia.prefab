@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8208597077870961756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 264.88, y: -28.88, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   speed: 20
   damage: 20
   rb2d: {fileID: 2698551595939008014}
+  RotationSpeed: 0
 --- !u!50 &2698551595939008014
 Rigidbody2D:
   serializedVersion: 4

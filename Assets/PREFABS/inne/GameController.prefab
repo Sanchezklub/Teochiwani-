@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8408784973418703002}
   - component: {fileID: 8408784973418703003}
   - component: {fileID: 8408784973418703004}
+  - component: {fileID: 1287742249}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -67,12 +68,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408784973383155216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091363bf93b3dd146a8837cc624ddcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnLoadUI: {fileID: 0}
 --- !u!114 &8408784973418703003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,12 +98,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhealth: 100
-  currenthealth: 80
+  currenthealth: 100
   damage: 10
-  speed: 12
+  speed: 25
   crouchspeed: 0.3
-  jumpforce: 18
+  jumpforce: 40
   playerPosition: {x: 20, y: -4, z: 0}
   weapon: 0
   cocoa: 0
   blood: 0
+--- !u!114 &1287742249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408784973383155216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3664040c0e08b714bbd667ccec819993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

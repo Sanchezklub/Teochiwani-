@@ -544,21 +544,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8408784973418703002, guid: d55e500623e0ef94f9bada66d9c4ac52,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408784973418703004, guid: d55e500623e0ef94f9bada66d9c4ac52,
-        type: 3}
-      propertyPath: speed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408784973418703004, guid: d55e500623e0ef94f9bada66d9c4ac52,
-        type: 3}
-      propertyPath: currenthealth
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d55e500623e0ef94f9bada66d9c4ac52, type: 3}
 --- !u!4 &216255085 stripped
@@ -867,7 +852,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 159639904}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287742245}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62023b95f75ed4d4fa44e19a4adb4dc4, type: 3}
@@ -879,7 +864,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 159639904}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287742245}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 525a57ef5c0c47e4bb557617ecc9f730, type: 3}
@@ -3194,19 +3179,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276519150}
   m_CullTransparentMesh: 0
---- !u!1 &1287742245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8408784973383155216, guid: d55e500623e0ef94f9bada66d9c4ac52,
+--- !u!114 &1287742249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1287742249, guid: d55e500623e0ef94f9bada66d9c4ac52,
     type: 3}
   m_PrefabInstance: {fileID: 159639904}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1287742249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287742245}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3664040c0e08b714bbd667ccec819993, type: 3}
@@ -4472,6 +4451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: LadderSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544277756249418062, guid: 903297f280de62a47aec8c17223b8423,
+        type: 3}
+      propertyPath: fallingGravity
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6392348699497800538, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}

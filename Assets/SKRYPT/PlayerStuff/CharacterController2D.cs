@@ -17,6 +17,7 @@ public class CharacterController2D : MonoBehaviour
 
     private bool isFacingRight = true;
     private bool isWalking;
+    private bool isRising;
     private bool isGrounded;
     private bool isTouchingWall;
     private bool isWallSliding;
@@ -51,6 +52,7 @@ public class CharacterController2D : MonoBehaviour
 
     //public float movementSpeed = 10.0f;
     //public float jumpForce = 16.0f;
+    public float fallingGravity = 1.5f;
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
@@ -108,6 +110,7 @@ public class CharacterController2D : MonoBehaviour
         CheckLedgeClimb();
         //CheckDash();
         CheckIfCanMove();
+        AlterGravity();
     }
 
     private void FixedUpdate()
@@ -186,6 +189,11 @@ public class CharacterController2D : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
+        if (isGrounded)
+        {
+            rb.gravityScale = 1;
+        }
+
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
         isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsWall);
         isWallHigher = Physics2D.Raycast(higherWallCheck.position, transform.right, wallCheckDistance, whatIsWall);
@@ -258,6 +266,18 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             isWalking = false;
+        }
+    }
+
+    void AlterGravity()
+    {
+        if (isRising)
+        {
+            if (rb.velocity.y < 0)
+            {
+                rb.gravityScale = fallingGravity;
+                isRising = false;
+            }
         }
     }
 
@@ -432,6 +452,7 @@ public class CharacterController2D : MonoBehaviour
             amountOfJumpsLeft--;
             jumpTimer = 0;
             isAttemptingToJump = false;
+            isRising = true;
             checkJumpMultiplier = true;
         }
     }

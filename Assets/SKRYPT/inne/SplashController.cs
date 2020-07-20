@@ -7,9 +7,9 @@ public class SplashController : MonoBehaviour
     public static SplashController instance;
 
     public GameObject[] splats;
-    public Color[] colors;
     public ParticleSystem ps;
     private int splatOrder;
+    public GameObject BloodSplitter;
 
     // Start is called before the first frame update
     void Start()
@@ -17,26 +17,10 @@ public class SplashController : MonoBehaviour
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            MakeSplat();
-        }
-    }
-
-
     public void MakeSplat()
     {
         var newSplat = Instantiate(splats[Random.Range(0, splats.Length)],transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-        Instantiate(ps,transform.position, Quaternion.identity);
-         var newSprite = newSplat.GetComponent<SpriteRenderer>();
-      // newSplat.GetComponent<SpriteRenderer>().color = colors[Random.Range(0, colors.Length)];
-
-     //   splatOrder++;
-      //  newSprite.sortingOrder = splatOrder;
-
+        Instantiate(ps,BloodSplitter.transform.position, Quaternion.identity);
     }
 }
 

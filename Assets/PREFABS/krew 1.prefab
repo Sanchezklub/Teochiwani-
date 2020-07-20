@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8879362370019826871}
   - component: {fileID: 8879362370019826864}
+  - component: {fileID: 8002645233451430500}
   m_Layer: 20
   m_Name: krew 1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8879362370019826865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 476.7, y: -10.8, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,3 +82,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8002645233451430500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879362370019826865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c9010304ce7cf4bbb33974c5dedb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 8879362370019826864}
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.735849, g: 0.10065861, b: 0.10065861, a: 1}
+  - {r: 0.3584906, g: 0.08962265, b: 0.08962265, a: 1}
+  - {r: 0.4868604, g: 0.77254903, b: 0.29019612, a: 1}
+  - {r: 0.7647059, g: 0.28627455, b: 0.607239, a: 1}
+  - {r: 0.28627455, g: 0.31250834, b: 0.7647059, a: 1}
+  - {r: 0.7647059, g: 0.28627455, b: 0.4948831, a: 1}
+  - {r: 0.7647059, g: 0.37515923, b: 0.28627455, a: 1}
+  - {r: 0.7647059, g: 0.28627455, b: 0.65078497, a: 1}
+  - {r: 0.28627455, g: 0.7015888, b: 0.7647059, a: 1}
+  - {r: 0.28627455, g: 0.7647059, b: 0.55178696, a: 1}
+  - {r: 0.28627455, g: 0.7647059, b: 0.49066776, a: 1}
+  - {r: 0.28627455, g: 0.7647059, b: 0.7290459, a: 1}
+  - {r: 0.28627455, g: 0.4042907, b: 0.7647059, a: 1}
+  - {r: 0.3239294, g: 0.28627455, b: 0.7647059, a: 1}
+  - {r: 0.3937963, g: 0.28627455, b: 0.7647059, a: 1}
+  - {r: 0.6656009, g: 0.28627455, b: 0.7647059, a: 1}
+  - {r: 0.73508203, g: 0.28627455, b: 0.7647059, a: 1}
+  - {r: 0.7647059, g: 0.53962153, b: 0.28627455, a: 1}
+  - {r: 0.7647059, g: 0.28627455, b: 0.42691723, a: 1}

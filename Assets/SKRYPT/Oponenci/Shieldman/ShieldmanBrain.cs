@@ -30,7 +30,7 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     {
         UpdateChildState();
 
-       Debug.Log(currentState + "Shieldman State is");
+       //Debug.Log(currentState + "Shieldman State is");
     }
 
     public override void ChangeState(BaseState<ShieldmanBrain> newState)

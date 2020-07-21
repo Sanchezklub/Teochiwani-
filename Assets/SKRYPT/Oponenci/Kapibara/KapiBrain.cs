@@ -19,7 +19,7 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public GameObject ChargeHitbox;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
-    
+    public AudioSource AttackSound;
     private void Start()
     {
         StartPatrol();
@@ -68,6 +68,10 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public void ActionLeaveFightState()
     {
         LeaveFightState?.Invoke();
+    }
+    public void SoundAttack()
+    {
+        AttackSound.Play(0);
     }
 }
 

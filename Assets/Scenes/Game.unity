@@ -3117,15 +3117,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 737809795947910069, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
+    - target: {fileID: 737809795788404707, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737809795947910069, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737809795947910069, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 737809796075079909, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
@@ -3165,12 +3170,12 @@ PrefabInstance:
     - target: {fileID: 4736205943730176681, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4736205943730176681, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713834550236242520, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
@@ -3185,7 +3190,7 @@ PrefabInstance:
     - target: {fileID: 6713834550236242520, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713834551072769723, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
@@ -3200,12 +3205,12 @@ PrefabInstance:
     - target: {fileID: 6713834551072769723, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713834551224006971, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713834551277995884, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}

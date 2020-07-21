@@ -17,6 +17,8 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     public UnityAction LeaveFightState;
     public UnityAction FacePlayerAction;
 
+    public AudioSource GettingHurt;
+
     public float MaxHealth;
     public float CurrentHealth;
     public float damage;
@@ -78,5 +80,8 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
         //enemyToFollow = objectToFollow;
         ChangeState (new SpearmanPatrolState());
     }
-
+    public void SoundHurt()
+    {
+        GettingHurt.Play(0);
+    }
 }

@@ -18,6 +18,11 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     public float StartFightDist;
     public Animator enemyAnimator;
 
+    public AudioSource audio;
+
+    public AudioClip GettingHurt;
+    public AudioClip Attacksound;
+
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
 
@@ -25,6 +30,7 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     {
         //StartPatrol();
         StartPatrol();
+
     }
     private void Update()
     {
@@ -68,5 +74,15 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     public void ActionLeaveFightState()
     {
         LeaveFightState?.Invoke();
+    }
+    public void SoundHurt()
+    {
+        audio.clip= GettingHurt;
+        audio.Play();
+    }
+    public void SoundAttack()
+    {
+        audio.clip= Attacksound;
+        audio.Play();
     }
 }

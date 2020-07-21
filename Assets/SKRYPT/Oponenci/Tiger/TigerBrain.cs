@@ -20,7 +20,7 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
     public float jump;
-
+    public AudioSource ataksound;
     private void Start()
     {
         StartPatrol();

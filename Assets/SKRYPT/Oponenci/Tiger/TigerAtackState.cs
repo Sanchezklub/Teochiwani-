@@ -60,8 +60,8 @@ public void dmg()
 
         hitEnemies?.GetComponent<Health>()?.TakeDamage(brain.AttackDamage);
         Debug.Log("!jd");
+        brain.ataksound.Play(0);
     }
-
 void FaceTowardsPlayer()
     {
         float PositionDifference = brain.transform.position.x - player.transform.position.x;

@@ -6,7 +6,7 @@ public class Splat : MonoBehaviour
 {
     public SpriteRenderer sr;
     public Color[] colors;
-    public void Update()
+    public void Start()
     {
 
         sr.color=colors[Random.Range(0, colors.Length)];

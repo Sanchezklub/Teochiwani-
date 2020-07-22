@@ -12,6 +12,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public Transform AttackPoint;
     [SerializeField] public float attackRange;
     [SerializeField] public float attackdamage;
+    [SerializeField] private TrailRenderer trail;
     public void Awake()
     {
        
@@ -38,5 +39,15 @@ public abstract class BaseWeapon : BaseItem
     public AnimationType AttackAnimationType;
     public abstract void Attack(PlayerCombat controller);
     
+    public void StartEmitting()
+    {
+        trail.emitting = true;
+    }
+
+    public void StopEmitting()
+    {
+        trail.emitting = false;
+    }
+
     
 }

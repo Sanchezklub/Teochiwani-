@@ -96,6 +96,7 @@ public class PlayerCombat : MonoBehaviour
             currentWeapon.Handle.transform.parent = holdPosition;
             currentWeapon.Handle.transform.localPosition = Vector3.zero;
             currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);
+            currentWeapon.StopEmitting();
      
     }
 
@@ -159,6 +160,15 @@ public class PlayerCombat : MonoBehaviour
         animator.SetBool("AttackCombo2",false); // Combo zrobiłem z tego poradnika https://www.youtube.com/watch?v=53Z7N-x09_k
         noOfClicks=0;
         
+    }
+    public void WeaponStartEmitting()
+    {
+        currentWeapon?.StartEmitting();
+    }
+
+    public void WeaponStopEmitting()
+    {
+        currentWeapon?.StopEmitting();
     }
 
     

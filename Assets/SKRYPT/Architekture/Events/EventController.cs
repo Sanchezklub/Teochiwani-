@@ -108,6 +108,14 @@ public class EventController : MonoBehaviour
             Debug.Log("OnCocoaLostCalled");
         }
 
+        public UnityAction OnMaxhealthValueChangeBasic;
+        public UnityAction<float> OnMaxhealthValueChange;
+        public void CallOnMaxhealthValueChange(float amount)
+        {
+            OnMaxhealthValueChangeBasic?.Invoke();
+            OnMaxhealthValueChange?.Invoke(amount);
+        }
+
 
     }
 

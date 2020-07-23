@@ -24,11 +24,11 @@ public class ScreenShake : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            ShakeScreen(1.5f, 1f);
+            StartCoroutine(ShakeScreen(1.5f, 1f));
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
-            ShakeScreen(0.4f, 3);
+            StartCoroutine(ShakeScreen(0.4f, 3));
         }
     }
 

@@ -16,10 +16,10 @@ public class PlayerCombat : MonoBehaviour
     private BaseWeapon collidedWeapon;
     public BaseWeapon currentWeapon;
     public LayerMask ItemMask;
-        public LayerMask ItemMasks;
+    public LayerMask ItemMasks;
     public Transform holdPosition;
     public Animator animator;
-    
+    // attack speed zmieniam wedlug https://stackoverflow.com/questions/39524914/change-the-speed-of-animation-at-runtime-in-unity-c-sharp
     void Update()
     {
         if (Time.time - lastClickedTime > MaxComboDelay)
@@ -62,7 +62,8 @@ public class PlayerCombat : MonoBehaviour
            //     ChangeWeapon(collidedWeapon);
           //  }
            
-        }  
+        } 
+        animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.PlayerInfo.attackspeed);
         
     }
     

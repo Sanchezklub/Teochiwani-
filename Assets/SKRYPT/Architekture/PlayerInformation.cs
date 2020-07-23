@@ -12,6 +12,7 @@ public class PlayerInformation : ScriptableObject
     public float crouchspeed;
     public float jumpforce;
     public float karma;
+    public float attackspeed;
     //jeszcze coś z bronią, itp.
 
     public Vector3 playerPosition;

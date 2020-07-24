@@ -19,7 +19,12 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public GameObject ChargeHitbox;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
-    public AudioSource AttackSound;
+
+    public AudioSource audio;
+
+    public AudioClip Soundcharge;
+    public AudioClip Attacksound;
+
     private void Start()
     {
         StartPatrol();
@@ -71,8 +76,15 @@ public class KapiBrain : BaseBrain<KapiBrain>
     }
     public void SoundAttack()
     {
-        AttackSound.Play(0);
+        audio.clip= Attacksound;
+        audio.Play();
     }
+    public void SoundCharge()
+    {
+        audio.clip= Soundcharge;
+        audio.Play();
+    }
+
 }
 
         //stan patrol stan szarza ulanska stan channelling

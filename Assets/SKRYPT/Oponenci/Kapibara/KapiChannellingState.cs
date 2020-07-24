@@ -20,6 +20,7 @@ public class KapiChannellingState : BaseState<KapiBrain>
         FaceTowardsPlayer();
         brain.enemyAnimator.SetBool("isIdle", true);
         brain.enemyAnimator.SetBool("isCharging", false);
+        brain.SoundCharge();
     }
 
         void FaceTowardsPlayer()

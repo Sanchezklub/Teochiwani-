@@ -9,7 +9,7 @@ public class Portal : MonoBehaviour
     public GameObject Portalw;
     public void Start()
     {
-        Portalw = GameObject.FindGameObjectWithTag("Portalw");
+        Portalw = GameObject.Find("Portalw");
     }
     public void OnTriggerEnter2D(Collider2D col)
     {

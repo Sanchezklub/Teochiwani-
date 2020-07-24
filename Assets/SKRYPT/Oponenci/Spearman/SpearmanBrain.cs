@@ -17,7 +17,10 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     public UnityAction LeaveFightState;
     public UnityAction FacePlayerAction;
 
-    public AudioSource GettingHurt;
+    public AudioSource audio;
+
+    public AudioClip GettingHurt;
+    public AudioClip Attacksound;
 
     public float MaxHealth;
     public float CurrentHealth;
@@ -82,6 +85,12 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     }
     public void SoundHurt()
     {
-        GettingHurt.Play(0);
+        audio.clip= GettingHurt;
+        audio.Play();
+    }
+    public void SoundAttack()
+    {
+        audio.clip= Attacksound;
+        audio.Play();
     }
 }

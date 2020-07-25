@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
     {
         var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity, transform);
         go.GetComponent<TextMesh>().text = damage.ToString();
-        
+        go.transform.parent=null;
         if (currentHealth <= 0)
         {
             go.GetComponent<TextMesh>().color=new Color( (221/255), (31/255), (13/255), 1);

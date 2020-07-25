@@ -88,7 +88,8 @@ public class CharacterController2D : MonoBehaviour
 
     // Start is called before the first frame update
 	
-	
+	public float BasicSpeed;
+    public float currentspeed;
 	void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -96,6 +97,7 @@ public class CharacterController2D : MonoBehaviour
         amountOfJumpsLeft = amountOfJumps;
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
+        BasicSpeed = GameController.instance.DataStorage.PlayerInfo.speed;
     }
 
     // Update is called once per frame
@@ -111,6 +113,8 @@ public class CharacterController2D : MonoBehaviour
         //CheckDash();
         CheckIfCanMove();
         AlterGravity();
+        currentspeed = GameController.instance.DataStorage.PlayerInfo.speed;
+        anim.SetFloat("Speed1", currentspeed/BasicSpeed);
     }
 
     private void FixedUpdate()

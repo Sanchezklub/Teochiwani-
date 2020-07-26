@@ -12,6 +12,7 @@ public class EnemyHealth : Health
     public GameObject this1;
     public Transform temp;
     public GameObject[] Limbs;
+    public GameObject[] Limbs2;
     protected override void Start()
     {
         base.Start();
@@ -43,9 +44,14 @@ public class EnemyHealth : Health
         if (rand > - 1)
         {
         int rand1 = Random.Range(0, Limbs.Length);
+        Debug.Log(Limbs[rand1].transform.position);
+        Debug.Log(Limbs[rand1].transform.localPosition);
         Limbs[rand1].transform.parent=null;
+        Limbs2[rand1].transform.parent=null;
         Rigidbody2D gameObjectsRigidBody = Limbs[rand1].AddComponent<Rigidbody2D>(); 
-        Limbs[rand1].transform.position = this1.transform.position;
+        Debug.Log(Limbs[rand1].transform.position);
+        Debug.Log(Limbs[rand1].transform.localPosition);
+        //Limbs[rand1].transform.position = this1.transform.position;
         }
         EventController.instance.enemyEvents.CallOnEnemyDied(this);
         Dying += GetDestroyed;

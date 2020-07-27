@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     public int id;
    // public Color ColorWith0hp;
   //  public Color ColorWith100hp;
+    public ParticleSystem Poison;
     public SplashController splashController;
     protected virtual void Start()
     {
@@ -46,6 +47,8 @@ public class Health : MonoBehaviour
 
     IEnumerator PoisonDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
+        var go =Instantiate(Poison, new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
+        Destroy ( go,TimeCount*TimeBetweenHits );
         for ( int i=0; i < TimeCount; i++)
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
@@ -56,9 +59,8 @@ public class Health : MonoBehaviour
 
     public virtual void ShowFloatingText(float damage)
     {
-        var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity, transform);
+        var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity);
         go.GetComponent<TextMesh>().text = damage.ToString();
-        go.transform.parent=null;
         if (currentHealth <= 0)
         {
             go.GetComponent<TextMesh>().color=new Color( (221/255), (31/255), (13/255), 1);

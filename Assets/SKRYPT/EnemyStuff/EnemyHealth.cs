@@ -39,6 +39,7 @@ public class EnemyHealth : Health
 
     protected override void Die()
     {
+        /*
         int rand;
         rand = Random.Range(0,100);
         if (rand > - 1)
@@ -53,6 +54,7 @@ public class EnemyHealth : Health
         Debug.Log(Limbs[rand1].transform.localPosition);
         //Limbs[rand1].transform.position = this1.transform.position;
         }
+        */
         EventController.instance.enemyEvents.CallOnEnemyDied(this);
         Dying += GetDestroyed;
         base.Die();

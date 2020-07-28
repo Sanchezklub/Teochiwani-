@@ -12,7 +12,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] UndergroundCorner;
     public GameObject[] Sky;
     public GameObject[] SkyCorner;
-    
+
     public LayerMask floor;
     public GameObject SpawnPoint;
     public float range;
@@ -29,12 +29,13 @@ public class SpawnBlock : MonoBehaviour
     private void Start()
     {
         Wektors();
-        
+        Rotacja();
 
-    
-        
+
+
+
         SpawnPoint = GameObject.FindGameObjectWithTag("LVLGEN");
-        Magnitude = SpawnPoint.GetComponent<LevelGeneration>().MagnitudeL;       
+        Magnitude = SpawnPoint.GetComponent<LevelGeneration>().MagnitudeL;
         if (Level< 3)
         {
             if ( Magnitude==4)
@@ -73,7 +74,7 @@ public class SpawnBlock : MonoBehaviour
                     }
                 }
             }
-        }   
+        }
         else  if ( Level >= 3)
         {
             if ( Magnitude == 1 || Magnitude == 2  )
@@ -100,9 +101,9 @@ public class SpawnBlock : MonoBehaviour
                     }
                 }
             }
-        
-        
-        
+
+
+
         }
     }
     private void Rotacja()
@@ -127,44 +128,44 @@ public class SpawnBlock : MonoBehaviour
              spawnRotation = Quaternion.Euler(0,0,270);
              return;
          }
-   
-         
-        
+
+
+
     }
-    private void Wektors()   
+    private void Wektors()
     {
         if (Physics2D.Raycast(transform.position,Vector3.up , range,floor ))
         Hit[1]=true;
-        else 
+        else
         Hit[1]=false;
 
         if (Physics2D.Raycast(transform.position, myVector = new Vector3(1.0f, 1.0f, 0.0f), range,floor ))
         Hit[2]=true;
-         else 
+         else
         Hit[2]=false;
         if (Physics2D.Raycast(transform.position,Vector3.right , range,floor ))
         Hit[3]=true;
-         else 
+         else
         Hit[3]=false;
         if (Physics2D.Raycast(transform.position, myVector1 = new Vector3(1.0f, -1.0f, 0.0f) , range,floor ))
         Hit[4]=true;
-         else 
+         else
         Hit[4]=false;
         if (Physics2D.Raycast(transform.position,Vector3.down , range,floor ))
         Hit[5]=true;
-         else 
+         else
         Hit[5]=false;
         if (Physics2D.Raycast(transform.position, myVector2 = new Vector3(-1.0f, -1.0f, 0.0f) , range,floor ))
         Hit[6]=true;
-         else 
+         else
         Hit[6]=false;
         if (Physics2D.Raycast(transform.position,Vector3.left , range,floor ))
         Hit[7]=true;
-         else 
+         else
         Hit[7]=false;
         if (Physics2D.Raycast(transform.position, myVector3 = new Vector3(-1.0f, 1.0f, 0.0f) , range,floor ))
         Hit[8]=true;
-         else 
+         else
         Hit[8]=false;
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7078682518022357999}
   - component: {fileID: 841015981472773331}
   - component: {fileID: 4688271431657004544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Podloga
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: 0618e208240291045ba181b8ed259e54, type: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8947453620902616723}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
   m_Name: 
@@ -79,13 +79,14 @@ MonoBehaviour:
   - {fileID: 5259180032780424829, guid: adaa8317bee4121478f8d3d961b58b02, type: 3}
   - {fileID: 6613594320416099870, guid: 4273e7e6870180a47bd7316a2c83868c, type: 3}
   UndergroundCorner: []
-  Sky: []
+  Sky:
+  - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
   SkyCorner: []
   floor:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   SpawnPoint: {fileID: 0}
-  range: 0
+  range: 100
   Hit: 00000000000000000000
   Level: 1
   Magnitude: 0

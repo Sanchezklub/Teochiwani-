@@ -139,7 +139,7 @@ public class SpawnBlock : MonoBehaviour
         else
         Hit[1]=false;
 
-        if (Physics2D.Raycast(transform.position, myVector = new Vector3(1.0f, 1.0f, 0.0f), range,floor ))
+        if (Physics2D.Raycast(transform.position, myVector = new Vector3(0.5f, 0.5f, 0.0f), range,floor ))
         Hit[2]=true;
          else
         Hit[2]=false;
@@ -147,7 +147,7 @@ public class SpawnBlock : MonoBehaviour
         Hit[3]=true;
          else
         Hit[3]=false;
-        if (Physics2D.Raycast(transform.position, myVector1 = new Vector3(1.0f, -1.0f, 0.0f) , range,floor ))
+        if (Physics2D.Raycast(transform.position, myVector1 = new Vector3(0.5f, -0.5f, 0.0f) , range,floor ))
         Hit[4]=true;
          else
         Hit[4]=false;
@@ -155,7 +155,7 @@ public class SpawnBlock : MonoBehaviour
         Hit[5]=true;
          else
         Hit[5]=false;
-        if (Physics2D.Raycast(transform.position, myVector2 = new Vector3(-1.0f, -1.0f, 0.0f) , range,floor ))
+        if (Physics2D.Raycast(transform.position, myVector2 = new Vector3(-0.5f, -0.5f, 0.0f) , range,floor ))
         Hit[6]=true;
          else
         Hit[6]=false;
@@ -163,7 +163,7 @@ public class SpawnBlock : MonoBehaviour
         Hit[7]=true;
          else
         Hit[7]=false;
-        if (Physics2D.Raycast(transform.position, myVector3 = new Vector3(-1.0f, 1.0f, 0.0f) , range,floor ))
+        if (Physics2D.Raycast(transform.position, myVector3 = new Vector3(-0.5f, 0.5f, 0.0f) , range,floor ))
         Hit[8]=true;
          else
         Hit[8]=false;

@@ -115,7 +115,7 @@ public class SpawnBlock : MonoBehaviour
          }
          else if (Hit[1]==true && Hit[3]==false && Hit[5]==true && Hit[7]==true)
          {
-             spawnRotation = Quaternion.Euler(0,0,90);
+             spawnRotation = Quaternion.Euler(0,0,270);
              return;
          }
           else if (Hit[1]==true && Hit[3]==true && Hit[5]==false && Hit[7]==true)
@@ -125,7 +125,7 @@ public class SpawnBlock : MonoBehaviour
          }
          else if (Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==false)
          {
-             spawnRotation = Quaternion.Euler(0,0,270);
+             spawnRotation = Quaternion.Euler(0,0,90);
              return;
          }
 

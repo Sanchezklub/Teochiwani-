@@ -3030,7 +3030,7 @@ PrefabInstance:
     - target: {fileID: 4544277756249418061, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: m_Constraints
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4544277756249418062, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
@@ -3041,6 +3041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fallingGravity
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544277756249418062, guid: 903297f280de62a47aec8c17223b8423,
+        type: 3}
+      propertyPath: wallCheckDistance
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6392348699497800538, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}

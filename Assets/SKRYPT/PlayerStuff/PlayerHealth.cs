@@ -12,12 +12,14 @@ public class PlayerHealth : Health
     public GameObject MainMenu;
     public Vector2 StartingPosition;
     [SerializeField] private LevelDeleter deleter;
+    private SplashController splash;
 
     protected override void Start()
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         PlayerAnimator = GetComponent<Animator>();
+        splash = GetComponent<SplashController>();
     }
 
     void Update()
@@ -35,6 +37,9 @@ public class PlayerHealth : Health
         {
             ShowFloatingText(damage);
         }
+
+        splash.MakeSplat();
+
         if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
         {
             //MeteorMod

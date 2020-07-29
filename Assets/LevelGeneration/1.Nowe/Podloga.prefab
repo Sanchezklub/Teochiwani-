@@ -67,7 +67,8 @@ MonoBehaviour:
   - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
   - {fileID: 5830692656790049887, guid: 2f229dd17f896314ababe7896ccc9f26, type: 3}
   - {fileID: 6105999846578826878, guid: 82fa79093e925324da40fdafc3afc6bd, type: 3}
-  JungleCorner: []
+  JungleCorner:
+  - {fileID: 1925927394745611323, guid: 089d6c9c307b95f4f997439ed1053539, type: 3}
   Gods:
   - {fileID: 2800033585440978460, guid: f9ec16dd7a15dcd488392fefcd3c42d4, type: 3}
   - {fileID: 4403305137746298704, guid: 0339c8dd591571d48b42a4cfd6e45e82, type: 3}
@@ -82,12 +83,14 @@ MonoBehaviour:
   UndergroundCorner: []
   Sky:
   - {fileID: 1215253114474039822, guid: 319e33f80f5dff34dbcec5b54cc5d44b, type: 3}
-  SkyCorner: []
+  SkyCorner:
+  - {fileID: 1925927394745611323, guid: 089d6c9c307b95f4f997439ed1053539, type: 3}
+  Klocek: {fileID: 2165575004186333124, guid: 3adead0f821cfc348bace99ccd7c4454, type: 3}
   floor:
     serializedVersion: 2
     m_Bits: 256
   SpawnPoint: {fileID: 0}
-  range: 10
+  range: 15
   Hit: 00000000000000000000
   Level: 1
   Magnitude: 1

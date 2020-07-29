@@ -21,7 +21,7 @@ public abstract class BaseItem : MonoBehaviour
     [SerializeField] public int id;
     [SerializeField] public int CocaoPrice;
     [SerializeField] public int BloodPrice;
-    [SerializeField] private Collider2D coll;
+    [SerializeField] public  Collider2D coll;
     public GameObject FloatingTextPrefab;
     [SerializeField]
     private ItemConditioner conditioner;

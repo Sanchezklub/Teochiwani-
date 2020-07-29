@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7053523305320425852}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1316767475812829639
 TrailRenderer:
@@ -161,11 +161,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6932160190135605999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 3.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.6706024, y: 2.9777071, z: 0}
+  m_LocalScale: {x: 1.1764705, y: 1.5923567, z: 1}
   m_Children: []
-  m_Father: {fileID: 1141420419694365294}
-  m_RootOrder: 1
+  m_Father: {fileID: 7053523305320425852}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7053523305320425855
 GameObject:
@@ -194,9 +194,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053523305320425855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 2.55, z: -0}
+  m_LocalPosition: {x: 0.2, y: 2.58, z: 0}
   m_LocalScale: {x: 0.85, y: 0.628, z: 1}
   m_Children:
+  - {fileID: 7564723905732564311}
   - {fileID: 2186679300940550031}
   m_Father: {fileID: 1141420419694365294}
   m_RootOrder: 0
@@ -305,7 +306,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   AttackPoint: {fileID: 7564723905732564311}
-  attackRange: 3
+  attackRange: 7
   attackdamage: 15
   trail: {fileID: 1316767475812829639}
   AttackAnimationType: 3
@@ -333,11 +334,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8088527405296324669}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0.00000028088027}
-  m_LocalPosition: {x: -331.96548, y: -0.21779633, z: 0.0000009536743}
+  m_LocalPosition: {x: -343.87, y: -1.8, z: -0}
   m_LocalScale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
   m_Children:
   - {fileID: 7053523305320425852}
-  - {fileID: 7564723905732564311}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}

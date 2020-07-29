@@ -18,12 +18,13 @@ public class KapiChannellingState : BaseState<KapiBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         enemyRigidBody2D.velocity = Vector2.zero;
         FaceTowardsPlayer();
+        ChannellingTime = 0;
         brain.enemyAnimator.SetBool("isIdle", true);
         brain.enemyAnimator.SetBool("isCharging", false);
         brain.SoundCharge();
     }
 
-        void FaceTowardsPlayer()
+    void FaceTowardsPlayer()
     {
         float PositionDifference = brain.transform.position.x - player.transform.position.x;
         if(PositionDifference >= 0)
@@ -63,6 +64,7 @@ public class KapiChannellingState : BaseState<KapiBrain>
     }
     public override void DeinitState(KapiBrain controller)
     {
+        ChannellingTime = 0;
         base.DeinitState(controller);
     }
 }

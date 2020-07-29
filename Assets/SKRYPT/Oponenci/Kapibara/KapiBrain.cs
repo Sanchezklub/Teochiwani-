@@ -84,7 +84,11 @@ public class KapiBrain : BaseBrain<KapiBrain>
         audio.clip= Soundcharge;
         audio.Play();
     }
-
+    [ContextMenu("CheckState")]
+    public void CheckState()
+    {
+        Debug.Log("State checked. It was" + currentState);
+    }
 }
 
         //stan patrol stan szarza ulanska stan channelling

@@ -101,5 +101,6 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
     void Flip()
     {
         brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
 }

@@ -98,5 +98,6 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
     void Flip()
     {
         brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
     }
 }

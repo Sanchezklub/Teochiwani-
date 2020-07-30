@@ -16,7 +16,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject Klocek;
 
     public LayerMask floor;
-    public GameObject SpawnPoint;
+
     public float range;
     public bool[] Hit = new bool [10];
     bool corner=false;
@@ -35,44 +35,104 @@ public class SpawnBlock : MonoBehaviour
         Rotacja();
 
 
+        if ( transform.position.y > 390 )
+        {
+            Magnitude = 1;
+        }
+        else if (transform.position.y < -10 )
+        {
+            Magnitude = 4;
+        }
+        else
+        {
+            Magnitude = 2;
+        }
 
 
-        SpawnPoint = GameObject.FindGameObjectWithTag("LVLGEN");
-        Magnitude = SpawnPoint.GetComponent<LevelGeneration>().MagnitudeL;
+
+
         if (Level< 3)
         {
             if ( Magnitude==4)
             {
-                int rand = Random.Range(0, Underground.Length);
-                if (Underground.Length != 0)
+                if ( corner == true)
                 {
-                    if(Underground[rand] != null)
+                    int rand = Random.Range(0, UndergroundCorner.Length);
+                    if (UndergroundCorner.Length != 0)
                     {
-                    GameObject obj = Instantiate(Underground[rand], transform.position, spawnRotation);
+                        if(UndergroundCorner[rand] != null)
+                        {
+                        GameObject obj = Instantiate(UndergroundCorner[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
+                    }
+                }
+                else if ( klocek == true)
+                {
+                    GameObject obj = Instantiate(Klocek, transform.position, spawnRotation);
                     obj.transform.parent = this.gameObject.transform;
+                }
+                else 
+                {
+                    int rand = Random.Range(0, Underground.Length);
+                    if (Underground.Length != 0)
+                    {
+                        if(Underground[rand] != null)
+                        {
+                        GameObject obj = Instantiate(Underground[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
                     }
                 }
             }
+
+
+
             if ( Magnitude == 3 || Magnitude == 2 )
             {
-                int rand = Random.Range(0, Jungle.Length);
-                if (Jungle.Length != 0)
+               if ( corner == true)
                 {
-                    if(Jungle[rand] != null)
+                    int rand = Random.Range(0, JungleCorner.Length);
+                    if (JungleCorner.Length != 0)
                     {
-                    GameObject obj = Instantiate(Jungle[rand], transform.position, spawnRotation);
-                    obj.transform.parent = this.gameObject.transform;
+                        if(JungleCorner[rand] != null)
+                        {
+                        GameObject obj = Instantiate(JungleCorner[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
                     }
                 }
+                else if ( klocek == true)
+                {
+                    GameObject obj = Instantiate(Klocek, transform.position, spawnRotation);
+                    obj.transform.parent = this.gameObject.transform;
+                }
+                else 
+                {
+                    int rand = Random.Range(0, Jungle.Length);
+                    if (Jungle.Length != 0)
+                    {
+                        if(Jungle[rand] != null)
+                        {
+                        GameObject obj = Instantiate(Jungle[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
+                    }
+                }
+                
             }
+
+
+
+
             if ( Magnitude == 1)
             {
                 if ( corner == true)
                 {
                     int rand = Random.Range(0, SkyCorner.Length);
-                    if (Sky.Length != 0)
+                    if (SkyCorner.Length != 0)
                     {
-                        if(Sky[rand] != null)
+                        if(SkyCorner[rand] != null)
                         {
                         GameObject obj = Instantiate(SkyCorner[rand], transform.position, spawnRotation);
                         obj.transform.parent = this.gameObject.transform;

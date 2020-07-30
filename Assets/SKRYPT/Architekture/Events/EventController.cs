@@ -145,6 +145,14 @@ public class EventController : MonoBehaviour
             OnEnemyGetDamage?.Invoke(enemy);
         }
 
+        public UnityAction OnBossDiedBasic;
+        public UnityAction<EnemyHealth> OnBossDied;
+
+        public void CallOnBossDied(EnemyHealth boss)
+        {
+            OnBossDiedBasic?.Invoke();
+            OnBossDied?.Invoke(boss);
+        }
     }
 
     public class EnviromentEvents

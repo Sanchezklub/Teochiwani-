@@ -31,6 +31,9 @@ public class SpawnBlock : MonoBehaviour
 
     private void Start()
     {
+
+        Level = GameController.instance.DataStorage.PlayerInfo.level;
+
         Wektors();
         Rotacja();
 

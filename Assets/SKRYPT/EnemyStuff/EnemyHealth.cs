@@ -9,6 +9,7 @@ public class EnemyHealth : Health
     public UnityAction Dying;
     public UnityAction TakingDamage;
     public bool IsHuman;
+    public bool IsBoss = false;
     public GameObject this1;
     public Transform temp;
     public GameObject[] Limbs;
@@ -56,6 +57,10 @@ public class EnemyHealth : Health
         }
         */
         EventController.instance.enemyEvents.CallOnEnemyDied(this);
+        if (IsBoss)
+        {
+            EventController.instance.enemyEvents.CallOnBossDied(this);
+        }
         Dying += GetDestroyed;
         base.Die();
         if (enemyAnimator == null)

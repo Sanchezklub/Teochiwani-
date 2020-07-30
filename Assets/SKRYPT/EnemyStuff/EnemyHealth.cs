@@ -14,6 +14,7 @@ public class EnemyHealth : Health
     public Transform temp;
     public GameObject[] Limbs;
     public GameObject[] Limbs2;
+    [SerializeField] GameObject[] Drops;
     protected override void Start()
     {
         base.Start();
@@ -60,6 +61,11 @@ public class EnemyHealth : Health
         if (IsBoss)
         {
             EventController.instance.enemyEvents.CallOnBossDied(this);
+        }
+        int rand = Random.Range(0, Drops.Length);
+        if (Drops[rand] != null)
+        {
+            Instantiate(Drops[rand], transform.position, Quaternion.identity);
         }
         Dying += GetDestroyed;
         base.Die();

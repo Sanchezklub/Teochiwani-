@@ -67,7 +67,7 @@ public class EnemyHealth : Health
         {
             if (Drops[rand] != null)
             {
-                Instantiate(Drops[rand], transform.position, Quaternion.identity);
+                Instantiate(Drops[rand], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity);
             }
         }
         Dying += GetDestroyed;

@@ -14,7 +14,8 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] SkyCorner;
 
     public GameObject Klocek;
-
+    public GameObject KlocekNiebo;
+    
     public LayerMask floor;
 
     public float range;
@@ -54,7 +55,7 @@ public class SpawnBlock : MonoBehaviour
 
 
 
-        if (Level< 3)
+        if (Level==0)
         {
             if ( Magnitude==4)
             {
@@ -144,7 +145,7 @@ public class SpawnBlock : MonoBehaviour
                 }
                 else if ( klocek == true)
                 {
-                    GameObject obj = Instantiate(Klocek, transform.position, spawnRotation);
+                    GameObject obj = Instantiate(KlocekNiebo, transform.position, spawnRotation);
                     obj.transform.parent = this.gameObject.transform;
                 }
                 else 
@@ -161,21 +162,41 @@ public class SpawnBlock : MonoBehaviour
                 }
             }
         }
-        else  if ( Level >= 3)
+        else  if ( Level ==2 )
         {
-            if ( Magnitude == 1 || Magnitude == 2  )
+            if ( Magnitude == 1)
             {
-                int rand = Random.Range(0, Sky.Length);
-                if (Sky.Length != 0)
+                if ( corner == true)
                 {
-                    if(Sky[rand] != null)
+                    int rand = Random.Range(0, SkyCorner.Length);
+                    if (SkyCorner.Length != 0)
                     {
-                    GameObject obj = Instantiate(Sky[rand], transform.position, spawnRotation);
+                        if(SkyCorner[rand] != null)
+                        {
+                        GameObject obj = Instantiate(SkyCorner[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
+                    }
+                }
+                else if ( klocek == true)
+                {
+                    GameObject obj = Instantiate(KlocekNiebo, transform.position, spawnRotation);
                     obj.transform.parent = this.gameObject.transform;
+                }
+                else 
+                {
+                    int rand = Random.Range(0, Sky.Length);
+                    if (Sky.Length != 0)
+                    {
+                        if(Sky[rand] != null)
+                        {
+                        GameObject obj = Instantiate(Sky[rand], transform.position, spawnRotation);
+                        obj.transform.parent = this.gameObject.transform;
+                        }
                     }
                 }
             }
-            if ( Magnitude == 3 || Magnitude == 4  )
+            else 
             {
                 int rand = Random.Range(0, Gods.Length);
                 if (Gods.Length != 0)

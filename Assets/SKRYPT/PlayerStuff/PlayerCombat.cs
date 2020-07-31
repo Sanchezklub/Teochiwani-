@@ -20,6 +20,7 @@ public class PlayerCombat : MonoBehaviour
     public Transform holdPosition;
     public Animator animator;
     // attack speed zmieniam wedlug https://stackoverflow.com/questions/39524914/change-the-speed-of-animation-at-runtime-in-unity-c-sharp
+
     void Update()
     {
         if (Time.time - lastClickedTime > MaxComboDelay)
@@ -172,6 +173,20 @@ public class PlayerCombat : MonoBehaviour
     public void WeaponStopEmitting()
     {
         currentWeapon?.StopEmitting();
+    }
+
+    public void CancelAllAttacks()
+    {
+        animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsAttackingVLight", false);
+        animator.SetBool("IsAttackingSword", false);
+        animator.SetBool("IsAttackingLight", false);
+        animator.SetBool("IsAttackingVHeavy", false);
+        animator.SetBool("IsAttackingRanged", false);
+        animator.SetBool("AttackCombo", false);
+        animator.SetBool("AttackCombo2", false);
+        noOfClicks = 0;
+        WeaponStopEmitting();
     }
 
     

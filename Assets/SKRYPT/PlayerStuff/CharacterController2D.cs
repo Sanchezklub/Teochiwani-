@@ -372,7 +372,7 @@ public class CharacterController2D : MonoBehaviour
 
     void CheckIfCanMove()
     {
-        if (!canClimbLedge && ( !anim.GetBool("IsAttacking") ))
+        if (!canClimbLedge/* && ( !anim.GetBool("IsAttacking") )*/)
         {
             StartMove();
         }

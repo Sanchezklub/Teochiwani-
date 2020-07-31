@@ -198,15 +198,20 @@ public class CharacterController2D : MonoBehaviour
             rb.gravityScale = 1;
         }
 
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
-        isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsWall);
-        isWallHigher = Physics2D.Raycast(higherWallCheck.position, transform.right, wallCheckDistance, whatIsWall);
-
-        if(isTouchingWall && !isTouchingLedge && !ledgeDetected && !isWallHigher && !ladderMode)
+        if (!ledgeDetected)
         {
-            ledgeDetected = true;
-            ledgePosBot = wallCheck.position;
+            isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsWall);
+            isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsWall);
+            isWallHigher = Physics2D.Raycast(higherWallCheck.position, transform.right, wallCheckDistance, whatIsWall);
+
+            if (isTouchingWall && !isTouchingLedge && !isWallHigher && !ladderMode)
+            {
+                ledgeDetected = true;
+                ledgePosBot = wallCheck.position;
+            }
         }
+
+
         if (ladderMode)
         {
             LadderSprite.SetActive(true);
@@ -559,9 +564,19 @@ public class CharacterController2D : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
-        Gizmos.DrawLine(ledgeCheck.position, new Vector3(ledgeCheck.position.x + wallCheckDistance, ledgeCheck.position.y, ledgeCheck.position.z));
-        Gizmos.DrawLine(higherWallCheck.position, new Vector3(higherWallCheck.position.x + wallCheckDistance, higherWallCheck.position.y, higherWallCheck.position.z));
+        if (isFacingRight)
+        {
+            Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+            Gizmos.DrawLine(ledgeCheck.position, new Vector3(ledgeCheck.position.x + wallCheckDistance, ledgeCheck.position.y, ledgeCheck.position.z));
+            Gizmos.DrawLine(higherWallCheck.position, new Vector3(higherWallCheck.position.x + wallCheckDistance, higherWallCheck.position.y, higherWallCheck.position.z));
+        }
+        else
+        {
+            Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x - wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+            Gizmos.DrawLine(ledgeCheck.position, new Vector3(ledgeCheck.position.x - wallCheckDistance, ledgeCheck.position.y, ledgeCheck.position.z));
+            Gizmos.DrawLine(higherWallCheck.position, new Vector3(higherWallCheck.position.x - wallCheckDistance, higherWallCheck.position.y, higherWallCheck.position.z));
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

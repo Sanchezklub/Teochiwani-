@@ -19,8 +19,12 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask ItemMasks;
     public Transform holdPosition;
     public Animator animator;
+    public float startingspeed;
     // attack speed zmieniam wedlug https://stackoverflow.com/questions/39524914/change-the-speed-of-animation-at-runtime-in-unity-c-sharp
-
+    void Start()
+    {
+        startingspeed = GameController.instance.DataStorage.PlayerInfo.speed;
+    }
     void Update()
     {
         if (Time.time - lastClickedTime > MaxComboDelay)
@@ -67,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
            
         } 
         animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.PlayerInfo.attackspeed);
-        
+        animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.PlayerInfo.speed/startingspeed);
     }
     
    /* void StartAttack()

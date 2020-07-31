@@ -504,7 +504,7 @@ MonoBehaviour:
   raycastTransform: {fileID: 3196792089661789411}
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 69888
   FacingRight: 1
   damage: 20
   speed: 5
@@ -538,10 +538,22 @@ MonoBehaviour:
   splashController: {fileID: 3201892524601806139}
   enemyAnimator: {fileID: 1589249221}
   IsHuman: 0
+  IsBoss: 0
   this1: {fileID: 0}
   temp: {fileID: 0}
   Limbs: []
   Limbs2: []
+  Drops:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
+  - {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
+  - {fileID: 9160837495220343430, guid: 79dae41b87e253347b7fb517efd5fc19, type: 3}
+  - {fileID: 9160837495220343430, guid: 79dae41b87e253347b7fb517efd5fc19, type: 3}
+  - {fileID: 8811000132049622387, guid: 99911d684f414a24b8b19e324807c1a8, type: 3}
+  - {fileID: 8811000132049622387, guid: 99911d684f414a24b8b19e324807c1a8, type: 3}
 --- !u!95 &1589249221
 Animator:
   serializedVersion: 3

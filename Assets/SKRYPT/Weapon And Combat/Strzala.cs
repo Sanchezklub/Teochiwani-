@@ -10,6 +10,8 @@ public class Strzala : MonoBehaviour
     public int damage = 20;
     public int Range =2;
     public LayerMask Player;
+    public Collider2D[] hitEnemies;
+    public GameObject Tip;
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -31,16 +33,19 @@ public class Strzala : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
         pc.isTrigger=true;
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, Range, Player);
+        hitEnemies = Physics2D.OverlapCircleAll(Tip.transform.position, Range, Player);
         foreach (Collider2D enemy in hitEnemies)         
         {
         enemy.GetComponent<Health>()?.TakeDamage(damage);
+        //this.transform.position =transform.position + new Vector3(5, 0, 0);  
+        this.transform.parent=enemy.transform;
         }
     }
     void OnTriggerEnter2D (Collider2D hitInfo)
 	{   if(hasHit==false)
 		{
             hitInfo.GetComponent<Health>()?.TakeDamage(damage);
+            this.transform.parent = hitInfo.transform;
             hasHit=true;
         }
 	}

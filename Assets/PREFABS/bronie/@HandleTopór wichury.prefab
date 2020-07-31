@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6390292510293092154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "@HandleTop\xF3r wichury"
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6619227490125458630}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4459464448502993457}
   - component: {fileID: 8234170167870963095}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,6 +210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Top\xF3r wichury"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486930172415950013, guid: 699d04d2230211e438551b54e45fc703,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6375411827611806490, guid: 699d04d2230211e438551b54e45fc703,
         type: 3}

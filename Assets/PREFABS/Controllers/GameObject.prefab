@@ -84,6 +84,7 @@ MonoBehaviour:
   itemTracker: {fileID: 9026327015831068240}
   weaponTracker: {fileID: 9026327015831068241}
   Dictionary: {fileID: 9026327015831068271}
+  levelGen: {fileID: 0}
   SpawnStuff: 1
   saveContainer:
     playerData:
@@ -98,12 +99,15 @@ MonoBehaviour:
       ItemIDs: 
       testVector: {x: 0, y: 0, z: 0}
     levelData:
-      levelGen: {fileID: 0}
       roomRelation: []
       enemiesData: []
       enviromentData: []
       weaponData: []
       itemData: []
+    itemsData:
+      unlockedItems: 
+  LoadedObjectHolder: {fileID: 0}
+  MainMenu: {fileID: 0}
 --- !u!114 &9026327015831068243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026327015831068246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5051a1764a0effc419b18afa05597f4e, type: 3}
   m_Name: 
@@ -172,7 +176,7 @@ MonoBehaviour:
   - {fileID: 22365272292675412, guid: 8f0f7548dbf248b4ba026464c634adab, type: 3}
   - {fileID: 7921745097120466784, guid: 347a3c2ea11c98a4ebeea1e4d5d362d7, type: 3}
   - {fileID: 6163903112760620598, guid: 9497555e5888d6342a0f3b43899eb75e, type: 3}
-  - {fileID: 2194552160283561000, guid: 8f6e1a2f07b98b4458ec1f72de974a4a, type: 3}
+  - {fileID: 4057763906934095984, guid: e2518b11c2147f24d847c819565c5c77, type: 3}
   - {fileID: 5669658711341850528, guid: faf6d2e2b2996834ca26d1ee895f43de, type: 3}
   - {fileID: 1982456374240259570, guid: 92a55a7932dcf7146bc709a276463f84, type: 3}
   - {fileID: 1341455905871245806, guid: 20e245ead3a1d25498f9673b111e1513, type: 3}
@@ -186,6 +190,9 @@ MonoBehaviour:
   - {fileID: 2403402470432670172, guid: 317e65f9ac53d1e4286ba3a4ca0f5ff7, type: 3}
   - {fileID: 0}
   - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 4995936593996878693, guid: 2fa58885155274445ab5296c08a872ce, type: 3}
   ItemObjects:
   - {fileID: 5976188103267766918, guid: 78ba9fc1d326230478dd307866176b1c, type: 3}
   - {fileID: 8258417610821041213, guid: b9b062a81e35bf544a810a910260f66f, type: 3}
@@ -206,6 +213,107 @@ MonoBehaviour:
   - {fileID: 87701840723305978, guid: 123328b3630f5d343b2fdc2fbc46e1d1, type: 3}
   - {fileID: 4767714757478575935, guid: 876ba10475e4c4844aa593ee770144a9, type: 3}
   - {fileID: 3853596306262942333, guid: 635556bb975939042aa02146b516f402, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8832911148018524805, guid: 0ceb8612f7b40d94da74227403930735, type: 3}
+  - {fileID: 6861661989205530176, guid: b000839a0a4d6444386b219f906d513e, type: 3}
+  - {fileID: 2687345321257893394, guid: 72003debd7bf3304c8a447d1fae7cd82, type: 3}
+  - {fileID: 6445527946330245421, guid: 7fcd9a3feec506f49a552b2ef44766ca, type: 3}
+  - {fileID: 196019128043222980, guid: 61ebc7f317f8e14438b603a7c13d6f05, type: 3}
+  - {fileID: 8567751892998769453, guid: d9e41bfbcafb0914cae99e263c647619, type: 3}
+  - {fileID: 2403402470432670172, guid: 317e65f9ac53d1e4286ba3a4ca0f5ff7, type: 3}
+  - {fileID: 0}
+  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 4995936593996878693, guid: 2fa58885155274445ab5296c08a872ce, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   EnviroObjects:
   - {fileID: 6769391296925741220, guid: 12fb7cc922a7a5745a9ba64bfce80a4f, type: 3}
   - {fileID: 7700265886463924053, guid: ad37623f870f41b45b08bbc393e03694, type: 3}

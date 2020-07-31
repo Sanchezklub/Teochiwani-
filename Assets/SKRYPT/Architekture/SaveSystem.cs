@@ -66,7 +66,7 @@ public class SaveSystem : MonoBehaviour
             if (SpawnStuff == true)
             {
                 LoadEnemies(saveContainer);
-                LoadWeapons(saveContainer);
+                //LoadWeapons(saveContainer);
                 LoadItems(saveContainer);
                 LoadEnvironment(saveContainer);
                 LoadRooms(saveContainer);
@@ -109,6 +109,8 @@ public class SaveSystem : MonoBehaviour
             }
         }
     }
+
+    /*
     public void LoadWeapons(SaveContainer LoadedSaveContainer)
     {
         foreach (WeaponData loadedWeapon in LoadedSaveContainer.levelData.weaponData)
@@ -122,6 +124,9 @@ public class SaveSystem : MonoBehaviour
             }
         }
     }
+
+    */
+
     public void LoadEnvironment(SaveContainer LoadedSaveContainer)
     {
         foreach (EnviroData loadedEnvironment in LoadedSaveContainer.levelData.enviromentData)
@@ -158,9 +163,9 @@ public class SaveSystem : MonoBehaviour
             item.GetComponent<BaseItem>()?.PickupItem();
         }
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (LoadedSaveContainer.playerData.currentweaponID < Dictionary.WeaponObjects.Length)
+        if (LoadedSaveContainer.playerData.currentweaponID < Dictionary.ItemObjects.Length)
         {
-            GameObject CurrentWeapon = Dictionary.GetWeaponObjects(LoadedSaveContainer.playerData.currentweaponID);
+            GameObject CurrentWeapon = Dictionary.GetItemObjects(LoadedSaveContainer.playerData.currentweaponID);
             GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
             BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
             if (weap != null)

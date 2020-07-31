@@ -77,6 +77,7 @@ public abstract class BaseItem : MonoBehaviour
         coll.enabled = false;
         ShowFloatingText();
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
+        EventController.instance.itemEvents.CallOnItemDied(this);
     }
     public virtual void ShowFloatingText()
     {

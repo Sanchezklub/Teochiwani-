@@ -17,7 +17,7 @@ public abstract class BaseWeapon : BaseItem
     {
        
         //UIFlavourText = Find("FlavourText");
-        EventController.instance.weaponEvents.CallOnWeaponAppear(this);
+        //EventController.instance.weaponEvents.CallOnWeaponAppear(this);
         GetUITexts();
 
     }
@@ -41,12 +41,18 @@ public abstract class BaseWeapon : BaseItem
     
     public void StartEmitting()
     {
-        trail.emitting = true;
+        if (trail != null)
+        {
+            trail.emitting = true;
+        }
     }
 
     public void StopEmitting()
     {
-        trail.emitting = false;
+        if (trail != null)
+        {
+            trail.emitting = false;
+        }
     }
 
     

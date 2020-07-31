@@ -27,7 +27,7 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
 
     private void Start()
     {
-        StartStun();
+        StartIdle();
     }
     private void Update()
     {

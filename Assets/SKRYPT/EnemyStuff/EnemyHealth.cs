@@ -63,9 +63,12 @@ public class EnemyHealth : Health
             EventController.instance.enemyEvents.CallOnBossDied(this);
         }
         int rand = Random.Range(0, Drops.Length);
-        if (Drops[rand] != null)
+        if (Drops.Length != 0)
         {
-            Instantiate(Drops[rand], transform.position, Quaternion.identity);
+            if (Drops[rand] != null)
+            {
+                Instantiate(Drops[rand], transform.position, Quaternion.identity);
+            }
         }
         Dying += GetDestroyed;
         base.Die();

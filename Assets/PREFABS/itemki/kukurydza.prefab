@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee6ad1e4d258204ab8c8e21656bc91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: 2ced2d04f57942042aec15028d18fb3b, type: 2}
   UIWeaponName: {fileID: 0}
@@ -128,11 +129,8 @@ MonoBehaviour:
   flavourtext: "przyda\u0142oby si\u0119 wi\u0119cej soli"
   itemName: Kukurydza
   id: 8
+  CocaoPrice: 8
+  BloodPrice: 8
+  coll: {fileID: 5125728825165715474}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 5125728825165715474}
-  Itemname: Kukurydza
-  FlavourText: "przyda\u0142oby si\u0119 wi\u0119cej soli"
-  MaxHealthBuff: 10
-  CocaoPrice: 20
-  BloodPrice: 20

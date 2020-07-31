@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9c52557cdc765479e1f8cdaa8b88e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: 2ced2d04f57942042aec15028d18fb3b, type: 2}
   UIWeaponName: {fileID: 0}
@@ -128,11 +129,8 @@ MonoBehaviour:
   flavourtext: "Bear m\xF3wi \u017Ce to czyste proteiny"
   itemName: Soczysta Larwa
   id: 1
+  CocaoPrice: 9
+  BloodPrice: 9
+  coll: {fileID: 6162963131583660105}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 6162963131583660105}
-  Itemname: Soczysta Larwa
-  FlavourText: "Bear m\xF3wi \u017Ce to czyste proteiny"
-  MaxHealthBuff: 10
-  CocaoPrice: 20
-  BloodPrice: 20

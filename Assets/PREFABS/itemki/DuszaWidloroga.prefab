@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb82a93d687c68e46a566f0b20362957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: cf30778ad2cd5414cb472e54150f059e, type: 2}
   UIWeaponName: {fileID: 0}
@@ -102,13 +103,11 @@ MonoBehaviour:
   flavourtext: "Ranny, ale ci\u0105gle mo\u017Ce uciec"
   itemName: "Dusza Wid\u0142oroga"
   id: 13
+  CocaoPrice: 11
+  BloodPrice: 11
+  coll: {fileID: 87701840723305957}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 87701840723305957}
-  Itemname: "Dusza Wid\u0142oroga"
-  FlavourText: "Ranny, ale ci\u0105gle mo\u017Ce uciec"
-  CocaoPrice: 20
-  BloodPrice: 20
 --- !u!61 &87701840723305957
 BoxCollider2D:
   m_ObjectHideFlags: 0

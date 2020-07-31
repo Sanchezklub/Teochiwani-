@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309621c0743ea0640a5edaf7a5f37c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: 5a0c66511c647cd419f64292b769daf0, type: 2}
   - {fileID: 11400000, guid: ce587be5847602c4685ba712e9a381d8, type: 2}
@@ -129,12 +130,8 @@ MonoBehaviour:
   flavourtext: "zwierz zdr\xF3w przebiegnie kniej\u0119"
   itemName: "Poro\u017Ce \u0141osia"
   id: 6
+  CocaoPrice: 12
+  BloodPrice: 12
+  coll: {fileID: 4184701772577242205}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 4184701772577242205}
-  Itemname: "Poro\u017Ce \u0141osia"
-  FlavourText: "zwierz zdr\xF3w przebiegnie kniej\u0119"
-  Damagebuff: 10
-  Speedbuff: 30
-  CocaoPrice: 20
-  BloodPrice: 20

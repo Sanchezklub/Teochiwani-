@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dcda9ef56b2af4da01448e0a6aefe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: fd0a0d00bd8233c40b941d10b760d56a, type: 2}
   UIWeaponName: {fileID: 0}
@@ -128,10 +129,8 @@ MonoBehaviour:
   flavourtext: ich zaboli to bardziej
   itemName: Kolczasta Zbroja
   id: 9
+  CocaoPrice: 14
+  BloodPrice: 14
+  coll: {fileID: 6626016515411089161}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 6626016515411089161}
-  Itemname: Kolczasta Zbroja
-  FlavourText: ich zaboli to bardziej
-  CocaoPrice: 20
-  BloodPrice: 20

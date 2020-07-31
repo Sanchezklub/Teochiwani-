@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bfeb5bb02112aa4187618a41d9d41a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: 500c281146c8358479e9a2604e8addf7, type: 2}
   UIWeaponName: {fileID: 0}
@@ -128,11 +129,8 @@ MonoBehaviour:
   flavourtext: "Ich krew nasz\u0105 si\u0142\u0105"
   itemName: Czaszka Wrogiego Plemienia
   id: 3
+  CocaoPrice: 11
+  BloodPrice: 11
+  coll: {fileID: 4524356282363634566}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 4524356282363634566}
-  Itemname: Czaszka Wrogiego Plemienia
-  FlavourText: "Ich krew nasz\u0105 si\u0142\u0105"
-  Damagebuff: 30
-  CocaoPrice: 20
-  BloodPrice: 20

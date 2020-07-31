@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843f68ff1f41f044a9633fd24cf39514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Handle: {fileID: 0}
   modifiers:
   - {fileID: 11400000, guid: 640226e915c2ad64980acc7155677781, type: 2}
   - {fileID: 11400000, guid: 5a0c66511c647cd419f64292b769daf0, type: 2}
@@ -131,11 +132,8 @@ MonoBehaviour:
   flavourtext: Gimmie MOre......
   itemName: "B\u0142ogos\u0142awiona Krew"
   id: 7
+  CocaoPrice: 15
+  BloodPrice: 15
+  coll: {fileID: 4686377886424221634}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  coll: {fileID: 4686377886424221634}
-  Itemname: "B\u0142ogos\u0142awiona Krew"
-  FlavourText: Gimmie MOre......
-  AllStatsBuff: 10
-  CocaoPrice: 20
-  BloodPrice: 20

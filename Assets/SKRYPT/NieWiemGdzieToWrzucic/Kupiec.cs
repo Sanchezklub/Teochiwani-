@@ -30,7 +30,7 @@ public class Kupiec : MonoBehaviour
         
     
        // Instantiate(stragan, new Vector3(transform.position.x+7,transform.position.y+2,transform.position.z), Quaternion.identity );
-        GameObject ObjectStragan = Instantiate(stragan, new Vector3(transform.position.x-10,transform.position.y+4,transform.position.z), Quaternion.identity );
+        GameObject ObjectStragan = Instantiate(stragan, new Vector3(transform.position.x-12,transform.position.y+7,transform.position.z), Quaternion.identity );
         ObjectStragan.transform.parent = this.transform;
 
 

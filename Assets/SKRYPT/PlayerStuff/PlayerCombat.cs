@@ -27,7 +27,7 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks = 0;
         }
       
-        if(Input.GetKeyDown(KeyCode.Mouse0)) 
+        if(Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextAttackTime) 
         {
             lastClickedTime = Time.time;
             noOfClicks++;
@@ -38,8 +38,10 @@ public class PlayerCombat : MonoBehaviour
                     animator.SetBool("IsAttacking", true);
                     animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
                  }
-            }                
-            nextAttackTime = Time.time +1f / attackrate;
+            }
+
+            nextAttackTime = Time.time +0.5f;
+            
             noOfClicks = Mathf.Clamp(noOfClicks,0,3);
         }
         

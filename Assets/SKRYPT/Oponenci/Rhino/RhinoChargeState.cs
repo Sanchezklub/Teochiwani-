@@ -77,7 +77,7 @@ public class RhinoChargeState : BaseState<RhinoBrain>
     void DetectWall()
     {
 //        Debug.Log("Detecting Wall");
-        if (Physics2D.Raycast(brain.raycastTransform.position, new Vector2(enemyRigidBody2D.velocity.x*4,0), 0.45f, brain.WhatIsGround))
+        if (Physics2D.Raycast(brain.raycastTransform.position, new Vector2(enemyRigidBody2D.velocity.x*4,0), 1.45f, brain.WhatIsGround))
         {
             /*Vector2 Pos = brain.transform.position;
             if (brain.FacingRight)

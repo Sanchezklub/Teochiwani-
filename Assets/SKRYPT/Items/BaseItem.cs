@@ -27,7 +27,7 @@ public abstract class BaseItem : MonoBehaviour
     private ItemConditioner conditioner;
     public ItemConditioner Conditioner => conditioner;
 
-     private void Start()
+     public void Start()
     {
         //UIFlavourText = Find("FlavourText");
         EventController.instance.itemEvents.CallOnItemAppear(this);

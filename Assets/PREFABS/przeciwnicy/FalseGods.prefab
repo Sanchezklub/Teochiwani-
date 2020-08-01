@@ -122,6 +122,7 @@ MonoBehaviour:
   FloatingText: 0
   FloatingTextPrefab: {fileID: 0}
   id: 0
+  Poison: {fileID: 0}
   splashController: {fileID: 0}
 --- !u!1 &6620807324931082466
 GameObject:
@@ -135,6 +136,7 @@ GameObject:
   - component: {fileID: 6254062561884713888}
   - component: {fileID: 1463683964}
   - component: {fileID: 2059776983}
+  - component: {fileID: -6398884429186956249}
   m_Layer: 14
   m_Name: FalseGods
   m_TagString: Untagged
@@ -151,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 6620807324931082466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 2372908152546574496}
   - {fileID: 8167217049600908965}
@@ -180,8 +182,8 @@ MonoBehaviour:
   ProjectileMaxX: 35
   ProjectileY: 18
   ProjectileAmount: 25
-  TulioAnimator: {fileID: 0}
-  MiguelAnimator: {fileID: 0}
+  TulioAnimator: {fileID: 465686824}
+  MiguelAnimator: {fileID: 472562049}
   TulioRb: {fileID: 0}
   MiguelRb: {fileID: 0}
   rb: {fileID: 1463683964}
@@ -228,14 +230,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 200
   currentHealth: 0
   FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   id: 0
-  splashController: {fileID: 0}
+  Poison: {fileID: 0}
+  splashController: {fileID: -6398884429186956249}
   enemyAnimator: {fileID: 0}
   IsHuman: 0
+  IsBoss: 0
+  this1: {fileID: 0}
+  temp: {fileID: 0}
+  Limbs: []
+  Limbs2: []
+  Drops: []
+--- !u!114 &-6398884429186956249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620807324931082466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9a211a645c4e14db23dd4693d5aafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splats:
+  - {fileID: 8879362370019826865, guid: bc3228d40b1f5f748b4c54054d94f079, type: 3}
+  - {fileID: 8445104910896414660, guid: 10b6a25e6b631554cb2bf002f33f534a, type: 3}
+  - {fileID: 4422407967575818056, guid: c7e1c3d1bf616d2449439381696a5387, type: 3}
+  ps: {fileID: 3800583068774307269, guid: 23b4a682e04b43147a28344e33dab97d, type: 3}
+  BloodSplitter: {fileID: 901612634877900056}
 --- !u!61 &840285190202608803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -310,6 +338,7 @@ MonoBehaviour:
   FloatingText: 0
   FloatingTextPrefab: {fileID: 0}
   id: 0
+  Poison: {fileID: 0}
   splashController: {fileID: 0}
 --- !u!1001 &2444039764129419276
 PrefabInstance:
@@ -828,6 +857,12 @@ Transform:
 --- !u!4 &5013297486778205814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7075695619936378800, guid: 15de75e15d86cc74981ed0a02112a0df,
+    type: 3}
+  m_PrefabInstance: {fileID: 6367205668958610982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &901612634877900056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6115870943186719550, guid: 15de75e15d86cc74981ed0a02112a0df,
     type: 3}
   m_PrefabInstance: {fileID: 6367205668958610982}
   m_PrefabAsset: {fileID: 0}

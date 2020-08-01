@@ -23,17 +23,6 @@ public class ScreenShake : MonoBehaviour
         yield return new WaitForSeconds(time);
         noise.m_AmplitudeGain = 0;
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(ShakeScreen(1.5f, 1f));
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartCoroutine(ShakeScreen(0.4f, 3));
-        }
-    }
     void OnPlayerReceiveDamage(float damage, float healthleft)
     {
         if (damage < 25)

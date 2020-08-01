@@ -171,6 +171,7 @@ public class SaveSystem : MonoBehaviour
             if (weap != null)
             {
                 weap.GetUITexts();
+                weap.Start();
                 player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
             }
             else
@@ -186,6 +187,7 @@ public class SaveSystem : MonoBehaviour
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
         Debug.Log("LoadedPosition was" +pos);
+        GameController.instance.DataStorage.PlayerInfo.currenthealth = LoadedSaveContainer.playerData.currenthealth;
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }
 

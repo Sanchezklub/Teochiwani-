@@ -18,7 +18,7 @@ public class kasacz : BaseWeapon
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Health>()?.TakeDamage(attackdamage+GameController.instance.DataStorage.PlayerInfo.damage);
-            enemy.GetComponent<Health>()?.PoisonEffect(PoisonDamage,PoisonCount,PoisonTimeBetween);
+            enemy.GetComponent<Health>()?.PoisonEffect(PoisonDamage,PoisonCount,PoisonTimeBetween,0);
 
         }
     }

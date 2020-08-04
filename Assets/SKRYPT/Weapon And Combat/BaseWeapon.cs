@@ -72,15 +72,14 @@ public abstract class BaseWeapon : BaseItem
             trail.emitting = false;
         }
     }
-    void ChooseModifier(bool IsLoaded = false)
+    void ChooseModifier()
     {
-        Debug.Log("ModifierChosen");
         if (!ModifierChosen)
         {
-            if (!IsLoaded)
+            if (ModId < 0)
             {
                 ModId = Random.Range(0, WeaponModDictionary.instance.WeaponModifiers.Length);
-                
+                Debug.LogFormat("Randomly chosen ModifierId for {0} was {1}", name, ModId);
             }
 
             BaseWeaponModifier mod = WeaponModDictionary.instance.GetWeaponModifier(ModId);

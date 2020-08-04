@@ -12,6 +12,7 @@ public abstract class ItemConditioner
 
 public abstract class BaseItem : MonoBehaviour
 {
+    //public bool IsLoaded;
     public GameObject Handle;
     public BaseModifier[] modifiers;
     [SerializeField] public TextMeshProUGUI UIWeaponName;
@@ -19,7 +20,7 @@ public abstract class BaseItem : MonoBehaviour
     [SerializeField] public string flavourtext;
     [SerializeField] public string itemName;
     [SerializeField] public int id;
-    [SerializeField] public int ModId;
+    [SerializeField] public int ModId = -10;
     [SerializeField] public int CocaoPrice;
     [SerializeField] public int BloodPrice;
     [SerializeField] public  Collider2D coll;
@@ -31,6 +32,7 @@ public abstract class BaseItem : MonoBehaviour
      public virtual void Start()
     {
         //UIFlavourText = Find("FlavourText");
+        Debug.Log("Called On Item Appear " + name);
         EventController.instance.itemEvents.CallOnItemAppear(this);
         UIFlavorText = GameObject.FindGameObjectWithTag("FlavorText")?.GetComponentInChildren<TextMeshProUGUI>(true);
         UIWeaponName = GameObject.FindGameObjectWithTag("WeaponName")?.GetComponentInChildren<TextMeshProUGUI>(true);
@@ -71,6 +73,7 @@ public abstract class BaseItem : MonoBehaviour
         Handle.transform.parent = null;
         coll.enabled = true;
         Handle.transform.localEulerAngles = new Vector3(0,0,0);
+        EventController.instance.itemEvents.CallOnItemAppear(this);
     }
 
     public virtual void PickupWepaon()
@@ -79,6 +82,7 @@ public abstract class BaseItem : MonoBehaviour
         ShowFloatingText();
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
+        Debug.Log("Called On Item Die " + name);
     }
     public virtual void ShowFloatingText()
     {

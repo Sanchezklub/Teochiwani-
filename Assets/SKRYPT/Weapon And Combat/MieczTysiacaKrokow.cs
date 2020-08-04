@@ -18,16 +18,12 @@ public class MieczTysiacaKrokow : BaseWeapon
     }
     public override void DropWeapon()
     {
-        GameController.instance.DataStorage.PlayerInfo.speed=Playercurrentspeed; 
-        Handle.transform.parent = null;
-        coll.enabled = true;
-        Handle.transform.localEulerAngles = new Vector3(0,0,0); 
+        GameController.instance.DataStorage.PlayerInfo.speed=Playercurrentspeed;
+        base.DropWeapon();
     }
     public override void PickupWepaon()
     {
-        coll.enabled = false;
-        ShowFloatingText();
-        gameObject.transform.localEulerAngles = new Vector3(0,0,0);
+        base.PickupWepaon();
         Playercurrentspeed=GameController.instance.DataStorage.PlayerInfo.speed;
         GameController.instance.DataStorage.PlayerInfo.speed+=20;
     }

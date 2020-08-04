@@ -13,6 +13,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public float attackRange;
     [SerializeField] public float attackdamage;
     [SerializeField] private TrailRenderer trail;
+    private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
     public void Awake()
     {
        
@@ -20,6 +21,12 @@ public abstract class BaseWeapon : BaseItem
         //EventController.instance.weaponEvents.CallOnWeaponAppear(this);
         GetUITexts();
 
+    }
+
+    public override void Start()
+    {
+        ChooseModifier();
+        base.Start();
     }
 
     public void GetUITexts()
@@ -53,6 +60,23 @@ public abstract class BaseWeapon : BaseItem
         {
             trail.emitting = false;
         }
+    }
+    void ChooseModifier(bool IsLoaded = false)
+    {
+        Debug.Log("ModifierChosen");
+        if (!ModifierChosen)
+        {
+            if (!IsLoaded)
+            {
+                ModId = Random.Range(0, WeaponModDictionary.instance.WeaponModifiers.Length);
+                
+            }
+
+            BaseWeaponModifier mod = WeaponModDictionary.instance.GetWeaponModifier(ModId);
+            mod?.Apply(this);
+            ModifierChosen = true;
+        }
+
     }
 
     

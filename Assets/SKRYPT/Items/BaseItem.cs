@@ -16,9 +16,10 @@ public abstract class BaseItem : MonoBehaviour
     public BaseModifier[] modifiers;
     [SerializeField] public TextMeshProUGUI UIWeaponName;
     [SerializeField] public TextMeshProUGUI UIFlavorText;
-    [SerializeField] private string flavourtext;
-    [SerializeField] private string itemName;
+    [SerializeField] public string flavourtext;
+    [SerializeField] public string itemName;
     [SerializeField] public int id;
+    [SerializeField] public int ModId;
     [SerializeField] public int CocaoPrice;
     [SerializeField] public int BloodPrice;
     [SerializeField] public  Collider2D coll;
@@ -27,7 +28,7 @@ public abstract class BaseItem : MonoBehaviour
     private ItemConditioner conditioner;
     public ItemConditioner Conditioner => conditioner;
 
-     public void Start()
+     public virtual void Start()
     {
         //UIFlavourText = Find("FlavourText");
         EventController.instance.itemEvents.CallOnItemAppear(this);

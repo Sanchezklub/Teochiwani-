@@ -69,7 +69,7 @@ public class LevelData
         {
             if (item != null)
             {
-                itemData.Add(new ItemData(item.id, item.transform.position));
+                itemData.Add(new ItemData(item.id, item.transform.position, item.ModId));
             }
         }
     }
@@ -138,13 +138,15 @@ public class EnemyData
 [System.Serializable]
 public class ItemData
 {
-    public ItemData(int id, Vector3 position)
+    public ItemData(int id, Vector3 position, int ModId)
     {
         this.id = id;
         this.position = position;
+        this.ModId = ModId;
     }
     public int id;
     public Vector3 position;
+    public int ModId;
 }
 [System.Serializable]
 public class WeaponData

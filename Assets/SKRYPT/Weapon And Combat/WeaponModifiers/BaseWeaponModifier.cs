@@ -8,13 +8,36 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] int PriceChange;
     [SerializeField] float DamageChange;
     [SerializeField] float AttackRangeChange;
-    [SerializeField] string NameChange;
+    [SerializeField] string MeskiNameChange;
+    [SerializeField] string ZenskiNameChange;
+    [SerializeField] string NijakiNameChange;
+    [SerializeField] string MeskoosobowyNameChange;
+    [SerializeField] string NiemeskoosobowyNameChange;
     public void Apply(BaseWeapon weapon)
     {
         weapon.BloodPrice += PriceChange;
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
-        weapon.itemName = NameChange +" "+ weapon.itemName;
+        switch (weapon.weaponSexType)
+        {
+            case BaseWeapon.SexType.Meski:
+                weapon.itemName = MeskiNameChange + " " + weapon.itemName;
+                break;
+            case BaseWeapon.SexType.Zenski:
+                weapon.itemName = ZenskiNameChange + " " + weapon.itemName;
+                break;
+            case BaseWeapon.SexType.Nijaki:
+                weapon.itemName = NijakiNameChange + " " + weapon.itemName;
+                break;
+            case BaseWeapon.SexType.Meskoosobowy:
+                weapon.itemName = MeskoosobowyNameChange + " " + weapon.itemName;
+                break;
+            case BaseWeapon.SexType.Niemeskoosobowy:
+                weapon.itemName = NiemeskoosobowyNameChange + " " + weapon.itemName;
+                break;
+
+        }
+        //weapon.itemName = NameChange +" "+ weapon.itemName;
     }
 }

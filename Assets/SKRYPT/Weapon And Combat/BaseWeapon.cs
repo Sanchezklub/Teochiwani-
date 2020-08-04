@@ -14,6 +14,17 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public float attackdamage;
     [SerializeField] private TrailRenderer trail;
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
+
+    public enum SexType
+    {
+        Meski,
+        Zenski,
+        Nijaki,
+        Meskoosobowy,
+        Niemeskoosobowy
+    }
+
+    public SexType weaponSexType;
     public void Awake()
     {
        

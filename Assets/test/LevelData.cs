@@ -69,7 +69,15 @@ public class LevelData
         {
             if (item != null)
             {
-                itemData.Add(new ItemData(item.id, item.transform.position, item.ModId));
+                if (item is BaseWeapon)
+                {
+                    itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId));
+                }
+                else
+                {
+                    itemData.Add(new ItemData(item.id, item.transform.position, item.ModId));
+                }
+
             }
         }
     }

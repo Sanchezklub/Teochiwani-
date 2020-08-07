@@ -36,9 +36,19 @@ public class SpawnBlock : MonoBehaviour
     public bool[] Hit = new bool [10];
 
     bool corner=false;
-    bool klocek = false;
+    bool klocek = false; 
     bool grzes2 = false;
     bool grzes1 = false;
+    bool grzes1a = false;
+    bool grzesD = false;
+    bool grzesC = false;
+    bool grzesB = false;
+    bool grzes3 = false;
+    bool grzes0a = false;
+    bool grzes0b = false;
+
+
+
     public int Level=1;
     public int Magnitude;
     Vector3 myVector;
@@ -144,6 +154,39 @@ public class SpawnBlock : MonoBehaviour
 
 
                 }
+                else if ( grzesD ==true)
+                {
+                    
+                    GameObject obj = Instantiate(JungleGrzesD[Random.Range(0, JungleGrzesD.Length)], transform.position, spawnRotation);
+                    obj.transform.parent = this.gameObject.transform;
+
+
+                }
+                else if ( grzesB ==true)
+                {
+                    
+                    GameObject obj = Instantiate(JungleGrzesB[Random.Range(0, JungleGrzesB.Length)], transform.position, spawnRotation);
+                    obj.transform.parent = this.gameObject.transform;
+
+
+                }
+                else if ( grzes1a ==true)
+                {
+                    
+                    GameObject obj = Instantiate(JungleGrzes1a[Random.Range(0, JungleGrzes1a.Length)], transform.position, spawnRotation);
+                    obj.transform.parent = this.gameObject.transform;
+
+
+                }
+                else if ( grzes0b ==true)
+                {
+                    
+                    GameObject obj = Instantiate(JungleGrzes0b[Random.Range(0, JungleGrzes0b.Length)], transform.position, spawnRotation);
+                    obj.transform.parent = this.gameObject.transform;
+
+
+                }
+
                 else 
                 {
                     int rand = Random.Range(0, Jungle.Length);
@@ -295,13 +338,14 @@ public class SpawnBlock : MonoBehaviour
              corner = true;
              return;
          }
+         // klocek 
          else if (Hit[2]==true && Hit[4]==true && Hit[6]==true && Hit[8]==true && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true )
          {
              spawnRotation = Quaternion.Euler(0,0,0);
              klocek = true;
              return;
          }
-
+        // grzes 2 
         else if (Hit[1]==false  && Hit[3]==true && Hit[5]==false && Hit[7]==true )
         {
             spawnRotation = Quaternion.Euler(0,0,0);
@@ -340,9 +384,84 @@ public class SpawnBlock : MonoBehaviour
             grzes1 = true; 
             return ;
         }
+        // grzes d 
+        else if (Hit[2]==false && Hit[4]==false && Hit[6]==false && Hit[8]==false && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true )
+         {
+             spawnRotation = Quaternion.Euler(0,0,0);
+             grzesD = true;
+             return;
+         }
+         ///grzesB
+         else if (Hit[2]==false && Hit[4]==true && Hit[6]==false && Hit[8]==true && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true )
+         {
+             spawnRotation = Quaternion.Euler(0,0,0);
+             grzesB = true;
+             return;
+         }
+         else if (Hit[2]==true && Hit[4]==false && Hit[6]==true && Hit[8]==false && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true )
+         {
+             spawnRotation = Quaternion.Euler(0,0,90);
+             grzesB = true;
+             return;
+         }
+         
+         //brakuje grzes0a grzes0b grzes 3 grzesC i grzes 1a
+         // grzes1a
+        else if (Hit[2]==false && Hit[4]==true && Hit[6]==false && Hit[8]==true && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true)
+         {
+             spawnRotation = Quaternion.Euler(0,0,0);
+             grzes1a = true;
+             return;
+         }
+         else if (Hit[2]==true && Hit[4]==false && Hit[6]==true && Hit[8]==false && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true)
+         {
+             spawnRotation = Quaternion.Euler(0,0,270);
+             grzes1a = true;
+             return;
+         }
+         else if (Hit[2]==false && Hit[4]==true && Hit[6]==false && Hit[8]==true && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true)
+         {
+             spawnRotation = Quaternion.Euler(0,0,180);
+             grzes1a = true;
+             return;
+         }
+         else if (Hit[2]==true && Hit[4]==false && Hit[6]==true && Hit[8]==false && Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==true )
+         {
+             spawnRotation = Quaternion.Euler(0,0,90);
+             grzes1a = true;
+             return;
+         }
 
+         // grzes 0b
+          if (Hit[1]==false && Hit[3]==true && Hit[5]==true && Hit[7]==true  && Hit[4]==false && Hit[6]==false    )
+         {
+             spawnRotation = Quaternion.Euler(0,0,0);
+             grzes0b = true;
+             return;
+         }
+         else if (Hit[1]==true && Hit[3]==false && Hit[5]==true && Hit[7]==true &&  Hit[6]==false && Hit[8]==false)
+         {
+             spawnRotation = Quaternion.Euler(0,0,270);
+            grzes0b = true;
 
+             return;
+         }
+          else if (Hit[1]==true && Hit[3]==true && Hit[5]==false && Hit[7]==true && Hit[2]==false && Hit[8]==false)
+         {
+             spawnRotation = Quaternion.Euler(0,0,180);
+            grzes0b = true;
 
+             return;
+         }
+         else if (Hit[1]==true && Hit[3]==true && Hit[5]==true && Hit[7]==false && Hit[2]==false && Hit[4]==false )
+         {
+             spawnRotation = Quaternion.Euler(0,0,90);
+            grzes0b = true;
+
+             return;
+         }
+         // klocek 
+        
 
 
     }

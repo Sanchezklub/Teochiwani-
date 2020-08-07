@@ -166,7 +166,10 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 0
-  Poison: {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
+  EffectParticle:
+  - {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
+  - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}
+  - {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
   splashController: {fileID: -7600933693080615918}
   enemyAnimator: {fileID: 1786762979926582748}
   IsHuman: 1
@@ -202,7 +205,7 @@ MonoBehaviour:
   - {fileID: 8879362370019826865, guid: bc3228d40b1f5f748b4c54054d94f079, type: 3}
   - {fileID: 8445104910896414660, guid: 10b6a25e6b631554cb2bf002f33f534a, type: 3}
   - {fileID: 4422407967575818056, guid: c7e1c3d1bf616d2449439381696a5387, type: 3}
-  ps: {fileID: 3800583068774307269, guid: 23b4a682e04b43147a28344e33dab97d, type: 3}
+  ps: {fileID: 3800583068774307269, guid: 37cfd260bf375cd4ab747879a45168ed, type: 3}
   BloodSplitter: {fileID: 2432543690864778771}
 --- !u!82 &689228612594642103
 AudioSource:

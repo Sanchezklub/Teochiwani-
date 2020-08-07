@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public int id;
    // public Color ColorWith0hp;
   //  public Color ColorWith100hp;
-    public ParticleSystem Poison;
+   // public ParticleSystem Poison;
     public ParticleSystem[] EffectParticle;
     public SplashController splashController;
     protected virtual void Start()
@@ -41,17 +41,23 @@ public class Health : MonoBehaviour
     public virtual void PoisonEffect(float damage, int TimeCount, float TimeBetweenHits, int Effect)
     {
         if ( Effect == 0)
-        StartCoroutine(PoisonDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        {
+            StartCoroutine(PoisonDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        }
         else if ( Effect ==1 )
+        {
         StartCoroutine(FlameDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        }
         else if ( Effect ==2 )
-        StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        {
+            StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        }
     }
     
 
     IEnumerator PoisonDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-        var go =Instantiate(EffectParticle[1], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
+        var go =Instantiate(EffectParticle[0], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
         Destroy ( go,TimeCount*TimeBetweenHits );
         for ( int i=0; i < TimeCount; i++)
         {
@@ -63,7 +69,7 @@ public class Health : MonoBehaviour
 
     IEnumerator FlameDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-        var go =Instantiate(EffectParticle[2], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
+        var go =Instantiate(EffectParticle[1], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
         Destroy ( go,TimeCount*TimeBetweenHits );
         for ( int i=0; i < TimeCount; i++)
         {
@@ -75,7 +81,7 @@ public class Health : MonoBehaviour
     
     IEnumerator BleedingDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-        var go =Instantiate(EffectParticle[3], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
+        var go =Instantiate(EffectParticle[2], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
         Destroy ( go,TimeCount*TimeBetweenHits );
         for ( int i=0; i < TimeCount; i++)
         {

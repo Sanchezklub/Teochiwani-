@@ -105,6 +105,7 @@ public class SaveSystem : MonoBehaviour
             if (ItemPrefab != null)
             {
                 GameObject item = Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
+                item.GetComponentInChildren<BaseItem>().ModId = loadedItem.ModId;
                 item.transform.parent = LoadedObjectHolder.transform;
             }
         }

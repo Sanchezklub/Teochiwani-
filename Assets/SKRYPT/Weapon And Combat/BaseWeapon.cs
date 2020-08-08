@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 using TMPro;
 using UnityEngine.Events;
 
@@ -89,5 +90,10 @@ public abstract class BaseWeapon : BaseItem
 
     }
 
-    
+    private void OnDrawGizmos()
+    {
+        Handles.Label(transform.position, ModId.ToString());
+    }
+
+
 }

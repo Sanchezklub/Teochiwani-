@@ -99,7 +99,8 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log(newWeapon.name);
             currentWeapon?.DropWeapon();
             GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
-            currentWeapon = newWeapon;
+            GameController.instance.DataStorage.PlayerInfo.currentweaponModID = newWeapon.ModId;
+        currentWeapon = newWeapon;
             currentWeapon?.PickupWepaon();
             currentWeapon.Handle.transform.parent = holdPosition;
             currentWeapon.Handle.transform.localPosition = Vector3.zero;

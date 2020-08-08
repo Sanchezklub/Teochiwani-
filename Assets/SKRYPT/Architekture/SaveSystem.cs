@@ -172,6 +172,7 @@ public class SaveSystem : MonoBehaviour
             if (weap != null)
             {
                 weap.GetUITexts();
+                weap.ModId = LoadedSaveContainer.playerData.currentweaponModID;
                 weap.Start();
                 player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
             }

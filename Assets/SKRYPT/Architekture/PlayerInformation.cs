@@ -24,4 +24,5 @@ public class PlayerInformation : ScriptableObject
     //public string currentWeapon;
     public List<int> ItemIDs;
     public int currentweaponID;
+    public int currentweaponModID;
 }

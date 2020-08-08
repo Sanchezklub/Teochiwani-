@@ -16,6 +16,7 @@ public class PlayerDataScript
     //public float position_y;
     //public string currentweapon;
     public int currentweaponID;
+    public int currentweaponModID;
     public List<int> ItemIDs;
 
     public Vector3 testVector;
@@ -30,6 +31,7 @@ public class PlayerDataScript
         damage = PlayerInfo.damage;
         speed = PlayerInfo.speed;
         currentweaponID = PlayerInfo.currentweaponID;
+        currentweaponModID = PlayerInfo.currentweaponModID;
         ItemIDs = PlayerInfo.ItemIDs;
         PlayerPosition = PlayerInfo.playerPosition;
         //position_x = PlayerInfo.playerPosition.x;

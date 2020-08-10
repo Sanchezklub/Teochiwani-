@@ -129,6 +129,7 @@ MonoBehaviour:
   flavourtext: "tak toksyczny jak u\u017Cytkownik"
   itemName: "K\u0105sacz"
   id: 103
+  ModId: -10
   CocaoPrice: 14
   BloodPrice: 14
   coll: {fileID: 1328737833353998075}
@@ -141,10 +142,20 @@ MonoBehaviour:
   attackRange: 4
   attackdamage: 18
   trail: {fileID: 7884556112360339841}
-  AttackAnimationType: 0
+  EffectBleed: 0
+  BleedDamage: 0
+  BleedCount: 0
+  BleedTimeBetween: 0
+  EffectFire: 0
+  FireDamage: 0
+  FireCount: 0
+  FireTimeBetween: 0
+  EffectPoison: 1
   PoisonDamage: 10
   PoisonCount: 2
   PoisonTimeBetween: 3
+  weaponSexType: 0
+  AttackAnimationType: 0
 --- !u!1 &1657796909980093540
 GameObject:
   m_ObjectHideFlags: 0

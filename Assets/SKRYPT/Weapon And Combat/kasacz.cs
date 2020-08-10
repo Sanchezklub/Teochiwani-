@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class kasacz : BaseWeapon
 {
-    public float PoisonDamage;
-    public int PoisonCount;
-    public float PoisonTimeBetween;
-
-
-
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("kasacz :: Attack() - Player attacked with kasacz");
@@ -18,8 +12,21 @@ public class kasacz : BaseWeapon
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Health>()?.TakeDamage(attackdamage+GameController.instance.DataStorage.PlayerInfo.damage);
-            enemy.GetComponent<Health>()?.PoisonEffect(PoisonDamage,PoisonCount,PoisonTimeBetween,0);
+            
+            enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,0);
 
+            if ( EffectBleed == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(BleedDamage,BleedCount,BleedTimeBetween,0);
+            }
+            if ( EffectFire == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(FireDamage,FireCount,FireTimeBetween,1);
+            }
+            if ( EffectPoison == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
+            }
         }
     }
 

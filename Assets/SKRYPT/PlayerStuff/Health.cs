@@ -38,11 +38,11 @@ public class Health : MonoBehaviour
     protected virtual void Die() {
     
     }
-    public virtual void PoisonEffect(float damage, int TimeCount, float TimeBetweenHits, int Effect)
+    public virtual void Effect(float damage, int TimeCount, float TimeBetweenHits, int Effect)
     {
         if ( Effect == 0)
         {
-            StartCoroutine(PoisonDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        StartCoroutine(PoisonDamage(damage,  TimeCount, TimeBetweenHits)) ;
         }
         else if ( Effect ==1 )
         {
@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
         }
         else if ( Effect ==2 )
         {
-            StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
         }
     }
     

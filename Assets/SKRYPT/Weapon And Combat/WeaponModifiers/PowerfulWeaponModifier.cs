@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Powerful", menuName = "WeaponModifiers/Powerful")]
-public class PowerfulWeaponModiefer : BaseWeaponModifier
+public class PowerfulWeaponModifier : BaseWeaponModifier
 {
     // Start is called before the first frame update
     void Start()

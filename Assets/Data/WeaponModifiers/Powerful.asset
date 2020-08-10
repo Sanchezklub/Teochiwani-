@@ -9,14 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59fa4cd7f62685c4b8f95241b9828a68, type: 3}
+  m_Script: {fileID: 11500000, guid: b9e6b072fe5fce747a2d6606ca954c26, type: 3}
   m_Name: Powerful
   m_EditorClassIdentifier: 
   PriceChange: 0
-  DamageChange: 0
+  DamageChange: 10
   AttackRangeChange: 0
-  MeskiNameChange: 
-  ZenskiNameChange: 
-  NijakiNameChange: 
-  MeskoosobowyNameChange: 
-  NiemeskoosobowyNameChange: 
+  MeskiNameChange: "Pot\u0119\u017Cny"
+  ZenskiNameChange: "Pot\u0119\u017Cna"
+  NijakiNameChange: "Pot\u0119\u017Cne"
+  MeskoosobowyNameChange: "Pot\u0119\u017Cni"
+  NiemeskoosobowyNameChange: "Pot\u0119\u017Cne"
+  Poison: 0
+  Bleed: 0
+  Fire: 0
+  AttackSpeedChange: 0

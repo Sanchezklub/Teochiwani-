@@ -13,12 +13,22 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] string NijakiNameChange;
     [SerializeField] string MeskoosobowyNameChange;
     [SerializeField] string NiemeskoosobowyNameChange;
+    [SerializeField] bool Poison;
+    [SerializeField] bool Bleed;
+    [SerializeField] bool Fire;
+    [Range(-1.0f, 1.0f)]
+    public float AttackSpeedChange;
+    // latwo dodawac damge i effekty zostaly attackspeed
     public void Apply(BaseWeapon weapon)
     {
         weapon.BloodPrice += PriceChange;
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
+        weapon.EffectFire = Fire;
+        weapon.EffectBleed = Bleed;
+        weapon.EffectPoison = Poison;
+        weapon.AttackSpeedModifier += AttackSpeedChange; 
         switch (weapon.weaponSexType)
         {
             case BaseWeapon.SexType.Meski:

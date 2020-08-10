@@ -20,7 +20,7 @@ public class FireStrzala : MonoBehaviour
     {
         rb=GetComponent<Rigidbody2D>();
         pc=GetComponent<PolygonCollider2D>();
-        //Instantiate(fire,tip.transform.position, Quaternion.identity);
+        Instantiate(fire,Tip.transform.position, Quaternion.identity,transform);
     }
 
     // Update is called once per frame
@@ -45,6 +45,7 @@ public class FireStrzala : MonoBehaviour
         enemy.GetComponent<Health>()?.Effect(FireDamage,FireCount,FireTimeBetween,1);
         //this.transform.position =transform.position + new Vector3(5, 0, 0);  
         this.transform.parent=enemy.transform;
+        Destroy(gameObject, 10);
         }
     }
     void OnTriggerEnter2D (Collider2D hitInfo)

@@ -1924,27 +1924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cae7ba6c8d18024ca96f6a764831510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponModifiers:
-  - {fileID: 11400000, guid: abb2cc61910839041a774832059755c6, type: 2}
-  - {fileID: 11400000, guid: 822b55d0612aae74bb5e017cc6373b3d, type: 2}
-  - {fileID: 11400000, guid: 0619d60de962acc4a93008ffcb0adfd6, type: 2}
-  - {fileID: 11400000, guid: ff01622358fd0f247afef06432542c86, type: 2}
-  - {fileID: 11400000, guid: 694bd63008ca1ec49bd46663ed2790b1, type: 2}
-  - {fileID: 11400000, guid: bcd56517283eec749b3b77bc6e9f1b42, type: 2}
-  - {fileID: 11400000, guid: 4ea65c1f21750be44af2ae2ba1138d11, type: 2}
-  - {fileID: 11400000, guid: ff49d5dcf306afb458ca237b13108934, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1055103722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1974,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2423d5d7df8b8394ebb01df1f26f2aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potionImg:
+  - {fileID: 21300000, guid: 87a8edce833c7bf4da1e6d1f0e743b8f, type: 3}
+  - {fileID: 21300000, guid: f16e58dd51099c64ca986ee1def9a4a0, type: 3}
+  - {fileID: 21300000, guid: 0712cbc6eefa75645b3ae762bf643476, type: 3}
+  - {fileID: 21300000, guid: 291798a3b2df30c448ae65dad0c03c34, type: 3}
+  addHp: 10
 --- !u!114 &1055103725
 MonoBehaviour:
   m_ObjectHideFlags: 0

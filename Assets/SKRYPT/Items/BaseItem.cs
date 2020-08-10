@@ -29,6 +29,8 @@ public abstract class BaseItem : MonoBehaviour
     private ItemConditioner conditioner;
     public ItemConditioner Conditioner => conditioner;
 
+    [SerializeField]public float AttackSpeedModifier;
+    [SerializeField]public float AttackSpeedPrevious;
      public virtual void Start()
     {
         //UIFlavourText = Find("FlavourText");
@@ -74,7 +76,9 @@ public abstract class BaseItem : MonoBehaviour
         coll.enabled = true;
         Handle.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemAppear(this);
+        GameController.instance.DataStorage.PlayerInfo.attackspeed =AttackSpeedPrevious;
     }
+    
 
     public virtual void PickupWepaon()
     {
@@ -83,6 +87,8 @@ public abstract class BaseItem : MonoBehaviour
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
         Debug.Log("Called On Item Die " + name);
+        AttackSpeedPrevious = GameController.instance.DataStorage.PlayerInfo.attackspeed;
+        GameController.instance.DataStorage.PlayerInfo.attackspeed +=AttackSpeedModifier;
     }
     public virtual void ShowFloatingText()
     {

@@ -13,6 +13,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
     public float karma;
     public float attackspeed;
     public int level;
+    public int potionLoads;
     //jeszcze coś z bronią, itp.
 
     public Vector3 playerPosition;
@@ -31,6 +32,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
         GameController.instance.DataStorage.PlayerInfo.crouchspeed = crouchspeed;
         GameController.instance.DataStorage.PlayerInfo.jumpforce = jumpforce;
         GameController.instance.DataStorage.PlayerInfo.attackspeed = attackspeed;
+        GameController.instance.DataStorage.PlayerInfo.potionLoads = potionLoads;
         if (Player != null)
         {
             Player.transform.position = new Vector2 (SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);

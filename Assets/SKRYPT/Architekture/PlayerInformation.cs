@@ -19,6 +19,7 @@ public class PlayerInformation : ScriptableObject
     public int weapon;
     public int cocoa;
     public int blood;
+    public int potionLoads;
 
     public int level;
     //public string currentWeapon;

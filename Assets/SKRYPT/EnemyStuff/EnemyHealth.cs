@@ -41,6 +41,10 @@ public class EnemyHealth : Health
 
     protected override void Die()
     {
+        //potion
+
+        //potionkoniec
+
         /*
         int rand;
         rand = Random.Range(0,100);
@@ -88,8 +92,13 @@ public class EnemyHealth : Health
         else
 
             GameController.instance.DataStorage.PlayerInfo.karma += 1;
-
-
+        
+        
+        if(GameController.instance.DataStorage.PlayerInfo.potionLoads < 3)
+        
+        {
+            GameController.instance.DataStorage.PlayerInfo.potionLoads += 1;
+        }
 
     }
 

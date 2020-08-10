@@ -208,6 +208,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
         type: 3}
+      propertyPath: modifiers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
       propertyPath: Handle
       value: 
       objectReference: {fileID: 2403402470432670172}
@@ -266,6 +271,12 @@ PrefabInstance:
       propertyPath: ModId
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: modifiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dfc5f38fee5184e46ab3e835b3aa8e1f,
+        type: 2}
     - target: {fileID: 3301205846732940797, guid: 93de944295bbd6f45a4bd1085c967a47,
         type: 3}
       propertyPath: m_Name

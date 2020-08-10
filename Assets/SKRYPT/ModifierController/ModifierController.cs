@@ -18,6 +18,25 @@ public class ModifierController : MonoBehaviour
         }
     }
 
+    public void OnWeaponPickup(BaseWeapon oldWeapon, BaseWeapon newWeapon)
+    {
+        if (oldWeapon?.modifiers != null)
+        {
+            foreach(BaseModifier mod in oldWeapon.modifiers)
+            {
+                mod.Deinit();
+            }
+        }
+        if (newWeapon?.modifiers != null)
+        {
+            foreach(BaseModifier mod in newWeapon.modifiers)
+            {
+                mod.Init(RemoveModifier);
+                modifiers.Add(mod);
+            }
+        }
+    }
+
     public void RemoveModifier(BaseModifier mod)
     {
         modifiers.Remove(mod);
@@ -31,6 +50,7 @@ public class ModifierController : MonoBehaviour
         }
 
         EventController.instance.playerEvents.OnItemPickup += OnItemPickup;
+        EventController.instance.weaponEvents.OnWeaponPickup += OnWeaponPickup;
     }
 
     void Update()

@@ -21,6 +21,7 @@ public class PlayerDataScript
 
     public Vector3 testVector;
 
+    public bool CanLoad;
 
     public PlayerDataScript(PlayerInformation PlayerInfo)
     {
@@ -37,6 +38,7 @@ public class PlayerDataScript
         //position_x = PlayerInfo.playerPosition.x;
         //position_y = PlayerInfo.playerPosition.y;
         //testVector = new Vector3(12f, 23, 2);
+        CanLoad = PlayerInfo.IsAlive;
     }
 
 }

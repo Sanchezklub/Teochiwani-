@@ -47,7 +47,7 @@ public class SaveSystem : MonoBehaviour
         stream.Close();
 
     }
-    public void LoadGame()
+    public int LoadGame()
     {
         GameController.instance.DataStorage.PlayerInfo.ItemIDs.Clear();
         string path = Application.persistentDataPath + "/player.fun";
@@ -62,24 +62,38 @@ public class SaveSystem : MonoBehaviour
             Debug.Log(message);
             PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
             saveContainer = JsonUtility.FromJson<SaveContainer>(message);
-            Debug.Log(saveContainer);
-            if (SpawnStuff == true)
+            if (saveContainer.playerData.CanLoad)
             {
-                LoadEnemies(saveContainer);
-                //LoadWeapons(saveContainer);
-                LoadItems(saveContainer);
-                LoadEnvironment(saveContainer);
-                LoadRooms(saveContainer);
-                LoadPlayer(saveContainer);
+                Debug.Log(saveContainer);
+                if (SpawnStuff == true)
+                {
+                    LoadEnemies(saveContainer);
+                    //LoadWeapons(saveContainer);
+                    LoadItems(saveContainer);
+                    LoadEnvironment(saveContainer);
+                    LoadRooms(saveContainer);
+                    LoadPlayer(saveContainer);
+                }
+                stream.Close();
+                return 0;
+
             }
 
-            stream.Close();
+            else
+            {
+                Debug.Log("Could not load. Player was dead");
+                stream.Close();
+                return 1;
+            }
+            
+
             //return null;
             //return data;
         }
         else
         {
             Debug.Log("NoData");
+            return 2;
             //return null;
         }
     }

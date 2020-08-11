@@ -27,6 +27,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         GameController.instance.DataStorage.PlayerInfo.maxhealth = maxhealth;
         GameController.instance.DataStorage.PlayerInfo.currenthealth = maxhealth;
+        GameController.instance.DataStorage.PlayerInfo.IsAlive = true;
         GameController.instance.DataStorage.PlayerInfo.damage = damage;
         GameController.instance.DataStorage.PlayerInfo.speed = speed;
         GameController.instance.DataStorage.PlayerInfo.crouchspeed = crouchspeed;

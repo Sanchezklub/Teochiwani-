@@ -56,8 +56,10 @@ public class PlayerHealth : Health
     protected override void Die()
     {
         PlayerAnimator.SetTrigger("Die");
-        File.Delete( Application.persistentDataPath+"/player.fun");
+        //File.Delete( Application.persistentDataPath+"/player.fun");
         deleter.Delete();
+        GameController.instance.DataStorage.PlayerInfo.IsAlive = false;
+        SaveSystem.Instance.FullySaveGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //MainMenu.SetActive(true);
 

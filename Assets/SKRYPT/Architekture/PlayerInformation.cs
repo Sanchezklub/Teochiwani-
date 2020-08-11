@@ -26,4 +26,6 @@ public class PlayerInformation : ScriptableObject
     public List<int> ItemIDs;
     public int currentweaponID;
     public int currentweaponModID;
+
+    public bool IsAlive = true;
 }

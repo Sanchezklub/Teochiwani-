@@ -29,14 +29,14 @@ public class MieczTysiacaKrokow : BaseWeapon
     }
     public override void DropWeapon()
     {
-        //GameController.instance.DataStorage.PlayerInfo.speed=Playercurrentspeed;
+        GameController.instance.DataStorage.PlayerInfo.speed=Playercurrentspeed;
         base.DropWeapon();
     }
     public override void PickupWepaon()
     {
         base.PickupWepaon();
-        //Playercurrentspeed=GameController.instance.DataStorage.PlayerInfo.speed;
-        //GameController.instance.DataStorage.PlayerInfo.speed+=20;
+        Playercurrentspeed=GameController.instance.DataStorage.PlayerInfo.speed;
+        GameController.instance.DataStorage.PlayerInfo.speed+=20;
     }
       
 }

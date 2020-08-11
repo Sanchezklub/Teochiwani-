@@ -303,6 +303,8 @@ MonoBehaviour:
   coll: {fileID: 7053523305320425854}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
@@ -310,6 +312,18 @@ MonoBehaviour:
   attackRange: 7
   attackdamage: 15
   trail: {fileID: 1316767475812829639}
+  EffectBleed: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
+  EffectFire: 0
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
+  EffectPoison: 0
+  PoisonDamage: 5
+  PoisonCount: 2
+  PoisonTimeBetween: 3
   weaponSexType: 1
   AttackAnimationType: 3
 --- !u!1 &8088527405296324669

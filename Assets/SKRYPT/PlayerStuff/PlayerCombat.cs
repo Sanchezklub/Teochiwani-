@@ -71,7 +71,7 @@ public class PlayerCombat : MonoBehaviour
            
         } 
         animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.PlayerInfo.attackspeed);
-        animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.PlayerInfo.speed/startingspeed);
+        animator.SetFloat("Speed1", GameController.instance.DataStorage.PlayerInfo.speed/startingspeed);
     }
     
    /* void StartAttack()

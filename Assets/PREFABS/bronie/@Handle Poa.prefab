@@ -159,11 +159,14 @@ MonoBehaviour:
   flavourtext: "kij ma zawsze dwa ko\u0144ce"
   itemName: Patyk Ostatecznej Anichilacji
   id: 105
+  ModId: -10
   CocaoPrice: 0
   BloodPrice: 0
   coll: {fileID: 5905908314160643245}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
@@ -171,6 +174,19 @@ MonoBehaviour:
   attackRange: 6
   attackdamage: 190
   trail: {fileID: 457064191179063396}
+  EffectBleed: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
+  EffectFire: 0
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
+  EffectPoison: 0
+  PoisonDamage: 5
+  PoisonCount: 2
+  PoisonTimeBetween: 3
+  weaponSexType: 0
   AttackAnimationType: 3
   Playercurrenthealth: 100
 --- !u!1 &8567751892998769453

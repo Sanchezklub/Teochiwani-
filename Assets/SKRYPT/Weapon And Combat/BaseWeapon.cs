@@ -20,7 +20,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public int BleedCount;
     [SerializeField]public float BleedTimeBetween;
 
-    [SerializeField] public bool EffectFire=false;
+    [SerializeField]public bool EffectFire=false;
     [SerializeField]public float FireDamage;
     [SerializeField]public int FireCount;
     [SerializeField]public float FireTimeBetween;

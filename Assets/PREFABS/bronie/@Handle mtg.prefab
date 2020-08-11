@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
         type: 3}
       propertyPath: modifiers.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
         type: 3}
@@ -275,8 +275,52 @@ PrefabInstance:
         type: 3}
       propertyPath: modifiers.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: dfc5f38fee5184e46ab3e835b3aa8e1f,
-        type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: BleedDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: BleedCount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: BleedTimeBetween
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: FireDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: FireCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: FireTimeBetween
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: PoisonDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: PoisonCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301205846732940769, guid: 93de944295bbd6f45a4bd1085c967a47,
+        type: 3}
+      propertyPath: PoisonTimeBetween
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3301205846732940797, guid: 93de944295bbd6f45a4bd1085c967a47,
         type: 3}
       propertyPath: m_Name

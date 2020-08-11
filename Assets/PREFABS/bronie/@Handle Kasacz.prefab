@@ -135,6 +135,8 @@ MonoBehaviour:
   coll: {fileID: 1328737833353998075}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
@@ -143,13 +145,13 @@ MonoBehaviour:
   attackdamage: 18
   trail: {fileID: 7884556112360339841}
   EffectBleed: 0
-  BleedDamage: 0
-  BleedCount: 0
-  BleedTimeBetween: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
   EffectFire: 0
-  FireDamage: 0
-  FireCount: 0
-  FireTimeBetween: 0
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
   EffectPoison: 1
   PoisonDamage: 10
   PoisonCount: 2

@@ -8,6 +8,7 @@ public class RoundStatistics : MonoBehaviour
     public static RoundStatistics instance;
     
     public float damageTaken;
+    public List<int> enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
 
     private void Awake()
     {
@@ -16,17 +17,24 @@ public class RoundStatistics : MonoBehaviour
     void Start()
     {
         ResetStats();
+        EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDied;
         EventController.instance.playerEvents.OnPlayerReceiveDamage += DamageTaken;
     }
 
     void ResetStats()
     {
         damageTaken = 0;
+        enemiesKilled.Clear();
     }
 
     void DamageTaken(float damageTaken, float healthLeft)
     {
         this.damageTaken += damageTaken;
+    }
+
+    void OnEnemyDied(EnemyHealth enemy)
+    {
+        enemiesKilled[enemy.id] += 1;
     }
 
     // Update is called once per frame
@@ -38,6 +46,20 @@ public class RoundStatistics : MonoBehaviour
     public void Deinit()
     {
         EventController.instance.playerEvents.OnPlayerReceiveDamage -= DamageTaken;
+        EventController.instance.enemyEvents.OnEnemyDied -= OnEnemyDied;
         ResetStats();
+    }
+
+    [System.Serializable]
+    public class RoundStatisticsData
+    {
+        public RoundStatisticsData(float damageTaken, List<int> enemiesKilled)
+        {
+            this.damageTaken = damageTaken;
+            this.enemiesKilled = enemiesKilled;
+        }
+
+        public float damageTaken;
+        public List<int> enemiesKilled;
     }
 }

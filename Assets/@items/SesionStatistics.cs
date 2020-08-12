@@ -34,4 +34,17 @@ public class SesionStatistics : MonoBehaviour
     {
         damageDealt = 0;
     }
+
+    [System.Serializable]
+    public class RoundStatisticsData
+    {
+        public RoundStatisticsData(float damageTaken, List<int> enemiesKilled)
+        {
+            this.damageTaken = damageTaken;
+            //this.enemiesKilled = enemiesKilled;
+        }
+
+        public float damageTaken;
+        //public List<int> enemiesKilled;
+    }
 }

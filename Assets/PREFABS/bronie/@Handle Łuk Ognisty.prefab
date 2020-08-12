@@ -126,8 +126,8 @@ MonoBehaviour:
   modifiers: []
   UIWeaponName: {fileID: 0}
   UIFlavorText: {fileID: 0}
-  flavourtext: Precyzja to perfekcja
-  itemName: "Precyzyjny \u0141uk"
+  flavourtext: "Ogie\u0144 to Podstawa"
+  itemName: "\u0141uk Ognia"
   id: 112
   ModId: -10
   CocaoPrice: 0
@@ -135,6 +135,8 @@ MonoBehaviour:
   coll: {fileID: 5464057734355316654}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
@@ -143,21 +145,21 @@ MonoBehaviour:
   attackdamage: 15
   trail: {fileID: 0}
   EffectBleed: 0
-  BleedDamage: 0
-  BleedCount: 0
-  BleedTimeBetween: 0
-  EffectFire: 0
-  FireDamage: 0
-  FireCount: 0
-  FireTimeBetween: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
+  EffectFire: 1
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
   EffectPoison: 0
-  PoisonDamage: 0
-  PoisonCount: 0
-  PoisonTimeBetween: 0
+  PoisonDamage: 5
+  PoisonCount: 2
+  PoisonTimeBetween: 3
   weaponSexType: 0
   AttackAnimationType: 4
   firePoint: {fileID: 8332694900755634441}
-  bulletPrefab: {fileID: 7794258766830496443, guid: a009327928291294b85f43c64a3a417c,
+  bulletPrefab: {fileID: 1609112892024203060, guid: 7f424ad02a69e7746b4bae40f0edf932,
     type: 3}
   point: {fileID: 2487283193138245014, guid: c9eea8df4b5239d48ae1a6ac8dde6bac, type: 3}
   numberOfPoints: 40

@@ -28,7 +28,7 @@ public abstract class BaseItem : MonoBehaviour
     [SerializeField]
     private ItemConditioner conditioner;
     public ItemConditioner Conditioner => conditioner;
-
+    public bool PickUped;
     [SerializeField]public float AttackSpeedModifier;
     [SerializeField]public float AttackSpeedPrevious;
      public virtual void Start()
@@ -77,6 +77,7 @@ public abstract class BaseItem : MonoBehaviour
         Handle.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemAppear(this);
         GameController.instance.DataStorage.PlayerInfo.attackspeed =AttackSpeedPrevious;
+        PickUped = false;
     }
     
 
@@ -87,6 +88,7 @@ public abstract class BaseItem : MonoBehaviour
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
         Debug.Log("Called On Item Die " + name);
+        PickUped=true;
         AttackSpeedPrevious = GameController.instance.DataStorage.PlayerInfo.attackspeed;
         GameController.instance.DataStorage.PlayerInfo.attackspeed +=AttackSpeedModifier;
     }

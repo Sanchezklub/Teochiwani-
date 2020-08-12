@@ -6,11 +6,12 @@ public class Bow : BaseWeapon
 {
 
     public GameObject bulletPrefab;
-    public Transform firePoint;
+    public float LaunchForce;
     public override void Attack(PlayerCombat controller)
     {
         Debug.Log("Bow :: Attack() - Player attacked with bow");
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject newArrow =Instantiate(bulletPrefab, AttackPoint.position, AttackPoint.rotation);
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
     }
 
   

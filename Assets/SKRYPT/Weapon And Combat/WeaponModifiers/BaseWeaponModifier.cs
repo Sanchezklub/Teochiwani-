@@ -25,9 +25,18 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
-        weapon.EffectFire = Fire;
-        weapon.EffectBleed = Bleed;
-        weapon.EffectPoison = Poison;
+        if(Fire )
+        {
+            weapon.EffectFire = Fire;
+        }
+        if(Bleed)
+        {
+            weapon.EffectBleed = Bleed;
+        }
+        if(Poison)
+        {
+            weapon.EffectPoison = Poison;
+        }
         weapon.AttackSpeedModifier += AttackSpeedChange; 
         switch (weapon.weaponSexType)
         {

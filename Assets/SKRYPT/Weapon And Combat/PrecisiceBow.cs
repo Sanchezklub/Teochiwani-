@@ -18,19 +18,22 @@ public class PrecisiceBow : BaseWeapon
 
     public void Start()
     {
-
+        /*
        points = new GameObject[numberOfPoints];
         for (int i=0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, firePoint.position, Quaternion.identity);
-        }
+        }*/
     }
     public void Update()
     {
+        if ( PickUped)
+        {
         Vector2 bowPosition = Handle.transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePosition - bowPosition;
-        Handle.transform.right=direction;  
+        Handle.transform.right=direction;
+        }  
      /*   if ( Handle.transform.rotation.z <= 15 || Handle.transform.rotation.z >= -15 )
         {
             Handle.transform.right=direction;  

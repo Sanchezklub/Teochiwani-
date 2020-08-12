@@ -134,19 +134,33 @@ MonoBehaviour:
   BloodPrice: 10
   coll: {fileID: 7886134926387925566}
   FloatingTextPrefab: {fileID: 0}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
   AttackPoint: {fileID: 6126790761483707545}
   attackRange: 0
-  attackdamage: 0
+  attackdamage: 10
   trail: {fileID: 0}
+  EffectBleed: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
+  EffectFire: 0
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
+  EffectPoison: 0
+  PoisonDamage: 5
+  PoisonCount: 2
+  PoisonTimeBetween: 3
   weaponSexType: 1
   AttackAnimationType: 4
-  firePoint: {fileID: 6126790761483707545}
-  bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
+  bulletPrefab: {fileID: 1609112892024203060, guid: 7f424ad02a69e7746b4bae40f0edf932,
     type: 3}
-  LaunchForce: 27
+  LaunchForce: 70
 --- !u!1 &3510611611878884838
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3510611611878884838}
-  m_LocalRotation: {x: 0, y: 0, z: 0.49505308, w: 0.86886275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -314.96225, y: -24.777405, z: 0}
   m_LocalScale: {x: 0.71, y: 1, z: 1}
   m_Children:
@@ -202,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4908110994908203307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0.49, z: 0}
+  m_LocalPosition: {x: 10.3, y: -0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6735214209799548349}

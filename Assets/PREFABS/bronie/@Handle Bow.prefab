@@ -104,22 +104,38 @@ MonoBehaviour:
   flavourtext: "to \u0142uk.... naprawde czego sie spodziewa\u0142e\u015B"
   itemName: "\u0141uk"
   id: 102
+  ModId: -10
   CocaoPrice: 11
   BloodPrice: 12
   coll: {fileID: 176861280523263547}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
-  AttackPoint: {fileID: 0}
+  AttackPoint: {fileID: 1077516540313733360}
   attackRange: 10
   attackdamage: 10
   trail: {fileID: 0}
+  EffectBleed: 0
+  BleedDamage: 2
+  BleedCount: 15
+  BleedTimeBetween: 5
+  EffectFire: 0
+  FireDamage: 5
+  FireCount: 4
+  FireTimeBetween: 1
+  EffectPoison: 0
+  PoisonDamage: 5
+  PoisonCount: 2
+  PoisonTimeBetween: 3
+  weaponSexType: 0
   AttackAnimationType: 4
-  bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
+  bulletPrefab: {fileID: 1609112892024203060, guid: 7f424ad02a69e7746b4bae40f0edf932,
     type: 3}
-  firePoint: {fileID: 1077516540313733360}
+  LaunchForce: 70
 --- !u!61 &176861280523263547
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -133,15 +133,38 @@ MonoBehaviour:
   flavourtext: 
   itemName: 
   id: 2
+  ModId: -10
   CocaoPrice: 0
   BloodPrice: 0
   coll: {fileID: 7077918293648707631}
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  AttackPoint: {fileID: 0}
+  attackRange: 0
+  attackdamage: 0
+  trail: {fileID: 0}
+  EffectBleed: 0
+  BleedDamage: 0
+  BleedCount: 0
+  BleedTimeBetween: 0
+  EffectFire: 0
+  FireDamage: 0
+  FireCount: 0
+  FireTimeBetween: 0
+  EffectPoison: 0
+  PoisonDamage: 0
+  PoisonCount: 0
+  PoisonTimeBetween: 0
+  weaponSexType: 0
   AttackAnimationType: 0
   bulletPrefab: {fileID: 6171214353350337727, guid: fc2f38fef3b154d4eb4a2929f8b8f06c,
     type: 3}
-  firePoint: {fileID: 2374134572145073302}
+  LaunchForce: 70
 --- !u!61 &7077918293648707631
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 397770189}
   - component: {fileID: 397770191}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ItemController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -965,8 +965,23 @@ MonoBehaviour:
   allItems: []
   unlockedItems: 
   conditions:
-  - {fileID: 11400000, guid: 8553203930e71a7409b729d55c9fe232, type: 2}
-  - {fileID: 11400000, guid: 2792a95225291464989690a0f60b17bf, type: 2}
+  - {fileID: 11400000, guid: 5f78458d382555b4394681ec60a9bfb4, type: 2}
+  - {fileID: 11400000, guid: ed9ca889a0701244f99e9f314d371b91, type: 2}
+  - {fileID: 11400000, guid: 4f86233e52434ef4fb8ff051a653fef3, type: 2}
+  - {fileID: 11400000, guid: ab8534eb8a8797c44bbd0cbf80b604a8, type: 2}
+  - {fileID: 11400000, guid: 1c294b681d666ad48a95ebe8c3c58833, type: 2}
+  - {fileID: 11400000, guid: 53f68ec1a2271d542a8ffaef46241aa2, type: 2}
+  - {fileID: 11400000, guid: d1ca1b0abdb014842b67f4b2e33a67ee, type: 2}
+  - {fileID: 11400000, guid: 5dc957bba9c1d7142a7ff5f8cc72ce22, type: 2}
+  - {fileID: 11400000, guid: 2d71fa16291517f4f99823e30ab6fc6f, type: 2}
+  - {fileID: 11400000, guid: 085459cf3c0fb5c4885f6b985c6eb0b8, type: 2}
+  - {fileID: 11400000, guid: c4b7adffd381a0e49b5390b959df7a7c, type: 2}
+  - {fileID: 11400000, guid: 2227e4a2d005dab459d1f4b32a25f10c, type: 2}
+  - {fileID: 11400000, guid: 6e3ca34e123d7b04ea1fa42d6e7c120f, type: 2}
+  - {fileID: 11400000, guid: 0d37137a9fb90eb4b8fbd126ee225459, type: 2}
+  - {fileID: 11400000, guid: 814aee7b87d589341b206dd7ec9ab369, type: 2}
+  - {fileID: 11400000, guid: 3785375a2eea2fe418a5e707aa04f66d, type: 2}
+  - {fileID: 11400000, guid: 028e1e319cca42349a2730bd9b74f1f5, type: 2}
 --- !u!4 &397770190
 Transform:
   m_ObjectHideFlags: 0
@@ -974,12 +989,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397770188}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -49.79001, y: -11.339996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 648542154}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &397770191
 MonoBehaviour:
@@ -994,6 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePassed: 0
+  enemiesKilled: 
 --- !u!1001 &405277758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1507,6 +1523,7 @@ Transform:
   - {fileID: 1806619661}
   - {fileID: 1004220035}
   - {fileID: 1331987923}
+  - {fileID: 397770190}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2356,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTaken: 0
+  enemiesKilled: 
 --- !u!114 &1331987926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,6 +2387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePassed: 0
+  enemiesKilled: 
 --- !u!1001 &1334990604
 PrefabInstance:
   m_ObjectHideFlags: 0

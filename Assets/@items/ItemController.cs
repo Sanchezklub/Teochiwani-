@@ -52,7 +52,9 @@ public class ItemController : MonoBehaviour
             if (cond.CheckIfConditionSucesed())
             {
                 if (SaveSystem.Instance.saveContainer.itemsData.CheckIfExists(cond.itemToUnlockid))
+                {
                     return;
+                }
 
                 SaveSystem.Instance.saveContainer.itemsData.AddItem(cond.itemToUnlockid);
             }

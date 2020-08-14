@@ -43,5 +43,3 @@ public class GlobalStatistics : MonoBehaviour
         public List<int> enemiesKilled;
     }
 }
-
-}

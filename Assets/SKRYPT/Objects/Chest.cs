@@ -7,9 +7,15 @@ public class Chest : MonoBehaviour
     public Sprite mysprite1;
     [SerializeField] private bool IsOpen = false;
     private bool PlayerInRange;
-    public GameObject[] objects;
+    //public GameObject[] objects;
     public GameObject Particle;
     public BoxCollider2D bc;
+
+
+    //private void Start()
+    //{
+        //objects = SaveSystem.Instance.saveContainer.itemsData.unlockedItems;
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -54,8 +60,8 @@ public class Chest : MonoBehaviour
     }
     private void Spawn()
     {
-        int rand = Random.Range(0, objects.Length);
-        GameObject loot = Instantiate(objects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
+        int rand = Random.Range(0, SaveSystem.Instance.saveContainer.itemsData.unlockedItems.Count);
+        GameObject loot = Instantiate(SaveSystem.Instance.Dictionary.ItemObjects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
         loot.transform.parent = this.transform.parent;
     }
 }

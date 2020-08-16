@@ -15,6 +15,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] JungleGrzes3;
     public GameObject[] JungleGrzes0a;
     public GameObject[] JungleGrzes0b;
+    public GameObject[] JungleGrzes0c;
     
 
 
@@ -46,6 +47,7 @@ public class SpawnBlock : MonoBehaviour
     bool grzes3 = false;
     bool grzes0a = false;
     bool grzes0b = false;
+    bool grzes0c = false;
 
 
 
@@ -169,6 +171,10 @@ public class SpawnBlock : MonoBehaviour
                 else if ( grzes3 ==true)
                 { 
                     Instantiate(JungleGrzes3[Random.Range(0, JungleGrzes3.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0c ==true)
+                { 
+                    Instantiate(JungleGrzes0c[Random.Range(0, JungleGrzes0c.Length)], transform.position, spawnRotation,transform);
                 }
                 else 
                 {

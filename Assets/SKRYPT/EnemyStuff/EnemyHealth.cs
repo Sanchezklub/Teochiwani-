@@ -10,10 +10,10 @@ public class EnemyHealth : Health
     public UnityAction TakingDamage;
     public bool IsHuman;
     public bool IsBoss = false;
-    public GameObject this1;
-    public Transform temp;
-    public GameObject[] Limbs;
-    public GameObject[] Limbs2;
+    //public GameObject this1;
+    //public Transform temp;
+    //public GameObject[] Limbs;
+    //public GameObject[] Limbs2;
     [SerializeField] GameObject[] Drops;
     protected override void Start()
     {

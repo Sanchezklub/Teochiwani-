@@ -14,7 +14,7 @@ public class PlayerKarma : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnEnemyDiedBasic()
     {
         karmabar.value = GameController.instance.DataStorage.PlayerInfo.karma;
     }

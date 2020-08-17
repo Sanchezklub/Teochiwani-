@@ -148,16 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mysprite1: {fileID: 21300000, guid: b2580f57db713c345bc033d7f7ed43b7, type: 3}
   IsOpen: 0
-  objects:
-  - {fileID: 8832911148018524805, guid: 0ceb8612f7b40d94da74227403930735, type: 3}
-  - {fileID: 2687345321257893394, guid: 72003debd7bf3304c8a447d1fae7cd82, type: 3}
-  - {fileID: 6445527946330245421, guid: 7fcd9a3feec506f49a552b2ef44766ca, type: 3}
-  - {fileID: 8088527405296324669, guid: 7cd83e3b00e20ce4eaea4dd114282607, type: 3}
-  - {fileID: 2403402470432670172, guid: 317e65f9ac53d1e4286ba3a4ca0f5ff7, type: 3}
-  - {fileID: 8567751892998769453, guid: d9e41bfbcafb0914cae99e263c647619, type: 3}
-  - {fileID: 6861661989205530176, guid: b000839a0a4d6444386b219f906d513e, type: 3}
-  - {fileID: 4995936593996878693, guid: 2fa58885155274445ab5296c08a872ce, type: 3}
-  - {fileID: 196019128043222980, guid: 61ebc7f317f8e14438b603a7c13d6f05, type: 3}
+  WeaponsOnly: 1
   Particle: {fileID: 0}
   bc: {fileID: 4520202676022092219}
 --- !u!114 &5562153440098271733
@@ -172,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 7
 --- !u!61 &6329994391372230172
 BoxCollider2D:
   m_ObjectHideFlags: 0

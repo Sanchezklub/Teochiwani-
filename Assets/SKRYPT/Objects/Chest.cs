@@ -6,11 +6,12 @@ public class Chest : MonoBehaviour
 {
     public Sprite mysprite1;
     [SerializeField] private bool IsOpen = false;
+    [SerializeField] private bool WeaponsOnly = false;
     private bool PlayerInRange;
     //public GameObject[] objects;
     public GameObject Particle;
     public BoxCollider2D bc;
-
+    private int rand;
 
     //private void Start()
     //{
@@ -60,8 +61,17 @@ public class Chest : MonoBehaviour
     }
     private void Spawn()
     {
-        int rand = Random.Range(0, SaveSystem.Instance.saveContainer.itemsData.unlockedItems.Count);
-        GameObject loot = Instantiate(SaveSystem.Instance.Dictionary.ItemObjects[rand], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
+        rand = Random.Range(0, SaveSystem.Instance.saveContainer.itemsData.unlockedItems.Count);
+        Debug.Log(SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]);
+        if (WeaponsOnly)
+        {
+            while(SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand] < 100)
+            {
+                rand = Random.Range(0, SaveSystem.Instance.saveContainer.itemsData.unlockedItems.Count);
+                Debug.Log(SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]);
+            }
+        }
+        GameObject loot = Instantiate(SaveSystem.Instance.Dictionary.ItemObjects[SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
         loot.transform.parent = this.transform.parent;
     }
 }

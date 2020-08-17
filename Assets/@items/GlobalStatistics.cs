@@ -27,7 +27,7 @@ public class GlobalStatistics : MonoBehaviour
 
     void OnEnemyDied(EnemyHealth enemy)
     {
-        enemiesKilled[enemy.id] += 1;
+        //enemiesKilled[enemy.id] += 1;
     }
     [System.Serializable]
 

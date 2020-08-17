@@ -50,7 +50,22 @@ public abstract class BaseWeapon : BaseItem
         GetUITexts();
 
     }
-
+    public void Effects(Collider2D enemy )
+    {
+        if ( EffectBleed == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(BleedDamage,BleedCount,BleedTimeBetween,0);
+            }
+            if ( EffectFire == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(FireDamage,FireCount,FireTimeBetween,1);
+            }
+            if ( EffectPoison == true)
+            {
+                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
+            }
+        
+    }
     public override void Start()
     {
         ChooseModifier();

@@ -34,7 +34,7 @@ public class RoundStatistics : MonoBehaviour
 
     void OnEnemyDied(EnemyHealth enemy)
     {
-        enemiesKilled[enemy.id] += 1;
+        //enemiesKilled[enemy.id] += 1;
     }
 
     // Update is called once per frame

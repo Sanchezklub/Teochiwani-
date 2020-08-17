@@ -14,19 +14,8 @@ public class kasacz : BaseWeapon
             enemy.GetComponent<Health>()?.TakeDamage(attackdamage+GameController.instance.DataStorage.PlayerInfo.damage);
             
             enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,0);
+            Effects(enemy);
 
-            if ( EffectBleed == true)
-            {
-                enemy.GetComponent<Health>()?.Effect(BleedDamage,BleedCount,BleedTimeBetween,0);
-            }
-            if ( EffectFire == true)
-            {
-                enemy.GetComponent<Health>()?.Effect(FireDamage,FireCount,FireTimeBetween,1);
-            }
-            if ( EffectPoison == true)
-            {
-                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
-            }
         }
     }
 

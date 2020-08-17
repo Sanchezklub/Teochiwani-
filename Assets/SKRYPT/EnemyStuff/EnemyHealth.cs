@@ -86,14 +86,14 @@ public class EnemyHealth : Health
         }
 
         if (IsHuman)// Dodawanie i odejmowanie karmy w zależności czy przeciwnik jest human czy nie. Karma min 0, max 50, start 25, zmiana o 1.
-
+        {
             GameController.instance.DataStorage.PlayerInfo.karma -= 1;
-
+        }
         else
-
+        {
             GameController.instance.DataStorage.PlayerInfo.karma += 1;
         
-        
+        }
         if(GameController.instance.DataStorage.PlayerInfo.potionLoads < 3)
         
         {

@@ -8,7 +8,7 @@ public class GlobalStatistics : MonoBehaviour
     public static GlobalStatistics instance;
 
     public float timePassed;
-    public List<int> enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
+    public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
 
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class GlobalStatistics : MonoBehaviour
     private void Start()
     {
         EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDied;
+        enemiesKilled = new int[100];
     }
 
     private void Update()
@@ -27,7 +28,8 @@ public class GlobalStatistics : MonoBehaviour
 
     void OnEnemyDied(EnemyHealth enemy)
     {
-        //enemiesKilled[enemy.id] += 1;
+        //Debug.Log("Enemy id was " + enemy.id);
+        enemiesKilled[enemy.id] += 1;
     }
     [System.Serializable]
 

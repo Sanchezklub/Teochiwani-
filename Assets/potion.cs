@@ -18,9 +18,13 @@ public class potion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && GameController.instance.DataStorage.PlayerInfo.potionLoads > 0)
+        if(Input.GetKeyDown(KeyCode.Q) && GameController.instance.DataStorage.PlayerInfo.potionLoads > 0 && GameController.instance.DataStorage.PlayerInfo.currenthealth < GameController.instance.DataStorage.PlayerInfo.maxhealth)
         {
             GameController.instance.DataStorage.PlayerInfo.currenthealth += addHp;
+            if ( GameController.instance.DataStorage.PlayerInfo.currenthealth >= GameController.instance.DataStorage.PlayerInfo.maxhealth)
+            {
+                GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+            }
             GameController.instance.DataStorage.PlayerInfo.potionLoads -= 1;
         }
         

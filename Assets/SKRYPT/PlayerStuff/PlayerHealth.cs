@@ -25,6 +25,11 @@ public class PlayerHealth : Health
     void Update()
     {
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.currenthealth;
+        if ( GameController.instance.DataStorage.PlayerInfo.currenthealth > GameController.instance.DataStorage.PlayerInfo.maxhealth)
+        {
+            
+            GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        }
     }
 
     public override void TakeDamage(float damage, GameObject attacker = null)

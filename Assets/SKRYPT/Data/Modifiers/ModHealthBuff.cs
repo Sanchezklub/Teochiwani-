@@ -13,8 +13,18 @@ public class ModHealthBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        GameController.instance.DataStorage.PlayerInfo.currenthealth += HealthBuff;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        if( GameController.instance.DataStorage.PlayerInfo.currenthealth < GameController.instance.DataStorage.PlayerInfo.maxhealth)
+        {
+            GameController.instance.DataStorage.PlayerInfo.currenthealth += HealthBuff;
+            if ( GameController.instance.DataStorage.PlayerInfo.currenthealth >= GameController.instance.DataStorage.PlayerInfo.maxhealth)
+            {
+                GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+            }
+            
+            EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+
+        }
+    
     }
 
     void PlayerDied()

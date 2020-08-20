@@ -16,15 +16,15 @@ public class PrecisiceBow : BaseWeapon
     public float spaceBetweenPoints;
 
 
-    public void Start()
-    {
+    //public void Start()
+   // {
         /*
        points = new GameObject[numberOfPoints];
         for (int i=0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, firePoint.position, Quaternion.identity);
         }*/
-    }
+    //}
     public void Update()
     {
         if ( PickUped)

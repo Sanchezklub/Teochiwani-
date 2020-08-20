@@ -30,6 +30,8 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public int PoisonCount;
     [SerializeField]public float PoisonTimeBetween;
     
+    public AudioClip AttackSound;
+    public AudioSource audio;
     
     
     public enum SexType
@@ -49,6 +51,11 @@ public abstract class BaseWeapon : BaseItem
         //EventController.instance.weaponEvents.CallOnWeaponAppear(this);
         GetUITexts();
 
+    }
+    public void SoundAttack()
+    {
+        audio.clip= AttackSound;
+        audio.Play();
     }
     public void Effects(Collider2D enemy )
     {

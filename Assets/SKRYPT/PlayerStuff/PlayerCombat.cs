@@ -89,7 +89,12 @@ public class PlayerCombat : MonoBehaviour
        // animator.SetBool("IsAttacking", false);
       //  animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
     }
-
+    public void DoAttackSound()
+    {
+        currentWeapon?.SoundAttack();
+       // animator.SetBool("IsAttacking", false);
+      //  animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
+    }
     public void ChangeWeapon(BaseWeapon newWeapon)
     {
        

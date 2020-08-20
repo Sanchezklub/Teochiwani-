@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatisticsData : MonoBehaviour
+[System.Serializable]
+public class StatisticsData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public RoundStatistics roundData;
+    public GlobalStatistics globalData;
 }

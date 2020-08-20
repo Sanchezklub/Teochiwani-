@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
+[System.Serializable]
 public class GlobalStatistics : MonoBehaviour
 {
     public static GlobalStatistics instance;
-
-    public float timePassed;
+    //public GlobalStatisticsData data;
+    public float timePassed = 0f;
     public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
 
     private void Awake()
@@ -23,7 +24,7 @@ public class GlobalStatistics : MonoBehaviour
 
     private void Update()
     {
-        timePassed = Time.realtimeSinceStartup;
+        timePassed += Time.deltaTime;
     }
 
     void OnEnemyDied(EnemyHealth enemy)
@@ -31,17 +32,23 @@ public class GlobalStatistics : MonoBehaviour
         //Debug.Log("Enemy id was " + enemy.id);
         enemiesKilled[enemy.id] += 1;
     }
-    [System.Serializable]
+
+    void SaveStatistics()
+    {
+        //data = new GlobalStatisticsData(timePassed, enemiesKilled);
+    }
+
+    /*[System.Serializable]
 
     public class GlobalStatisticsData
     {
-        public GlobalStatisticsData(float timePassed, List<int> enemiesKilled)
+        public GlobalStatisticsData(float timePassed, int[] enemiesKilled)
         {
             this.timePassed = timePassed;
             this.enemiesKilled = enemiesKilled;
         }
 
         public float timePassed;
-        public List<int> enemiesKilled;
-    }
+        public int[] enemiesKilled;
+    }*/
 }

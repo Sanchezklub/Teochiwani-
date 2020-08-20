@@ -70,6 +70,7 @@ public class SaveSystem : MonoBehaviour
                     LoadEnemies(saveContainer);
                     //LoadWeapons(saveContainer);
                     LoadItems(saveContainer);
+                    //LoadStats(saveContainer);
                     LoadEnvironment(saveContainer);
                     LoadRooms(saveContainer);
                     LoadPlayer(saveContainer);
@@ -207,6 +208,17 @@ public class SaveSystem : MonoBehaviour
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }
 
+    public void LoadStats(SaveContainer LoadedSaveContainer)
+    {
+        /*GlobalStatistics.instance.enemiesKilled = LoadedSaveContainer.statsData.globalData.data.enemiesKilled;
+        GlobalStatistics.instance.timePassed = LoadedSaveContainer.statsData.globalData.data.timePassed;
+        RoundStatistics.instance.enemiesKilled = LoadedSaveContainer.statsData.roundData.data.enemiesKilled;
+        RoundStatistics.instance.damageTaken = LoadedSaveContainer.statsData.roundData.data.damageTaken;
+    */
+        GlobalStatistics.instance.enemiesKilled = LoadedSaveContainer.globalStatsData.enemiesKilled;
+        GlobalStatistics.instance.timePassed = LoadedSaveContainer.globalStatsData.timePassed;
+
+    }
 
     [ContextMenu("Test")]
     public void FullySaveGame()

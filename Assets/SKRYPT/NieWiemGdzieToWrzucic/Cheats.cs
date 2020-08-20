@@ -25,6 +25,10 @@ public class Cheats : MonoBehaviour
             {
                 Player.transform.position = new Vector2(1900, 20);
             }
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                Debug.LogFormat("Total playtime is {0} seconds", GlobalStatistics.instance.timePassed);
+            }
         }        
     }
 }

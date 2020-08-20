@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class RoundStatistics : MonoBehaviour
 {
     // Start is called before the first frame update
     public static RoundStatistics instance;
-    
+    public RoundStatisticsData data;
     public float damageTaken;
     public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
 
@@ -53,17 +54,22 @@ public class RoundStatistics : MonoBehaviour
         EventController.instance.enemyEvents.OnEnemyDied -= OnEnemyDied;
         ResetStats();
     }
+    void SaveStatistics()
+    {
+        data = new RoundStatisticsData(damageTaken, enemiesKilled);
+    }
+
 
     [System.Serializable]
     public class RoundStatisticsData
     {
-        public RoundStatisticsData(float damageTaken, List<int> enemiesKilled)
+        public RoundStatisticsData(float damageTaken, int[] enemiesKilled)
         {
             this.damageTaken = damageTaken;
             this.enemiesKilled = enemiesKilled;
         }
 
         public float damageTaken;
-        public List<int> enemiesKilled;
+        public int[] enemiesKilled;
     }
 }

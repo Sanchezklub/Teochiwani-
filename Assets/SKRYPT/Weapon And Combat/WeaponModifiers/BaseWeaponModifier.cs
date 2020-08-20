@@ -13,6 +13,8 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] string NijakiNameChange;
     [SerializeField] string MeskoosobowyNameChange;
     [SerializeField] string NiemeskoosobowyNameChange;
+    [SerializeField] ParticleSystem modifierParticle;
+    [SerializeField] Color TrailColor;
     [SerializeField] bool Poison;
     [SerializeField] bool Bleed;
     [SerializeField] bool Fire;
@@ -25,6 +27,8 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
+        weapon.ModifierParticle = modifierParticle;
+        weapon.trail.startColor=TrailColor;
         if(Fire )
         {
             weapon.EffectFire = Fire;

@@ -13,8 +13,9 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public Transform AttackPoint;
     [SerializeField] public float attackRange;
     [SerializeField] public float attackdamage;
-    [SerializeField] private TrailRenderer trail;
+    [SerializeField] public TrailRenderer trail;
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
+    [SerializeField] public ParticleSystem ModifierParticle;
     [SerializeField] public bool EffectBleed=false;
     [SerializeField]public float BleedDamage;
     [SerializeField]public int BleedCount;
@@ -30,6 +31,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public int PoisonCount;
     [SerializeField]public float PoisonTimeBetween;
     
+
     public AudioClip AttackSound;
     public AudioSource audio;
     
@@ -73,9 +75,14 @@ public abstract class BaseWeapon : BaseItem
             }
         
     }
+    public void AddParticle()
+    {
+        Instantiate(ModifierParticle, AttackPoint.transform.position, Quaternion.identity, transform);
+    }
     public override void Start()
     {
         ChooseModifier();
+        AddParticle();
         base.Start();
     }
 

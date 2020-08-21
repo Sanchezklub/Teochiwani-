@@ -12,18 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c5fe66e166d1e4ca17f41710d02d49, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  maxhealth: 200
-  currenthealth: 160
+  maxhealth: 100
+  currenthealth: 100
   damage: 10
-  speed: 49.6
+  speed: 25
   crouchspeed: 0.3
-  jumpforce: 49.6
+  jumpforce: 40
   karma: 25
   attackspeed: 1
-  playerPosition: {x: -256.03455, y: 83.17798, z: 0}
+  playerPosition: {x: -252.75781, y: 3.1779995, z: 0}
   weapon: 0
   cocoa: 0
   blood: 0
+  potionLoads: 0
   level: 0
-  ItemIDs: 0d000000
-  currentweaponID: 108
+  ItemIDs: 
+  currentweaponID: 9999
+  currentweaponModID: 0
+  IsAlive: 1

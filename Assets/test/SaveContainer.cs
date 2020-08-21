@@ -8,5 +8,5 @@ public class SaveContainer
     public PlayerDataScript playerData;
     public LevelData levelData;
     public ItemsData itemsData;
-    public GlobalStatisticsDataScript globalStatsData;
+    public GlobalStatisticsDataScript globalStatistics;
 }

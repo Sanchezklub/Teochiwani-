@@ -7,7 +7,7 @@ using UnityEngine;
 public class GlobalStatistics : MonoBehaviour
 {
     public static GlobalStatistics instance;
-    //public GlobalStatisticsData data;
+    public GlobalStatisticsData data;
     public float timePassed = 0f;
     public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
 
@@ -33,12 +33,12 @@ public class GlobalStatistics : MonoBehaviour
         enemiesKilled[enemy.id] += 1;
     }
 
-    void SaveStatistics()
+    public void SaveStatistics()
     {
-        //data = new GlobalStatisticsData(timePassed, enemiesKilled);
+        data = new GlobalStatisticsData(timePassed, enemiesKilled);
     }
 
-    /*[System.Serializable]
+    [System.Serializable]
 
     public class GlobalStatisticsData
     {
@@ -50,5 +50,5 @@ public class GlobalStatistics : MonoBehaviour
 
         public float timePassed;
         public int[] enemiesKilled;
-    }*/
+    }
 }

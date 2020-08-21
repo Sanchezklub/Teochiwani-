@@ -17,7 +17,7 @@ public class RoundStatistics : MonoBehaviour
     }
     void Start()
     {
-        ResetStats();
+        //ResetStats();
         enemiesKilled = new int[100];
         EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDied;
         EventController.instance.playerEvents.OnPlayerReceiveDamage += DamageTaken;
@@ -54,7 +54,7 @@ public class RoundStatistics : MonoBehaviour
         EventController.instance.enemyEvents.OnEnemyDied -= OnEnemyDied;
         ResetStats();
     }
-    void SaveStatistics()
+    public void SaveStatistics()
     {
         data = new RoundStatisticsData(damageTaken, enemiesKilled);
     }

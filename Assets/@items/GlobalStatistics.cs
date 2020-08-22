@@ -10,6 +10,7 @@ public class GlobalStatistics : MonoBehaviour
     public GlobalStatisticsData data;
     public float timePassed = 0f;
     public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
+    public int doubleKills;
 
     private void Awake()
     {
@@ -31,6 +32,19 @@ public class GlobalStatistics : MonoBehaviour
     {
         //Debug.Log("Enemy id was " + enemy.id);
         enemiesKilled[enemy.id] += 1;
+        StartCoroutine("MultikillTimer");
+
+    }
+
+    IEnumerator MultikillTimer()
+    {
+        EventController.instance.enemyEvents.OnEnemyDiedBasic += OnSecondEnemyDied;
+        yield return new WaitForSeconds(5);
+        EventController.instance.enemyEvents.OnEnemyDiedBasic -= OnSecondEnemyDied;
+    }
+    void OnSecondEnemyDied()
+    {
+        doubleKills += 1;
     }
 
     public void SaveStatistics()

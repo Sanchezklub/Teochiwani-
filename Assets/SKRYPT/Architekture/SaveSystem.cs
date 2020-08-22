@@ -231,6 +231,7 @@ public class SaveSystem : MonoBehaviour
         //Debug.LogFormat("Test 1:{0}", saveContainer.statisticsData.ToString());
         //Debug.LogFormat("Test 2:{0}", saveContainer.statisticsData.globalData.ToString());
         saveContainer.globalStatistics = new GlobalStatisticsDataScript(GlobalStatistics.instance);
+        saveContainer.roundStatistics = new RoundStatisticsDataScript(RoundStatistics.instance);
         //saveContainer.statisticsData.roundData.SaveStatistics();
 
 

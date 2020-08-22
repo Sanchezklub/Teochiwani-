@@ -9,4 +9,5 @@ public class SaveContainer
     public LevelData levelData;
     public ItemsData itemsData;
     public GlobalStatisticsDataScript globalStatistics;
+    public RoundStatisticsDataScript roundStatistics;
 }

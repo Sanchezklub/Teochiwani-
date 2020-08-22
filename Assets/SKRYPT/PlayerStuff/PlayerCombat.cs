@@ -184,7 +184,10 @@ public class PlayerCombat : MonoBehaviour
     {
         currentWeapon?.StopEmitting();
     }
-
+    public void ExtraVoid()
+    {
+        currentWeapon?.AdditonalVoid(this);
+    }
     public void CancelAllAttacks()
     {
         animator.SetBool("IsAttacking", false);

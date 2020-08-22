@@ -98,7 +98,10 @@ public abstract class BaseWeapon : BaseItem
         IsAttackingLight,
         IsAttackingHeavy,
         IsAttackingVHeavy,
-        IsAttackingRanged
+        IsAttackingRanged,
+        IsAttackingShoot,
+        IsAttackingThrow
+
     }
     public AnimationType AttackAnimationType;
     public abstract void Attack(PlayerCombat controller);
@@ -134,7 +137,10 @@ public abstract class BaseWeapon : BaseItem
         }
 
     }
-
+    public  void AdditonalVoid(PlayerCombat controller)
+    {
+        controller.animator.SetBool("Reloaded", true);
+    }
     private void OnDrawGizmos()
     {
         Handles.Label(transform.position, ModId.ToString());

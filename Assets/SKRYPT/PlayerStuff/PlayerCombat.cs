@@ -196,6 +196,16 @@ public class PlayerCombat : MonoBehaviour
         animator.SetBool("IsAttackingLight", false);
         animator.SetBool("IsAttackingVHeavy", false);
         animator.SetBool("IsAttackingRanged", false);
+        if(animator.GetBool("Reloaded"))
+        {
+            animator.SetBool("Reloaded", false);
+        }
+        else
+        {
+            animator.SetBool("Reloaded", true);
+        }
+        animator.SetBool("IsAttackingShoot", false);
+        animator.SetBool("IsAttackingThrow", false);
         animator.SetBool("AttackCombo", false);
         animator.SetBool("AttackCombo2", false);
         noOfClicks = 0;

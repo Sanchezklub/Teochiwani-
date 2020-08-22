@@ -16,6 +16,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] JungleGrzes0a;
     public GameObject[] JungleGrzes0b;
     public GameObject[] JungleGrzes0c;
+
     
 
 
@@ -24,6 +25,17 @@ public class SpawnBlock : MonoBehaviour
 
     public GameObject[] Underground;
     public GameObject[] UndergroundCorner;
+    public GameObject[] UndergroundGrzes2;
+    public GameObject[] UndergroundGrzes1;
+    public GameObject[] UndergroundGrzes1a;
+    public GameObject[] UndergroundGrzesD;
+    public GameObject[] UndergroundGrzesC;
+    public GameObject[] UndergroundGrzesB;
+    public GameObject[] UndergroundGrzes3;
+    public GameObject[] UndergroundGrzes0a;
+    public GameObject[] UndergroundGrzes0b;
+    public GameObject[] UndergroundGrzes0c;
+
 
     public GameObject[] Sky;
     public GameObject[] SkyCorner;
@@ -96,12 +108,53 @@ public class SpawnBlock : MonoBehaviour
                         if(UndergroundCorner[rand] != null)
                         {
                         Instantiate(UndergroundCorner[rand], transform.position, spawnRotation,transform);
+                        
                         }
                     }
                 }
                 else if ( klocek == true)
                 {
-                    Instantiate(Klocek, transform.position, spawnRotation,transform); 
+                    Instantiate(Klocek, transform.position, spawnRotation,transform);
+                }
+                else if ( grzes2 ==true)
+                {               
+                    Instantiate(UndergroundGrzes2[Random.Range(0, UndergroundGrzes2.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1 ==true)
+                {
+                    Instantiate(UndergroundGrzes1[Random.Range(0, UndergroundGrzes1.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesD ==true)
+                {
+                    Instantiate(UndergroundGrzesD[Random.Range(0, UndergroundGrzesD.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesC ==true)
+                {
+                    Instantiate(UndergroundGrzesC[Random.Range(0, UndergroundGrzesC.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesB ==true)
+                {
+                   Instantiate(UndergroundGrzesB[Random.Range(0, UndergroundGrzesB.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1a ==true)
+                {
+                    Instantiate(UndergroundGrzes1a[Random.Range(0, UndergroundGrzes1a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0b ==true)
+                {
+                    Instantiate(UndergroundGrzes0b[Random.Range(0, UndergroundGrzes0b.Length)], transform.position, spawnRotation,transform);             
+                }
+                else if ( grzes0a ==true)
+                { 
+                    Instantiate(UndergroundGrzes0a[Random.Range(0, UndergroundGrzes0a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes3 ==true)
+                { 
+                    Instantiate(UndergroundGrzes3[Random.Range(0, UndergroundGrzes3.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0c ==true)
+                { 
+                    Instantiate(UndergroundGrzes0c[Random.Range(0, UndergroundGrzes0c.Length)], transform.position, spawnRotation,transform);
                 }
                 else 
                 {
@@ -473,7 +526,7 @@ public class SpawnBlock : MonoBehaviour
          }
          else if (Hit[1]==false && Hit[3]==true && Hit[5]==true && Hit[7]==true && Hit[4]==false && Hit[6]==true)
          {
-             spawnRotation = Quaternion.Euler(180,0,0);
+             spawnRotation = Quaternion.Euler(0,180,0);
              grzes0a=true;
              return;
          }
@@ -547,8 +600,30 @@ public class SpawnBlock : MonoBehaviour
              return;
          }
          //brakuje     grzec0c
-
-        
+        else if(Hit[1]==true && Hit[2]==true && Hit[3]==true && Hit[4]==false && Hit[5]==true && Hit[6]==false && Hit[7]==true  && Hit[8]==true  )
+        {
+           spawnRotation = Quaternion.Euler(0,0,0);
+             grzes0c = true;
+             return; 
+        }
+         else if(Hit[1]==true && Hit[2]==false && Hit[3]==true && Hit[4]==false && Hit[5]==true && Hit[6]==true && Hit[7]==true  && Hit[8]==true  )
+        {
+           spawnRotation = Quaternion.Euler(0,0,90);
+             grzes0c = true;
+             return; 
+        }
+         else if(Hit[1]==true && Hit[2]==false && Hit[3]==true && Hit[4]==true && Hit[5]==true && Hit[6]==true && Hit[7]==true  && Hit[8]==false  )
+        {
+           spawnRotation = Quaternion.Euler(0,0,180);
+             grzes0c = true;
+             return; 
+        }
+         else if(Hit[1]==true && Hit[2]==true && Hit[3]==true && Hit[4]==true && Hit[5]==true && Hit[6]==false && Hit[7]==true  && Hit[8]==false  )
+        {
+           spawnRotation = Quaternion.Euler(0,0,270);
+             grzes0c = true;
+             return; 
+        }
     }
     private void Wektors()
     {

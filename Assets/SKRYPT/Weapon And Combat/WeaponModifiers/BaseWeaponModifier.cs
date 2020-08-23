@@ -20,9 +20,24 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] bool Fire;
     [Range(-1.0f, 1.0f)]
     public float AttackSpeedChange;
+
+
+    private int DefaultBloodPrice;
+    private int DefaultCocaoPrice;
+    private float DefaultAttackdamage;
+    private float DefaultAttackrange;
+    private ParticleSystem DefaultParticle;
+    private bool DefaultFire;
+    private bool DefaultBleed;
+    private bool DefaultPoison;
+    private string DefaultWeaponName;
+
     // latwo dodawac damge i effekty zostaly attackspeed
     public void Apply(BaseWeapon weapon)
     {
+
+        StoreBaseValues(weapon);
+
         weapon.BloodPrice += PriceChange;
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
@@ -62,5 +77,40 @@ public class BaseWeaponModifier : ScriptableObject
 
         }
         //weapon.itemName = NameChange +" "+ weapon.itemName;
+    }
+
+    public void Remove(BaseWeapon weapon)
+    {
+        weapon.BloodPrice = DefaultBloodPrice;
+        weapon.CocaoPrice = DefaultCocaoPrice;
+        weapon.attackdamage = DefaultAttackdamage;
+        weapon.attackRange = DefaultAttackrange;
+        weapon.ModifierParticle = DefaultParticle;
+        weapon.EffectFire = DefaultFire;
+        weapon.EffectBleed = DefaultBleed;
+        weapon.EffectPoison = DefaultPoison;
+        weapon.itemName = DefaultWeaponName;
+    }
+
+    private void StoreBaseValues(BaseWeapon weapon)
+    {
+        DefaultBloodPrice = weapon.BloodPrice;
+        DefaultCocaoPrice = weapon.CocaoPrice;
+        DefaultAttackdamage = weapon.attackdamage;
+        DefaultAttackrange = weapon.attackRange;
+        DefaultParticle = weapon.ModifierParticle;
+        DefaultFire = weapon.EffectFire;
+        DefaultBleed = weapon.EffectBleed;
+        DefaultPoison = weapon.EffectPoison;
+        DefaultWeaponName = weapon.itemName;
+
+
+    /*public float attackdamage;
+    public float attackrange;
+    public ParticleSystem particle;
+    public bool Fire;
+    public bool Bleed;
+    public bool Poison;
+    public string weaponName;*/
     }
 }

@@ -16,6 +16,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public TrailRenderer trail;
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
     [SerializeField] public ParticleSystem ModifierParticle;
+    [SerializeField] private BaseWeaponModifier currentModifier;
     [SerializeField] public bool EffectBleed=false;
     [SerializeField]public float BleedDamage;
     [SerializeField]public int BleedCount;
@@ -131,10 +132,28 @@ public abstract class BaseWeapon : BaseItem
                 Debug.LogFormat("Randomly chosen ModifierId for {0} was {1}", name, ModId);
             }
 
-            BaseWeaponModifier mod = WeaponModDictionary.instance.GetWeaponModifier(ModId);
-            mod?.Apply(this);
+            currentModifier = WeaponModDictionary.instance.GetWeaponModifier(ModId);
+            currentModifier?.Apply(this);
             ModifierChosen = true;
         }
+
+    }
+
+    public void RemoveModifier()
+    {
+        if (currentModifier)
+        {
+            currentModifier.Remove(this);
+            currentModifier = null;
+        }
+    }
+
+    public void ChangeModifier(int newModId)
+    {
+        RemoveModifier();
+        currentModifier = WeaponModDictionary.instance.GetWeaponModifier(newModId);
+        currentModifier?.Apply(this);
+        ModifierChosen = true;
 
     }
     public  void AdditonalVoid(PlayerCombat controller)

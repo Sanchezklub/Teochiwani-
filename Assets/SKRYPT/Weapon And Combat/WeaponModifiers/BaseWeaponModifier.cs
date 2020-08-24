@@ -27,6 +27,7 @@ public class BaseWeaponModifier : ScriptableObject
     private float DefaultAttackdamage;
     private float DefaultAttackrange;
     private ParticleSystem DefaultParticle;
+    private Color DefaultColor;
     private bool DefaultFire;
     private bool DefaultBleed;
     private bool DefaultPoison;
@@ -86,6 +87,7 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.attackdamage = DefaultAttackdamage;
         weapon.attackRange = DefaultAttackrange;
         weapon.ModifierParticle = DefaultParticle;
+        weapon.trail.startColor = DefaultColor;
         weapon.EffectFire = DefaultFire;
         weapon.EffectBleed = DefaultBleed;
         weapon.EffectPoison = DefaultPoison;
@@ -99,6 +101,7 @@ public class BaseWeaponModifier : ScriptableObject
         DefaultAttackdamage = weapon.attackdamage;
         DefaultAttackrange = weapon.attackRange;
         DefaultParticle = weapon.ModifierParticle;
+        DefaultColor = weapon.trail.startColor;
         DefaultFire = weapon.EffectFire;
         DefaultBleed = weapon.EffectBleed;
         DefaultPoison = weapon.EffectPoison;

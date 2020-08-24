@@ -11,6 +11,10 @@ public class GlobalStatistics : MonoBehaviour
     public float timePassed = 0f;
     public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
     public int doubleKills;
+    public float fireDamageDealt;
+    public float poisonDamageDealt;
+    public float bleedDamageDealt;
+    public int playerDeaths;
 
     private void Awake()
     {
@@ -20,6 +24,10 @@ public class GlobalStatistics : MonoBehaviour
     private void Start()
     {
         EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDied;
+        EventController.instance.enemyEvents.OnBleedDamageDealt += OnBleedDamageDealt;
+        EventController.instance.enemyEvents.OnFireDamageDealt += OnFireDamageDealt;
+        EventController.instance.enemyEvents.OnPoisonDamageDealt += OnPoisonDamageDealt;
+        EventController.instance.playerEvents.OnPlayerDie += OnPlayerDied;
         enemiesKilled = new int[100];
     }
 
@@ -34,6 +42,24 @@ public class GlobalStatistics : MonoBehaviour
         enemiesKilled[enemy.id] += 1;
         StartCoroutine("MultikillTimer");
 
+    }
+
+    void OnPlayerDied()
+    {
+        playerDeaths += 1;
+    }
+
+    void OnBleedDamageDealt(float damage)
+    {
+        bleedDamageDealt += damage;
+    }
+    void OnPoisonDamageDealt(float damage)
+    {
+        poisonDamageDealt += damage;
+    }
+    void OnFireDamageDealt(float damage)
+    {
+        fireDamageDealt += damage;
     }
 
     IEnumerator MultikillTimer()

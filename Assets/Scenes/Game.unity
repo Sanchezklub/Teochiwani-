@@ -283,6 +283,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4520202676022092216, guid: b7855a2665569334296473750d604afc,
         type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: ItemObjects.Array.data[15]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: ItemObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: ItemObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: ItemObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: ItemObjects.Array.data[16]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348e9e5328ba2044cac2fcd5d75ee55d, type: 3}
 --- !u!1 &90168426 stripped
@@ -1046,6 +1071,11 @@ MonoBehaviour:
     enemiesKilled: 
   timePassed: 0
   enemiesKilled: 
+  doubleKills: 0
+  fireDamageDealt: 0
+  poisonDamageDealt: 0
+  bleedDamageDealt: 0
+  playerDeaths: 0
 --- !u!1001 &405277758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2431,6 +2461,11 @@ MonoBehaviour:
     enemiesKilled: 
   timePassed: 0
   enemiesKilled: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  doubleKills: 0
+  fireDamageDealt: 0
+  poisonDamageDealt: 0
+  bleedDamageDealt: 0
+  playerDeaths: 0
 --- !u!1001 &1334990604
 PrefabInstance:
   m_ObjectHideFlags: 0

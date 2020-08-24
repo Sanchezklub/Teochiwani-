@@ -63,6 +63,7 @@ public class Health : MonoBehaviour
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
             TakeDamage(damage);
+            EventController.instance.enemyEvents.CallOnPoisonDamageDealt(damage);
         }
     }
 
@@ -75,6 +76,7 @@ public class Health : MonoBehaviour
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
             TakeDamage(damage);
+            EventController.instance.enemyEvents.CallOnFireDamageDealt(damage);
         }
     }
 
@@ -87,6 +89,7 @@ public class Health : MonoBehaviour
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
             TakeDamage(damage);
+            EventController.instance.enemyEvents.CallOnBleedDamageDealt(damage);
         }
     }
  

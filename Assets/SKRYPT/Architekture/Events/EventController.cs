@@ -153,6 +153,33 @@ public class EventController : MonoBehaviour
             OnBossDiedBasic?.Invoke();
             OnBossDied?.Invoke(boss);
         }
+
+        public UnityAction<float> OnFireDamageDealt;
+        public UnityAction OnFireDamageDealtBasic;
+
+        public void CallOnFireDamageDealt(float damage)
+        {
+            OnFireDamageDealtBasic?.Invoke();
+            OnFireDamageDealt?.Invoke(damage);
+        }
+
+        public UnityAction<float> OnPoisonDamageDealt;
+        public UnityAction OnPoisonDamageDealtBasic;
+
+        public void CallOnPoisonDamageDealt(float damage)
+        {
+            OnPoisonDamageDealtBasic?.Invoke();
+            OnPoisonDamageDealt?.Invoke(damage);
+        }
+
+        public UnityAction<float> OnBleedDamageDealt;
+        public UnityAction OnBleedDamageDealtBasic;
+
+        public void CallOnBleedDamageDealt(float damage)
+        {
+            OnBleedDamageDealtBasic?.Invoke();
+            OnBleedDamageDealt?.Invoke(damage);
+        }
     }
 
     public class EnviromentEvents

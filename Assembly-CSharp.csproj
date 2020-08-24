@@ -63,17 +63,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\@items\AllSoulsCondition.cs" />
     <Compile Include="Assets\@items\BaseCondition.cs" />
     <Compile Include="Assets\@items\DamageCondition.cs" />
     <Compile Include="Assets\@items\DamageTakenCondition.cs" />
+    <Compile Include="Assets\@items\DeathCondition.cs" />
     <Compile Include="Assets\@items\DoublekillCondition.cs" />
+    <Compile Include="Assets\@items\EffectConditions\BleedDamageCondition.cs" />
+    <Compile Include="Assets\@items\EffectConditions\FireDamageCondition.cs" />
+    <Compile Include="Assets\@items\EffectConditions\PoisonDamageCondition.cs" />
     <Compile Include="Assets\@items\EnemiesKilledCondition\EnemiesKilledCondition.cs" />
     <Compile Include="Assets\@items\FreeConditions\FreeCondition.cs" />
-    <Compile Include="Assets\@items\GlobalStatistics.cs" />
     <Compile Include="Assets\@items\ItemController.cs" />
     <Compile Include="Assets\@items\ItemsData.cs" />
-    <Compile Include="Assets\@items\RoundStatistics.cs" />
-    <Compile Include="Assets\@items\SesionStatistics.cs" />
+    <Compile Include="Assets\@items\Statistics\GlobalStatistics.cs" />
+    <Compile Include="Assets\@items\Statistics\RoundStatistics.cs" />
+    <Compile Include="Assets\@items\Statistics\SesionStatistics.cs" />
     <Compile Include="Assets\@items\TimeCondition.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\DataStorage.cs" />
     <Compile Include="Assets\SKRYPT\Architekture\Events\EventController.cs" />
@@ -281,6 +286,7 @@
     <Compile Include="Assets\SKRYPT\Weapon And Combat\POA.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\PrecisiceBow.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\RockGun.cs" />
+    <Compile Include="Assets\SKRYPT\Weapon And Combat\Spear.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\Strzala.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\ToporWichury.cs" />
     <Compile Include="Assets\SKRYPT\Weapon And Combat\Weapon.cs" />

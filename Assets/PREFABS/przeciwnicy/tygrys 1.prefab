@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5723ef98d77349c40ab9f23cc48b2f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 50
+  AttackRange: 5
   AttackPoint: {fileID: 4663913937218615991}
   raycastTransform: {fileID: 4065059585719221684}
   WhatIsGround:
@@ -523,7 +523,7 @@ MonoBehaviour:
   StopAttackDist: 30
   enemyAnimator: {fileID: 7420580741950166706}
   ChannellTime: 1.817
-  jump: 16
+  JD: 10
   ataksound: {fileID: 1087366120027983406}
 --- !u!61 &7579393732222685618
 BoxCollider2D:
@@ -609,9 +609,12 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 7
+  EffectParticle: []
   splashController: {fileID: 6274277937354517013}
   enemyAnimator: {fileID: 7420580741950166706}
   IsHuman: 0
+  IsBoss: 0
+  Drops: []
 --- !u!114 &6274277937354517013
 MonoBehaviour:
   m_ObjectHideFlags: 0

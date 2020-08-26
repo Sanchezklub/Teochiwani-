@@ -16,7 +16,7 @@ public class TigerAtackState : BaseState<TigerBrain>
     public float AnimationDuration = 0.8f;
     public float Speed;
     public bool twojstary;
-    public int JD;
+    //public int JD;
 
  public override void InitState(TigerBrain controller)
     {
@@ -44,12 +44,12 @@ public override void UpdateState()
             if (brain.FacingRight)
                 {
                     twojstary = true;
-                    enemyRigidBody2D.velocity = new Vector2(Speed,JD);
+                    enemyRigidBody2D.velocity = new Vector2(Speed,brain.JD);
                 }
             else
                 {
                     twojstary = true;
-                    enemyRigidBody2D.velocity = new Vector2(-1*Speed,JD);
+                    enemyRigidBody2D.velocity = new Vector2(-1*Speed,brain.JD);
                 }
         }
     }

@@ -19,7 +19,7 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public float ChannellTime;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
-    public float jump;
+    public float JD;
     public AudioSource ataksound;
     private void Start()
     {

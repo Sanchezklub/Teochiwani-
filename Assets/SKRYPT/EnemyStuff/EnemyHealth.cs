@@ -41,10 +41,6 @@ public class EnemyHealth : Health
 
     protected override void Die()
     {
-        //potion
-
-        //potionkoniec
-
         /*
         int rand;
         rand = Random.Range(0,100);

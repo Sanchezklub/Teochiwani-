@@ -52,10 +52,7 @@ public class Dzik : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        collision.gameObject.GetComponent<PlayerHealth>()?.TakeDamage(damage);
-    }
+
 
     void Flip()
     {
@@ -74,5 +71,9 @@ public class Dzik : MonoBehaviour
         {
             enemyRigidBody2D.velocity = new Vector2(-1 * speed, enemyRigidBody2D.velocity.y);
         }
+    }
+    public void Stop()
+    {
+        speed = 0;
     }
 }

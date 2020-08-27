@@ -14,9 +14,10 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     public bool FacingRight;
     public float damage;
     public float speed;
-    public float StartFollowDist;
-    public float StopFollowDist;
-    public float StartFightDist;
+    public float AggroRange;
+    //public float StartFollowDist;
+    //public float StopFollowDist;
+    //public float StartFightDist;
     public int SummonCount = 0;
     public Animator enemyAnimator;
     public Transform FirePoint;
@@ -30,7 +31,7 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
     private void Start()
     {
         //StartPatrol();
-        StartAtak1();
+        StartIdle();
     }
     private void Update()
     {
@@ -53,15 +54,19 @@ public class KhnurBrain : BaseBrain<KhnurBrain>
         currentState?.UpdateState();
     }
 
-    public void StartAtak1()
+    public void StartIdle()
     {
-        ChangeState(new KhnurAtak1());
+        ChangeState(new KhnurIdle());
+    }
+    public void StartAtak()
+    {
+        ChangeState(new KhnurAtak());
     }
 
-    public void StartAtak2()
+    public void StartSummon()
     {
         //enemyToFollow = objectToFollow;
-        ChangeState(new KhnurAtak2());
+        ChangeState(new KhnurSummon());
     }
     public void ActionAttack()
     {

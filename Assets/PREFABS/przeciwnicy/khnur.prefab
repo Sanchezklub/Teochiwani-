@@ -1268,18 +1268,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d2466d4b083d5449e82faaefceeb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 15
+  AttackRange: 10
   AttackPoint: {fileID: 7062822105000096469}
   raycastTransform: {fileID: 0}
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   FacingRight: 0
   damage: 20
   speed: 7
-  StartFollowDist: 10
-  StopFollowDist: 0
-  StartFightDist: 2
+  AggroRange: 100
   SummonCount: 0
   enemyAnimator: {fileID: 7062822104721862110}
   FirePoint: {fileID: 7062822105318225703}
@@ -1304,6 +1302,9 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 0
+  EffectParticle: []
   splashController: {fileID: 0}
   enemyAnimator: {fileID: 0}
   IsHuman: 0
+  IsBoss: 0
+  Drops: []

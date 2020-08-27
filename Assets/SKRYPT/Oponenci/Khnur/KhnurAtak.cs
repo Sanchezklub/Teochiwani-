@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KhnurAtak1 : BaseState<KhnurBrain>
+public class KhnurAtak : BaseState<KhnurBrain>
 {
     private KhnurBrain brain;
     Rigidbody2D enemyRigidBody2D;
@@ -102,13 +102,13 @@ public class KhnurAtak1 : BaseState<KhnurBrain>
         {
             brain.SummonCount = 0;
             //Debug.Log("left fightstate");
-            brain.StartAtak1();
+            brain.StartAtak();
         }
         else 
         {
             brain.SummonCount++;
             //Debug.Log("left fightstate");
-            brain.StartAtak2();
+            brain.StartSummon();
         }
     }
 }

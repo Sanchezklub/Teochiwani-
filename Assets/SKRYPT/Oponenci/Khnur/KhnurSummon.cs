@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KhnurAtak2 : BaseState<KhnurBrain>
+public class KhnurSummon : BaseState<KhnurBrain>
 {
     [SerializeField]
     private KhnurBrain brain;
@@ -36,13 +36,13 @@ public class KhnurAtak2 : BaseState<KhnurBrain>
         {
             brain.SummonCount = 0;
             Debug.Log("left fightstate");
-            brain.StartAtak1();
+            brain.StartAtak();
         }
         else
         {
             brain.SummonCount++;
             Debug.Log("left fightstate");
-            brain.StartAtak2();
+            brain.StartSummon();
         }
     }
     public override void DeinitState(KhnurBrain controller)

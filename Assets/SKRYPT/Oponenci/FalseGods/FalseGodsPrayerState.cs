@@ -14,6 +14,7 @@ public class FalseGodsPrayerState : BaseState<FalseGodsBrain>
         brain.Attacking += Projectile;
         brain.EndAttack += brain.StartRun;
         brain.TulioAnimator.SetBool("IsPraying", true);
+        brain.MiguelAnimator.SetBool("IsPraying", true);
     }
 
     void Projectile()
@@ -31,6 +32,7 @@ public class FalseGodsPrayerState : BaseState<FalseGodsBrain>
         brain.Attacking -= Projectile;
         brain.EndAttack -= brain.StartRun;
         brain.TulioAnimator.SetBool("IsPraying", false);
+        brain.MiguelAnimator.SetBool("IsPraying", false);
         base.DeinitState(controller);
     }
 }

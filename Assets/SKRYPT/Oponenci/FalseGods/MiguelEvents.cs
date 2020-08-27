@@ -2,24 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FalseGodsEvents : MonoBehaviour
+public class MiguelEvents : MonoBehaviour
 {
     private FalseGodsBrain brain;
+
     private void Start()
     {
         brain = GetComponentInParent<FalseGodsBrain>();
     }
-
-
-    public void ActionAttack()
+    public void StartDying()
     {
-        brain.ActionAttack();
+        brain.StartDying();
     }
 
-    public void ActionEndAttack()
+    public void GetDestroyed()
     {
-        brain.ActionEndAttack();
+        GameObject.Destroy(this.transform.parent.gameObject);
     }
-
-
 }

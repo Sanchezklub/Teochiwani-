@@ -95,4 +95,9 @@ public class FalseGodsBrain : BaseBrain<FalseGodsBrain>
     {
         EndAttack?.Invoke();
     }
+
+    public void StartDying()
+    {
+        TulioAnimator.SetTrigger("Die");
+    }
 }

@@ -261,6 +261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
+      propertyPath: EnemyObjects.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
       propertyPath: WeaponModifiers.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 39925870dad7cb147b227c75a8064ba3,
@@ -308,6 +313,18 @@ PrefabInstance:
       propertyPath: ItemObjects.Array.data[16]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnemyObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: 9176262789320150799, guid: 50fa840021518634d8cc2af896f90407,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnemyObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 6163903112760620598, guid: 9497555e5888d6342a0f3b43899eb75e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348e9e5328ba2044cac2fcd5d75ee55d, type: 3}
 --- !u!1 &90168426 stripped

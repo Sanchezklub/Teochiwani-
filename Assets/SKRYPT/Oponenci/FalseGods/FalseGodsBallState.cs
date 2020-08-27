@@ -13,6 +13,7 @@ public class FalseGodsBallState : BaseState<FalseGodsBrain>
         this.brain = controller;
         brain.Attacking += ThrowBall;
         brain.TulioAnimator.SetBool("IsThrowing", true);
+        FacePlayer();
     }
 
     void ThrowBall()
@@ -42,5 +43,32 @@ public class FalseGodsBallState : BaseState<FalseGodsBrain>
         brain.Attacking -= ThrowBall;
         brain.TulioAnimator.SetBool("IsThrowing", false);
         base.DeinitState(controller);
+    }
+
+    public void FacePlayer()
+    {
+        float PositionDifference = brain.transform.position.x - GameController.instance.DataStorage.PlayerInfo.playerPosition.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = true;
+        }
+    }
+
+    void Flip()
+    {
+        brain.FacingRight = !brain.FacingRight;
+        brain.transform.Rotate(new Vector2(0, 180f));
     }
 }

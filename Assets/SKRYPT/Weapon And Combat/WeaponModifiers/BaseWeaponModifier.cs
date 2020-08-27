@@ -15,6 +15,7 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] string NiemeskoosobowyNameChange;
     [SerializeField] ParticleSystem modifierParticle;
     [SerializeField] Color TrailColor;
+    [SerializeField] Material WeaponSpriteMaterial;
     [SerializeField] bool Poison;
     [SerializeField] bool Bleed;
     [SerializeField] bool Fire;
@@ -28,6 +29,7 @@ public class BaseWeaponModifier : ScriptableObject
     private float DefaultAttackrange;
     private ParticleSystem DefaultParticle;
     private Color DefaultColor;
+    private Material DefaultWeaponSpriteMaterial;
     private bool DefaultFire;
     private bool DefaultBleed;
     private bool DefaultPoison;
@@ -44,7 +46,10 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
         weapon.ModifierParticle = modifierParticle;
+        if(weapon.trail!=null)
+        {
         weapon.trail.startColor=TrailColor;
+        }
         if(Fire )
         {
             weapon.EffectFire = Fire;
@@ -56,6 +61,10 @@ public class BaseWeaponModifier : ScriptableObject
         if(Poison)
         {
             weapon.EffectPoison = Poison;
+        }
+        if(WeaponSpriteMaterial!=null)
+        {
+            weapon.SpriteRen.material = WeaponSpriteMaterial;
         }
         weapon.AttackSpeedModifier += AttackSpeedChange; 
         switch (weapon.weaponSexType)
@@ -87,11 +96,18 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.attackdamage = DefaultAttackdamage;
         weapon.attackRange = DefaultAttackrange;
         weapon.ModifierParticle = DefaultParticle;
+        if(weapon.trail!=null)
+        {
         weapon.trail.startColor = DefaultColor;
+        }
         weapon.EffectFire = DefaultFire;
         weapon.EffectBleed = DefaultBleed;
         weapon.EffectPoison = DefaultPoison;
         weapon.itemName = DefaultWeaponName;
+        if(WeaponSpriteMaterial!=null)
+        {
+        weapon.SpriteRen.material = DefaultWeaponSpriteMaterial;
+        }
     }
 
     private void StoreBaseValues(BaseWeapon weapon)
@@ -101,12 +117,18 @@ public class BaseWeaponModifier : ScriptableObject
         DefaultAttackdamage = weapon.attackdamage;
         DefaultAttackrange = weapon.attackRange;
         DefaultParticle = weapon.ModifierParticle;
+        if(weapon.trail!=null)
+        {
         DefaultColor = weapon.trail.startColor;
+        }
         DefaultFire = weapon.EffectFire;
         DefaultBleed = weapon.EffectBleed;
         DefaultPoison = weapon.EffectPoison;
         DefaultWeaponName = weapon.itemName;
-
+        if(WeaponSpriteMaterial!=null)
+        {
+        DefaultWeaponSpriteMaterial = weapon.SpriteRen.material;
+        }
 
     /*public float attackdamage;
     public float attackrange;

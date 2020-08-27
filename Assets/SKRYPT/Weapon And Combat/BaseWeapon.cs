@@ -32,6 +32,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public int PoisonCount;
     [SerializeField]public float PoisonTimeBetween;
     
+    [SerializeField]public SpriteRenderer SpriteRen;
 
     public AudioClip AttackSound;
     public AudioSource audio;
@@ -84,6 +85,7 @@ public abstract class BaseWeapon : BaseItem
     {
         ChooseModifier();
         AddParticle();
+        SpriteRen = this.GetComponent<SpriteRenderer>();
         base.Start();
     }
 

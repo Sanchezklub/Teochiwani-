@@ -14,8 +14,6 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
 
-    public float MaxHealth;
-    public float CurrentHealth;
     public float damage;
     public float speed;
     public float StartFollowDist;
@@ -24,6 +22,11 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public float AttackRange;
 
     public bool FacingRight;
+
+    public AudioSource audio;
+    public AudioClip Hurtsound;
+    public AudioClip Deathsound;
+    public AudioClip Attacksound;
 
     private void Start()
     {
@@ -75,5 +78,21 @@ public class EnemyBrain : BaseBrain<EnemyBrain>
     public void StartFollow()
     {
         ChangeState(new FollowState());
+    }
+    public void SoundDeath()
+    {
+        audio.clip= Deathsound;
+        audio.Play();
+    }
+    public void SoundHurt()
+    {
+        
+        audio.clip= Hurtsound;
+        audio.Play();
+    }
+    public void SoundAttack()
+    {
+        audio.clip= Attacksound;
+        audio.Play();
     }
 }

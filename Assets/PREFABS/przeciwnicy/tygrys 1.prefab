@@ -524,7 +524,10 @@ MonoBehaviour:
   enemyAnimator: {fileID: 7420580741950166706}
   ChannellTime: 1.817
   JD: 10
-  ataksound: {fileID: 1087366120027983406}
+  audio: {fileID: 1087366120027983406}
+  Deathsound: {fileID: 8300000, guid: f013a36cfa8814845b9705ab16bfbbe9, type: 3}
+  Hurtsound: {fileID: 8300000, guid: 02e9af3de5bd76641b263955648e90dd, type: 3}
+  Attacksound: {fileID: 8300000, guid: bd9b7b7ab19f4d246b324fb5c3cce1ab, type: 3}
 --- !u!61 &7579393732222685618
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -609,12 +612,25 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 7
-  EffectParticle: []
+  EffectParticle:
+  - {fileID: 9046691337149576305, guid: a74c433532454fa4287b4e1e6389c430, type: 3}
+  - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}
+  - {fileID: 9046691337149576305, guid: a74c433532454fa4287b4e1e6389c430, type: 3}
   splashController: {fileID: 6274277937354517013}
   enemyAnimator: {fileID: 7420580741950166706}
   IsHuman: 0
   IsBoss: 0
-  Drops: []
+  Drops:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 9160837495220343430, guid: 79dae41b87e253347b7fb517efd5fc19, type: 3}
+  - {fileID: 9160837495220343430, guid: 79dae41b87e253347b7fb517efd5fc19, type: 3}
+  - {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
+  - {fileID: 5717978130810721407, guid: 9c14c22a7c825b949939624221c8ba86, type: 3}
 --- !u!114 &6274277937354517013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,8 +647,8 @@ MonoBehaviour:
   - {fileID: 8879362370019826865, guid: bc3228d40b1f5f748b4c54054d94f079, type: 3}
   - {fileID: 8445104910896414660, guid: 10b6a25e6b631554cb2bf002f33f534a, type: 3}
   - {fileID: 4422407967575818056, guid: c7e1c3d1bf616d2449439381696a5387, type: 3}
-  ps: {fileID: 3800583068774307269, guid: 23b4a682e04b43147a28344e33dab97d, type: 3}
-  BloodSplitter: {fileID: 0}
+  ps: {fileID: 9046691337149576305, guid: 86151b1641060e2478356696cc216316, type: 3}
+  BloodSplitter: {fileID: 282956145057795263}
 --- !u!82 &1087366120027983406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -642,8 +658,9 @@ AudioSource:
   m_GameObject: {fileID: 3954899994316473538}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e0b5fc1700f88794d842c164f6cd376a, type: 3}
+  OutputAudioMixerGroup: {fileID: 2990991902851928083, guid: 474e1c495e818a74fb93e11aed41240b,
+    type: 2}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1.51

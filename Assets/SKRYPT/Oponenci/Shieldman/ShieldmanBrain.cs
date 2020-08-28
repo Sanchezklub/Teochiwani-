@@ -22,6 +22,7 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
 
     public AudioClip GettingHurt;
     public AudioClip Attacksound;
+    public AudioClip Footstepsound;
 
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
@@ -83,6 +84,11 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     public void SoundAttack()
     {
         audio.clip= Attacksound;
+        audio.Play();
+    }
+    public void SoundFootStep()
+    {
+        audio.clip= Footstepsound;
         audio.Play();
     }
 }

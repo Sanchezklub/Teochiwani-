@@ -22,8 +22,7 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     public AudioClip GettingHurt;
     public AudioClip Attacksound;
 
-    public float MaxHealth;
-    public float CurrentHealth;
+
     public float damage;
     public float speed;
     public float StartFollowDist;

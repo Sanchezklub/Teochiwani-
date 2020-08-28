@@ -60,7 +60,7 @@ public void dmg()
 
         hitEnemies?.GetComponent<Health>()?.TakeDamage(brain.AttackDamage);
         Debug.Log("!jd");
-        brain.ataksound.Play(0);
+        //brain.ataksound.Play(0);
     }
 void FaceTowardsPlayer()
     {

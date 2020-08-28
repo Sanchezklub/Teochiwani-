@@ -5,22 +5,32 @@ using UnityEngine.Events;
 
 public class TigerBrain : BaseBrain<TigerBrain>
 {
-    public float AttackRange;
-    public Transform AttackPoint;
-    public Transform raycastTransform;
-    [SerializeField] public LayerMask WhatIsGround;
-    public LayerMask PlayerLayer;
     public bool FacingRight;
-    public float AttackDamage;
+
+    public float JD;
     public float speed;
+    public float AttackRange;
+    public float ChannellTime;
+    public float AttackDamage;
     public float StartFollowDist;
     public float StopAttackDist;
+
+    public Transform AttackPoint;
+    public Transform raycastTransform;
+
+    public LayerMask PlayerLayer;
+    [SerializeField] public LayerMask WhatIsGround;
+
     public Animator enemyAnimator;
-    public float ChannellTime;
+
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
-    public float JD;
-    public AudioSource ataksound;
+
+    public AudioSource audio;
+    public AudioClip Hurtsound;
+    public AudioClip Deathsound;
+    public AudioClip Attacksound;
+
     private void Start()
     {
         StartPatrol();
@@ -69,6 +79,22 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public void ActionLeaveFightState()
     {
         LeaveFightState?.Invoke();
+    }
+    public void SoundDeath()
+    {
+        audio.clip= Deathsound;
+        audio.Play();
+    }
+    public void SoundHurt()
+    {
+        // nie ma animacji otrzymywania obrazen wykorzystuje jako dzwiek w stacie chanellingu 
+        audio.clip= Hurtsound;
+        audio.Play();
+    }
+    public void SoundAttack()
+    {
+        audio.clip= Attacksound;
+        audio.Play();
     }
 }
 

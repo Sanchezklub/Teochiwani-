@@ -14,7 +14,7 @@ public class SpawnObject : MonoBehaviour
         {
             if(objects[rand] != null)
             {
-                GameObject obj = Instantiate(objects[rand], transform.position, Quaternion.identity);
+                GameObject obj = Instantiate(objects[rand], transform.position, Quaternion.identity,transform);
                 obj.transform.parent = this.gameObject.transform;
             }
 

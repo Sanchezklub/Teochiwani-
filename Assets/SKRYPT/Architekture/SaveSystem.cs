@@ -70,10 +70,13 @@ public class SaveSystem : MonoBehaviour
                     LoadEnemies(saveContainer);
                     //LoadWeapons(saveContainer);
                     LoadItems(saveContainer);
-                    LoadStats(saveContainer);
+                    LoadGlobalStats(saveContainer);
+                    LoadRoundStats(saveContainer);
+                    LoadOldPlayerData(saveContainer);
                     LoadEnvironment(saveContainer);
                     LoadRooms(saveContainer);
                     LoadPlayer(saveContainer);
+
                 }
                 stream.Close();
                 return 0;
@@ -208,16 +211,37 @@ public class SaveSystem : MonoBehaviour
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }
 
-    public void LoadStats(SaveContainer LoadedSaveContainer)
+    public void LoadGlobalStats(SaveContainer LoadedSaveContainer)
     {
         GlobalStatistics.instance.enemiesKilled = LoadedSaveContainer.globalStatistics.enemiesKilled;
         GlobalStatistics.instance.timePassed = LoadedSaveContainer.globalStatistics.timePassed;
-        //RoundStatistics.instance.enemiesKilled = LoadedSaveContainer.statsData.roundData.data.enemiesKilled;
-        //RoundStatistics.instance.damageTaken = LoadedSaveContainer.statsData.roundData.data.damageTaken;
+        GlobalStatistics.instance.bleedDamageDealt = LoadedSaveContainer.globalStatistics.bleedDamageDealt;
+        GlobalStatistics.instance.doubleKills = LoadedSaveContainer.globalStatistics.doubleKills;
+        GlobalStatistics.instance.fireDamageDealt = LoadedSaveContainer.globalStatistics.fireDamageDealt;
+        GlobalStatistics.instance.playerDeaths = LoadedSaveContainer.globalStatistics.playerDeaths;
+        GlobalStatistics.instance.poisonDamageDealt = LoadedSaveContainer.globalStatistics.poisonDamageDealt;
+
+
     
         //GlobalStatistics.instance.enemiesKilled = LoadedSaveContainer.globalStatsData.enemiesKilled;
         //GlobalStatistics.instance.timePassed = LoadedSaveContainer.globalStatsData.timePassed;
 
+    }
+
+    public void LoadRoundStats(SaveContainer LoadedSaveContainer)
+    {
+        RoundStatistics.instance.enemiesKilled = LoadedSaveContainer.roundStatistics.enemiesKilled;
+        RoundStatistics.instance.damageTaken = LoadedSaveContainer.roundStatistics.damageTaken;
+    }
+
+    public void LoadOldPlayerData(SaveContainer LoadedSaveContainer)
+    {
+        if (LoadedSaveContainer.oldPlayerData != null)
+        {
+            saveContainer.oldPlayerData = LoadedSaveContainer.oldPlayerData;
+            //Debug.LogFormat("Maxhealth value in oldPlayerData was {0}", LoadedSaveContainer.oldPlayerData.maxhealth);
+
+        }
     }
 
     [ContextMenu("Test")]
@@ -234,8 +258,48 @@ public class SaveSystem : MonoBehaviour
         saveContainer.roundStatistics = new RoundStatisticsDataScript(RoundStatistics.instance);
         //saveContainer.statisticsData.roundData.SaveStatistics();
 
-
         SaveGame();
+    }
+
+    public void SaveOldPlayerData()
+    {
+        saveContainer.oldPlayerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
+    }
+
+    public void LoadPersistentData()
+    {
+        GameController.instance.DataStorage.PlayerInfo.ItemIDs.Clear();
+        string path = Application.persistentDataPath + "/player.fun";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            string message = formatter.Deserialize(stream) as string;
+
+            Debug.Log(message);
+            PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
+            saveContainer = JsonUtility.FromJson<SaveContainer>(message);
+            Debug.Log(saveContainer);
+            if (SpawnStuff == true)
+            {
+                LoadGlobalStats(saveContainer);
+                LoadOldPlayerData(saveContainer);
+                //jeszcze ładowanie odblokowanych itemków jak będzie
+
+            }
+            stream.Close();
+
+
+            //return null;
+            //return data;
+        }
+        else
+        {
+            Debug.Log("NoData");
+            //return null;
+        }
     }
 
     private void OnApplicationQuit()

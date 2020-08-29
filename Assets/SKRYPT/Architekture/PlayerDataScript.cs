@@ -19,6 +19,9 @@ public class PlayerDataScript
     public int currentweaponModID;
     public List<int> ItemIDs;
 
+
+    public int potionLoads;
+    public int level;
     public Vector3 testVector;
 
     public bool CanLoad;
@@ -35,6 +38,8 @@ public class PlayerDataScript
         currentweaponModID = PlayerInfo.currentweaponModID;
         ItemIDs = PlayerInfo.ItemIDs;
         PlayerPosition = PlayerInfo.playerPosition;
+        potionLoads = PlayerInfo.potionLoads;
+        level = PlayerInfo.level;
         //position_x = PlayerInfo.playerPosition.x;
         //position_y = PlayerInfo.playerPosition.y;
         //testVector = new Vector3(12f, 23, 2);

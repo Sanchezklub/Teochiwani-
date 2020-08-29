@@ -6,6 +6,7 @@ using UnityEngine;
 public class SaveContainer
 {
     public PlayerDataScript playerData;
+    public PlayerDataScript oldPlayerData;
     public LevelData levelData;
     public ItemsData itemsData;
     public GlobalStatisticsDataScript globalStatistics;

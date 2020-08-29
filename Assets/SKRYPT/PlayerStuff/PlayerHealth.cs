@@ -64,6 +64,7 @@ public class PlayerHealth : Health
         //File.Delete( Application.persistentDataPath+"/player.fun");
         deleter.Delete();
         GameController.instance.DataStorage.PlayerInfo.IsAlive = false;
+        SaveSystem.Instance.SaveOldPlayerData();
         SaveSystem.Instance.FullySaveGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //MainMenu.SetActive(true);

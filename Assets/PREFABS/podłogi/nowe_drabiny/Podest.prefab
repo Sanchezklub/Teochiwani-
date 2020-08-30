@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8919571790592684459}
   - component: {fileID: 8919571790592684458}
+  - component: {fileID: -8341436281867670896}
   m_Layer: 0
   m_Name: Podest
   m_TagString: Untagged
@@ -38,9 +39,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8919571790592684461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ed767fd6874c294397f8421c5dcd047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 4288940308484471035, guid: d7a1bab9685c9864781b87c54a033824, type: 3}
+--- !u!114 &-8341436281867670896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919571790592684461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e028eac1d1eed428a9a12ed479e64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objects:

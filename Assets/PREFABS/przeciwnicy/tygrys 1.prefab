@@ -507,26 +507,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5723ef98d77349c40ab9f23cc48b2f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FacingRight: 1
+  JD: 10
+  speed: 5
   AttackRange: 5
+  ChannellTime: 1.817
+  AttackDamage: 5
+  StartFollowDist: 20
+  StopAttackDist: 30
   AttackPoint: {fileID: 4663913937218615991}
   raycastTransform: {fileID: 4065059585719221684}
-  WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2304
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 512
-  FacingRight: 1
-  AttackDamage: 5
-  speed: 5
-  StartFollowDist: 20
-  StopAttackDist: 30
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 2304
   enemyAnimator: {fileID: 7420580741950166706}
-  ChannellTime: 1.817
-  JD: 10
   audio: {fileID: 1087366120027983406}
-  Deathsound: {fileID: 8300000, guid: f013a36cfa8814845b9705ab16bfbbe9, type: 3}
   Hurtsound: {fileID: 8300000, guid: 02e9af3de5bd76641b263955648e90dd, type: 3}
+  Deathsound: {fileID: 8300000, guid: f013a36cfa8814845b9705ab16bfbbe9, type: 3}
   Attacksound: {fileID: 8300000, guid: bd9b7b7ab19f4d246b324fb5c3cce1ab, type: 3}
 --- !u!61 &7579393732222685618
 BoxCollider2D:
@@ -611,7 +611,7 @@ MonoBehaviour:
   FloatingText: 1
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  id: 7
+  id: 9
   EffectParticle:
   - {fileID: 9046691337149576305, guid: a74c433532454fa4287b4e1e6389c430, type: 3}
   - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}

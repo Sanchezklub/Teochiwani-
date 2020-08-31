@@ -28,11 +28,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1881922797260011932}
-  - {fileID: 1875689613529046657}
+  - {fileID: 1110792497507713651}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4291359561915011211
+--- !u!1001 &3377808472744627321
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -104,35 +104,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2416798081675841035, guid: 6ef2927e70bd56343accd0e9590c08d9,
-        type: 3}
-      propertyPath: objects.Array.data[0]
-      value: 
-      objectReference: {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c,
-        type: 3}
-    - target: {fileID: 2416798081675841035, guid: 6ef2927e70bd56343accd0e9590c08d9,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2416798081675841036, guid: 6ef2927e70bd56343accd0e9590c08d9,
         type: 3}
       propertyPath: m_Name
       value: Drabina 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7090342020837975445, guid: 6ef2927e70bd56343accd0e9590c08d9,
-        type: 3}
-      propertyPath: objects.Array.data[0]
-      value: 
-      objectReference: {fileID: 6259367464087287503, guid: 0202a9d3027ed8a49bc3e4071329172c,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef2927e70bd56343accd0e9590c08d9, type: 3}
---- !u!4 &1875689613529046657 stripped
+--- !u!4 &1110792497507713651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2416798081675841034, guid: 6ef2927e70bd56343accd0e9590c08d9,
     type: 3}
-  m_PrefabInstance: {fileID: 4291359561915011211}
+  m_PrefabInstance: {fileID: 3377808472744627321}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7049612917904984119
 PrefabInstance:

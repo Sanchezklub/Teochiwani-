@@ -575,25 +575,25 @@ public class SpawnBlock : MonoBehaviour
              return;
          }
         // grzes 3
-        else if(Hit[2]==false  && Hit[8]==false && Hit[1]==false && Hit[3]==false && Hit[5]==true  && Hit[7]==false )
+        else if(Hit[1]==false && Hit[3]==false && Hit[5]==true  && Hit[7]==false )
          {
              spawnRotation = Quaternion.Euler(0,0,0);
              grzes3 = true;
              return;
          }
-        else if(Hit[2]==false  && Hit[4]==false  && Hit[1]==false && Hit[3]==false && Hit[5]==false && Hit[7]==true )
+        else if(Hit[1]==false && Hit[3]==false && Hit[5]==false && Hit[7]==true )
           {
              spawnRotation = Quaternion.Euler(0,0,270);
              grzes3 = true;
              return;
          }
-        else if( Hit[4]==false && Hit[6]==false  && Hit[1]==true && Hit[3]==false && Hit[5]==false && Hit[7]==false )
+        else if(  Hit[1]==true && Hit[3]==false && Hit[5]==false && Hit[7]==false )
           {
              spawnRotation = Quaternion.Euler(0,0,180);
              grzes3 = true;
              return;
          }
-        else if(Hit[6]==false && Hit[8]==false && Hit[1]==false && Hit[3]==true && Hit[5]==false && Hit[7]==false )
+        else if( Hit[1]==false && Hit[3]==true && Hit[5]==false && Hit[7]==false )
           {
              spawnRotation = Quaternion.Euler(0,0,90);
              grzes3 = true;

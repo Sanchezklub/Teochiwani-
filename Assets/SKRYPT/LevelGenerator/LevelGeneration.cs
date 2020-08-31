@@ -697,6 +697,7 @@ public class LevelGeneration : MonoBehaviour
         Boss();
         KupieciPortal();
         
+        EventController.instance.levelEvents.CallOnChunkGenerated();
         EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);
     }
 }

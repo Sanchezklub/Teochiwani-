@@ -76,4 +76,17 @@ public class PlayerHealth : Health
         YouDiedScreen.SetActive(true);
     }
 
+    public void HurtSound()
+    {
+        int rand = Random.Range(0, 2);
+        if (rand == 1)
+        {
+            AudioManager.instance.Play("Hurt");
+        }
+        else
+        {
+            AudioManager.instance.Play("Hurt 2");
+        }
+    }
+
 }

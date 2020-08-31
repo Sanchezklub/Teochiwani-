@@ -12,8 +12,8 @@ public class Bow : BaseWeapon
         Debug.Log("Bow :: Attack() - Player attacked with bow");
         GameObject newArrow =Instantiate(bulletPrefab, AttackPoint.position, AttackPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        AudioManager.instance.Play("Bow");
     }
-
   
     
 }

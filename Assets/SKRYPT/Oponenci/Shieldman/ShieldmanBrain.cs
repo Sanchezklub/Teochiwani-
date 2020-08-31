@@ -78,17 +78,14 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     }
     public void SoundHurt()
     {
-        audio.clip= GettingHurt;
-        audio.Play();
+        AudioManager.instance.Play("Human Hurt 3");
     }
     public void SoundAttack()
     {
-        audio.clip= Attacksound;
-        audio.Play();
+        AudioManager.instance.Play("Sword");
     }
     public void SoundFootStep()
     {
-        audio.clip= Footstepsound;
-        audio.Play();
+        AudioManager.instance.Play("Footstep");
     }
 }

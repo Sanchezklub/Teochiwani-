@@ -12,6 +12,7 @@ public class RockGun : BaseWeapon
         controller.animator.SetBool("IsAttacking", false);
         controller.animator.SetBool("IsAttackingShoot", false);
         Debug.Log("RockGun :: Attack() - Player attacked with RockGun");
+        AudioManager.instance.Play("Rock Gun");
         GameObject newArrow =Instantiate(bulletPrefab, AttackPoint.position, AttackPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
     }

@@ -16,6 +16,7 @@ public class MieczTysiacaKrokow : BaseWeapon
             Effects(enemy);
 
         }
+        AudioManager.instance.Play("Sword");
     }
     public override void DropWeapon()
     {

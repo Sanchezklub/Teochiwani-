@@ -603,4 +603,9 @@ public class CharacterController2D : MonoBehaviour
 
         }
     }
+
+    public void FootstepSound()
+    {
+        AudioManager.instance.Play("Footstep 3");
+    }
 }

@@ -15,7 +15,7 @@ public class EnemyTracker : MonoBehaviour
 
     public void OnNewEnemy(EnemyHealth newEnemy)
     {
-        Debug.Log("NewEnemy");
+        //Debug.Log("NewEnemy");
         enemies.Add(newEnemy);
     }
 

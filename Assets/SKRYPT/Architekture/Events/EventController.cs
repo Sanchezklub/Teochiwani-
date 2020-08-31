@@ -125,7 +125,7 @@ public class EventController : MonoBehaviour
         public UnityAction<EnemyHealth> OnEnemyAppear;
         public void CallOnEnemyAppear(EnemyHealth enemy)
         {
-            Debug.Log("EnemyAppear");
+            //Debug.Log("EnemyAppear");
             OnEnemyAppearBasic?.Invoke();
             OnEnemyAppear?.Invoke(enemy);
         }
@@ -188,7 +188,7 @@ public class EventController : MonoBehaviour
         public UnityAction<EnviroId> OnEnviroAppear;
         public void CallOnEnviroAppear(EnviroId enviro)
         {
-            Debug.Log("EnviroAppear");
+            //Debug.Log("EnviroAppear");
             OnEnviroAppearBasic?.Invoke();
             OnEnviroAppear?.Invoke(enviro);
         }
@@ -209,7 +209,8 @@ public class EventController : MonoBehaviour
         public void CallOnLevelGenerated(int[,] layout)
         {
             OnLevelGeneratedBasic?.Invoke();
-            OnLevelGenerated?.Invoke(layout);            
+            OnLevelGenerated?.Invoke(layout);
+            Debug.Log("On level generated called");
         }
         public UnityAction OnChunkGeneratedBasic;
         public void CallOnChunkGenerated()

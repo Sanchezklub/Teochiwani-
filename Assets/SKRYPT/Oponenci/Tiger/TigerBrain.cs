@@ -82,19 +82,18 @@ public class TigerBrain : BaseBrain<TigerBrain>
     }
     public void SoundDeath()
     {
-        audio.clip= Deathsound;
-        audio.Play();
+        //audio.clip= Deathsound;
+        //audio.Play();
+        AudioManager.instance.Play("Tiger Die");
     }
     public void SoundHurt()
     {
         // nie ma animacji otrzymywania obrazen wykorzystuje jako dzwiek w stacie chanellingu 
-        audio.clip= Hurtsound;
-        audio.Play();
+        AudioManager.instance.Play("Tiger Hurt");
     }
     public void SoundAttack()
     {
-        audio.clip= Attacksound;
-        audio.Play();
+        AudioManager.instance.Play("Tiger Attack");
     }
 }
 

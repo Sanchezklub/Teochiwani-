@@ -15,6 +15,7 @@ public class woodensword : BaseWeapon
             Effects(enemy);
 
         }
+        AudioManager.instance.Play("Sword");
     }
 
      

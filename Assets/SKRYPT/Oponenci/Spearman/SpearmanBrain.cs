@@ -84,12 +84,15 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     }
     public void SoundHurt()
     {
-        audio.clip= GettingHurt;
-        audio.Play();
+        AudioManager.instance.Play("Human Damage 2");
     }
     public void SoundAttack()
     {
-        audio.clip= Attacksound;
-        audio.Play();
+        AudioManager.instance.Play("Spear");
+    }
+
+    public void SoundFootstep()
+    {
+        AudioManager.instance.Play("Footstep 2");
     }
 }

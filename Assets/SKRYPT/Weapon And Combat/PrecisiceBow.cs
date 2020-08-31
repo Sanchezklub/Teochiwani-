@@ -62,28 +62,30 @@ public class PrecisiceBow : BaseWeapon
         Debug.Log("Bow :: Attack() - Player attacked with bow");
         GameObject newArrow = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        AudioManager.instance.Play("Bow");
+
     }
 
-    
 
 
 
-   /* public static Vector3 Parabola(Vector3 start, Vector3 end, float height, float t)
-    {
-        Func<float, float> f = x => -4 * height * x * x + 4 * height * x;
 
-        var mid = Vector3.Lerp(start, end, t);
+    /* public static Vector3 Parabola(Vector3 start, Vector3 end, float height, float t)
+     {
+         Func<float, float> f = x => -4 * height * x * x + 4 * height * x;
 
-        return new Vector3(mid.x, f(t) + Mathf.Lerp(start.y, end.y, t), mid.z);
-    }
+         var mid = Vector3.Lerp(start, end, t);
 
-    public static Vector2 Parabola(Vector2 start, Vector2 end, float height, float t)
-    {
-        Func<float, float> f = x => -4 * height * x * x + 4 * height * x;
+         return new Vector3(mid.x, f(t) + Mathf.Lerp(start.y, end.y, t), mid.z);
+     }
 
-        var mid = Vector2.Lerp(start, end, t);
+     public static Vector2 Parabola(Vector2 start, Vector2 end, float height, float t)
+     {
+         Func<float, float> f = x => -4 * height * x * x + 4 * height * x;
 
-        return new Vector2(mid.x, f(t) + Mathf.Lerp(start.y, end.y, t));
-    }*/
+         var mid = Vector2.Lerp(start, end, t);
+
+         return new Vector2(mid.x, f(t) + Mathf.Lerp(start.y, end.y, t));
+     }*/
 
 }

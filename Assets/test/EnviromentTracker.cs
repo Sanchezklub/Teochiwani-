@@ -15,7 +15,7 @@ public class EnviromentTracker : MonoBehaviour
 
     public void OnNewEnviro(EnviroId newEnviro)
     {
-        Debug.Log("NewEnviro");
+        //Debug.Log("NewEnviro");
         enviros.Add(newEnviro);
     }
 

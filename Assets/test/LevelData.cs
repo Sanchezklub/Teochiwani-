@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.PlayerLoop;
 
 [System.Serializable]
 public class LevelData
@@ -85,7 +86,6 @@ public class LevelData
 
     public void SaveLayout(int[,] layout)
     {
-        Debug.Log("SavedLayout");
 
 
         roomRelations = layout;
@@ -98,7 +98,6 @@ public class LevelData
             }
         }
     }
-
 
     //Odpiąc się od eventu
 }

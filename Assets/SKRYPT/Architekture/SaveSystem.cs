@@ -34,7 +34,13 @@ public class SaveSystem : MonoBehaviour
     {
         saveContainer.levelData.Start();
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.LogFormat("roomRelations count was {0}", saveContainer.levelData.roomRelation.Count);
+        }
+    }
     public void SaveGame()
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -171,6 +177,7 @@ public class SaveSystem : MonoBehaviour
                 Instantiate(RoomPrefab, new Vector2(levelGen.StartingPosition.x + (RoomRelation.x-1) * levelGen.moveAmountx, levelGen.StartingPosition.y + (RoomRelation.y-1) * levelGen.moveAmounty), Quaternion.identity);
             }
         }
+        EventController.instance.levelEvents.CallOnChunkGenerated();
     }
 
     public void LoadPlayer(SaveContainer LoadedSaveContainer)

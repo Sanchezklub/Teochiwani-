@@ -46,6 +46,7 @@ public class Dwucieciwka : BaseWeapon
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
         GameObject newArrow1 = Instantiate(bulletPrefab, new Vector3(AttackPoint.position.x, AttackPoint.position.y+1, AttackPoint.position.z ), AttackPoint.rotation);
         newArrow1.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        AudioManager.instance.Play("Bow");
 
     }
 }

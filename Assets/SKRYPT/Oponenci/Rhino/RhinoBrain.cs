@@ -79,4 +79,9 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     {
         ChangeState(new RhinoStunState());
     }
+
+    public void RhinoFootstep()
+    {
+        AudioManager.instance.Play("Footstep Big");
+    }
 }

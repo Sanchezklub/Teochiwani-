@@ -25,8 +25,9 @@ public class KapiChargeState : BaseState<KapiBrain>
 
         brain.enemyAnimator.SetBool("isCharging", true);
         brain.enemyAnimator.SetBool("isIdle", false);
-        brain.SoundAttack();
-        //StartCharge();
+        //brain.SoundAttack();
+        AudioManager.instance.Play("Capybara Attack");
+        StartCharge();
     }
 
     public void StartCharge()

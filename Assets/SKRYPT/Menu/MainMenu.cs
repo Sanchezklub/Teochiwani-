@@ -22,4 +22,15 @@ public class MainMenu : MonoBehaviour
         //SaveController.LoadPlayerInfo();
     }
 
+    public void ButtonSound()
+    {
+        AudioManager.instance.Play("MMClick");
+    }
+
+    public void ChangeMusic()
+    {
+        AudioManager.instance.Stop("Menu Theme");
+        AudioManager.instance.Play("Theme");
+    }
+
 }

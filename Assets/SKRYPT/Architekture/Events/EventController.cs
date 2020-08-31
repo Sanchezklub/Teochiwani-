@@ -211,6 +211,13 @@ public class EventController : MonoBehaviour
             OnLevelGeneratedBasic?.Invoke();
             OnLevelGenerated?.Invoke(layout);            
         }
+
+        public UnityAction OnLevelEndedBasic;
+
+        public void CallOnLevelEnded()
+        {
+            OnLevelEndedBasic?.Invoke();
+        }
     }
     public class ItemEvents
     {

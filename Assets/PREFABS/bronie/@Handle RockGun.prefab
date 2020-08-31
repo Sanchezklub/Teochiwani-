@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3336079164306589669}
   - component: {fileID: 3336079164306589668}
   - component: {fileID: 3336079164306589675}
-  - component: {fileID: 3336079164306589674}
+  - component: {fileID: 1640245294840912736}
   m_Layer: 10
   m_Name: pistolet
   m_TagString: Untagged
@@ -117,9 +117,10 @@ MonoBehaviour:
     m_Bits: 16384
   AttackPoint: {fileID: 3336079164943607964}
   attackRange: 0
-  attackdamage: 15
+  attackdamage: 70
   trail: {fileID: 0}
   ModifierParticle: {fileID: 0}
+  currentModifier: {fileID: 0}
   EffectBleed: 0
   BleedDamage: 2
   BleedCount: 15
@@ -132,8 +133,9 @@ MonoBehaviour:
   PoisonDamage: 5
   PoisonCount: 2
   PoisonTimeBetween: 3
-  AttackSound: {fileID: 0}
-  audio: {fileID: 3336079164306589674}
+  SpriteRen: {fileID: 0}
+  AttackSound: {fileID: 8300000, guid: 12a87d97c460e9e478f08bc168c94223, type: 3}
+  audio: {fileID: 1640245294840912736}
   weaponSexType: 0
   AttackAnimationType: 5
   bulletPrefab: {fileID: 2666746294566624911, guid: 014f106948644374fbf76cb0a6c9ef64,
@@ -165,7 +167,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0
---- !u!82 &3336079164306589674
+--- !u!82 &1640245294840912736
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

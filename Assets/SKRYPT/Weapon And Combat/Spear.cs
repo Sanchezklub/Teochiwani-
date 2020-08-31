@@ -12,7 +12,7 @@ public class Spear : BaseWeapon
     public Rigidbody2D rb;
     public PolygonCollider2D pc;
 
-public Collider2D[] hitEnemies;
+    public Collider2D[] hitEnemies;
     public void Update()
     {
         if ( PickUped )

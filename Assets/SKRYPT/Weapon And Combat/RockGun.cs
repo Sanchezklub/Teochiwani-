@@ -9,6 +9,8 @@ public class RockGun : BaseWeapon
     public override void Attack(PlayerCombat controller)
     {
         controller.animator.SetBool("Reloaded", false);
+        controller.animator.SetBool("IsAttacking", false);
+        controller.animator.SetBool("IsAttackingShoot", false);
         Debug.Log("RockGun :: Attack() - Player attacked with RockGun");
         GameObject newArrow =Instantiate(bulletPrefab, AttackPoint.position, AttackPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;

@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class SplashController : MonoBehaviour
 {
-    public static SplashController instance;
+    //public static SplashController instance;
 
     public GameObject[] splats;
-    public ParticleSystem ps;
+    [SerializeField] private ParticleSystem ps;
     private int splatOrder;
     public GameObject BloodSplitter;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
-    }
+    //void Start()
+    //{
+    //    instance = this;
+    //}
 
     public void MakeSplat()
     {
-        var newSplat = Instantiate(splats[Random.Range(0, splats.Length)],transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-        Instantiate(ps,BloodSplitter.transform.position, Quaternion.identity);
+        if (ps != null)
+        {
+            var newSplat = Instantiate(splats[Random.Range(0, splats.Length)], transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+            Instantiate(ps, BloodSplitter.transform.position, Quaternion.identity);
+        }
+
     }
 }
 

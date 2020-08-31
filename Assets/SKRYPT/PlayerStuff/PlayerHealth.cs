@@ -19,7 +19,7 @@ public class PlayerHealth : Health
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         PlayerAnimator = GetComponent<Animator>();
-        splash = GetComponent<SplashController>();
+        //splash = GetComponent<SplashController>();
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class PlayerHealth : Health
             ShowFloatingText(damage);
         }
 
-        splash.MakeSplat();
+        splashController.MakeSplat();
 
         if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
         {

@@ -96,7 +96,7 @@ public class SpawnBlock : MonoBehaviour
 
 
 
-        if (Level==0) //// podziemie ///// 
+        if (Level==0|| Level==1) //// podziemie ///// 
         {
             if ( Magnitude==4)
             {

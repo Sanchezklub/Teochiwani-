@@ -24,7 +24,14 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         deleter.Delete();
-        GameController.instance.DataStorage.PlayerInfo.level = 2;
+        if( GameController.instance.DataStorage.PlayerInfo.karma > 25)
+        {
+            GameController.instance.DataStorage.PlayerInfo.level=2;
+        }
+        else 
+        {
+            GameController.instance.DataStorage.PlayerInfo.level=1;
+        }
         //tutaj dać rzeczy z karmą i obecnym poziomem żeby zdecydować jaką wartość przypisać GameController.instance.DataStorage.PlayerInfo.level
         levelGen.Create();
         player.transform.position = new Vector2(SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);

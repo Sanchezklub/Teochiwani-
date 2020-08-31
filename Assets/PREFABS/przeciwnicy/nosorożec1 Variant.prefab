@@ -293,11 +293,11 @@ MonoBehaviour:
     m_Bits: 65792
   ChargeDamage: 80
   StompDamage: 10
-  speed: 10
+  speed: 25
   StunTime: 3
   StompRange: 3
-  StompDist: 8
-  AggroDist: 15
+  StompDist: 15
+  AggroDist: 300
   VerStompKnockback: 300
   HorStompKnockback: 500
   FacingRight: 1
@@ -510,12 +510,12 @@ PrefabInstance:
     - target: {fileID: 6618115726441685841, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6618115726441685841, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7403533382044461936, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}

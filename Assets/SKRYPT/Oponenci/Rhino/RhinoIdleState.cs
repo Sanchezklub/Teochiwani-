@@ -14,7 +14,7 @@ public class RhinoIdleState : BaseState <RhinoBrain>
     public override void UpdateState()
     {
         float distance = Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition);
-        if (brain.AggroDist < distance)
+        if (brain.AggroDist > distance)
         {
             brain.StartCharge();
         }

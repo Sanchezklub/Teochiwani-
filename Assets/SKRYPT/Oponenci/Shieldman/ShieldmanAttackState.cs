@@ -23,6 +23,25 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
         brain.Attacking += Attack;
         brain.LeaveFightState += AttemptLeavingFightState;
 
+        PositionDifference = brain.transform.position.x - player.transform.position.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = true;
+        }
+
+        brain.sr.color = new Color(1, 0, 0 ,1);
     }
     public override void UpdateState()
     {
@@ -61,7 +80,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
 
     public void AttemptLeavingFightState()
     {
-        float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+        float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, player.transform.position));
         //Debug.Log("Attempted to leave FightState. Distance was:" + distance);
         if (distance > brain.StartFightDist)
         {

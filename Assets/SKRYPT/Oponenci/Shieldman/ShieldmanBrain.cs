@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
 {
+    public SpriteRenderer sr;
     public Collider2D Shield;
     public float AttackRange;
     public Transform AttackPoint;
@@ -37,7 +38,7 @@ public class ShieldmanBrain : BaseBrain<ShieldmanBrain>
     {
         UpdateChildState();
 
-       //Debug.Log(currentState + "Shieldman State is");
+        //Debug.Log(currentState + "Shieldman State is");
     }
 
     public override void ChangeState(BaseState<ShieldmanBrain> newState)

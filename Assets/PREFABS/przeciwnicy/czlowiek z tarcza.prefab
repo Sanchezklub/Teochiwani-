@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f087edae8eefd2a4cbd5690612d3e06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr: {fileID: 8347203953592195710}
   Shield: {fileID: 1786762979602902183}
   AttackRange: 1.5
   AttackPoint: {fileID: 1786762979332517581}
@@ -138,12 +139,12 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 4352
-  FacingRight: 0
+  FacingRight: 1
   damage: 13
   speed: 4
   StartFollowDist: 20
-  StopFollowDist: 20
-  StartFightDist: 11
+  StopFollowDist: 40
+  StartFightDist: 13
   enemyAnimator: {fileID: 1786762979926582748}
   audio: {fileID: 689228612594642103}
   GettingHurt: {fileID: 8300000, guid: 902c3b15245119c49993d58ef87eed04, type: 3}

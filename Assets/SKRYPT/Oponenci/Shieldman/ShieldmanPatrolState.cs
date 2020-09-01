@@ -24,8 +24,9 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         if (brain.FacingRight == false)
         {
-            brain.transform.Rotate(new Vector2(0f, 180f));
+            //brain.transform.Rotate(new Vector2(0f, 180f));
         }
+                brain.sr.color = new Color(0, 0, 1 ,1);
     }
 
     public void DamageTaken()
@@ -38,7 +39,7 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
     {
         base.UpdateState();
 
-        float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+        float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, player.transform.position));
 
         if (distance < brain.StartFollowDist)
         {

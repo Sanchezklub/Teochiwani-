@@ -20,8 +20,24 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
         player = GameObject.Find("Player");
         //controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-
-
+        PositionDifference = brain.transform.position.x - player.transform.position.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = true;
+        }
+                brain.sr.color = new Color(0, 0, 0 ,1);
     }
 
    // public void DamageTaken()
@@ -34,7 +50,7 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
     public override void UpdateState()
     {
         base.UpdateState();
-        float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+        float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, player.transform.position));
         if (distance < brain.StartFightDist)
         {
             brain.StartAttack();

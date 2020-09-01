@@ -162,10 +162,10 @@ public abstract class BaseWeapon : BaseItem
     {
         controller.animator.SetBool("Reloaded", true);
     }
-    private void OnDrawGizmos()
-    {
-        Handles.Label(transform.position, ModId.ToString());
-    }
+    //private void OnDrawGizmos()
+   // {
+      //  Handles.Label(transform.position, ModId.ToString());
+   // }
 
 
 }

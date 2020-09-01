@@ -38,10 +38,9 @@ public class Chest : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerInRange = false;
-            if(IsOpen==false)
-            {
+            
             UIHELP.SetActive(false);
-            }
+            
         }
     }
     private void Update()

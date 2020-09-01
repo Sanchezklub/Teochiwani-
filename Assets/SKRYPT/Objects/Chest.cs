@@ -13,6 +13,9 @@ public class Chest : MonoBehaviour
     public BoxCollider2D bc;
     private int rand;
     public GameObject UIHELP;
+    public GameObject Minimap;
+    
+    
     //private void Start()
     //{
         //objects = SaveSystem.Instance.saveContainer.itemsData.unlockedItems;
@@ -23,7 +26,10 @@ public class Chest : MonoBehaviour
         if(collision.tag == "Player")
         {
             PlayerInRange = true;
-            UIHELP.SetActive(true);
+            if(IsOpen==false)
+            {
+                UIHELP.SetActive(true);
+            }
         }
     }
 
@@ -32,7 +38,10 @@ public class Chest : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerInRange = false;
+            if(IsOpen==false)
+            {
             UIHELP.SetActive(false);
+            }
         }
     }
     private void Update()
@@ -44,6 +53,7 @@ public class Chest : MonoBehaviour
     }
     void Open()
     {
+        Minimap.SetActive(false);
         FindObjectOfType<AudioManager>().Play("ChestOpen");
         Debug.Log("Loot");
         IsOpen = true;
@@ -59,7 +69,6 @@ public class Chest : MonoBehaviour
         EventController.instance.enviromentEvents.CallOnEnviroDied(Enviroid);
         Enviroid.id = 3;
         EventController.instance.enviromentEvents.CallOnEnviroAppear(Enviroid);
-        
     }
     private void Spawn()
     {

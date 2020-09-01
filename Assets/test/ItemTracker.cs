@@ -15,7 +15,7 @@ public class ItemTracker : MonoBehaviour
 
     public void OnNewItem(BaseItem newItem)
     {
-        Debug.Log("NewItem");
+        //Debug.Log("NewItem");
         items.Add(newItem);
     }
 

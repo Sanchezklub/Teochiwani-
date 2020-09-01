@@ -8,18 +8,19 @@ public class LevelData
 {
     public int[,] roomRelations;
 
-    public List<RoomData> roomRelation;
+    public List<RoomData> roomData;
     public List<EnemyData> enemiesData;
     public List<EnviroData> enviromentData;
     public List<WeaponData> weaponData;
     public List<ItemData> itemData;
+    //public List<>
 
 
 
     public void Start()
     {
-        EventController.instance.levelEvents.OnLevelGenerated += SaveLayout;
-        int[,] layout = new int[7, 4];
+        //EventController.instance.levelEvents.OnLevelGenerated += SaveLayout;
+        //int[,] layout = new int[7, 4];
         //layout[0, 0] = 15;
         //layout[1, 1] = 20;
 
@@ -84,17 +85,30 @@ public class LevelData
     }
 
 
-    public void SaveLayout(int[,] layout)
+    /*public void SaveLayout(int[,] layout)
     {
 
 
         roomRelations = layout;
-        roomRelation = new List<RoomData>();
+        roomData = new List<RoomData>();
         for (int i = 0; i < 12; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                roomRelation.Add(new RoomData(i, j, layout[i, j]));
+                roomData.Add(new RoomData(i, j, layout[i, j]));
+            }
+        }
+    }*/
+
+    public void SaveRooms(List<RoomId> currentRooms)
+    {
+        roomData = new List<RoomData>();
+
+        foreach (RoomId room in currentRooms)
+        {
+            if (room != null)
+            {
+                roomData.Add(new RoomData(room.id, room.transform.position));
             }
         }
     }
@@ -105,16 +119,14 @@ public class LevelData
 [System.Serializable]
 public class RoomData
 {
-    public RoomData(int x, int y, int roomIndex)
+    public RoomData(int id, Vector3 position)
     {
-        this.x = x;
-        this.y = y;
-        this.roomIndex = roomIndex;
+        this.id = id;
+        this.position = position;
     }
 
-    public int x;
-    public int y;
-    public int roomIndex;
+    public int id;
+    public Vector3 position;
 }
 
 [System.Serializable]

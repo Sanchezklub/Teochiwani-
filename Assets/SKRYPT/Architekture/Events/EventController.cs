@@ -225,6 +225,15 @@ public class EventController : MonoBehaviour
         {
             OnLevelEndedBasic?.Invoke();
         }
+
+        public UnityAction OnRoomGeneratedBasic;
+        public UnityAction<RoomId> OnRoomGenerated;
+
+        public void CallOnRoomGenerated(RoomId id)
+        {
+            OnRoomGeneratedBasic?.Invoke();
+            OnRoomGenerated?.Invoke(id);
+        }
     }
     public class ItemEvents
     {
@@ -232,7 +241,7 @@ public class EventController : MonoBehaviour
         public UnityAction<BaseItem> OnItemAppear;
         public void CallOnItemAppear(BaseItem item)
         {
-            Debug.Log("ItemAppear");
+            //Debug.Log("ItemAppear");
             OnItemAppearBasic?.Invoke();
             OnItemAppear?.Invoke(item);
         }

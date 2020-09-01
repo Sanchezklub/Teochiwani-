@@ -8,7 +8,15 @@ public class ID_dictionary : MonoBehaviour
 
     public GameObject GetEnemyObjects(int id)
     {
-        return EnemyObjects[id];
+        if (id < EnemyObjects.Length && id >= 0)
+        {
+            return EnemyObjects[id];
+
+        }
+        else
+        {
+            return null;
+        }
 
     }
 
@@ -16,7 +24,15 @@ public class ID_dictionary : MonoBehaviour
 
     public GameObject GetWeaponObjects(int id)
     {
-        return WeaponObjects[id];
+        if (id < WeaponObjects.Length && id >= 0)
+        {
+            return WeaponObjects[id];
+        }
+        else
+        {
+            return null;
+        }
+        
 
     }
 
@@ -24,7 +40,16 @@ public class ID_dictionary : MonoBehaviour
 
     public GameObject GetItemObjects(int id)
     {
-        return ItemObjects[id];
+        if (id < ItemObjects.Length && id >= 0)
+        {
+            Debug.LogFormat("Id was {0}", id);
+            return ItemObjects[id];
+        }
+
+        else
+        {
+            return null;
+        }
 
     }
 
@@ -32,7 +57,29 @@ public class ID_dictionary : MonoBehaviour
 
     public GameObject GetEnviroObjects(int id)
     {
-        return EnviroObjects[id];
+        if (id < EnviroObjects.Length && id >= 0)
+        {
+            return EnviroObjects[id];
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+    public GameObject[] RoomObjects;
+
+    public GameObject GetRoomObjects(int id)
+    {
+        if (id < RoomObjects.Length && id >= 0)
+        {
+            return RoomObjects[id];
+        }
+        else
+        {
+            return null;
+        }
 
     }
 

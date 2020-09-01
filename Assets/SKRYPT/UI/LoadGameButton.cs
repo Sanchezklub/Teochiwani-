@@ -12,10 +12,12 @@ public class LoadGameButton : MonoBehaviour
     public void OnClick()
     {
         int temp = SaveSystem.Instance.LoadGame();
+        Debug.Log("save system 6");
         if (temp == 0)
         {
             //Deleter.Delete();
             InGameUI.SetActive(true);
+            Debug.Log("save system 7");
             Time.timeScale = 1;
             MainMenu.SetActive(false);
         }

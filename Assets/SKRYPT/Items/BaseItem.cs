@@ -34,7 +34,7 @@ public abstract class BaseItem : MonoBehaviour
      public virtual void Start()
     {
         //UIFlavourText = Find("FlavourText");
-        Debug.Log("Called On Item Appear " + name);
+        //Debug.Log("Called On Item Appear " + name);
         EventController.instance.itemEvents.CallOnItemAppear(this);
         UIFlavorText = GameObject.FindGameObjectWithTag("FlavorText")?.GetComponentInChildren<TextMeshProUGUI>(true);
         UIWeaponName = GameObject.FindGameObjectWithTag("WeaponName")?.GetComponentInChildren<TextMeshProUGUI>(true);

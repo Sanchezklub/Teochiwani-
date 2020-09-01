@@ -9,6 +9,7 @@ public class SaveSystem : MonoBehaviour
     public EnemyTracker enemyTracker;
     public ItemTracker itemTracker;
     public WeaponTracker weaponTracker;
+    public RoomTracker roomTracker;
     public ID_dictionary Dictionary;
 
     public LevelGeneration levelGen;
@@ -34,13 +35,6 @@ public class SaveSystem : MonoBehaviour
     {
         saveContainer.levelData.Start();
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.LogFormat("roomRelations count was {0}", saveContainer.levelData.roomRelation.Count);
-        }
-    }
     public void SaveGame()
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -52,6 +46,7 @@ public class SaveSystem : MonoBehaviour
         formatter.Serialize(stream, mess);
         stream.Close();
 
+        //Debug.LogFormat("Saved game at {0}. Stream was {1}", Time.time, stream.CanWrite);
     }
     public int LoadGame()
     {
@@ -81,10 +76,15 @@ public class SaveSystem : MonoBehaviour
                     LoadOldPlayerData(saveContainer);
                     LoadEnvironment(saveContainer);
                     LoadRooms(saveContainer);
+                    Debug.Log("save system 1");
                     LoadPlayer(saveContainer);
+                    Debug.Log("save system 2");
 
                 }
+                Debug.Log("save system 3");
                 stream.Close();
+                Debug.Log("save system 4");
+                //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
                 return 0;
 
             }
@@ -93,6 +93,7 @@ public class SaveSystem : MonoBehaviour
             {
                 Debug.Log("Could not load. Player was dead");
                 stream.Close();
+                //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
                 return 1;
             }
             
@@ -165,9 +166,9 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    public void LoadRooms(SaveContainer LoadedSaveContainer)
+ /*   public void LoadRooms(SaveContainer LoadedSaveContainer)
     {
-        foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomRelation)
+        foreach (RoomData RoomRelation in LoadedSaveContainer.levelData.roomData)
         {
             Debug.Log(levelGen.rooms.Length);
 
@@ -178,6 +179,20 @@ public class SaveSystem : MonoBehaviour
             }
         }
         EventController.instance.levelEvents.CallOnChunkGenerated();
+    }
+
+*/
+    public void LoadRooms(SaveContainer LoadedSaveContainer)
+    {
+        foreach (RoomData loadedRoom in LoadedSaveContainer.levelData.roomData)
+        {
+            GameObject RoomPrefab = Dictionary.GetRoomObjects(loadedRoom.id);
+            if (RoomPrefab != null)
+            {
+                GameObject room = Instantiate(RoomPrefab, loadedRoom.position, Quaternion.identity);
+                room.transform.parent = LoadedObjectHolder.transform;
+            }
+        }
     }
 
     public void LoadPlayer(SaveContainer LoadedSaveContainer)
@@ -192,19 +207,27 @@ public class SaveSystem : MonoBehaviour
         if (LoadedSaveContainer.playerData.currentweaponID < Dictionary.ItemObjects.Length)
         {
             GameObject CurrentWeapon = Dictionary.GetItemObjects(LoadedSaveContainer.playerData.currentweaponID);
-            GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
-            BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
-            if (weap != null)
+            if (CurrentWeapon != null)
             {
-                weap.GetUITexts();
-                weap.ModId = LoadedSaveContainer.playerData.currentweaponModID;
-                weap.Start();
-                player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+                GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
+                BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
+                if (weap != null)
+                {
+                    weap.GetUITexts();
+                    weap.ModId = LoadedSaveContainer.playerData.currentweaponModID;
+                    weap.Start();
+                    player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+                }
+                else
+                {
+                    Debug.Log("weap was null");
+                }
             }
             else
             {
                 Debug.Log("weap was null");
             }
+
         }
         else
         {
@@ -258,6 +281,7 @@ public class SaveSystem : MonoBehaviour
         //saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
         saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
+        saveContainer.levelData.SaveRooms(roomTracker.rooms);
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
         //Debug.LogFormat("Test 1:{0}", saveContainer.statisticsData.ToString());
         //Debug.LogFormat("Test 2:{0}", saveContainer.statisticsData.globalData.ToString());

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Chest : MonoBehaviour
 {
     public Sprite mysprite1;
@@ -12,7 +12,7 @@ public class Chest : MonoBehaviour
     public GameObject Particle;
     public BoxCollider2D bc;
     private int rand;
-
+    public GameObject UIHELP;
     //private void Start()
     //{
         //objects = SaveSystem.Instance.saveContainer.itemsData.unlockedItems;
@@ -23,6 +23,7 @@ public class Chest : MonoBehaviour
         if(collision.tag == "Player")
         {
             PlayerInRange = true;
+            UIHELP.SetActive(true);
         }
     }
 
@@ -31,6 +32,7 @@ public class Chest : MonoBehaviour
         if (collision.tag == "Player")
         {
             PlayerInRange = false;
+            UIHELP.SetActive(false);
         }
     }
     private void Update()

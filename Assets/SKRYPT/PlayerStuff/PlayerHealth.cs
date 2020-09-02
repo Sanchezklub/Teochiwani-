@@ -58,7 +58,10 @@ public class PlayerHealth : Health
         }
 
     }
-
+    public override void Heal(float heal)
+    {
+        
+    }
     protected override void Die()
     {
         PlayerAnimator.SetTrigger("Die");

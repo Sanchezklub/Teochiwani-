@@ -53,6 +53,10 @@ public class Health : MonoBehaviour
         StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
         }
     }
+    public virtual void Heal(float heal)
+    {
+
+    }
     
 
     IEnumerator PoisonDamage(float damage,  int TimeCount, float TimeBetweenHits)

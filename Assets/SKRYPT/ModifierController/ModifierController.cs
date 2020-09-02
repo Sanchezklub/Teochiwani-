@@ -12,6 +12,7 @@ public class ModifierController : MonoBehaviour
         {
             foreach (BaseModifier mod in item.modifiers)
             {
+                mod.info = GameController.instance.DataStorage.PlayerInfo;
                 mod.Init(RemoveModifier);
                 modifiers.Add(mod);
             }

@@ -7,6 +7,8 @@ public abstract class BaseModifier : ScriptableObject
 {
     public UnityAction<BaseModifier> OnModifierCompleted;
 
+    public PlayerInformation info;
+    
     public virtual void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         OnModifierCompleted += OnCompletedCallback;

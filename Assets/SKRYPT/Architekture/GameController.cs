@@ -14,4 +14,14 @@ public class GameController : MonoBehaviour
     {
         instance = this;
     }
+
+    private void Start()
+    {
+        EventController.instance.playerEvents.OnPlayerReceiveDamage += dataStorage.PlayerInfo.CallOnGetHurtAction;
+    }
+    private void Update()
+    {
+
+
+    }
 }

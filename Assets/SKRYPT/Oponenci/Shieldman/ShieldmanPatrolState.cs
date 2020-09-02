@@ -26,7 +26,7 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
         {
             //brain.transform.Rotate(new Vector2(0f, 180f));
         }
-                brain.sr.color = new Color(0, 0, 1 ,1);
+                //brain.sr.color = new Color(0, 0, 1 ,1);
     }
 
     public void DamageTaken()

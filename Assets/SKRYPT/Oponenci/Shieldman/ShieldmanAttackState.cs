@@ -41,7 +41,7 @@ public class ShieldmanAttackState : BaseState<ShieldmanBrain>
             brain.FacingRight = true;
         }
 
-        brain.sr.color = new Color(1, 0, 0 ,1);
+        //brain.sr.color = new Color(1, 0, 0 ,1);
     }
     public override void UpdateState()
     {

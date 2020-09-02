@@ -37,7 +37,7 @@ public class ShieldmanFollowState : BaseState<ShieldmanBrain>
             }
             brain.FacingRight = true;
         }
-                brain.sr.color = new Color(0, 0, 0 ,1);
+                //brain.sr.color = new Color(0, 0, 0 ,1);
     }
 
    // public void DamageTaken()

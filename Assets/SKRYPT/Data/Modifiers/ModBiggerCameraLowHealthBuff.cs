@@ -24,8 +24,11 @@ public class ModBiggerCameraLowHealthBuff : BaseModifier
 
     public void AssignEvents()
     {
-        EventController.instance.playerEvents.OnPlayerReceiveDamage += OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.GetHitAction += OnPlayerReceiveDamage;
+        info.DieAction += PlayerDied;
+
+        //EventController.instance.playerEvents.OnPlayerReceiveDamage += OnPlayerReceiveDamage;
+        //EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
     }
 
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
@@ -48,8 +51,10 @@ public class ModBiggerCameraLowHealthBuff : BaseModifier
     public override void Deinit()
     {
         camera.m_Lens.OrthographicSize = initialSize;
-        EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.GetHitAction += OnPlayerReceiveDamage;
+        info.DieAction += PlayerDied;
+        //EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
+        //EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
 
         base.Deinit();
     }

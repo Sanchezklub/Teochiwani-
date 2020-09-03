@@ -12,8 +12,8 @@ public class ModFlatCurrentHealthBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        GameController.instance.DataStorage.PlayerInfo.currenthealth += CurrentHealthBuff;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.currenthealth += CurrentHealthBuff;
+        info.DieAction += PlayerDied;
     }
 
     void PlayerDied()
@@ -23,8 +23,8 @@ public class ModFlatCurrentHealthBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.currenthealth -= CurrentHealthBuff;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.currenthealth -= CurrentHealthBuff;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

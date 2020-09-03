@@ -6,7 +6,7 @@ public class ModifierController : MonoBehaviour
 {
     public List<BaseModifier> modifiers;
 
-    public void OnItemPickup(BaseItem item)
+    public virtual void OnItemPickup(BaseItem item)
     {
         if (item.modifiers != null)
         {

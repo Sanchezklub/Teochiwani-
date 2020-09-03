@@ -12,9 +12,9 @@ public class ModFlatMaxHealthBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        GameController.instance.DataStorage.PlayerInfo.maxhealth += MaxHealthBuff;
+        info.maxhealth += MaxHealthBuff;
         EventController.instance.playerEvents.CallOnMaxhealthValueChange(MaxHealthBuff);
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.DieAction += PlayerDied;
     }
 
     void PlayerDied()
@@ -24,8 +24,8 @@ public class ModFlatMaxHealthBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.maxhealth -= MaxHealthBuff;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.maxhealth -= MaxHealthBuff;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

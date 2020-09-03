@@ -12,8 +12,8 @@ public class ModFlatSpeedBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        GameController.instance.DataStorage.PlayerInfo.speed += SpeedBuff;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.speed += SpeedBuff;
+        info.DieAction += PlayerDied;
     }
 
     void PlayerDied()
@@ -23,8 +23,8 @@ public class ModFlatSpeedBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.speed -= SpeedBuff;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.speed -= SpeedBuff;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

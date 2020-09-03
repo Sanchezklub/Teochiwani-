@@ -12,8 +12,8 @@ public class ModFlatDmgBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        GameController.instance.DataStorage.PlayerInfo.damage += DmgBuff;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.damage += DmgBuff;
+        info.DieAction+= PlayerDied;
     }
 
     void PlayerDied()
@@ -23,8 +23,8 @@ public class ModFlatDmgBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.damage -= DmgBuff;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.damage -= DmgBuff;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

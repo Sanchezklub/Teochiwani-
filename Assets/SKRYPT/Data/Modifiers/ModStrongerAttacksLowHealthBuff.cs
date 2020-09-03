@@ -15,22 +15,22 @@ public class ModStrongerAttacksLowHealthBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        initialDmg = GameController.instance.DataStorage.PlayerInfo.damage;
+        initialDmg = info.damage;
         AssignEvents();
-        OnPlayerReceiveDamage(0, GameController.instance.DataStorage.PlayerInfo.currenthealth);
+        OnPlayerReceiveDamage(0, info.currenthealth);
     }
 
     public void AssignEvents()
     {
-        EventController.instance.playerEvents.OnPlayerReceiveDamage += OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.GetHitAction += OnPlayerReceiveDamage;
+        info.DieAction += PlayerDied;
     }
 
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
-        var maxhealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        var maxhealth = info.maxhealth;
         var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxDamagePercentage/100);
-        GameController.instance.DataStorage.PlayerInfo.damage = initialDmg + initialDmg*value;
+        info.damage = initialDmg + initialDmg*value;
     }
 
     public void PlayerDied()
@@ -45,9 +45,9 @@ public class ModStrongerAttacksLowHealthBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.damage = initialDmg;
-        EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.damage = initialDmg;
+        info.GetHitAction -= OnPlayerReceiveDamage;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

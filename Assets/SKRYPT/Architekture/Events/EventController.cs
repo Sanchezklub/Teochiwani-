@@ -8,6 +8,7 @@ public class EventController : MonoBehaviour
     public static EventController instance;
 
     public PlayerEvents playerEvents;
+    public EvilPlayerEvents evilPlayerEvents;
     public EnemyEvents enemyEvents;
     public LevelEvents levelEvents;
     public EnviromentEvents enviromentEvents;
@@ -18,6 +19,7 @@ public class EventController : MonoBehaviour
     {
         instance = this;
         playerEvents = new PlayerEvents();
+        evilPlayerEvents = new EvilPlayerEvents();
         enemyEvents = new EnemyEvents();
         levelEvents = new LevelEvents();
         enviromentEvents = new EnviromentEvents();
@@ -117,6 +119,64 @@ public class EventController : MonoBehaviour
         }
 
 
+    }
+
+    public class EvilPlayerEvents
+    {
+        public UnityAction OnEvilPlayerJumpedBasic;
+        public UnityAction<CharacterController2D> OnEvilPlayerJumped;
+        public void CallOnEvilPlayerJumped(CharacterController2D character)
+        {
+            OnEvilPlayerJumpedBasic?.Invoke();
+            OnEvilPlayerJumped?.Invoke(character);
+        }
+
+        public UnityAction OnEvilPlayerUseWeaponBasic;
+        public UnityAction<BaseWeapon> OnEvilPlayerUseWeapon;
+        public void CallOnEvilPlayerUseWeapon(BaseWeapon weapon)
+        {
+            OnEvilPlayerUseWeaponBasic?.Invoke();
+            OnEvilPlayerUseWeapon?.Invoke(weapon);
+        }
+
+        public UnityAction OnEvilPlayerDealDamageBasic;
+        public UnityAction<float> OnEvilPlayerDealDamage;
+        public void CallOnPlayerDealDamage(float damage)
+        {
+            OnEvilPlayerDealDamageBasic?.Invoke();
+            OnEvilPlayerDealDamage?.Invoke(damage);
+        }
+
+        public UnityAction OnEvilPlayerReceiveDamageBasic;
+        public UnityAction<float, float> OnEvilPlayerReceiveDamage;
+        public UnityAction<float, float, GameObject> OnEvilPlayerReceiveDamageWithAttacker;
+        public void CallOnEvilPlayerReceiveDamage(float damage, float healthLeft, GameObject attacker = null)
+        {
+            OnEvilPlayerReceiveDamageBasic?.Invoke();
+            OnEvilPlayerReceiveDamage?.Invoke(damage, healthLeft);
+            OnEvilPlayerReceiveDamageWithAttacker?.Invoke(damage, healthLeft, attacker);
+        }
+
+        public UnityAction OnEvilPlayerDie;
+        public void CallOnPlayerDie()
+        {
+            OnEvilPlayerDie?.Invoke();
+        }
+
+        public UnityAction<BaseItem> OnEvilItemPickup;
+        public void CallOnItemPickup(BaseItem item)
+        {
+            OnEvilItemPickup?.Invoke(item);
+        }
+
+        public UnityAction OnEvilWeaponPickupBasic;
+        public UnityAction<BaseWeapon, BaseWeapon> OnEvilWeaponPickup;
+
+        public void CallOnWeaponPickup(BaseWeapon OldWeapon, BaseWeapon NewWeapon)
+        {
+            OnEvilWeaponPickupBasic?.Invoke();
+            OnEvilWeaponPickup?.Invoke(OldWeapon, NewWeapon);
+        }
     }
 
     public class EnemyEvents

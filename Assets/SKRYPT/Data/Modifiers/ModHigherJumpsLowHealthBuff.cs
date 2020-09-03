@@ -15,22 +15,22 @@ public class ModHigherJumpsLowHealthBuff : BaseModifier
     public override void Init(UnityAction<BaseModifier> OnCompletedCallback = null)
     {
         base.Init(OnCompletedCallback);
-        initialJumpforce = GameController.instance.DataStorage.PlayerInfo.jumpforce;
+        initialJumpforce = info.jumpforce;
         AssignEvents();
         OnPlayerReceiveDamage(0, GameController.instance.DataStorage.PlayerInfo.currenthealth);
     }
 
     public void AssignEvents()
     {
-        EventController.instance.playerEvents.OnPlayerReceiveDamage += OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie += PlayerDied;
+        info.GetHitAction += OnPlayerReceiveDamage;
+        info.DieAction += PlayerDied;
     }
 
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
-        var maxhealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        var maxhealth = info.maxhealth;
         var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxJumpforcePercentage/100);
-        GameController.instance.DataStorage.PlayerInfo.jumpforce = initialJumpforce + initialJumpforce * value;
+        info.jumpforce = initialJumpforce + initialJumpforce * value;
     }
 
     public void PlayerDied()
@@ -45,9 +45,9 @@ public class ModHigherJumpsLowHealthBuff : BaseModifier
 
     public override void Deinit()
     {
-        GameController.instance.DataStorage.PlayerInfo.speed = initialJumpforce;
-        EventController.instance.playerEvents.OnPlayerReceiveDamage -= OnPlayerReceiveDamage;
-        EventController.instance.playerEvents.OnPlayerDie -= PlayerDied;
+        info.speed = initialJumpforce;
+        info.GetHitAction -= OnPlayerReceiveDamage;
+        info.DieAction -= PlayerDied;
 
         base.Deinit();
     }

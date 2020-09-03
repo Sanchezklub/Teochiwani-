@@ -17,7 +17,7 @@ public class CocoaCounterScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnCocoaPickupBasic()
     {
         text.SetText(GameController.instance.DataStorage.PlayerInfo.cocoa.ToString());
     }

@@ -8,7 +8,7 @@ public class ItemController : MonoBehaviour
     public List<int> unlockedItems;
 
     public List<BaseCondition> conditions;
-
+    public GameObject UnlockItem;
     private void Start()
     {
 
@@ -79,6 +79,7 @@ public class ItemController : MonoBehaviour
                     return;
                 
                 SaveSystem.Instance.saveContainer.itemsData.AddItem(cond.itemToUnlockid);
+                UnlockItem.GetComponent<UnlockedItem>().ShowItem(cond.itemToUnlockid);
             }
         }
     }

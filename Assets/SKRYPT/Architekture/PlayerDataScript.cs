@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerDataScript
 {
+    public float attackspeed;
     public float maxhealth;
     public float currenthealth;
     public int cocoa;
@@ -28,6 +29,7 @@ public class PlayerDataScript
 
     public PlayerDataScript(PlayerInformation PlayerInfo)
     {
+        attackspeed = PlayerInfo.attackspeed;
         maxhealth = PlayerInfo.maxhealth;
         currenthealth = PlayerInfo.currenthealth;
         cocoa = PlayerInfo.cocoa;

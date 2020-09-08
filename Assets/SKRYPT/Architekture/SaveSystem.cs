@@ -269,6 +269,11 @@ public class SaveSystem : MonoBehaviour
         if (LoadedSaveContainer.oldPlayerData != null)
         {
             saveContainer.oldPlayerData = LoadedSaveContainer.oldPlayerData;
+            GameController.instance.DataStorage.EvilPlayerInfo.currentweaponID = LoadedSaveContainer.oldPlayerData.currentweaponID;
+            GameController.instance.DataStorage.EvilPlayerInfo.currentweaponModID = LoadedSaveContainer.oldPlayerData.currentweaponModID;
+            GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs = LoadedSaveContainer.oldPlayerData.ItemIDs;
+            GameController.instance.DataStorage.EvilPlayerInfo.IsAlive = false;
+
             //Debug.LogFormat("Maxhealth value in oldPlayerData was {0}", LoadedSaveContainer.oldPlayerData.maxhealth);
 
         }

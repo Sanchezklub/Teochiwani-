@@ -591,7 +591,7 @@ PrefabInstance:
     - target: {fileID: 1383608395193458083, guid: 4ea86bb7005b37947a301168afd4047a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7588016863265694737, guid: 4ea86bb7005b37947a301168afd4047a,
         type: 3}
@@ -3064,6 +3064,25 @@ MonoBehaviour:
   speed: 0
   jumpheight: 0
   weapon: {fileID: 0}
+--- !u!114 &779225548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779225545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42347c35bf562c84ca2bae7e288d338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 0}
+  holdPosition: {fileID: 0}
+  animator: {fileID: 0}
+  OponentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  nextAttackTime: 0
 --- !u!114 &794285349 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5140360758903153666, guid: dca48273027cd6347915913f973af221,

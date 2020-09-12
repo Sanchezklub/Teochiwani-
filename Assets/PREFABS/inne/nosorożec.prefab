@@ -786,7 +786,13 @@ MonoBehaviour:
   FloatingText: 1
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
+  id: 0
+  EffectParticle: []
+  splashController: {fileID: 0}
   enemyAnimator: {fileID: 0}
+  IsHuman: 0
+  IsBoss: 1
+  Drops: []
 --- !u!114 &2188044821004676088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,6 +819,7 @@ MonoBehaviour:
   StunTime: 3
   StompRange: 6
   StompDist: 12
+  AggroDist: 0
   VerStompKnockback: 300
   HorStompKnockback: 10000
   FacingRight: 1

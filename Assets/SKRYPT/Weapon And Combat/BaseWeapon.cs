@@ -14,6 +14,10 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public float attackRange;
     [SerializeField] public float attackdamage;
     [SerializeField] public TrailRenderer trail;
+
+    //public float damage;
+    public PlayerInformation info;
+
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
     [SerializeField] public ParticleSystem ModifierParticle;
     [SerializeField] private BaseWeaponModifier currentModifier;

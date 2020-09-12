@@ -11,7 +11,7 @@ public class Axe : BaseWeapon
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Health>()?.TakeDamage(attackdamage+GameController.instance.DataStorage.PlayerInfo.damage);
+            enemy.GetComponent<Health>()?.TakeDamage(attackdamage+info.damage);
             Effects(enemy);
         }
     }

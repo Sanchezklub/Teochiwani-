@@ -49,6 +49,15 @@ public abstract class BaseItem : MonoBehaviour
         coll.enabled = false;
         Destroy(gameObject);
     }
+    public virtual void EvilPickupItem()
+    {
+        //MeteorMod
+        EventController.instance.evilPlayerEvents.OnEvilItemPickup(this);
+        GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs.Add(id);
+        //ShowFloatingText();
+        coll.enabled = false;
+        Destroy(gameObject);
+    }
 
     /*
     public virtual void ShowFloatingText(string flavourtext)
@@ -80,11 +89,11 @@ public abstract class BaseItem : MonoBehaviour
         PickUped = false;
     }
     
-
+    //mogą być problemy z evil playerem;
     public virtual void PickupWepaon()
     {
         coll.enabled = false;
-        ShowFloatingText();
+        //ShowFloatingText();
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
         Debug.Log("Called On Item Die " + name);

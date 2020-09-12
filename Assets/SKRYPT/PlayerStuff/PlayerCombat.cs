@@ -17,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
     public BaseWeapon currentWeapon;
     public LayerMask ItemMask;
     public LayerMask ItemMasks;
+    public LayerMask EnemyLayers;
+
     public Transform holdPosition;
     public Animator animator;
     public float startingspeed;
@@ -105,11 +107,14 @@ public class PlayerCombat : MonoBehaviour
             currentWeapon?.DropWeapon();
             GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
             GameController.instance.DataStorage.PlayerInfo.currentweaponModID = newWeapon.ModId;
-        currentWeapon = newWeapon;
+            currentWeapon = newWeapon;
             currentWeapon?.PickupWepaon();
             currentWeapon.Handle.transform.parent = holdPosition;
             currentWeapon.Handle.transform.localPosition = Vector3.zero;
             currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);
+            currentWeapon.info = GameController.instance.DataStorage.PlayerInfo;
+            currentWeapon.enemyLayers = EnemyLayers;
+            currentWeapon.ShowFloatingText();
             currentWeapon.StopEmitting();
      
     }

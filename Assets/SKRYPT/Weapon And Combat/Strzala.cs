@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Strzala : MonoBehaviour
 {
@@ -32,15 +33,17 @@ public class Strzala : MonoBehaviour
     public Collider2D[] hitEnemies;
     public GameObject Tip;
     public ParticleSystem[] Effect;
-    
+
+    public BaseWeapon weapon;
+
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         pc=GetComponent<PolygonCollider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        var weapon = player.GetComponentInChildren<BaseWeapon>();
+        //var weapon = player.GetComponentInChildren<BaseWeapon>();
         damage = weapon.attackdamage;
-        damage+= GameController.instance.DataStorage.PlayerInfo.damage;
+        damage+= weapon.info.damage;
 
         Poison = weapon.EffectPoison;
         Fire = weapon.EffectFire;
@@ -61,7 +64,8 @@ public class Strzala : MonoBehaviour
         if(Poison) {Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);}
         if(Fire)    {Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);}
         if(Bleed)   {Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);}
-        
+
+        Enemy = weapon.enemyLayers;
     }
 
     // Update is called once per frame

@@ -276,7 +276,8 @@ public class SpawnBlock : MonoBehaviour
         }
         else  if ( Level ==2 ) // bogowie
         {
-            if ( Magnitude == 1)
+            
+            if ( Magnitude == 1) /// niebo
             {
                 if ( corner == true)
                 {
@@ -286,13 +287,12 @@ public class SpawnBlock : MonoBehaviour
                         if(SkyCorner[rand] != null)
                         {
                         Instantiate(SkyCorner[rand], transform.position, spawnRotation,transform);
-                        
                         }
                     }
                 }
                 else if ( klocek == true)
                 {
-                    Instantiate(KlocekNiebo, transform.position, spawnRotation);
+                    Instantiate(KlocekNiebo, transform.position, spawnRotation,transform);
                 }
                 else 
                 {
@@ -306,6 +306,7 @@ public class SpawnBlock : MonoBehaviour
                     }
                 }
             }
+            
             else 
             {
                 int rand = Random.Range(0, Gods.Length);
@@ -694,7 +695,7 @@ public class SpawnBlock : MonoBehaviour
 
     }
 
-    [ContextMenu("Reset")]
+   // [ContextMenu("Reset")]
     public void Restart()
     {
         Start();

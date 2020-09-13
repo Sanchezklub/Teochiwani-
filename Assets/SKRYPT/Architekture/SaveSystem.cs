@@ -25,6 +25,8 @@ public class SaveSystem : MonoBehaviour
     public GameObject LoadedObjectHolder;
     public GameObject MainMenu;
 
+    public GameObject EvilPlayer;
+
     private void Awake()
     {
         Instance = this;
@@ -272,10 +274,29 @@ public class SaveSystem : MonoBehaviour
             GameController.instance.DataStorage.EvilPlayerInfo.currentweaponID = LoadedSaveContainer.oldPlayerData.currentweaponID;
             GameController.instance.DataStorage.EvilPlayerInfo.currentweaponModID = LoadedSaveContainer.oldPlayerData.currentweaponModID;
             GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs = LoadedSaveContainer.oldPlayerData.ItemIDs;
+            GameController.instance.DataStorage.EvilPlayerInfo.level = LoadedSaveContainer.oldPlayerData.level;
             GameController.instance.DataStorage.EvilPlayerInfo.IsAlive = false;
-
+            EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
             //Debug.LogFormat("Maxhealth value in oldPlayerData was {0}", LoadedSaveContainer.oldPlayerData.maxhealth);
 
+        }
+    }
+
+    public void LoadEvilPlayer()
+    {
+        if (saveContainer.oldPlayerData.level == GameController.instance.DataStorage.PlayerInfo.level)
+        {
+            GameObject weap = Instantiate(Dictionary.GetItemObjects(GameController.instance.DataStorage.EvilPlayerInfo.currentweaponID),transform.position, Quaternion.identity);
+            BaseWeapon weapScript = weap.GetComponent<BaseWeapon>();
+            weapScript.ModId = GameController.instance.DataStorage.EvilPlayerInfo.currentweaponModID;
+            EvilPlayer.GetComponent<EvilPlayerCombat>().ChangeWeapon(weapScript);
+
+            foreach (int id in GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs)
+            {
+                GameObject item = Instantiate(Dictionary.GetItemObjects(id), transform.position, Quaternion.identity);
+                item.GetComponent<BaseItem>().EvilPickupItem();
+            }
+            EvilPlayer.GetComponent<Rigidbody2D>().simulated = true;
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReturnPlayerDataToDefaults : MonoBehaviour
 {
+    public PlayerInformation[] infos;
     public float maxhealth;
     public float currenthealth;
     public float damage;
@@ -25,27 +26,31 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
     public void ManuallyResetPlayerData()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        GameController.instance.DataStorage.PlayerInfo.maxhealth = maxhealth;
-        GameController.instance.DataStorage.PlayerInfo.currenthealth = maxhealth;
-        GameController.instance.DataStorage.PlayerInfo.IsAlive = true;
-        GameController.instance.DataStorage.PlayerInfo.damage = damage;
-        GameController.instance.DataStorage.PlayerInfo.speed = speed;
-        GameController.instance.DataStorage.PlayerInfo.crouchspeed = crouchspeed;
-        GameController.instance.DataStorage.PlayerInfo.jumpforce = jumpforce;
-        GameController.instance.DataStorage.PlayerInfo.attackspeed = attackspeed;
-        GameController.instance.DataStorage.PlayerInfo.potionLoads = potionLoads;
         if (Player != null)
         {
             Player.transform.position = new Vector2 (SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);
         }
-        //Player.transform.position = Vector3.zero;
-        GameController.instance.DataStorage.PlayerInfo.weapon = weapon;
-        GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;
-        GameController.instance.DataStorage.PlayerInfo.blood = blood;
-        GameController.instance.DataStorage.PlayerInfo.karma = karma;
-        GameController.instance.DataStorage.PlayerInfo.level = level;
-        GameController.instance.DataStorage.PlayerInfo.currentweaponID = 9999;
-        //GameController.instance.DataStorage.PlayerInfo.currentWeapon = null;
-        GameController.instance.DataStorage.PlayerInfo.ItemIDs.Clear();
+        foreach (PlayerInformation info in infos)
+        {
+            info.maxhealth = maxhealth;
+            info.currenthealth = maxhealth;
+            info.damage = damage;
+            info.speed = speed;
+            info.crouchspeed = crouchspeed;
+            info.jumpforce = jumpforce;
+            info.attackspeed = attackspeed;
+            info.potionLoads = potionLoads;
+            //Player.transform.position = Vector3.zero;
+            info.blood = blood;
+            info.karma = karma;
+            info.level = level;
+            info.currentweaponID = 9999;
+            info.ItemIDs.Clear();
+            //GameController.instance.DataStorage.PlayerInfo.currentWeapon = null;
+        }
+            GameController.instance.DataStorage.PlayerInfo.IsAlive = true;
+            GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;
+            GameController.instance.DataStorage.PlayerInfo.weapon = weapon;
+
     }
 }

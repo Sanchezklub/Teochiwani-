@@ -43,7 +43,7 @@ public abstract class BaseItem : MonoBehaviour
     public virtual void PickupItem()
     {
         //MeteorMod
-        EventController.instance.playerEvents.OnItemPickup(this);
+        EventController.instance.playerEvents.CallOnItemPickup(this);
         GameController.instance.DataStorage.PlayerInfo.ItemIDs.Add(id);
         ShowFloatingText();
         coll.enabled = false;
@@ -52,8 +52,8 @@ public abstract class BaseItem : MonoBehaviour
     public virtual void EvilPickupItem()
     {
         //MeteorMod
-        EventController.instance.evilPlayerEvents.OnEvilItemPickup(this);
-        GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs.Add(id);
+        EventController.instance.evilPlayerEvents.CallOnItemPickup(this);
+        //GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs.Add(id);
         //ShowFloatingText();
         coll.enabled = false;
         Destroy(gameObject);

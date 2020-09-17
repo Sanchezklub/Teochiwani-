@@ -1,0 +1,109 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
+{
+
+    EvilPlayerBrain brain;
+    float PositionDifference;
+    public override void InitState(EvilPlayerBrain controller)
+    {
+        base.InitState(controller);
+        this.brain = controller;
+
+        //brain.animator.SetBool("iswalking", true);
+        //controller.Attacking += DamageTaken;
+        PositionDifference = brain.transform.position.x - GameController.instance.DataStorage.PlayerInfo.playerPosition.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.FacingRight = true;
+        }
+        //brain.sr.color = new Color(0, 0, 0 ,1);
+    }
+
+    // public void DamageTaken()
+    // {
+
+    //brain.Attacking -= DamageTaken;
+    //brain.StartAttack();
+    //  }
+
+    public override void UpdateState()
+    {
+        base.UpdateState();
+        float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition));
+        if (distance < brain.AttackDist)
+        {
+            brain.StartAttack();
+        }
+
+
+        if (Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        {
+            //Debug.Log("Did hit");
+            MoveTowardsPlayer();
+
+        }
+
+        else
+        {
+            brain.rb.velocity = new Vector2(0, 0);
+            //Debug.Log("Did not");
+            //enemyAnimator.SetBool(Keys.IDLE_ANIM_KEY, true);
+            //enemyAnimator.SetBool(Keys.WALK_ANIM_KEY, false);
+            //enemyAnimator.SetBool(Keys.ATTACK_ANIM_KEY, false);
+
+
+
+        }
+    }
+
+    public override void DeinitState(EvilPlayerBrain controller)
+    {
+        base.DeinitState(controller);
+        //brain.animator.SetBool("iswalking", false);
+    }
+
+    void MoveTowardsPlayer()
+    {
+        PositionDifference = brain.transform.position.x - GameController.instance.DataStorage.PlayerInfo.playerPosition.x;
+        if (PositionDifference >= 0)
+        {
+            if (brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.rb.velocity = new Vector2(-1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
+            brain.FacingRight = false;
+        }
+        else if (PositionDifference <= 0)
+        {
+            if (!brain.FacingRight)
+            {
+                Flip();
+            }
+            brain.rb.velocity = new Vector2(1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
+            brain.FacingRight = true;
+        }
+
+    }
+
+    void Flip()
+    {
+        brain.transform.Rotate(new Vector2(0f, 180f));
+        brain.FacingRight = !brain.FacingRight;
+    }
+}

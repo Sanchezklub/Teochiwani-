@@ -4992,7 +4992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1794959664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5019,10 +5019,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  damage: 0
-  speed: 0
-  jumpheight: 0
-  weapon: {fileID: 0}
+  rb: {fileID: 0}
+  RaycastTransform: {fileID: 0}
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  combat: {fileID: 0}
+  AggroRange: 0
+  AttackDist: 0
+  FacingRight: 0
 --- !u!4 &1794959666
 Transform:
   m_ObjectHideFlags: 0
@@ -5950,7 +5955,7 @@ PrefabInstance:
     - target: {fileID: 6082516166295739060, guid: 7cf1d05ed26c96846b27fbcc7015b82e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651384731002608207, guid: 7cf1d05ed26c96846b27fbcc7015b82e,
         type: 3}

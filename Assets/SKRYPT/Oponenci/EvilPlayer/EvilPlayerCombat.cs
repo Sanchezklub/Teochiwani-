@@ -55,7 +55,7 @@ public class EvilPlayerCombat : MonoBehaviour
         currentWeapon?.StopEmitting();
     }
 
-    void Attack()
+    public void Attack()
     {
         if (Time.time > nextAttackTime)
         {

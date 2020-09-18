@@ -193,7 +193,7 @@ public class PlayerCombat : MonoBehaviour
     {
         currentWeapon?.AdditonalVoid(this);
     }
-    public void CancelAllAttacks()
+    public virtual void CancelAllAttacks()
     {
         animator.SetBool("IsAttacking", false);
         animator.SetBool("IsAttackingVLight", false);

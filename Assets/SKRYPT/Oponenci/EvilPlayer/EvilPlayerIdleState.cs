@@ -10,14 +10,13 @@ public class EvilPlayerIdleState : BaseState<EvilPlayerBrain>
     {
         base.InitState(controller);
         this.brain = controller;
+        brain.animator.SetBool("Idle", true);
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
-        Debug.Log("State updated");
         float dist = Vector3.Distance(GameController.instance.DataStorage.PlayerInfo.playerPosition, brain.transform.position);
-        Debug.Log("Distance was" + dist);
         if (dist < brain.AggroRange)
         {
             brain.StartFollow();
@@ -26,6 +25,7 @@ public class EvilPlayerIdleState : BaseState<EvilPlayerBrain>
 
     public override void DeinitState(EvilPlayerBrain controller)
     {
+        brain.animator.SetBool("Idle", false);
         base.DeinitState(controller);
     }
 }

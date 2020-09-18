@@ -6,6 +6,7 @@ public class EvilPlayerLoader : MonoBehaviour
 {
     [SerializeField] private EvilPlayerCombat combat;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private List<int> bannedItems;
 
     public void LoadEvilPlayer()
     {
@@ -18,8 +19,11 @@ public class EvilPlayerLoader : MonoBehaviour
 
             foreach (int id in GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs)
             {
-                GameObject item = Instantiate(SaveSystem.Instance.Dictionary.GetItemObjects(id), transform.position, Quaternion.identity);
-                item.GetComponent<BaseItem>().EvilPickupItem();
+                if (!bannedItems.Contains(id))
+                {
+                    GameObject item = Instantiate(SaveSystem.Instance.Dictionary.GetItemObjects(id), transform.position, Quaternion.identity);
+                    item.GetComponent<BaseItem>().EvilPickupItem();
+                }
             }
             rb.simulated = true;
         }

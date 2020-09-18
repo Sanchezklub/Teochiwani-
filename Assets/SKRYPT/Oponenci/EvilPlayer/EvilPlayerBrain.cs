@@ -22,7 +22,6 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
     private void Start()
     {
         StartIdle();
-        Debug.Log("Evil player started idle");
     }
     public void StartIdle()
     {
@@ -53,5 +52,9 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
     {
         base.UpdateChildState();
         currentState?.UpdateState();
+    }
+    public void FootstepSound()
+    {
+        AudioManager.instance.Play("Footstep 3");
     }
 }

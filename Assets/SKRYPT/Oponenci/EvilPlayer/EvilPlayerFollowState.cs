@@ -50,7 +50,11 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
             brain.StartAttack();
         }
 
-        if (Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
+        if(Physics2D.Raycast(brain.RaycastTransform.position, Vector2.right, 7f, brain.WhatIsGround))
+        {
+            Flip();
+        }
+        if (Physics2D.Raycast(brain.RaycastTransform.position, Vector2.down, 2f, brain.WhatIsGround))
         {
             //Debug.Log("Did hit");
             MoveTowardsPlayer();
@@ -72,6 +76,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
 
     public override void DeinitState(EvilPlayerBrain controller)
     {
+        brain.animator.SetFloat("Speed", 0);
         base.DeinitState(controller);
         //brain.animator.SetBool("iswalking", false);
     }
@@ -86,7 +91,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
                 Flip();
             }
             brain.rb.velocity = new Vector2(-1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
-            brain.FacingRight = false;
+            brain.animator.SetFloat("Speed", brain.rb.velocity.x);
         }
         else if (PositionDifference <= 0)
         {
@@ -95,7 +100,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
                 Flip();
             }
             brain.rb.velocity = new Vector2(1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
-            brain.FacingRight = true;
+            brain.animator.SetFloat("Speed", brain.rb.velocity.x);
         }
 
     }

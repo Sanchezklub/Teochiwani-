@@ -2097,6 +2097,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   nextAttackTime: 0
+  brain: {fileID: 462550397}
 --- !u!114 &462550397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2114,10 +2115,10 @@ MonoBehaviour:
   RaycastTransform: {fileID: 1782408991}
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 65792
   combat: {fileID: 462550396}
   AggroRange: 50
-  AttackDist: 4
+  AttackDist: 8
   RangedAttackDist: 40
   FacingRight: 1
 --- !u!114 &462550398
@@ -2147,6 +2148,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combat: {fileID: 462550396}
   rb: {fileID: 462550404}
+  bannedItems: 0c0000001100000012000000
+--- !u!114 &462550400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 561209616676875709, guid: 903297f280de62a47aec8c17223b8423,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031302479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462550395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9a211a645c4e14db23dd4693d5aafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &462550401 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4544277756249418051, guid: 903297f280de62a47aec8c17223b8423,
@@ -2165,6 +2179,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2031302479}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &462550406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462550395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007b61c48ff7d0940997a193000b54a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  currentHealth: 0
+  FloatingText: 0
+  FloatingTextPrefab: {fileID: 0}
+  id: 0
+  EffectParticle: []
+  splashController: {fileID: 462550400}
+  enemyAnimator: {fileID: 462550401}
+  IsHuman: 0
+  IsBoss: 0
+  Drops: []
 --- !u!1 &474594389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,7 +5119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782408990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.29, y: -4.98, z: 0}
+  m_LocalPosition: {x: 0.1, y: -4.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 462550405}
@@ -5690,7 +5727,7 @@ PrefabInstance:
     - target: {fileID: 561209616676875711, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 808264132636184685, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
@@ -7293,6 +7330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combat: {fileID: 779225548}
   rb: {fileID: 5071095692951612051}
+  bannedItems: 
 --- !u!1 &5090186641602786284
 GameObject:
   m_ObjectHideFlags: 0

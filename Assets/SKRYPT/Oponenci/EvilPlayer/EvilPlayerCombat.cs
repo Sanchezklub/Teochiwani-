@@ -6,6 +6,7 @@ public class EvilPlayerCombat : PlayerCombat
 {
     public LayerMask OponentLayers;
     public float nextAttackTime;
+    [SerializeField] private EvilPlayerBrain brain;
     public override void ChangeWeapon(BaseWeapon newWeapon)
     {
 
@@ -27,8 +28,8 @@ public class EvilPlayerCombat : PlayerCombat
 
     }
 
-    /*
-    public void CancelAllAttacks()
+    
+    public override void CancelAllAttacks()
     {
         animator.SetBool("IsAttacking", false);
         animator.SetBool("IsAttackingVLight", false);
@@ -43,6 +44,7 @@ public class EvilPlayerCombat : PlayerCombat
         //noOfClicks = 0;
         WeaponStopEmitting();
     }
+    /*
     public void WeaponStartEmitting()
     {
         currentWeapon?.StartEmitting();
@@ -74,5 +76,11 @@ public class EvilPlayerCombat : PlayerCombat
     public void EvilDoAttack()
     {
         currentWeapon?.Attack(this);
+    }
+
+    public void EvilFinishAttack()
+    {
+        CancelAllAttacks();
+        brain.StartFollow();
     }
 }

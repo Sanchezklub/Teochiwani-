@@ -89,6 +89,8 @@ public class RhinoChargeState : BaseState<RhinoBrain>
                 brain.transform.position = Vector3.Lerp(Pos, new Vector2(brain.transform.position.x + 4, brain.transform.position.y), 10);
             }
             */
+            var particle = Object.Instantiate(brain.WallParticle,brain.Wall.transform.position,Quaternion.identity);
+            Object.Destroy(particle,6);
             brain.StartStun();
         }
     }

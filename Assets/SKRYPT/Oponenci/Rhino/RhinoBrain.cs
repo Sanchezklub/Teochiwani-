@@ -25,6 +25,11 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
 
     public bool FacingRight;
 
+    public ParticleSystem WallParticle;
+    public ParticleSystem DustPartcile;
+    public GameObject LeftLeg;
+    public GameObject RightLeg;
+    public GameObject Wall;
     private void Start()
     {
         StartIdle();
@@ -83,5 +88,16 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     public void RhinoFootstep()
     {
         AudioManager.instance.Play("Footstep Big");
+    }
+    public void RhinoLeftLeg()
+    {
+        var particle = Object.Instantiate(DustPartcile,LeftLeg.transform.position,Quaternion.identity);
+        Object.Destroy(particle,6);
+    }
+    public void RhinoRightLeg()
+    {
+        var particle = Object.Instantiate(DustPartcile,RightLeg.transform.position,Quaternion.identity);
+        Object.Destroy(particle,6);
+
     }
 }

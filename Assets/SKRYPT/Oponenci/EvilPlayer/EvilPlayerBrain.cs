@@ -15,12 +15,14 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
 
     public float AggroRange;
     public float AttackDist;
+    public float RangedAttackDist;
     public bool FacingRight;
 
 
     private void Start()
     {
         StartIdle();
+        Debug.Log("Evil player started idle");
     }
     public void StartIdle()
     {
@@ -28,11 +30,28 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
     }
     public void StartFollow()
     {
-        ChangeState(new EvilPlayerIdleState());
+        ChangeState(new EvilPlayerFollowState());
     }
 
     public void StartAttack()
     {
         ChangeState(new EvilPlayerAttackState());
+    }
+    public override void ChangeState(BaseState<EvilPlayerBrain> newState)
+    {
+        Debug.LogFormat("EvilPlayer:: Old state was {0}. New state is {1}", currentState, newState);
+        base.ChangeState(newState);
+        currentState?.DeinitState(this);
+        currentState = newState;
+        currentState?.InitState(this);
+    }
+    private void Update()
+    {
+        UpdateChildState();
+    }
+    public override void UpdateChildState()
+    {
+        base.UpdateChildState();
+        currentState?.UpdateState();
     }
 }

@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EvilPlayerCombat : MonoBehaviour
+public class EvilPlayerCombat : PlayerCombat
 {
-    public BaseWeapon currentWeapon;
-    public Transform holdPosition;
-    public Animator animator;
     public LayerMask OponentLayers;
     public float nextAttackTime;
-    public void ChangeWeapon(BaseWeapon newWeapon)
+    public override void ChangeWeapon(BaseWeapon newWeapon)
     {
 
         //EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
@@ -30,6 +27,7 @@ public class EvilPlayerCombat : MonoBehaviour
 
     }
 
+    /*
     public void CancelAllAttacks()
     {
         animator.SetBool("IsAttacking", false);
@@ -54,6 +52,7 @@ public class EvilPlayerCombat : MonoBehaviour
     {
         currentWeapon?.StopEmitting();
     }
+    */
 
     public void Attack()
     {
@@ -71,5 +70,9 @@ public class EvilPlayerCombat : MonoBehaviour
 
             //noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
         }
+    }
+    public void EvilDoAttack()
+    {
+        currentWeapon?.Attack(this);
     }
 }

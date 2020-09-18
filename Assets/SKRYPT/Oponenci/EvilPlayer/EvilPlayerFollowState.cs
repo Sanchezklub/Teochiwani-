@@ -45,11 +45,10 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
     {
         base.UpdateState();
         float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition));
-        if (distance < brain.AttackDist)
+        if (distance < brain.AttackDist || (distance < brain.RangedAttackDist && (brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingRanged || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingShoot || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingThrow)))
         {
             brain.StartAttack();
         }
-
 
         if (Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(new Vector2(brain.RaycastTransform.position.x, brain.RaycastTransform.position.y), Vector2.right, 2f, brain.WhatIsGround))
         {

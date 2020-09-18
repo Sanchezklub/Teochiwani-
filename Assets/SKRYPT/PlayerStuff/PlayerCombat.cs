@@ -97,7 +97,7 @@ public class PlayerCombat : MonoBehaviour
        // animator.SetBool("IsAttacking", false);
       //  animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
     }
-    public void ChangeWeapon(BaseWeapon newWeapon)
+    public virtual void ChangeWeapon(BaseWeapon newWeapon)
     {
        
             EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);

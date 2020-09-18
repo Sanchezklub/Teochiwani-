@@ -6,7 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {    
 
     public float attackrate = 2f;
-    float nextAttackTime = 0f;
+    protected float nextAttackTime = 0f;
     public string AnimType;
     public float MaxComboDelay=2;
     public int noOfClicks = 0;

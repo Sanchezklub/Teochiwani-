@@ -5,7 +5,6 @@ using UnityEngine;
 public class EvilPlayerCombat : PlayerCombat
 {
     public LayerMask OponentLayers;
-    public float nextAttackTime;
     [SerializeField] private EvilPlayerBrain brain;
     public override void ChangeWeapon(BaseWeapon newWeapon)
     {

@@ -14,6 +14,8 @@ public class PlayerHealth : Health
     public Vector2 StartingPosition;
     [SerializeField] private LevelDeleter deleter;
     private SplashController splash;
+    private bool CanBeHit = true;
+    [SerializeField] float InvincibleTime;
 
     protected override void Start()
     {
@@ -35,27 +37,33 @@ public class PlayerHealth : Health
 
     public override void TakeDamage(float damage, GameObject attacker = null)
     {
-        GameController.instance.DataStorage.PlayerInfo.currenthealth -= damage;
-
-        //MeteorMod
-        EventController.instance.playerEvents.CallOnPlayerReceiveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth, attacker);
-        if (FloatingText == true)
+        if (CanBeHit)
         {
-            ShowFloatingText(damage);
-        }
+            Debug.LogFormat("damage taken was {0}", damage);
+            GameController.instance.DataStorage.PlayerInfo.currenthealth -= damage;
 
-        splashController.MakeSplat();
-
-        if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
-        {
             //MeteorMod
-            EventController.instance.playerEvents.CallOnPlayerDie();
-            Die();
+            EventController.instance.playerEvents.CallOnPlayerReceiveDamage(damage, GameController.instance.DataStorage.PlayerInfo.currenthealth, attacker);
+            if (FloatingText == true)
+            {
+                ShowFloatingText(damage);
+            }
+
+            splashController.MakeSplat();
+
+            if (GameController.instance.DataStorage.PlayerInfo.currenthealth <= 0)
+            {
+                //MeteorMod
+                EventController.instance.playerEvents.CallOnPlayerDie();
+                Die();
+            }
+            else
+            {
+                PlayerAnimator.SetTrigger("isDamaged");
+            }
+            StartCoroutine("Invincibility");
         }
-        else
-        {
-            PlayerAnimator.SetTrigger("isDamaged");
-        }
+
 
     }
     public override void Heal(float heal)
@@ -92,4 +100,11 @@ public class PlayerHealth : Health
         }
     }
 
+    public IEnumerator Invincibility()
+    {
+        CanBeHit = false;
+        yield return new WaitForSeconds(InvincibleTime);
+        CanBeHit = true;
+
+    }
 }

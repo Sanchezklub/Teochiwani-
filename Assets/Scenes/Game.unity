@@ -2096,7 +2096,6 @@ MonoBehaviour:
   OponentLayers:
     serializedVersion: 2
     m_Bits: 512
-  nextAttackTime: 0
   brain: {fileID: 462550397}
 --- !u!114 &462550397
 MonoBehaviour:
@@ -2193,8 +2192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   currentHealth: 0
-  FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   id: 0
   EffectParticle: []
   splashController: {fileID: 462550400}
@@ -5540,6 +5540,11 @@ PrefabInstance:
       propertyPath: YouDiedScreen
       value: 
       objectReference: {fileID: 498371095}
+    - target: {fileID: 4544277756249418050, guid: 903297f280de62a47aec8c17223b8423,
+        type: 3}
+      propertyPath: InvincibleTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6392348699497800538, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: m_LocalPosition.x

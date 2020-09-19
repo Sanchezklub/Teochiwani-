@@ -26,9 +26,8 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     public bool FacingRight;
 
     public ParticleSystem WallParticle;
-    public ParticleSystem DustPartcile;
-    public GameObject LeftLeg;
-    public GameObject RightLeg;
+    public ParticleSystem LeftLeg;
+    public ParticleSystem RightLeg;
     public GameObject Wall;
     private void Start()
     {
@@ -91,13 +90,11 @@ public class RhinoBrain : BaseBrain<RhinoBrain>
     }
     public void RhinoLeftLeg()
     {
-        var particle = Object.Instantiate(DustPartcile,LeftLeg.transform.position,Quaternion.identity);
-        Object.Destroy(particle,6);
+       LeftLeg.Play();
     }
     public void RhinoRightLeg()
     {
-        var particle = Object.Instantiate(DustPartcile,RightLeg.transform.position,Quaternion.identity);
-        Object.Destroy(particle,6);
+        RightLeg.Play();
 
     }
 }

@@ -45,6 +45,7 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    public ParticleSystem DustPlayer;
     [SerializeField] private GameObject[] skeletonStuff;
     [SerializeField] private GameObject LadderSprite;
 
@@ -427,6 +428,7 @@ public class CharacterController2D : MonoBehaviour
             /*else */if (isGrounded)
             {
                 NormalJump();
+                DustParticle();
             }
         }
        
@@ -547,6 +549,7 @@ public class CharacterController2D : MonoBehaviour
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
+            DustParticle();
         }
     }
     public void StopMove()
@@ -607,5 +610,9 @@ public class CharacterController2D : MonoBehaviour
     public void FootstepSound()
     {
         AudioManager.instance.Play("Footstep 3");
+    }
+    public void DustParticle()
+    {
+        DustPlayer.Play();
     }
 }

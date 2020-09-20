@@ -15,8 +15,9 @@ public class Spear : BaseWeapon
     public Collider2D[] hitEnemies;
     public void Update()
     {
-        if ( PickUped )
+        if ( PickUped&& flying==false )
         {
+        rb.bodyType = RigidbodyType2D.Kinematic;    
         Vector2 bowPosition = Handle.transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mousePosition - bowPosition;
@@ -36,25 +37,25 @@ public class Spear : BaseWeapon
     {
         Debug.Log("Spear :: Attack() - Player attacked with Spear");
         Handle.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        Handle.transform.right=direction;
         DropWeapon();
         GameController.instance.DataStorage.PlayerInfo.currentweaponID = 9999;
         GameController.instance.DataStorage.PlayerInfo.currentweaponModID = 0;
         controller.currentWeapon = null;
+        PickUped=false;
         flying=true;
-        coll.enabled=false;
-        //StartCoroutine (Teleport());
+        rb.isKinematic = false;
         pc.enabled=true;
-    }
-    IEnumerator Teleport()
-    {
+        //rb.bodyType=RigidbodyType2D=Dynamic;
         
-        yield return new WaitForSeconds(1);
-        pc.enabled=true;
     }
     public override void PickupWepaon()
     {
         base.PickupWepaon();
         flying=false;
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        pc.enabled=false;
+        hasHit=false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -62,10 +63,15 @@ public class Spear : BaseWeapon
         {
             hasHit=true;
             rb.velocity = Vector2.zero;
-            //rb.isKinematic = true;
-            coll.enabled=true;
-            pc.enabled=false;
+            rb.bodyType = RigidbodyType2D.Static;
+            //coll.enabled=true;
+            //pc.enabled=false;
             //pc.isTrigger=true;
+
+
+
+
+
             hitEnemies = Physics2D.OverlapCircleAll(Handle.transform.position, attackRange, enemyLayers);
                 foreach (Collider2D enemy in hitEnemies)         
                 {

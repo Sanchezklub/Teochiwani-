@@ -144,6 +144,10 @@ public class PlayerCombat : MonoBehaviour
         
     }
     */
+    public void returnTHROW()
+    {
+       animator.SetBool("IsAttackingThrow", false);
+    }
     public void return1()
     {
         if (noOfClicks >= 2)

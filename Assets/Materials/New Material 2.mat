@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: -6465566751694194690, guid: 14035300e908b524c8e0f85e23a2f6ab,
+  m_Name: New Material 2
+  m_Shader: {fileID: -6465566751694194690, guid: 7a16a920a88611c498f127b0a08000c5,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -37,9 +37,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AnimSpeed: -1.4
     - _EnableExternalAlpha: 0
+    - _Tiling: 1.12
     m_Colors:
-    - _Color: {r: 0.31644544, g: 0.54901963, b: 0.23529412, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _GlowTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _LowerGradient: {r: 2.670157, g: 0.8690605, b: 0.8858361, a: 1}
+    - _MainOffset: {r: -0.06, g: -0.06, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UpperGradient: {r: 0.254902, g: 0.3176471, b: 0.5764706, a: 1}

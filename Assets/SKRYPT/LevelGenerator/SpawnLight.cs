@@ -10,7 +10,7 @@ public class SpawnLight : MonoBehaviour
     {
         if (transform.position.y < -10 )
         {
-            Instantiate(Lights[Random.Range(0, Lights.Length)],transform.position, Quaternion.identity );
+            Instantiate(Lights[Random.Range(0, Lights.Length)],transform.position, Quaternion.identity,transform );
         }
     }
 

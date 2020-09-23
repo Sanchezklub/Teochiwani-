@@ -58,7 +58,7 @@ public abstract class BaseWeapon : BaseItem
         //UIFlavourText = Find("FlavourText");
         //EventController.instance.weaponEvents.CallOnWeaponAppear(this);
         GetUITexts();
-
+        SpriteRen = this.GetComponent<SpriteRenderer>();
     }
     public void SoundAttack()
     {
@@ -87,9 +87,9 @@ public abstract class BaseWeapon : BaseItem
     }
     public override void Start()
     {
+        SpriteRen = this.GetComponent<SpriteRenderer>();
         ChooseModifier();
         AddParticle();
-        SpriteRen = this.GetComponent<SpriteRenderer>();
         base.Start();
     }
 

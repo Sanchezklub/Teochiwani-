@@ -72,10 +72,7 @@
      <Compile Include="Assets\@items\Statistics\RoundStatistics.cs" />
      <Compile Include="Assets\@items\Statistics\SesionStatistics.cs" />
      <Compile Include="Assets\@items\TimeCondition.cs" />
-     <Compile Include="Assets\Altar.cs" />
-     <Compile Include="Assets\Background.cs" />
-     <Compile Include="Assets\BackgroundManager.cs" />
-     <Compile Include="Assets\OnChunkGenerated.cs" />
+     <Compile Include="Assets\SKRYPT\Altar.cs" />
      <Compile Include="Assets\SKRYPT\Architekture\DataStorage.cs" />
      <Compile Include="Assets\SKRYPT\Architekture\Events\EventController.cs" />
      <Compile Include="Assets\SKRYPT\Architekture\GameController.cs" />
@@ -88,6 +85,8 @@
      <Compile Include="Assets\SKRYPT\Architekture\SaveSystem.cs" />
      <Compile Include="Assets\SKRYPT\Architekture\StatisticsData.cs" />
      <Compile Include="Assets\SKRYPT\Architekture\WeaponModDictionary.cs" />
+     <Compile Include="Assets\SKRYPT\Background.cs" />
+     <Compile Include="Assets\SKRYPT\BackgroundManager.cs" />
      <Compile Include="Assets\SKRYPT\CameraStartFollowPlayer.cs" />
      <Compile Include="Assets\SKRYPT\Data\Modifiers\BaseModifier.cs" />
      <Compile Include="Assets\SKRYPT\Data\Modifiers\ModBiggerCameraLowHealthBuff.cs" />
@@ -186,6 +185,7 @@
      <Compile Include="Assets\SKRYPT\Objects\Portal.cs" />
      <Compile Include="Assets\SKRYPT\Objects\Spike.cs" />
      <Compile Include="Assets\SKRYPT\Objects\skala.cs" />
+     <Compile Include="Assets\SKRYPT\OnChunkGenerated.cs" />
      <Compile Include="Assets\SKRYPT\Oponenci\Base\BaseBrain.cs" />
      <Compile Include="Assets\SKRYPT\Oponenci\Base\BaseState.cs" />
      <Compile Include="Assets\SKRYPT\Oponenci\Base\Dash.cs" />
@@ -286,6 +286,7 @@
      <Compile Include="Assets\SKRYPT\UI\SelfDestroyer.cs" />
      <Compile Include="Assets\SKRYPT\UI\TextAnimScript.cs" />
      <Compile Include="Assets\SKRYPT\UI\YouDiedScreen.cs" />
+     <Compile Include="Assets\SKRYPT\UnlockedItem.cs" />
      <Compile Include="Assets\SKRYPT\Weapon And Combat\Arrow.cs" />
      <Compile Include="Assets\SKRYPT\Weapon And Combat\Axe.cs" />
      <Compile Include="Assets\SKRYPT\Weapon And Combat\BaseWeapon.cs" />
@@ -320,7 +321,6 @@
      <Compile Include="Assets\SKRYPT\inne\Splat.cs" />
      <Compile Include="Assets\SKRYPT\inne\TimerController.cs" />
      <Compile Include="Assets\SKRYPT\potion.cs" />
-     <Compile Include="Assets\UnlockedItem.cs" />
      <Compile Include="Assets\test\EnemyTracker.cs" />
      <Compile Include="Assets\test\EnviroId.cs" />
      <Compile Include="Assets\test\EnviromentTracker.cs" />

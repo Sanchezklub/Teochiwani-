@@ -25,6 +25,8 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public AudioClip Soundcharge;
     public AudioClip Attacksound;
 
+    public ParticleSystem RightLeg;
+
     private void Start()
     {
         StartPatrol();
@@ -88,6 +90,11 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public void CheckState()
     {
         Debug.Log("State checked. It was" + currentState);
+    }
+    public void KapiChargeParticle()
+    {
+        RightLeg.Play();
+
     }
 }
 

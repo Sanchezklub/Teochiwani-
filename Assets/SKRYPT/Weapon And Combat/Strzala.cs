@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
 public class Strzala : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -33,7 +34,7 @@ public class Strzala : MonoBehaviour
     public Collider2D[] hitEnemies;
     public GameObject Tip;
     public ParticleSystem[] Effect;
-
+    public GameObject firelight;
     public BaseWeapon weapon;
 
     void Start()
@@ -62,7 +63,11 @@ public class Strzala : MonoBehaviour
         PoisonTimeBetween =weapon.PoisonTimeBetween;
 
         if(Poison) {Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);}
-        if(Fire)    {Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);}
+        if(Fire)    
+        {
+            Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);
+            firelight.SetActive(true);
+        }
         if(Bleed)   {Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);}
 
         Enemy = weapon.enemyLayers;

@@ -26,6 +26,17 @@ public class EvilPlayerLoader : MonoBehaviour
                 }
             }
             rb.simulated = true;
+            transform.position = new Vector2(-301.5f, 67.6f);
         }
+        else
+        {
+            this.transform.position = new Vector2(-3000, 0);
+            rb.simulated = false;
+        }
+    }
+
+    private void Start()
+    {
+        EventController.instance.levelEvents.OnLevelGeneratedBasic += LoadEvilPlayer;
     }
 }

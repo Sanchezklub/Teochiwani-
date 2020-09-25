@@ -122,6 +122,7 @@ public class SaveSystem : MonoBehaviour
                 enemy.transform.parent = LoadedObjectHolder.transform;
             }
         }
+        EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
     }
 
     public void LoadItems(SaveContainer LoadedSaveContainer)
@@ -276,12 +277,12 @@ public class SaveSystem : MonoBehaviour
             GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs = LoadedSaveContainer.oldPlayerData.ItemIDs;
             GameController.instance.DataStorage.EvilPlayerInfo.level = LoadedSaveContainer.oldPlayerData.level;
             GameController.instance.DataStorage.EvilPlayerInfo.IsAlive = false;
-            EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
+            //EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
             //Debug.LogFormat("Maxhealth value in oldPlayerData was {0}", LoadedSaveContainer.oldPlayerData.maxhealth);
 
         }
     }
-
+    /*
     public void LoadEvilPlayer()
     {
         if (saveContainer.oldPlayerData.level == GameController.instance.DataStorage.PlayerInfo.level)
@@ -299,6 +300,8 @@ public class SaveSystem : MonoBehaviour
             EvilPlayer.GetComponent<Rigidbody2D>().simulated = true;
         }
     }
+
+    */
 
     [ContextMenu("Test")]
     public void FullySaveGame()
@@ -341,8 +344,8 @@ public class SaveSystem : MonoBehaviour
             Debug.Log(saveContainer);
             if (SpawnStuff == true)
             {
-                LoadGlobalStats(saveContainer);
                 LoadOldPlayerData(saveContainer);
+                LoadGlobalStats(saveContainer);
                 //jeszcze ładowanie odblokowanych itemków jak będzie
 
             }

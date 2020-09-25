@@ -7,6 +7,8 @@ public class Cheats : MonoBehaviour
 
     [SerializeField] private GameObject CheatAxe;
     [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject Rhino;
+    [SerializeField] private GameObject Portal;
     void Update()
     {
         if (Input.GetKey(KeyCode.P))
@@ -27,7 +29,8 @@ public class Cheats : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                Debug.LogFormat("Total playtime is {0} seconds", GlobalStatistics.instance.timePassed);
+                Instantiate(Rhino, GameController.instance.DataStorage.PlayerInfo.playerPosition, Quaternion.identity);
+                Instantiate(Portal, GameController.instance.DataStorage.PlayerInfo.playerPosition, Quaternion.identity);
             }
         }        
     }

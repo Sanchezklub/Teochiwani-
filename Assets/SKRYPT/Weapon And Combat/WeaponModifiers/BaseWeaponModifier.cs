@@ -19,6 +19,8 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] bool Poison;
     [SerializeField] bool Bleed;
     [SerializeField] bool Fire;
+    [SerializeField] bool Godly;
+    [SerializeField] bool Human;
     [Range(-1.0f, 1.0f)]
     public float AttackSpeedChange;
 

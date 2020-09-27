@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WeaponGlow5
-  m_Shader: {fileID: -6465566751694194690, guid: 6094e7621e27cfc40b3175498dfb538f,
+  m_Name: GodlyEffectGlow
+  m_Shader: {fileID: -6465566751694194690, guid: f1663d2a419ea2847bc75a6208ff95b5,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -37,8 +37,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AnimSpeed: 1
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _Color: {r: 0.052537914, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.0009765625, g: 0, b: 0.00049402576, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

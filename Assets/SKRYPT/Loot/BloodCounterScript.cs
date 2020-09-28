@@ -17,7 +17,7 @@ public class BloodCounterScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnBloodPickupBasic()
+    void Update()
     {
         text.SetText(GameController.instance.DataStorage.PlayerInfo.blood.ToString());   
     }

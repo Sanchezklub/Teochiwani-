@@ -24,10 +24,12 @@ public class ModStrongerAttacksLowHealthBuff : BaseModifier
     {
         info.GetHitAction += OnPlayerReceiveDamage;
         info.DieAction += PlayerDied;
+        Debug.Log("Dusza kojota. events assigned");
     }
 
     public void OnPlayerReceiveDamage(float damage, float healthLeft)
     {
+        Debug.Log("Dusza kojota. damage taken");
         var maxhealth = info.maxhealth;
         var value = (1f - Mathf.InverseLerp(0f, maxhealth, healthLeft)) * (maxDamagePercentage/100);
         info.damage = initialDmg + initialDmg*value;

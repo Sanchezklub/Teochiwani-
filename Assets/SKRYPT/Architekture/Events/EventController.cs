@@ -155,6 +155,7 @@ public class EventController : MonoBehaviour
             OnEvilPlayerReceiveDamageBasic?.Invoke();
             OnEvilPlayerReceiveDamage?.Invoke(damage, healthLeft);
             OnEvilPlayerReceiveDamageWithAttacker?.Invoke(damage, healthLeft, attacker);
+            Debug.Log("Evil player recieve damage called");
         }
 
         public UnityAction OnEvilPlayerDie;

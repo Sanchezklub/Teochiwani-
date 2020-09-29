@@ -36,6 +36,7 @@ public class PlayerInformation : ScriptableObject
     public void CallOnGetHurtAction(float damage, float healthleft)
     {
         GetHitAction?.Invoke(damage, healthleft);
+        Debug.Log("Get hurt action called");
     }
 
     public UnityAction DieAction;

@@ -41,5 +41,7 @@ public class EvilPlayerLoader : MonoBehaviour
     private void Start()
     {
         EventController.instance.levelEvents.OnLevelGeneratedBasic += LoadEvilPlayer;
+        //EventController.instance.evilPlayerEvents.OnEvilPlayerReceiveDamage += GameController.instance.DataStorage.EvilPlayerInfo.GetHitAction;
+        //EventController.instance.evilPlayerEvents.OnEvilPlayerDie += GameController.instance.DataStorage.EvilPlayerInfo.DieAction;
     }
 }

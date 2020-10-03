@@ -19,6 +19,7 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] bool Poison;
     [SerializeField] bool Bleed;
     [SerializeField] bool Fire;
+    [SerializeField] bool Lightning;
     [SerializeField] bool Godly;
     [SerializeField] bool Human;
     [Range(-1.0f, 1.0f)]
@@ -35,6 +36,10 @@ public class BaseWeaponModifier : ScriptableObject
     private bool DefaultFire;
     private bool DefaultBleed;
     private bool DefaultPoison;
+    private bool DefaultLightning;
+    private bool DefaultGodly;
+    private bool DefaultHuman;
+    
     private string DefaultWeaponName;
 
     // latwo dodawac damge i effekty zostaly attackspeed
@@ -63,6 +68,18 @@ public class BaseWeaponModifier : ScriptableObject
         if(Poison)
         {
             weapon.EffectPoison = Poison;
+        }
+        if(Lightning)
+        {
+            weapon.EffectLightning=Lightning;
+        }
+        if(Godly)
+        {
+            weapon.EffectGodly=Godly;
+        }
+        if(Human)
+        {
+            weapon.EffectHuman=Human;
         }
         if(WeaponSpriteMaterial!=null)
         {
@@ -105,7 +122,10 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.EffectFire = DefaultFire;
         weapon.EffectBleed = DefaultBleed;
         weapon.EffectPoison = DefaultPoison;
-        weapon.itemName = DefaultWeaponName;
+        weapon.EffectPoison = DefaultPoison;
+        weapon.EffectLightning = DefaultLightning;
+        weapon.EffectGodly = DefaultGodly;
+        weapon.EffectHuman = DefaultHuman;
         if(WeaponSpriteMaterial!=null)
         {
         weapon.SpriteRen.material = DefaultWeaponSpriteMaterial;
@@ -127,6 +147,9 @@ public class BaseWeaponModifier : ScriptableObject
         DefaultBleed = weapon.EffectBleed;
         DefaultPoison = weapon.EffectPoison;
         DefaultWeaponName = weapon.itemName;
+        DefaultLightning = weapon.EffectLightning;
+        DefaultGodly = weapon.EffectGodly;
+        DefaultHuman=weapon.EffectHuman;
         if(WeaponSpriteMaterial!=null)
         {
         DefaultWeaponSpriteMaterial = weapon.SpriteRen.material;

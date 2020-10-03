@@ -15,13 +15,22 @@ public class Health : MonoBehaviour
    // public ParticleSystem Poison;
     public ParticleSystem[] EffectParticle;
     public SplashController splashController;
+
+    public GameObject[] Limbs;
+    public Material LightningEffectMaterial;
+    Material NormalMaterial;
+    bool LightningIsActive=false;
     protected virtual void Start()
     {
         currentHealth=MaxHealth;
         splashController=GetComponent<SplashController>();
     }
      public virtual void TakeDamage(float damage, GameObject attacker = null)
-     {
+     {  
+         if( LightningIsActive==true)
+         {
+             damage*=2;
+         }
        currentHealth -=damage;
        splashController?.MakeSplat();
         if (FloatingText == true)
@@ -51,6 +60,10 @@ public class Health : MonoBehaviour
         else if ( Effect ==2 )
         {
         StartCoroutine(BleedingDamage(damage,  TimeCount, TimeBetweenHits)) ;
+        }
+        else if ( Effect ==3 )
+        {
+        StartCoroutine(LightningEffect());
         }
     }
     public virtual void Heal(float heal)
@@ -95,6 +108,31 @@ public class Health : MonoBehaviour
             TakeDamage(damage);
             EventController.instance.enemyEvents.CallOnBleedDamageDealt(damage);
         }
+    }
+    IEnumerator LightningEffect()
+    {
+        if (LightningIsActive==false )
+        {   
+            if( Limbs.Length !=0)
+            {
+                foreach( GameObject limb in Limbs )
+                {
+                    NormalMaterial=limb.GetComponent<SpriteRenderer>().material;
+                    limb.GetComponent<SpriteRenderer>().material=LightningEffectMaterial;
+                }
+            }
+            LightningIsActive=true;
+            yield return new WaitForSeconds(5); 
+            if( Limbs.Length !=0  )
+            {
+                foreach( GameObject limb in Limbs )
+                {
+                   limb.GetComponent<SpriteRenderer>().material=NormalMaterial;
+                }
+            }
+            LightningIsActive=false;
+        }
+        
     }
  
 

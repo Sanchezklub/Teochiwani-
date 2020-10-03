@@ -22,7 +22,9 @@ public abstract class BaseWeapon : BaseItem
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
     [SerializeField] public ParticleSystem ModifierParticle;
     [SerializeField] private BaseWeaponModifier currentModifier;
-
+    [SerializeField] public bool EffectLightning=false;
+    [SerializeField] public bool EffectGodly=false;
+    [SerializeField] public bool EffectHuman=false;
 
     [SerializeField] public bool EffectBleed=false;
     [SerializeField]public float BleedDamage;
@@ -82,6 +84,10 @@ public abstract class BaseWeapon : BaseItem
             if ( EffectPoison == true)
             {
                 enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
+            }
+            if( EffectLightning)
+            {
+                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,3);
             }
         
     }

@@ -17,10 +17,13 @@ public abstract class BaseWeapon : BaseItem
 
     //public float damage;
     public PlayerInformation info;
-
+    [SerializeField] public bool Attacking=false;
+    public int EnemyCounter;
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
     [SerializeField] public ParticleSystem ModifierParticle;
     [SerializeField] private BaseWeaponModifier currentModifier;
+
+
     [SerializeField] public bool EffectBleed=false;
     [SerializeField]public float BleedDamage;
     [SerializeField]public int BleedCount;
@@ -37,9 +40,10 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public float PoisonTimeBetween;
     
     [SerializeField]public SpriteRenderer SpriteRen;
-
+     public PolygonCollider2D pc;
     public AudioClip AttackSound;
     public AudioSource audio;
+    public bool EnemyWas;
     
     
     public enum SexType
@@ -144,7 +148,6 @@ public abstract class BaseWeapon : BaseItem
         }
 
     }
-
     public void RemoveModifier()
     {
         if (currentModifier)
@@ -162,14 +165,43 @@ public abstract class BaseWeapon : BaseItem
         ModifierChosen = true;
 
     }
-    public  void AdditonalVoid(PlayerCombat controller)
+    public void AdditonalVoid(PlayerCombat controller)
     {
         controller.animator.SetBool("Reloaded", true);
+    }
+
+    public int[] EnemyId = new int [100];
+    
+    public void StartEnemyList()
+    {
+        Attacking=true;
+        EnemyCounter=0;
+    }
+
+
+    public void ClearEnemyList()
+    {
+        Attacking=false;
+        for (int i = 0; i < EnemyId.Length; i++)
+        {
+        EnemyId[i] = 0; 
+        }
     }
     //private void OnDrawGizmos()
    // {
       //  Handles.Label(transform.position, ModId.ToString());
    // }
-
-
+    public override void PickupWepaon()
+    {
+        base.PickupWepaon();
+        if ( pc!=null)
+        pc.enabled=true;
+    }
+    public virtual void DropWeapon()
+    {
+         base.DropWeapon();
+         if ( pc!=null)
+         pc.enabled=false;
+    }
+    
 }

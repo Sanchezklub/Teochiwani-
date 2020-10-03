@@ -10,7 +10,6 @@ public class Spear : BaseWeapon
     public bool flying = false;
 
     public Rigidbody2D rb;
-    public PolygonCollider2D pc;
 
     public Collider2D[] hitEnemies;
     public void Update()
@@ -45,7 +44,7 @@ public class Spear : BaseWeapon
         PickUped=false;
         flying=true;
         rb.isKinematic = false;
-        pc.enabled=true;
+       // pc.enabled=true;
         //rb.bodyType=RigidbodyType2D=Dynamic;
         
     }
@@ -54,7 +53,7 @@ public class Spear : BaseWeapon
         base.PickupWepaon();
         flying=false;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        pc.enabled=false;
+        //pc.enabled=false;
         hasHit=false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -64,30 +63,10 @@ public class Spear : BaseWeapon
             hasHit=true;
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
-            //coll.enabled=true;
-            //pc.enabled=false;
-            //pc.isTrigger=true;
-
-
-
-
-
             hitEnemies = Physics2D.OverlapCircleAll(Handle.transform.position, attackRange, enemyLayers);
-                foreach (Collider2D enemy in hitEnemies)         
-                {
-                enemy.GetComponent<Health>()?.TakeDamage(attackdamage);
-                    if ( EffectBleed)
-                    {
-                        enemy.GetComponent<Health>()?.Effect(BleedDamage,BleedCount,BleedTimeBetween,0);
-                    }
-                    if ( EffectFire)
-                    {
-                        enemy.GetComponent<Health>()?.Effect(FireDamage,FireCount,FireTimeBetween,1);
-                    }
-                    if ( EffectPoison)
-                    {
-                        enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
-                    }
+            foreach (Collider2D enemy in hitEnemies)         
+            {
+                Effects(enemy);
             }
         }
 

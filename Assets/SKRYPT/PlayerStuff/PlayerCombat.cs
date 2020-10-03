@@ -211,6 +211,16 @@ public class PlayerCombat : MonoBehaviour
         animator.SetBool("AttackCombo2", false);
         noOfClicks = 0;
         WeaponStopEmitting();
+        WeaponClearList();
+    }
+    public void WeaponStartList()
+    {
+        currentWeapon?.StartEnemyList();
+    }
+
+    public void WeaponClearList()
+    {
+        currentWeapon?.ClearEnemyList();
     }
 
     

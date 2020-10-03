@@ -12,6 +12,7 @@ public abstract class ItemConditioner
 
 public abstract class BaseItem : MonoBehaviour
 {
+
     //public bool IsLoaded;
     public GameObject Handle;
     public BaseModifier[] modifiers;
@@ -31,6 +32,7 @@ public abstract class BaseItem : MonoBehaviour
     public bool PickUped;
     [SerializeField]public float AttackSpeedModifier;
     [SerializeField]public float AttackSpeedPrevious;
+    
      public virtual void Start()
     {
         //UIFlavourText = Find("FlavourText");
@@ -80,13 +82,13 @@ public abstract class BaseItem : MonoBehaviour
     }*/
     public virtual void DropWeapon()
     {
-
         Handle.transform.parent = null;
         coll.enabled = true;
         Handle.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemAppear(this);
         GameController.instance.DataStorage.PlayerInfo.attackspeed =AttackSpeedPrevious;
         PickUped = false;
+       // pc.enabled = false;
     }
     
     //mogą być problemy z evil playerem;
@@ -97,6 +99,7 @@ public abstract class BaseItem : MonoBehaviour
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
         Debug.Log("Called On Item Die " + name);
+        //pc.enabled = true;
         PickUped=true;
         AttackSpeedPrevious = GameController.instance.DataStorage.PlayerInfo.attackspeed;
         GameController.instance.DataStorage.PlayerInfo.attackspeed +=AttackSpeedModifier;
@@ -126,4 +129,5 @@ public abstract class BaseItem : MonoBehaviour
         }
 
     }
+
 }

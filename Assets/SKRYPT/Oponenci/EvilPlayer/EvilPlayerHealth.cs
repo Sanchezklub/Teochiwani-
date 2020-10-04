@@ -19,7 +19,7 @@ public class EvilPlayerHealth : EnemyHealth
         {
             ShowFloatingText(damage);
         }
-        if (currentHealth <= 0)
+        if (GameController.instance.DataStorage.EvilPlayerInfo.currenthealth <= 0)
         {
             Die();
         }

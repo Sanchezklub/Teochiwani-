@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
 {
@@ -12,12 +13,15 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
     //public float speed;
     //public float jumpheight;
     public EvilPlayerCombat combat;
+    public GameObject SpearPrefab;
+    public Transform throwPosition;
 
     public float AggroRange;
     public float AttackDist;
     public float RangedAttackDist;
     public bool FacingRight;
 
+    public UnityAction evilSpearAttack;
 
     private void Start()
     {
@@ -56,5 +60,10 @@ public class EvilPlayerBrain : BaseBrain<EvilPlayerBrain>
     public void FootstepSound()
     {
         AudioManager.instance.Play("Footstep 3");
+    }
+
+    public void EvilSpearAttack()
+    {
+        evilSpearAttack?.Invoke();
     }
 }

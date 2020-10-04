@@ -2307,6 +2307,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65792
   combat: {fileID: 462550396}
+  SpearPrefab: {fileID: 8208597077870961756, guid: 70264f57ae3d4004fa6dbdd5ea4d717e,
+    type: 3}
+  throwPosition: {fileID: 1557038049}
   AggroRange: 50
   AttackDist: 8
   RangedAttackDist: 40
@@ -2389,6 +2392,8 @@ MonoBehaviour:
   id: 0
   EffectParticle: []
   splashController: {fileID: 462550400}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
   enemyAnimator: {fileID: 462550401}
   IsHuman: 0
   IsBoss: 0
@@ -9996,6 +10001,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1557038049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4731585039109836168, guid: 903297f280de62a47aec8c17223b8423,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031302479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567688793
 GameObject:
   m_ObjectHideFlags: 0
@@ -10655,6 +10666,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   combat: {fileID: 0}
+  SpearPrefab: {fileID: 0}
+  throwPosition: {fileID: 0}
   AggroRange: 0
   AttackDist: 0
   RangedAttackDist: 0

@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour {
 
 
 
-	GameObject target;
+	public Vector3 target;
 	Vector2 moveDirection;
 	// jak bedziemy chceili dodac efekt po strzale	public GameObject impactEffect;
 
@@ -22,12 +22,12 @@ public class Bullet : MonoBehaviour {
     {
 
 		rb2d = GetComponent<Rigidbody2D>();
-		target = GameObject.Find("Player");
-		moveDirection = (target.transform.position - transform.position).normalized * speed;
+		//target = GameObject.Find("Player");
+		moveDirection = (target - transform.position).normalized * speed;
 		rb2d.velocity = new Vector2(moveDirection.x, moveDirection.y);
 		Vector3 objectPos = transform.position;
-		targ_x = target.transform.position.x - objectPos.x;
-		targ_y = target.transform.position.y - objectPos.y;
+		targ_x = target.x - objectPos.x;
+		targ_y = target.y - objectPos.y;
 
 		float angle = Mathf.Atan2(targ_y, targ_x) * Mathf.Rad2Deg;
 		//transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));

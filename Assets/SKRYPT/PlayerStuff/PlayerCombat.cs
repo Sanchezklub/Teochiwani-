@@ -63,7 +63,11 @@ public class PlayerCombat : MonoBehaviour
             Collider2D[] hitColliderss = Physics2D.OverlapCircleAll(this.transform.position, 2 , ItemMasks);
             foreach (Collider2D Weapon in hitColliderss)
             {
-                 ChangeWeapon(Weapon.GetComponent<BaseWeapon>());
+                BaseWeapon weap = Weapon.GetComponent<BaseWeapon>();
+                if (!weap.PickUped)
+                {
+                    ChangeWeapon(weap);
+                }
             } 
 
         //    if (collidedWeapon!= null)

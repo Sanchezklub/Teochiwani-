@@ -6,9 +6,9 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
 {
     private SpearmanBrain brain;
     private Animator enemyAnimator;
-    Rigidbody2D enemyRigidBody2D;
+    //Rigidbody2D enemyRigidBody2D;
     private GameObject player;
-
+    private Vector3 tempTarget;
      public override void InitState(SpearmanBrain controller)
     {
         base.InitState(controller);
@@ -22,7 +22,6 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
         controller.Attacking += rzut;
         controller.Attacking += ShortRangeDamage;
         controller.FacePlayerAction += FacePlayer;
-        enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         /*if (brain.FacingRight == false)
         {
             brain.transform.Rotate(new Vector2(0f, 180f));
@@ -33,11 +32,12 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
         if (brain.FacingRight == true)
         {
             GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.Euler(new Vector3 (0,0,13.762f))) as GameObject;
-
+            projectile.GetComponent<Bullet>().target = tempTarget;
         }
         else
         {
             GameObject projectile = GameObject.Instantiate(brain.Projectile, brain.FirePoint.position, Quaternion.Euler(new Vector3(0, 0, 166.238f))) as GameObject;
+            projectile.GetComponent<Bullet>().target = tempTarget;
         }
         enemyAnimator.SetTrigger("Reload");
         if(Vector3.Distance(brain.transform.position,player.transform.position)>brain.StopFollowDist)
@@ -73,7 +73,7 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
             }
             brain.FacingRight = false;
         }
-        else if (PositionDifference <= 0)
+        else if (PositionDifference < 0)
         {
             if (!brain.FacingRight)
             {
@@ -81,6 +81,12 @@ public class SpearmanShotState : BaseState<SpearmanBrain>
             }
             brain.FacingRight = true;
         }
+        SetTarget();
+    }
+
+    public void SetTarget()
+    {
+        tempTarget = GameController.instance.DataStorage.PlayerInfo.playerPosition;
     }
     void Flip()
     {

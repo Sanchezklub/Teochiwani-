@@ -887,7 +887,7 @@ MonoBehaviour:
     type: 3}
   WhatIsGround:
     serializedVersion: 2
-    m_Bits: 65792
+    m_Bits: 2162944
   FacingRight: 0
   damage: 20
   speed: 5
@@ -900,6 +900,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   Soundcharge: {fileID: 0}
   Attacksound: {fileID: 0}
+  RightLeg: {fileID: 0}
 --- !u!114 &-5394817429886433413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,13 +924,11 @@ MonoBehaviour:
   - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}
   - {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
   splashController: {fileID: 7531553328498600753}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
   enemyAnimator: {fileID: 8997484350139555646}
   IsHuman: 0
   IsBoss: 0
-  this1: {fileID: 0}
-  temp: {fileID: 0}
-  Limbs: []
-  Limbs2: []
   Drops:
   - {fileID: 0}
   - {fileID: 0}

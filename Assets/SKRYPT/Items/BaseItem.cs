@@ -104,13 +104,15 @@ public abstract class BaseItem : MonoBehaviour
         AttackSpeedPrevious = GameController.instance.DataStorage.PlayerInfo.attackspeed;
         GameController.instance.DataStorage.PlayerInfo.attackspeed +=AttackSpeedModifier;
     }
-    void Update()
+  /*  void Update()
     {
         if( Input.GetKeyUp(KeyCode.Tab)&& UIFlavorText.enabled==false && UIWeaponName.enabled==false)
         {
+            itemName=weapon.itemName;
+            flavourtext=weapon
             ShowFloatingText();
         }
-    }
+    } */ 
     public virtual void ShowFloatingText()
     {
         //var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);

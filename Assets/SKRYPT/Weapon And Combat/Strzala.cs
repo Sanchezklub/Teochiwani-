@@ -12,7 +12,9 @@ public class Strzala : MonoBehaviour
     bool Poison=false;
     bool Bleed=false;
     bool Fire=false;
-
+    bool Lightning = false;
+    bool Godly = false;
+    bool Human = false; 
     float BleedDamage;
     int BleedCount;
     float BleedTimeBetween;
@@ -25,7 +27,7 @@ public class Strzala : MonoBehaviour
     int PoisonCount;
     float PoisonTimeBetween;
 
-
+    //Material WeaponSpriteMaterial;
     private float damage=0;
     public int Range =2;
 
@@ -41,14 +43,18 @@ public class Strzala : MonoBehaviour
     {
         rb=GetComponent<Rigidbody2D>();
         pc=GetComponent<PolygonCollider2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         //var weapon = player.GetComponentInChildren<BaseWeapon>();
         damage = weapon.attackdamage;
         damage+= weapon.info.damage;
+        GetComponent<SpriteRenderer>().material= weapon.SpriteRen.material;
 
         Poison = weapon.EffectPoison;
         Fire = weapon.EffectFire;
         Bleed = weapon.EffectBleed;
+        Lightning = weapon.EffectLightning;
+        Human = weapon.EffectHuman;
+        Godly = weapon.EffectGodly;
 
         BleedDamage = weapon.BleedDamage;
         BleedCount = weapon.BleedCount;
@@ -62,13 +68,19 @@ public class Strzala : MonoBehaviour
         PoisonCount = weapon.PoisonCount;
         PoisonTimeBetween =weapon.PoisonTimeBetween;
 
-        if(Poison) {Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);}
+        if(Poison)
+        {
+            Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);
+        }
         if(Fire)    
         {
             Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);
             firelight.SetActive(true);
         }
-        if(Bleed)   {Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);}
+        if(Bleed)   
+        {
+            Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);
+        }
 
         Enemy = weapon.enemyLayers;
     }
@@ -107,6 +119,10 @@ public class Strzala : MonoBehaviour
         if ( Poison)
         {
             enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
+        }
+        if( Lightning)
+        {
+                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,3);
         }
         
         this.transform.parent=enemy.transform;

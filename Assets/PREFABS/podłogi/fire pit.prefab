@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312867149371621212}
   - component: {fileID: 4372219616752785918}
-  - component: {fileID: 3803842312693828536}
+  - component: {fileID: 1938365539569500296}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.45
   m_Color: {r: 0.8773585, g: 0.6127844, b: 0.32694018, a: 1}
-  m_Intensity: 1.63
+  m_Intensity: 1
   m_LightVolumeOpacity: 0.22
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &3803842312693828536
+--- !u!114 &1938365539569500296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c06621f6d1c344399cd4f36f8e2a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 4372219616752785918}
+  maxRange: 1.5
+  minRange: 0.5
+  flickerSpeed: 1
 --- !u!1 &8399601759511834038
 GameObject:
   m_ObjectHideFlags: 0

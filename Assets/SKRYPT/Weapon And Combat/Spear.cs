@@ -30,6 +30,7 @@ public class Spear : BaseWeapon
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward );
             }
         }
+    
         
     }
     public override void Attack(PlayerCombat controller)
@@ -44,7 +45,8 @@ public class Spear : BaseWeapon
         PickUped=false;
         flying=true;
         rb.isKinematic = false;
-       // pc.enabled=true;
+        pc.enabled=true;
+        coll.enabled=false;
         //rb.bodyType=RigidbodyType2D=Dynamic;
         
     }
@@ -53,22 +55,22 @@ public class Spear : BaseWeapon
         base.PickupWepaon();
         flying=false;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        //pc.enabled=false;
+        pc.enabled=false;
         hasHit=false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(flying && collision.gameObject.tag!="Player");
+        if(flying && collision.gameObject.tag!="Player" && !hasHit);
         {
             hasHit=true;
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
-            hitEnemies = Physics2D.OverlapCircleAll(Handle.transform.position, attackRange, enemyLayers);
-            foreach (Collider2D enemy in hitEnemies)         
-            {
-                Effects(enemy);
-            }
+            collision.gameObject.GetComponent<Health>()?.TakeDamage(attackdamage+info.damage);   
+            Effects(collision);
+            flying=false;
+            coll.enabled=true;
         }
+        
 
         
         

@@ -12,6 +12,7 @@ public class Spear : BaseWeapon
     public Rigidbody2D rb;
 
     public Collider2D[] hitEnemies;
+    //public ParticleSystem HitParticle;
     public void Update()
     {
         if ( PickUped&& flying==false )

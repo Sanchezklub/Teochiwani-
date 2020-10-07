@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour {
 	private float targ_x;
 	private float targ_y;
 
-    //public ParticleSystem HitParticle;
+    public ParticleSystem HitParticle;
 
     public Vector3 target;
 	Vector2 moveDirection;
@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
 		hitInfo.GetComponent<Health>()?.TakeDamage(damage);
-
+        HitParticle.Play();
 	// tak jak wyzej 	Instantiate(impactEffect, transform.position, transform.rotation);
 		Destroy(gameObject);
 	}

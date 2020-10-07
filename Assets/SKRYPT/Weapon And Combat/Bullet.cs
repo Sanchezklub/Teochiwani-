@@ -44,8 +44,7 @@ public class Bullet : MonoBehaviour {
 	{
 		hitInfo.GetComponent<Health>()?.TakeDamage(damage);
         HitParticle.Play();
-	// tak jak wyzej 	Instantiate(impactEffect, transform.position, transform.rotation);
-		Destroy(gameObject);
+        // tak jak wyzej 	Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
 	}
-	
 }

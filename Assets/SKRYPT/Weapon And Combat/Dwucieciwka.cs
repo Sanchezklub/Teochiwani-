@@ -44,8 +44,10 @@ public class Dwucieciwka : BaseWeapon
         Debug.Log("Bow :: Attack() - Player attacked with bow");
         GameObject newArrow = Instantiate(bulletPrefab, new Vector3(AttackPoint.position.x, AttackPoint.position.y-1, AttackPoint.position.z ), AttackPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        newArrow.GetComponent<Strzala>().weapon = this;
         GameObject newArrow1 = Instantiate(bulletPrefab, new Vector3(AttackPoint.position.x, AttackPoint.position.y+1, AttackPoint.position.z ), AttackPoint.rotation);
         newArrow1.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+        newArrow1.GetComponent<Strzala>().weapon = this;
         AudioManager.instance.Play("Bow");
 
     }

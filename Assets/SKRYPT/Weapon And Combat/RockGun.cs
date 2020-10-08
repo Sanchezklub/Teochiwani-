@@ -15,6 +15,7 @@ public class RockGun : BaseWeapon
         AudioManager.instance.Play("Rock Gun");
         GameObject newArrow =Instantiate(bulletPrefab, AttackPoint.position, AttackPoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+         newArrow.GetComponent<Strzala>().weapon = this;
     }
     public  void AdditonalVoid(PlayerCombat controller)
     {

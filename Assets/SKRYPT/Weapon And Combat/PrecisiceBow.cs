@@ -62,6 +62,7 @@ public class PrecisiceBow : BaseWeapon
         Debug.Log("Bow :: Attack() - Player attacked with bow");
         GameObject newArrow = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
+         newArrow.GetComponent<Strzala>().weapon = this;
         AudioManager.instance.Play("Bow");
 
     }

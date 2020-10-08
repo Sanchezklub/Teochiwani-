@@ -68,11 +68,11 @@ public class Strzala : MonoBehaviour
         PoisonCount = weapon.PoisonCount;
         PoisonTimeBetween =weapon.PoisonTimeBetween;
 
-        if(Poison)
+        if(weapon.EffectPoison)
         {
             Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);
         }
-        if(Fire)    
+        if(weapon.EffectFire)    
         {
             Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);
             firelight.SetActive(true);

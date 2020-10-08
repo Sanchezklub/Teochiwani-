@@ -48,6 +48,7 @@ public class Spear : BaseWeapon
         rb.isKinematic = false;
         pc.enabled=true;
         coll.enabled=false;
+        trail.emitting=true;
         //rb.bodyType=RigidbodyType2D=Dynamic;
         
     }
@@ -58,6 +59,7 @@ public class Spear : BaseWeapon
         rb.bodyType = RigidbodyType2D.Kinematic;
         pc.enabled=false;
         hasHit=false;
+        trail.emitting=false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

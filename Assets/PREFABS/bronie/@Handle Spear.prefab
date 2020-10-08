@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 2877972818628393066}
   - component: {fileID: 2877972818628393061}
   - component: {fileID: 2877972818628393060}
-  - component: {fileID: 5962213113239296479}
+  - component: {fileID: 9044342432027694435}
   m_Layer: 10
   m_Name: wlocznia gracza
   m_TagString: Untagged
@@ -172,7 +172,7 @@ MonoBehaviour:
   AttackPoint: {fileID: 0}
   attackRange: 5
   attackdamage: 15
-  trail: {fileID: 0}
+  trail: {fileID: 9044342432027694435}
   info: {fileID: 0}
   Attacking: 0
   EnemyCounter: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   AttackSound: {fileID: 0}
   audio: {fileID: 2877972818628393066}
   EnemyWas: 0
-  weaponSexType: 0
+  weaponSexType: 1
   AttackAnimationType: 6
   EnemyId: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   LaunchForce: 60
@@ -398,7 +398,7 @@ PolygonCollider2D:
       - {x: 2.79, y: -0.14999999}
       - {x: 2.9199998, y: 0.06}
       - {x: 3, y: 0.049999997}
---- !u!96 &5962213113239296479
+--- !u!96 &9044342432027694435
 TrailRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
@@ -406,7 +406,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2877972818628393057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -417,7 +417,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -437,8 +437,8 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Time: 5
+  m_SortingOrder: 21
+  m_Time: 0.35
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -454,14 +454,23 @@ TrailRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.99557495
+        value: 0.50486755
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 0.12853521, g: 0.9339623, b: 0, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -476,8 +485,8 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 12336
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -485,13 +494,13 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    numCornerVertices: 0
+      m_NumAlphaKeys: 3
+    numCornerVertices: 8
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
-    shadowBias: 0.5
-    generateLightingData: 0
-  m_MinVertexDistance: 0.1
+    textureMode: 2
+    shadowBias: 0.47
+    generateLightingData: 1
+  m_MinVertexDistance: 0.06
   m_Autodestruct: 0
   m_Emitting: 1

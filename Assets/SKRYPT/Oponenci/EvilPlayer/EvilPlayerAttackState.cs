@@ -26,5 +26,8 @@ public class EvilPlayerAttackState : BaseState<EvilPlayerBrain>
     {
         GameObject projectile = GameObject.Instantiate(brain.SpearPrefab, brain.throwPosition.position, Quaternion.identity);
         projectile.GetComponent<Bullet>().target = tempTarget;
+        brain.animator.SetBool("IsAttacking", true);
+        brain.animator.SetBool("IsAttackingThrow", true);
+        brain.StartFollow();
     }
 }

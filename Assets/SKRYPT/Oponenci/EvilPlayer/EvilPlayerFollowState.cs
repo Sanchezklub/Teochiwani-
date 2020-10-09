@@ -45,10 +45,14 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
     {
         base.UpdateState();
         float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition));
-        if (distance < brain.AttackDist || (distance < brain.RangedAttackDist && (brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingRanged || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingShoot || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingThrow)))
+        if (brain.combat.currentWeapon != null)
         {
-            brain.StartAttack();
+            if (distance < brain.AttackDist || (distance < brain.RangedAttackDist && (brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingRanged || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingShoot || brain.combat.currentWeapon.AttackAnimationType == BaseWeapon.AnimationType.IsAttackingThrow)))
+            {
+                brain.StartAttack();
+            }
         }
+
 
         if(Physics2D.Raycast(brain.RaycastTransform.position, Vector2.right, 7f, brain.WhatIsGround))
         {
@@ -91,7 +95,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
                 Flip();
             }
             brain.rb.velocity = new Vector2(-1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
-            brain.animator.SetFloat("Speed", brain.rb.velocity.x);
+            brain.animator.SetFloat("Speed", Mathf.Abs(brain.rb.velocity.x));
         }
         else if (PositionDifference <= 0)
         {

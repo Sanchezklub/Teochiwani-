@@ -16,8 +16,12 @@ public class EvilPlayerLoader : MonoBehaviour
             {
                 GameObject weap = Instantiate(SaveSystem.Instance.Dictionary.GetItemObjects(GameController.instance.DataStorage.EvilPlayerInfo.currentweaponID), transform.position, Quaternion.identity);
                 BaseWeapon weapScript = weap.GetComponentInChildren<BaseWeapon>();
-                weapScript.ModId = GameController.instance.DataStorage.EvilPlayerInfo.currentweaponModID;
-                combat.ChangeWeapon(weapScript);
+                if(weapScript != null)
+                {
+                    weapScript.ModId = GameController.instance.DataStorage.EvilPlayerInfo.currentweaponModID;
+                    combat.ChangeWeapon(weapScript);
+                }
+
             }
 
             foreach (int id in GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs)

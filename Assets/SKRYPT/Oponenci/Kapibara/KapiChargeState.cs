@@ -9,7 +9,7 @@ public class KapiChargeState : BaseState<KapiBrain>
     private GameObject player;
     Rigidbody2D enemyRigidBody2D;
     private Material OldMaterial;
-
+    private bool IsCharging = false;
     float PositionDifference;
     public override void InitState(KapiBrain controller)
     {
@@ -24,17 +24,17 @@ public class KapiChargeState : BaseState<KapiBrain>
         {
             brain.ChargeHitbox.SetActive(true);
         }
+        brain.Attacking += StartCharge;
+        brain.LeaveFightState += LeaveFightState;
 
         brain.enemyAnimator.SetBool("isCharging", true);
         brain.enemyAnimator.SetBool("isIdle", false);
+        AudioManager.instance.Play("Capybara Scratch");
         //brain.SoundAttack();
-        AudioManager.instance.Play("Capybara Attack");
-        StartCharge();
+        //StartCharge();
     }
-
-    public void StartCharge()
+    public void FacePlayer()
     {
-
         PositionDifference = brain.transform.position.x - player.transform.position.x;
         if (PositionDifference >= 0)
         {
@@ -52,7 +52,12 @@ public class KapiChargeState : BaseState<KapiBrain>
             }
             enemyRigidBody2D.velocity = new Vector2(1 * brain.speed, enemyRigidBody2D.velocity.y);
         }
+    }
+    public void StartCharge()
+    {
         TurnRed();
+        AudioManager.instance.Play("Capybara Attack");
+        IsCharging = true;
         /*
         foreach(GameObject limb in brain.health.Limbs)
         {
@@ -69,7 +74,7 @@ public class KapiChargeState : BaseState<KapiBrain>
 
     void TurnRed()
     {
-        Debug.Log("Kapibara attempted to turn red");
+        //Debug.Log("Kapibara attempted to turn red");
         foreach (GameObject limb in brain.health.Limbs)
         {
             OldMaterial = limb.GetComponent<SpriteRenderer>().material;
@@ -90,7 +95,10 @@ public class KapiChargeState : BaseState<KapiBrain>
 
     public override void UpdateState()
     {
-        KeepCharging();
+        if (IsCharging)
+        {
+            KeepCharging();
+        }
         DistanceCheck();
     }
 
@@ -109,15 +117,22 @@ public class KapiChargeState : BaseState<KapiBrain>
     {
         if( Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition )> brain.StopChargeDist)
         {
-            brain.StartChannelling();
+            //brain.StartChannelling();
+            brain.enemyAnimator.SetBool("isStopping", true);
         }
+    }
+
+    void LeaveFightState()
+    {
+            brain.StartPatrol();
     }
 
     public override void DeinitState(KapiBrain controller)
     {
         base.DeinitState(controller);
         brain.ChargeHitbox.SetActive(false);
-        //brain.enemyAnimator.SetBool("Idle", true);
+        brain.enemyAnimator.SetBool("isCharging", false);
+        brain.enemyAnimator.SetBool("isStopping", false);
         //brain.enemyAnimator.SetBool("Charge", false);
         foreach (GameObject limb in brain.health.Limbs)
         {

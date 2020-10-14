@@ -22,7 +22,7 @@ public class KapiPatrolState : BaseState<KapiBrain>
         player = GameObject.Find("Player");
         controller.Attacking += DamageTaken;
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
-        brain.enemyAnimator.SetBool("isCharging", true);
+        brain.enemyAnimator.SetBool("isWalking", true);
         brain.enemyAnimator.SetBool("isIdle", false);
 
     }
@@ -41,7 +41,7 @@ public class KapiPatrolState : BaseState<KapiBrain>
         
         if (distance < brain.StartFollowDist)
         {
-            brain.StartChannelling();
+            brain.StartCharge();
         }
 
 
@@ -76,6 +76,7 @@ public class KapiPatrolState : BaseState<KapiBrain>
     public override void DeinitState(KapiBrain controller)
     {
         base. DeinitState(controller);
+        brain.enemyAnimator.SetBool("isWalking", false);
     }
 
     void Flip()

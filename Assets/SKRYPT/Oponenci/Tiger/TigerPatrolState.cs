@@ -25,7 +25,7 @@ public class TigerPatrolState : BaseState<TigerBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         brain.enemyAnimator.SetBool("IsPatrolling", true);
         brain.enemyAnimator.SetBool("IsAttacking", false);
-      
+        //brain.head.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1 ,1);
 
     }
 

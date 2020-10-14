@@ -31,6 +31,8 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public AudioClip Deathsound;
     public AudioClip Attacksound;
 
+    public GameObject ExclamationMark;
+    //public GameObject head;
     private void Start()
     {
         StartPatrol();
@@ -94,6 +96,16 @@ public class TigerBrain : BaseBrain<TigerBrain>
     public void SoundAttack()
     {
         AudioManager.instance.Play("Tiger Attack");
+    }
+    public void ExclamationMarkOn()
+    {
+        ExclamationMark.SetActive(true);
+         StartCoroutine (TurnOff());
+    }
+    IEnumerator TurnOff()
+    {
+        yield return new WaitForSeconds(0.5f);
+        ExclamationMark.SetActive(false);
     }
 }
 

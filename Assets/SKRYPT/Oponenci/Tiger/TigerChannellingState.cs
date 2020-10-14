@@ -20,6 +20,7 @@ public class TigerChannellingState : BaseState<TigerBrain>
         brain.enemyAnimator.SetBool("IsCharging", true);
         brain.enemyAnimator.SetBool("IsPatrolling", false);
         ChannellingTime = 0;
+        //brain.head.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0 ,1);
     }
 
     void FaceTowardsPlayer()
@@ -43,6 +44,7 @@ public class TigerChannellingState : BaseState<TigerBrain>
     public override void UpdateState()
     {
         TimeCheck();
+        FaceTowardsPlayer();
     }
 
     private void TimeCheck()

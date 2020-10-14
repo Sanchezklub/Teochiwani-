@@ -29,8 +29,9 @@ public class TigerAtackState : BaseState<TigerBrain>
         enemyRigidBody2D = brain.GetComponent<Rigidbody2D>();
         FaceTowardsPlayer();
         controller.Attacking += dmg;
-        controller.LeaveFightState += speniaj;
+        controller.LeaveFightState += AttemptLeavingFightState;
         twojstary = false;
+        //brain.head.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0 ,1);
 
     }
 
@@ -87,13 +88,27 @@ void Flip()
         brain.FacingRight = !brain.FacingRight;
     }
 
-void speniaj()
+
+    public void AttemptLeavingFightState()
     {
-        brain.StartPatrol();
+        float distance = Mathf.Abs(Vector3.Distance(brain.transform.position, player.transform.position));
+        //Debug.Log("Attempted to leave FightState. Distance was:" + distance);
+        if (distance > brain.StartFollowDist)
+        {
+            //Debug.Log("left fightstate");
+            brain.StartPatrol();
+        }
+        else
+        {
+            brain.StartChannelling();
+
+        }
     }
 
 public override void DeinitState(TigerBrain controller)
     {
+        brain.Attacking -= dmg;
+        brain.LeaveFightState -= AttemptLeavingFightState;
         base.DeinitState(controller);
         brain.enemyAnimator.SetBool("IsPatrolling", true);
         brain.enemyAnimator.SetBool("IsAttacking", false);

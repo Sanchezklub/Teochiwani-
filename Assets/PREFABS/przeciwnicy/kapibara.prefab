@@ -508,12 +508,14 @@ MonoBehaviour:
     m_Bits: 2167040
   FacingRight: 1
   damage: 20
-  speed: 5
-  StartFollowDist: 18
-  StopChargeDist: 26
+  speed: 10
+  StartFollowDist: 38
+  StopChargeDist: 30
   enemyAnimator: {fileID: 1589249221}
   ChannellTime: 3
   ChargeHitbox: {fileID: 4344722680389358005}
+  health: {fileID: 851806345416005446}
+  FlashMaterial: {fileID: 2100000, guid: 79fbeacdde7c91b47ad1ec6a6e3a0608, type: 2}
   audio: {fileID: 5421554163552070278}
   Soundcharge: {fileID: 8300000, guid: 979399b7f9212864bb9ffd93f6f4134d, type: 3}
   Attacksound: {fileID: 8300000, guid: fc26c680a48454b49b32dafab07be7da, type: 3}
@@ -550,6 +552,7 @@ MonoBehaviour:
   - {fileID: 6078092763218667099}
   LightningEffectMaterial: {fileID: 2100000, guid: 56848eeb8beb5114fba6a313c95f884b,
     type: 2}
+  FlashMaterial: {fileID: 0}
   FireEffectMaterial: {fileID: 2100000, guid: 3084980ba2d78914c8c54484452ee0ce, type: 2}
   enemyAnimator: {fileID: 1589249221}
   IsHuman: 0

@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
 
     public GameObject[] Limbs;
     public Material LightningEffectMaterial;
+    public Material FlashMaterial;
     public Material FireEffectMaterial;
     Material NormalMaterial;
     bool LightningIsActive=false;

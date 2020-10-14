@@ -19,6 +19,8 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public GameObject ChargeHitbox;
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
+    public EnemyHealth health;
+    public Material FlashMaterial;
 
     public AudioSource audio;
 

@@ -53,7 +53,7 @@ public class LevelGeneration : MonoBehaviour
                 randx1+=1; 
                 }
         }
-        Vector2 newPos3 = new Vector2(StartingPosition.x+randx1*moveAmountx,StartingPosition.y+4+randy1*moveAmounty);
+        Vector2 newPos3 = new Vector2(StartingPosition.x+randx1*moveAmountx,StartingPosition.y+7+randy1*moveAmounty);
         transform.position = newPos3;
         Instantiate(Portal1, transform.position, Quaternion.identity);
     }

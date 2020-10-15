@@ -40,7 +40,7 @@ public override void UpdateState()
         if (twojstary == false)
         {
             //to go nie masz
-            float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+            float distance = Mathf.Abs(brain.transform.position.x - player.transform.position.x);
             Speed = distance / AnimationDuration;
             if (brain.FacingRight)
                 {

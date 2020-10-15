@@ -39,9 +39,10 @@ public class TigerPatrolState : BaseState<TigerBrain>
     {
         base.UpdateState();
 
-        float distance = Vector3.Distance(brain.transform.position, player.transform.position);
+        float distance = Mathf.Abs(brain.transform.position.x - player.transform.position.x);
+        //Mathf.Abs(brain.transform.position.x - player.transform.position.x);
 
-        if (distance < brain.StartFollowDist)
+        if (distance < brain.StartFollowDist && Mathf.Abs(brain.transform.position.y - player.transform.position.y)<10 )
         {
             brain.StartChannelling();
         }

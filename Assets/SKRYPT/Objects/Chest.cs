@@ -14,8 +14,9 @@ public class Chest : MonoBehaviour
     private int rand;
     public GameObject UIHELP;
     public GameObject Minimap;
-    
-    
+
+    public GameObject FallbackItem;
+    public GameObject FallbackWeapon;
     //private void Start()
     //{
         //objects = SaveSystem.Instance.saveContainer.itemsData.unlockedItems;
@@ -81,7 +82,25 @@ public class Chest : MonoBehaviour
                 Debug.Log(SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]);
             }
         }
-        GameObject loot = Instantiate(SaveSystem.Instance.Dictionary.ItemObjects[SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
-        loot.transform.parent = this.transform.parent;
+        if (SaveSystem.Instance.Dictionary.ItemObjects[SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]] != null)
+        {
+            GameObject loot = Instantiate(SaveSystem.Instance.Dictionary.ItemObjects[SaveSystem.Instance.saveContainer.itemsData.unlockedItems[rand]], new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity );
+            loot.transform.parent = this.transform.parent;
+
+        }
+        else
+        {
+            if (WeaponsOnly)
+            {
+                GameObject loot = Instantiate(FallbackWeapon, new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity);
+                loot.transform.parent = this.transform.parent;
+            }
+            else
+            {
+                GameObject loot = Instantiate(FallbackItem, new Vector2(transform.position.x, transform.position.y + 3), Quaternion.identity);
+                loot.transform.parent = this.transform.parent;
+            }
+            Debug.LogFormat("Debug item deployed. Id was {0}", rand);
+        }
     }
 }

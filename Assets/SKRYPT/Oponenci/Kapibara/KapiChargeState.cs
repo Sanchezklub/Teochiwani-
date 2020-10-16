@@ -32,6 +32,7 @@ public class KapiChargeState : BaseState<KapiBrain>
         AudioManager.instance.Play("Capybara Scratch");
         //brain.SoundAttack();
         //StartCharge();
+        Debug.Log("Capybara inited ChargeState");
     }
     public void FacePlayer()
     {
@@ -115,7 +116,7 @@ public class KapiChargeState : BaseState<KapiBrain>
     }
     void DistanceCheck()
     {
-        if( Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition )> brain.StopChargeDist)
+        if( (Vector3.Distance(brain.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition )> brain.StopChargeDist) || Physics2D.Raycast(brain.raycastTransform.position, brain.raycastTransform.right, 4f, brain.WhatIsGround))
         {
             //brain.StartChannelling();
             brain.enemyAnimator.SetBool("isStopping", true);
@@ -124,7 +125,7 @@ public class KapiChargeState : BaseState<KapiBrain>
 
     void LeaveFightState()
     {
-            brain.StartPatrol();
+        brain.StartPatrol();
     }
 
     public override void DeinitState(KapiBrain controller)

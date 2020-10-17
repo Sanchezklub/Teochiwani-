@@ -15,6 +15,7 @@ public class LevelGeneration : MonoBehaviour
     public GameObject Kupiec1;
     public Vector2 StartingPosition;
     public LevelData levelData;
+    public Vector2 portalPosition;
     //private void Start()
    //{
         /*Vector2 newPos14 = new Vector2(StartingPosition.x,StartingPosition.y);
@@ -56,6 +57,7 @@ public class LevelGeneration : MonoBehaviour
         Vector2 newPos3 = new Vector2(StartingPosition.x+randx1*moveAmountx,StartingPosition.y+7+randy1*moveAmounty);
         transform.position = newPos3;
         Instantiate(Portal1, transform.position, Quaternion.identity);
+        portalPosition = transform.position;
     }
      private void St()
      {

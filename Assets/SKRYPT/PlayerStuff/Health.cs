@@ -20,8 +20,9 @@ public class Health : MonoBehaviour
     public Material LightningEffectMaterial;
     public Material FlashMaterial;
     public Material FireEffectMaterial;
-    Material NormalMaterial;
+    public Material NormalMaterial;
     bool LightningIsActive=false;
+    bool FlamingIsActive=false;
     protected virtual void Start()
     {
         currentHealth=MaxHealth;
@@ -89,11 +90,12 @@ public class Health : MonoBehaviour
 
     IEnumerator FlameDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-         if( Limbs.Length !=0)
+         if( Limbs.Length !=0 && FlamingIsActive==false)
             {
+            FlamingIsActive=true;
                 foreach( GameObject limb in Limbs )
                 {
-                    NormalMaterial=limb.GetComponent<SpriteRenderer>().material;
+                   
                     limb.GetComponent<SpriteRenderer>().material=FireEffectMaterial;
                 }
             }
@@ -105,13 +107,14 @@ public class Health : MonoBehaviour
             TakeDamage(damage);
             EventController.instance.enemyEvents.CallOnFireDamageDealt(damage);
         }
-         if( Limbs.Length !=0  )
-            {
+        FlamingIsActive=false;
+        if( Limbs.Length !=0  )
+        {
                 foreach( GameObject limb in Limbs )
                 {
                    limb.GetComponent<SpriteRenderer>().material=NormalMaterial;
                 }
-            }
+        }
     }
 
     
@@ -134,7 +137,7 @@ public class Health : MonoBehaviour
             {
                 foreach( GameObject limb in Limbs )
                 {
-                    NormalMaterial=limb.GetComponent<SpriteRenderer>().material;
+                    //NormalMaterial=limb.GetComponent<SpriteRenderer>().material;
                     limb.GetComponent<SpriteRenderer>().material=LightningEffectMaterial;
                 }
             }

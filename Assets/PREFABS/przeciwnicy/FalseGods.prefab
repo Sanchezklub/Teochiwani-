@@ -136,6 +136,11 @@ MonoBehaviour:
   id: 0
   EffectParticle: []
   splashController: {fileID: 0}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
 --- !u!1 &6620807324931082466
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,9 +255,14 @@ MonoBehaviour:
   id: 0
   EffectParticle: []
   splashController: {fileID: -6398884429186956249}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   enemyAnimator: {fileID: 472562049}
   IsHuman: 0
-  IsBoss: 0
+  IsBoss: 1
   Drops: []
 --- !u!114 &-6398884429186956249
 MonoBehaviour:
@@ -348,6 +358,11 @@ MonoBehaviour:
   id: 0
   EffectParticle: []
   splashController: {fileID: 0}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
 --- !u!1001 &2444039764129419276
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -31,6 +31,9 @@ public class UIArrow : MonoBehaviour
             angle = 360 - Vector3.Angle(new Vector2(0, 1), Vector);
         }
         transform.rotation = Quaternion.Euler(0, 0, -angle);
-        //float dist = Vector3.Distance()
+        float dist = Vector3.Distance(GameController.instance.DataStorage.PlayerInfo.playerPosition, SaveSystem.Instance.levelGen.portalPosition);
+        float lerpedVal = Mathf.InverseLerp(2000, 50, dist);
+        float finalVal = Mathf.Lerp(6, 15, lerpedVal);
+        transform.localScale = new Vector3(finalVal, finalVal, 1);
     }
 }

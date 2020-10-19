@@ -18,18 +18,27 @@ public class UnlockedItem : MonoBehaviour
    // public int id;
     
     
-    [ContextMenu("Show Item")]
+    [ContextMenu("Test Show Item")]
+    public void TestShowItem()
+    {
+        StartCoroutine(TurnOFF());
+        UnlockBackground.SetActive(true);
+        var go = ItemDictionary.GetComponentInChildren<ID_dictionary>().GetItemObjects(3);
+        UnlockItemSprite.GetComponent<Image>().sprite = go.GetComponentInChildren<SpriteRenderer>().sprite;
+        UnlockText.GetComponent<TextMeshProUGUI>().text = go.GetComponentInChildren<BaseItem>().itemName;
+
+    }
     public void ShowItem(int id)
     {
-        StartCoroutine (TurnOFF());
+        StartCoroutine(TurnOFF());
         UnlockBackground.SetActive(true);
         var go = ItemDictionary.GetComponentInChildren<ID_dictionary>().GetItemObjects(id);
         UnlockItemSprite.GetComponent<Image>().sprite = go.GetComponentInChildren<SpriteRenderer>().sprite;
-        UnlockText.GetComponent<TextMeshProUGUI>().text= go.GetComponentInChildren<BaseItem>().itemName;
+        UnlockText.GetComponent<TextMeshProUGUI>().text = go.GetComponentInChildren<BaseItem>().itemName;
 
     }
 
-    
+
     IEnumerator TurnOFF()
     {
         

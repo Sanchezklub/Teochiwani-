@@ -14,6 +14,8 @@ public class ItemController : MonoBehaviour
 
         //Load
         Init();
+        EventController.instance.levelEvents.OnLevelEndedBasic += CheckConditions;
+        EventController.instance.playerEvents.OnPlayerDie += CheckConditions;
     }
 
     public void Init()
@@ -55,8 +57,12 @@ public class ItemController : MonoBehaviour
                 {
                     return;
                 }
-
                 SaveSystem.Instance.saveContainer.itemsData.AddItem(cond.itemToUnlockid);
+                if (unlockedItems.Contains(cond.itemToUnlockid))
+                {
+                    return;
+                }
+                unlockedItems.Add(cond.itemToUnlockid);
             }
         }
     }
@@ -80,6 +86,7 @@ public class ItemController : MonoBehaviour
                 
                 SaveSystem.Instance.saveContainer.itemsData.AddItem(cond.itemToUnlockid);
                 UnlockItem.GetComponent<UnlockedItem>().ShowItem(cond.itemToUnlockid);
+
             }
         }
     }

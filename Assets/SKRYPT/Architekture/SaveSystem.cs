@@ -12,6 +12,8 @@ public class SaveSystem : MonoBehaviour
     public RoomTracker roomTracker;
     public ID_dictionary Dictionary;
 
+    public ItemController itemDataController;
+
     public LevelGeneration levelGen;
 
     //public LevelGeneration levelGen;
@@ -78,14 +80,14 @@ public class SaveSystem : MonoBehaviour
                     LoadOldPlayerData(saveContainer);
                     LoadEnvironment(saveContainer);
                     LoadRooms(saveContainer);
-                    Debug.Log("save system 1");
+                    //Debug.Log("save system 1");
                     LoadPlayer(saveContainer);
-                    Debug.Log("save system 2");
+                    //Debug.Log("save system 2");
 
                 }
-                Debug.Log("save system 3");
+                //Debug.Log("save system 3");
                 stream.Close();
-                Debug.Log("save system 4");
+                //Debug.Log("save system 4");
                 //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
                 return 0;
 
@@ -302,6 +304,15 @@ public class SaveSystem : MonoBehaviour
     }
 
     */
+    public void LoadItemsData(SaveContainer LoadedSaveContainer)
+    {
+        itemDataController.unlockedItems = LoadedSaveContainer.itemsData.unlockedItems;
+    }
+
+    public void SaveItemsData()
+    {
+        saveContainer.itemsData.unlockedItems = itemDataController.unlockedItems;
+    }
 
     [ContextMenu("Test")]
     public void FullySaveGame()
@@ -317,6 +328,7 @@ public class SaveSystem : MonoBehaviour
         saveContainer.globalStatistics = new GlobalStatisticsDataScript(GlobalStatistics.instance);
         saveContainer.roundStatistics = new RoundStatisticsDataScript(RoundStatistics.instance);
         //saveContainer.statisticsData.roundData.SaveStatistics();
+        SaveItemsData();
 
         SaveGame();
     }
@@ -347,6 +359,7 @@ public class SaveSystem : MonoBehaviour
                 LoadOldPlayerData(saveContainer);
                 LoadGlobalStats(saveContainer);
                 //jeszcze ładowanie odblokowanych itemków jak będzie
+                LoadItemsData(saveContainer);
 
             }
             stream.Close();

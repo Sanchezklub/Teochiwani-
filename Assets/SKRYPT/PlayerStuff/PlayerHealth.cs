@@ -15,6 +15,7 @@ public class PlayerHealth : Health
     [SerializeField] private LevelDeleter deleter;
     private SplashController splash;
     private bool CanBeHit = true;
+    [SerializeField] private SpriteRenderer[] LimbSprites;
     [SerializeField] float InvincibleTime;
 
     protected override void Start()
@@ -100,11 +101,19 @@ public class PlayerHealth : Health
         }
     }
 
+    //public 
     public IEnumerator Invincibility()
     {
         CanBeHit = false;
+        foreach(SpriteRenderer sprite in LimbSprites)
+        {
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.7f);
+        }
         yield return new WaitForSeconds(InvincibleTime);
         CanBeHit = true;
-
+        foreach (SpriteRenderer sprite in LimbSprites)
+        {
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
+        }
     }
 }

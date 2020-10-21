@@ -43,7 +43,7 @@ public class BaseWeaponModifier : ScriptableObject
     private string DefaultWeaponName;
 
     // latwo dodawac damge i effekty zostaly attackspeed
-    public void Apply(BaseWeapon weapon)
+    public virtual void Apply(BaseWeapon weapon)
     {
 
         StoreBaseValues(weapon);
@@ -108,7 +108,7 @@ public class BaseWeaponModifier : ScriptableObject
         //weapon.itemName = NameChange +" "+ weapon.itemName;
     }
 
-    public void Remove(BaseWeapon weapon)
+    public virtual void Remove(BaseWeapon weapon)
     {
         weapon.BloodPrice = DefaultBloodPrice;
         weapon.CocaoPrice = DefaultCocaoPrice;

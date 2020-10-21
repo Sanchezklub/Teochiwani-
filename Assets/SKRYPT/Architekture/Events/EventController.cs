@@ -51,6 +51,7 @@ public class EventController : MonoBehaviour
         {
             OnPlayerDealDamageBasic?.Invoke();
             OnPlayerDealDamage?.Invoke(damage);
+            Debug.Log("Player Events :: Player dealt damage");
         }
 
         public UnityAction OnPlayerReceiveDamageBasic;

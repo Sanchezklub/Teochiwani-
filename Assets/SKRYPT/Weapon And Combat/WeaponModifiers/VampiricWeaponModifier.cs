@@ -7,16 +7,17 @@ public class VampiricWeaponModifier : BaseWeaponModifier
     void OnPlayerDealDamage(float damage)
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth+=damage;
+        Debug.Log("VampiricWeaponModifier :: Health was drained");
     }
-    // Start is called before the first frame update
-    void Start()
+    public override void Apply(BaseWeapon weapon)
     {
-        
+        base.Apply(weapon);
+        EventController.instance.playerEvents.OnPlayerDealDamage += OnPlayerDealDamage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Remove(BaseWeapon weapon)
     {
-        
+        base.Remove(weapon);
+        EventController.instance.playerEvents.OnPlayerDealDamage -= OnPlayerDealDamage;
     }
 }

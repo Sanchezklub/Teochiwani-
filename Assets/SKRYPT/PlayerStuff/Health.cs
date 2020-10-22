@@ -158,8 +158,9 @@ public class Health : MonoBehaviour
 
     public virtual void ShowFloatingText(float damage)
     {
+        float roundedDmg = Mathf.Round(damage * 100)/100;
         var go = Instantiate(FloatingTextPrefab, new Vector2( transform.position.x, transform.position.y+3), Quaternion.identity);
-        go.GetComponent<TextMesh>().text = damage.ToString();
+        go.GetComponent<TextMesh>().text = roundedDmg.ToString();
         if (currentHealth <= 0)
         {
             go.GetComponent<TextMesh>().color=new Color( (221/255), (31/255), (13/255), 1);

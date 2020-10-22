@@ -73,7 +73,7 @@ public class CharacterController2D : MonoBehaviour
     public float dashSpeed;
     public float distanceBetweenImages;
     public float dashCoolDown;
-    public float LadderSpeed;
+
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -99,6 +99,7 @@ public class CharacterController2D : MonoBehaviour
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
         BasicSpeed = GameController.instance.DataStorage.PlayerInfo.speed;
+        
     }
 
     // Update is called once per frame
@@ -116,6 +117,7 @@ public class CharacterController2D : MonoBehaviour
         AlterGravity();
         currentspeed = GameController.instance.DataStorage.PlayerInfo.speed;
         anim.SetFloat("Speed1", currentspeed/BasicSpeed);
+        
     }
 
     private void FixedUpdate()
@@ -510,11 +512,11 @@ public class CharacterController2D : MonoBehaviour
             {
                 case -1:
                     rb.isKinematic = false;
-                    rb.velocity = new Vector2(rb.velocity.x, -LadderSpeed);
+                    rb.velocity = new Vector2(rb.velocity.x, -currentspeed/2);
                     break;
                 case 1:
                     rb.isKinematic = false;
-                    rb.velocity = new Vector2(rb.velocity.x, LadderSpeed);
+                    rb.velocity = new Vector2(rb.velocity.x, currentspeed/2);
                     break;
                 case 0:
                     rb.velocity = new Vector2(rb.velocity.x, 0);

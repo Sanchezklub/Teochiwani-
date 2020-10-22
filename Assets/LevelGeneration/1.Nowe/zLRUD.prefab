@@ -422,6 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7877792173568432253}
   - component: {fileID: 3309699178910826027}
+  - component: {fileID: 6317853345847444954}
   m_Layer: 0
   m_Name: zLRUD
   m_TagString: Level_generation
@@ -459,6 +460,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 17
+--- !u!114 &6317853345847444954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877792173568432254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0885bb15f3e29ec459b882b1e25b111e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunkComponents:
+  - {fileID: 3082990913343510750}
+  - {fileID: 3732846993268172070}
+  - {fileID: 3036266285907507427}
+  distance: 0
+  d2: 380
 --- !u!1 &8652295358474715899
 GameObject:
   m_ObjectHideFlags: 0

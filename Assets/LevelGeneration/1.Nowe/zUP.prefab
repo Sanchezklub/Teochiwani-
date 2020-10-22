@@ -285,6 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3602676721441033912}
   - component: {fileID: 5326596883172672389}
+  - component: {fileID: 6341093842351298957}
   m_Layer: 0
   m_Name: zUP
   m_TagString: Level_generation
@@ -322,6 +323,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 33
+--- !u!114 &6341093842351298957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3602676721441033915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0885bb15f3e29ec459b882b1e25b111e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunkComponents:
+  - {fileID: 8542819711814676006}
+  - {fileID: 8531003770974309915}
+  - {fileID: 8025821138972816355}
+  distance: 0
+  d2: 380
 --- !u!1 &4480112041844071932
 GameObject:
   m_ObjectHideFlags: 0

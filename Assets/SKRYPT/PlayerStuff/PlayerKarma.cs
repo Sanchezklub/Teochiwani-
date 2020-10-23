@@ -6,16 +6,17 @@ using UnityEngine.UI;
 public class PlayerKarma : MonoBehaviour
 {
     
-    public Slider karmabar;
+    public SimpleSlider karmabar;
     // Start is called before the first frame update
     void Start()
     {
-        karmabar.value = 25;
+        karmabar.targetValue = 0.5f;
+        EventController.instance.enemyEvents.OnEnemyDiedBasic += OnEnemyDiedBasic;
     }
 
     // Update is called once per frame
     void OnEnemyDiedBasic()
     {
-        karmabar.value = GameController.instance.DataStorage.PlayerInfo.karma;
+        karmabar.targetValue = (GameController.instance.DataStorage.PlayerInfo.karma)/50;
     }
 }

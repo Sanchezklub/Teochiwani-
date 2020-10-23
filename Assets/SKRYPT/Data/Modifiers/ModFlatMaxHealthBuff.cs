@@ -13,7 +13,7 @@ public class ModFlatMaxHealthBuff : BaseModifier
     {
         base.Init(OnCompletedCallback);
         info.maxhealth += MaxHealthBuff;
-        EventController.instance.playerEvents.CallOnMaxhealthValueChange(MaxHealthBuff);
+        EventController.instance.playerEvents.CallOnHealthValueChange();
         info.DieAction += PlayerDied;
     }
 

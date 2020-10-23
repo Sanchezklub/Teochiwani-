@@ -16,7 +16,7 @@ public class Cheats : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 GameController.instance.DataStorage.PlayerInfo.maxhealth += 100;
-                EventController.instance.playerEvents.CallOnMaxhealthValueChange(100);
+                EventController.instance.playerEvents.CallOnHealthValueChange();
                 GameController.instance.DataStorage.PlayerInfo.currenthealth += 100;
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))

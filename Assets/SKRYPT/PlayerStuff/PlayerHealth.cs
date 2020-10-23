@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : Health
 {
     private Animator PlayerAnimator;
-    public Slider healthBar;
+    public SimpleSlider healthBar;
     public GameObject MainMenu;
     [SerializeField] private GameObject YouDiedScreen;
     public Vector2 StartingPosition;
@@ -21,14 +21,14 @@ public class PlayerHealth : Health
     protected override void Start()
     {
         GameController.instance.DataStorage.PlayerInfo.currenthealth = GameController.instance.DataStorage.PlayerInfo.maxhealth;
-        healthBar.value = GameController.instance.DataStorage.PlayerInfo.maxhealth;
+        //healthBar = GameController.instance.DataStorage.PlayerInfo.maxhealth;
         PlayerAnimator = GetComponent<Animator>();
         //splash = GetComponent<SplashController>();
     }
 
     void Update()
     {
-        healthBar.value = GameController.instance.DataStorage.PlayerInfo.currenthealth;
+        healthBar.targetValue = GameController.instance.DataStorage.PlayerInfo.currenthealth/GameController.instance.DataStorage.PlayerInfo.maxhealth;
         if ( GameController.instance.DataStorage.PlayerInfo.currenthealth > GameController.instance.DataStorage.PlayerInfo.maxhealth)
         {
             

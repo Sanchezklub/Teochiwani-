@@ -112,11 +112,11 @@ public class EventController : MonoBehaviour
         }
 
         public UnityAction OnMaxhealthValueChangeBasic;
-        public UnityAction<float> OnMaxhealthValueChange;
-        public void CallOnMaxhealthValueChange(float amount)
+        //public UnityAction<float> OnMaxhealthValueChange;
+        public void CallOnHealthValueChange()
         {
             OnMaxhealthValueChangeBasic?.Invoke();
-            OnMaxhealthValueChange?.Invoke(amount);
+            //OnMaxhealthValueChange?.Invoke(amount);
         }
 
 

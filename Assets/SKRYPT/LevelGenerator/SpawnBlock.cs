@@ -39,6 +39,16 @@ public class SpawnBlock : MonoBehaviour
 
     public GameObject[] Sky;
     public GameObject[] SkyCorner;
+    public GameObject[] SkyGrzes2;
+    public GameObject[] SkyGrzes1;
+    public GameObject[] SkyGrzes1a;
+    public GameObject[] SkyGrzesD;
+    public GameObject[] SkyGrzesC;
+    public GameObject[] SkyGrzesB;
+    public GameObject[] SkyGrzes3;
+    public GameObject[] SkyGrzes0a;
+    public GameObject[] SkyGrzes0b;
+    public GameObject[] SkyGrzes0c;
 
     public GameObject Klocek;
     public GameObject KlocekNiebo;
@@ -260,6 +270,46 @@ public class SpawnBlock : MonoBehaviour
                 else if ( klocek == true)
                 {
                     Instantiate(KlocekNiebo, transform.position, spawnRotation,transform);
+                }
+                else if ( grzes2 ==true)
+                {               
+                    Instantiate(SkyGrzes2[Random.Range(0, SkyGrzes2.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1 ==true)
+                {
+                    Instantiate(SkyGrzes1[Random.Range(0, SkyGrzes1.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesD ==true)
+                {
+                    Instantiate(SkyGrzesD[Random.Range(0, SkyGrzesD.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesC ==true)
+                {
+                    Instantiate(SkyGrzesC[Random.Range(0, SkyGrzesC.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesB ==true)
+                {
+                   Instantiate(SkyGrzesB[Random.Range(0, SkyGrzesB.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1a ==true)
+                {
+                    Instantiate(SkyGrzes1a[Random.Range(0, SkyGrzes1a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0b ==true)
+                {
+                    Instantiate(SkyGrzes0b[Random.Range(0, SkyGrzes0b.Length)], transform.position, spawnRotation,transform);             
+                }
+                else if ( grzes0a ==true)
+                { 
+                    Instantiate(SkyGrzes0a[Random.Range(0, SkyGrzes0a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes3 ==true)
+                { 
+                    Instantiate(SkyGrzes3[Random.Range(0, SkyGrzes3.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0c ==true)
+                { 
+                    Instantiate(SkyGrzes0c[Random.Range(0, SkyGrzes0c.Length)], transform.position, spawnRotation,transform);
                 }
                 else 
                 {

@@ -24,7 +24,10 @@ public class SaveSystem : MonoBehaviour
 
     public SaveContainer saveContainer;
 
-    public GameObject LoadedObjectHolder;
+    [SerializeField] GameObject LoadedEnemiesHolder;
+    [SerializeField] GameObject LoadedEnvirosHolder;
+    [SerializeField] GameObject LoadedRoomsHolder;
+    [SerializeField] GameObject LoadedItemsHolder;
     public GameObject MainMenu;
 
     public GameObject EvilPlayer;
@@ -121,7 +124,7 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
-                enemy.transform.parent = LoadedObjectHolder.transform;
+                enemy.transform.parent = LoadedEnemiesHolder.transform;
             }
         }
         EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
@@ -136,7 +139,7 @@ public class SaveSystem : MonoBehaviour
             {
                 GameObject item = Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
                 item.GetComponentInChildren<BaseItem>().ModId = loadedItem.ModId;
-                item.transform.parent = LoadedObjectHolder.transform;
+                item.transform.parent = LoadedItemsHolder.transform;
             }
         }
     }
@@ -166,7 +169,7 @@ public class SaveSystem : MonoBehaviour
             if (EnviroPrefab != null)
             {
                 GameObject enviro = Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
-                enviro.transform.parent = LoadedObjectHolder.transform;
+                enviro.transform.parent = LoadedEnvirosHolder.transform;
             }
         }
     }
@@ -195,7 +198,7 @@ public class SaveSystem : MonoBehaviour
             if (RoomPrefab != null)
             {
                 GameObject room = Instantiate(RoomPrefab, loadedRoom.position, Quaternion.identity);
-                room.transform.parent = LoadedObjectHolder.transform;
+                room.transform.parent = LoadedRoomsHolder.transform;
             }
         }
     }

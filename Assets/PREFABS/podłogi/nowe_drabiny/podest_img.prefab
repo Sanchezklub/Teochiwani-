@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4288940308484471032}
   - component: {fileID: 6910577739804261779}
   - component: {fileID: 4288940308484471034}
+  - component: {fileID: -1574603434734442630}
   m_Layer: 21
   m_Name: podest_img
   m_TagString: Untagged
@@ -142,3 +143,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 1
+--- !u!114 &-1574603434734442630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288940308484471035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10

@@ -241,6 +241,26 @@ PrefabInstance:
       propertyPath: itemDataController
       value: 
       objectReference: {fileID: 397770189}
+    - target: {fileID: 9026327015831068245, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: LoadedEnemiesHolder
+      value: 
+      objectReference: {fileID: 1123232090}
+    - target: {fileID: 9026327015831068245, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: LoadedEnvirosHolder
+      value: 
+      objectReference: {fileID: 2132435689}
+    - target: {fileID: 9026327015831068245, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: LoadedRoomsHolder
+      value: 
+      objectReference: {fileID: 941252242}
+    - target: {fileID: 9026327015831068245, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: LoadedItemsHolder
+      value: 
+      objectReference: {fileID: 1652269769}
     - target: {fileID: 9026327015831068246, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
       propertyPath: m_Name
@@ -253,6 +273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
+      propertyPath: EnviroObjects.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
       propertyPath: WeaponModifiers.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 39925870dad7cb147b227c75a8064ba3,
@@ -262,6 +287,12 @@ PrefabInstance:
       propertyPath: ItemObjects.Array.data[122]
       value: 
       objectReference: {fileID: 2877972818275242472, guid: af3bc179729de32439be2ee33a68d8e5,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnviroObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 4288940308484471035, guid: d7a1bab9685c9864781b87c54a033824,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348e9e5328ba2044cac2fcd5d75ee55d, type: 3}
@@ -2154,9 +2185,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722210712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 242.11646, y: 202.85779, z: -313.6228}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1123232091}
+  - {fileID: 2132435690}
+  - {fileID: 941252243}
+  - {fileID: 1652269770}
   m_Father: {fileID: 499199099}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2256,6 +2291,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &941252242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941252243}
+  m_Layer: 0
+  m_Name: LoadedRoomsHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &941252243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941252242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722210713}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &962104839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5745938716232012629, guid: ffe36c1a281f5674c9055b4abb39d33f,
@@ -2444,6 +2509,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1123232090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123232091}
+  m_Layer: 0
+  m_Name: LoadedEnemiesHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123232091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123232090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722210713}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1143793815 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5126928967338796175, guid: 903297f280de62a47aec8c17223b8423,
@@ -8412,6 +8507,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1eacc18e6a1674dace47576686657a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1652269769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652269770}
+  m_Layer: 0
+  m_Name: LoadedItemsHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652269770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652269769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722210713}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1673243721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2844803250674383779, guid: 6f2e3fbfeb06bb3458c1cab17ea633a4,
@@ -9947,6 +10072,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeCounter: {fileID: 1836639891}
+--- !u!1 &2132435689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132435690}
+  m_Layer: 0
+  m_Name: LoadedEnvirosHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132435690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132435689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722210713}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154892037600727038
 GameObject:
   m_ObjectHideFlags: 0

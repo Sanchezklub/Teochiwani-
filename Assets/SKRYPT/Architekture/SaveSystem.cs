@@ -245,6 +245,8 @@ public class SaveSystem : MonoBehaviour
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
         Debug.Log("LoadedPosition was" +pos);
+        GameController.instance.DataStorage.PlayerInfo.cocoa = LoadedSaveContainer.playerData.cocoa;
+        GameController.instance.DataStorage.PlayerInfo.blood = LoadedSaveContainer.playerData.blood;
         GameController.instance.DataStorage.PlayerInfo.currenthealth = LoadedSaveContainer.playerData.currenthealth;
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
     }

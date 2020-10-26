@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 454024858121398706}
   - component: {fileID: 5060766644069572985}
   - component: {fileID: 8134445453370975453}
+  - component: {fileID: -1542648668480975130}
   m_Layer: 8
   m_Name: Slime_block
   m_TagString: Podloga
@@ -130,3 +131,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1542648668480975130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342402417360181657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3adee37211a224dbd01b323f8e2cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 11

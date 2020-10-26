@@ -66,6 +66,7 @@ public class SpawnBlock : MonoBehaviour
 
     public GameObject Klocek;
     public GameObject KlocekNiebo;
+    public GameObject KlocekBogowie;
     
     public LayerMask floor;
 
@@ -418,21 +419,14 @@ public class SpawnBlock : MonoBehaviour
             
             else 
             {
-                int rand = Random.Range(0, Gods.Length);
-                if (Gods.Length != 0)
-                {
-                    if(Gods[rand] != null)
-                    {
-                    Instantiate(Gods[rand], transform.position, spawnRotation,transform);
-                    }
-                }
+                
                 if ( corner == true)
                 {
                     Instantiate(GodsCorner[Random.Range(0, GodsCorner.Length)], transform.position, spawnRotation,transform);
                 }
                 else if ( klocek == true)
                 {
-                    Instantiate(Klocek, transform.position, spawnRotation,transform);
+                    Instantiate(KlocekBogowie, transform.position, spawnRotation,transform);
                 }
                 else if ( grzes2 ==true)
                 {               
@@ -482,6 +476,7 @@ public class SpawnBlock : MonoBehaviour
                 {
                     Instantiate(Gods[Random.Range(0, Gods.Length)], transform.position, spawnRotation,transform);
                 }
+                
             }
 
 

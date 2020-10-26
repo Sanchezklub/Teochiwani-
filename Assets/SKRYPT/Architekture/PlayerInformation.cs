@@ -31,6 +31,8 @@ public class PlayerInformation : ScriptableObject
 
     public bool IsAlive = true;
 
+    public Vector2 portalPosition;
+
     public UnityAction<float, float> GetHitAction;
 
     public void CallOnGetHurtAction(float damage, float healthleft)

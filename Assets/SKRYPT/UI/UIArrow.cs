@@ -16,7 +16,7 @@ public class UIArrow : MonoBehaviour
 
     private void Update()
     {
-        Vector = Vector3.Normalize(new Vector2(SaveSystem.Instance.levelGen.portalPosition.x - transform.position.x, SaveSystem.Instance.levelGen.portalPosition.y - transform.position.y));
+        Vector = Vector3.Normalize(new Vector2(GameController.instance.DataStorage.PlayerInfo.portalPosition.x - transform.position.x, GameController.instance.DataStorage.PlayerInfo.portalPosition.y - transform.position.y));
         transform.position = GameController.instance.DataStorage.PlayerInfo.playerPosition + (Vector * DistanceFromPlayer);
         //var rotation = Quaternion.LookRotation(Vector);
         //rotation *= facing;
@@ -31,7 +31,7 @@ public class UIArrow : MonoBehaviour
             angle = 360 - Vector3.Angle(new Vector2(0, 1), Vector);
         }
         transform.rotation = Quaternion.Euler(0, 0, -angle);
-        float dist = Vector3.Distance(GameController.instance.DataStorage.PlayerInfo.playerPosition, SaveSystem.Instance.levelGen.portalPosition);
+        float dist = Vector3.Distance(GameController.instance.DataStorage.PlayerInfo.playerPosition, GameController.instance.DataStorage.PlayerInfo.portalPosition);
         float lerpedVal = Mathf.InverseLerp(2000, 50, dist);
         float finalVal = Mathf.Lerp(6, 15, lerpedVal);
         transform.localScale = new Vector3(finalVal, finalVal, 1);

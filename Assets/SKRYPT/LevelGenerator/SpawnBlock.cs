@@ -16,12 +16,24 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] JungleGrzes0a;
     public GameObject[] JungleGrzes0b;
     public GameObject[] JungleGrzes0c;
+    public GameObject[] JungleGrzesLev;
 
     
 
 
     public GameObject[] Gods;
     public GameObject[] GodsCorner;
+    public GameObject[] GodsGrzes2;
+    public GameObject[] GodsGrzes1;
+    public GameObject[] GodsGrzes1a;
+    public GameObject[] GodsGrzesD;
+    public GameObject[] GodsGrzesC;
+    public GameObject[] GodsGrzesB;
+    public GameObject[] GodsGrzes3;
+    public GameObject[] GodsGrzes0a;
+    public GameObject[] GodsGrzes0b;
+    public GameObject[] GodsGrzes0c;
+    public GameObject[] GodsGrzesLev;
 
     public GameObject[] Underground;
     public GameObject[] UndergroundCorner;
@@ -35,6 +47,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] UndergroundGrzes0a;
     public GameObject[] UndergroundGrzes0b;
     public GameObject[] UndergroundGrzes0c;
+    
 
 
     public GameObject[] Sky;
@@ -49,6 +62,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] SkyGrzes0a;
     public GameObject[] SkyGrzes0b;
     public GameObject[] SkyGrzes0c;
+    public GameObject[] SkyGrzesLev;
 
     public GameObject Klocek;
     public GameObject KlocekNiebo;
@@ -70,6 +84,7 @@ public class SpawnBlock : MonoBehaviour
     bool grzes0a = false;
     bool grzes0b = false;
     bool grzes0c = false;
+    bool grzeslev=false;
 
 
 
@@ -239,6 +254,10 @@ public class SpawnBlock : MonoBehaviour
                 { 
                     Instantiate(JungleGrzes0c[Random.Range(0, JungleGrzes0c.Length)], transform.position, spawnRotation,transform);
                 }
+                else if (grzeslev==true )
+                {
+                    Instantiate(JungleGrzesLev[Random.Range(0, JungleGrzesLev.Length)], transform.position, spawnRotation,transform);
+                }
                 else 
                 {
                     int rand = Random.Range(0, Jungle.Length);
@@ -344,6 +363,46 @@ public class SpawnBlock : MonoBehaviour
                 {
                     Instantiate(KlocekNiebo, transform.position, spawnRotation,transform);
                 }
+                else if ( grzes2 ==true)
+                {               
+                    Instantiate(SkyGrzes2[Random.Range(0, SkyGrzes2.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1 ==true)
+                {
+                    Instantiate(SkyGrzes1[Random.Range(0, SkyGrzes1.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesD ==true)
+                {
+                    Instantiate(SkyGrzesD[Random.Range(0, SkyGrzesD.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesC ==true)
+                {
+                    Instantiate(SkyGrzesC[Random.Range(0, SkyGrzesC.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesB ==true)
+                {
+                   Instantiate(SkyGrzesB[Random.Range(0, SkyGrzesB.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1a ==true)
+                {
+                    Instantiate(SkyGrzes1a[Random.Range(0, SkyGrzes1a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0b ==true)
+                {
+                    Instantiate(SkyGrzes0b[Random.Range(0, SkyGrzes0b.Length)], transform.position, spawnRotation,transform);             
+                }
+                else if ( grzes0a ==true)
+                { 
+                    Instantiate(SkyGrzes0a[Random.Range(0, SkyGrzes0a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes3 ==true)
+                { 
+                    Instantiate(SkyGrzes3[Random.Range(0, SkyGrzes3.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0c ==true)
+                { 
+                    Instantiate(SkyGrzes0c[Random.Range(0, SkyGrzes0c.Length)], transform.position, spawnRotation,transform);
+                }
                 else 
                 {
                     int rand = Random.Range(0, Sky.Length);
@@ -366,6 +425,62 @@ public class SpawnBlock : MonoBehaviour
                     {
                     Instantiate(Gods[rand], transform.position, spawnRotation,transform);
                     }
+                }
+                if ( corner == true)
+                {
+                    Instantiate(GodsCorner[Random.Range(0, GodsCorner.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( klocek == true)
+                {
+                    Instantiate(Klocek, transform.position, spawnRotation,transform);
+                }
+                else if ( grzes2 ==true)
+                {               
+                    Instantiate(GodsGrzes2[Random.Range(0, GodsGrzes2.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1 ==true)
+                {
+                    Instantiate(GodsGrzes1[Random.Range(0, GodsGrzes1.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesD ==true)
+                {
+                    Instantiate(GodsGrzesD[Random.Range(0, GodsGrzesD.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesC ==true)
+                {
+                    Instantiate(GodsGrzesC[Random.Range(0, GodsGrzesC.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzesB ==true)
+                {
+                   Instantiate(GodsGrzesB[Random.Range(0, GodsGrzesB.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes1a ==true)
+                {
+                    Instantiate(GodsGrzes1a[Random.Range(0, GodsGrzes1a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0b ==true)
+                {
+                    Instantiate(GodsGrzes0b[Random.Range(0, GodsGrzes0b.Length)], transform.position, spawnRotation,transform);             
+                }
+                else if ( grzes0a ==true)
+                { 
+                    Instantiate(GodsGrzes0a[Random.Range(0, GodsGrzes0a.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes3 ==true)
+                { 
+                    Instantiate(GodsGrzes3[Random.Range(0, GodsGrzes3.Length)], transform.position, spawnRotation,transform);
+                }
+                else if ( grzes0c ==true)
+                { 
+                    Instantiate(GodsGrzes0c[Random.Range(0, GodsGrzes0c.Length)], transform.position, spawnRotation,transform);
+                }
+                else if (grzeslev==true )
+                {
+                    Instantiate(GodsGrzesLev[Random.Range(0, GodsGrzesLev.Length)], transform.position, spawnRotation,transform);
+                }
+                else 
+                {
+                    Instantiate(Gods[Random.Range(0, Gods.Length)], transform.position, spawnRotation,transform);
                 }
             }
 
@@ -673,6 +788,12 @@ public class SpawnBlock : MonoBehaviour
         {
            spawnRotation = Quaternion.Euler(0,0,270);
              grzes0c = true;
+             return; 
+        }
+        else if(Hit[1]==false && Hit[2]==false && Hit[3]==false && Hit[4]==false && Hit[5]==false && Hit[6]==false && Hit[7]==false  && Hit[8]==false  )
+        {
+           spawnRotation = Quaternion.Euler(0,0,0);
+             grzeslev = true;
              return; 
         }
     }

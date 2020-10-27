@@ -20,7 +20,7 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     public BoxCollider2D boxCollider2D;
 
     public Rigidbody2D rb2d;
-
+    public GameObject Ps;
     public SpriteRenderer sr;
     public GameObject Blood;
     public GameObject[] Podest;

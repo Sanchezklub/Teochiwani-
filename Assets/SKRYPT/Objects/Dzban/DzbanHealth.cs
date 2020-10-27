@@ -47,6 +47,7 @@ public class DzbanHealth : Health
     protected override void Die()
     {
         base.Die();
+        AudioManager.instance.Play("VaseBreak");
         var coinRewarder = this.GetComponent<DzbanHealth>();
         if (coinRewarder != null)
         {

@@ -2933,7 +2933,7 @@ PrefabInstance:
     - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
         type: 3}
@@ -3043,6 +3043,37 @@ PrefabInstance:
       propertyPath: sounds.Array.data[0].loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].name
+      value: VaseBreak
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 05d1cecd840a2684e8dc709f9ea13883, type: 3}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].volumeVariance
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6581861293167235087, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
+        type: 3}
+      propertyPath: sounds.Array.data[38].mixerGroup
+      value: 
+      objectReference: {fileID: 2990991902851928083, guid: 474e1c495e818a74fb93e11aed41240b,
+        type: 2}
     - target: {fileID: 8662844023406806280, guid: a8dfb85004fb86e468fc3eec72b8e6ce,
         type: 3}
       propertyPath: MasterSlider

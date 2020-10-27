@@ -5,11 +5,15 @@ using UnityEngine.Events;
 
 public class XolotlBrain : BaseBrain<XolotlBrain>
 {
+    public bool FacingRight;
+    public float TimeAfterBloodRise;
+    public float TimeAfterBloodLowers;
+    public float TimeAfterBloodEnds;
     public float RestTime;
-    public float TimeBetweenDash;
     public float DashSpeed;
-
-    public GameObject Blood;
+    public float TimeBetweenDash;
+    public float AnimationDuration;
+    public float RisingVelocity;
 
     public Animator enemyAnimator;
 
@@ -17,13 +21,18 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
 
     public Rigidbody2D rb2d;
 
-    
+    public SpriteRenderer sr;
+    public GameObject Blood;
+    public GameObject[] Podest;
+
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
 
     private void Start()
     {
         
+        Podest = GameObject.FindGameObjectsWithTag("XolotlPodest");
+
         StartRest();
 
     }

@@ -8,8 +8,10 @@ public class XolotlRestState : BaseState<XolotlBrain>
     public float currentRestTime;
     public override void InitState(XolotlBrain controller)
     {
+
         base.InitState(controller);
         this.brain = controller;
+        brain.sr.color = new Color (0,1,0,1 );
         currentRestTime=0;
         brain.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Debug.Log("Xolotl rest");

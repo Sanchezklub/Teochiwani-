@@ -32,10 +32,15 @@ public class BaseWeaponCloseCombat : BaseWeapon
             }
             if ( EnemyWas==false)
             {
-                collision.gameObject.GetComponent<Health>()?.TakeDamage(attackdamage+info.damage);
-                EventController.instance.playerEvents.CallOnPlayerDealDamage(attackdamage + info.damage);
-                EnemyId[EnemyCounter]=collision.gameObject.GetInstanceID();
-                Effects(collision);
+                Health EnemyHealth = collision.gameObject.GetComponent<Health>();
+                if (EnemyHealth != null)
+                {
+                    EnemyHealth?.TakeDamage(attackdamage+info.damage);
+                    EventController.instance.playerEvents.CallOnPlayerDealDamage(attackdamage + info.damage);
+                    EnemyId[EnemyCounter]=collision.gameObject.GetInstanceID();
+                    Effects(collision);
+
+                }
             }
         }
     }

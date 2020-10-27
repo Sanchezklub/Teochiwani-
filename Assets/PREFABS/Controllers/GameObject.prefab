@@ -84,12 +84,14 @@ MonoBehaviour:
   enemyTracker: {fileID: 9026327015831068243}
   itemTracker: {fileID: 9026327015831068240}
   weaponTracker: {fileID: 9026327015831068241}
-  roomTracker: {fileID: 0}
+  roomTracker: {fileID: 2268739678770132078}
   Dictionary: {fileID: 9026327015831068271}
+  itemDataController: {fileID: 0}
   levelGen: {fileID: 0}
   SpawnStuff: 1
   saveContainer:
     playerData:
+      attackspeed: 0
       maxhealth: 0
       currenthealth: 0
       cocoa: 0
@@ -103,8 +105,10 @@ MonoBehaviour:
       potionLoads: 0
       level: 0
       testVector: {x: 0, y: 0, z: 0}
+      portalPosition: {x: 0, y: 0}
       CanLoad: 0
     oldPlayerData:
+      attackspeed: 0
       maxhealth: 0
       currenthealth: 0
       cocoa: 0
@@ -118,6 +122,7 @@ MonoBehaviour:
       potionLoads: 0
       level: 0
       testVector: {x: 0, y: 0, z: 0}
+      portalPosition: {x: 0, y: 0}
       CanLoad: 0
     levelData:
       roomData: []
@@ -138,8 +143,12 @@ MonoBehaviour:
     roundStatistics:
       damageTaken: 0
       enemiesKilled: 
-  LoadedObjectHolder: {fileID: 0}
+  LoadedEnemiesHolder: {fileID: 0}
+  LoadedEnvirosHolder: {fileID: 0}
+  LoadedRoomsHolder: {fileID: 0}
+  LoadedItemsHolder: {fileID: 0}
   MainMenu: {fileID: 0}
+  EvilPlayer: {fileID: 0}
 --- !u!114 &9026327015831068243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +224,9 @@ MonoBehaviour:
   - {fileID: 9176262789320150799, guid: 50fa840021518634d8cc2af896f90407, type: 3}
   - {fileID: 6163903112760620598, guid: 9497555e5888d6342a0f3b43899eb75e, type: 3}
   - {fileID: 3954899994316473538, guid: c194c6fc5dbe7444b8e69547fa9571f3, type: 3}
+  - {fileID: 6620807324931082466, guid: b47a5e0190d64804d86248965a31f8d6, type: 3}
+  - {fileID: 1890074882958665512, guid: 04f05019469bf4e469476ca7aa14d151, type: 3}
+  - {fileID: 1085597503066691625, guid: 2733cfc2cbda67f4ebc29060324b5383, type: 3}
   WeaponObjects:
   - {fileID: 8832911148018524805, guid: 0ceb8612f7b40d94da74227403930735, type: 3}
   - {fileID: 6861661989205530176, guid: b000839a0a4d6444386b219f906d513e, type: 3}
@@ -351,7 +363,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 3336079165257609853, guid: 03d20ad9133edc145bc0f336237a4146, type: 3}
-  - {fileID: 0}
+  - {fileID: 2877972818275242472, guid: af3bc179729de32439be2ee33a68d8e5, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -380,6 +392,8 @@ MonoBehaviour:
   - {fileID: 4520202676022092216, guid: b7855a2665569334296473750d604afc, type: 3}
   - {fileID: 7388586915024057051, guid: 6eeb9455d84aa7f40a14bd60dab69065, type: 3}
   - {fileID: 1589663488678838169, guid: c9040223ed30dcc409072b7f08e0b9d2, type: 3}
+  - {fileID: 4288940308484471035, guid: d7a1bab9685c9864781b87c54a033824, type: 3}
+  - {fileID: 5342402417360181657, guid: 9b21fdead13277f46b966869f90c2d7a, type: 3}
   RoomObjects:
   - {fileID: 2252185648955011205, guid: d93cc275e6115fc49b9d0f2ffbd3d5ed, type: 3}
   - {fileID: 7261998100132913101, guid: 70eae3724d0e96f499e983979d56e07e, type: 3}

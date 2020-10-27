@@ -225,6 +225,7 @@ public class SaveSystem : MonoBehaviour
                     weap.ModId = LoadedSaveContainer.playerData.currentweaponModID;
                     weap.Start();
                     player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+                    EventController.instance.itemEvents.CallOnItemDied(weap);
                 }
                 else
                 {

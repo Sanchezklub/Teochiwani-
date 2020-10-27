@@ -163,4 +163,12 @@ public class BaseWeaponModifier : ScriptableObject
     public bool Poison;
     public string weaponName;*/
     }
+    public virtual void PickedUp()
+    {
+
+    }
+    public virtual void Dropped()
+    {
+
+    }
 }

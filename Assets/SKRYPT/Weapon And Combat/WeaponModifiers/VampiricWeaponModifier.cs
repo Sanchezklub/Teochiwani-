@@ -12,12 +12,20 @@ public class VampiricWeaponModifier : BaseWeaponModifier
     public override void Apply(BaseWeapon weapon)
     {
         base.Apply(weapon);
-        EventController.instance.playerEvents.OnPlayerDealDamage += OnPlayerDealDamage;
     }
 
     public override void Remove(BaseWeapon weapon)
     {
         base.Remove(weapon);
+    }
+
+    public override void PickedUp()
+    {
+        EventController.instance.playerEvents.OnPlayerDealDamage += OnPlayerDealDamage;
+    }
+
+    public override void Dropped()
+    {
         EventController.instance.playerEvents.OnPlayerDealDamage -= OnPlayerDealDamage;
     }
 }

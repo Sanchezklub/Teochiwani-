@@ -11,6 +11,9 @@ public class BaseBrain <T> : MonoBehaviour
     }
     public virtual void UpdateChildState()
     {
+        if (GameController.instance == null)
+            return;
+
         if (Vector3.Distance(transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition) > 200)
         {
             return;

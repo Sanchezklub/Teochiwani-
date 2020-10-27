@@ -13,10 +13,12 @@ public class PauseController : MonoBehaviour
         {
             if (!IsPaused)
             {
+                AudioManager.instance.MuteSounds();
                 Pause();
             }
             else
             {
+                AudioManager.instance.UnMuteSounds();
                 Unpause();
             }
         }

@@ -1,13 +1,18 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
 
 	public static AudioManager instance;
 
+	public MusicManager musicManager;
+
 	public AudioMixerGroup mixerGroup;
+
+	public float fadeOutDuration;
 
 	public Sound[] sounds;
 
@@ -28,6 +33,7 @@ public class AudioManager : MonoBehaviour
 			s.source = gameObject.AddComponent<AudioSource>();
 			s.source.clip = s.clip;
 			s.source.loop = s.loop;
+			s.startVolume = s.source.volume;
 
 			s.source.outputAudioMixerGroup = s.mixerGroup;
 		}
@@ -36,6 +42,44 @@ public class AudioManager : MonoBehaviour
 	void Start()
 	{
 		Play("Menu Theme");
+	}
+
+	public void OnDie()
+    {
+		MuteSounds();
+		musicManager.deathTrack.Play();
+    }
+
+	[ContextMenu("Mute")]
+	public void MuteSounds()
+    {
+		StopAllCoroutines();
+		StartCoroutine(ChangeSoundVolume(true));
+    }
+
+	[ContextMenu("UnMute")]
+	public void UnMuteSounds()
+    {
+		StopAllCoroutines();
+		StartCoroutine(ChangeSoundVolume(false));
+	}
+
+	public IEnumerator ChangeSoundVolume(bool muteSounds)
+    {
+		Debug.Log("StartCorouting");
+		float startTime = Time.realtimeSinceStartup;
+		var progress = 0f;
+		while(progress <= 1)
+        {
+			progress = (Time.realtimeSinceStartup - startTime) / fadeOutDuration;
+
+			foreach (var sound in sounds)
+			{
+				sound.source.volume = Mathf.Lerp(sound.source.volume, muteSounds ? 0f : sound.startVolume, progress);
+			}
+			yield return null;
+		}
+		Debug.Log("FinishCorouting");
 	}
 
 	public void Play(string sound)

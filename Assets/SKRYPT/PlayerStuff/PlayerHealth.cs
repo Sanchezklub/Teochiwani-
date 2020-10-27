@@ -71,9 +71,12 @@ public class PlayerHealth : Health
     {
         
     }
+
+    [ContextMenu("Die")]
     protected override void Die()
     {
         PlayerAnimator.SetTrigger("Die");
+        AudioManager.instance.OnDie();
         //File.Delete( Application.persistentDataPath+"/player.fun");
 
         //MainMenu.SetActive(true);

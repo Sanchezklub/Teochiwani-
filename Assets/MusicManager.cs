@@ -7,16 +7,17 @@ public class MusicManager : MonoBehaviour
     public AudioManager audioManager;
     public Sound[] ThemeSounds;
 
+    public AudioSource deathTrack;
+
     // Start is called before the first frame update
     public void Awake()
     {
         audioManager=AudioManager.instance;
-        
 
 
-        
 
-		ThemeSounds[0]=  Array.Find(audioManager?.sounds, item => item.name == "Theme");
+
+        ThemeSounds[0]=  Array.Find(audioManager?.sounds, item => item.name == "Theme");
         ThemeSounds[1]=  Array.Find(audioManager?.sounds, item => item.name == "Theme2");
         ThemeSounds[2]=  Array.Find(audioManager?.sounds, item => item.name == "Theme3");
         //DontDestroyOnLoad(this.gameObject);

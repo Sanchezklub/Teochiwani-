@@ -279,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
       propertyPath: EnemyObjects.Array.size
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
@@ -310,6 +310,18 @@ PrefabInstance:
       propertyPath: EnviroObjects.Array.data[11]
       value: 
       objectReference: {fileID: 5342402417360181657, guid: 9b21fdead13277f46b966869f90c2d7a,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnemyObjects.Array.data[11]
+      value: 
+      objectReference: {fileID: 6082516166295739060, guid: 7cf1d05ed26c96846b27fbcc7015b82e,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnemyObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 1085597503066691625, guid: 2733cfc2cbda67f4ebc29060324b5383,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348e9e5328ba2044cac2fcd5d75ee55d, type: 3}
@@ -1597,7 +1609,7 @@ MonoBehaviour:
   FloatingText: 1
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
-  id: 0
+  id: 11
   EffectParticle: []
   splashController: {fileID: 462550400}
   Limbs: []
@@ -12100,7 +12112,7 @@ PrefabInstance:
     - target: {fileID: 6713834550044654509, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38.000122
+      value: -38
       objectReference: {fileID: 0}
     - target: {fileID: 6713834550049560529, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
@@ -12413,7 +12425,7 @@ PrefabInstance:
     - target: {fileID: 6713834551006567358, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.000122
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6713834551022609644, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}

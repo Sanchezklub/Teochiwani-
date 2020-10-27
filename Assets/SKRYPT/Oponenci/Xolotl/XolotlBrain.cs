@@ -5,10 +5,18 @@ using UnityEngine.Events;
 
 public class XolotlBrain : BaseBrain<XolotlBrain>
 {
+    public float RestTime;
+    public float TimeBetweenDash;
+    public float DashSpeed;
+
+    public GameObject Blood;
 
     public Animator enemyAnimator;
+
     public BoxCollider2D boxCollider2D;
+
     public Rigidbody2D rb2d;
+
     
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
@@ -16,7 +24,7 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     private void Start()
     {
         
-        
+        StartRest();
 
     }
     private void Update()

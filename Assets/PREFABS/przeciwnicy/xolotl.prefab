@@ -163,6 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc1fbdb1fa86d0498629373ea7484b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RestTime: 3
+  TimeBetweenDash: 0
+  DashSpeed: 100
+  Blood: {fileID: 3966930336762356641, guid: 742a3c0c79c74b04385d11106376fe88, type: 3}
   enemyAnimator: {fileID: 1294737761571016736}
   boxCollider2D: {fileID: 1974566259989562183}
   rb2d: {fileID: 764447326908619977}
@@ -201,7 +205,7 @@ MonoBehaviour:
   currentHealth: 0
   FloatingText: 0
   FloatingTextPrefab: {fileID: 0}
-  id: 0
+  id: 12
   EffectParticle: []
   splashController: {fileID: 4043138784564065022}
   Limbs: []

@@ -9,6 +9,8 @@ public class XolotlAttackStateBlood : BaseState<XolotlBrain>
     {
         base.InitState(controller);
         this.brain = controller;
+        Debug.Log("Xolotl Blood");
+        brain.StartAttackDash();
     }
     public override void UpdateState()
     {

@@ -14,9 +14,9 @@ public class XolotlAttackStateBlood : BaseState<XolotlBrain>
         brain.sr.color = new Color (0,1,1,1 );
         currentBloodTime=0;
         //brain.StartAttackDash();
-        brain.transform.position=new Vector3(brain.Podest[0].transform.position.x, brain.Podest[0].transform.position.y+5, brain.Podest[0].transform.position.z);
+        brain.transform.position=new Vector3(brain.Podest[0].transform.position.x, brain.Podest[0].transform.position.y, brain.Podest[0].transform.position.z);
         brain.rb2d.bodyType = RigidbodyType2D.Static;
-        
+        // 1 aniamcja rzygania; 
     }
     public override void UpdateState()
     {
@@ -49,5 +49,7 @@ public class XolotlAttackStateBlood : BaseState<XolotlBrain>
     {
         brain.Blood.SetActive(false);
         base.DeinitState(controller);
+        brain.animator.SetBool("Vomit",false);
+        brain.animator.SetBool("Dash",true);
     }
 }

@@ -20,7 +20,7 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
         dashXY=false;
         Player = GameObject.Find("Player");
         Debug.Log("Xolotl dashInit");
-        DashY();
+        DashY(); // 3 razy animacja 
     }
 
     public override void UpdateState()
@@ -80,14 +80,19 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
     }
 
 
-    
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        col.GetComponent<Health>().TakeDamage(brain.DashDamage); 
+    }
 
    
     public override void DeinitState(XolotlBrain controller)
     {
         brain.transform.localEulerAngles =new Vector3(0,0,0);
-        brain.transform.position=new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
+        brain.transform.position=new Vector3(UnityEngine.Random.Range( Player.transform.position.x-100 , Player.transform.position.x+100 ) , 0,0);
         brain.boxCollider2D.isTrigger=false;
         base.DeinitState(controller);
+        brain.animator.SetBool("Dash",false);
+        brain.animator.SetBool("Rest",true);
     }
 }

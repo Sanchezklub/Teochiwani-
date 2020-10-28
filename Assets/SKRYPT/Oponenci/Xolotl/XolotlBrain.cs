@@ -14,8 +14,10 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     public float TimeBetweenDash;
     public float AnimationDuration;
     public float RisingVelocity;
+    public float BloodDamage;
+    public float DashDamage;
 
-    public Animator enemyAnimator;
+    public Animator animator;
 
     public BoxCollider2D boxCollider2D;
 

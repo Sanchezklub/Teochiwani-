@@ -274,12 +274,17 @@ PrefabInstance:
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
       propertyPath: EnviroObjects.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
       propertyPath: EnemyObjects.Array.size
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: RoomObjects.Array.size
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
         type: 3}
@@ -322,6 +327,18 @@ PrefabInstance:
       propertyPath: EnemyObjects.Array.data[12]
       value: 
       objectReference: {fileID: 1085597503066691625, guid: 2733cfc2cbda67f4ebc29060324b5383,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: EnviroObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 2334910963635461594, guid: 58e5013ce6c7c4d4095f1eacf0d814ba,
+        type: 3}
+    - target: {fileID: 9026327015831068271, guid: 348e9e5328ba2044cac2fcd5d75ee55d,
+        type: 3}
+      propertyPath: RoomObjects.Array.data[34]
+      value: 
+      objectReference: {fileID: 8982399709367962417, guid: 2209155e51293cb4cb3c72f9e826316e,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348e9e5328ba2044cac2fcd5d75ee55d, type: 3}
@@ -11397,7 +11414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1660584057, guid: 0f3bd684e6dce7c4fb06dade9d2213d3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1678217052, guid: 0f3bd684e6dce7c4fb06dade9d2213d3, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12969,7 +12986,7 @@ PrefabInstance:
     - target: {fileID: 7801150526426268884, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3bd684e6dce7c4fb06dade9d2213d3, type: 3}

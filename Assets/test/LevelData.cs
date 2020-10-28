@@ -168,6 +168,7 @@ public class LevelData
     {
         roomData = new List<RoomData>();
 
+        SaveSystem.Instance.roomNumbers.Clear();
         foreach (RoomId room in currentRooms)
         {
             if (room != null)

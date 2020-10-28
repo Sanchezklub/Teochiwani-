@@ -25,6 +25,7 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     public GameObject Ps;
     public SpriteRenderer sr;
     public GameObject Blood;
+    public GameObject XolotlHitbox;
     public GameObject[] Podest;
 
     public UnityAction Attacking;

@@ -52,7 +52,7 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
 
     public void DashY()
     {
-        
+        brain.XolotlHitbox.SetActive(true);
         brain.transform.position=new Vector3(Player.transform.position.x, Player.transform.position.y+100, brain.transform.position.z);
         brain.rb2d.velocity = new Vector2(0,-brain.DashSpeed);
         brain.transform.localEulerAngles =new Vector3(0,0,-90);
@@ -62,6 +62,7 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
     }
     public void DashX()
     {
+        brain.XolotlHitbox.SetActive(true);
         brain.transform.localEulerAngles =new Vector3(0,0,0);
         brain.transform.position=new Vector3(Player.transform.position.x-100, Player.transform.position.y, brain.transform.position.z);
         brain.rb2d.velocity = new Vector2(brain.DashSpeed, 0);
@@ -72,22 +73,17 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
     }
     public void DashXY()
     {
+        brain.XolotlHitbox.SetActive(true);
         brain.transform.localEulerAngles =new Vector3(0,0,-45);
         brain.transform.position=new Vector3(Player.transform.position.x-100, Player.transform.position.y+100, brain.transform.position.z);
         brain.rb2d.velocity = new Vector2(brain.DashSpeed,-brain.DashSpeed);
         brain.boxCollider2D.isTrigger=true;
         dashXY=true;
     }
-
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        col.GetComponent<Health>().TakeDamage(brain.DashDamage); 
-    }
-
    
     public override void DeinitState(XolotlBrain controller)
     {
+        brain.XolotlHitbox.SetActive(false);
         brain.transform.localEulerAngles =new Vector3(0,0,0);
         brain.transform.position=new Vector3(UnityEngine.Random.Range( Player.transform.position.x-100 , Player.transform.position.x+100 ) , 0,0);
         brain.boxCollider2D.isTrigger=false;

@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class SaveSystem : MonoBehaviour
 
     //public LevelGeneration levelGen;
 
+    public List<int> roomNumbers = new List<int>();
+    public GameObject[] RoomsByNumbers = new GameObject[100];
 
     public bool SpawnStuff = false;
 
@@ -75,6 +78,7 @@ public class SaveSystem : MonoBehaviour
                 Debug.Log(saveContainer);
                 if (SpawnStuff == true)
                 {
+                    LoadRooms(saveContainer);
                     LoadEnemies(saveContainer);
                     //LoadWeapons(saveContainer);
                     LoadItems(saveContainer);
@@ -82,7 +86,6 @@ public class SaveSystem : MonoBehaviour
                     LoadRoundStats(saveContainer);
                     LoadOldPlayerData(saveContainer);
                     LoadEnvironment(saveContainer);
-                    LoadRooms(saveContainer);
                     //Debug.Log("save system 1");
                     LoadPlayer(saveContainer);
                     //Debug.Log("save system 2");
@@ -124,7 +127,7 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
-                enemy.transform.parent = LoadedEnemiesHolder.transform;
+                enemy.transform.parent = RoomsByNumbers[loadedEnemy.roomNumber].transform;
             }
         }
         EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
@@ -139,7 +142,7 @@ public class SaveSystem : MonoBehaviour
             {
                 GameObject item = Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
                 item.GetComponentInChildren<BaseItem>().ModId = loadedItem.ModId;
-                item.transform.parent = LoadedItemsHolder.transform;
+                item.transform.parent = RoomsByNumbers[loadedItem.roomNumber].transform;
             }
         }
     }
@@ -169,7 +172,7 @@ public class SaveSystem : MonoBehaviour
             if (EnviroPrefab != null)
             {
                 GameObject enviro = Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
-                enviro.transform.parent = LoadedEnvirosHolder.transform;
+                enviro.transform.parent = RoomsByNumbers[loadedEnvironment.roomNumber].transform;
             }
         }
     }
@@ -199,6 +202,9 @@ public class SaveSystem : MonoBehaviour
             {
                 GameObject room = Instantiate(RoomPrefab, loadedRoom.position, Quaternion.identity);
                 room.transform.parent = LoadedRoomsHolder.transform;
+                RoomId idScript = room.GetComponent<RoomId>();
+                idScript.roomNumber = loadedRoom.roomNumber;
+                RoomsByNumbers[loadedRoom.roomNumber] = room;
             }
         }
     }
@@ -323,11 +329,11 @@ public class SaveSystem : MonoBehaviour
     [ContextMenu("Test")]
     public void FullySaveGame()
     {
+        saveContainer.levelData.SaveRooms(roomTracker.rooms);
         saveContainer.levelData.SaveItem(itemTracker.items);
         //saveContainer.levelData.SaveWeapon(weaponTracker.weapons);
         saveContainer.levelData.SaveEnemies(enemyTracker.enemies);
         saveContainer.levelData.SaveEnviroment(enviromentTracker.enviros);
-        saveContainer.levelData.SaveRooms(roomTracker.rooms);
         saveContainer.playerData = new PlayerDataScript(GameController.instance.DataStorage.PlayerInfo);
         //Debug.LogFormat("Test 1:{0}", saveContainer.statisticsData.ToString());
         //Debug.LogFormat("Test 2:{0}", saveContainer.statisticsData.globalData.ToString());

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoomId : MonoBehaviour
 {
+    public int roomNumber = 0;
+    
     public int id;
 
     private void Start()

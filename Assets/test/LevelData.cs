@@ -35,7 +35,19 @@ public class LevelData
         {
             if(enemy != null)
             {
-                enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
+                foreach (RoomData data in roomData)
+                {
+                    if (CheckDifference(enemy.transform.position, data.position))
+                    {
+                        enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position, data.roomNumber));
+                        Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                        break;
+                    }
+                    else Debug.Log("Item couldn't be saved");
+
+
+                }
+                //enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
             }
         }
     }
@@ -47,7 +59,19 @@ public class LevelData
         {
             if(enviro != null)
             {
-                enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
+                foreach (RoomData data in roomData)
+                {
+                    if (CheckDifference(enviro.transform.position, data.position))
+                    {
+                        enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position, data.roomNumber));
+                        Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                        break;
+                    }
+                    else Debug.Log("Item couldn't be saved");
+
+
+                }
+                //enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
             }
         }
     }
@@ -57,9 +81,17 @@ public class LevelData
 
         foreach (BaseWeapon weapon in currentWeapon)
         {
-            if (weapon != null)
+            foreach (RoomData data in roomData)
             {
-                weaponData.Add(new WeaponData(weapon.id, weapon.transform.position));
+                if (CheckDifference(weapon.transform.position, data.position))
+                {
+                    itemData.Add(new ItemData(weapon.id, weapon.transform.parent.position, weapon.ModId, data.roomNumber));
+                    Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                    break;
+                }
+                else Debug.Log("Item couldn't be saved");
+
+
             }
         }
     }
@@ -73,17 +105,49 @@ public class LevelData
             {
                 if (item is BaseWeapon)
                 {
-                    itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId));
+                    foreach (RoomData data in roomData)
+                    {
+                        if (CheckDifference(item.transform.parent.position, data.position))
+                        {
+                            itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, data.roomNumber));
+                            Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                            break;
+                        }
+                        else Debug.Log("Item couldn't be saved");
+                        
+                        
+                    }
+
+
                 }
                 else
                 {
-                    itemData.Add(new ItemData(item.id, item.transform.position, item.ModId));
+                    foreach (RoomData data in roomData)
+                    {
+                        if (CheckDifference(item.transform.position, data.position))
+                        {
+                            itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, data.roomNumber));
+                            Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                            break;
+                        }
+                        else Debug.Log("Item couldn't be saved");
+
+
+                    }
                 }
 
             }
         }
     }
 
+    private bool CheckDifference(Vector2 objectPosition, Vector2 roomPosition)
+    {
+        if (objectPosition.x >= (roomPosition.x - SaveSystem.Instance.levelGen.moveAmountx) && objectPosition.x < (roomPosition.x + SaveSystem.Instance.levelGen.moveAmountx) && objectPosition.y >= (roomPosition.y - SaveSystem.Instance.levelGen.moveAmounty) && objectPosition.y < (roomPosition.y + SaveSystem.Instance.levelGen.moveAmounty))
+        {
+            return true;
+        }
+        return false;
+    }
 
     /*public void SaveLayout(int[,] layout)
     {
@@ -108,9 +172,17 @@ public class LevelData
         {
             if (room != null)
             {
-                roomData.Add(new RoomData(room.id, room.transform.position));
+                while (SaveSystem.Instance.roomNumbers.Contains(room.roomNumber) || room.roomNumber == 0)
+                {
+                    room.roomNumber = Random.Range(0, 100);
+                    Debug.LogFormat("LevelData :: SaveRooms() - The number randomly assigned to room {0} was {1}", room.gameObject.name, room.roomNumber);
+                }
+                roomData.Add(new RoomData(room.id, room.transform.position, room.roomNumber));
+                Debug.Log("Room was saved");
             }
+
         }
+        Debug.LogFormat("LevelData :: RoomNumbers were {0}", SaveSystem.Instance.roomNumbers);
     }
 
     //Odpiąc się od eventu
@@ -119,64 +191,74 @@ public class LevelData
 [System.Serializable]
 public class RoomData
 {
-    public RoomData(int id, Vector3 position)
+    public RoomData(int id, Vector3 position, int roomNumber)
     {
         this.id = id;
         this.position = position;
+        this.roomNumber = roomNumber;
     }
 
     public int id;
     public Vector3 position;
+    public int roomNumber;
 }
 
 [System.Serializable]
 public class EnviroData
 {
-    public EnviroData(int id, Vector3 position)
+    public EnviroData(int id, Vector3 position, int roomNumber)
     {
         this.id = id;
         this.position = position;
+        this.roomNumber = roomNumber;
     }
     public int id;
     public Vector3 position;
+    public int roomNumber;
 }
 
 [System.Serializable]
 public class EnemyData
 {
-    public EnemyData(int id, Vector3 position)
+    public EnemyData(int id, Vector3 position, int roomNumber)
     {
         this.id = id;
         this.position = position;
+        this.roomNumber = roomNumber;
     }
 
     public int id;
     public Vector3 position;
+    public int roomNumber;
 }
 
 [System.Serializable]
 public class ItemData
 {
-    public ItemData(int id, Vector3 position, int ModId)
+    public ItemData(int id, Vector3 position, int ModId, int roomNumber)
     {
         this.id = id;
         this.position = position;
         this.ModId = ModId;
+        this.roomNumber = roomNumber;
     }
     public int id;
     public Vector3 position;
     public int ModId;
+    public int roomNumber;
 }
 [System.Serializable]
 public class WeaponData
 {
-    public WeaponData(int id, Vector3 position)
+    public WeaponData(int id, Vector3 position, int roomNumber)
     {
         this.id = id;
         this.position = position;
+        this.roomNumber = roomNumber;
     }
     public int id;
     public Vector3 position;
+    public int roomNumber;
 }
 
 

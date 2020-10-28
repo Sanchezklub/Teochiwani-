@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
 	{
 		Play("Menu Theme");
 	}
-
+	
 	public void OnDie()
     {
 		MuteSounds();

@@ -15,13 +15,13 @@ public class TigerBossFollowState : BaseState<TigerBoss>
     public override void UpdateState()
     {
         //base.UpdateState();
-        if (Vector2.Distance(controller.transform.position, controller.targetPosition) < controller.AttackDistance)
+        if (Vector2.Distance(controller.transform.position, GameController.instance.DataStorage.PlayerInfo.playerPosition) < controller.AttackDistance)
         {
             controller.StartAttackState();
             return;
         }
 
-        var move = (controller.transform.position - controller.targetPosition).normalized;
+        var move = (controller.transform.position - GameController.instance.DataStorage.PlayerInfo.playerPosition).normalized;
         if(move.x > 0)
         {
             controller.transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
@@ -32,7 +32,7 @@ public class TigerBossFollowState : BaseState<TigerBoss>
         }
 
 
-        var targetPos = controller.targetPosition;
+        var targetPos = GameController.instance.DataStorage.PlayerInfo.playerPosition;
         targetPos.y = 0f;
         controller.transform.position = Vector2.MoveTowards(controller.transform.position, targetPos, controller.MovementSpeed);
 

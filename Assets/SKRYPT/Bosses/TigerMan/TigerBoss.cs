@@ -48,7 +48,7 @@ public class TigerBoss : BaseBrain<TigerBoss>
     public string ATTACK_KEY = "Attack";
     public string DAMAGE_KEY = "TakeDamage";
 
-    public Transform testTransform;
+    //public Transform testTransform;
 
     public Vector3 targetPosition;
 
@@ -59,7 +59,7 @@ public class TigerBoss : BaseBrain<TigerBoss>
 
     private void Update()
     {
-        targetPosition = testTransform.position;
+        //targetPosition = testTransform.position;
         UpdateChildState();
     }
 

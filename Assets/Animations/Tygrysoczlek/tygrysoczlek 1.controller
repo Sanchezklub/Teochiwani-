@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1102 &-8593970266013713982
 AnimatorState:
   serializedVersion: 5
@@ -112,6 +113,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> MateuszMeteor
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -124,7 +127,11 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
+<<<<<<< HEAD
     m_StateMachine: {fileID: -8280529912013198145}
+=======
+    m_StateMachine: {fileID: 7729087762102640482}
+>>>>>>> MateuszMeteor
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -134,14 +141,22 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1102 &968439587021187522
+=======
+--- !u!1102 &2120162210242944492
+>>>>>>> MateuszMeteor
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: TygroMan Attack2
+=======
+  m_Name: TygroMan Tiger Damage
+>>>>>>> MateuszMeteor
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -154,19 +169,29 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
+<<<<<<< HEAD
   m_Motion: {fileID: 7400000, guid: d22610adc0eb1a64791fbeeffb2773ec, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: 954e8ae6cb7b7334dbedccaba59e28de, type: 2}
+>>>>>>> MateuszMeteor
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 --- !u!1102 &6825774490446067125
 AnimatorState:
+=======
+--- !u!1107 &7729087762102640482
+AnimatorStateMachine:
+>>>>>>> MateuszMeteor
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: TygroMan Tiger Damage
   m_Speed: 1
   m_CycleOffset: 0
@@ -186,3 +211,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 2120162210242944492}
+    m_Position: {x: 200, y: 0, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 2120162210242944492}
+>>>>>>> MateuszMeteor

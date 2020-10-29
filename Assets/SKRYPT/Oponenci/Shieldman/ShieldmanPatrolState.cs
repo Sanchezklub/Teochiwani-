@@ -46,12 +46,10 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
             brain.StartFollow();
         }
 
-
         //RaycastHit2D hit;
         // Does the ray intersect any objects excluding the player layer
         if (Physics2D.Raycast(brain.raycastTransform.position, Vector2.down, 2f, brain.WhatIsGround) && !Physics2D.Raycast(brain.raycastTransform.position, brain.raycastTransform.right, 5f, brain.WhatIsGround))
         {
-
             //Debug.DrawRay(brain.raycastTransform.position, Vector2.down * hit.distance, Color.yellow);
 
             //Debug.Log("Did Hit");
@@ -63,10 +61,6 @@ public class ShieldmanPatrolState : BaseState<ShieldmanBrain>
             {
                 enemyRigidBody2D.velocity = new Vector2(-1 * brain.speed, enemyRigidBody2D.velocity.y);
             }
-
-
-
-
         }
         else
         {

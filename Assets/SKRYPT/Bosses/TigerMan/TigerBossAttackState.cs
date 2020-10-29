@@ -28,6 +28,7 @@ public class TigerBossAttackState : BaseState<TigerBoss>
             {
                 cage.OpenCage(controller);
             }
+            Debug.Log("Attempted to open cage");
         }
     }
 

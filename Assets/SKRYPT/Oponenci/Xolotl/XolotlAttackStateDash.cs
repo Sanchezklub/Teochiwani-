@@ -20,6 +20,7 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
         dashXY=false;
         Player = GameObject.Find("Player");
         Debug.Log("Xolotl dashInit");
+        brain.Eye.SetActive(true);
         DashY(); // 3 razy animacja 
     }
 
@@ -90,5 +91,6 @@ public class XolotlAttackStateDash : BaseState<XolotlBrain>
         base.DeinitState(controller);
         brain.animator.SetBool("Dash",false);
         brain.animator.SetBool("Rest",true);
+        brain.Eye.SetActive(false);
     }
 }

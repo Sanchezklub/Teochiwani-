@@ -25,8 +25,11 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     public GameObject Ps;
     public SpriteRenderer sr;
     public GameObject Blood;
+    public GameObject Eye;
     public GameObject XolotlHitbox;
     public GameObject[] Podest;
+    public GameObject XolotlBloodParticle;
+    public ParticleSystem BloodParticle;
 
     public UnityAction Attacking;
     public UnityAction LeaveFightState;
@@ -35,7 +38,7 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     {
         
         Podest = GameObject.FindGameObjectsWithTag("XolotlPodest");
-
+        StopParticleBlood();
         StartRest();
 
     }
@@ -71,6 +74,16 @@ public class XolotlBrain : BaseBrain<XolotlBrain>
     public void StartRest()
     {
         ChangeState(new XolotlRestState());
+    }
+    public void StartParticleBlood()
+    {
+        XolotlBloodParticle.SetActive(true);
+        BloodParticle.Play();
+    }
+    public void StopParticleBlood()
+    {
+        XolotlBloodParticle.SetActive(false);
+
     }
     
 }

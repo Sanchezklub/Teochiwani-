@@ -19,7 +19,7 @@ public class TigerBossAttackState : BaseState<TigerBoss>
 
     public void LaunchAttack()
     {
-        Collider2D[] colls = Physics2D.OverlapBoxAll(controller.targetPosition, controller.AttackSize, 0f);
+        Collider2D[] colls = Physics2D.OverlapBoxAll(controller.HandPosition.position, controller.AttackSize, 0f);
 
         foreach(var col in colls)
         {
@@ -27,6 +27,14 @@ public class TigerBossAttackState : BaseState<TigerBoss>
             if(cage != null)
             {
                 cage.OpenCage(controller);
+            }
+            else
+            {
+                Health health = col.transform.GetComponent<Health>();
+                if(health != null)
+                {
+                    health.TakeDamage(controller.AttackDamage);
+                }
             }
             Debug.Log("Attempted to open cage");
         }

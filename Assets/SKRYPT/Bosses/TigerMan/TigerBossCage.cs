@@ -8,6 +8,7 @@ public class TigerBossCage : MonoBehaviour
 
     public void OpenCage(TigerBoss boss)
     {
+        Debug.Log("TigerBossCage :: OpenCage() - cage was opened");
         TigerTemplateBoss tiger = Instantiate(tigerTemplate);
         tiger.gameObject.SetActive(true);
         tiger.Init(boss);

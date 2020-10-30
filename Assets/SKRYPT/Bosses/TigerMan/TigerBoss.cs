@@ -20,8 +20,13 @@ public class TigerBoss : BaseBrain<TigerBoss>
     [SerializeField]
     private float attackDistance;
     public float AttackDistance => attackDistance;
+    
+
 
     [SerializeField][Header("AttackVariables")]
+    private float attackDamage;
+
+    public float AttackDamage => attackDamage;
     private Transform attackSpot;
     public Transform AttackSpot => attackSpot;
 
@@ -50,11 +55,19 @@ public class TigerBoss : BaseBrain<TigerBoss>
 
     //public Transform testTransform;
 
-    public Vector3 targetPosition;
+    //public Vector3 targetPosition;
+    [SerializeField]
+    private TigerBossCage TEST_ONLYcage;
+    [SerializeField]
+    private bool TEST = false;
 
     private void Start()
     {
         StartFollowState();
+        if (TEST)
+        {
+            TEST_ONLYcage.OpenCage(this);
+        }
     }
 
     private void Update()

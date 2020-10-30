@@ -20,7 +20,8 @@ public class TigerBossDamageState : BaseState<TigerBoss>
     public void ThrowTiger()
     {
         tigerToThrow.transform.parent = null;
-        tigerToThrow.tigerRb.AddForce(Vector2.up * 1000f, ForceMode2D.Impulse);        
+        tigerToThrow.tigerRb.AddForce(Vector2.up * 1000f, ForceMode2D.Impulse);
+        tigerToThrow.velocityCheck = true;
     }
 
     public void ExitDamageState()

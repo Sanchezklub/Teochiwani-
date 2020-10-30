@@ -127,7 +127,7 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
-                enemy.transform.parent = RoomsByNumbers[loadedEnemy.roomNumber].transform;
+                enemy.transform.parent = RoomsByNumbers[loadedEnemy.roomNumber].transform/*.Find("Enemies")*/;
             }
         }
         EvilPlayer.GetComponent<EvilPlayerLoader>().LoadEvilPlayer();
@@ -142,7 +142,7 @@ public class SaveSystem : MonoBehaviour
             {
                 GameObject item = Instantiate(ItemPrefab, loadedItem.position, Quaternion.identity);
                 item.GetComponentInChildren<BaseItem>().ModId = loadedItem.ModId;
-                item.transform.parent = RoomsByNumbers[loadedItem.roomNumber].transform;
+                item.transform.parent = RoomsByNumbers[loadedItem.roomNumber].transform/*.Find("Items")*/;
             }
         }
     }
@@ -172,7 +172,7 @@ public class SaveSystem : MonoBehaviour
             if (EnviroPrefab != null)
             {
                 GameObject enviro = Instantiate(EnviroPrefab, loadedEnvironment.position, Quaternion.identity);
-                enviro.transform.parent = RoomsByNumbers[loadedEnvironment.roomNumber].transform;
+                enviro.transform.parent = RoomsByNumbers[loadedEnvironment.roomNumber].transform/*.Find("Podłoga")*/;
             }
         }
     }

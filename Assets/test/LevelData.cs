@@ -142,7 +142,10 @@ public class LevelData
 
     private bool CheckDifference(Vector2 objectPosition, Vector2 roomPosition)
     {
-        if (objectPosition.x >= (roomPosition.x - SaveSystem.Instance.levelGen.moveAmountx) && objectPosition.x < (roomPosition.x + SaveSystem.Instance.levelGen.moveAmountx) && objectPosition.y >= (roomPosition.y - SaveSystem.Instance.levelGen.moveAmounty) && objectPosition.y < (roomPosition.y + SaveSystem.Instance.levelGen.moveAmounty))
+        if (objectPosition.x >= (roomPosition.x - 195f)/* - (SaveSystem.Instance.levelGen.moveAmountx/2))*/ && 
+            objectPosition.x < (roomPosition.x + 15f) && 
+            objectPosition.y >= (roomPosition.y - 20f) &&
+            objectPosition.y < (roomPosition.y + 200f))
         {
             return true;
         }

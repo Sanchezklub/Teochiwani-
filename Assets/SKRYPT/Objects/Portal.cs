@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public Transform portalik;
     public GameObject Player;
     public GameObject Portalw;
     public void Start()

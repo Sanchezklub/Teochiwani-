@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &162290244506119837
 Transform:
   m_ObjectHideFlags: 0
@@ -103,10 +103,14 @@ MonoBehaviour:
   flavourtext: 
   itemName: Apteczka
   id: 0
+  ModId: -10
   CocaoPrice: 0
   BloodPrice: 0
   coll: {fileID: 524050011518394973}
   FloatingTextPrefab: {fileID: 0}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
 --- !u!61 &524050011518394973
 BoxCollider2D:
   m_ObjectHideFlags: 0

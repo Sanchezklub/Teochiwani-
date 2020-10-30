@@ -4766,6 +4766,7 @@ GameObject:
   - component: {fileID: 3006959398274305229}
   - component: {fileID: 898058351055232483}
   - component: {fileID: 8692041656892834156}
+  - component: {fileID: 9093137055395695077}
   m_Layer: 17
   m_Name: Portalw
   m_TagString: Level_generation
@@ -4878,6 +4879,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6
+--- !u!114 &9093137055395695077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2912271762660948484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2fb42031016a54dbff971f80579e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coll: {fileID: 898058351055232483}
+  particles: {fileID: 1517971451019744118}
 --- !u!1 &7748857506657933829
 GameObject:
   m_ObjectHideFlags: 0

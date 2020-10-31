@@ -68,8 +68,7 @@ public abstract class BaseWeapon : BaseItem
     }
     public void SoundAttack()
     {
-        audio.clip= AttackSound;
-        audio.Play();
+        AudioManager.instance.Play("Sword");
     }
     public void Effects(Collider2D enemy )
     {

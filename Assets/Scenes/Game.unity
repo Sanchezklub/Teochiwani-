@@ -11957,18 +11957,18 @@ PrefabInstance:
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.size
-      value: 39
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[39].name
-      value: KapibaraAttack
+      value: Bells
       objectReference: {fileID: 0}
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[39].clip
       value: 
-      objectReference: {fileID: 8300000, guid: fc26c680a48454b49b32dafab07be7da, type: 3}
+      objectReference: {fileID: 8300000, guid: a210b86f75d851f4cbed212a54cff7b1, type: 3}
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[39].volume
@@ -11993,13 +11993,13 @@ PrefabInstance:
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[40].name
-      value: KapibaraScratching
+      value: ChestOpen
       objectReference: {fileID: 0}
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[40].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 979399b7f9212864bb9ffd93f6f4134d, type: 3}
+      objectReference: {fileID: 8300000, guid: 8109e7ec5a54f92478ea27e26606da2e, type: 3}
     - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: sounds.Array.data[40].volume
@@ -12021,6 +12021,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2990991902851928083, guid: 474e1c495e818a74fb93e11aed41240b,
         type: 2}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: WeaponPickUp
+      objectReference: {fileID: 0}
     - target: {fileID: 6569751694910226804, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: PauseMenuUI

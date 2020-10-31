@@ -48,6 +48,7 @@ public abstract class BaseItem : MonoBehaviour
         EventController.instance.playerEvents.CallOnItemPickup(this);
         GameController.instance.DataStorage.PlayerInfo.ItemIDs.Add(id);
         ShowFloatingText();
+        AudioManager.instance.Play("Bells");
         coll.enabled = false;
         Destroy(gameObject);
     }
@@ -99,6 +100,7 @@ public abstract class BaseItem : MonoBehaviour
         gameObject.transform.localEulerAngles = new Vector3(0,0,0);
         EventController.instance.itemEvents.CallOnItemDied(this);
         Debug.Log("Called On Item Die " + name);
+        AudioManager.instance.Play("WeaponPickUp");
         //pc.enabled = true;
         PickUped=true;
         AttackSpeedPrevious = GameController.instance.DataStorage.PlayerInfo.attackspeed;

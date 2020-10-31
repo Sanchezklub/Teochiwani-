@@ -106,7 +106,7 @@ public class PlayerCombat : MonoBehaviour
     {
        
             EventController.instance.weaponEvents.CallOnWeaponPickup(currentWeapon, newWeapon);
-            FindObjectOfType<AudioManager>().Play("PickUpWeapon");
+            //FindObjectOfType<AudioManager>().Play("PickUpWeapon");
             //Do something about wpn;
             Debug.Log(newWeapon.name);
             currentWeapon?.DropWeapon();

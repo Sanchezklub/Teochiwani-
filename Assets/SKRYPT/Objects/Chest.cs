@@ -54,7 +54,7 @@ public class Chest : MonoBehaviour
     void Open()
     {
         Minimap.SetActive(false);
-        FindObjectOfType<AudioManager>().Play("ChestOpen");
+        AudioManager.instance.Play("ChestOpen");
         Debug.Log("Loot");
         IsOpen = true;
         this.GetComponent<SpriteRenderer>().sprite = mysprite1;

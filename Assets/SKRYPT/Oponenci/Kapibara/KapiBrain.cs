@@ -5,8 +5,7 @@ using UnityEngine.Events;
 
 public class KapiBrain : BaseBrain<KapiBrain>
 {
-    public float AttackRange;
-    public Transform AttackPoint;
+
     public Transform raycastTransform;
     [SerializeField] public LayerMask WhatIsGround;
     public bool FacingRight;
@@ -22,10 +21,9 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public EnemyHealth health;
     public Material FlashMaterial;
 
-    public AudioSource audio;
-
-    public AudioClip Soundcharge;
-    public AudioClip Attacksound;
+    //public AudioSource audio;
+    //public AudioClip Soundcharge;
+    //public AudioClip Attacksound;
 
     public ParticleSystem RightLeg;
 
@@ -80,13 +78,11 @@ public class KapiBrain : BaseBrain<KapiBrain>
     }
     public void SoundAttack()
     {
-        audio.clip= Attacksound;
-        audio.Play();
+       AudioManager.instance.Play("Capybara Attack");
     }
     public void SoundCharge()
     {
-        audio.clip= Soundcharge;
-        audio.Play();
+       AudioManager.instance.Play("KapibaraScratching");
     }
     [ContextMenu("CheckState")]
     public void CheckState()

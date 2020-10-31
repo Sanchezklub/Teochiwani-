@@ -22,7 +22,7 @@ public class KapiChannellingState : BaseState<KapiBrain>
         brain.enemyAnimator.SetBool("isIdle", true);
         brain.enemyAnimator.SetBool("isCharging", false);
         AudioManager.instance.Play("Capybara Scratch");
-        brain.SoundCharge();
+        //brain.SoundCharge();
     }
 
     void FaceTowardsPlayer()

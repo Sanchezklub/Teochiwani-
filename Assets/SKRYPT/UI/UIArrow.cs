@@ -8,6 +8,8 @@ public class UIArrow : MonoBehaviour
     [SerializeField]Vector3 Vector;
     [SerializeField] float DistanceFromPlayer;
     [SerializeField] float angle;
+    [SerializeField] SpriteRenderer SR;
+    [SerializeField] float FadingDistance;
     //Quaternion facing;
     private void Start()
     {
@@ -21,7 +23,14 @@ public class UIArrow : MonoBehaviour
         //var rotation = Quaternion.LookRotation(Vector);
         //rotation *= facing;
         //transform.rotation = rotation;
-        
+        if ( Vector2.Distance( GameController.instance.DataStorage.PlayerInfo.playerPosition,GameController.instance.DataStorage.PlayerInfo.portalPosition ) < FadingDistance)
+        {
+            SR.enabled=false;
+        }
+        else
+        {
+            SR.enabled=true;
+        }
         if (Vector.x >= 0)
         {
             angle = Vector3.Angle(new Vector2(0, 1), Vector);

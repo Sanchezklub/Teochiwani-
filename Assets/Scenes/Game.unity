@@ -476,7 +476,7 @@ PrefabInstance:
     - target: {fileID: 3873381741915912177, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4255556248046002447, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
         type: 3}
@@ -536,7 +536,7 @@ PrefabInstance:
     - target: {fileID: 7056346643962085381, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7056346643962085381, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
         type: 3}
@@ -608,6 +608,11 @@ PrefabInstance:
       propertyPath: attackSize.y
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8685374259276334483, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
+        type: 3}
+      propertyPath: bossrb
+      value: 
+      objectReference: {fileID: 1961883611}
     - target: {fileID: 8685374259276334485, guid: 7f5e58e86f56bcd4eb6098ad1896974b,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1401,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 8043548835444936865, guid: 95e63b3ab6510ab4fadb85f287ed6085,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8043548835444936865, guid: 95e63b3ab6510ab4fadb85f287ed6085,
         type: 3}
@@ -1420,6 +1425,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e63b3ab6510ab4fadb85f287ed6085, type: 3}
+--- !u!1 &834188936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1282935788}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834188937}
+  m_Layer: 0
+  m_Name: TigerInCage (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834188937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1282935788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834188936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &879073973 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 737809796170233467, guid: 0f3bd684e6dce7c4fb06dade9d2213d3,
@@ -1967,7 +2002,7 @@ PrefabInstance:
     - target: {fileID: 8043548835444936865, guid: 95e63b3ab6510ab4fadb85f287ed6085,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8043548835444936865, guid: 95e63b3ab6510ab4fadb85f287ed6085,
         type: 3}
@@ -7662,6 +7697,8 @@ MonoBehaviour:
   Vector: {x: 0, y: 0, z: 0}
   DistanceFromPlayer: 30
   angle: 0
+  SR: {fileID: 1888587207}
+  FadingDistance: 60
 --- !u!1001 &1890051490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8368,7 +8405,7 @@ PrefabInstance:
     - target: {fileID: 6392348699497800538, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6392348699497800538, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
@@ -8722,7 +8759,7 @@ PrefabInstance:
     - target: {fileID: 798982459895125073, guid: 7cf1d05ed26c96846b27fbcc7015b82e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 798982459895125073, guid: 7cf1d05ed26c96846b27fbcc7015b82e,
         type: 3}
@@ -11804,7 +11841,7 @@ PrefabInstance:
     - target: {fileID: 7179776483727244697, guid: f3efa29479bc3cd4dbd280f5d37379a1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7179776483727244697, guid: f3efa29479bc3cd4dbd280f5d37379a1,
         type: 3}
@@ -11917,6 +11954,73 @@ PrefabInstance:
       propertyPath: SFXSlider
       value: 
       objectReference: {fileID: 1678217052}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].name
+      value: KapibaraAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc26c680a48454b49b32dafab07be7da, type: 3}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].volumeVariance
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[39].mixerGroup
+      value: 
+      objectReference: {fileID: 2990991902851928083, guid: 474e1c495e818a74fb93e11aed41240b,
+        type: 2}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].name
+      value: KapibaraScratching
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 979399b7f9212864bb9ffd93f6f4134d, type: 3}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].volumeVariance
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408978590266503134, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
+        type: 3}
+      propertyPath: sounds.Array.data[40].mixerGroup
+      value: 
+      objectReference: {fileID: 2990991902851928083, guid: 474e1c495e818a74fb93e11aed41240b,
+        type: 2}
     - target: {fileID: 6569751694910226804, guid: 0b982b5ebd6e5bd42801c0f9b48f2748,
         type: 3}
       propertyPath: PauseMenuUI

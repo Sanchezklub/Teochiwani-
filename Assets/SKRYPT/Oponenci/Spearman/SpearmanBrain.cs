@@ -17,10 +17,9 @@ public class SpearmanBrain : BaseBrain<SpearmanBrain>
     public UnityAction LeaveFightState;
     public UnityAction FacePlayerAction;
 
-    public AudioSource audio;
-
-    public AudioClip GettingHurt;
-    public AudioClip Attacksound;
+    //public AudioSource audio;
+    //public AudioClip GettingHurt;
+    //public AudioClip Attacksound;
 
 
     public float damage;

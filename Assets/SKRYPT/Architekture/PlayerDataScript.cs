@@ -47,7 +47,7 @@ public class PlayerDataScript
         //position_x = PlayerInfo.playerPosition.x;
         //position_y = PlayerInfo.playerPosition.y;
         //testVector = new Vector3(12f, 23, 2);
-        CanLoad = PlayerInfo.IsAlive;
+        CanLoad = (PlayerInfo.IsAlive && !PlayerInfo.IsInTutorial);
         portalPosition = PlayerInfo.portalPosition;
     }
 

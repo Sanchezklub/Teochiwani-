@@ -21,6 +21,7 @@ public class ExitPortal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            coll.enabled = false;
             EventController.instance.levelEvents.CallOnLevelEnded();
         }
     }

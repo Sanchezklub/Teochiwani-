@@ -201,14 +201,20 @@ public abstract class BaseWeapon : BaseItem
         base.PickupWepaon();
         if ( pc!=null)
         pc.enabled=true;
-        currentModifier.PickedUp();
+        if (currentModifier != null)
+        {
+            currentModifier.PickedUp();
+        }
     }
     public virtual void DropWeapon()
     {
          base.DropWeapon();
          if ( pc!=null)
          pc.enabled=false;
-        currentModifier.Dropped();
+        if (currentModifier != null)
+        {
+            currentModifier.Dropped();
+        }
     }
     
 }

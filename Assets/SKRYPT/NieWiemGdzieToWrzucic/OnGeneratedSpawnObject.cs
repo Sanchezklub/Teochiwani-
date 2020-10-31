@@ -10,6 +10,7 @@ public class OnGeneratedSpawnObject : MonoBehaviour
     void Awake()
     {
         EventController.instance.levelEvents.OnLevelGeneratedBasic += SpawnObject;
+        EventController.instance.levelEvents.OnTutorialGeneratedBasic += SpawnObject;
     }
 
     void SpawnObject()

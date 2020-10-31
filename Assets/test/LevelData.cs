@@ -126,7 +126,7 @@ public class LevelData
                     {
                         if (CheckDifference(item.transform.position, data.position))
                         {
-                            itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, data.roomNumber));
+                            itemData.Add(new ItemData(item.id, item.transform.position, item.ModId, data.roomNumber));
                             Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                             break;
                         }

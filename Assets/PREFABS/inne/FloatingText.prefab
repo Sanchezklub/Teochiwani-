@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6451677517703166941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.61, y: 2.55, z: 0}
+  m_LocalPosition: {x: -10.61, y: 2.55, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,7 +48,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 3
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a8c1c218c073e0748bbe2cf5dc9a7916, type: 3}
@@ -82,7 +82,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6451677517703166941}
   m_Text: 60
-  m_OffsetZ: -6.72
+  m_OffsetZ: 5
   m_CharacterSize: 1.09
   m_LineSpacing: -0.89
   m_Anchor: 4

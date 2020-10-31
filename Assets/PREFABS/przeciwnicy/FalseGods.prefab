@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AggroRange: 70
-  MovementSpeed: 6
-  ProjectileDmg: 0
-  BallDmg: 0
-  RunTime: 0
+  MovementSpeed: 12
+  ProjectileDmg: 5
+  BallDmg: 15
+  RunTime: 8
   ProjectileMinX: -80
   ProjectileMaxX: 80
   ProjectileY: 18
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 200
   currentHealth: 10
-  FloatingText: 0
+  FloatingText: 1
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 10

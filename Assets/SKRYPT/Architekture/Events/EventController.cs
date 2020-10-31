@@ -272,8 +272,17 @@ public class EventController : MonoBehaviour
         {
             OnLevelGeneratedBasic?.Invoke();
             OnLevelGenerated?.Invoke(layout);
-            Debug.Log("On level generated called");
+            //Debug.Log("On level generated called");
         }
+        public UnityAction OnTutorialGeneratedBasic;
+
+        public void CallOnTutorialGenerated()
+        {
+            OnTutorialGeneratedBasic?.Invoke();
+        }
+
+
+
         public UnityAction OnChunkGeneratedBasic;
         public void CallOnChunkGenerated()
         {

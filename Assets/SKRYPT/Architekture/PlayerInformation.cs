@@ -30,6 +30,7 @@ public class PlayerInformation : ScriptableObject
     public int currentweaponModID;
 
     public bool IsAlive = true;
+    public bool IsInTutorial = false;
 
     public Vector2 portalPosition;
 

@@ -14,7 +14,10 @@ public class LevelGeneration : MonoBehaviour
     public GameObject Portal1;
     public GameObject Kupiec1;
     public Vector2 StartingPosition;
+    public Vector2 TutorialStartingPosition;
     public LevelData levelData;
+
+    public GameObject tutorial;
     //public Vector2 portalPosition;
     //private void Start()
    //{
@@ -701,5 +704,16 @@ public class LevelGeneration : MonoBehaviour
         
         EventController.instance.levelEvents.CallOnChunkGenerated();
         EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);
+        GameController.instance.DataStorage.PlayerInfo.IsInTutorial = false;
+    }
+
+    public void CreateTutorial()
+    {
+        Instantiate(tutorial,new Vector2( StartingPosition.x - 200, StartingPosition.y), Quaternion.identity);
+        EventController.instance.levelEvents.CallOnChunkGenerated();
+        EventController.instance.levelEvents.CallOnTutorialGenerated();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = TutorialStartingPosition;
+        GameController.instance.DataStorage.PlayerInfo.IsInTutorial = true;
     }
 }

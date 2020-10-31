@@ -101,7 +101,7 @@ public class SaveSystem : MonoBehaviour
 
             else
             {
-                Debug.Log("Could not load. Player was dead");
+                Debug.Log("Could not load. Player was dead or in tutorial");
                 stream.Close();
                 //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
                 return 1;

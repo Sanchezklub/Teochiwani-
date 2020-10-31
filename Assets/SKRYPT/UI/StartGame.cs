@@ -42,7 +42,7 @@ public class StartGame : MonoBehaviour
     }
     void FirstGame()
     {
-        levelGen.Create();
+        levelGen.CreateTutorial();
         Debug.Log("StartGame :: New Game was started for the first time");
     }
 

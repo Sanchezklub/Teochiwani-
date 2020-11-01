@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask ItemMask;
     public LayerMask ItemMasks;
     public LayerMask EnemyLayers;
-
+    public GameObject Player;
     public Transform holdPosition;
     public Animator animator;
     public float startingspeed;
@@ -40,7 +40,7 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks++;
             if(noOfClicks == 1)
             {
-                 if (currentWeapon != null)
+                 if (currentWeapon != null && !Player.GetComponent<CharacterController2D>().ladderMode)
                  {
                     animator.SetBool("IsAttacking", true);
                     animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);

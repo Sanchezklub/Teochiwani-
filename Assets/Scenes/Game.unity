@@ -1052,6 +1052,7 @@ MonoBehaviour:
   EnemyLayers:
     serializedVersion: 2
     m_Bits: 0
+  Player: {fileID: 0}
   holdPosition: {fileID: 2080187234}
   animator: {fileID: 462550401}
   startingspeed: 0
@@ -7983,6 +7984,11 @@ PrefabInstance:
       propertyPath: EnemyLayers.m_Bits
       value: 16384
       objectReference: {fileID: 0}
+    - target: {fileID: 4544277756249418048, guid: 903297f280de62a47aec8c17223b8423,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1172498630}
     - target: {fileID: 4544277756249418050, guid: 903297f280de62a47aec8c17223b8423,
         type: 3}
       propertyPath: LimbSprites.Array.size

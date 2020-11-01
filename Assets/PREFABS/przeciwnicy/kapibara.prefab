@@ -500,8 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc5800b040d4214b80a748480bb613c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 0
-  AttackPoint: {fileID: 0}
   raycastTransform: {fileID: 3196792089661789411}
   WhatIsGround:
     serializedVersion: 2
@@ -512,13 +510,11 @@ MonoBehaviour:
   StartFollowDist: 38
   StopChargeDist: 80
   enemyAnimator: {fileID: 1589249221}
-  ChannellTime: 3
+  ChannellTime: 1.833
   ChargeHitbox: {fileID: 4344722680389358005}
   health: {fileID: 851806345416005446}
   FlashMaterial: {fileID: 2100000, guid: 79fbeacdde7c91b47ad1ec6a6e3a0608, type: 2}
-  audio: {fileID: 5421554163552070278}
-  Soundcharge: {fileID: 8300000, guid: 979399b7f9212864bb9ffd93f6f4134d, type: 3}
-  Attacksound: {fileID: 8300000, guid: fc26c680a48454b49b32dafab07be7da, type: 3}
+  NormalMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   RightLeg: {fileID: 8995638267726839064}
 --- !u!114 &851806345416005446
 MonoBehaviour:

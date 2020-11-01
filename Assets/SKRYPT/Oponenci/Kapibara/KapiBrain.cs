@@ -20,6 +20,7 @@ public class KapiBrain : BaseBrain<KapiBrain>
     public UnityAction LeaveFightState;
     public EnemyHealth health;
     public Material FlashMaterial;
+    public Material NormalMaterial;
 
     //public AudioSource audio;
     //public AudioClip Soundcharge;

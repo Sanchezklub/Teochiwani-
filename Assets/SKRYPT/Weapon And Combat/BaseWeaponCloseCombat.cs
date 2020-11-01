@@ -44,4 +44,30 @@ public class BaseWeaponCloseCombat : BaseWeapon
             }
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(Attacking)
+        {
+            EnemyWas=false;
+            for (int i = 0; i < EnemyId.Length; i++)
+            {
+                if ( EnemyId[i]==collision.gameObject.GetInstanceID() )
+                {
+                    EnemyWas=true;
+                }
+            }
+            if ( EnemyWas==false)
+            {
+                Health EnemyHealth = collision.gameObject.GetComponent<Health>();
+                if (EnemyHealth != null)
+                {
+                    EnemyHealth?.TakeDamage(attackdamage+info.damage);
+                    EventController.instance.playerEvents.CallOnPlayerDealDamage(attackdamage + info.damage);
+                    EnemyId[EnemyCounter]=collision.gameObject.GetInstanceID();
+                    Effects(collision);
+
+                }
+            }
+        }
+    }
 }

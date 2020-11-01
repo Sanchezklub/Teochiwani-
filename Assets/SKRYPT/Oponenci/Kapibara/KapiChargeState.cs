@@ -78,7 +78,7 @@ public class KapiChargeState : BaseState<KapiBrain>
         //Debug.Log("Kapibara attempted to turn red");
         foreach (GameObject limb in brain.health.Limbs)
         {
-            OldMaterial = limb.GetComponent<SpriteRenderer>().material;
+            
             if (limb.GetComponent<SpriteRenderer>().material != brain.health.LightningEffectMaterial)
             {
                 limb.GetComponent<SpriteRenderer>().material = brain.FlashMaterial;
@@ -137,7 +137,7 @@ public class KapiChargeState : BaseState<KapiBrain>
         //brain.enemyAnimator.SetBool("Charge", false);
         foreach (GameObject limb in brain.health.Limbs)
         {
-            limb.GetComponent<SpriteRenderer>().material = OldMaterial;
+            limb.GetComponent<SpriteRenderer>().material = brain.NormalMaterial;
         }
     }
 

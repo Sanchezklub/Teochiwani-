@@ -646,12 +646,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3aebfe13970904399cddb505b6dcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 300
   currentHealth: 0
-  FloatingText: 0
-  FloatingTextPrefab: {fileID: 0}
+  FloatingText: 1
+  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
+    type: 3}
   id: 12
-  EffectParticle: []
+  EffectParticle:
+  - {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
+  - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}
   splashController: {fileID: 4820102492893369125}
   Limbs: []
   LightningEffectMaterial: {fileID: 0}
@@ -6705,7 +6708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1548208513127485298
 Transform:
   m_ObjectHideFlags: 0

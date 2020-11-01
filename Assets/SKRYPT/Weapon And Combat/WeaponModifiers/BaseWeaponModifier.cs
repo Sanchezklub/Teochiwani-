@@ -22,6 +22,7 @@ public class BaseWeaponModifier : ScriptableObject
     [SerializeField] bool Lightning;
     [SerializeField] bool Godly;
     [SerializeField] bool Human;
+    [SerializeField] bool Vampiric;
     [Range(-1.0f, 1.0f)]
     public float AttackSpeedChange;
 
@@ -39,6 +40,7 @@ public class BaseWeaponModifier : ScriptableObject
     private bool DefaultLightning;
     private bool DefaultGodly;
     private bool DefaultHuman;
+    private bool DefaultVampiric;
     
     private string DefaultWeaponName;
 
@@ -80,6 +82,10 @@ public class BaseWeaponModifier : ScriptableObject
         if(Human)
         {
             weapon.EffectHuman=Human;
+        }
+        if(Vampiric)
+        {
+            weapon.Vampiric=Vampiric;
         }
         if(WeaponSpriteMaterial!=null)
         {
@@ -130,6 +136,7 @@ public class BaseWeaponModifier : ScriptableObject
         {
         weapon.SpriteRen.material = DefaultWeaponSpriteMaterial;
         }
+        weapon.Vampiric = DefaultVampiric;
     }
 
     private void StoreBaseValues(BaseWeapon weapon)
@@ -154,7 +161,7 @@ public class BaseWeaponModifier : ScriptableObject
         {
         DefaultWeaponSpriteMaterial = weapon.SpriteRen.material;
         }
-
+        DefaultVampiric = weapon.Vampiric;
     /*public float attackdamage;
     public float attackrange;
     public ParticleSystem particle;

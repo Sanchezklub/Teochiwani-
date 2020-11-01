@@ -15,6 +15,7 @@ public class Strzala : MonoBehaviour
     bool Lightning = false;
     bool Godly = false;
     bool Human = false; 
+    bool Vampiric = false; 
     float BleedDamage;
     int BleedCount;
     float BleedTimeBetween;
@@ -55,6 +56,7 @@ public class Strzala : MonoBehaviour
         Lightning = weapon.EffectLightning;
         Human = weapon.EffectHuman;
         Godly = weapon.EffectGodly;
+        Vampiric = weapon.Vampiric;
 
         BleedDamage = weapon.BleedDamage;
         BleedCount = weapon.BleedCount;
@@ -123,6 +125,10 @@ public class Strzala : MonoBehaviour
         if( Lightning)
         {
                 enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,3);
+        }
+        if (Vampiric )
+        {
+            EventController.instance.playerEvents.CallOnPlayerDealDamage(damage);
         }
         
         this.transform.parent=enemy.transform;

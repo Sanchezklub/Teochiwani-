@@ -25,6 +25,7 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public bool EffectLightning=false;
     [SerializeField] public bool EffectGodly=false;
     [SerializeField] public bool EffectHuman=false;
+    [SerializeField] public bool Vampiric=false;
 
     [SerializeField] public bool EffectBleed=false;
     [SerializeField]public float BleedDamage;

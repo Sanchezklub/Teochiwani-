@@ -22,10 +22,8 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator MakeNewLevel()
     {
-        yield return new WaitForSeconds(5f);
         Debug.Log("Before delete");
         deleter.Delete();
-        yield return new WaitForSeconds(3f);
         if ( GameController.instance.DataStorage.PlayerInfo.karma > 25)
         {
             GameController.instance.DataStorage.PlayerInfo.level=2;
@@ -36,8 +34,8 @@ public class LevelManager : MonoBehaviour
         }
         Debug.Log("After deciding level, before creating");
         //tutaj dać rzeczy z karmą i obecnym poziomem żeby zdecydować jaką wartość przypisać GameController.instance.DataStorage.PlayerInfo.level
+        yield return new WaitForSeconds(0.1f);
         levelGen.Create();
-        yield return new WaitForSeconds(3f);
         player.transform.position = new Vector2(SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);
         LoadingScreen.SetActive(false);
     }

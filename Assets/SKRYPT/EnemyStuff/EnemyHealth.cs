@@ -39,6 +39,7 @@ public class EnemyHealth : Health
         Dying?.Invoke();
     }
         bool dropna=false;
+        bool dropna2=false;
 
     protected override void Die()
     {
@@ -92,10 +93,11 @@ public class EnemyHealth : Health
             GameController.instance.DataStorage.PlayerInfo.karma += 1;
         
         }
-        if(GameController.instance.DataStorage.PlayerInfo.potionLoads < 3)
+        if(GameController.instance.DataStorage.PlayerInfo.potionLoads < 3 && dropna2==false) 
         
         {
             GameController.instance.DataStorage.PlayerInfo.potionLoads += 1;
+            dropna2=true;
         }
 
     }

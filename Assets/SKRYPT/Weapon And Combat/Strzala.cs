@@ -29,7 +29,7 @@ public class Strzala : MonoBehaviour
     float PoisonTimeBetween;
 
     //Material WeaponSpriteMaterial;
-    private float damage=0;
+    private float damage;
     public int Range =2;
 
     public LayerMask Enemy;
@@ -48,7 +48,7 @@ public class Strzala : MonoBehaviour
         //var weapon = player.GetComponentInChildren<BaseWeapon>();
         damage = weapon.attackdamage;
         damage+= weapon.info.damage;
-        GetComponent<SpriteRenderer>().material= weapon.SpriteRen.material;
+         this.GetComponent<SpriteRenderer>().material= weapon.SpriteRen.material;
 
         Poison = weapon.EffectPoison;
         Fire = weapon.EffectFire;

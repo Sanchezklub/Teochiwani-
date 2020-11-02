@@ -32,6 +32,10 @@ public class Cheats : MonoBehaviour
                 Instantiate(Rhino, GameController.instance.DataStorage.PlayerInfo.playerPosition, Quaternion.identity);
                 Instantiate(Portal, GameController.instance.DataStorage.PlayerInfo.playerPosition, Quaternion.identity);
             }
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                Player.GetComponent<Health>().TakeDamage(GameController.instance.DataStorage.PlayerInfo.currenthealth);
+            }
         }        
     }
 }

@@ -10,6 +10,10 @@ public class Bullet1 : MonoBehaviour
     bool Poison=false;
     bool Bleed=false;
     bool Fire=false;
+    bool Lightning = false;
+    bool Godly = false;
+    bool Human = false; 
+    bool Vampiric = false; 
 
     float BleedDamage;
     int BleedCount;
@@ -24,27 +28,34 @@ public class Bullet1 : MonoBehaviour
     float PoisonTimeBetween;
 
 
-    private float damage=0;
+    public float damage;
     public int Range =2;
 
     public LayerMask Enemy;
     GameObject player;
     public Collider2D[] hitEnemies;
     public GameObject Tip;
-    public ParticleSystem[] Effect;
+    public ParticleSystem[] Effect; 
+    public GameObject firelight;
+    public BaseWeapon weapon;
     
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         pc=GetComponent<BoxCollider2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        var weapon = player.GetComponentInChildren<BaseWeapon>();
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //var weapon = player.GetComponentInChildren<BaseWeapon>();
         damage = weapon.attackdamage;
-        damage+= GameController.instance.DataStorage.PlayerInfo.damage;
+       // damage+= weapon.info.damage;
+        this.GetComponent<SpriteRenderer>().material= weapon.SpriteRen.material;
 
         Poison = weapon.EffectPoison;
         Fire = weapon.EffectFire;
         Bleed = weapon.EffectBleed;
+        Lightning = weapon.EffectLightning;
+        Human = weapon.EffectHuman;
+        Godly = weapon.EffectGodly;
+        Vampiric = weapon.Vampiric;
 
         BleedDamage = weapon.BleedDamage;
         BleedCount = weapon.BleedCount;
@@ -58,21 +69,25 @@ public class Bullet1 : MonoBehaviour
         PoisonCount = weapon.PoisonCount;
         PoisonTimeBetween =weapon.PoisonTimeBetween;
 
-        if(Poison) {Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);}
-        if(Fire)    {Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);}
-        if(Bleed)   {Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);}
-        
+        if(weapon.EffectPoison)
+        {
+            Instantiate(Effect[2],Tip.transform.position, Quaternion.identity,transform);
+        }
+        if(weapon.EffectFire)    
+        {
+            Instantiate(Effect[1],Tip.transform.position, Quaternion.identity,transform);
+            firelight.SetActive(true);
+        }
+        if(Bleed)   
+        {
+            Instantiate(Effect[0],Tip.transform.position, Quaternion.identity,transform);
+        }
+
+        Enemy = weapon.enemyLayers;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(hasHit==false)
-        {
-            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x)* Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward );
-        }
-    }
+    
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -98,6 +113,14 @@ public class Bullet1 : MonoBehaviour
         if ( Poison)
         {
             enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,2);
+        }
+        if( Lightning)
+        {
+                enemy.GetComponent<Health>()?.Effect(PoisonDamage,PoisonCount,PoisonTimeBetween,3);
+        }
+        if (Vampiric )
+        {
+            EventController.instance.playerEvents.CallOnPlayerDealDamage(damage);
         }
         
         this.transform.parent=enemy.transform;

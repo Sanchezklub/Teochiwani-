@@ -12,6 +12,9 @@ public class MixerController : MonoBehaviour
     public Slider MusicSlider;
     public Slider SFXSlider;
 
+    //public Slider PauseMasterSlider;
+    //public Slider PauseMusicSlider;
+    //public Slider PauseSFXSlider;
     public void SetMasterVolume (float volume)
     {
         mixer.SetFloat("MasterVolume", Mathf.Log10(volume)*20);

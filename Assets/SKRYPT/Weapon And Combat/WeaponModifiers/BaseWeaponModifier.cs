@@ -54,7 +54,10 @@ public class BaseWeaponModifier : ScriptableObject
         weapon.CocaoPrice += PriceChange;
         weapon.attackdamage += DamageChange;
         weapon.attackRange += AttackRangeChange;
-        weapon.ModifierParticle = modifierParticle;
+        if (modifierParticle!=null)
+        {
+            weapon.ModifierParticle = modifierParticle;
+        }
         if(weapon.trail!=null)
         {
         weapon.trail.startColor=TrailColor;
@@ -91,6 +94,7 @@ public class BaseWeaponModifier : ScriptableObject
         {
             weapon.SpriteRen.material = WeaponSpriteMaterial;
         }
+        
         weapon.AttackSpeedModifier += AttackSpeedChange; 
         switch (weapon.weaponSexType)
         {

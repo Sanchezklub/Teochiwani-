@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1838419342257434696
 Transform:
   m_ObjectHideFlags: 0
@@ -132,8 +132,10 @@ MonoBehaviour:
   flavourtext: Gimmie MOre......
   itemName: "B\u0142ogos\u0142awiona Krew"
   id: 7
+  ModId: -10
   CocaoPrice: 15
   BloodPrice: 15
   coll: {fileID: 4686377886424221634}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0

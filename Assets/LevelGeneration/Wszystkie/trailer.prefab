@@ -2319,7 +2319,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1058974847652227500
@@ -4435,7 +4435,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1531244990654956078
@@ -6069,9 +6069,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2167040
-  audio: {fileID: 6721580942199699863}
-  GettingHurt: {fileID: 8300000, guid: a18de1afd7c036e4c94d313d759c8ee2, type: 3}
-  Attacksound: {fileID: 8300000, guid: e763d93575c035b48a066c4f40203f0d, type: 3}
   damage: 0
   speed: 2
   StartFollowDist: 40
@@ -6548,9 +6545,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2167040
-  audio: {fileID: 5078326054298328644}
-  GettingHurt: {fileID: 8300000, guid: a18de1afd7c036e4c94d313d759c8ee2, type: 3}
-  Attacksound: {fileID: 8300000, guid: e763d93575c035b48a066c4f40203f0d, type: 3}
   damage: 0
   speed: 2
   StartFollowDist: 40
@@ -7167,7 +7161,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2159202268038975387
@@ -10977,7 +10971,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3454891988686490183
@@ -11265,7 +11259,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 15.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3594804783174420499
@@ -12634,9 +12628,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2167040
-  audio: {fileID: 8496131509841285857}
-  GettingHurt: {fileID: 8300000, guid: a18de1afd7c036e4c94d313d759c8ee2, type: 3}
-  Attacksound: {fileID: 8300000, guid: e763d93575c035b48a066c4f40203f0d, type: 3}
   damage: 0
   speed: 2
   StartFollowDist: 40
@@ -12888,7 +12879,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4058070031945398558
@@ -14407,7 +14398,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &522381374986077540
@@ -15427,8 +15418,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5099266946461906872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15.375, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.226, y: 30.319, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.557, z: 1}
   m_Children:
   - {fileID: 9131964910937597792}
   - {fileID: 4490329994367621380}
@@ -15715,7 +15706,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 15.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5182156704477253700
@@ -16211,7 +16202,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 15.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5368589155220198338
@@ -16721,9 +16712,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2167040
-  audio: {fileID: 7059787478526549254}
-  GettingHurt: {fileID: 8300000, guid: a18de1afd7c036e4c94d313d759c8ee2, type: 3}
-  Attacksound: {fileID: 8300000, guid: e763d93575c035b48a066c4f40203f0d, type: 3}
   damage: 0
   speed: 2
   StartFollowDist: 40
@@ -17482,9 +17470,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 2167040
-  audio: {fileID: 7822507326358347913}
-  GettingHurt: {fileID: 8300000, guid: a18de1afd7c036e4c94d313d759c8ee2, type: 3}
-  Attacksound: {fileID: 8300000, guid: e763d93575c035b48a066c4f40203f0d, type: 3}
   damage: 0
   speed: 2
   StartFollowDist: 40
@@ -18013,7 +17998,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6021140710706800053
@@ -19239,7 +19224,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6521184250544179052
@@ -20197,7 +20182,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 15.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7904298098546993000
@@ -20868,7 +20853,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7263671033786451659
@@ -24237,7 +24222,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 15.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8541907698978027832
@@ -24830,7 +24815,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 30}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8823803540182976066

@@ -77,8 +77,11 @@ public class Health : MonoBehaviour
 
     IEnumerator PoisonDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-        var go =Instantiate(EffectParticle[0], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
-        Destroy ( go,TimeCount*TimeBetweenHits );
+        if (EffectParticle.Length >= 3)
+        {
+            var go = Instantiate(EffectParticle[0], new Vector2(transform.position.x, transform.position.y + 7), Quaternion.identity, transform);
+            Destroy(go, TimeCount * TimeBetweenHits);
+        }
         for ( int i=0; i < TimeCount; i++)
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
@@ -99,8 +102,12 @@ public class Health : MonoBehaviour
                     limb.GetComponent<SpriteRenderer>().material=FireEffectMaterial;
                 }
             }
-        var go =Instantiate(EffectParticle[1], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
-        Destroy ( go,TimeCount*TimeBetweenHits );
+         if (EffectParticle.Length >= 3)
+        {
+            var go = Instantiate(EffectParticle[1], new Vector2(transform.position.x, transform.position.y + 7), Quaternion.identity, transform);
+            Destroy(go, TimeCount * TimeBetweenHits);
+        }
+
         for ( int i=0; i < TimeCount; i++)
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;
@@ -120,8 +127,11 @@ public class Health : MonoBehaviour
     
     IEnumerator BleedingDamage(float damage,  int TimeCount, float TimeBetweenHits)
     {
-        var go =Instantiate(EffectParticle[2], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
-        Destroy ( go,TimeCount*TimeBetweenHits );
+        if (EffectParticle.Length >= 3)
+        {
+            var go =Instantiate(EffectParticle[2], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity,transform);
+            Destroy ( go,TimeCount*TimeBetweenHits );
+        }
         for ( int i=0; i < TimeCount; i++)
         {
             yield return new WaitForSeconds(TimeBetweenHits) ;

@@ -13,4 +13,9 @@ public class EnviroId : MonoBehaviour
         //Debug.Log("Enviro Start");
         EventController.instance.enviromentEvents.CallOnEnviroAppear(this);
     }
+
+    private void OnDestroy()
+    {
+        EventController.instance.enviromentEvents.CallOnEnviroDied(this);
+    }
 }

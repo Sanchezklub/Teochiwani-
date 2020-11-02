@@ -709,7 +709,7 @@ public class LevelGeneration : MonoBehaviour
 
     public void CreateTutorial()
     {
-        Instantiate(tutorial,new Vector2( StartingPosition.x - 200, StartingPosition.y), Quaternion.identity);
+        Instantiate(tutorial,new Vector2( StartingPosition.x - moveAmountx, StartingPosition.y- moveAmounty), Quaternion.identity);
         EventController.instance.levelEvents.CallOnChunkGenerated();
         EventController.instance.levelEvents.CallOnTutorialGenerated();
         GameObject player = GameObject.FindGameObjectWithTag("Player");

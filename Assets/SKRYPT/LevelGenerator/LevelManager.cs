@@ -23,7 +23,9 @@ public class LevelManager : MonoBehaviour
     IEnumerator MakeNewLevel()
     {
         Debug.Log("Before delete");
+        Debug.LogFormat("Before deleting: Enemies length is {0}. Enviros length is {1}. Etc.", SaveSystem.Instance.enemyTracker.enemies.Count, SaveSystem.Instance.enviromentTracker.enviros.Count);
         deleter.Delete();
+        Debug.Log("AfterDelete");
         if ( GameController.instance.DataStorage.PlayerInfo.karma > 25)
         {
             GameController.instance.DataStorage.PlayerInfo.level=2;
@@ -33,9 +35,14 @@ public class LevelManager : MonoBehaviour
             GameController.instance.DataStorage.PlayerInfo.level=1;
         }
         Debug.Log("After deciding level, before creating");
+
+        Debug.LogFormat("After deleting: Enemies length is {0}. Enviros length is {1}. Etc.", SaveSystem.Instance.enemyTracker.enemies.Count, SaveSystem.Instance.enviromentTracker.enviros.Count);
+
         //tutaj dać rzeczy z karmą i obecnym poziomem żeby zdecydować jaką wartość przypisać GameController.instance.DataStorage.PlayerInfo.level
         yield return new WaitForSeconds(0.1f);
         levelGen.Create();
+        Debug.LogFormat("After Creating: Enemies length is {0}. Enviros length is {1}. Etc.", SaveSystem.Instance.enemyTracker.enemies.Count, SaveSystem.Instance.enviromentTracker.enviros.Count);
+        Debug.Log("After creating");
         player.transform.position = new Vector2(SaveSystem.Instance.levelGen.StartingPosition.x - SaveSystem.Instance.levelGen.moveAmountx, SaveSystem.Instance.levelGen.StartingPosition.y);
         LoadingScreen.SetActive(false);
     }

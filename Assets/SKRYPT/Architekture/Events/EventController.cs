@@ -201,6 +201,17 @@ public class EventController : MonoBehaviour
         }
         public UnityAction OnEnemyGetDamageBasic;
         public UnityAction<EnemyHealth> OnEnemyGetDamage;
+
+        public UnityAction OnEnemyDestroyedBasic;
+        public UnityAction<EnemyHealth> OnEnemyDestroyed;
+
+        public void CallOnEnemyDestroyed(EnemyHealth enemy)
+        {
+            OnEnemyDestroyedBasic?.Invoke();
+            OnEnemyDestroyed?.Invoke(enemy);
+        }
+
+
         public void CallOnEnemyGetDamage(EnemyHealth enemy)
         {
             OnEnemyGetDamageBasic?.Invoke();

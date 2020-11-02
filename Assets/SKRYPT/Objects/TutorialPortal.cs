@@ -16,6 +16,7 @@ public class TutorialPortal : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            SaveSystem.Instance.SaveGame();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

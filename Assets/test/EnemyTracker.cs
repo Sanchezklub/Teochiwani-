@@ -11,6 +11,7 @@ public class EnemyTracker : MonoBehaviour
     {
         EventController.instance.enemyEvents.OnEnemyAppear += OnNewEnemy;
         EventController.instance.enemyEvents.OnEnemyDied += OnEnemyDie;
+        EventController.instance.enemyEvents.OnEnemyDestroyed += OnEnemyDie;
     }
 
     public void OnNewEnemy(EnemyHealth newEnemy)
@@ -28,6 +29,7 @@ public class EnemyTracker : MonoBehaviour
     {
         EventController.instance.enemyEvents.OnEnemyAppear -= OnNewEnemy;
         EventController.instance.enemyEvents.OnEnemyDied -= OnEnemyDie;
+        EventController.instance.enemyEvents.OnEnemyDestroyed -= OnEnemyDie;
     }
 
 }

@@ -78,6 +78,7 @@ public class SaveSystem : MonoBehaviour
                 Debug.Log(saveContainer);
                 if (SpawnStuff == true)
                 {
+                    LoadPlayer(saveContainer);
                     LoadRooms(saveContainer);
                     LoadEnemies(saveContainer);
                     //LoadWeapons(saveContainer);
@@ -87,7 +88,6 @@ public class SaveSystem : MonoBehaviour
                     LoadOldPlayerData(saveContainer);
                     LoadEnvironment(saveContainer);
                     //Debug.Log("save system 1");
-                    LoadPlayer(saveContainer);
                     //Debug.Log("save system 2");
 
                 }
@@ -251,6 +251,7 @@ public class SaveSystem : MonoBehaviour
         }
 
         Vector3 pos = LoadedSaveContainer.playerData.PlayerPosition;
+        GameController.instance.DataStorage.PlayerInfo.level = LoadedSaveContainer.playerData.level;
         Debug.Log("LoadedPosition was" +pos);
         GameController.instance.DataStorage.PlayerInfo.cocoa = LoadedSaveContainer.playerData.cocoa;
         GameController.instance.DataStorage.PlayerInfo.blood = LoadedSaveContainer.playerData.blood;

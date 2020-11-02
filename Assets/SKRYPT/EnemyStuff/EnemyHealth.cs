@@ -98,6 +98,10 @@ public class EnemyHealth : Health
 
     }
 
+    private void OnDestroy()
+    {
+        EventController.instance.enemyEvents.CallOnEnemyDestroyed(this);
+    }
     public void GetDestroyed()
     {
         Destroy(gameObject);

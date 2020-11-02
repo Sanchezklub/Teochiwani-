@@ -9,7 +9,7 @@ public class GlobalStatistics : MonoBehaviour
     public static GlobalStatistics instance;
     public GlobalStatisticsData data;
     public float timePassed = 0f;
-    public int[] enemiesKilled; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
+    public int[] enemiesKilled = new int[200]; // pozycja na liście to id przeciwnika, wartość to liczba zabitych
     public int doubleKills;
     public float fireDamageDealt;
     public float poisonDamageDealt;
@@ -39,8 +39,8 @@ public class GlobalStatistics : MonoBehaviour
     void OnEnemyDied(EnemyHealth enemy)
     {
         //Debug.Log("Enemy id was " + enemy.id);
-        enemiesKilled[enemy.id] += 1;
-        StartCoroutine("MultikillTimer");
+        //enemiesKilled[enemy.id] += 1;
+        //StartCoroutine("MultikillTimer");
 
     }
 

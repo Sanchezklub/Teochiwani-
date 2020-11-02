@@ -94,7 +94,10 @@ public abstract class BaseWeapon : BaseItem
     }
     public void AddParticle()
     {
-        Instantiate(ModifierParticle, AttackPoint.transform.position, Quaternion.identity, transform);
+        if (ModifierParticle != null)
+        {
+            Instantiate(ModifierParticle, AttackPoint.transform.position, Quaternion.identity, transform);
+        }
     }
     public override void Start()
     {

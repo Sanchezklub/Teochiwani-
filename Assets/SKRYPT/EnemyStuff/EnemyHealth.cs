@@ -38,6 +38,7 @@ public class EnemyHealth : Health
     {
         Dying?.Invoke();
     }
+        bool dropna=false;
 
     protected override void Die()
     {
@@ -63,11 +64,12 @@ public class EnemyHealth : Health
             EventController.instance.enemyEvents.CallOnBossDied(this);
         }
         int rand = Random.Range(0, Drops.Length);
-        if (Drops.Length != 0)
+        if (Drops.Length != 0&& dropna==false )
         {
             if (Drops[rand] != null)
             {
                 Instantiate(Drops[rand], new Vector2( transform.position.x, transform.position.y+7), Quaternion.identity);
+                dropna=true;
             }
         }
         Dying += GetDestroyed;

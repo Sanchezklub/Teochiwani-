@@ -10,6 +10,7 @@ public class EvilPlayerAttackState : BaseState<EvilPlayerBrain>
     {
         base.InitState(controller);
         this.brain = controller;
+        brain.animator.SetFloat("Speed", 0);
         if (brain.combat.currentWeapon.AttackAnimationType != BaseWeapon.AnimationType.IsAttackingThrow)
         {
             brain.combat.Attack();

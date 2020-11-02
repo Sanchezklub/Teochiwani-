@@ -40,10 +40,18 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks++;
             if(noOfClicks == 1)
             {
-                 if (currentWeapon != null && !Player.GetComponent<CharacterController2D>().ladderMode)
+                if (currentWeapon != null)
                  {
-                    animator.SetBool("IsAttacking", true);
-                    animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                    if (Player == null)
+                    {
+                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                        animator.SetBool("IsAttacking", true);
+                    }
+                    else if (Player.GetComponent<CharacterController2D>().ladderMode)
+                    {
+                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                        animator.SetBool("IsAttacking", true);
+                    }
                  }
             }
 

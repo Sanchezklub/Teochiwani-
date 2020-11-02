@@ -20,7 +20,8 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField] public bool Attacking=false;
     public int EnemyCounter;
     private bool ModifierChosen = false; //sprawdza, czy proces przebiegł, jest true nawet jak modifier jest pusty
-    [SerializeField] public ParticleSystem ModifierParticle;
+    [SerializeField][Header("WeaponModifier")]
+     public ParticleSystem ModifierParticle;
     [SerializeField] private BaseWeaponModifier currentModifier;
     [SerializeField] public bool EffectLightning=false;
     [SerializeField] public bool EffectGodly=false;
@@ -31,12 +32,12 @@ public abstract class BaseWeapon : BaseItem
     [SerializeField]public float BleedDamage;
     [SerializeField]public int BleedCount;
     [SerializeField]public float BleedTimeBetween;
-
+    [Header("FireModifier")]
     [SerializeField]public bool EffectFire=false;
     [SerializeField]public float FireDamage;
     [SerializeField]public int FireCount;
     [SerializeField]public float FireTimeBetween;
-
+    [Header("PoisonModifier")]
     [SerializeField] public bool EffectPoison=false;
     [SerializeField]public float PoisonDamage;
     [SerializeField]public int PoisonCount;

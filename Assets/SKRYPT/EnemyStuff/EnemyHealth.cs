@@ -40,6 +40,7 @@ public class EnemyHealth : Health
     }
         bool dropna=false;
         bool dropna2=false;
+        bool dropna3=false;
 
     protected override void Die()
     {
@@ -84,12 +85,14 @@ public class EnemyHealth : Health
             enemyAnimator.SetTrigger(Keys.DIE_ANIM_KEY);
         }
 
-        if (IsHuman)// Dodawanie i odejmowanie karmy w zależności czy przeciwnik jest human czy nie. Karma min 0, max 50, start 25, zmiana o 1.
+        if (IsHuman && dropna3 == false)// Dodawanie i odejmowanie karmy w zależności czy przeciwnik jest human czy nie. Karma min 0, max 50, start 25, zmiana o 1.
         {
             GameController.instance.DataStorage.PlayerInfo.karma -= 1;
+            dropna2=true;
         }
-        else
+        else if ( dropna3 ==false)
         {
+            dropna2=true;
             GameController.instance.DataStorage.PlayerInfo.karma += 1;
         
         }

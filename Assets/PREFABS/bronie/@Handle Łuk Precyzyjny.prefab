@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3598393178829971368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0.49, z: 0}
+  m_LocalPosition: {x: 6.9, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2924343410341706558}
@@ -195,8 +195,6 @@ MonoBehaviour:
   CocaoPrice: 0
   BloodPrice: 0
   coll: {fileID: 1773361189687870653}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   PickUped: 0
   AttackSpeedModifier: 0
   AttackSpeedPrevious: 0
@@ -215,6 +213,7 @@ MonoBehaviour:
   EffectLightning: 0
   EffectGodly: 0
   EffectHuman: 0
+  Vampiric: 0
   EffectBleed: 0
   BleedDamage: 2
   BleedCount: 15

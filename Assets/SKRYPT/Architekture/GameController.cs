@@ -10,6 +10,12 @@ public class GameController : MonoBehaviour
     private DataStorage dataStorage;
     public DataStorage DataStorage => dataStorage;
 
+    [SerializeField]
+    private ReturnPlayerDataToDefaults defaultPlayerData;
+    public ReturnPlayerDataToDefaults DefaultPlayerData => defaultPlayerData;
+
+
+
     private void Awake()
     {
         instance = this;

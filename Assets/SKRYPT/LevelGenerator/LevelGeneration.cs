@@ -685,6 +685,12 @@ public class LevelGeneration : MonoBehaviour
             }
         }
     }
+
+    void FallbackRoom()
+    {
+        Instantiate(rooms[17], transform.position, Quaternion.identity);
+    }
+
     [ContextMenu("GenerateLevel")]
     public void Create() // buduje poziom 
     {
@@ -701,6 +707,7 @@ public class LevelGeneration : MonoBehaviour
         Fix();
         Boss();
         KupieciPortal();
+        FallbackRoom();
         
         EventController.instance.levelEvents.CallOnChunkGenerated();
         EventController.instance.levelEvents.CallOnLevelGenerated(FixedRoom);

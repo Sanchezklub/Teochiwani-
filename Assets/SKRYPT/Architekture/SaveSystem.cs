@@ -20,7 +20,7 @@ public class SaveSystem : MonoBehaviour
     //public LevelGeneration levelGen;
 
     public List<int> roomNumbers = new List<int>();
-    public GameObject[] RoomsByNumbers = new GameObject[100];
+    public GameObject[] RoomsByNumbers = new GameObject[120];
 
     public bool SpawnStuff = false;
 
@@ -127,6 +127,7 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
+                Debug.LogFormat("LoadedEnemies roomNumber was {0}", loadedEnemy.roomNumber);
                 enemy.transform.parent = RoomsByNumbers[loadedEnemy.roomNumber].transform/*.Find("Enemies")*/;
             }
         }

@@ -27,7 +27,11 @@ public class EvilPlayerCombat : PlayerCombat
 
     }
 
-    
+    protected override void Update()
+    {
+        animator.SetFloat("AttackSpeed", GameController.instance.DataStorage.EvilPlayerInfo.attackspeed);
+        animator.SetFloat("Speed1", GameController.instance.DataStorage.EvilPlayerInfo.speed / startingspeed);
+    }
     public override void CancelAllAttacks()
     {
         animator.SetBool("IsAttacking", false);
@@ -79,6 +83,7 @@ public class EvilPlayerCombat : PlayerCombat
 
     public void EvilFinishAttack()
     {
+        Debug.Log("EvilFinishAttack :: EvilPlayerCombat");
         CancelAllAttacks();
         brain.StartFollow();
     }

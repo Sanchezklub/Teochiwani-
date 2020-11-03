@@ -25,9 +25,9 @@ public class PlayerCombat : MonoBehaviour
     // attack speed zmieniam wedlug https://stackoverflow.com/questions/39524914/change-the-speed-of-animation-at-runtime-in-unity-c-sharp
     void Start()
     {
-        startingspeed = GameController.instance.DataStorage.PlayerInfo.speed;
+        startingspeed = GameController.instance.DefaultPlayerData.speed;
     }
-    void Update()
+    protected virtual void Update()
     {
         if (Time.time - lastClickedTime > MaxComboDelay)
         {
@@ -40,19 +40,11 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks++;
             if(noOfClicks == 1)
             {
-                if (currentWeapon != null)
-                 {
-                    if (Player == null)
-                    {
-                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
-                        animator.SetBool("IsAttacking", true);
-                    }
-                    else if (Player.GetComponent<CharacterController2D>().ladderMode)
-                    {
-                        animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
-                        animator.SetBool("IsAttacking", true);
-                    }
-                 }
+                if (currentWeapon != null && !Player.GetComponent<CharacterController2D>().ladderMode)
+                {
+                    animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                    animator.SetBool("IsAttacking", true);
+                }
             }
 
             nextAttackTime = Time.time +0.5f;

@@ -30,9 +30,12 @@ public class LevelData
     public void SaveEnemies(List<EnemyHealth> currentEnemies)
     {
         enemiesData = new List<EnemyData>();
-
+        bool saved;
         foreach (EnemyHealth enemy in currentEnemies)
         {
+            saved = false;
+
+
             if(enemy != null)
             {
                 foreach (RoomData data in roomData)
@@ -40,13 +43,20 @@ public class LevelData
                     if (CheckDifference(enemy.transform.position, data.position))
                     {
                         enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position, data.roomNumber));
+                        saved = true;
                         Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                         break;
                     }
-                    else Debug.Log("Item couldn't be saved");
+                    
 
 
                 }
+                if (!saved)
+                {
+                    Debug.Log("Enemy was saved to the fallback room");
+                    enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position, 100));
+                }
+
                 //enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position));
             }
         }
@@ -57,6 +67,7 @@ public class LevelData
 
         foreach (EnviroId enviro in currentEnviro)
         {
+            bool saved = false;
             if(enviro != null)
             {
                 foreach (RoomData data in roomData)
@@ -64,12 +75,18 @@ public class LevelData
                     if (CheckDifference(enviro.transform.position, data.position))
                     {
                         enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position, data.roomNumber));
+                        saved = true;
                         Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                         break;
                     }
-                    else Debug.Log("Item couldn't be saved");
 
 
+
+                }
+                if (!saved)
+                {
+                    Debug.Log("Enviro was saved to the fallback room");
+                    enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position, 100));
                 }
                 //enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
             }
@@ -101,6 +118,8 @@ public class LevelData
 
         foreach (BaseItem item in currentItem)
         {
+
+            bool saved = false;
             if (item != null)
             {
                 if (item is BaseWeapon)
@@ -113,9 +132,15 @@ public class LevelData
                             Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                             break;
                         }
-                        else Debug.Log("Item couldn't be saved");
-                        
-                        
+
+
+
+                    }
+                    if (!saved)
+                    {
+                        Debug.Log("Item was saved to the fallback room");
+                        itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, 100));
+
                     }
 
 
@@ -130,9 +155,14 @@ public class LevelData
                             Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                             break;
                         }
-                        else Debug.Log("Item couldn't be saved");
 
 
+
+                    }
+                    if (!saved)
+                    {
+                        Debug.Log("Item was saved to the fallback room");
+                        itemData.Add(new ItemData(item.id, item.transform.position, item.ModId, 100));
                     }
                 }
 

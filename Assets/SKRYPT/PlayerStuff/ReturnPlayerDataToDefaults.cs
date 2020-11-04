@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class ReturnPlayerDataToDefaults : MonoBehaviour
 {
     public PlayerInformation[] infos;
@@ -21,6 +21,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
     public int weapon;
     public int cocoa;
     public int blood;
+    public float TimeInGame;
     private GameObject Player;
 
     public void ManuallyResetPlayerData()
@@ -41,6 +42,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
             info.attackspeed = attackspeed;
             info.potionLoads = potionLoads;
             //Player.transform.position = Vector3.zero;
+            info.TimeInGame =  0 ;
             info.blood = blood;
             info.karma = karma;
             info.level = level;

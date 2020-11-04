@@ -95,7 +95,7 @@ public class Kupiec : MonoBehaviour
                 Debug.Log("Attempted to CallOnCocoaLost from Kupiec 1");
                 EventController.instance.playerEvents.CallOnCocoaLost(itemValueKakao);
                 Debug.Log("Attempted to CallOnCocoaLost from Kupiec 2");
-                Instantiate(bronieDoSpawnu[rand], new Vector3 ( transform.position.x, transform.position.y+3, transform.position.z ) , Quaternion.identity);
+                Instantiate(bronieDoSpawnu[rand], new Vector3 ( transform.position.x, transform.position.y+10, transform.position.z ) , Quaternion.identity);
                 Sprzedane=true;
                 anim.SetTrigger("KupiecDobry");
                 AudioManager.instance.Play("Kupiec_Dobry");
@@ -109,7 +109,7 @@ public class Kupiec : MonoBehaviour
                 EventController.instance.playerEvents.CallOnBloodLost(itemValueBlood);
                 Debug.Log("Attempted to CallOnBloodLost from Kupiec 2");
 
-                Instantiate(bronieDoSpawnu[rand], transform.position, Quaternion.identity);
+                Instantiate(bronieDoSpawnu[rand],new Vector3 ( transform.position.x, transform.position.y+10, transform.position.z ), Quaternion.identity);
                Sprzedane=true;
                anim.SetTrigger("KupiecDobry");
                AudioManager.instance.Play("Kupiec_Dobry");

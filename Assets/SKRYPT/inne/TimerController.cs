@@ -13,7 +13,7 @@ public class TimerController : MonoBehaviour
     private TimeSpan timePlaying;
     private bool timerGoing;
 
-    private float elapsedTime;
+    public float elapsedTime;
 
     private void Awake()
     {
@@ -30,11 +30,14 @@ public class TimerController : MonoBehaviour
     public void BeginTimer()
     {
         timerGoing = true;
-        elapsedTime = 0f;
+        elapsedTime = GameController.instance.DataStorage.PlayerInfo.TimeInGame;
 
         StartCoroutine(UpdateTimer());
     }
-
+    public void ContinueTimer()
+    {
+        timerGoing=true;
+    }
     public void EndTimer()
     {
         timerGoing = false;
@@ -44,11 +47,11 @@ public class TimerController : MonoBehaviour
     {
         while (timerGoing)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.deltaTime/2;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = timePlaying.ToString("mm':'ss");
             timeCounter.text = timePlayingStr;
-
+            GameController.instance.DataStorage.PlayerInfo.TimeInGame = elapsedTime;
             yield return null;
         }
     }

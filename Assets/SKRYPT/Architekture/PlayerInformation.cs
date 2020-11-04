@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 [CreateAssetMenu(fileName = "PlayerInfo", menuName = "Player/PlayerInfo", order = 0)]
 public class PlayerInformation : ScriptableObject
@@ -22,7 +23,7 @@ public class PlayerInformation : ScriptableObject
     public int cocoa;
     public int blood;
     public int potionLoads;
-
+    public float TimeInGame;
     public int level;
     //public string currentWeapon;
     public List<int> ItemIDs;

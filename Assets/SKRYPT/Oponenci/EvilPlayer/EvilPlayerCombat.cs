@@ -6,6 +6,7 @@ public class EvilPlayerCombat : PlayerCombat
 {
     public LayerMask OponentLayers;
     [SerializeField] private EvilPlayerBrain brain;
+    public bool isAttacking;
     public override void ChangeWeapon(BaseWeapon newWeapon)
     {
 
@@ -47,6 +48,7 @@ public class EvilPlayerCombat : PlayerCombat
         animator.SetBool("AttackCombo2", false);
         //noOfClicks = 0;
         WeaponStopEmitting();
+        isAttacking = false;
     }
     /*
     public void WeaponStartEmitting()
@@ -70,6 +72,7 @@ public class EvilPlayerCombat : PlayerCombat
             {
                 animator.SetBool("IsAttacking", true);
                 animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
+                isAttacking = true;
             }
 
 

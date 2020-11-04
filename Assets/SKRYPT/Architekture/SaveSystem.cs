@@ -78,24 +78,35 @@ public class SaveSystem : MonoBehaviour
                 Debug.Log(saveContainer);
                 if (SpawnStuff == true)
                 {
-                    LoadPlayer(saveContainer);
-                    LoadRooms(saveContainer);
-                    LoadEnemies(saveContainer);
-                    //LoadWeapons(saveContainer);
-                    LoadItems(saveContainer);
-                    LoadGlobalStats(saveContainer);
-                    LoadRoundStats(saveContainer);
-                    LoadOldPlayerData(saveContainer);
-                    LoadEnvironment(saveContainer);
-                    //Debug.Log("save system 1");
-                    //Debug.Log("save system 2");
+                    try
+                    {
+                        LoadPlayer(saveContainer);
+                        LoadRooms(saveContainer);
+                        LoadEnemies(saveContainer);
+                        //LoadWeapons(saveContainer);
+                        LoadItems(saveContainer);
+                        LoadGlobalStats(saveContainer);
+                        LoadRoundStats(saveContainer);
+                        LoadOldPlayerData(saveContainer);
+                        LoadEnvironment(saveContainer);
+                        //Debug.Log("save system 1");
+                        //Debug.Log("save system 2");
+                        stream.Close();
+                        return 0;
+                    }
+
+                    catch
+                    {
+                        stream.Close();
+                        return 3;
+                    }
+
+                    //Debug.Log("save system 3");
+                    //Debug.Log("save system 4");
+                    //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
 
                 }
-                //Debug.Log("save system 3");
-                stream.Close();
-                //Debug.Log("save system 4");
-                //Debug.LogFormat("Loaded game at {0}. Stream was {1}", Time.time, stream.CanRead);
-                return 0;
+                else return 3;
 
             }
 
@@ -258,6 +269,7 @@ public class SaveSystem : MonoBehaviour
         GameController.instance.DataStorage.PlayerInfo.blood = LoadedSaveContainer.playerData.blood;
         GameController.instance.DataStorage.PlayerInfo.currenthealth = LoadedSaveContainer.playerData.currenthealth;
         player.transform.position = LoadedSaveContainer.playerData.PlayerPosition;
+        GameController.instance.DataStorage.PlayerInfo.TimeInGame = LoadedSaveContainer.playerData.TimeInGame;
     }
 
     public void LoadGlobalStats(SaveContainer LoadedSaveContainer)

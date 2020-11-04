@@ -22,9 +22,9 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
-        timeCounter.text = "Time: 00:00.00";
+       
         timerGoing = false;
-        BeginTimer();
+        
     }
 
     public void BeginTimer()
@@ -47,7 +47,7 @@ public class TimerController : MonoBehaviour
     {
         while (timerGoing)
         {
-            elapsedTime += Time.deltaTime/2;
+            elapsedTime += Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = timePlaying.ToString("mm':'ss");
             timeCounter.text = timePlayingStr;

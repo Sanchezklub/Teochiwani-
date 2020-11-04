@@ -42,7 +42,6 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
             info.attackspeed = attackspeed;
             info.potionLoads = potionLoads;
             //Player.transform.position = Vector3.zero;
-            info.TimeInGame =  0 ;
             info.blood = blood;
             info.karma = karma;
             info.level = level;
@@ -50,6 +49,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
             info.ItemIDs.Clear();
             //GameController.instance.DataStorage.PlayerInfo.currentWeapon = null;
         }
+            GameController.instance.DataStorage.PlayerInfo.TimeInGame = TimeInGame ;
             GameController.instance.DataStorage.PlayerInfo.IsAlive = true;
             GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;
             GameController.instance.DataStorage.PlayerInfo.weapon = weapon;

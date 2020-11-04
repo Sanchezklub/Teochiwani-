@@ -20,7 +20,7 @@ public class PlayerDataScript
     public int currentweaponModID;
     public List<int> ItemIDs;
 
-
+    public float TimeInGame;
     public int potionLoads;
     public int level;
     public Vector3 testVector;
@@ -44,6 +44,7 @@ public class PlayerDataScript
         PlayerPosition = PlayerInfo.playerPosition;
         potionLoads = PlayerInfo.potionLoads;
         level = PlayerInfo.level;
+        TimeInGame = GameController.instance.DataStorage.PlayerInfo.TimeInGame;
         //position_x = PlayerInfo.playerPosition.x;
         //position_y = PlayerInfo.playerPosition.y;
         //testVector = new Vector3(12f, 23, 2);

@@ -113,11 +113,11 @@ public class PlayerCombat : MonoBehaviour
             GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
             GameController.instance.DataStorage.PlayerInfo.currentweaponModID = newWeapon.ModId;
             currentWeapon = newWeapon;
+            currentWeapon.info = GameController.instance.DataStorage.PlayerInfo;
             currentWeapon?.PickupWepaon();
             currentWeapon.Handle.transform.parent = holdPosition;
             currentWeapon.Handle.transform.localPosition = Vector3.zero;
             currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);
-            currentWeapon.info = GameController.instance.DataStorage.PlayerInfo;
             currentWeapon.enemyLayers = EnemyLayers;
             currentWeapon.ShowFloatingText();
             currentWeapon.StopEmitting();

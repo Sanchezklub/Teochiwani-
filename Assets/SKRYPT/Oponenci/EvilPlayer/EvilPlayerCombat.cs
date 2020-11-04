@@ -17,9 +17,9 @@ public class EvilPlayerCombat : PlayerCombat
         //GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
         //GameController.instance.DataStorage.PlayerInfo.currentweaponModID = newWeapon.ModId;
         currentWeapon = newWeapon;
+        currentWeapon.info = GameController.instance.DataStorage.EvilPlayerInfo;
         currentWeapon?.PickupWepaon();
         currentWeapon.Handle.transform.parent = holdPosition;
-        currentWeapon.info = GameController.instance.DataStorage.EvilPlayerInfo;
         currentWeapon.enemyLayers = OponentLayers;
         currentWeapon.Handle.transform.localPosition = Vector3.zero;
         currentWeapon.Handle.transform.localEulerAngles = new Vector3(0, 0, 0);

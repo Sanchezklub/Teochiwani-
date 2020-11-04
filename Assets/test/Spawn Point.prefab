@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7823872836317523763}
   m_Layer: 0
   m_Name: Spawn Point
-  m_TagString: Untagged
+  m_TagString: LVLGEN
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7823872836317523765}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.5, y: -9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,28 +43,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c977e92041c46dc4b932ac3f8c67b651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmountx: 40
-  moveAmounty: 30
+  MagnitudeL: 1
+  moveAmountx: 200
+  moveAmounty: 200
   startTimeBtwSpawn: 0.25
   rooms:
-  - {fileID: 3455960208718514095, guid: 619f31bbf4c61f849bb1ecf1df004d8f, type: 3}
-  - {fileID: 3639114651123225034, guid: 575a9e24e4d3c7b45b06405a9d8c92ac, type: 3}
-  - {fileID: 2748736744108865817, guid: 37100e29a08a79c4997522aecb531eed, type: 3}
-  - {fileID: 6716546722913164575, guid: 6b89d1ee147780347bb890aaa489034f, type: 3}
-  - {fileID: 4145754423565709855, guid: 27655c9c2b463bb46b4bf888cfe812a3, type: 3}
-  - {fileID: 1782534522598017805, guid: fa4984838abf9244c927634e07f06077, type: 3}
-  - {fileID: 133408439178808055, guid: 68e7b28edecfc5e4e82dbeaf7889ec72, type: 3}
-  - {fileID: 7045354861719670205, guid: 6eb97b520c592dd42ac8b3655147a41f, type: 3}
-  - {fileID: 3105944898325420408, guid: 3f0709336db778141ba78363cfb7a875, type: 3}
-  - {fileID: 22667395411604273, guid: 0cc79d382ba218b4182d31300d9b81f7, type: 3}
-  - {fileID: 7365497213161349935, guid: c95f7f81b0a7a1b40a2e843fd631467b, type: 3}
-  - {fileID: 2812486847592802658, guid: 79b5cff43636e4d47b28fd505d8af026, type: 3}
-  - {fileID: 9111232238477135186, guid: 85114c978ff437c408f4dbd09f005b71, type: 3}
-  - {fileID: 4639822110241288518, guid: b536e89ade069dc439b61a332a3a370a, type: 3}
-  - {fileID: 1993135924119534296, guid: 9f555ed5be18a3542892db2afc04acea, type: 3}
-  - {fileID: 7207494736033471268, guid: b9c6671d0e12c104b8708890eb1e6f82, type: 3}
-  endingPosition: {x: 20, y: 15}
-  StartingPosition: {x: 10, y: 15}
-  whatIsRoom:
-    serializedVersion: 2
-    m_Bits: 33554432
+  - {fileID: 307947451166114553, guid: 4b3ea2ee8264d59409d17efcceb097b0, type: 3}
+  - {fileID: 1677507665443712739, guid: a0982e0857d19184293939125feef8d8, type: 3}
+  - {fileID: 5729694284408253432, guid: 33fbf93f5d6044c468998c6fe4bfbf9a, type: 3}
+  - {fileID: 656410828082330185, guid: aa6718baa740327419aacae49e509319, type: 3}
+  - {fileID: 1920895118983164730, guid: fa0cce23d89385a4c815867d030e1328, type: 3}
+  - {fileID: 4037161341136341759, guid: dd767557ed307b944a417137c841588a, type: 3}
+  - {fileID: 8679113361410259018, guid: 1e100141051984845b4c753ee2d5a05b, type: 3}
+  - {fileID: 6729741996235340523, guid: db7a7e7ae8bbb654d8d3382ac9230cda, type: 3}
+  - {fileID: 3602676721441033915, guid: dde82cc0f3d45d3439817300f4226014, type: 3}
+  - {fileID: 2549229150924507459, guid: 527a9cd3a4ffb3946962b0ebfe0c5367, type: 3}
+  - {fileID: 8612944489876398204, guid: c34745df928916e4d957275785dfad29, type: 3}
+  - {fileID: 5844546334407992709, guid: a2fec059da608f04cbedb4e118a08819, type: 3}
+  - {fileID: 5853753644604954213, guid: 68419af8dcbdd014e8a8761d59020f44, type: 3}
+  - {fileID: 1099830145785088389, guid: 773ce9c47b6634941b5771ffc6bfd0b2, type: 3}
+  - {fileID: 2648864122267998986, guid: d84621fb1caeae84a9d8f712009ad806, type: 3}
+  - {fileID: 8947980379377572658, guid: 79831165d16665244b3dd39f8043ff27, type: 3}
+  - {fileID: 2047323615964347112, guid: 9d6c253e09b97d343b5821d10e1a0348, type: 3}
+  - {fileID: 1576618216496458308, guid: eb27da97d6418164c93b4446a93a37fa, type: 3}
+  Portal1: {fileID: 7388586915024057051, guid: 6eeb9455d84aa7f40a14bd60dab69065, type: 3}
+  Kupiec1: {fileID: 7944055134552051648, guid: 85047b10fe75bbb4abb223e07d4ff9dd, type: 3}
+  StartingPosition: {x: 5, y: 0}
+  TutorialStartingPosition: {x: -325, y: -125}
+  levelData:
+    roomData: []
+    enemiesData: []
+    enviromentData: []
+    weaponData: []
+    itemData: []
+  tutorial: {fileID: 703078514372873708, guid: 4cac79281b594a842889f8c4cddfc8c8, type: 3}

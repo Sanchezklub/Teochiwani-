@@ -92,7 +92,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
     {
         Debug.Log("Moved towards player");
         PositionDifference = brain.transform.position.x - GameController.instance.DataStorage.PlayerInfo.playerPosition.x;
-        if (PositionDifference >= .5f)
+        if (PositionDifference >= 1.5f)
         {
             if (brain.FacingRight)
             {
@@ -100,8 +100,9 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
             }
             brain.rb.velocity = new Vector2(-1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
             brain.animator.SetFloat("Speed", Mathf.Abs(brain.rb.velocity.x));
+            LastMovedRight = false;
         }
-        else if (PositionDifference < -.5f)
+        else if (PositionDifference < -1.5f)
         {
             if (!brain.FacingRight)
             {
@@ -109,6 +110,7 @@ public class EvilPlayerFollowState : BaseState<EvilPlayerBrain>
             }
             brain.rb.velocity = new Vector2(1 * GameController.instance.DataStorage.EvilPlayerInfo.speed, brain.rb.velocity.y);
             brain.animator.SetFloat("Speed", brain.rb.velocity.x);
+            LastMovedRight = true;
         }
         else if (LastMovedRight)
         {

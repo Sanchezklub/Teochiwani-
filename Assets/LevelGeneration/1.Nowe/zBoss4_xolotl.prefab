@@ -2967,7 +2967,7 @@ PrefabInstance:
     - target: {fileID: 2509407529518548967, guid: ed93852b6490ba74ea789b3b66b8ae0a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4016597029705330650, guid: ed93852b6490ba74ea789b3b66b8ae0a,
         type: 3}
@@ -5164,14 +5164,15 @@ PrefabInstance:
     - target: {fileID: 4657108858985202553, guid: 8b87bb8ea4d65c442b17915bb9e04d29,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4657108858985202558, guid: 8b87bb8ea4d65c442b17915bb9e04d29,
         type: 3}
       propertyPath: m_Name
       value: Podest_xolotl (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3987008903815927875, guid: 8b87bb8ea4d65c442b17915bb9e04d29, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b87bb8ea4d65c442b17915bb9e04d29, type: 3}
 --- !u!4 &6809065583967834388 stripped
 Transform:
@@ -6355,14 +6356,15 @@ PrefabInstance:
     - target: {fileID: 4657108858985202553, guid: 8b87bb8ea4d65c442b17915bb9e04d29,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4657108858985202558, guid: 8b87bb8ea4d65c442b17915bb9e04d29,
         type: 3}
       propertyPath: m_Name
       value: Podest_xolotl
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3987008903815927875, guid: 8b87bb8ea4d65c442b17915bb9e04d29, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b87bb8ea4d65c442b17915bb9e04d29, type: 3}
 --- !u!4 &8135525409921191675 stripped
 Transform:

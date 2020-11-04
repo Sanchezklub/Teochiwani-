@@ -11,11 +11,11 @@ public class EvilPlayerAttackState : BaseState<EvilPlayerBrain>
         base.InitState(controller);
         this.brain = controller;
         brain.animator.SetFloat("Speed", 0);
-        if (brain.combat.currentWeapon.AttackAnimationType != BaseWeapon.AnimationType.IsAttackingThrow)
-        {
-            brain.combat.Attack();
-        }
-        else
+        Debug.Log("Animator variable speed should've been set to 0");
+        brain.combat.Attack();
+    }
+        
+    /*else
         {
             brain.animator.SetBool("IsAttacking", true);
             brain.animator.SetBool("IsAttackingThrow", true);
@@ -31,4 +31,5 @@ public class EvilPlayerAttackState : BaseState<EvilPlayerBrain>
         brain.animator.SetBool("IsAttackingThrow", true);
         brain.StartFollow();
     }
+    */
 }

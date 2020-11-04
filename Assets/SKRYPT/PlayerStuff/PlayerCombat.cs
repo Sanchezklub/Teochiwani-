@@ -153,7 +153,7 @@ public class PlayerCombat : MonoBehaviour
     {
        animator.SetBool("IsAttackingThrow", false);
     }
-    public void return1()
+    public virtual void return1()
     {
         if (noOfClicks >= 2)
         {
@@ -166,7 +166,7 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks=0;
         }
     }
-    public void return2()
+    public virtual void return2()
     {
         if (noOfClicks >= 3)
         {
@@ -180,7 +180,7 @@ public class PlayerCombat : MonoBehaviour
             noOfClicks=0;
         }
     }
-    public void return3()
+    public virtual void return3()
     {
         animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), false);
         animator.SetBool("IsAttacking",false);

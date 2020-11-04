@@ -17,6 +17,7 @@ public class EvilPlayerCombat : PlayerCombat
         //GameController.instance.DataStorage.PlayerInfo.currentweaponID = newWeapon.id;
         //GameController.instance.DataStorage.PlayerInfo.currentweaponModID = newWeapon.ModId;
         currentWeapon = newWeapon;
+        currentWeapon.gameObject.layer = 22;
         currentWeapon.info = GameController.instance.DataStorage.EvilPlayerInfo;
         currentWeapon?.PickupWepaon();
         currentWeapon.Handle.transform.parent = holdPosition;
@@ -61,30 +62,37 @@ public class EvilPlayerCombat : PlayerCombat
 
     public void Attack()
     {
-        if (Time.time > nextAttackTime)
-        {
-            //lastClickedTime = Time.time;
-            //noOfClicks++;
+
+        //lastClickedTime = Time.time;
+        //noOfClicks++;
+        Debug.Log("Evil player attack called");
             if (currentWeapon != null)
             {
                 animator.SetBool("IsAttacking", true);
                 animator.SetBool(currentWeapon?.AttackAnimationType.ToString(), true);
             }
 
-            nextAttackTime = Time.time + 0.5f;
 
             //noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
-        }
     }
     public void EvilDoAttack()
     {
         currentWeapon?.Attack(this);
     }
 
-    public void EvilFinishAttack()
+    public void EvilEndAttack()
     {
-        Debug.Log("EvilFinishAttack :: EvilPlayerCombat");
+        Debug.Log("EvilEndAttack :: EvilPlayerCombat");
         CancelAllAttacks();
         brain.StartFollow();
+    }
+    public override void return1()
+    {
+    }
+    public override void return2()
+    {
+    }
+    public override void return3()
+    {
     }
 }

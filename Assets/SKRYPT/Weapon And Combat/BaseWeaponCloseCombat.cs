@@ -39,6 +39,7 @@ public class BaseWeaponCloseCombat : BaseWeapon
                     EventController.instance.playerEvents.CallOnPlayerDealDamage(attackdamage + info.damage);
                     EnemyId[EnemyCounter]=collision.gameObject.GetInstanceID();
                     Effects(collision);
+                    EnemyCounter++;
 
                 }
             }
@@ -65,6 +66,7 @@ public class BaseWeaponCloseCombat : BaseWeapon
                     EventController.instance.playerEvents.CallOnPlayerDealDamage(attackdamage + info.damage);
                     EnemyId[EnemyCounter]=collision.gameObject.GetInstanceID();
                     Effects(collision);
+                    EnemyCounter++;
 
                 }
             }

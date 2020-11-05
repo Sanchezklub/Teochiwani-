@@ -16,16 +16,24 @@ public class ExitPortal : MonoBehaviour
 
     void Activate()
     {
-        coll.enabled = true;
-        particles.SetActive(true);
+        if (coll != null)
+        {
+            coll.enabled = true;
+        }
+        if (particles != null)
+        {
+            particles.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && !called)
         {
+
             called = true;
             coll.enabled = false;
+            EventController.instance.enemyEvents.OnBossDiedBasic -= Activate;
             EventController.instance.levelEvents.CallOnLevelEnded();
         }
     }

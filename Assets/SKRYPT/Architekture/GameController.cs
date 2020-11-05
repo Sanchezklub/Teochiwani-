@@ -14,6 +14,10 @@ public class GameController : MonoBehaviour
     private ReturnPlayerDataToDefaults defaultPlayerData;
     public ReturnPlayerDataToDefaults DefaultPlayerData => defaultPlayerData;
 
+    [SerializeField]
+    private VideoController videoController;
+
+    public VideoController VideoController => videoController;
 
 
     private void Awake()

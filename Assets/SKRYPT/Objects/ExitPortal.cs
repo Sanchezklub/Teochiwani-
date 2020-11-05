@@ -30,11 +30,23 @@ public class ExitPortal : MonoBehaviour
     {
         if (collision.tag == "Player" && !called)
         {
-
             called = true;
             coll.enabled = false;
-            EventController.instance.enemyEvents.OnBossDiedBasic -= Activate;
-            EventController.instance.levelEvents.CallOnLevelEnded();
+            switch (GameController.instance.DataStorage.PlayerInfo.level)
+            {
+                case 0:
+                    EventController.instance.enemyEvents.OnBossDiedBasic -= Activate;
+                    EventController.instance.levelEvents.CallOnLevelEnded();
+                    break;
+                case 1:
+                    GameController.instance.VideoController.PlayHumanEnding();
+                    break;
+                case 2:
+                    GameController.instance.VideoController.PlayGodsEnding();
+                    break;
+
+            }
+
         }
     }
 }

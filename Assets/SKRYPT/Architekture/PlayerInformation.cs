@@ -32,6 +32,7 @@ public class PlayerInformation : ScriptableObject
 
     public bool IsAlive = true;
     public bool IsInTutorial = false;
+    public bool BeatenGame = false;
 
     public Vector2 portalPosition;
 

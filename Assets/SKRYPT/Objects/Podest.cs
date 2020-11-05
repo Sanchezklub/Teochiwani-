@@ -5,7 +5,7 @@ using UnityEngine;
 public class Podest : MonoBehaviour
 {
   private PlatformEffector2D effector;
-   public float waitTime;
+   
 
     void Start()
     {
@@ -15,19 +15,9 @@ public class Podest : MonoBehaviour
     {
         if ( Input.GetKeyUp(KeyCode.S))
         {
-            waitTime = 0.1f;
+            
+            effector.rotationalOffset=180f;
         }
-    
-        if ( Input.GetKey(KeyCode.S))
-            if (waitTime <= 0)
-            {
-                effector.rotationalOffset=180f;
-                waitTime = 0.1f;
-            }
-            else
-            {
-                waitTime-=Time.deltaTime;
-            }
         if ( Input.GetKey(KeyCode.Space) ||Input.GetKey(KeyCode.W) )
         {
                 effector.rotationalOffset = 0;

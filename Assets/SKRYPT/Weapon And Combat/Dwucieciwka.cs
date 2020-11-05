@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dwucieciwka : BaseWeapon
 {
@@ -31,6 +32,19 @@ public class Dwucieciwka : BaseWeapon
             points[i].transform.position = Pointposition(i * spaceBetweenPoints);
    
         }*/
+    }
+    public override void PickupWepaon()
+    {
+        base.PickupWepaon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.white;
+    }
+
+    public override void DropWeapon()
+    {
+        base.DropWeapon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.clear;
     }
     Vector2 Pointposition(float t)
     {

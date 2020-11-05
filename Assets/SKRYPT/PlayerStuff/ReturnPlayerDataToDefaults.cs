@@ -53,6 +53,7 @@ public class ReturnPlayerDataToDefaults : MonoBehaviour
             GameController.instance.DataStorage.PlayerInfo.IsAlive = true;
             GameController.instance.DataStorage.PlayerInfo.cocoa = cocoa;
             GameController.instance.DataStorage.PlayerInfo.weapon = weapon;
+            GameController.instance.DataStorage.PlayerInfo.BeatenGame = false;
 
     }
 }

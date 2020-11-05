@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spear : BaseWeapon
 {
@@ -60,6 +61,8 @@ public class Spear : BaseWeapon
         pc.enabled=false;
         hasHit=false;
         trail.emitting=false;
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.white;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -77,5 +80,11 @@ public class Spear : BaseWeapon
 
         
         
+    }
+    public override void DropWeapon()
+    {
+        base.DropWeapon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.clear;
     }
 }

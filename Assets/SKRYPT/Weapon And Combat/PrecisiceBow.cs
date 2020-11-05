@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PrecisiceBow : BaseWeapon
 {
@@ -17,14 +18,27 @@ public class PrecisiceBow : BaseWeapon
 
 
     //public void Start()
-   // {
-        /*
-       points = new GameObject[numberOfPoints];
-        for (int i=0; i < numberOfPoints; i++)
-        {
-            points[i] = Instantiate(point, firePoint.position, Quaternion.identity);
-        }*/
+    // {
+    /*
+   points = new GameObject[numberOfPoints];
+    for (int i=0; i < numberOfPoints; i++)
+    {
+        points[i] = Instantiate(point, firePoint.position, Quaternion.identity);
+    }*/
     //}
+    public override void PickupWepaon()
+    {
+        base.PickupWepaon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.white;
+    }
+
+    public override void DropWeapon()
+    {
+        base.DropWeapon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.clear;
+    }
     public void Update()
     {
         if ( PickUped)

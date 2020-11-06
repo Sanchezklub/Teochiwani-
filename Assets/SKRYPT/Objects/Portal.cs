@@ -24,6 +24,10 @@ public class Portal : MonoBehaviour
         yield return new WaitForSeconds(1);
         //portalik=Portalw.transform;
        // Player.transform.position = new Vector2(portalik.position.x+1, portalik.position.y);
+        if (Portalw == null)
+        {
+            Portalw = GameController.instance.Portal;
+        }
         Player.transform.position = Portalw.transform.position;
     }
 }

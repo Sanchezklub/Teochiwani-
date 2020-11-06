@@ -12,6 +12,7 @@ public class ExitPortal : MonoBehaviour
     private void Start()
     {
         EventController.instance.enemyEvents.OnBossDiedBasic += Activate;
+        GameController.instance.Portal = gameObject;
     }
 
     void Activate()
@@ -39,10 +40,10 @@ public class ExitPortal : MonoBehaviour
                     EventController.instance.levelEvents.CallOnLevelEnded();
                     break;
                 case 1:
-                    GameController.instance.VideoController.PlayHumanEnding();
+                    GameController.instance.VideoController.PlayGodsEnding();
                     break;
                 case 2:
-                    GameController.instance.VideoController.PlayGodsEnding();
+                    GameController.instance.VideoController.PlayHumanEnding();
                     break;
 
             }

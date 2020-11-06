@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
     public VideoController VideoController => videoController;
 
 
+    public GameObject Portal;
+
     private void Awake()
     {
         instance = this;

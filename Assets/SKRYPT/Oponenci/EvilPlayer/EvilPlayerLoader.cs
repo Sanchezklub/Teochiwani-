@@ -32,6 +32,12 @@ public class EvilPlayerLoader : MonoBehaviour
                     item.GetComponent<BaseItem>().EvilPickupItem();
                 }
             }
+            if (GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs.Count != 0)
+            {
+                int rand = Random.Range(0, GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs.Count);
+                GetComponent<EvilPlayerHealth>().Drops[0] = SaveSystem.Instance.Dictionary.GetItemObjects(GameController.instance.DataStorage.EvilPlayerInfo.ItemIDs[rand]);
+            }
+
             rb.simulated = true;
             transform.position = new Vector2(-301.5f, 67.6f);
         }

@@ -14,7 +14,7 @@ public class EnemyHealth : Health
     //public Transform temp;
     //public GameObject[] Limbs;
     //public GameObject[] Limbs2;
-    [SerializeField] GameObject[] Drops;
+    [SerializeField]public GameObject[] Drops;
     protected override void Start()
     {
         base.Start();

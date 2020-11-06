@@ -11,13 +11,13 @@ public class POA : BaseWeaponCloseCombat
     public override void DropWeapon()
     {
         base.DropWeapon();
-        GameController.instance.DataStorage.PlayerInfo.currenthealth+=Playercurrenthealth-1; 
+        info.currenthealth+=Playercurrenthealth-1; 
     }
     public override void PickupWepaon()
     {
         base.PickupWepaon();
-        Playercurrenthealth=GameController.instance.DataStorage.PlayerInfo.currenthealth;
-        GameController.instance.DataStorage.PlayerInfo.currenthealth=1;
+        Playercurrenthealth=info.currenthealth;
+        info.currenthealth=1;
     }
      
 }

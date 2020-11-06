@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6268329677048790612}
-  - component: {fileID: 567003903645423842}
+  - component: {fileID: 3659127903482340485}
   m_Layer: 0
   m_Name: zBoss Parent
   m_TagString: Level_generation
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &567003903645423842
+--- !u!114 &3659127903482340485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,11 +40,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2047323615964347112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06e5b9dbf04c74498b7345c49caa80c, type: 3}
+  m_Script: {fileID: 11500000, guid: 31336f40e60a5114198ca6b9be19d743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 2252185648955011205, guid: d93cc275e6115fc49b9d0f2ffbd3d5ed, type: 3}
   - {fileID: 7261998100132913101, guid: 70eae3724d0e96f499e983979d56e07e, type: 3}
   - {fileID: 6411599975472299455, guid: 7a9bc66b75262a047880a8d33fdc9cc0, type: 3}
   - {fileID: 8982399709367962417, guid: 2209155e51293cb4cb3c72f9e826316e, type: 3}
+  - {fileID: 2252185648955011205, guid: d93cc275e6115fc49b9d0f2ffbd3d5ed, type: 3}

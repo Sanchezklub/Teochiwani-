@@ -62,8 +62,35 @@ public class Spear : BaseWeapon
         hasHit=false;
         trail.emitting=false;
         GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        crosshair.GetComponent<Image>().color = Color.white;
+        if (crosshair != null)
+        {
+            crosshair.GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            StartCoroutine("GetCrosshairLater");
+        }
     }
+
+    IEnumerator GetCrosshairLater()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        crosshair.GetComponent<Image>().color = Color.white;
+
+    }
+
+    public override void DropWeapon()
+    {
+        base.DropWeapon();
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        if (crosshair != null)
+        {
+            crosshair.GetComponent<Image>().color = Color.clear;
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(flying && collision.gameObject.tag!="Player" && !hasHit);
@@ -80,11 +107,5 @@ public class Spear : BaseWeapon
 
         
         
-    }
-    public override void DropWeapon()
-    {
-        base.DropWeapon();
-        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        crosshair.GetComponent<Image>().color = Color.clear;
     }
 }

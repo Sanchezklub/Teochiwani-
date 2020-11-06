@@ -15,7 +15,7 @@ public class CharacterController2D : MonoBehaviour
     private int facingDirection = 1;
     private int lastWallJumpDirection;
 
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private bool isWalking;
     private bool isRising;
     private bool isGrounded;
@@ -544,7 +544,7 @@ public class CharacterController2D : MonoBehaviour
         canFlip = true;
     }
 
-    private void Flip()
+    public void Flip()
     {
         if (canFlip == true)
         {

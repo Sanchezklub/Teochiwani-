@@ -37,14 +37,32 @@ public class Dwucieciwka : BaseWeapon
     {
         base.PickupWepaon();
         GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
+        if (crosshair != null)
+        {
+            crosshair.GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            StartCoroutine("GetCrosshairLater");
+        }
+    }
+
+    IEnumerator GetCrosshairLater()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         crosshair.GetComponent<Image>().color = Color.white;
+
     }
 
     public override void DropWeapon()
     {
         base.DropWeapon();
         GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-        crosshair.GetComponent<Image>().color = Color.clear;
+        if (crosshair != null)
+        {
+            crosshair.GetComponent<Image>().color = Color.clear;
+        }
     }
     Vector2 Pointposition(float t)
     {

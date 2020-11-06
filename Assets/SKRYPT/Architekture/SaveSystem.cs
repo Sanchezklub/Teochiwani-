@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
@@ -95,9 +96,10 @@ public class SaveSystem : MonoBehaviour
                         return 0;
                     }
 
-                    catch
+                    catch(Exception e)
                     {
                         stream.Close();
+                        Debug.LogException(e);
                         return 3;
                     }
 

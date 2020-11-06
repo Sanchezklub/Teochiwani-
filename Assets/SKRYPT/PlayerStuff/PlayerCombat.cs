@@ -121,6 +121,7 @@ public class PlayerCombat : MonoBehaviour
             currentWeapon.enemyLayers = EnemyLayers;
             currentWeapon.ShowFloatingText();
             currentWeapon.StopEmitting();
+            EventController.instance.itemEvents.CallOnItemDied(newWeapon);
      
     }
 

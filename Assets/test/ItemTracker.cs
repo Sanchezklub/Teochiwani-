@@ -15,13 +15,21 @@ public class ItemTracker : MonoBehaviour
 
     public void OnNewItem(BaseItem newItem)
     {
-        //Debug.Log("NewItem");
         items.Add(newItem);
+        if (newItem.gameObject.GetComponentInParent<CharacterController2D>() != null)
+        {
+            items.Remove(newItem);
+        }
+        Debug.LogFormat("Item Tracker :: OnNewItem - added new item {0} to the list", newItem.name);
     }
 
     public void OnItemDie(BaseItem item)
     {
-        items.Remove(item);
+        if (items.Contains(item))
+        {
+            items.Remove(item);
+            Debug.LogFormat("Item Tracker :: OnItemDie - removed item {0} from the list", item.name);
+        }
     }
 
     private void OnApplicationQuit()

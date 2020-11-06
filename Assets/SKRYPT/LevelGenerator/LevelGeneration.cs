@@ -665,7 +665,7 @@ public class LevelGeneration : MonoBehaviour
             {
                 
                 FixedRoom[i,j]=Room[i-1,j];
-                Debug.Log(FixedRoom[i,j]);
+                //Debug.Log(FixedRoom[i,j]);
             }
             }
         FixedRoom[0,1]=15;

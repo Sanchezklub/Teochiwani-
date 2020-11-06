@@ -29,7 +29,7 @@ public class MusicManager : MonoBehaviour
         {
             Invoke("ChangeTheme2",ThemeSounds[0].source.clip.length+1.0f);
         }
-        Debug.Log("Theme1 sie skonczyl  ");
+        //Debug.Log("Theme1 sie skonczyl  ");
     }
     void ChangeTheme2()
     {

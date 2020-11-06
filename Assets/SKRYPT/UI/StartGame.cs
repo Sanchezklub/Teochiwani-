@@ -79,6 +79,7 @@ public class StartGame : MonoBehaviour
 
     void DoTheRest()
     {
+        GameController.instance.DataStorage.PlayerInfo.BeatenGame = false;
         menuScript.ChangeMusic();
         musicManager.ChangeTheme1();
         InGameUI.SetActive(true);

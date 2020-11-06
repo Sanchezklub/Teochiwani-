@@ -44,7 +44,7 @@ public class LevelData
                     {
                         enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position, data.roomNumber));
                         saved = true;
-                        Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                        //Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                         break;
                     }
                     
@@ -53,7 +53,7 @@ public class LevelData
                 }
                 if (!saved)
                 {
-                    Debug.Log("Enemy was saved to the fallback room");
+                    //Debug.Log("Enemy was saved to the fallback room");
                     enemiesData.Add(new EnemyData(enemy.id, enemy.transform.position, 100));
                 }
 
@@ -76,7 +76,7 @@ public class LevelData
                     {
                         enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position, data.roomNumber));
                         saved = true;
-                        Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                        //Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                         break;
                     }
 
@@ -85,7 +85,7 @@ public class LevelData
                 }
                 if (!saved)
                 {
-                    Debug.Log("Enviro was saved to the fallback room");
+                    //Debug.Log("Enviro was saved to the fallback room");
                     enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position, 100));
                 }
                 //enviromentData.Add(new EnviroData(enviro.id, enviro.transform.position));
@@ -129,7 +129,7 @@ public class LevelData
                         if (CheckDifference(item.transform.parent.position, data.position))
                         {
                             itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, data.roomNumber));
-                            Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                            //Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                             break;
                         }
 
@@ -138,7 +138,7 @@ public class LevelData
                     }
                     if (!saved)
                     {
-                        Debug.Log("Item was saved to the fallback room");
+                        //Debug.Log("Item was saved to the fallback room");
                         itemData.Add(new ItemData(item.id, item.transform.parent.position, item.ModId, 100));
 
                     }
@@ -152,7 +152,7 @@ public class LevelData
                         if (CheckDifference(item.transform.position, data.position))
                         {
                             itemData.Add(new ItemData(item.id, item.transform.position, item.ModId, data.roomNumber));
-                            Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
+                            //Debug.LogFormat("LevelData :: Item successfully saved. Number was {0}", data.roomNumber);
                             break;
                         }
 
@@ -161,7 +161,7 @@ public class LevelData
                     }
                     if (!saved)
                     {
-                        Debug.Log("Item was saved to the fallback room");
+                        //Debug.Log("Item was saved to the fallback room");
                         itemData.Add(new ItemData(item.id, item.transform.position, item.ModId, 100));
                     }
                 }
@@ -209,14 +209,14 @@ public class LevelData
                 while (SaveSystem.Instance.roomNumbers.Contains(room.roomNumber) || room.roomNumber == 0)
                 {
                     room.roomNumber = Random.Range(0, 100);
-                    Debug.LogFormat("LevelData :: SaveRooms() - The number randomly assigned to room {0} was {1}", room.gameObject.name, room.roomNumber);
+                    //Debug.LogFormat("LevelData :: SaveRooms() - The number randomly assigned to room {0} was {1}", room.gameObject.name, room.roomNumber);
                 }
                 roomData.Add(new RoomData(room.id, room.transform.position, room.roomNumber));
-                Debug.Log("Room was saved");
+                //Debug.Log("Room was saved");
             }
 
         }
-        Debug.LogFormat("LevelData :: RoomNumbers were {0}", SaveSystem.Instance.roomNumbers);
+        //Debug.LogFormat("LevelData :: RoomNumbers were {0}", SaveSystem.Instance.roomNumbers);
     }
 
     //Odpiąc się od eventu

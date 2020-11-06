@@ -35,6 +35,7 @@ public class VideoController : MonoBehaviour
     void ReloadScene(VideoPlayer videoPlayer)
     {
         mixer.SetFloat("SFXVolume", MixerOldFloat);
+        SaveSystem.Instance.FullySaveGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

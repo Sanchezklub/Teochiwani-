@@ -71,7 +71,7 @@ public class SaveSystem : MonoBehaviour
 
             string message = formatter.Deserialize(stream) as string;
 
-            Debug.Log(message);
+            //Debug.Log(message);
             PlayerDataScript data = JsonUtility.FromJson<PlayerDataScript>(message);
             saveContainer = JsonUtility.FromJson<SaveContainer>(message);
             if (saveContainer.playerData.CanLoad)
@@ -140,7 +140,7 @@ public class SaveSystem : MonoBehaviour
             if (EnemyPrefab != null)
             {
                 GameObject enemy = Instantiate(EnemyPrefab, loadedEnemy.position, Quaternion.identity);
-                Debug.LogFormat("LoadedEnemies roomNumber was {0}", loadedEnemy.roomNumber);
+                //Debug.LogFormat("LoadedEnemies roomNumber was {0}", loadedEnemy.roomNumber);
                 enemy.transform.parent = RoomsByNumbers[loadedEnemy.roomNumber].transform/*.Find("Enemies")*/;
             }
         }
@@ -238,14 +238,18 @@ public class SaveSystem : MonoBehaviour
             if (CurrentWeapon != null)
             {
                 GameObject Weapon = Instantiate(CurrentWeapon, new Vector2(0, 0), Quaternion.identity);
+                Debug.Log("Weapon instantiated");
                 BaseWeapon weap = Weapon.GetComponentInChildren<BaseWeapon>();
                 if (weap != null)
                 {
                     weap.GetUITexts();
                     weap.ModId = LoadedSaveContainer.playerData.currentweaponModID;
                     weap.Start();
+                    //Debug.Log("Weapon start called");
                     player.GetComponent<PlayerCombat>()?.ChangeWeapon(weap);
+                    //Debug.Log("Weapon picked up");
                     EventController.instance.itemEvents.CallOnItemDied(weap);
+                    //Debug.Log("called on weapon die");
                 }
                 else
                 {

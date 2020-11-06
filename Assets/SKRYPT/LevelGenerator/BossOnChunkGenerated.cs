@@ -36,6 +36,14 @@ public class BossOnChunkGenerated : MonoBehaviour
                     obj2.transform.parent = this.gameObject.transform;
                 }
                 break;
+            default:
+                int rand2 = Random.Range(0, 2);
+                GameObject obj3 = Instantiate(objects[rand2], transform.position, Quaternion.identity);
+                if (this.gameObject != null)
+                {
+                    obj3.transform.parent = this.gameObject.transform;
+                }
+                break;
         }
 
     }

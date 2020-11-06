@@ -93,10 +93,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 3012
+      x: 2012
+      y: 2168
       width: 2000
-      height: 1175
+      height: 985
     spriteID: ffc56f2032fc98c439c5a5c508365c4e
     internalID: 0
     spriteBone: []
@@ -107,7 +107,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2683}
+    uvTransform: {x: 2012, y: 1515}
   - name: pierwszy_plan
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -118,7 +118,7 @@ ScriptedImporter:
       x: 2012
       y: 4
       width: 2000
-      height: 2438
+      height: 2162
     spriteID: 2ee4b550b6ab77b459e3d07472b8db68
     internalID: 0
     spriteBone: []
@@ -129,7 +129,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2012, y: -292}
+    uvTransform: {x: 2012, y: -613}
   - name: drugi_plan
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -137,10 +137,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2003
-      y: 2459
+      x: 2012
+      y: 3178
       width: 2000
-      height: 853
+      height: 865
     spriteID: 5474bf92522ab374c99af1d27a2fb469
     internalID: 0
     spriteBone: []
@@ -151,8 +151,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2012, y: 1639}
-  - name: tlo
+    uvTransform: {x: 2012, y: 2046}
+  - name: czwarty_plan
+    originalName: 
+    pivot: {x: 0.47274354, y: 0.47287926}
+    alignment: 9
+    border: {x: 0, y: 22, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3013
+      width: 2000
+      height: 1008
+    spriteID: d840bb7cf0094644297b5244c741aad8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2302}
+  - name: Layer 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -163,7 +185,7 @@ ScriptedImporter:
       y: 4
       width: 2000
       height: 3000
-    spriteID: 0d705f441a93e5b40b29211c6875861b
+    spriteID: e180b67f00d3dc04096baf70d7aaf36f
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -217,20 +239,27 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 5474bf92522ab374c99af1d27a2fb469
     layerID: 18
-    mosaicPosition: {x: 2012, y: 2450}
+    mosaicPosition: {x: 2012, y: 3181}
+  - name: czwarty_plan
+    spriteName: czwarty_plan
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d840bb7cf0094644297b5244c741aad8
+    layerID: 22
+    mosaicPosition: {x: 4, y: 3012}
   - name: trzeci_plan
     spriteName: trzeci_plan
     isGroup: 0
     parentIndex: -1
     spriteID: ffc56f2032fc98c439c5a5c508365c4e
     layerID: 3
-    mosaicPosition: {x: 4, y: 3012}
-  - name: tlo
-    spriteName: tlo
+    mosaicPosition: {x: 2012, y: 2168}
+  - name: Layer 1
+    spriteName: Layer 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 0d705f441a93e5b40b29211c6875861b
-    layerID: 10
+    spriteID: e180b67f00d3dc04096baf70d7aaf36f
+    layerID: 23
     mosaicPosition: {x: 4, y: 4}
   characterData:
     bones: []

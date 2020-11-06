@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a6654931ed3d7f499c9c37e6bda1889
+guid: f61dc26d262665840a785c2808af6904
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -96,8 +96,8 @@ ScriptedImporter:
       x: 2012
       y: 4
       width: 2000
-      height: 2442
-    spriteID: 6a890d0d6d717ab4382a61f93ab582da
+      height: 1900
+    spriteID: f2b57f8537c4d294d938a4e3960de184
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -107,7 +107,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2012, y: -445}
+    uvTransform: {x: 2012, y: -714}
   - name: drugi_plan
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -116,10 +116,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2012
-      y: 2454
+      y: 1912
       width: 1995
       height: 853
-    spriteID: 3aedcec5ad8aa05428d011b25a481ab1
+    spriteID: 406bbc423de3bb74da8aed3e251edc34
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -129,7 +129,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2012, y: 1953}
+    uvTransform: {x: 2012, y: 1135}
   - name: trzeci_plan
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -138,10 +138,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4015
-      y: 2454
+      y: 1912
       width: 0
       height: 0
-    spriteID: b54747d42ed705c4da2f0f3288b3f7c6
+    spriteID: a682f7331f938d64eae883d68f1318e6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -151,7 +151,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2015, y: -546}
+    uvTransform: {x: 2015, y: -1088}
   - name: Warstwa 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -161,9 +161,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 3012
-      width: 1992
+      width: 2000
       height: 1046
-    spriteID: adeeb89a91e26b04d8bf480272b6bb6e
+    spriteID: 0ef6c2907a38ca4488cedf8a24b07a5c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -173,8 +173,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 2546}
-  - name: "t\u0142o"
+    uvTransform: {x: 4, y: 2235}
+  - name: Warstwa 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -185,7 +185,7 @@ ScriptedImporter:
       y: 4
       width: 2000
       height: 3000
-    spriteID: a919273d02ab2de41a4b1db340437020
+    spriteID: b09df8bf7c0687642826a0be9731a069
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -196,24 +196,13 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-  platformSettings:
-  - name: Default
-    overridden: 1
-    maxTextureSize: 8192
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 4096
-  importedTextureHeight: 4096
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
   documentSize: {x: 2000, y: 3000}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
@@ -230,36 +219,36 @@ ScriptedImporter:
     spriteName: pierwszy_plan
     isGroup: 0
     parentIndex: -1
-    spriteID: 6a890d0d6d717ab4382a61f93ab582da
+    spriteID: f2b57f8537c4d294d938a4e3960de184
     layerID: 4
     mosaicPosition: {x: 2012, y: 4}
   - name: drugi_plan
     spriteName: drugi_plan
     isGroup: 0
     parentIndex: -1
-    spriteID: 3aedcec5ad8aa05428d011b25a481ab1
+    spriteID: 406bbc423de3bb74da8aed3e251edc34
     layerID: 15
-    mosaicPosition: {x: 2012, y: 2454}
+    mosaicPosition: {x: 2012, y: 1912}
   - name: trzeci_plan
     spriteName: trzeci_plan
     isGroup: 0
     parentIndex: -1
-    spriteID: b54747d42ed705c4da2f0f3288b3f7c6
+    spriteID: a682f7331f938d64eae883d68f1318e6
     layerID: 16
-    mosaicPosition: {x: 4015, y: 2454}
+    mosaicPosition: {x: 4015, y: 1912}
   - name: Warstwa 1
     spriteName: Warstwa 1
     isGroup: 0
     parentIndex: -1
-    spriteID: adeeb89a91e26b04d8bf480272b6bb6e
+    spriteID: 0ef6c2907a38ca4488cedf8a24b07a5c
     layerID: 18
     mosaicPosition: {x: 4, y: 3012}
-  - name: "t\u0142o"
-    spriteName: "t\u0142o"
+  - name: Warstwa 2
+    spriteName: Warstwa 2
     isGroup: 0
     parentIndex: -1
-    spriteID: a919273d02ab2de41a4b1db340437020
-    layerID: 11
+    spriteID: b09df8bf7c0687642826a0be9731a069
+    layerID: 20
     mosaicPosition: {x: 4, y: 4}
   characterData:
     bones: []

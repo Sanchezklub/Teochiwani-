@@ -328,6 +328,11 @@ MonoBehaviour:
   - {fileID: 3683928504744629774, guid: 648bda77c9ca8804792490a4ad9f828c, type: 3}
   - {fileID: 9046691337149576305, guid: 7c8f47b5d96527a4a8e97908a3912a9e, type: 3}
   splashController: {fileID: -4759114561947426858}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   enemyAnimator: {fileID: 562726352}
   IsHuman: 0
   IsBoss: 1
@@ -472,6 +477,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: -993099033640269349, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066976935512598, guid: c8c3e9ce9eed3814c8ddbce308a0da4f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 82
+      objectReference: {fileID: 0}
     - target: {fileID: 1744994320220169784, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
       propertyPath: m_Layer
@@ -482,10 +496,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 4687078842575747703, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557962136530830951, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 86
+      objectReference: {fileID: 0}
     - target: {fileID: 5696709540694840112, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609575323113965304, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 6618115726441685841, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}
@@ -556,6 +585,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887261342193528193, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 8144242680642910305, guid: c8c3e9ce9eed3814c8ddbce308a0da4f,
         type: 3}

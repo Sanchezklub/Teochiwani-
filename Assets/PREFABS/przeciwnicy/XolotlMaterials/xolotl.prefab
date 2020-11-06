@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 122
   m_Sprite: {fileID: -7334220082661379439, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,13 +174,19 @@ MonoBehaviour:
   TimeBetweenDash: 0
   AnimationDuration: 1
   RisingVelocity: 8
-  enemyAnimator: {fileID: 1294737761571016736}
+  BloodDamage: 0
+  DashDamage: 0
+  animator: {fileID: 0}
   boxCollider2D: {fileID: 1974566259989562183}
   rb2d: {fileID: 764447326908619977}
   Ps: {fileID: 5071407922955914142}
   sr: {fileID: 5679997211009147018}
   Blood: {fileID: 3653490053208381817}
+  Eye: {fileID: 0}
+  XolotlHitbox: {fileID: 0}
   Podest: []
+  XolotlBloodParticle: {fileID: 0}
+  BloodParticle: {fileID: 0}
 --- !u!95 &1294737761571016736
 Animator:
   serializedVersion: 3
@@ -336,7 +342,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 123
   m_Sprite: {fileID: 7861394041044758910, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -418,7 +424,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 127
   m_Sprite: {fileID: -132792088444009162, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -500,7 +506,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 125
   m_Sprite: {fileID: -6596434288450248495, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -582,7 +588,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 126
   m_Sprite: {fileID: 7092865176499129042, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -665,7 +671,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 121
   m_Sprite: {fileID: 4118612416935568969, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -688,7 +694,7 @@ Animator:
   m_GameObject: {fileID: 6239792195338271683}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e43c57e28f9cfa469a914c95fef968d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -766,7 +772,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 124
   m_Sprite: {fileID: 2638525837511366253, guid: 6de768617afb29e46940eb5141ddc2eb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

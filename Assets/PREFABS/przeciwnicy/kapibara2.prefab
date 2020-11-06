@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 46
   m_Sprite: {fileID: 5534412625116663182, guid: 5d718856048dd1b4dbca6c8a8186c3b5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,7 +172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 42
   m_Sprite: {fileID: -4027156481983336781, guid: 5d718856048dd1b4dbca6c8a8186c3b5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -427,7 +427,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 43
   m_Sprite: {fileID: 668392871789754872, guid: 5d718856048dd1b4dbca6c8a8186c3b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -529,7 +529,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 45
   m_Sprite: {fileID: -8751206588006167203, guid: 5d718856048dd1b4dbca6c8a8186c3b5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -692,7 +692,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 41
   m_Sprite: {fileID: -4759104345643608012, guid: 5d718856048dd1b4dbca6c8a8186c3b5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -881,8 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc5800b040d4214b80a748480bb613c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackRange: 0
-  AttackPoint: {fileID: 0}
   raycastTransform: {fileID: 7240981175779062849, guid: 8f6e1a2f07b98b4458ec1f72de974a4a,
     type: 3}
   WhatIsGround:
@@ -897,9 +895,9 @@ MonoBehaviour:
   ChannellTime: 3
   ChargeHitbox: {fileID: 7240981174392190607, guid: 8f6e1a2f07b98b4458ec1f72de974a4a,
     type: 3}
-  audio: {fileID: 0}
-  Soundcharge: {fileID: 0}
-  Attacksound: {fileID: 0}
+  health: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   RightLeg: {fileID: 0}
 --- !u!114 &-5394817429886433413
 MonoBehaviour:
@@ -926,6 +924,9 @@ MonoBehaviour:
   splashController: {fileID: 7531553328498600753}
   Limbs: []
   LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   enemyAnimator: {fileID: 8997484350139555646}
   IsHuman: 0
   IsBoss: 0
@@ -1120,7 +1121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 44
   m_Sprite: {fileID: 2098002684599096403, guid: 5d718856048dd1b4dbca6c8a8186c3b5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

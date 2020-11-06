@@ -223,7 +223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 61
   m_Sprite: {fileID: 7495751298889489516, guid: ee71de615742109429ce0592451bfd8a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 66
   m_Sprite: {fileID: -7632639927190214320, guid: ee71de615742109429ce0592451bfd8a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -551,7 +551,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 63
   m_Sprite: {fileID: 7786599855898215935, guid: ee71de615742109429ce0592451bfd8a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -658,7 +658,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 62
   m_Sprite: {fileID: 4771089879555412175, guid: ee71de615742109429ce0592451bfd8a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -971,6 +971,11 @@ MonoBehaviour:
   id: 8
   EffectParticle: []
   splashController: {fileID: 0}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   enemyAnimator: {fileID: 754974533365047957}
   IsHuman: 0
   IsBoss: 0
@@ -1269,7 +1274,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 65
   m_Sprite: {fileID: -1705167040789355020, guid: ee71de615742109429ce0592451bfd8a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1403,7 +1408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 64
   m_Sprite: {fileID: 977452007383079567, guid: ee71de615742109429ce0592451bfd8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

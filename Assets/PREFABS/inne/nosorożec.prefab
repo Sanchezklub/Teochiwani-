@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 84
   m_Sprite: {fileID: -2108425728318953121, guid: bd6f07839e0a9c640812d84a655314b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -338,7 +338,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 86
   m_Sprite: {fileID: -4553544566482586388, guid: bd6f07839e0a9c640812d84a655314b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -420,7 +420,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 83
   m_Sprite: {fileID: 6747491815762207564, guid: bd6f07839e0a9c640812d84a655314b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -502,7 +502,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 85
   m_Sprite: {fileID: -49945580716470406, guid: bd6f07839e0a9c640812d84a655314b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -583,7 +583,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 81
   m_Sprite: {fileID: -1890766338683033099, guid: bd6f07839e0a9c640812d84a655314b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -665,7 +665,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 82
   m_Sprite: {fileID: -1083985762326519857, guid: bd6f07839e0a9c640812d84a655314b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -789,6 +789,11 @@ MonoBehaviour:
   id: 0
   EffectParticle: []
   splashController: {fileID: 0}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   enemyAnimator: {fileID: 0}
   IsHuman: 0
   IsBoss: 1
@@ -823,3 +828,7 @@ MonoBehaviour:
   VerStompKnockback: 300
   HorStompKnockback: 10000
   FacingRight: 1
+  WallParticle: {fileID: 0}
+  LeftLeg: {fileID: 0}
+  RightLeg: {fileID: 0}
+  Wall: {fileID: 0}

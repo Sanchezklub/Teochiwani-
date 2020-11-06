@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1138326908866554475}
   m_Layer: 10
   m_Name: wooden  sword
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,17 +128,46 @@ MonoBehaviour:
   flavourtext: 
   itemName: 
   id: 1
+  ModId: -10
   CocaoPrice: 0
   BloodPrice: 0
   coll: {fileID: 1138326908866554476}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
-  AttackAnimationType: 0
-  FacingRight: 1
-  AttackPoint: {fileID: 1138326908866554478}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
   enemyLayers:
     serializedVersion: 2
     m_Bits: 16384
-  FlavourText: 
+  AttackPoint: {fileID: 1138326908866554478}
   attackRange: 3
   attackdamage: 12
+  trail: {fileID: 0}
+  info: {fileID: 0}
+  Attacking: 0
+  EnemyCounter: 0
+  ModifierParticle: {fileID: 0}
+  currentModifier: {fileID: 0}
+  EffectLightning: 0
+  EffectGodly: 0
+  EffectHuman: 0
+  Vampiric: 0
+  EffectBleed: 0
+  BleedDamage: 0
+  BleedCount: 0
+  BleedTimeBetween: 0
+  EffectFire: 0
+  FireDamage: 0
+  FireCount: 0
+  FireTimeBetween: 0
+  EffectPoison: 0
+  PoisonDamage: 0
+  PoisonCount: 0
+  PoisonTimeBetween: 0
+  SpriteRen: {fileID: 0}
+  pc: {fileID: 0}
+  AttackSound: {fileID: 0}
+  audio: {fileID: 0}
+  EnemyWas: 0
+  weaponSexType: 0
+  AttackAnimationType: 0
+  EnemyId: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

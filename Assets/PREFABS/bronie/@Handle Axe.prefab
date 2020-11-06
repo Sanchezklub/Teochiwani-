@@ -108,8 +108,6 @@ MonoBehaviour:
   CocaoPrice: 10
   BloodPrice: 10
   coll: {fileID: 2124278196634768343}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
   PickUped: 0
   AttackSpeedModifier: 0
   AttackSpeedPrevious: 0
@@ -125,6 +123,10 @@ MonoBehaviour:
   EnemyCounter: 0
   ModifierParticle: {fileID: 0}
   currentModifier: {fileID: 0}
+  EffectLightning: 0
+  EffectGodly: 0
+  EffectHuman: 0
+  Vampiric: 0
   EffectBleed: 0
   BleedDamage: 2
   BleedCount: 15
@@ -501,7 +503,7 @@ GameObject:
   - component: {fileID: 2930290079226222231}
   m_Layer: 10
   m_Name: '@Handle Axe'
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

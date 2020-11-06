@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 87701840723305957}
   m_Layer: 19
   m_Name: DuszaWidloroga
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,11 +103,13 @@ MonoBehaviour:
   flavourtext: "Ranny, ale ci\u0105gle mo\u017Ce uciec"
   itemName: "Dusza Wid\u0142oroga"
   id: 13
+  ModId: -10
   CocaoPrice: 11
   BloodPrice: 11
   coll: {fileID: 87701840723305957}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0
 --- !u!61 &87701840723305957
 BoxCollider2D:
   m_ObjectHideFlags: 0

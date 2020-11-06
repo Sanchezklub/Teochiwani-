@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4836240461922899519}
   m_Layer: 19
   m_Name: "Chciwo\u015B\u0107"
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,8 +129,10 @@ MonoBehaviour:
   flavourtext: "Radomska go\u015Bcinno\u015B\u0107"
   itemName: "Chciwo\u015B\u0107"
   id: 17
+  ModId: -10
   CocaoPrice: 17
   BloodPrice: 17
   coll: {fileID: 4767714757478575904}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0

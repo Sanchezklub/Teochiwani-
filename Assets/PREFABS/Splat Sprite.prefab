@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -9212203010065437250}
   m_Layer: 0
   m_Name: Splat Sprite
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 6.08, y: 7.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-9212203010065437250
@@ -94,12 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c9010304ce7cf4bbb33974c5dedb0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundTint: {r: 0.8000001, g: 0.8000001, b: 0.8000001, a: 0}
-  miniSizeMod: 0.8
-  maxSizeMod: 100
-  sprites:
-  - {fileID: 21300000, guid: 3cbd3706a2954224ca9659eefcbeac65, type: 3}
-  - {fileID: 21300000, guid: 4d730f01f39ded34baa1c70ab4f963bc, type: 3}
-  - {fileID: 21300000, guid: 4d730f01f39ded34baa1c70ab4f963bc, type: 3}
-  - {fileID: 21300000, guid: 60aa22e761e01cb4caa17a93ce687b0a, type: 3}
-  - {fileID: 21300000, guid: 6e2a129a2ab427e49994831b88a61c8c, type: 3}
+  sr: {fileID: 0}
+  colors: []

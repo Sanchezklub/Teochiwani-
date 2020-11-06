@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 35231980432196101}
   m_Layer: 14
   m_Name: dzban
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +456,13 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
     type: 3}
   id: 0
+  EffectParticle: []
   splashController: {fileID: 0}
+  Limbs: []
+  LightningEffectMaterial: {fileID: 0}
+  FlashMaterial: {fileID: 0}
+  FireEffectMaterial: {fileID: 0}
+  NormalMaterial: {fileID: 0}
   minimumCount: 1
   maximumCount: 3
   Prefabs:

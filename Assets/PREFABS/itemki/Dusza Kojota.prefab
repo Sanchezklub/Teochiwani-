@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5081036140023530232}
   m_Layer: 19
   m_Name: Dusza Kojota
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,8 +129,10 @@ MonoBehaviour:
   flavourtext: "Ranny, ale ci\u0105gle mo\u017Ce ugry\u017A\u0107"
   itemName: Dusza Kojota
   id: 11
+  ModId: -10
   CocaoPrice: 12
   BloodPrice: 12
   coll: {fileID: 5167004461673135547}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0

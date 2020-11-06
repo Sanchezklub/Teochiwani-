@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5976188103267766913}
   m_Layer: 19
   m_Name: SkorupaZolwia
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,10 @@ MonoBehaviour:
   flavourtext: "Ska\u0142a chcia\u0142aby by\u0107 twarda jak to"
   itemName: "Skorupa \u017C\xF3\u0142wia"
   id: 0
+  ModId: -10
   CocaoPrice: 7
   BloodPrice: 7
   coll: {fileID: 5976188103267766912}
-  FloatingTextPrefab: {fileID: 0}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0

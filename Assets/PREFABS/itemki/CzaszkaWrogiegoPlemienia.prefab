@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4524356282363634569}
   m_Layer: 19
   m_Name: CzaszkaWrogiegoPlemienia
-  m_TagString: Untagged
+  m_TagString: Level_generation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,8 +129,10 @@ MonoBehaviour:
   flavourtext: "Ich krew nasz\u0105 si\u0142\u0105"
   itemName: Czaszka Wrogiego Plemienia
   id: 3
+  ModId: -10
   CocaoPrice: 11
   BloodPrice: 11
   coll: {fileID: 4524356282363634566}
-  FloatingTextPrefab: {fileID: 6451677517703166941, guid: 818c74a8c9ba74b4a9de5dc1bb8e41cd,
-    type: 3}
+  PickUped: 0
+  AttackSpeedModifier: 0
+  AttackSpeedPrevious: 0

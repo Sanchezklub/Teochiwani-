@@ -7,6 +7,7 @@ public class UIHELPtutorial : MonoBehaviour
 {
     
     public GameObject UIHelp;
+    [TextArea]
     public string Text;
     public void Start()
     {

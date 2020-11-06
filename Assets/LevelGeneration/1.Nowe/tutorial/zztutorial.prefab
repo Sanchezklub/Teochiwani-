@@ -408,6 +408,54 @@ Transform:
   m_Father: {fileID: 703078514372873711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2650544637972510117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6905483913866011303}
+  - component: {fileID: 649491675206696548}
+  m_Layer: 0
+  m_Name: walka
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6905483913866011303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650544637972510117}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 156.9, y: 196.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8103778423681716313}
+  m_Father: {fileID: 3839599108239024405}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649491675206696548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650544637972510117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18afff4eb4959414fa87f15f18b66280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIHelp: {fileID: 2944895651399490945}
+  Text: "Zaatakuj lewym przyciskiem myszy.\nW zale\u017Cno\u015Bci od przynale\u017Cno\u015B\u0107i
+    przeciwnika,\npo jego \u015Bmierci otrzymasz karm\u0119 ludzk\u0105 lub bosk\u0105,\nwskazywan\u0105
+    przez pasek na g\xF3rze."
 --- !u!1 &3316024357335050559
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +487,7 @@ Transform:
   - {fileID: 5461220881609337756}
   - {fileID: 790126481646822964}
   - {fileID: 2458212398473894232}
+  - {fileID: 6905483913866011303}
   m_Father: {fileID: 703078514372873711}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -568,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIHelp: {fileID: 9076555803121889160}
-  Text: "Portale przenosz\u0105 graczy do walki z bossem  na koniec poziomu."
+  Text: "Portale przenosz\u0105 graczy do walki z bossem na koniec poziomu."
 --- !u!1 &5825618858261678780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,15 +2566,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca0c2dcd778d7643843d16c7942b0a6, type: 3}
---- !u!4 &7945732763662569895 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
-    type: 3}
-  m_PrefabInstance: {fileID: 209439364649897789}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3957767617255447679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3748335554651935554, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 209439364649897789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7945732763662569895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
     type: 3}
   m_PrefabInstance: {fileID: 209439364649897789}
   m_PrefabAsset: {fileID: 0}
@@ -10909,15 +10958,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca0c2dcd778d7643843d16c7942b0a6, type: 3}
---- !u!4 &8594459013762453233 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2011240790278115435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3453591880421557033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3748335554651935554, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2011240790278115435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8594459013762453233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
     type: 3}
   m_PrefabInstance: {fileID: 2011240790278115435}
   m_PrefabAsset: {fileID: 0}
@@ -11480,6 +11529,109 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7078682518022357999, guid: d4194c4c35d818549af4e626f06ac47c,
     type: 3}
   m_PrefabInstance: {fileID: 2058710207011370033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2079147547892158147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6905483913866011303}
+    m_Modifications:
+    - target: {fileID: 2948488949491875853, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_Text
+      value: "Zaatakuj lewym przyciskiem myszy. \\n\nW zale\u017Cno\u015Bci od przynale\u017Cno\u015B\u0107i
+        przeciwnika,\\n\npo jego \u015Bmierci otrzymasz karm\u0119 ludzk\u0105 lub
+        bosk\u0105,\\n\nwskazywan\u0105 przez pasek na g\xF3rze."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948488949491875853, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948488949491875853, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LineSpacing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948488949491875853, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748335554651935554, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_Name
+      value: text_walka
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -168.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -58.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ca0c2dcd778d7643843d16c7942b0a6, type: 3}
+--- !u!1 &2944895651399490945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3748335554651935554, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2079147547892158147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8103778423681716313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2079147547892158147}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2090398660043082672
 PrefabInstance:
@@ -17090,15 +17242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4763cd3b2e5333f4cacc099c6cca00b1, type: 3}
---- !u!4 &7887643363773534026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4627152055553259884, guid: 4763cd3b2e5333f4cacc099c6cca00b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3260742049494218278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7887643363773534028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4627152055553259882, guid: 4763cd3b2e5333f4cacc099c6cca00b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3260742049494218278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7887643363773534026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4627152055553259884, guid: 4763cd3b2e5333f4cacc099c6cca00b1,
     type: 3}
   m_PrefabInstance: {fileID: 3260742049494218278}
   m_PrefabAsset: {fileID: 0}
@@ -27826,15 +27978,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca0c2dcd778d7643843d16c7942b0a6, type: 3}
---- !u!4 &2692693108634903120 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
-    type: 3}
-  m_PrefabInstance: {fileID: 5328501878632873162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9076555803121889160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3748335554651935554, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5328501878632873162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2692693108634903120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7830908900617133722, guid: 7ca0c2dcd778d7643843d16c7942b0a6,
     type: 3}
   m_PrefabInstance: {fileID: 5328501878632873162}
   m_PrefabAsset: {fileID: 0}

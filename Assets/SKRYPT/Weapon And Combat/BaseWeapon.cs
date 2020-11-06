@@ -121,7 +121,8 @@ public abstract class BaseWeapon : BaseItem
         IsAttackingVHeavy,
         IsAttackingRanged,
         IsAttackingShoot,
-        IsAttackingThrow
+        IsAttackingThrow,
+        IsAttackingAxe
 
     }
     public AnimationType AttackAnimationType;

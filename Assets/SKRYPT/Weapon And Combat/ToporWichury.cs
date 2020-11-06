@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToporWichury : BaseWeapon
+public class ToporWichury : BaseWeaponCloseCombat
  {
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float LaunchForce;
     public override void Attack(PlayerCombat controller)
     {
+        /*
         Debug.Log("Topor Wichury :: Attack() - Player attacked with Topor Wichury");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
@@ -18,6 +19,9 @@ public class ToporWichury : BaseWeapon
             Effects(enemy);
 
         }
+        */
+        GameObject newArrow = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * LaunchForce;
     }
     void Update()
     {

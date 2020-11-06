@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 public class VideoController : MonoBehaviour
 {
     [SerializeField] private VideoPlayer videoPlayer;
@@ -11,6 +13,10 @@ public class VideoController : MonoBehaviour
     [SerializeField] private VideoClip GodsEnding;
     [SerializeField] private GameObject CutsceneObject;
     [SerializeField] private PauseController pause;
+    [SerializeField] private AudioSource source;
+    //[SerializeField] private AudioMixerGroup group;
+    [SerializeField] private AudioMixer mixer;
+    private float MixerOldFloat;
     [ContextMenu("test")]
     public void PlayHumanEnding()
     {
@@ -18,12 +24,17 @@ public class VideoController : MonoBehaviour
         videoPlayer.loopPointReached += ReloadScene;
         AudioManager.instance.MuteSounds();
         CutsceneObject.SetActive(true);
+        mixer.GetFloat("SFXVolume", out MixerOldFloat);
+        //mixer.SetFloat("SFXVolume", 0.0001f);
+        mixer.SetFloat("SFXVolume", Mathf.Log10(0.0001f) * 20);
         videoPlayer.clip = HumanEnding;
+        videoPlayer.SetTargetAudioSource(0, source);
         videoPlayer.Play();
     }
 
     void ReloadScene(VideoPlayer videoPlayer)
     {
+        mixer.SetFloat("SFXVolume", MixerOldFloat);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -33,7 +44,11 @@ public class VideoController : MonoBehaviour
         videoPlayer.loopPointReached += ReloadScene;
         AudioManager.instance.MuteSounds();
         CutsceneObject.SetActive(true);
+        mixer.GetFloat("SFXVolume", out MixerOldFloat);
+        //mixer.SetFloat("SFXVolume", -80f);
+        mixer.SetFloat("SFXVolume", Mathf.Log10(0.0001f) * 20);
         videoPlayer.clip = GodsEnding;
+        videoPlayer.SetTargetAudioSource(0,source);
         videoPlayer.Play();
     }
 
@@ -45,9 +60,11 @@ public class VideoController : MonoBehaviour
         videoPlayer.Play();
     }
     
+    void PrepareSource()
+    {
+    }
 
-
-
+    
 
 
 

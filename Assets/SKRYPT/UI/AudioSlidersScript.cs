@@ -22,6 +22,8 @@ public class AudioSlidersScript : MonoBehaviour
 
     private void OnDisable()
     {
+
+
         PlayerPrefs.SetFloat("MasterVolume", MasterSlider.value);
         PlayerPrefs.SetFloat("MusicVolume", MusicSlider.value);
         PlayerPrefs.SetFloat("SFXVolume", SFXSlider.value);
